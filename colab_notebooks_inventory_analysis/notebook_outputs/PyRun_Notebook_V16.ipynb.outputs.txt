@@ -1,0 +1,122 @@
+# Output export for colab_drive_copy notebook: PyRun_Notebook_V16.ipynb
+# Generated from notebook outputs; image payloads are summarized, not embedded.
+
+
+# %% cell 0 [code] execution_count=1
+
+## output 0 type=stream mime=- image_data_chars=0
+Mounted at /content/drive
+
+# %% cell 1 [code] execution_count=3
+
+## output 0 type=stream mime=- image_data_chars=0
+/content/drive/MyDrive/ACCRE_PyRun_Setup
+
+# %% cell 6 [code] execution_count=8
+
+## output 0 type=stream mime=- image_data_chars=0
+PyRosetta-4 2022 [Rosetta PyRosetta4.Release.python37.linux 2022.08+release.359cee4319825b9107d34b49c5510e321cfb9385 2022-02-24T15:12:22] retrieved from: http://www.pyrosetta.org
+(C) Copyright Rosetta Commons Member Institutions. Created in JHU by Sergey Lyskov and PyRosetta Team.
+core.init: Checking for fconfig files in pwd and ./rosetta/flags
+core.init: Rosetta version: PyRosetta4.Release.python37.linux r312 2022.08+release.359cee4 359cee4319825b9107d34b49c5510e321cfb9385 http://www.pyrosetta.org 2022-02-24T15:12:22
+core.init: command: PyRosetta -ex1 -ex2aro -mute core.io.pose_from_sfr.PoseFromSFRBuilder core.conformation.Conformation core.pack.pack_missing_sidechains core.pack.task basic.io.database core.pack.pack_rotamers core.scoring.ScoreFunctionFactory core.scoring.etable core.pack.dunbrack.RotamerLibrary core.scoring.P_AA core.scoring.elec.util core.import_pose.import_pose core.pack.interaction_graph.interaction_graph_factory -database /content/drive/MyDrive/PyRosetta_Files/PyRosetta4.Release.python37.linux.release-312/setup/pyrosetta/database
+basic.random.init_random_generator: 'RNG device' seed mode, using '/dev/urandom', seed=-876678158 seed_offset=0 real_seed=-876678158
+basic.random.init_random_generator: RandomGenerator:init: Normal mode, seed=-876678158 RG_type=mt19937
+
+# %% cell 20 [code] execution_count=24
+
+## output 0 type=display_data mime=application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+0it [00:00, ?it/s]
+
+## output 1 type=stream mime=- image_data_chars=0
+Total time taken: 11.061 minutes
+
+## output 2 type=display_data mime=application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+  0%|          | 0/131 [00:00<?, ?it/s]
+
+## output 3 type=stream mime=- image_data_chars=0
+Total time taken: 23.991 minutes
+
+## output 4 type=stream mime=- image_data_chars=0
+/content/drive/MyDrive/Colab_Installations_V2/torch_geometric/deprecation.py:12: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+
+# %% cell 21 [code] execution_count=25
+
+## output 0 type=stream mime=- image_data_chars=0
+13660
+
+# %% cell 26 [code] execution_count=47
+
+## output 0 type=error mime=- image_data_chars=0
+RuntimeError
+ignored
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mRuntimeError[0m                              Traceback (most recent call last)
+[0;32m<ipython-input-47-f0cbb33f86a1>[0m in [0;36m<module>[0;34m()[0m
+[1;32m     35[0m [0;31m# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     36[0m [0mmodel[0m [0;34m=[0m [0mmodel[0m[0;34m.[0m[0mto[0m[0;34m([0m[0mdevice[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 37[0;31m [0mtrain_epochs[0m[0;34m([0m[0mmodel[0m[0;34m,[0m [0mdataLoader_train_one[0m[0;34m,[0m [0mdataLoader_train_two[0m[0;34m,[0m [0mdataLoader_train_three[0m[0;34m,[0m [0mdataLoader_val_one[0m[0;34m,[0m [0mdataLoader_val_two[0m[0;34m,[0m [0mdataLoader_val_three[0m[0;34m,[0m [0mtrain_args[0m[0;34m,[0m [0mlog_dir[0m[0;34m,[0m [0mrun_name[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m<ipython-input-45-48b9ff404441>[0m in [0;36mtrain_epochs[0;34m(model, dataLoader_train_one, dataLoader_train_two, dataLoader_train_three, dataLoader_val_one, dataLoader_val_two, dataLoader_val_three, train_args, log_dir, model_name)[0m
+[1;32m    101[0m     [0;32mfor[0m [0mepoch[0m [0;32min[0m [0mrange[0m[0;34m([0m[0mepochs[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    102[0m [0;34m[0m[0m
+[0;32m--> 103[0;31m         [0mtrain[0m[0;34m([0m[0mmodel[0m[0;34m,[0m [0moptimizer[0m[0;34m,[0m [0mdataLoader_train_one[0m[0;34m,[0m [0mdataLoader_train_two[0m[0;34m,[0m [0mdataLoader_train_three[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    104[0m [0;34m[0m[0m
+[1;32m    105[0m         [0;32mwith[0m [0mtorch[0m[0;34m.[0m[0mno_grad[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m<ipython-input-45-48b9ff404441>[0m in [0;36mtrain[0;34m(model, optimizer, dataLoader_one, dataLoader_two, dataLoader_three)[0m
+[1;32m     45[0m [0;32mdef[0m [0mtrain[0m[0;34m([0m[0mmodel[0m[0;34m,[0m [0moptimizer[0m[0;34m,[0m [0mdataLoader_one[0m[0;34m,[0m [0mdataLoader_two[0m[0;34m,[0m [0mdataLoader_three[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     46[0m     [0mmodel[0m[0;34m.[0m[0mtrain[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 47[0;31m     [0;32mfor[0m [0mdata_org[0m[0;34m,[0m [0mdata_induced[0m[0;34m,[0m [0mdata_complete[0m [0;32min[0m [0mzip[0m[0;34m([0m[0mdataLoader_one[0m[0;34m,[0m[0mdataLoader_two[0m[0;34m,[0m[0mdataLoader_three[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     48[0m         [0mnode_features[0m[0;34m,[0m [0medge_features[0m[0;34m,[0m [0mlabels[0m[0;34m,[0m [0mlengths[0m[0;34m,[0m [0mself_features[0m[0;34m,[0m [0mto_from_features[0m[0;34m,[0m [0mpssm_features[0m[0;34m,[0m [0malt_features[0m[0;34m,[0m [0mflag_features[0m[0;34m,[0m [0mddgun_ssl[0m[0;34m,[0m [0mddg_avail[0m[0;34m,[0m [0mssl_avail[0m [0;34m=[0m [0mdata_org[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     49[0m         [0;32mwith[0m [0mtorch[0m[0;34m.[0m[0mno_grad[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/content/drive/MyDrive/Colab_Installations_V2/torch/utils/data/dataloader.py[0m in [0;36m__next__[0;34m(self)[0m
+[1;32m    519[0m             [0;32mif[0m [0mself[0m[0;34m.[0m[0m_sampler_iter[0m [0;32mis[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    520[0m                 [0mself[0m[0;34m.[0m[0m_reset[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 521[0;31m             [0mdata[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_next_data[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    522[0m             [0mself[0m[0;34m.[0m[0m_num_yielded[0m [0;34m+=[0m [0;36m1[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    523[0m             [0;32mif[0m [0mself[0m[0;34m.[0m[0m_dataset_kind[0m [0;34m==[0m [0m_DatasetKind[0m[0;34m.[0m[0mIterable[0m [0;32mand[0m[0;31m [0m[0;31m\[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/content/drive/MyDrive/Colab_Installations_V2/torch/utils/data/dataloader.py[0m in [0;36m_next_data[0;34m(self)[0m
+[1;32m    559[0m     [0;32mdef[0m [0m_next_data[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    560[0m         [0mindex[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_next_index[0m[0;34m([0m[0;34m)[0m  [0;31m# may raise StopIteration[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 561[0;31m         [0mdata[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_dataset_fetcher[0m[0;34m.[0m[0mfetch[0m[0;34m([0m[0mindex[0m[0;34m)[0m  [0;31m# may raise StopIteration[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    562[0m         [0;32mif[0m [0mself[0m[0;34m.[0m[0m_pin_memory[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    563[0m             [0mdata[0m [0;34m=[0m [0m_utils[0m[0;34m.[0m[0mpin_memory[0m[0;34m.[0m[0mpin_memory[0m[0;34m([0m[0mdata[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/content/drive/MyDrive/Colab_Installations_V2/torch/utils/data/_utils/fetch.py[0m in [0;36mfetch[0;34m(self, possibly_batched_index)[0m
+[1;32m     50[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     51[0m             [0mdata[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mdataset[0m[0;34m[[0m[0mpossibly_batched_index[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 52[0;31m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0mcollate_fn[0m[0;34m([0m[0mdata[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m/content/drive/MyDrive/Colab_Installations_V2/torch_geometric/loader/dataloader.py[0m in [0;36m__call__[0;34m(self, batch)[0m
+[1;32m     18[0m         [0;32mif[0m [0misinstance[0m[0;34m([0m[0melem[0m[0;34m,[0m [0mBaseData[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     19[0m             return Batch.from_data_list(batch, self.follow_batch,
+[0;32m---> 20[0;31m                                         self.exclude_keys)
+[0m[1;32m     21[0m         [0;32melif[0m [0misinstance[0m[0;34m([0m[0melem[0m[0;34m,[0m [0mtorch[0m[0;34m.[0m[0mTensor[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     22[0m             [0;32mreturn[0m [0mdefault_collate[0m[0;34m([0m[0mbatch[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/content/drive/MyDrive/Colab_Installations_V2/torch_geometric/data/batch.py[0m in [0;36mfrom_data_list[0;34m(cls, data_list, follow_batch, exclude_keys)[0m
+[1;32m     72[0m             [0madd_batch[0m[0;34m=[0m[0;32mnot[0m [0misinstance[0m[0;34m([0m[0mdata_list[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m,[0m [0mBatch[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     73[0m             [0mfollow_batch[0m[0;34m=[0m[0mfollow_batch[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 74[0;31m             [0mexclude_keys[0m[0;34m=[0m[0mexclude_keys[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     75[0m         )
+[1;32m     76[0m [0;34m[0m[0m
+
+[0;32m/content/drive/MyDrive/Colab_Installations_V2/torch_geometric/data/collate.py[0m in [0;36mcollate[0;34m(cls, data_list, increment, add_batch, follow_batch, exclude_keys)[0m
+[1;32m     83[0m             [0;31m# Collate attributes into a unified representation:[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     84[0m             value, slices, incs = _collate(attr, values, data_list, stores,
+[0;32m---> 85[0;31m                                            increment)
+[0m[1;32m     86[0m [0;34m[0m[0m
+[1;32m     87[0m             [0;32mif[0m [0misinstance[0m[0;34m([0m[0mvalue[0m[0;34m,[0m [0mTensor[0m[0;34m)[0m [0;32mand[0m [0mvalue[0m[0;34m.[0m[0mis_cuda[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/content/drive/MyDrive/Colab_Installations_V2/torch_geometric/data/collate.py[0m in [0;36m_collate[0;34m(key, values, data_list, stores, increment)[0m
+[1;32m    148[0m             [0mout[0m [0;34m=[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    149[0m [0;34m[0m[0m
+[0;32m--> 150[0;31m         [0mvalue[0m [0;34m=[0m [0mtorch[0m[0;34m.[0m[0mcat[0m[0;34m([0m[0mvalues[0m[0;34m,[0m [0mdim[0m[0;34m=[0m[0mcat_dim[0m [0;32mor[0m [0;36m0[0m[0;34m,[0m [0mout[0m[0;34m=[0m[0mout[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    151[0m         [0;32mreturn[0m [0mvalue[0m[0;34m,[0m [0mslices[0m[0;34m,[0m [0mincs[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    152[0m [0;34m[0m[0m
+
+[0;31mRuntimeError[0m: Sizes of tensors must match except in dimension 0. Expected size 43 but got size 24 for tensor number 7 in the list.

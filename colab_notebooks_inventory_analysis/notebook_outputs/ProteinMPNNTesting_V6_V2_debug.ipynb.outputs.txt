@@ -1,0 +1,3103 @@
+# Output export for colab_drive_copy notebook: ProteinMPNNTesting_V6_V2_debug.ipynb
+# Generated from notebook outputs; image payloads are summarized, not embedded.
+
+
+# %% cell 0 [code] execution_count=1
+
+## output 0 type=stream mime=- image_data_chars=0
+Mounted at /content/drive
+
+# %% cell 1 [code] execution_count=2
+
+## output 0 type=stream mime=- image_data_chars=0
+/content/drive/MyDrive/Protein_MPNN_Digging
+
+# %% cell 6 [code] execution_count=7
+
+## output 0 type=stream mime=- image_data_chars=0
+48
+
+# %% cell 9 [code] execution_count=10
+
+## output 0 type=stream mime=- image_data_chars=0
+odict_keys(['features.embeddings.linear.weight', 'features.embeddings.linear.bias', 'features.edge_embedding.weight', 'features.norm_edges.weight', 'features.norm_edges.bias', 'W_e.weight', 'W_e.bias', 'W_s.weight', 'encoder_layers.0.norm1.weight', 'encoder_layers.0.norm1.bias', 'encoder_layers.0.norm2.weight', 'encoder_layers.0.norm2.bias', 'encoder_layers.0.norm3.weight', 'encoder_layers.0.norm3.bias', 'encoder_layers.0.W1.weight', 'encoder_layers.0.W1.bias', 'encoder_layers.0.W2.weight', 'encoder_layers.0.W2.bias', 'encoder_layers.0.W3.weight', 'encoder_layers.0.W3.bias', 'encoder_layers.0.W11.weight', 'encoder_layers.0.W11.bias', 'encoder_layers.0.W12.weight', 'encoder_layers.0.W12.bias', 'encoder_layers.0.W13.weight', 'encoder_layers.0.W13.bias', 'encoder_layers.0.dense.W_in.weight', 'encoder_layers.0.dense.W_in.bias', 'encoder_layers.0.dense.W_out.weight', 'encoder_layers.0.dense.W_out.bias', 'encoder_layers.1.norm1.weight', 'encoder_layers.1.norm1.bias', 'encoder_layers.1.norm2.weight', 'encoder_layers.1.norm2.bias', 'encoder_layers.1.norm3.weight', 'encoder_layers.1.norm3.bias', 'encoder_layers.1.W1.weight', 'encoder_layers.1.W1.bias', 'encoder_layers.1.W2.weight', 'encoder_layers.1.W2.bias', 'encoder_layers.1.W3.weight', 'encoder_layers.1.W3.bias', 'encoder_layers.1.W11.weight', 'encoder_layers.1.W11.bias', 'encoder_layers.1.W12.weight', 'encoder_layers.1.W12.bias', 'encoder_layers.1.W13.weight', 'encoder_layers.1.W13.bias', 'encoder_layers.1.dense.W_in.weight', 'encoder_layers.1.dense.W_in.bias', 'encoder_layers.1.dense.W_out.weight', 'encoder_layers.1.dense.W_out.bias', 'encoder_layers.2.norm1.weight', 'encoder_layers.2.norm1.bias', 'encoder_layers.2.norm2.weight', 'encoder_layers.2.norm2.bias', 'encoder_layers.2.norm3.weight', 'encoder_layers.2.norm3.bias', 'encoder_layers.2.W1.weight', 'encoder_layers.2.W1.bias', 'encoder_layers.2.W2.weight', 'encoder_layers.2.W2.bias', 'encoder_layers.2.W3.weight', 'encoder_layers.2.W3.bias', 'encoder_layers.2.W11.weight', 'encoder_layers.2.W11.bias', 'encoder_layers.2.W12.weight', 'encoder_layers.2.W12.bias', 'encoder_layers.2.W13.weight', 'encoder_layers.2.W13.bias', 'encoder_layers.2.dense.W_in.weight', 'encoder_layers.2.dense.W_in.bias', 'encoder_layers.2.dense.W_out.weight', 'encoder_layers.2.dense.W_out.bias', 'decoder_layers.0.norm1.weight', 'decoder_layers.0.norm1.bias', 'decoder_layers.0.norm2.weight', 'decoder_layers.0.norm2.bias', 'decoder_layers.0.W1.weight', 'decoder_layers.0.W1.bias', 'decoder_layers.0.W2.weight', 'decoder_layers.0.W2.bias', 'decoder_layers.0.W3.weight', 'decoder_layers.0.W3.bias', 'decoder_layers.0.dense.W_in.weight', 'decoder_layers.0.dense.W_in.bias', 'decoder_layers.0.dense.W_out.weight', 'decoder_layers.0.dense.W_out.bias', 'decoder_layers.1.norm1.weight', 'decoder_layers.1.norm1.bias', 'decoder_layers.1.norm2.weight', 'decoder_layers.1.norm2.bias', 'decoder_layers.1.W1.weight', 'decoder_layers.1.W1.bias', 'decoder_layers.1.W2.weight', 'decoder_layers.1.W2.bias', 'decoder_layers.1.W3.weight', 'decoder_layers.1.W3.bias', 'decoder_layers.1.dense.W_in.weight', 'decoder_layers.1.dense.W_in.bias', 'decoder_layers.1.dense.W_out.weight', 'decoder_layers.1.dense.W_out.bias', 'decoder_layers.2.norm1.weight', 'decoder_layers.2.norm1.bias', 'decoder_layers.2.norm2.weight', 'decoder_layers.2.norm2.bias', 'decoder_layers.2.W1.weight', 'decoder_layers.2.W1.bias', 'decoder_layers.2.W2.weight', 'decoder_layers.2.W2.bias', 'decoder_layers.2.W3.weight', 'decoder_layers.2.W3.bias', 'decoder_layers.2.dense.W_in.weight', 'decoder_layers.2.dense.W_in.bias', 'decoder_layers.2.dense.W_out.weight', 'decoder_layers.2.dense.W_out.bias', 'W_out.weight', 'W_out.bias'])
+
+# %% cell 10 [code] execution_count=11
+
+## output 0 type=display_data mime=application/json,application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+0it [00:00, ?it/s]
+
+# %% cell 11 [code] execution_count=12
+
+## output 0 type=display_data mime=application/json,application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+  0%|          | 0/131 [00:00<?, ?it/s]
+
+## output 1 type=stream mime=- image_data_chars=0
+YOU HAVE JUST BEEN FUCKED BY ICODE
+1lveA:S27
+YOU HAVE JUST BEEN FUCKED BY ICODE
+1lveA:S27
+YOU HAVE JUST BEEN FUCKED BY ICODE
+2immA:N31
+YOU HAVE JUST BEEN FUCKED BY ICODE
+2immA:N31
+
+# %% cell 15 [code] execution_count=None
+
+## output 0 type=display_data mime=application/json,application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+0it [00:00, ?it/s]
+
+## output 1 type=stream mime=- image_data_chars=0
+Prot Processing:1
+Processing_Mut:1, From_Prot:1
+Processing_Mut:2, From_Prot:1
+Processing_Mut:3, From_Prot:1
+Processing_Mut:4, From_Prot:1
+Processing_Mut:5, From_Prot:1
+Processing_Mut:6, From_Prot:1
+Took 11.328948259353638 for 1akyA.pdb with 6 forward-mutations
+....................
+Prot Processing:2
+Processing_Mut:1, From_Prot:2
+Processing_Mut:2, From_Prot:2
+Processing_Mut:3, From_Prot:2
+Processing_Mut:4, From_Prot:2
+Processing_Mut:5, From_Prot:2
+Processing_Mut:6, From_Prot:2
+Processing_Mut:7, From_Prot:2
+Processing_Mut:8, From_Prot:2
+Processing_Mut:9, From_Prot:2
+Processing_Mut:10, From_Prot:2
+Processing_Mut:11, From_Prot:2
+Processing_Mut:12, From_Prot:2
+Processing_Mut:13, From_Prot:2
+Processing_Mut:14, From_Prot:2
+Processing_Mut:15, From_Prot:2
+Processing_Mut:16, From_Prot:2
+Processing_Mut:17, From_Prot:2
+Processing_Mut:18, From_Prot:2
+Processing_Mut:19, From_Prot:2
+Processing_Mut:20, From_Prot:2
+Processing_Mut:21, From_Prot:2
+Processing_Mut:22, From_Prot:2
+Processing_Mut:23, From_Prot:2
+Processing_Mut:24, From_Prot:2
+Processing_Mut:25, From_Prot:2
+Processing_Mut:26, From_Prot:2
+Processing_Mut:27, From_Prot:2
+Processing_Mut:28, From_Prot:2
+Processing_Mut:29, From_Prot:2
+Processing_Mut:30, From_Prot:2
+Processing_Mut:31, From_Prot:2
+Processing_Mut:32, From_Prot:2
+Processing_Mut:33, From_Prot:2
+Processing_Mut:34, From_Prot:2
+Processing_Mut:35, From_Prot:2
+Processing_Mut:36, From_Prot:2
+Processing_Mut:37, From_Prot:2
+Processing_Mut:38, From_Prot:2
+Processing_Mut:39, From_Prot:2
+Processing_Mut:40, From_Prot:2
+Processing_Mut:41, From_Prot:2
+Processing_Mut:42, From_Prot:2
+Processing_Mut:43, From_Prot:2
+Processing_Mut:44, From_Prot:2
+Processing_Mut:45, From_Prot:2
+Processing_Mut:46, From_Prot:2
+Processing_Mut:47, From_Prot:2
+Processing_Mut:48, From_Prot:2
+Processing_Mut:49, From_Prot:2
+Processing_Mut:50, From_Prot:2
+Processing_Mut:51, From_Prot:2
+Processing_Mut:52, From_Prot:2
+Processing_Mut:53, From_Prot:2
+Processing_Mut:54, From_Prot:2
+Processing_Mut:55, From_Prot:2
+Processing_Mut:56, From_Prot:2
+Processing_Mut:57, From_Prot:2
+Processing_Mut:58, From_Prot:2
+Processing_Mut:59, From_Prot:2
+Processing_Mut:60, From_Prot:2
+Processing_Mut:61, From_Prot:2
+Processing_Mut:62, From_Prot:2
+Processing_Mut:63, From_Prot:2
+Took 103.32869267463684 for 1aj3A.pdb with 63 forward-mutations
+....................
+Prot Processing:3
+Processing_Mut:1, From_Prot:3
+Processing_Mut:2, From_Prot:3
+Processing_Mut:3, From_Prot:3
+Processing_Mut:4, From_Prot:3
+Took 6.4257776737213135 for 1aonU.pdb with 4 forward-mutations
+....................
+Prot Processing:4
+Processing_Mut:1, From_Prot:4
+Processing_Mut:2, From_Prot:4
+Processing_Mut:3, From_Prot:4
+Processing_Mut:4, From_Prot:4
+Processing_Mut:5, From_Prot:4
+Processing_Mut:6, From_Prot:4
+Processing_Mut:7, From_Prot:4
+Processing_Mut:8, From_Prot:4
+Processing_Mut:9, From_Prot:4
+Processing_Mut:10, From_Prot:4
+Processing_Mut:11, From_Prot:4
+Processing_Mut:12, From_Prot:4
+Processing_Mut:13, From_Prot:4
+Processing_Mut:14, From_Prot:4
+Took 37.38868474960327 for 1amqA.pdb with 14 forward-mutations
+....................
+Prot Processing:5
+Processing_Mut:1, From_Prot:5
+Processing_Mut:2, From_Prot:5
+Processing_Mut:3, From_Prot:5
+Processing_Mut:4, From_Prot:5
+Processing_Mut:5, From_Prot:5
+Took 8.06470012664795 for 1a43A.pdb with 5 forward-mutations
+....................
+Prot Processing:6
+Processing_Mut:1, From_Prot:6
+Processing_Mut:2, From_Prot:6
+Processing_Mut:3, From_Prot:6
+Processing_Mut:4, From_Prot:6
+Took 7.468086242675781 for 1ankA.pdb with 4 forward-mutations
+....................
+Prot Processing:7
+Processing_Mut:1, From_Prot:7
+Processing_Mut:2, From_Prot:7
+Processing_Mut:3, From_Prot:7
+Processing_Mut:4, From_Prot:7
+Processing_Mut:5, From_Prot:7
+Processing_Mut:6, From_Prot:7
+Processing_Mut:7, From_Prot:7
+Processing_Mut:8, From_Prot:7
+Processing_Mut:9, From_Prot:7
+Processing_Mut:10, From_Prot:7
+Processing_Mut:11, From_Prot:7
+Processing_Mut:12, From_Prot:7
+Processing_Mut:13, From_Prot:7
+Processing_Mut:14, From_Prot:7
+Processing_Mut:15, From_Prot:7
+Processing_Mut:16, From_Prot:7
+Processing_Mut:17, From_Prot:7
+Processing_Mut:18, From_Prot:7
+Processing_Mut:19, From_Prot:7
+Processing_Mut:20, From_Prot:7
+Processing_Mut:21, From_Prot:7
+Processing_Mut:22, From_Prot:7
+Processing_Mut:23, From_Prot:7
+Processing_Mut:24, From_Prot:7
+Processing_Mut:25, From_Prot:7
+Processing_Mut:26, From_Prot:7
+Processing_Mut:27, From_Prot:7
+Processing_Mut:28, From_Prot:7
+Processing_Mut:29, From_Prot:7
+Processing_Mut:30, From_Prot:7
+Processing_Mut:31, From_Prot:7
+Processing_Mut:32, From_Prot:7
+Processing_Mut:33, From_Prot:7
+Processing_Mut:34, From_Prot:7
+Processing_Mut:35, From_Prot:7
+Processing_Mut:36, From_Prot:7
+Processing_Mut:37, From_Prot:7
+Processing_Mut:38, From_Prot:7
+Processing_Mut:39, From_Prot:7
+Processing_Mut:40, From_Prot:7
+Processing_Mut:41, From_Prot:7
+Processing_Mut:42, From_Prot:7
+Processing_Mut:43, From_Prot:7
+Processing_Mut:44, From_Prot:7
+Processing_Mut:45, From_Prot:7
+Processing_Mut:46, From_Prot:7
+Processing_Mut:47, From_Prot:7
+Processing_Mut:48, From_Prot:7
+Processing_Mut:49, From_Prot:7
+Processing_Mut:50, From_Prot:7
+Processing_Mut:51, From_Prot:7
+Processing_Mut:52, From_Prot:7
+Processing_Mut:53, From_Prot:7
+Processing_Mut:54, From_Prot:7
+Processing_Mut:55, From_Prot:7
+Processing_Mut:56, From_Prot:7
+Processing_Mut:57, From_Prot:7
+Processing_Mut:58, From_Prot:7
+Processing_Mut:59, From_Prot:7
+Processing_Mut:60, From_Prot:7
+Processing_Mut:61, From_Prot:7
+Processing_Mut:62, From_Prot:7
+Processing_Mut:63, From_Prot:7
+Processing_Mut:64, From_Prot:7
+Processing_Mut:65, From_Prot:7
+Processing_Mut:66, From_Prot:7
+Processing_Mut:67, From_Prot:7
+Processing_Mut:68, From_Prot:7
+Processing_Mut:69, From_Prot:7
+Processing_Mut:70, From_Prot:7
+Processing_Mut:71, From_Prot:7
+Processing_Mut:72, From_Prot:7
+Processing_Mut:73, From_Prot:7
+Processing_Mut:74, From_Prot:7
+Processing_Mut:75, From_Prot:7
+Processing_Mut:76, From_Prot:7
+Processing_Mut:77, From_Prot:7
+Processing_Mut:78, From_Prot:7
+Processing_Mut:79, From_Prot:7
+Processing_Mut:80, From_Prot:7
+Processing_Mut:81, From_Prot:7
+Processing_Mut:82, From_Prot:7
+Processing_Mut:83, From_Prot:7
+Processing_Mut:84, From_Prot:7
+Processing_Mut:85, From_Prot:7
+Processing_Mut:86, From_Prot:7
+Processing_Mut:87, From_Prot:7
+Processing_Mut:88, From_Prot:7
+Processing_Mut:89, From_Prot:7
+Processing_Mut:90, From_Prot:7
+Processing_Mut:91, From_Prot:7
+Processing_Mut:92, From_Prot:7
+Processing_Mut:93, From_Prot:7
+Processing_Mut:94, From_Prot:7
+Processing_Mut:95, From_Prot:7
+Processing_Mut:96, From_Prot:7
+Processing_Mut:97, From_Prot:7
+Processing_Mut:98, From_Prot:7
+Processing_Mut:99, From_Prot:7
+Processing_Mut:100, From_Prot:7
+Processing_Mut:101, From_Prot:7
+Processing_Mut:102, From_Prot:7
+Processing_Mut:103, From_Prot:7
+Processing_Mut:104, From_Prot:7
+Processing_Mut:105, From_Prot:7
+Processing_Mut:106, From_Prot:7
+Processing_Mut:107, From_Prot:7
+Processing_Mut:108, From_Prot:7
+Processing_Mut:109, From_Prot:7
+Processing_Mut:110, From_Prot:7
+Processing_Mut:111, From_Prot:7
+Processing_Mut:112, From_Prot:7
+Processing_Mut:113, From_Prot:7
+Processing_Mut:114, From_Prot:7
+Processing_Mut:115, From_Prot:7
+Processing_Mut:116, From_Prot:7
+Processing_Mut:117, From_Prot:7
+Processing_Mut:118, From_Prot:7
+Processing_Mut:119, From_Prot:7
+Processing_Mut:120, From_Prot:7
+Processing_Mut:121, From_Prot:7
+Processing_Mut:122, From_Prot:7
+Processing_Mut:123, From_Prot:7
+Processing_Mut:124, From_Prot:7
+Processing_Mut:125, From_Prot:7
+Processing_Mut:126, From_Prot:7
+Processing_Mut:127, From_Prot:7
+Processing_Mut:128, From_Prot:7
+Processing_Mut:129, From_Prot:7
+Processing_Mut:130, From_Prot:7
+Processing_Mut:131, From_Prot:7
+Processing_Mut:132, From_Prot:7
+Processing_Mut:133, From_Prot:7
+Processing_Mut:134, From_Prot:7
+Processing_Mut:135, From_Prot:7
+Processing_Mut:136, From_Prot:7
+Processing_Mut:137, From_Prot:7
+Processing_Mut:138, From_Prot:7
+Processing_Mut:139, From_Prot:7
+Processing_Mut:140, From_Prot:7
+Processing_Mut:141, From_Prot:7
+Processing_Mut:142, From_Prot:7
+Processing_Mut:143, From_Prot:7
+Processing_Mut:144, From_Prot:7
+Processing_Mut:145, From_Prot:7
+Processing_Mut:146, From_Prot:7
+Processing_Mut:147, From_Prot:7
+Processing_Mut:148, From_Prot:7
+Processing_Mut:149, From_Prot:7
+Processing_Mut:150, From_Prot:7
+Processing_Mut:151, From_Prot:7
+Processing_Mut:152, From_Prot:7
+Processing_Mut:153, From_Prot:7
+Took 248.1609764099121 for 1bniA.pdb with 153 forward-mutations
+....................
+Prot Processing:8
+Processing_Mut:1, From_Prot:8
+Took 1.8874149322509766 for 1boyA.pdb with 1 forward-mutations
+....................
+Prot Processing:9
+Processing_Mut:1, From_Prot:9
+Took 1.6843395233154297 for 1b8eA.pdb with 1 forward-mutations
+....................
+Prot Processing:10
+Processing_Mut:1, From_Prot:10
+Processing_Mut:2, From_Prot:10
+Processing_Mut:3, From_Prot:10
+Processing_Mut:4, From_Prot:10
+Took 6.494524955749512 for 1aepA.pdb with 4 forward-mutations
+....................
+Prot Processing:11
+Processing_Mut:1, From_Prot:11
+Took 2.218205213546753 for 1blcA.pdb with 1 forward-mutations
+....................
+Prot Processing:12
+Processing_Mut:1, From_Prot:12
+Processing_Mut:2, From_Prot:12
+Processing_Mut:3, From_Prot:12
+Processing_Mut:4, From_Prot:12
+Processing_Mut:5, From_Prot:12
+Processing_Mut:6, From_Prot:12
+Processing_Mut:7, From_Prot:12
+Processing_Mut:8, From_Prot:12
+Processing_Mut:9, From_Prot:12
+Processing_Mut:10, From_Prot:12
+Took 16.205822944641113 for 1ag2A.pdb with 10 forward-mutations
+....................
+Prot Processing:13
+Processing_Mut:1, From_Prot:13
+Processing_Mut:2, From_Prot:13
+Processing_Mut:3, From_Prot:13
+Took 4.974536418914795 for 1a5eA.pdb with 3 forward-mutations
+....................
+Prot Processing:14
+Processing_Mut:1, From_Prot:14
+Processing_Mut:2, From_Prot:14
+Processing_Mut:3, From_Prot:14
+Processing_Mut:4, From_Prot:14
+Processing_Mut:5, From_Prot:14
+Processing_Mut:6, From_Prot:14
+Processing_Mut:7, From_Prot:14
+Processing_Mut:8, From_Prot:14
+Processing_Mut:9, From_Prot:14
+Processing_Mut:10, From_Prot:14
+Processing_Mut:11, From_Prot:14
+Processing_Mut:12, From_Prot:14
+Processing_Mut:13, From_Prot:14
+Processing_Mut:14, From_Prot:14
+Processing_Mut:15, From_Prot:14
+Processing_Mut:16, From_Prot:14
+Processing_Mut:17, From_Prot:14
+Took 27.431007146835327 for 1arrA.pdb with 17 forward-mutations
+....................
+Prot Processing:15
+Processing_Mut:1, From_Prot:15
+Processing_Mut:2, From_Prot:15
+Processing_Mut:3, From_Prot:15
+Took 7.945160865783691 for 1b26A.pdb with 3 forward-mutations
+....................
+Prot Processing:16
+Processing_Mut:1, From_Prot:16
+Took 1.606797218322754 for 1azpA.pdb with 1 forward-mutations
+....................
+Prot Processing:17
+Processing_Mut:1, From_Prot:17
+Processing_Mut:2, From_Prot:17
+Took 3.2707512378692627 for 1am7A.pdb with 2 forward-mutations
+....................
+Prot Processing:18
+Processing_Mut:1, From_Prot:18
+Processing_Mut:2, From_Prot:18
+Processing_Mut:3, From_Prot:18
+Processing_Mut:4, From_Prot:18
+Processing_Mut:5, From_Prot:18
+Processing_Mut:6, From_Prot:18
+Processing_Mut:7, From_Prot:18
+Processing_Mut:8, From_Prot:18
+Processing_Mut:9, From_Prot:18
+Processing_Mut:10, From_Prot:18
+Processing_Mut:11, From_Prot:18
+Processing_Mut:12, From_Prot:18
+Processing_Mut:13, From_Prot:18
+Processing_Mut:14, From_Prot:18
+Processing_Mut:15, From_Prot:18
+Processing_Mut:16, From_Prot:18
+Processing_Mut:17, From_Prot:18
+Processing_Mut:18, From_Prot:18
+Processing_Mut:19, From_Prot:18
+Processing_Mut:20, From_Prot:18
+Processing_Mut:21, From_Prot:18
+Processing_Mut:22, From_Prot:18
+Processing_Mut:23, From_Prot:18
+Processing_Mut:24, From_Prot:18
+Processing_Mut:25, From_Prot:18
+Took 39.69114804267883 for 1c9oA.pdb with 25 forward-mutations
+....................
+Prot Processing:19
+Processing_Mut:1, From_Prot:19
+Took 2.447819709777832 for 1lucA.pdb with 1 forward-mutations
+....................
+Prot Processing:20
+Processing_Mut:1, From_Prot:20
+Took 2.5973050594329834 for 1ke4A.pdb with 1 forward-mutations
+....................
+Prot Processing:21
+Processing_Mut:1, From_Prot:21
+Processing_Mut:2, From_Prot:21
+Processing_Mut:3, From_Prot:21
+Processing_Mut:4, From_Prot:21
+Processing_Mut:5, From_Prot:21
+Took 8.147274732589722 for 1cseI.pdb with 5 forward-mutations
+....................
+Prot Processing:22
+Processing_Mut:1, From_Prot:22
+Processing_Mut:2, From_Prot:22
+Processing_Mut:3, From_Prot:22
+Processing_Mut:4, From_Prot:22
+Processing_Mut:5, From_Prot:22
+Processing_Mut:6, From_Prot:22
+Processing_Mut:7, From_Prot:22
+Processing_Mut:8, From_Prot:22
+Processing_Mut:9, From_Prot:22
+Processing_Mut:10, From_Prot:22
+Took 17.404399633407593 for 1hk0X.pdb with 10 forward-mutations
+....................
+Prot Processing:23
+Processing_Mut:1, From_Prot:23
+Processing_Mut:2, From_Prot:23
+Processing_Mut:3, From_Prot:23
+Processing_Mut:4, From_Prot:23
+Processing_Mut:5, From_Prot:23
+Processing_Mut:6, From_Prot:23
+Processing_Mut:7, From_Prot:23
+Processing_Mut:8, From_Prot:23
+Took 12.830918312072754 for 1mgrA.pdb with 8 forward-mutations
+....................
+Prot Processing:24
+Processing_Mut:1, From_Prot:24
+Processing_Mut:2, From_Prot:24
+Took 5.693127393722534 for 1kfwA.pdb with 2 forward-mutations
+....................
+Prot Processing:25
+Processing_Mut:1, From_Prot:25
+Processing_Mut:2, From_Prot:25
+Processing_Mut:3, From_Prot:25
+Processing_Mut:4, From_Prot:25
+Processing_Mut:5, From_Prot:25
+Processing_Mut:6, From_Prot:25
+Processing_Mut:7, From_Prot:25
+Processing_Mut:8, From_Prot:25
+Processing_Mut:9, From_Prot:25
+Processing_Mut:10, From_Prot:25
+Processing_Mut:11, From_Prot:25
+Processing_Mut:12, From_Prot:25
+Processing_Mut:13, From_Prot:25
+Processing_Mut:14, From_Prot:25
+Processing_Mut:15, From_Prot:25
+Processing_Mut:16, From_Prot:25
+Processing_Mut:17, From_Prot:25
+Processing_Mut:18, From_Prot:25
+Processing_Mut:19, From_Prot:25
+Processing_Mut:20, From_Prot:25
+Processing_Mut:21, From_Prot:25
+Processing_Mut:22, From_Prot:25
+Processing_Mut:23, From_Prot:25
+Processing_Mut:24, From_Prot:25
+Processing_Mut:25, From_Prot:25
+Processing_Mut:26, From_Prot:25
+Took 41.94012498855591 for 1h7mA.pdb with 26 forward-mutations
+....................
+Prot Processing:26
+Processing_Mut:1, From_Prot:26
+Processing_Mut:2, From_Prot:26
+Processing_Mut:3, From_Prot:26
+Processing_Mut:4, From_Prot:26
+Processing_Mut:5, From_Prot:26
+Processing_Mut:6, From_Prot:26
+Processing_Mut:7, From_Prot:26
+Processing_Mut:8, From_Prot:26
+Processing_Mut:9, From_Prot:26
+Processing_Mut:10, From_Prot:26
+Processing_Mut:11, From_Prot:26
+Processing_Mut:12, From_Prot:26
+Processing_Mut:13, From_Prot:26
+Processing_Mut:14, From_Prot:26
+Took 22.33380365371704 for 1ceyA.pdb with 14 forward-mutations
+....................
+Prot Processing:27
+Processing_Mut:1, From_Prot:27
+Processing_Mut:2, From_Prot:27
+Processing_Mut:3, From_Prot:27
+Processing_Mut:4, From_Prot:27
+Processing_Mut:5, From_Prot:27
+Processing_Mut:6, From_Prot:27
+Processing_Mut:7, From_Prot:27
+Processing_Mut:8, From_Prot:27
+Processing_Mut:9, From_Prot:27
+Processing_Mut:10, From_Prot:27
+Processing_Mut:11, From_Prot:27
+Processing_Mut:12, From_Prot:27
+Processing_Mut:13, From_Prot:27
+Processing_Mut:14, From_Prot:27
+Processing_Mut:15, From_Prot:27
+Processing_Mut:16, From_Prot:27
+Processing_Mut:17, From_Prot:27
+Processing_Mut:18, From_Prot:27
+Processing_Mut:19, From_Prot:27
+Processing_Mut:20, From_Prot:27
+Processing_Mut:21, From_Prot:27
+Processing_Mut:22, From_Prot:27
+Processing_Mut:23, From_Prot:27
+Processing_Mut:24, From_Prot:27
+Processing_Mut:25, From_Prot:27
+Processing_Mut:26, From_Prot:27
+Processing_Mut:27, From_Prot:27
+Processing_Mut:28, From_Prot:27
+Processing_Mut:29, From_Prot:27
+Processing_Mut:30, From_Prot:27
+Processing_Mut:31, From_Prot:27
+Processing_Mut:32, From_Prot:27
+Processing_Mut:33, From_Prot:27
+Processing_Mut:34, From_Prot:27
+Processing_Mut:35, From_Prot:27
+Processing_Mut:36, From_Prot:27
+Took 57.29449725151062 for 1fkjA.pdb with 36 forward-mutations
+....................
+Prot Processing:28
+Processing_Mut:1, From_Prot:28
+Processing_Mut:2, From_Prot:28
+Processing_Mut:3, From_Prot:28
+Processing_Mut:4, From_Prot:28
+Processing_Mut:5, From_Prot:28
+Processing_Mut:6, From_Prot:28
+Processing_Mut:7, From_Prot:28
+Processing_Mut:8, From_Prot:28
+Processing_Mut:9, From_Prot:28
+Processing_Mut:10, From_Prot:28
+Processing_Mut:11, From_Prot:28
+Processing_Mut:12, From_Prot:28
+Processing_Mut:13, From_Prot:28
+Processing_Mut:14, From_Prot:28
+Processing_Mut:15, From_Prot:28
+Processing_Mut:16, From_Prot:28
+Processing_Mut:17, From_Prot:28
+Took 27.444162130355835 for 1dktA.pdb with 17 forward-mutations
+....................
+Prot Processing:29
+Processing_Mut:1, From_Prot:29
+Processing_Mut:2, From_Prot:29
+Took 3.6258864402770996 for 1iroA.pdb with 2 forward-mutations
+....................
+Prot Processing:30
+Processing_Mut:1, From_Prot:30
+Processing_Mut:2, From_Prot:30
+Took 3.2509546279907227 for 1jiwI.pdb with 2 forward-mutations
+....................
+Prot Processing:31
+Processing_Mut:1, From_Prot:31
+Processing_Mut:2, From_Prot:31
+Took 3.2026703357696533 for 1kcqA.pdb with 2 forward-mutations
+....................
+Prot Processing:32
+Processing_Mut:1, From_Prot:32
+Processing_Mut:2, From_Prot:32
+Processing_Mut:3, From_Prot:32
+Processing_Mut:4, From_Prot:32
+Processing_Mut:5, From_Prot:32
+Processing_Mut:6, From_Prot:32
+Processing_Mut:7, From_Prot:32
+Processing_Mut:8, From_Prot:32
+Processing_Mut:9, From_Prot:32
+Processing_Mut:10, From_Prot:32
+Processing_Mut:11, From_Prot:32
+Processing_Mut:12, From_Prot:32
+Processing_Mut:13, From_Prot:32
+Processing_Mut:14, From_Prot:32
+Processing_Mut:15, From_Prot:32
+Processing_Mut:16, From_Prot:32
+Processing_Mut:17, From_Prot:32
+Processing_Mut:18, From_Prot:32
+Processing_Mut:19, From_Prot:32
+Processing_Mut:20, From_Prot:32
+Processing_Mut:21, From_Prot:32
+Processing_Mut:22, From_Prot:32
+Processing_Mut:23, From_Prot:32
+Processing_Mut:24, From_Prot:32
+Processing_Mut:25, From_Prot:32
+Processing_Mut:26, From_Prot:32
+Took 47.92841196060181 for 1cunA.pdb with 26 forward-mutations
+....................
+Prot Processing:33
+Processing_Mut:1, From_Prot:33
+Processing_Mut:2, From_Prot:33
+Took 4.146660566329956 for 1cahA.pdb with 2 forward-mutations
+....................
+Prot Processing:34
+Processing_Mut:1, From_Prot:34
+Processing_Mut:2, From_Prot:34
+Processing_Mut:3, From_Prot:34
+Processing_Mut:4, From_Prot:34
+Processing_Mut:5, From_Prot:34
+Took 8.238535404205322 for 1ihbA.pdb with 5 forward-mutations
+....................
+Prot Processing:35
+Processing_Mut:1, From_Prot:35
+Processing_Mut:2, From_Prot:35
+Processing_Mut:3, From_Prot:35
+Processing_Mut:4, From_Prot:35
+Processing_Mut:5, From_Prot:35
+Processing_Mut:6, From_Prot:35
+Processing_Mut:7, From_Prot:35
+Processing_Mut:8, From_Prot:35
+Processing_Mut:9, From_Prot:35
+Processing_Mut:10, From_Prot:35
+Processing_Mut:11, From_Prot:35
+Processing_Mut:12, From_Prot:35
+Took 19.017737865447998 for 1btaA.pdb with 12 forward-mutations
+....................
+Prot Processing:36
+Processing_Mut:1, From_Prot:36
+Processing_Mut:2, From_Prot:36
+Processing_Mut:3, From_Prot:36
+Processing_Mut:4, From_Prot:36
+Processing_Mut:5, From_Prot:36
+Processing_Mut:6, From_Prot:36
+Processing_Mut:7, From_Prot:36
+Processing_Mut:8, From_Prot:36
+Processing_Mut:9, From_Prot:36
+Processing_Mut:10, From_Prot:36
+Processing_Mut:11, From_Prot:36
+Processing_Mut:12, From_Prot:36
+Processing_Mut:13, From_Prot:36
+Processing_Mut:14, From_Prot:36
+Processing_Mut:15, From_Prot:36
+Processing_Mut:16, From_Prot:36
+Processing_Mut:17, From_Prot:36
+Processing_Mut:18, From_Prot:36
+Processing_Mut:19, From_Prot:36
+Processing_Mut:20, From_Prot:36
+Processing_Mut:21, From_Prot:36
+Processing_Mut:22, From_Prot:36
+Processing_Mut:23, From_Prot:36
+Processing_Mut:24, From_Prot:36
+Processing_Mut:25, From_Prot:36
+Processing_Mut:26, From_Prot:36
+Processing_Mut:27, From_Prot:36
+Processing_Mut:28, From_Prot:36
+Processing_Mut:29, From_Prot:36
+Processing_Mut:30, From_Prot:36
+Processing_Mut:31, From_Prot:36
+Processing_Mut:32, From_Prot:36
+Processing_Mut:33, From_Prot:36
+Processing_Mut:34, From_Prot:36
+Processing_Mut:35, From_Prot:36
+Processing_Mut:36, From_Prot:36
+Processing_Mut:37, From_Prot:36
+Processing_Mut:38, From_Prot:36
+Processing_Mut:39, From_Prot:36
+Processing_Mut:40, From_Prot:36
+Processing_Mut:41, From_Prot:36
+Processing_Mut:42, From_Prot:36
+Processing_Mut:43, From_Prot:36
+Processing_Mut:44, From_Prot:36
+Processing_Mut:45, From_Prot:36
+Processing_Mut:46, From_Prot:36
+Processing_Mut:47, From_Prot:36
+Processing_Mut:48, From_Prot:36
+Processing_Mut:49, From_Prot:36
+Processing_Mut:50, From_Prot:36
+Processing_Mut:51, From_Prot:36
+Processing_Mut:52, From_Prot:36
+Processing_Mut:53, From_Prot:36
+Processing_Mut:54, From_Prot:36
+Processing_Mut:55, From_Prot:36
+Processing_Mut:56, From_Prot:36
+Processing_Mut:57, From_Prot:36
+Processing_Mut:58, From_Prot:36
+Processing_Mut:59, From_Prot:36
+Processing_Mut:60, From_Prot:36
+Processing_Mut:61, From_Prot:36
+Processing_Mut:62, From_Prot:36
+Processing_Mut:63, From_Prot:36
+Processing_Mut:64, From_Prot:36
+Processing_Mut:65, From_Prot:36
+Processing_Mut:66, From_Prot:36
+Processing_Mut:67, From_Prot:36
+Processing_Mut:68, From_Prot:36
+Processing_Mut:69, From_Prot:36
+Processing_Mut:70, From_Prot:36
+Processing_Mut:71, From_Prot:36
+Processing_Mut:72, From_Prot:36
+Processing_Mut:73, From_Prot:36
+Processing_Mut:74, From_Prot:36
+Processing_Mut:75, From_Prot:36
+Processing_Mut:76, From_Prot:36
+Processing_Mut:77, From_Prot:36
+Processing_Mut:78, From_Prot:36
+Processing_Mut:79, From_Prot:36
+Processing_Mut:80, From_Prot:36
+Processing_Mut:81, From_Prot:36
+Processing_Mut:82, From_Prot:36
+Processing_Mut:83, From_Prot:36
+Processing_Mut:84, From_Prot:36
+Processing_Mut:85, From_Prot:36
+Processing_Mut:86, From_Prot:36
+Processing_Mut:87, From_Prot:36
+Processing_Mut:88, From_Prot:36
+Processing_Mut:89, From_Prot:36
+Processing_Mut:90, From_Prot:36
+Processing_Mut:91, From_Prot:36
+Processing_Mut:92, From_Prot:36
+Processing_Mut:93, From_Prot:36
+Processing_Mut:94, From_Prot:36
+Processing_Mut:95, From_Prot:36
+Processing_Mut:96, From_Prot:36
+Processing_Mut:97, From_Prot:36
+Processing_Mut:98, From_Prot:36
+Processing_Mut:99, From_Prot:36
+Processing_Mut:100, From_Prot:36
+Processing_Mut:101, From_Prot:36
+Processing_Mut:102, From_Prot:36
+Processing_Mut:103, From_Prot:36
+Processing_Mut:104, From_Prot:36
+Processing_Mut:105, From_Prot:36
+Processing_Mut:106, From_Prot:36
+Processing_Mut:107, From_Prot:36
+Processing_Mut:108, From_Prot:36
+Processing_Mut:109, From_Prot:36
+Processing_Mut:110, From_Prot:36
+Took 177.27508306503296 for 1lz1A.pdb with 110 forward-mutations
+....................
+Prot Processing:37
+Processing_Mut:1, From_Prot:37
+Processing_Mut:2, From_Prot:37
+Processing_Mut:3, From_Prot:37
+Processing_Mut:4, From_Prot:37
+Processing_Mut:5, From_Prot:37
+Processing_Mut:6, From_Prot:37
+Processing_Mut:7, From_Prot:37
+Processing_Mut:8, From_Prot:37
+Processing_Mut:9, From_Prot:37
+Processing_Mut:10, From_Prot:37
+Processing_Mut:11, From_Prot:37
+Processing_Mut:12, From_Prot:37
+Processing_Mut:13, From_Prot:37
+Processing_Mut:14, From_Prot:37
+Processing_Mut:15, From_Prot:37
+Processing_Mut:16, From_Prot:37
+Processing_Mut:17, From_Prot:37
+Processing_Mut:18, From_Prot:37
+Processing_Mut:19, From_Prot:37
+Processing_Mut:20, From_Prot:37
+Processing_Mut:21, From_Prot:37
+Processing_Mut:22, From_Prot:37
+Processing_Mut:23, From_Prot:37
+Processing_Mut:24, From_Prot:37
+Processing_Mut:25, From_Prot:37
+Processing_Mut:26, From_Prot:37
+Processing_Mut:27, From_Prot:37
+Processing_Mut:28, From_Prot:37
+Processing_Mut:29, From_Prot:37
+Processing_Mut:30, From_Prot:37
+Processing_Mut:31, From_Prot:37
+Processing_Mut:32, From_Prot:37
+Processing_Mut:33, From_Prot:37
+Processing_Mut:34, From_Prot:37
+Processing_Mut:35, From_Prot:37
+Processing_Mut:36, From_Prot:37
+Processing_Mut:37, From_Prot:37
+Processing_Mut:38, From_Prot:37
+Processing_Mut:39, From_Prot:37
+Processing_Mut:40, From_Prot:37
+Processing_Mut:41, From_Prot:37
+Took 66.29171562194824 for 1bvcA.pdb with 41 forward-mutations
+....................
+Prot Processing:38
+Processing_Mut:1, From_Prot:38
+Processing_Mut:2, From_Prot:38
+Processing_Mut:3, From_Prot:38
+Processing_Mut:4, From_Prot:38
+Processing_Mut:5, From_Prot:38
+Took 8.720871210098267 for 1fvkA.pdb with 5 forward-mutations
+....................
+Prot Processing:39
+Processing_Mut:1, From_Prot:39
+Processing_Mut:2, From_Prot:39
+Processing_Mut:3, From_Prot:39
+Processing_Mut:4, From_Prot:39
+Processing_Mut:5, From_Prot:39
+Processing_Mut:6, From_Prot:39
+Processing_Mut:7, From_Prot:39
+Processing_Mut:8, From_Prot:39
+Took 12.56170916557312 for 1imqA.pdb with 8 forward-mutations
+....................
+Prot Processing:40
+Processing_Mut:1, From_Prot:40
+Processing_Mut:2, From_Prot:40
+Processing_Mut:3, From_Prot:40
+Processing_Mut:4, From_Prot:40
+Processing_Mut:5, From_Prot:40
+Processing_Mut:6, From_Prot:40
+Processing_Mut:7, From_Prot:40
+Processing_Mut:8, From_Prot:40
+Processing_Mut:9, From_Prot:40
+Took 14.877369165420532 for 1mjcA.pdb with 9 forward-mutations
+....................
+Prot Processing:41
+Processing_Mut:1, From_Prot:41
+Processing_Mut:2, From_Prot:41
+Processing_Mut:3, From_Prot:41
+Processing_Mut:4, From_Prot:41
+Processing_Mut:5, From_Prot:41
+Took 9.413798570632935 for 1io2A.pdb with 5 forward-mutations
+....................
+Prot Processing:42
+Processing_Mut:1, From_Prot:42
+Took 1.830617904663086 for 1g6nA.pdb with 1 forward-mutations
+....................
+Prot Processing:43
+Processing_Mut:1, From_Prot:43
+Took 1.6131279468536377 for 1ietA.pdb with 1 forward-mutations
+....................
+Prot Processing:44
+Processing_Mut:1, From_Prot:44
+Processing_Mut:2, From_Prot:44
+Processing_Mut:3, From_Prot:44
+Processing_Mut:4, From_Prot:44
+Processing_Mut:5, From_Prot:44
+Processing_Mut:6, From_Prot:44
+Processing_Mut:7, From_Prot:44
+Processing_Mut:8, From_Prot:44
+Processing_Mut:9, From_Prot:44
+Processing_Mut:10, From_Prot:44
+Processing_Mut:11, From_Prot:44
+Processing_Mut:12, From_Prot:44
+Processing_Mut:13, From_Prot:44
+Processing_Mut:14, From_Prot:44
+Processing_Mut:15, From_Prot:44
+Processing_Mut:16, From_Prot:44
+Processing_Mut:17, From_Prot:44
+Processing_Mut:18, From_Prot:44
+Processing_Mut:19, From_Prot:44
+Processing_Mut:20, From_Prot:44
+Processing_Mut:21, From_Prot:44
+Took 33.409876585006714 for 1cspA.pdb with 21 forward-mutations
+....................
+Prot Processing:45
+Processing_Mut:1, From_Prot:45
+Processing_Mut:2, From_Prot:45
+Processing_Mut:3, From_Prot:45
+Processing_Mut:4, From_Prot:45
+Processing_Mut:5, From_Prot:45
+Processing_Mut:6, From_Prot:45
+Processing_Mut:7, From_Prot:45
+Processing_Mut:8, From_Prot:45
+Processing_Mut:9, From_Prot:45
+Processing_Mut:10, From_Prot:45
+Processing_Mut:11, From_Prot:45
+Processing_Mut:12, From_Prot:45
+Processing_Mut:13, From_Prot:45
+Processing_Mut:14, From_Prot:45
+Processing_Mut:15, From_Prot:45
+Took 24.573063373565674 for 1igvA.pdb with 15 forward-mutations
+....................
+Prot Processing:46
+Processing_Mut:1, From_Prot:46
+Processing_Mut:2, From_Prot:46
+Processing_Mut:3, From_Prot:46
+Processing_Mut:4, From_Prot:46
+Processing_Mut:5, From_Prot:46
+Processing_Mut:6, From_Prot:46
+Processing_Mut:7, From_Prot:46
+Processing_Mut:8, From_Prot:46
+Processing_Mut:9, From_Prot:46
+Processing_Mut:10, From_Prot:46
+Processing_Mut:11, From_Prot:46
+Processing_Mut:12, From_Prot:46
+Processing_Mut:13, From_Prot:46
+Processing_Mut:14, From_Prot:46
+Processing_Mut:15, From_Prot:46
+Processing_Mut:16, From_Prot:46
+Processing_Mut:17, From_Prot:46
+Processing_Mut:18, From_Prot:46
+Processing_Mut:19, From_Prot:46
+Processing_Mut:20, From_Prot:46
+Processing_Mut:21, From_Prot:46
+Processing_Mut:22, From_Prot:46
+Processing_Mut:23, From_Prot:46
+Processing_Mut:24, From_Prot:46
+Processing_Mut:25, From_Prot:46
+Took 39.77828764915466 for 1hmkA.pdb with 25 forward-mutations
+....................
+Prot Processing:47
+Processing_Mut:1, From_Prot:47
+Processing_Mut:2, From_Prot:47
+Processing_Mut:3, From_Prot:47
+Processing_Mut:4, From_Prot:47
+Processing_Mut:5, From_Prot:47
+Processing_Mut:6, From_Prot:47
+Processing_Mut:7, From_Prot:47
+Processing_Mut:8, From_Prot:47
+Processing_Mut:9, From_Prot:47
+Processing_Mut:10, From_Prot:47
+Processing_Mut:11, From_Prot:47
+Processing_Mut:12, From_Prot:47
+Processing_Mut:13, From_Prot:47
+Processing_Mut:14, From_Prot:47
+Processing_Mut:15, From_Prot:47
+Processing_Mut:16, From_Prot:47
+Processing_Mut:17, From_Prot:47
+Processing_Mut:18, From_Prot:47
+Processing_Mut:19, From_Prot:47
+Processing_Mut:20, From_Prot:47
+Processing_Mut:21, From_Prot:47
+Processing_Mut:22, From_Prot:47
+Processing_Mut:23, From_Prot:47
+Processing_Mut:24, From_Prot:47
+Processing_Mut:25, From_Prot:47
+Processing_Mut:26, From_Prot:47
+Processing_Mut:27, From_Prot:47
+Took 44.61780667304993 for 1ftgA.pdb with 27 forward-mutations
+....................
+Prot Processing:48
+Processing_Mut:1, From_Prot:48
+Processing_Mut:2, From_Prot:48
+Processing_Mut:3, From_Prot:48
+Took 4.757747650146484 for 1hmeA.pdb with 3 forward-mutations
+....................
+Prot Processing:49
+Processing_Mut:1, From_Prot:49
+Processing_Mut:2, From_Prot:49
+Processing_Mut:3, From_Prot:49
+Processing_Mut:4, From_Prot:49
+Processing_Mut:5, From_Prot:49
+Processing_Mut:6, From_Prot:49
+Processing_Mut:7, From_Prot:49
+Processing_Mut:8, From_Prot:49
+Processing_Mut:9, From_Prot:49
+Processing_Mut:10, From_Prot:49
+Processing_Mut:11, From_Prot:49
+Processing_Mut:12, From_Prot:49
+Processing_Mut:13, From_Prot:49
+Processing_Mut:14, From_Prot:49
+Processing_Mut:15, From_Prot:49
+Processing_Mut:16, From_Prot:49
+Processing_Mut:17, From_Prot:49
+Processing_Mut:18, From_Prot:49
+Processing_Mut:19, From_Prot:49
+Processing_Mut:20, From_Prot:49
+Processing_Mut:21, From_Prot:49
+Processing_Mut:22, From_Prot:49
+Processing_Mut:23, From_Prot:49
+Processing_Mut:24, From_Prot:49
+Processing_Mut:25, From_Prot:49
+Processing_Mut:26, From_Prot:49
+Processing_Mut:27, From_Prot:49
+Processing_Mut:28, From_Prot:49
+Processing_Mut:29, From_Prot:49
+Processing_Mut:30, From_Prot:49
+Processing_Mut:31, From_Prot:49
+Processing_Mut:32, From_Prot:49
+Processing_Mut:33, From_Prot:49
+Processing_Mut:34, From_Prot:49
+Processing_Mut:35, From_Prot:49
+Processing_Mut:36, From_Prot:49
+Processing_Mut:37, From_Prot:49
+Processing_Mut:38, From_Prot:49
+Processing_Mut:39, From_Prot:49
+Processing_Mut:40, From_Prot:49
+Processing_Mut:41, From_Prot:49
+Processing_Mut:42, From_Prot:49
+Processing_Mut:43, From_Prot:49
+Took 69.35444712638855 for 1lniA.pdb with 43 forward-mutations
+....................
+Prot Processing:50
+Processing_Mut:1, From_Prot:50
+Processing_Mut:2, From_Prot:50
+Processing_Mut:3, From_Prot:50
+Processing_Mut:4, From_Prot:50
+Processing_Mut:5, From_Prot:50
+Processing_Mut:6, From_Prot:50
+Processing_Mut:7, From_Prot:50
+Processing_Mut:8, From_Prot:50
+Processing_Mut:9, From_Prot:50
+Processing_Mut:10, From_Prot:50
+Processing_Mut:11, From_Prot:50
+Processing_Mut:12, From_Prot:50
+Processing_Mut:13, From_Prot:50
+Processing_Mut:14, From_Prot:50
+Took 22.256128072738647 for 1ifcA.pdb with 14 forward-mutations
+....................
+Prot Processing:51
+Processing_Mut:1, From_Prot:51
+Processing_Mut:2, From_Prot:51
+Processing_Mut:3, From_Prot:51
+Processing_Mut:4, From_Prot:51
+Processing_Mut:5, From_Prot:51
+Processing_Mut:6, From_Prot:51
+Processing_Mut:7, From_Prot:51
+Processing_Mut:8, From_Prot:51
+Processing_Mut:9, From_Prot:51
+Processing_Mut:10, From_Prot:51
+Processing_Mut:11, From_Prot:51
+Processing_Mut:12, From_Prot:51
+Processing_Mut:13, From_Prot:51
+Processing_Mut:14, From_Prot:51
+Processing_Mut:15, From_Prot:51
+Processing_Mut:16, From_Prot:51
+Processing_Mut:17, From_Prot:51
+Processing_Mut:18, From_Prot:51
+Processing_Mut:19, From_Prot:51
+Processing_Mut:20, From_Prot:51
+Processing_Mut:21, From_Prot:51
+Took 33.755935192108154 for 1e65A.pdb with 21 forward-mutations
+....................
+Prot Processing:52
+Processing_Mut:1, From_Prot:52
+Processing_Mut:2, From_Prot:52
+Processing_Mut:3, From_Prot:52
+Processing_Mut:4, From_Prot:52
+Processing_Mut:5, From_Prot:52
+Processing_Mut:6, From_Prot:52
+Processing_Mut:7, From_Prot:52
+Processing_Mut:8, From_Prot:52
+Processing_Mut:9, From_Prot:52
+Processing_Mut:10, From_Prot:52
+Processing_Mut:11, From_Prot:52
+Processing_Mut:12, From_Prot:52
+Processing_Mut:13, From_Prot:52
+Processing_Mut:14, From_Prot:52
+Processing_Mut:15, From_Prot:52
+Processing_Mut:16, From_Prot:52
+Processing_Mut:17, From_Prot:52
+Processing_Mut:18, From_Prot:52
+Processing_Mut:19, From_Prot:52
+Processing_Mut:20, From_Prot:52
+Processing_Mut:21, From_Prot:52
+Processing_Mut:22, From_Prot:52
+Processing_Mut:23, From_Prot:52
+Processing_Mut:24, From_Prot:52
+Processing_Mut:25, From_Prot:52
+Processing_Mut:26, From_Prot:52
+Processing_Mut:27, From_Prot:52
+Processing_Mut:28, From_Prot:52
+Processing_Mut:29, From_Prot:52
+Processing_Mut:30, From_Prot:52
+Processing_Mut:31, From_Prot:52
+Processing_Mut:32, From_Prot:52
+Processing_Mut:33, From_Prot:52
+Processing_Mut:34, From_Prot:52
+Processing_Mut:35, From_Prot:52
+Processing_Mut:36, From_Prot:52
+Processing_Mut:37, From_Prot:52
+Processing_Mut:38, From_Prot:52
+Processing_Mut:39, From_Prot:52
+Processing_Mut:40, From_Prot:52
+Processing_Mut:41, From_Prot:52
+Processing_Mut:42, From_Prot:52
+Processing_Mut:43, From_Prot:52
+Processing_Mut:44, From_Prot:52
+Processing_Mut:45, From_Prot:52
+Processing_Mut:46, From_Prot:52
+Processing_Mut:47, From_Prot:52
+Processing_Mut:48, From_Prot:52
+Processing_Mut:49, From_Prot:52
+Processing_Mut:50, From_Prot:52
+Processing_Mut:51, From_Prot:52
+Processing_Mut:52, From_Prot:52
+Processing_Mut:53, From_Prot:52
+Processing_Mut:54, From_Prot:52
+Processing_Mut:55, From_Prot:52
+Processing_Mut:56, From_Prot:52
+Processing_Mut:57, From_Prot:52
+Processing_Mut:58, From_Prot:52
+Processing_Mut:59, From_Prot:52
+Processing_Mut:60, From_Prot:52
+Processing_Mut:61, From_Prot:52
+Processing_Mut:62, From_Prot:52
+Processing_Mut:63, From_Prot:52
+Processing_Mut:64, From_Prot:52
+Processing_Mut:65, From_Prot:52
+Processing_Mut:66, From_Prot:52
+Processing_Mut:67, From_Prot:52
+Processing_Mut:68, From_Prot:52
+Processing_Mut:69, From_Prot:52
+Processing_Mut:70, From_Prot:52
+Processing_Mut:71, From_Prot:52
+Processing_Mut:72, From_Prot:52
+Processing_Mut:73, From_Prot:52
+Processing_Mut:74, From_Prot:52
+Processing_Mut:75, From_Prot:52
+Processing_Mut:76, From_Prot:52
+Processing_Mut:77, From_Prot:52
+Processing_Mut:78, From_Prot:52
+Processing_Mut:79, From_Prot:52
+Processing_Mut:80, From_Prot:52
+Processing_Mut:81, From_Prot:52
+Processing_Mut:82, From_Prot:52
+Processing_Mut:83, From_Prot:52
+Processing_Mut:84, From_Prot:52
+Processing_Mut:85, From_Prot:52
+Processing_Mut:86, From_Prot:52
+Processing_Mut:87, From_Prot:52
+Processing_Mut:88, From_Prot:52
+Processing_Mut:89, From_Prot:52
+Processing_Mut:90, From_Prot:52
+Processing_Mut:91, From_Prot:52
+Processing_Mut:92, From_Prot:52
+Processing_Mut:93, From_Prot:52
+Processing_Mut:94, From_Prot:52
+Processing_Mut:95, From_Prot:52
+Processing_Mut:96, From_Prot:52
+Processing_Mut:97, From_Prot:52
+Processing_Mut:98, From_Prot:52
+Processing_Mut:99, From_Prot:52
+Processing_Mut:100, From_Prot:52
+Processing_Mut:101, From_Prot:52
+Processing_Mut:102, From_Prot:52
+Processing_Mut:103, From_Prot:52
+Processing_Mut:104, From_Prot:52
+Processing_Mut:105, From_Prot:52
+Processing_Mut:106, From_Prot:52
+Processing_Mut:107, From_Prot:52
+Processing_Mut:108, From_Prot:52
+Processing_Mut:109, From_Prot:52
+Processing_Mut:110, From_Prot:52
+Processing_Mut:111, From_Prot:52
+Processing_Mut:112, From_Prot:52
+Processing_Mut:113, From_Prot:52
+Processing_Mut:114, From_Prot:52
+Processing_Mut:115, From_Prot:52
+Processing_Mut:116, From_Prot:52
+Processing_Mut:117, From_Prot:52
+Processing_Mut:118, From_Prot:52
+Processing_Mut:119, From_Prot:52
+Processing_Mut:120, From_Prot:52
+Processing_Mut:121, From_Prot:52
+Processing_Mut:122, From_Prot:52
+Processing_Mut:123, From_Prot:52
+Processing_Mut:124, From_Prot:52
+Processing_Mut:125, From_Prot:52
+Processing_Mut:126, From_Prot:52
+Processing_Mut:127, From_Prot:52
+Processing_Mut:128, From_Prot:52
+Processing_Mut:129, From_Prot:52
+Processing_Mut:130, From_Prot:52
+Processing_Mut:131, From_Prot:52
+Processing_Mut:132, From_Prot:52
+Processing_Mut:133, From_Prot:52
+Processing_Mut:134, From_Prot:52
+Processing_Mut:135, From_Prot:52
+Processing_Mut:136, From_Prot:52
+Processing_Mut:137, From_Prot:52
+Processing_Mut:138, From_Prot:52
+Processing_Mut:139, From_Prot:52
+Processing_Mut:140, From_Prot:52
+Processing_Mut:141, From_Prot:52
+Processing_Mut:142, From_Prot:52
+Processing_Mut:143, From_Prot:52
+Processing_Mut:144, From_Prot:52
+Processing_Mut:145, From_Prot:52
+Processing_Mut:146, From_Prot:52
+Processing_Mut:147, From_Prot:52
+Processing_Mut:148, From_Prot:52
+Processing_Mut:149, From_Prot:52
+Processing_Mut:150, From_Prot:52
+Processing_Mut:151, From_Prot:52
+Processing_Mut:152, From_Prot:52
+Processing_Mut:153, From_Prot:52
+Processing_Mut:154, From_Prot:52
+Processing_Mut:155, From_Prot:52
+Processing_Mut:156, From_Prot:52
+Processing_Mut:157, From_Prot:52
+Processing_Mut:158, From_Prot:52
+Processing_Mut:159, From_Prot:52
+Processing_Mut:160, From_Prot:52
+Processing_Mut:161, From_Prot:52
+Processing_Mut:162, From_Prot:52
+Processing_Mut:163, From_Prot:52
+Processing_Mut:164, From_Prot:52
+Processing_Mut:165, From_Prot:52
+Processing_Mut:166, From_Prot:52
+Processing_Mut:167, From_Prot:52
+Processing_Mut:168, From_Prot:52
+Processing_Mut:169, From_Prot:52
+Processing_Mut:170, From_Prot:52
+Processing_Mut:171, From_Prot:52
+Processing_Mut:172, From_Prot:52
+Processing_Mut:173, From_Prot:52
+Processing_Mut:174, From_Prot:52
+Processing_Mut:175, From_Prot:52
+Processing_Mut:176, From_Prot:52
+Processing_Mut:177, From_Prot:52
+Processing_Mut:178, From_Prot:52
+Processing_Mut:179, From_Prot:52
+Processing_Mut:180, From_Prot:52
+Processing_Mut:181, From_Prot:52
+Processing_Mut:182, From_Prot:52
+Processing_Mut:183, From_Prot:52
+Processing_Mut:184, From_Prot:52
+Processing_Mut:185, From_Prot:52
+Processing_Mut:186, From_Prot:52
+Processing_Mut:187, From_Prot:52
+Processing_Mut:188, From_Prot:52
+Processing_Mut:189, From_Prot:52
+Processing_Mut:190, From_Prot:52
+Processing_Mut:191, From_Prot:52
+Processing_Mut:192, From_Prot:52
+Processing_Mut:193, From_Prot:52
+Processing_Mut:194, From_Prot:52
+Processing_Mut:195, From_Prot:52
+Processing_Mut:196, From_Prot:52
+Processing_Mut:197, From_Prot:52
+Processing_Mut:198, From_Prot:52
+Processing_Mut:199, From_Prot:52
+Processing_Mut:200, From_Prot:52
+Processing_Mut:201, From_Prot:52
+Processing_Mut:202, From_Prot:52
+Processing_Mut:203, From_Prot:52
+Processing_Mut:204, From_Prot:52
+Processing_Mut:205, From_Prot:52
+Processing_Mut:206, From_Prot:52
+Processing_Mut:207, From_Prot:52
+Processing_Mut:208, From_Prot:52
+Processing_Mut:209, From_Prot:52
+Processing_Mut:210, From_Prot:52
+Processing_Mut:211, From_Prot:52
+Processing_Mut:212, From_Prot:52
+Processing_Mut:213, From_Prot:52
+Processing_Mut:214, From_Prot:52
+Processing_Mut:215, From_Prot:52
+Processing_Mut:216, From_Prot:52
+Processing_Mut:217, From_Prot:52
+Processing_Mut:218, From_Prot:52
+Processing_Mut:219, From_Prot:52
+Processing_Mut:220, From_Prot:52
+Processing_Mut:221, From_Prot:52
+Processing_Mut:222, From_Prot:52
+Processing_Mut:223, From_Prot:52
+Processing_Mut:224, From_Prot:52
+Processing_Mut:225, From_Prot:52
+Processing_Mut:226, From_Prot:52
+Processing_Mut:227, From_Prot:52
+Processing_Mut:228, From_Prot:52
+Processing_Mut:229, From_Prot:52
+Processing_Mut:230, From_Prot:52
+Processing_Mut:231, From_Prot:52
+Processing_Mut:232, From_Prot:52
+Processing_Mut:233, From_Prot:52
+Processing_Mut:234, From_Prot:52
+Processing_Mut:235, From_Prot:52
+Processing_Mut:236, From_Prot:52
+Processing_Mut:237, From_Prot:52
+Processing_Mut:238, From_Prot:52
+Processing_Mut:239, From_Prot:52
+Processing_Mut:240, From_Prot:52
+Processing_Mut:241, From_Prot:52
+Processing_Mut:242, From_Prot:52
+Processing_Mut:243, From_Prot:52
+Processing_Mut:244, From_Prot:52
+Processing_Mut:245, From_Prot:52
+Processing_Mut:246, From_Prot:52
+Processing_Mut:247, From_Prot:52
+Processing_Mut:248, From_Prot:52
+Processing_Mut:249, From_Prot:52
+Processing_Mut:250, From_Prot:52
+Processing_Mut:251, From_Prot:52
+Processing_Mut:252, From_Prot:52
+Processing_Mut:253, From_Prot:52
+Processing_Mut:254, From_Prot:52
+Processing_Mut:255, From_Prot:52
+Processing_Mut:256, From_Prot:52
+Processing_Mut:257, From_Prot:52
+Processing_Mut:258, From_Prot:52
+Processing_Mut:259, From_Prot:52
+Processing_Mut:260, From_Prot:52
+Processing_Mut:261, From_Prot:52
+Processing_Mut:262, From_Prot:52
+Processing_Mut:263, From_Prot:52
+Processing_Mut:264, From_Prot:52
+Processing_Mut:265, From_Prot:52
+Processing_Mut:266, From_Prot:52
+Processing_Mut:267, From_Prot:52
+Processing_Mut:268, From_Prot:52
+Processing_Mut:269, From_Prot:52
+Processing_Mut:270, From_Prot:52
+Processing_Mut:271, From_Prot:52
+Processing_Mut:272, From_Prot:52
+Processing_Mut:273, From_Prot:52
+Processing_Mut:274, From_Prot:52
+Processing_Mut:275, From_Prot:52
+Processing_Mut:276, From_Prot:52
+Processing_Mut:277, From_Prot:52
+Processing_Mut:278, From_Prot:52
+Processing_Mut:279, From_Prot:52
+Processing_Mut:280, From_Prot:52
+Processing_Mut:281, From_Prot:52
+Processing_Mut:282, From_Prot:52
+Processing_Mut:283, From_Prot:52
+Processing_Mut:284, From_Prot:52
+Processing_Mut:285, From_Prot:52
+Processing_Mut:286, From_Prot:52
+Processing_Mut:287, From_Prot:52
+Processing_Mut:288, From_Prot:52
+Processing_Mut:289, From_Prot:52
+Processing_Mut:290, From_Prot:52
+Processing_Mut:291, From_Prot:52
+Processing_Mut:292, From_Prot:52
+Processing_Mut:293, From_Prot:52
+Processing_Mut:294, From_Prot:52
+Processing_Mut:295, From_Prot:52
+Processing_Mut:296, From_Prot:52
+Processing_Mut:297, From_Prot:52
+Processing_Mut:298, From_Prot:52
+Processing_Mut:299, From_Prot:52
+Processing_Mut:300, From_Prot:52
+Processing_Mut:301, From_Prot:52
+Processing_Mut:302, From_Prot:52
+Processing_Mut:303, From_Prot:52
+Processing_Mut:304, From_Prot:52
+Processing_Mut:305, From_Prot:52
+Processing_Mut:306, From_Prot:52
+Processing_Mut:307, From_Prot:52
+Processing_Mut:308, From_Prot:52
+Processing_Mut:309, From_Prot:52
+Processing_Mut:310, From_Prot:52
+Processing_Mut:311, From_Prot:52
+Processing_Mut:312, From_Prot:52
+Processing_Mut:313, From_Prot:52
+Processing_Mut:314, From_Prot:52
+Processing_Mut:315, From_Prot:52
+Processing_Mut:316, From_Prot:52
+Processing_Mut:317, From_Prot:52
+Processing_Mut:318, From_Prot:52
+Processing_Mut:319, From_Prot:52
+Processing_Mut:320, From_Prot:52
+Processing_Mut:321, From_Prot:52
+Processing_Mut:322, From_Prot:52
+Processing_Mut:323, From_Prot:52
+Processing_Mut:324, From_Prot:52
+Processing_Mut:325, From_Prot:52
+Processing_Mut:326, From_Prot:52
+Processing_Mut:327, From_Prot:52
+Processing_Mut:328, From_Prot:52
+Processing_Mut:329, From_Prot:52
+Processing_Mut:330, From_Prot:52
+Processing_Mut:331, From_Prot:52
+Processing_Mut:332, From_Prot:52
+Processing_Mut:333, From_Prot:52
+Processing_Mut:334, From_Prot:52
+Processing_Mut:335, From_Prot:52
+Processing_Mut:336, From_Prot:52
+Processing_Mut:337, From_Prot:52
+Processing_Mut:338, From_Prot:52
+Processing_Mut:339, From_Prot:52
+Processing_Mut:340, From_Prot:52
+Processing_Mut:341, From_Prot:52
+Processing_Mut:342, From_Prot:52
+Processing_Mut:343, From_Prot:52
+Processing_Mut:344, From_Prot:52
+Processing_Mut:345, From_Prot:52
+Processing_Mut:346, From_Prot:52
+Processing_Mut:347, From_Prot:52
+Processing_Mut:348, From_Prot:52
+Processing_Mut:349, From_Prot:52
+Processing_Mut:350, From_Prot:52
+Processing_Mut:351, From_Prot:52
+Processing_Mut:352, From_Prot:52
+Processing_Mut:353, From_Prot:52
+Processing_Mut:354, From_Prot:52
+Processing_Mut:355, From_Prot:52
+Processing_Mut:356, From_Prot:52
+Processing_Mut:357, From_Prot:52
+Processing_Mut:358, From_Prot:52
+Processing_Mut:359, From_Prot:52
+Processing_Mut:360, From_Prot:52
+Processing_Mut:361, From_Prot:52
+Processing_Mut:362, From_Prot:52
+Processing_Mut:363, From_Prot:52
+Processing_Mut:364, From_Prot:52
+Processing_Mut:365, From_Prot:52
+Processing_Mut:366, From_Prot:52
+Processing_Mut:367, From_Prot:52
+Processing_Mut:368, From_Prot:52
+Processing_Mut:369, From_Prot:52
+Processing_Mut:370, From_Prot:52
+Processing_Mut:371, From_Prot:52
+Processing_Mut:372, From_Prot:52
+Processing_Mut:373, From_Prot:52
+Processing_Mut:374, From_Prot:52
+Processing_Mut:375, From_Prot:52
+Processing_Mut:376, From_Prot:52
+Processing_Mut:377, From_Prot:52
+Processing_Mut:378, From_Prot:52
+Processing_Mut:379, From_Prot:52
+Processing_Mut:380, From_Prot:52
+Processing_Mut:381, From_Prot:52
+Processing_Mut:382, From_Prot:52
+Processing_Mut:383, From_Prot:52
+Processing_Mut:384, From_Prot:52
+Processing_Mut:385, From_Prot:52
+Processing_Mut:386, From_Prot:52
+Processing_Mut:387, From_Prot:52
+Processing_Mut:388, From_Prot:52
+Processing_Mut:389, From_Prot:52
+Processing_Mut:390, From_Prot:52
+Processing_Mut:391, From_Prot:52
+Processing_Mut:392, From_Prot:52
+Processing_Mut:393, From_Prot:52
+Processing_Mut:394, From_Prot:52
+Processing_Mut:395, From_Prot:52
+Processing_Mut:396, From_Prot:52
+Processing_Mut:397, From_Prot:52
+Processing_Mut:398, From_Prot:52
+Processing_Mut:399, From_Prot:52
+Processing_Mut:400, From_Prot:52
+Processing_Mut:401, From_Prot:52
+Processing_Mut:402, From_Prot:52
+Processing_Mut:403, From_Prot:52
+Processing_Mut:404, From_Prot:52
+Processing_Mut:405, From_Prot:52
+Processing_Mut:406, From_Prot:52
+Processing_Mut:407, From_Prot:52
+Processing_Mut:408, From_Prot:52
+Processing_Mut:409, From_Prot:52
+Processing_Mut:410, From_Prot:52
+Processing_Mut:411, From_Prot:52
+Processing_Mut:412, From_Prot:52
+Processing_Mut:413, From_Prot:52
+Processing_Mut:414, From_Prot:52
+Processing_Mut:415, From_Prot:52
+Processing_Mut:416, From_Prot:52
+Processing_Mut:417, From_Prot:52
+Processing_Mut:418, From_Prot:52
+Processing_Mut:419, From_Prot:52
+Processing_Mut:420, From_Prot:52
+Processing_Mut:421, From_Prot:52
+Processing_Mut:422, From_Prot:52
+Processing_Mut:423, From_Prot:52
+Processing_Mut:424, From_Prot:52
+Processing_Mut:425, From_Prot:52
+Processing_Mut:426, From_Prot:52
+Processing_Mut:427, From_Prot:52
+Processing_Mut:428, From_Prot:52
+Processing_Mut:429, From_Prot:52
+Processing_Mut:430, From_Prot:52
+Processing_Mut:431, From_Prot:52
+Processing_Mut:432, From_Prot:52
+Processing_Mut:433, From_Prot:52
+Processing_Mut:434, From_Prot:52
+Processing_Mut:435, From_Prot:52
+Processing_Mut:436, From_Prot:52
+Processing_Mut:437, From_Prot:52
+Processing_Mut:438, From_Prot:52
+Processing_Mut:439, From_Prot:52
+Processing_Mut:440, From_Prot:52
+Processing_Mut:441, From_Prot:52
+Processing_Mut:442, From_Prot:52
+Processing_Mut:443, From_Prot:52
+Processing_Mut:444, From_Prot:52
+Processing_Mut:445, From_Prot:52
+Processing_Mut:446, From_Prot:52
+Processing_Mut:447, From_Prot:52
+Processing_Mut:448, From_Prot:52
+Processing_Mut:449, From_Prot:52
+Processing_Mut:450, From_Prot:52
+Processing_Mut:451, From_Prot:52
+Processing_Mut:452, From_Prot:52
+Processing_Mut:453, From_Prot:52
+Processing_Mut:454, From_Prot:52
+Processing_Mut:455, From_Prot:52
+Processing_Mut:456, From_Prot:52
+Processing_Mut:457, From_Prot:52
+Processing_Mut:458, From_Prot:52
+Processing_Mut:459, From_Prot:52
+Processing_Mut:460, From_Prot:52
+Processing_Mut:461, From_Prot:52
+Processing_Mut:462, From_Prot:52
+Processing_Mut:463, From_Prot:52
+Processing_Mut:464, From_Prot:52
+Processing_Mut:465, From_Prot:52
+Processing_Mut:466, From_Prot:52
+Processing_Mut:467, From_Prot:52
+Processing_Mut:468, From_Prot:52
+Processing_Mut:469, From_Prot:52
+Processing_Mut:470, From_Prot:52
+Processing_Mut:471, From_Prot:52
+Processing_Mut:472, From_Prot:52
+Processing_Mut:473, From_Prot:52
+Processing_Mut:474, From_Prot:52
+Processing_Mut:475, From_Prot:52
+Processing_Mut:476, From_Prot:52
+Processing_Mut:477, From_Prot:52
+Processing_Mut:478, From_Prot:52
+Processing_Mut:479, From_Prot:52
+Processing_Mut:480, From_Prot:52
+Processing_Mut:481, From_Prot:52
+Processing_Mut:482, From_Prot:52
+Took 770.4863088130951 for 1ey0A.pdb with 482 forward-mutations
+....................
+Prot Processing:53
+Processing_Mut:1, From_Prot:53
+Processing_Mut:2, From_Prot:53
+Processing_Mut:3, From_Prot:53
+Processing_Mut:4, From_Prot:53
+Processing_Mut:5, From_Prot:53
+Processing_Mut:6, From_Prot:53
+Processing_Mut:7, From_Prot:53
+Processing_Mut:8, From_Prot:53
+Processing_Mut:9, From_Prot:53
+Processing_Mut:10, From_Prot:53
+Processing_Mut:11, From_Prot:53
+Processing_Mut:12, From_Prot:53
+Processing_Mut:13, From_Prot:53
+Processing_Mut:14, From_Prot:53
+Processing_Mut:15, From_Prot:53
+Processing_Mut:16, From_Prot:53
+Processing_Mut:17, From_Prot:53
+Took 26.739107608795166 for 1hmsA.pdb with 17 forward-mutations
+....................
+Prot Processing:54
+Processing_Mut:1, From_Prot:54
+Processing_Mut:2, From_Prot:54
+Processing_Mut:3, From_Prot:54
+Processing_Mut:4, From_Prot:54
+Processing_Mut:5, From_Prot:54
+Processing_Mut:6, From_Prot:54
+Processing_Mut:7, From_Prot:54
+Processing_Mut:8, From_Prot:54
+Processing_Mut:9, From_Prot:54
+Took 14.835283517837524 for 1g4iA.pdb with 9 forward-mutations
+....................
+Prot Processing:55
+Processing_Mut:1, From_Prot:55
+Took 2.2793405055999756 for 1lbiA.pdb with 1 forward-mutations
+....................
+Prot Processing:56
+Processing_Mut:1, From_Prot:56
+Processing_Mut:2, From_Prot:56
+Processing_Mut:3, From_Prot:56
+Processing_Mut:4, From_Prot:56
+Processing_Mut:5, From_Prot:56
+Took 7.81188440322876 for 1huuA.pdb with 5 forward-mutations
+....................
+Prot Processing:57
+Processing_Mut:1, From_Prot:57
+Processing_Mut:2, From_Prot:57
+Processing_Mut:3, From_Prot:57
+Processing_Mut:4, From_Prot:57
+Processing_Mut:5, From_Prot:57
+Processing_Mut:6, From_Prot:57
+Processing_Mut:7, From_Prot:57
+Processing_Mut:8, From_Prot:57
+Processing_Mut:9, From_Prot:57
+Processing_Mut:10, From_Prot:57
+Processing_Mut:11, From_Prot:57
+Processing_Mut:12, From_Prot:57
+Processing_Mut:13, From_Prot:57
+Processing_Mut:14, From_Prot:57
+Processing_Mut:15, From_Prot:57
+Processing_Mut:16, From_Prot:57
+Processing_Mut:17, From_Prot:57
+Processing_Mut:18, From_Prot:57
+Processing_Mut:19, From_Prot:57
+Processing_Mut:20, From_Prot:57
+Processing_Mut:21, From_Prot:57
+Processing_Mut:22, From_Prot:57
+Took 34.9353449344635 for 1hfzA.pdb with 22 forward-mutations
+....................
+Prot Processing:58
+Processing_Mut:1, From_Prot:58
+Processing_Mut:2, From_Prot:58
+Processing_Mut:3, From_Prot:58
+Took 5.869434595108032 for 1chkA.pdb with 3 forward-mutations
+....................
+Prot Processing:59
+Processing_Mut:1, From_Prot:59
+Took 1.57041597366333 for 1kdxA.pdb with 1 forward-mutations
+....................
+Prot Processing:60
+Processing_Mut:1, From_Prot:60
+Processing_Mut:2, From_Prot:60
+Processing_Mut:3, From_Prot:60
+Took 4.733227491378784 for 1mbgA.pdb with 3 forward-mutations
+....................
+Prot Processing:61
+Processing_Mut:1, From_Prot:61
+Processing_Mut:2, From_Prot:61
+Processing_Mut:3, From_Prot:61
+Processing_Mut:4, From_Prot:61
+Processing_Mut:5, From_Prot:61
+Processing_Mut:6, From_Prot:61
+Processing_Mut:7, From_Prot:61
+Processing_Mut:8, From_Prot:61
+Processing_Mut:9, From_Prot:61
+Processing_Mut:10, From_Prot:61
+Processing_Mut:11, From_Prot:61
+Processing_Mut:12, From_Prot:61
+Processing_Mut:13, From_Prot:61
+Processing_Mut:14, From_Prot:61
+Processing_Mut:15, From_Prot:61
+Processing_Mut:16, From_Prot:61
+Processing_Mut:17, From_Prot:61
+Processing_Mut:18, From_Prot:61
+Processing_Mut:19, From_Prot:61
+Processing_Mut:20, From_Prot:61
+Processing_Mut:21, From_Prot:61
+Processing_Mut:22, From_Prot:61
+Processing_Mut:23, From_Prot:61
+Processing_Mut:24, From_Prot:61
+Processing_Mut:25, From_Prot:61
+Processing_Mut:26, From_Prot:61
+Processing_Mut:27, From_Prot:61
+Processing_Mut:28, From_Prot:61
+Processing_Mut:29, From_Prot:61
+Processing_Mut:30, From_Prot:61
+Processing_Mut:31, From_Prot:61
+Processing_Mut:32, From_Prot:61
+Processing_Mut:33, From_Prot:61
+Processing_Mut:34, From_Prot:61
+Took 53.79678535461426 for 1fnaA.pdb with 34 forward-mutations
+....................
+Prot Processing:62
+Processing_Mut:1, From_Prot:62
+Processing_Mut:2, From_Prot:62
+Took 4.692083835601807 for 1lucB.pdb with 2 forward-mutations
+....................
+Prot Processing:64
+Processing_Mut:1, From_Prot:64
+Processing_Mut:2, From_Prot:64
+Processing_Mut:3, From_Prot:64
+Took 4.888745069503784 for 1oncA.pdb with 3 forward-mutations
+....................
+Prot Processing:65
+Processing_Mut:1, From_Prot:65
+Processing_Mut:2, From_Prot:65
+Processing_Mut:3, From_Prot:65
+Took 4.870546817779541 for 4rexA.pdb with 3 forward-mutations
+....................
+Prot Processing:66
+Processing_Mut:1, From_Prot:66
+Took 1.6587471961975098 for 2hprA.pdb with 1 forward-mutations
+....................
+Prot Processing:67
+Processing_Mut:1, From_Prot:67
+Processing_Mut:2, From_Prot:67
+Processing_Mut:3, From_Prot:67
+Processing_Mut:4, From_Prot:67
+Processing_Mut:5, From_Prot:67
+Processing_Mut:6, From_Prot:67
+Processing_Mut:7, From_Prot:67
+Processing_Mut:8, From_Prot:67
+Processing_Mut:9, From_Prot:67
+Processing_Mut:10, From_Prot:67
+Processing_Mut:11, From_Prot:67
+Processing_Mut:12, From_Prot:67
+Processing_Mut:13, From_Prot:67
+Processing_Mut:14, From_Prot:67
+Processing_Mut:15, From_Prot:67
+Processing_Mut:16, From_Prot:67
+Processing_Mut:17, From_Prot:67
+Processing_Mut:18, From_Prot:67
+Processing_Mut:19, From_Prot:67
+Processing_Mut:20, From_Prot:67
+Processing_Mut:21, From_Prot:67
+Processing_Mut:22, From_Prot:67
+Processing_Mut:23, From_Prot:67
+Processing_Mut:24, From_Prot:67
+Processing_Mut:25, From_Prot:67
+Processing_Mut:26, From_Prot:67
+Processing_Mut:27, From_Prot:67
+Processing_Mut:28, From_Prot:67
+Processing_Mut:29, From_Prot:67
+Processing_Mut:30, From_Prot:67
+Processing_Mut:31, From_Prot:67
+Processing_Mut:32, From_Prot:67
+Processing_Mut:33, From_Prot:67
+Processing_Mut:34, From_Prot:67
+Processing_Mut:35, From_Prot:67
+Processing_Mut:36, From_Prot:67
+Processing_Mut:37, From_Prot:67
+Processing_Mut:38, From_Prot:67
+Processing_Mut:39, From_Prot:67
+Processing_Mut:40, From_Prot:67
+Processing_Mut:41, From_Prot:67
+Processing_Mut:42, From_Prot:67
+Processing_Mut:43, From_Prot:67
+Processing_Mut:44, From_Prot:67
+Took 89.65722155570984 for 1wq5A.pdb with 44 forward-mutations
+....................
+Prot Processing:68
+Processing_Mut:1, From_Prot:68
+Processing_Mut:2, From_Prot:68
+Processing_Mut:3, From_Prot:68
+Processing_Mut:4, From_Prot:68
+Processing_Mut:5, From_Prot:68
+Processing_Mut:6, From_Prot:68
+Processing_Mut:7, From_Prot:68
+Processing_Mut:8, From_Prot:68
+Processing_Mut:9, From_Prot:68
+Processing_Mut:10, From_Prot:68
+Processing_Mut:11, From_Prot:68
+Processing_Mut:12, From_Prot:68
+Processing_Mut:13, From_Prot:68
+Processing_Mut:14, From_Prot:68
+Processing_Mut:15, From_Prot:68
+Processing_Mut:16, From_Prot:68
+Processing_Mut:17, From_Prot:68
+Processing_Mut:18, From_Prot:68
+Processing_Mut:19, From_Prot:68
+Processing_Mut:20, From_Prot:68
+Processing_Mut:21, From_Prot:68
+Processing_Mut:22, From_Prot:68
+Processing_Mut:23, From_Prot:68
+Processing_Mut:24, From_Prot:68
+Processing_Mut:25, From_Prot:68
+Processing_Mut:26, From_Prot:68
+Processing_Mut:27, From_Prot:68
+Processing_Mut:28, From_Prot:68
+Processing_Mut:29, From_Prot:68
+Processing_Mut:30, From_Prot:68
+Processing_Mut:31, From_Prot:68
+Processing_Mut:32, From_Prot:68
+Processing_Mut:33, From_Prot:68
+Processing_Mut:34, From_Prot:68
+Processing_Mut:35, From_Prot:68
+Processing_Mut:36, From_Prot:68
+Processing_Mut:37, From_Prot:68
+Processing_Mut:38, From_Prot:68
+Processing_Mut:39, From_Prot:68
+Processing_Mut:40, From_Prot:68
+Processing_Mut:41, From_Prot:68
+Processing_Mut:42, From_Prot:68
+Processing_Mut:43, From_Prot:68
+Processing_Mut:44, From_Prot:68
+Processing_Mut:45, From_Prot:68
+Processing_Mut:46, From_Prot:68
+Processing_Mut:47, From_Prot:68
+Processing_Mut:48, From_Prot:68
+Processing_Mut:49, From_Prot:68
+Processing_Mut:50, From_Prot:68
+Processing_Mut:51, From_Prot:68
+Processing_Mut:52, From_Prot:68
+Processing_Mut:53, From_Prot:68
+Processing_Mut:54, From_Prot:68
+Processing_Mut:55, From_Prot:68
+Processing_Mut:56, From_Prot:68
+Processing_Mut:57, From_Prot:68
+Processing_Mut:58, From_Prot:68
+Processing_Mut:59, From_Prot:68
+Processing_Mut:60, From_Prot:68
+Processing_Mut:61, From_Prot:68
+Processing_Mut:62, From_Prot:68
+Processing_Mut:63, From_Prot:68
+Processing_Mut:64, From_Prot:68
+Processing_Mut:65, From_Prot:68
+Processing_Mut:66, From_Prot:68
+Processing_Mut:67, From_Prot:68
+Processing_Mut:68, From_Prot:68
+Processing_Mut:69, From_Prot:68
+Processing_Mut:70, From_Prot:68
+Processing_Mut:71, From_Prot:68
+Processing_Mut:72, From_Prot:68
+Processing_Mut:73, From_Prot:68
+Processing_Mut:74, From_Prot:68
+Processing_Mut:75, From_Prot:68
+Took 118.06206607818604 for 2ci2I.pdb with 75 forward-mutations
+....................
+Prot Processing:69
+Processing_Mut:1, From_Prot:69
+Processing_Mut:2, From_Prot:69
+Processing_Mut:3, From_Prot:69
+Took 4.723509073257446 for 3fvjA.pdb with 3 forward-mutations
+....................
+Prot Processing:70
+Processing_Mut:1, From_Prot:70
+Processing_Mut:2, From_Prot:70
+Processing_Mut:3, From_Prot:70
+Processing_Mut:4, From_Prot:70
+Processing_Mut:5, From_Prot:70
+Processing_Mut:6, From_Prot:70
+Processing_Mut:7, From_Prot:70
+Processing_Mut:8, From_Prot:70
+Processing_Mut:9, From_Prot:70
+Processing_Mut:10, From_Prot:70
+Processing_Mut:11, From_Prot:70
+Processing_Mut:12, From_Prot:70
+Processing_Mut:13, From_Prot:70
+Processing_Mut:14, From_Prot:70
+Processing_Mut:15, From_Prot:70
+Processing_Mut:16, From_Prot:70
+Processing_Mut:17, From_Prot:70
+Processing_Mut:18, From_Prot:70
+Processing_Mut:19, From_Prot:70
+Processing_Mut:20, From_Prot:70
+Processing_Mut:21, From_Prot:70
+Took 33.33919882774353 for 5ptiA.pdb with 21 forward-mutations
+....................
+Prot Processing:71
+Processing_Mut:1, From_Prot:71
+Processing_Mut:2, From_Prot:71
+Processing_Mut:3, From_Prot:71
+Processing_Mut:4, From_Prot:71
+Processing_Mut:5, From_Prot:71
+Processing_Mut:6, From_Prot:71
+Processing_Mut:7, From_Prot:71
+Processing_Mut:8, From_Prot:71
+Processing_Mut:9, From_Prot:71
+Processing_Mut:10, From_Prot:71
+Processing_Mut:11, From_Prot:71
+Processing_Mut:12, From_Prot:71
+Processing_Mut:13, From_Prot:71
+Processing_Mut:14, From_Prot:71
+Took 22.22882604598999 for 2nvhA.pdb with 14 forward-mutations
+....................
+Prot Processing:73
+Processing_Mut:1, From_Prot:73
+Processing_Mut:2, From_Prot:73
+Processing_Mut:3, From_Prot:73
+Processing_Mut:4, From_Prot:73
+Processing_Mut:5, From_Prot:73
+Processing_Mut:6, From_Prot:73
+Processing_Mut:7, From_Prot:73
+Took 11.105553388595581 for 1oiaA.pdb with 7 forward-mutations
+....................
+Prot Processing:74
+Processing_Mut:1, From_Prot:74
+Processing_Mut:2, From_Prot:74
+Processing_Mut:3, From_Prot:74
+Processing_Mut:4, From_Prot:74
+Processing_Mut:5, From_Prot:74
+Processing_Mut:6, From_Prot:74
+Processing_Mut:7, From_Prot:74
+Processing_Mut:8, From_Prot:74
+Processing_Mut:9, From_Prot:74
+Processing_Mut:10, From_Prot:74
+Processing_Mut:11, From_Prot:74
+Processing_Mut:12, From_Prot:74
+Processing_Mut:13, From_Prot:74
+Processing_Mut:14, From_Prot:74
+Processing_Mut:15, From_Prot:74
+Processing_Mut:16, From_Prot:74
+Processing_Mut:17, From_Prot:74
+Processing_Mut:18, From_Prot:74
+Processing_Mut:19, From_Prot:74
+Processing_Mut:20, From_Prot:74
+Processing_Mut:21, From_Prot:74
+Processing_Mut:22, From_Prot:74
+Processing_Mut:23, From_Prot:74
+Processing_Mut:24, From_Prot:74
+Processing_Mut:25, From_Prot:74
+Processing_Mut:26, From_Prot:74
+Processing_Mut:27, From_Prot:74
+Processing_Mut:28, From_Prot:74
+Processing_Mut:29, From_Prot:74
+Processing_Mut:30, From_Prot:74
+Processing_Mut:31, From_Prot:74
+Processing_Mut:32, From_Prot:74
+Processing_Mut:33, From_Prot:74
+Processing_Mut:34, From_Prot:74
+Processing_Mut:35, From_Prot:74
+Processing_Mut:36, From_Prot:74
+Processing_Mut:37, From_Prot:74
+Processing_Mut:38, From_Prot:74
+Processing_Mut:39, From_Prot:74
+Processing_Mut:40, From_Prot:74
+Processing_Mut:41, From_Prot:74
+Processing_Mut:42, From_Prot:74
+Processing_Mut:43, From_Prot:74
+Processing_Mut:44, From_Prot:74
+Processing_Mut:45, From_Prot:74
+Processing_Mut:46, From_Prot:74
+Processing_Mut:47, From_Prot:74
+Processing_Mut:48, From_Prot:74
+Processing_Mut:49, From_Prot:74
+Processing_Mut:50, From_Prot:74
+Processing_Mut:51, From_Prot:74
+Processing_Mut:52, From_Prot:74
+Processing_Mut:53, From_Prot:74
+Processing_Mut:54, From_Prot:74
+Processing_Mut:55, From_Prot:74
+Processing_Mut:56, From_Prot:74
+Processing_Mut:57, From_Prot:74
+Took 90.65233540534973 for 4lyzA.pdb with 57 forward-mutations
+....................
+Prot Processing:75
+Processing_Mut:1, From_Prot:75
+Processing_Mut:2, From_Prot:75
+Processing_Mut:3, From_Prot:75
+Processing_Mut:4, From_Prot:75
+Processing_Mut:5, From_Prot:75
+Processing_Mut:6, From_Prot:75
+Processing_Mut:7, From_Prot:75
+Processing_Mut:8, From_Prot:75
+Processing_Mut:9, From_Prot:75
+Processing_Mut:10, From_Prot:75
+Processing_Mut:11, From_Prot:75
+Processing_Mut:12, From_Prot:75
+Processing_Mut:13, From_Prot:75
+Processing_Mut:14, From_Prot:75
+Processing_Mut:15, From_Prot:75
+Processing_Mut:16, From_Prot:75
+Processing_Mut:17, From_Prot:75
+Processing_Mut:18, From_Prot:75
+Processing_Mut:19, From_Prot:75
+Processing_Mut:20, From_Prot:75
+Processing_Mut:21, From_Prot:75
+Processing_Mut:22, From_Prot:75
+Processing_Mut:23, From_Prot:75
+Processing_Mut:24, From_Prot:75
+Processing_Mut:25, From_Prot:75
+Processing_Mut:26, From_Prot:75
+Processing_Mut:27, From_Prot:75
+Processing_Mut:28, From_Prot:75
+Processing_Mut:29, From_Prot:75
+Processing_Mut:30, From_Prot:75
+Processing_Mut:31, From_Prot:75
+Processing_Mut:32, From_Prot:75
+Processing_Mut:33, From_Prot:75
+Processing_Mut:34, From_Prot:75
+Processing_Mut:35, From_Prot:75
+Processing_Mut:36, From_Prot:75
+Processing_Mut:37, From_Prot:75
+Took 59.667118072509766 for 1rtbA.pdb with 37 forward-mutations
+....................
+Prot Processing:76
+Processing_Mut:1, From_Prot:76
+Processing_Mut:2, From_Prot:76
+Processing_Mut:3, From_Prot:76
+Processing_Mut:4, From_Prot:76
+Processing_Mut:5, From_Prot:76
+Processing_Mut:6, From_Prot:76
+Processing_Mut:7, From_Prot:76
+Processing_Mut:8, From_Prot:76
+Processing_Mut:9, From_Prot:76
+Processing_Mut:10, From_Prot:76
+Processing_Mut:11, From_Prot:76
+Processing_Mut:12, From_Prot:76
+Processing_Mut:13, From_Prot:76
+Processing_Mut:14, From_Prot:76
+Processing_Mut:15, From_Prot:76
+Processing_Mut:16, From_Prot:76
+Processing_Mut:17, From_Prot:76
+Took 27.00663423538208 for 1rg8A.pdb with 17 forward-mutations
+....................
+Prot Processing:77
+Processing_Mut:1, From_Prot:77
+Took 1.6303253173828125 for 1witA.pdb with 1 forward-mutations
+....................
+Prot Processing:78
+Processing_Mut:1, From_Prot:78
+Processing_Mut:2, From_Prot:78
+Processing_Mut:3, From_Prot:78
+Processing_Mut:4, From_Prot:78
+Processing_Mut:5, From_Prot:78
+Processing_Mut:6, From_Prot:78
+Processing_Mut:7, From_Prot:78
+Processing_Mut:8, From_Prot:78
+Processing_Mut:9, From_Prot:78
+Processing_Mut:10, From_Prot:78
+Processing_Mut:11, From_Prot:78
+Processing_Mut:12, From_Prot:78
+Took 18.674230337142944 for 1pgaA.pdb with 12 forward-mutations
+....................
+Prot Processing:79
+Processing_Mut:1, From_Prot:79
+Processing_Mut:2, From_Prot:79
+Processing_Mut:3, From_Prot:79
+Processing_Mut:4, From_Prot:79
+Processing_Mut:5, From_Prot:79
+Processing_Mut:6, From_Prot:79
+Processing_Mut:7, From_Prot:79
+Processing_Mut:8, From_Prot:79
+Processing_Mut:9, From_Prot:79
+Processing_Mut:10, From_Prot:79
+Processing_Mut:11, From_Prot:79
+Processing_Mut:12, From_Prot:79
+Processing_Mut:13, From_Prot:79
+Processing_Mut:14, From_Prot:79
+Processing_Mut:15, From_Prot:79
+Processing_Mut:16, From_Prot:79
+Processing_Mut:17, From_Prot:79
+Processing_Mut:18, From_Prot:79
+Processing_Mut:19, From_Prot:79
+Processing_Mut:20, From_Prot:79
+Processing_Mut:21, From_Prot:79
+Processing_Mut:22, From_Prot:79
+Processing_Mut:23, From_Prot:79
+Processing_Mut:24, From_Prot:79
+Processing_Mut:25, From_Prot:79
+Processing_Mut:26, From_Prot:79
+Processing_Mut:27, From_Prot:79
+Processing_Mut:28, From_Prot:79
+Processing_Mut:29, From_Prot:79
+Processing_Mut:30, From_Prot:79
+Processing_Mut:31, From_Prot:79
+Processing_Mut:32, From_Prot:79
+Processing_Mut:33, From_Prot:79
+Processing_Mut:34, From_Prot:79
+Processing_Mut:35, From_Prot:79
+Processing_Mut:36, From_Prot:79
+Processing_Mut:37, From_Prot:79
+Processing_Mut:38, From_Prot:79
+Processing_Mut:39, From_Prot:79
+Processing_Mut:40, From_Prot:79
+Processing_Mut:41, From_Prot:79
+Processing_Mut:42, From_Prot:79
+Processing_Mut:43, From_Prot:79
+Processing_Mut:44, From_Prot:79
+Processing_Mut:45, From_Prot:79
+Processing_Mut:46, From_Prot:79
+Processing_Mut:47, From_Prot:79
+Processing_Mut:48, From_Prot:79
+Processing_Mut:49, From_Prot:79
+Processing_Mut:50, From_Prot:79
+Processing_Mut:51, From_Prot:79
+Processing_Mut:52, From_Prot:79
+Processing_Mut:53, From_Prot:79
+Processing_Mut:54, From_Prot:79
+Processing_Mut:55, From_Prot:79
+Processing_Mut:56, From_Prot:79
+Processing_Mut:57, From_Prot:79
+Processing_Mut:58, From_Prot:79
+Processing_Mut:59, From_Prot:79
+Processing_Mut:60, From_Prot:79
+Processing_Mut:61, From_Prot:79
+Processing_Mut:62, From_Prot:79
+Processing_Mut:63, From_Prot:79
+Processing_Mut:64, From_Prot:79
+Processing_Mut:65, From_Prot:79
+Processing_Mut:66, From_Prot:79
+Processing_Mut:67, From_Prot:79
+Processing_Mut:68, From_Prot:79
+Processing_Mut:69, From_Prot:79
+Processing_Mut:70, From_Prot:79
+Took 112.3569266796112 for 2rn2A.pdb with 70 forward-mutations
+....................
+Prot Processing:80
+Processing_Mut:1, From_Prot:80
+Processing_Mut:2, From_Prot:80
+Processing_Mut:3, From_Prot:80
+Took 5.344387769699097 for 1n0jA.pdb with 3 forward-mutations
+....................
+Prot Processing:81
+Processing_Mut:1, From_Prot:81
+Processing_Mut:2, From_Prot:81
+Processing_Mut:3, From_Prot:81
+Processing_Mut:4, From_Prot:81
+Processing_Mut:5, From_Prot:81
+Processing_Mut:6, From_Prot:81
+Processing_Mut:7, From_Prot:81
+Processing_Mut:8, From_Prot:81
+Processing_Mut:9, From_Prot:81
+Processing_Mut:10, From_Prot:81
+Processing_Mut:11, From_Prot:81
+Processing_Mut:12, From_Prot:81
+Processing_Mut:13, From_Prot:81
+Processing_Mut:14, From_Prot:81
+Processing_Mut:15, From_Prot:81
+Processing_Mut:16, From_Prot:81
+Processing_Mut:17, From_Prot:81
+Processing_Mut:18, From_Prot:81
+Processing_Mut:19, From_Prot:81
+Processing_Mut:20, From_Prot:81
+Processing_Mut:21, From_Prot:81
+Processing_Mut:22, From_Prot:81
+Processing_Mut:23, From_Prot:81
+Processing_Mut:24, From_Prot:81
+Processing_Mut:25, From_Prot:81
+Processing_Mut:26, From_Prot:81
+Processing_Mut:27, From_Prot:81
+Processing_Mut:28, From_Prot:81
+Took 44.6041316986084 for 1tenA.pdb with 28 forward-mutations
+....................
+Prot Processing:82
+Processing_Mut:1, From_Prot:82
+Took 1.6077911853790283 for 1rtpA.pdb with 1 forward-mutations
+....................
+Prot Processing:83
+Processing_Mut:1, From_Prot:83
+Processing_Mut:2, From_Prot:83
+Processing_Mut:3, From_Prot:83
+Processing_Mut:4, From_Prot:83
+Processing_Mut:5, From_Prot:83
+Processing_Mut:6, From_Prot:83
+Processing_Mut:7, From_Prot:83
+Processing_Mut:8, From_Prot:83
+Processing_Mut:9, From_Prot:83
+Processing_Mut:10, From_Prot:83
+Processing_Mut:11, From_Prot:83
+Processing_Mut:12, From_Prot:83
+Processing_Mut:13, From_Prot:83
+Processing_Mut:14, From_Prot:83
+Processing_Mut:15, From_Prot:83
+Processing_Mut:16, From_Prot:83
+Processing_Mut:17, From_Prot:83
+Processing_Mut:18, From_Prot:83
+Processing_Mut:19, From_Prot:83
+Processing_Mut:20, From_Prot:83
+Took 31.349390268325806 for 1ropA.pdb with 20 forward-mutations
+....................
+Prot Processing:84
+Processing_Mut:1, From_Prot:84
+Took 1.6427571773529053 for 1qgvA.pdb with 1 forward-mutations
+....................
+Prot Processing:85
+Processing_Mut:1, From_Prot:85
+Processing_Mut:2, From_Prot:85
+Processing_Mut:3, From_Prot:85
+Processing_Mut:4, From_Prot:85
+Processing_Mut:5, From_Prot:85
+Processing_Mut:6, From_Prot:85
+Processing_Mut:7, From_Prot:85
+Processing_Mut:8, From_Prot:85
+Processing_Mut:9, From_Prot:85
+Processing_Mut:10, From_Prot:85
+Processing_Mut:11, From_Prot:85
+Processing_Mut:12, From_Prot:85
+Processing_Mut:13, From_Prot:85
+Processing_Mut:14, From_Prot:85
+Processing_Mut:15, From_Prot:85
+Processing_Mut:16, From_Prot:85
+Processing_Mut:17, From_Prot:85
+Processing_Mut:18, From_Prot:85
+Processing_Mut:19, From_Prot:85
+Processing_Mut:20, From_Prot:85
+Processing_Mut:21, From_Prot:85
+Processing_Mut:22, From_Prot:85
+Processing_Mut:23, From_Prot:85
+Processing_Mut:24, From_Prot:85
+Processing_Mut:25, From_Prot:85
+Processing_Mut:26, From_Prot:85
+Processing_Mut:27, From_Prot:85
+Processing_Mut:28, From_Prot:85
+Processing_Mut:29, From_Prot:85
+Processing_Mut:30, From_Prot:85
+Processing_Mut:31, From_Prot:85
+Processing_Mut:32, From_Prot:85
+Processing_Mut:33, From_Prot:85
+Processing_Mut:34, From_Prot:85
+Processing_Mut:35, From_Prot:85
+Processing_Mut:36, From_Prot:85
+Processing_Mut:37, From_Prot:85
+Took 58.78894257545471 for 1yyjA.pdb with 37 forward-mutations
+....................
+Prot Processing:86
+Processing_Mut:1, From_Prot:86
+Processing_Mut:2, From_Prot:86
+Processing_Mut:3, From_Prot:86
+Processing_Mut:4, From_Prot:86
+Processing_Mut:5, From_Prot:86
+Processing_Mut:6, From_Prot:86
+Took 9.45281195640564 for 1tpkA.pdb with 6 forward-mutations
+....................
+Prot Processing:87
+Processing_Mut:1, From_Prot:87
+Processing_Mut:2, From_Prot:87
+Took 4.097034454345703 for 1zg4A.pdb with 2 forward-mutations
+....................
+Prot Processing:88
+Processing_Mut:1, From_Prot:88
+Processing_Mut:2, From_Prot:88
+Processing_Mut:3, From_Prot:88
+Processing_Mut:4, From_Prot:88
+Processing_Mut:5, From_Prot:88
+Took 7.961297512054443 for 2h61A.pdb with 5 forward-mutations
+....................
+Prot Processing:89
+Processing_Mut:1, From_Prot:89
+Took 1.5983901023864746 for 1yu5X.pdb with 1 forward-mutations
+....................
+Prot Processing:90
+Processing_Mut:1, From_Prot:90
+Processing_Mut:2, From_Prot:90
+Processing_Mut:3, From_Prot:90
+Processing_Mut:4, From_Prot:90
+Processing_Mut:5, From_Prot:90
+Processing_Mut:6, From_Prot:90
+Took 9.341102123260498 for 1msiA.pdb with 6 forward-mutations
+....................
+Prot Processing:91
+Processing_Mut:1, From_Prot:91
+Processing_Mut:2, From_Prot:91
+Took 5.198352813720703 for 3silA.pdb with 2 forward-mutations
+....................
+Prot Processing:92
+Processing_Mut:1, From_Prot:92
+Processing_Mut:2, From_Prot:92
+Processing_Mut:3, From_Prot:92
+Processing_Mut:4, From_Prot:92
+Processing_Mut:5, From_Prot:92
+Processing_Mut:6, From_Prot:92
+Processing_Mut:7, From_Prot:92
+Processing_Mut:8, From_Prot:92
+Processing_Mut:9, From_Prot:92
+Processing_Mut:10, From_Prot:92
+Processing_Mut:11, From_Prot:92
+Processing_Mut:12, From_Prot:92
+Processing_Mut:13, From_Prot:92
+Processing_Mut:14, From_Prot:92
+Processing_Mut:15, From_Prot:92
+Processing_Mut:16, From_Prot:92
+Processing_Mut:17, From_Prot:92
+Processing_Mut:18, From_Prot:92
+Processing_Mut:19, From_Prot:92
+Processing_Mut:20, From_Prot:92
+Processing_Mut:21, From_Prot:92
+Processing_Mut:22, From_Prot:92
+Processing_Mut:23, From_Prot:92
+Processing_Mut:24, From_Prot:92
+Processing_Mut:25, From_Prot:92
+Processing_Mut:26, From_Prot:92
+Processing_Mut:27, From_Prot:92
+Processing_Mut:28, From_Prot:92
+Processing_Mut:29, From_Prot:92
+Processing_Mut:30, From_Prot:92
+Processing_Mut:31, From_Prot:92
+Processing_Mut:32, From_Prot:92
+Processing_Mut:33, From_Prot:92
+Processing_Mut:34, From_Prot:92
+Processing_Mut:35, From_Prot:92
+Processing_Mut:36, From_Prot:92
+Processing_Mut:37, From_Prot:92
+Processing_Mut:38, From_Prot:92
+Processing_Mut:39, From_Prot:92
+Processing_Mut:40, From_Prot:92
+Processing_Mut:41, From_Prot:92
+Processing_Mut:42, From_Prot:92
+Processing_Mut:43, From_Prot:92
+Processing_Mut:44, From_Prot:92
+Processing_Mut:45, From_Prot:92
+Processing_Mut:46, From_Prot:92
+Processing_Mut:47, From_Prot:92
+Processing_Mut:48, From_Prot:92
+Processing_Mut:49, From_Prot:92
+Processing_Mut:50, From_Prot:92
+Processing_Mut:51, From_Prot:92
+Processing_Mut:52, From_Prot:92
+Processing_Mut:53, From_Prot:92
+Processing_Mut:54, From_Prot:92
+Processing_Mut:55, From_Prot:92
+Processing_Mut:56, From_Prot:92
+Processing_Mut:57, From_Prot:92
+Processing_Mut:58, From_Prot:92
+Processing_Mut:59, From_Prot:92
+Processing_Mut:60, From_Prot:92
+Processing_Mut:61, From_Prot:92
+Processing_Mut:62, From_Prot:92
+Processing_Mut:63, From_Prot:92
+Processing_Mut:64, From_Prot:92
+Processing_Mut:65, From_Prot:92
+Processing_Mut:66, From_Prot:92
+Processing_Mut:67, From_Prot:92
+Processing_Mut:68, From_Prot:92
+Processing_Mut:69, From_Prot:92
+Processing_Mut:70, From_Prot:92
+Processing_Mut:71, From_Prot:92
+Processing_Mut:72, From_Prot:92
+Processing_Mut:73, From_Prot:92
+Processing_Mut:74, From_Prot:92
+Processing_Mut:75, From_Prot:92
+Processing_Mut:76, From_Prot:92
+Processing_Mut:77, From_Prot:92
+Processing_Mut:78, From_Prot:92
+Processing_Mut:79, From_Prot:92
+Processing_Mut:80, From_Prot:92
+Processing_Mut:81, From_Prot:92
+Processing_Mut:82, From_Prot:92
+Processing_Mut:83, From_Prot:92
+Processing_Mut:84, From_Prot:92
+Processing_Mut:85, From_Prot:92
+Processing_Mut:86, From_Prot:92
+Processing_Mut:87, From_Prot:92
+Processing_Mut:88, From_Prot:92
+Processing_Mut:89, From_Prot:92
+Processing_Mut:90, From_Prot:92
+Took 142.59607982635498 for 1vqbA.pdb with 90 forward-mutations
+....................
+Prot Processing:93
+Processing_Mut:1, From_Prot:93
+Processing_Mut:2, From_Prot:93
+Processing_Mut:3, From_Prot:93
+Processing_Mut:4, From_Prot:93
+Processing_Mut:5, From_Prot:93
+Processing_Mut:6, From_Prot:93
+Processing_Mut:7, From_Prot:93
+Processing_Mut:8, From_Prot:93
+Processing_Mut:9, From_Prot:93
+Processing_Mut:10, From_Prot:93
+Processing_Mut:11, From_Prot:93
+Processing_Mut:12, From_Prot:93
+Processing_Mut:13, From_Prot:93
+Processing_Mut:14, From_Prot:93
+Processing_Mut:15, From_Prot:93
+Processing_Mut:16, From_Prot:93
+Processing_Mut:17, From_Prot:93
+Processing_Mut:18, From_Prot:93
+Processing_Mut:19, From_Prot:93
+Processing_Mut:20, From_Prot:93
+Processing_Mut:21, From_Prot:93
+Processing_Mut:22, From_Prot:93
+Processing_Mut:23, From_Prot:93
+Processing_Mut:24, From_Prot:93
+Processing_Mut:25, From_Prot:93
+Processing_Mut:26, From_Prot:93
+Processing_Mut:27, From_Prot:93
+Processing_Mut:28, From_Prot:93
+Processing_Mut:29, From_Prot:93
+Took 45.95405578613281 for 2abdA.pdb with 29 forward-mutations
+....................
+Prot Processing:94
+Processing_Mut:1, From_Prot:94
+Processing_Mut:2, From_Prot:94
+Processing_Mut:3, From_Prot:94
+Processing_Mut:4, From_Prot:94
+Processing_Mut:5, From_Prot:94
+Processing_Mut:6, From_Prot:94
+Processing_Mut:7, From_Prot:94
+Processing_Mut:8, From_Prot:94
+Took 12.517560482025146 for 2a36A.pdb with 8 forward-mutations
+....................
+Prot Processing:95
+Processing_Mut:1, From_Prot:95
+Processing_Mut:2, From_Prot:95
+Processing_Mut:3, From_Prot:95
+Processing_Mut:4, From_Prot:95
+Processing_Mut:5, From_Prot:95
+Processing_Mut:6, From_Prot:95
+Processing_Mut:7, From_Prot:95
+Processing_Mut:8, From_Prot:95
+Processing_Mut:9, From_Prot:95
+Processing_Mut:10, From_Prot:95
+Processing_Mut:11, From_Prot:95
+Took 17.939858198165894 for 1ubqA.pdb with 11 forward-mutations
+....................
+Prot Processing:96
+Processing_Mut:1, From_Prot:96
+Processing_Mut:2, From_Prot:96
+Processing_Mut:3, From_Prot:96
+Processing_Mut:4, From_Prot:96
+Processing_Mut:5, From_Prot:96
+Processing_Mut:6, From_Prot:96
+Processing_Mut:7, From_Prot:96
+Processing_Mut:8, From_Prot:96
+Processing_Mut:9, From_Prot:96
+Processing_Mut:10, From_Prot:96
+Processing_Mut:11, From_Prot:96
+Processing_Mut:12, From_Prot:96
+Processing_Mut:13, From_Prot:96
+Processing_Mut:14, From_Prot:96
+Processing_Mut:15, From_Prot:96
+Processing_Mut:16, From_Prot:96
+Processing_Mut:17, From_Prot:96
+Processing_Mut:18, From_Prot:96
+Processing_Mut:19, From_Prot:96
+Processing_Mut:20, From_Prot:96
+Processing_Mut:21, From_Prot:96
+Processing_Mut:22, From_Prot:96
+Processing_Mut:23, From_Prot:96
+Processing_Mut:24, From_Prot:96
+Processing_Mut:25, From_Prot:96
+Processing_Mut:26, From_Prot:96
+Processing_Mut:27, From_Prot:96
+Processing_Mut:28, From_Prot:96
+Processing_Mut:29, From_Prot:96
+Processing_Mut:30, From_Prot:96
+Processing_Mut:31, From_Prot:96
+Processing_Mut:32, From_Prot:96
+Processing_Mut:33, From_Prot:96
+Processing_Mut:34, From_Prot:96
+Processing_Mut:35, From_Prot:96
+Processing_Mut:36, From_Prot:96
+Processing_Mut:37, From_Prot:96
+Processing_Mut:38, From_Prot:96
+Processing_Mut:39, From_Prot:96
+Processing_Mut:40, From_Prot:96
+Processing_Mut:41, From_Prot:96
+Processing_Mut:42, From_Prot:96
+Processing_Mut:43, From_Prot:96
+Processing_Mut:44, From_Prot:96
+Processing_Mut:45, From_Prot:96
+Took 71.16767358779907 for 1uzcA.pdb with 45 forward-mutations
+....................
+Prot Processing:97
+Processing_Mut:1, From_Prot:97
+Processing_Mut:2, From_Prot:97
+Processing_Mut:3, From_Prot:97
+Processing_Mut:4, From_Prot:97
+Processing_Mut:5, From_Prot:97
+Processing_Mut:6, From_Prot:97
+Processing_Mut:7, From_Prot:97
+Processing_Mut:8, From_Prot:97
+Processing_Mut:9, From_Prot:97
+Processing_Mut:10, From_Prot:97
+Processing_Mut:11, From_Prot:97
+Processing_Mut:12, From_Prot:97
+Processing_Mut:13, From_Prot:97
+Processing_Mut:14, From_Prot:97
+Processing_Mut:15, From_Prot:97
+Processing_Mut:16, From_Prot:97
+Processing_Mut:17, From_Prot:97
+Processing_Mut:18, From_Prot:97
+Processing_Mut:19, From_Prot:97
+Processing_Mut:20, From_Prot:97
+Processing_Mut:21, From_Prot:97
+Processing_Mut:22, From_Prot:97
+Processing_Mut:23, From_Prot:97
+Processing_Mut:24, From_Prot:97
+Processing_Mut:25, From_Prot:97
+Processing_Mut:26, From_Prot:97
+Processing_Mut:27, From_Prot:97
+Processing_Mut:28, From_Prot:97
+Processing_Mut:29, From_Prot:97
+Processing_Mut:30, From_Prot:97
+Processing_Mut:31, From_Prot:97
+Processing_Mut:32, From_Prot:97
+Processing_Mut:33, From_Prot:97
+Processing_Mut:34, From_Prot:97
+Processing_Mut:35, From_Prot:97
+Processing_Mut:36, From_Prot:97
+Took 56.435593366622925 for 1shfA.pdb with 36 forward-mutations
+....................
+Prot Processing:98
+Processing_Mut:1, From_Prot:98
+Processing_Mut:2, From_Prot:98
+Processing_Mut:3, From_Prot:98
+Processing_Mut:4, From_Prot:98
+Processing_Mut:5, From_Prot:98
+Processing_Mut:6, From_Prot:98
+Took 19.74845027923584 for 1tyvA.pdb with 6 forward-mutations
+....................
+Prot Processing:99
+Processing_Mut:1, From_Prot:99
+Processing_Mut:2, From_Prot:99
+Processing_Mut:3, From_Prot:99
+Processing_Mut:4, From_Prot:99
+Processing_Mut:5, From_Prot:99
+Processing_Mut:6, From_Prot:99
+Processing_Mut:7, From_Prot:99
+Processing_Mut:8, From_Prot:99
+Took 12.52821159362793 for 1znjB.pdb with 8 forward-mutations
+....................
+Prot Processing:100
+Processing_Mut:1, From_Prot:100
+Processing_Mut:2, From_Prot:100
+Took 4.2197065353393555 for 2driA.pdb with 2 forward-mutations
+....................
+Prot Processing:101
+Processing_Mut:1, From_Prot:101
+Processing_Mut:2, From_Prot:101
+Processing_Mut:3, From_Prot:101
+Processing_Mut:4, From_Prot:101
+Processing_Mut:5, From_Prot:101
+Processing_Mut:6, From_Prot:101
+Processing_Mut:7, From_Prot:101
+Processing_Mut:8, From_Prot:101
+Took 12.509717226028442 for 1titA.pdb with 8 forward-mutations
+....................
+Prot Processing:102
+Processing_Mut:1, From_Prot:102
+Processing_Mut:2, From_Prot:102
+Processing_Mut:3, From_Prot:102
+Processing_Mut:4, From_Prot:102
+Processing_Mut:5, From_Prot:102
+Processing_Mut:6, From_Prot:102
+Processing_Mut:7, From_Prot:102
+Processing_Mut:8, From_Prot:102
+Processing_Mut:9, From_Prot:102
+Processing_Mut:10, From_Prot:102
+Processing_Mut:11, From_Prot:102
+Processing_Mut:12, From_Prot:102
+Processing_Mut:13, From_Prot:102
+Processing_Mut:14, From_Prot:102
+Processing_Mut:15, From_Prot:102
+Processing_Mut:16, From_Prot:102
+Processing_Mut:17, From_Prot:102
+Processing_Mut:18, From_Prot:102
+Processing_Mut:19, From_Prot:102
+Processing_Mut:20, From_Prot:102
+Processing_Mut:21, From_Prot:102
+Processing_Mut:22, From_Prot:102
+Processing_Mut:23, From_Prot:102
+Processing_Mut:24, From_Prot:102
+Processing_Mut:25, From_Prot:102
+Processing_Mut:26, From_Prot:102
+Processing_Mut:27, From_Prot:102
+Processing_Mut:28, From_Prot:102
+Processing_Mut:29, From_Prot:102
+Processing_Mut:30, From_Prot:102
+Processing_Mut:31, From_Prot:102
+Processing_Mut:32, From_Prot:102
+Processing_Mut:33, From_Prot:102
+Processing_Mut:34, From_Prot:102
+Processing_Mut:35, From_Prot:102
+Processing_Mut:36, From_Prot:102
+Processing_Mut:37, From_Prot:102
+Processing_Mut:38, From_Prot:102
+Processing_Mut:39, From_Prot:102
+Processing_Mut:40, From_Prot:102
+Processing_Mut:41, From_Prot:102
+Processing_Mut:42, From_Prot:102
+Processing_Mut:43, From_Prot:102
+Took 109.66836643218994 for 1qlpA.pdb with 43 forward-mutations
+....................
+Prot Processing:103
+Processing_Mut:1, From_Prot:103
+Processing_Mut:2, From_Prot:103
+Processing_Mut:3, From_Prot:103
+Processing_Mut:4, From_Prot:103
+Processing_Mut:5, From_Prot:103
+Processing_Mut:6, From_Prot:103
+Processing_Mut:7, From_Prot:103
+Processing_Mut:8, From_Prot:103
+Processing_Mut:9, From_Prot:103
+Processing_Mut:10, From_Prot:103
+Took 15.665079355239868 for 3olmD.pdb with 10 forward-mutations
+....................
+Prot Processing:104
+Processing_Mut:1, From_Prot:104
+Processing_Mut:2, From_Prot:104
+Processing_Mut:3, From_Prot:104
+Processing_Mut:4, From_Prot:104
+Processing_Mut:5, From_Prot:104
+Processing_Mut:6, From_Prot:104
+Processing_Mut:7, From_Prot:104
+Processing_Mut:8, From_Prot:104
+Processing_Mut:9, From_Prot:104
+Processing_Mut:10, From_Prot:104
+Processing_Mut:11, From_Prot:104
+Processing_Mut:12, From_Prot:104
+Processing_Mut:13, From_Prot:104
+Took 20.835676431655884 for 1pohA.pdb with 13 forward-mutations
+....................
+Prot Processing:105
+Processing_Mut:1, From_Prot:105
+Processing_Mut:2, From_Prot:105
+Processing_Mut:3, From_Prot:105
+Processing_Mut:4, From_Prot:105
+Processing_Mut:5, From_Prot:105
+Processing_Mut:6, From_Prot:105
+Processing_Mut:7, From_Prot:105
+Processing_Mut:8, From_Prot:105
+Processing_Mut:9, From_Prot:105
+Processing_Mut:10, From_Prot:105
+Processing_Mut:11, From_Prot:105
+Processing_Mut:12, From_Prot:105
+Processing_Mut:13, From_Prot:105
+Processing_Mut:14, From_Prot:105
+Processing_Mut:15, From_Prot:105
+Processing_Mut:16, From_Prot:105
+Processing_Mut:17, From_Prot:105
+Processing_Mut:18, From_Prot:105
+Processing_Mut:19, From_Prot:105
+Took 29.981885194778442 for 3ssiA.pdb with 19 forward-mutations
+....................
+Prot Processing:106
+Processing_Mut:1, From_Prot:106
+Processing_Mut:2, From_Prot:106
+Processing_Mut:3, From_Prot:106
+Processing_Mut:4, From_Prot:106
+Processing_Mut:5, From_Prot:106
+Processing_Mut:6, From_Prot:106
+Processing_Mut:7, From_Prot:106
+Processing_Mut:8, From_Prot:106
+Processing_Mut:9, From_Prot:106
+Processing_Mut:10, From_Prot:106
+Took 17.19142436981201 for 3hhrA.pdb with 10 forward-mutations
+....................
+Prot Processing:107
+Processing_Mut:1, From_Prot:107
+Processing_Mut:2, From_Prot:107
+Processing_Mut:3, From_Prot:107
+Processing_Mut:4, From_Prot:107
+Took 10.002005815505981 for 3ecaA.pdb with 4 forward-mutations
+....................
+Prot Processing:108
+Processing_Mut:1, From_Prot:108
+Took 1.6170542240142822 for 1ssoA.pdb with 1 forward-mutations
+....................
+Prot Processing:109
+Processing_Mut:1, From_Prot:109
+Processing_Mut:2, From_Prot:109
+Processing_Mut:3, From_Prot:109
+Processing_Mut:4, From_Prot:109
+Processing_Mut:5, From_Prot:109
+Took 8.838644742965698 for 2ocjA.pdb with 5 forward-mutations
+....................
+Prot Processing:110
+Processing_Mut:1, From_Prot:110
+Processing_Mut:2, From_Prot:110
+Processing_Mut:3, From_Prot:110
+Processing_Mut:4, From_Prot:110
+Processing_Mut:5, From_Prot:110
+Processing_Mut:6, From_Prot:110
+Processing_Mut:7, From_Prot:110
+Processing_Mut:8, From_Prot:110
+Processing_Mut:9, From_Prot:110
+Processing_Mut:10, From_Prot:110
+Processing_Mut:11, From_Prot:110
+Processing_Mut:12, From_Prot:110
+Processing_Mut:13, From_Prot:110
+Processing_Mut:14, From_Prot:110
+Processing_Mut:15, From_Prot:110
+Processing_Mut:16, From_Prot:110
+Took 25.39683508872986 for 1risA.pdb with 16 forward-mutations
+....................
+Prot Processing:111
+Processing_Mut:1, From_Prot:111
+Processing_Mut:2, From_Prot:111
+Processing_Mut:3, From_Prot:111
+Processing_Mut:4, From_Prot:111
+Processing_Mut:5, From_Prot:111
+Processing_Mut:6, From_Prot:111
+Processing_Mut:7, From_Prot:111
+Processing_Mut:8, From_Prot:111
+Took 16.1780424118042 for 1ttqA.pdb with 8 forward-mutations
+....................
+Prot Processing:112
+Processing_Mut:1, From_Prot:112
+Processing_Mut:2, From_Prot:112
+Processing_Mut:3, From_Prot:112
+Processing_Mut:4, From_Prot:112
+Took 7.709184408187866 for 4br1A.pdb with 4 forward-mutations
+....................
+Prot Processing:113
+Processing_Mut:1, From_Prot:113
+Processing_Mut:2, From_Prot:113
+Processing_Mut:3, From_Prot:113
+Processing_Mut:4, From_Prot:113
+Processing_Mut:5, From_Prot:113
+Processing_Mut:6, From_Prot:113
+Processing_Mut:7, From_Prot:113
+Processing_Mut:8, From_Prot:113
+Processing_Mut:9, From_Prot:113
+Processing_Mut:10, From_Prot:113
+Processing_Mut:11, From_Prot:113
+Processing_Mut:12, From_Prot:113
+Processing_Mut:13, From_Prot:113
+Processing_Mut:14, From_Prot:113
+Processing_Mut:15, From_Prot:113
+Processing_Mut:16, From_Prot:113
+Processing_Mut:17, From_Prot:113
+Processing_Mut:18, From_Prot:113
+Processing_Mut:19, From_Prot:113
+Processing_Mut:20, From_Prot:113
+Processing_Mut:21, From_Prot:113
+Processing_Mut:22, From_Prot:113
+Processing_Mut:23, From_Prot:113
+Processing_Mut:24, From_Prot:113
+Processing_Mut:25, From_Prot:113
+Processing_Mut:26, From_Prot:113
+Processing_Mut:27, From_Prot:113
+Processing_Mut:28, From_Prot:113
+Processing_Mut:29, From_Prot:113
+Processing_Mut:30, From_Prot:113
+Processing_Mut:31, From_Prot:113
+Processing_Mut:32, From_Prot:113
+Processing_Mut:33, From_Prot:113
+Processing_Mut:34, From_Prot:113
+Processing_Mut:35, From_Prot:113
+Processing_Mut:36, From_Prot:113
+Processing_Mut:37, From_Prot:113
+Processing_Mut:38, From_Prot:113
+Processing_Mut:39, From_Prot:113
+Processing_Mut:40, From_Prot:113
+Processing_Mut:41, From_Prot:113
+Processing_Mut:42, From_Prot:113
+Processing_Mut:43, From_Prot:113
+Processing_Mut:44, From_Prot:113
+Processing_Mut:45, From_Prot:113
+Processing_Mut:46, From_Prot:113
+Processing_Mut:47, From_Prot:113
+Processing_Mut:48, From_Prot:113
+Processing_Mut:49, From_Prot:113
+Processing_Mut:50, From_Prot:113
+Processing_Mut:51, From_Prot:113
+Processing_Mut:52, From_Prot:113
+Processing_Mut:53, From_Prot:113
+Processing_Mut:54, From_Prot:113
+Processing_Mut:55, From_Prot:113
+Processing_Mut:56, From_Prot:113
+Processing_Mut:57, From_Prot:113
+Processing_Mut:58, From_Prot:113
+Processing_Mut:59, From_Prot:113
+Processing_Mut:60, From_Prot:113
+Processing_Mut:61, From_Prot:113
+Processing_Mut:62, From_Prot:113
+Processing_Mut:63, From_Prot:113
+Processing_Mut:64, From_Prot:113
+Processing_Mut:65, From_Prot:113
+Processing_Mut:66, From_Prot:113
+Processing_Mut:67, From_Prot:113
+Processing_Mut:68, From_Prot:113
+Processing_Mut:69, From_Prot:113
+Processing_Mut:70, From_Prot:113
+Processing_Mut:71, From_Prot:113
+Processing_Mut:72, From_Prot:113
+Processing_Mut:73, From_Prot:113
+Processing_Mut:74, From_Prot:113
+Processing_Mut:75, From_Prot:113
+Processing_Mut:76, From_Prot:113
+Processing_Mut:77, From_Prot:113
+Processing_Mut:78, From_Prot:113
+Processing_Mut:79, From_Prot:113
+Processing_Mut:80, From_Prot:113
+Processing_Mut:81, From_Prot:113
+Processing_Mut:82, From_Prot:113
+Processing_Mut:83, From_Prot:113
+Processing_Mut:84, From_Prot:113
+Processing_Mut:85, From_Prot:113
+Processing_Mut:86, From_Prot:113
+Processing_Mut:87, From_Prot:113
+Processing_Mut:88, From_Prot:113
+Processing_Mut:89, From_Prot:113
+Processing_Mut:90, From_Prot:113
+Processing_Mut:91, From_Prot:113
+Processing_Mut:92, From_Prot:113
+Processing_Mut:93, From_Prot:113
+Processing_Mut:94, From_Prot:113
+Processing_Mut:95, From_Prot:113
+Processing_Mut:96, From_Prot:113
+Processing_Mut:97, From_Prot:113
+Processing_Mut:98, From_Prot:113
+Processing_Mut:99, From_Prot:113
+Processing_Mut:100, From_Prot:113
+Processing_Mut:101, From_Prot:113
+Processing_Mut:102, From_Prot:113
+Took 164.36087322235107 for 5dfrA.pdb with 102 forward-mutations
+....................
+Prot Processing:114
+Processing_Mut:1, From_Prot:114
+Took 1.6431159973144531 for 1qndA.pdb with 1 forward-mutations
+....................
+Prot Processing:115
+Processing_Mut:1, From_Prot:115
+Took 1.8167729377746582 for 4v2fA.pdb with 1 forward-mutations
+....................
+Prot Processing:116
+Processing_Mut:1, From_Prot:116
+Processing_Mut:2, From_Prot:116
+Processing_Mut:3, From_Prot:116
+Processing_Mut:4, From_Prot:116
+Processing_Mut:5, From_Prot:116
+Processing_Mut:6, From_Prot:116
+Processing_Mut:7, From_Prot:116
+Processing_Mut:8, From_Prot:116
+Processing_Mut:9, From_Prot:116
+Processing_Mut:10, From_Prot:116
+Took 15.74990701675415 for 5croA.pdb with 10 forward-mutations
+....................
+Prot Processing:117
+Processing_Mut:1, From_Prot:117
+Processing_Mut:2, From_Prot:117
+Processing_Mut:3, From_Prot:117
+Took 4.797353982925415 for 1pdoA.pdb with 3 forward-mutations
+....................
+Prot Processing:118
+Processing_Mut:1, From_Prot:118
+Processing_Mut:2, From_Prot:118
+Took 4.684574842453003 for 2ts1A.pdb with 2 forward-mutations
+....................
+Prot Processing:119
+Processing_Mut:1, From_Prot:119
+Processing_Mut:2, From_Prot:119
+Processing_Mut:3, From_Prot:119
+Processing_Mut:4, From_Prot:119
+Processing_Mut:5, From_Prot:119
+Processing_Mut:6, From_Prot:119
+Processing_Mut:7, From_Prot:119
+Processing_Mut:8, From_Prot:119
+Processing_Mut:9, From_Prot:119
+Processing_Mut:10, From_Prot:119
+Took 15.792827606201172 for 1rhgA.pdb with 10 forward-mutations
+....................
+Prot Processing:120
+Processing_Mut:1, From_Prot:120
+Processing_Mut:2, From_Prot:120
+Processing_Mut:3, From_Prot:120
+Processing_Mut:4, From_Prot:120
+Processing_Mut:5, From_Prot:120
+Processing_Mut:6, From_Prot:120
+Processing_Mut:7, From_Prot:120
+Processing_Mut:8, From_Prot:120
+Processing_Mut:9, From_Prot:120
+Processing_Mut:10, From_Prot:120
+Processing_Mut:11, From_Prot:120
+Processing_Mut:12, From_Prot:120
+Processing_Mut:13, From_Prot:120
+Processing_Mut:14, From_Prot:120
+Processing_Mut:15, From_Prot:120
+Processing_Mut:16, From_Prot:120
+Processing_Mut:17, From_Prot:120
+Processing_Mut:18, From_Prot:120
+Processing_Mut:19, From_Prot:120
+Processing_Mut:20, From_Prot:120
+Processing_Mut:21, From_Prot:120
+Processing_Mut:22, From_Prot:120
+Processing_Mut:23, From_Prot:120
+Processing_Mut:24, From_Prot:120
+Processing_Mut:25, From_Prot:120
+Processing_Mut:26, From_Prot:120
+Processing_Mut:27, From_Prot:120
+Processing_Mut:28, From_Prot:120
+Processing_Mut:29, From_Prot:120
+Processing_Mut:30, From_Prot:120
+Processing_Mut:31, From_Prot:120
+Processing_Mut:32, From_Prot:120
+Processing_Mut:33, From_Prot:120
+Processing_Mut:34, From_Prot:120
+Processing_Mut:35, From_Prot:120
+Processing_Mut:36, From_Prot:120
+Processing_Mut:37, From_Prot:120
+Processing_Mut:38, From_Prot:120
+Processing_Mut:39, From_Prot:120
+Processing_Mut:40, From_Prot:120
+Processing_Mut:41, From_Prot:120
+Processing_Mut:42, From_Prot:120
+Processing_Mut:43, From_Prot:120
+Processing_Mut:44, From_Prot:120
+Processing_Mut:45, From_Prot:120
+Processing_Mut:46, From_Prot:120
+Processing_Mut:47, From_Prot:120
+Processing_Mut:48, From_Prot:120
+Processing_Mut:49, From_Prot:120
+Processing_Mut:50, From_Prot:120
+Processing_Mut:51, From_Prot:120
+Processing_Mut:52, From_Prot:120
+Processing_Mut:53, From_Prot:120
+Processing_Mut:54, From_Prot:120
+Processing_Mut:55, From_Prot:120
+Processing_Mut:56, From_Prot:120
+Processing_Mut:57, From_Prot:120
+Processing_Mut:58, From_Prot:120
+Processing_Mut:59, From_Prot:120
+Processing_Mut:60, From_Prot:120
+Processing_Mut:61, From_Prot:120
+Processing_Mut:62, From_Prot:120
+Processing_Mut:63, From_Prot:120
+Processing_Mut:64, From_Prot:120
+Processing_Mut:65, From_Prot:120
+Processing_Mut:66, From_Prot:120
+Processing_Mut:67, From_Prot:120
+Processing_Mut:68, From_Prot:120
+Processing_Mut:69, From_Prot:120
+Processing_Mut:70, From_Prot:120
+Processing_Mut:71, From_Prot:120
+Processing_Mut:72, From_Prot:120
+Processing_Mut:73, From_Prot:120
+Processing_Mut:74, From_Prot:120
+Processing_Mut:75, From_Prot:120
+Processing_Mut:76, From_Prot:120
+Processing_Mut:77, From_Prot:120
+Processing_Mut:78, From_Prot:120
+Processing_Mut:79, From_Prot:120
+Processing_Mut:80, From_Prot:120
+Processing_Mut:81, From_Prot:120
+Processing_Mut:82, From_Prot:120
+Processing_Mut:83, From_Prot:120
+Processing_Mut:84, From_Prot:120
+Processing_Mut:85, From_Prot:120
+Processing_Mut:86, From_Prot:120
+Processing_Mut:87, From_Prot:120
+Processing_Mut:88, From_Prot:120
+Processing_Mut:89, From_Prot:120
+Processing_Mut:90, From_Prot:120
+Processing_Mut:91, From_Prot:120
+Processing_Mut:92, From_Prot:120
+Processing_Mut:93, From_Prot:120
+Processing_Mut:94, From_Prot:120
+Processing_Mut:95, From_Prot:120
+Processing_Mut:96, From_Prot:120
+Processing_Mut:97, From_Prot:120
+Processing_Mut:98, From_Prot:120
+Took 159.7869508266449 for 2lzmA.pdb with 98 forward-mutations
+....................
+Prot Processing:121
+Processing_Mut:1, From_Prot:121
+Processing_Mut:2, From_Prot:121
+Processing_Mut:3, From_Prot:121
+Processing_Mut:4, From_Prot:121
+Processing_Mut:5, From_Prot:121
+Processing_Mut:6, From_Prot:121
+Took 12.641996145248413 for 1supA.pdb with 6 forward-mutations
+....................
+Prot Processing:122
+Processing_Mut:1, From_Prot:122
+Processing_Mut:2, From_Prot:122
+Processing_Mut:3, From_Prot:122
+Processing_Mut:4, From_Prot:122
+Processing_Mut:5, From_Prot:122
+Processing_Mut:6, From_Prot:122
+Processing_Mut:7, From_Prot:122
+Took 18.131796836853027 for 3mbpA.pdb with 7 forward-mutations
+....................
+Prot Processing:123
+Processing_Mut:1, From_Prot:123
+Processing_Mut:2, From_Prot:123
+Processing_Mut:3, From_Prot:123
+Processing_Mut:4, From_Prot:123
+Processing_Mut:5, From_Prot:123
+Processing_Mut:6, From_Prot:123
+Processing_Mut:7, From_Prot:123
+Processing_Mut:8, From_Prot:123
+Took 12.739710569381714 for 2trxA.pdb with 8 forward-mutations
+....................
+Prot Processing:124
+Processing_Mut:1, From_Prot:124
+Took 2.601381778717041 for 1qm4A.pdb with 1 forward-mutations
+....................
+Prot Processing:125
+Processing_Mut:1, From_Prot:125
+Processing_Mut:2, From_Prot:125
+Processing_Mut:3, From_Prot:125
+Processing_Mut:4, From_Prot:125
+Processing_Mut:5, From_Prot:125
+Took 7.95430588722229 for 1oh0A.pdb with 5 forward-mutations
+....................
+Prot Processing:126
+Processing_Mut:1, From_Prot:126
+Processing_Mut:2, From_Prot:126
+Processing_Mut:3, From_Prot:126
+Processing_Mut:4, From_Prot:126
+Processing_Mut:5, From_Prot:126
+Processing_Mut:6, From_Prot:126
+Processing_Mut:7, From_Prot:126
+Processing_Mut:8, From_Prot:126
+Processing_Mut:9, From_Prot:126
+Took 23.682966709136963 for 3pgkA.pdb with 9 forward-mutations
+....................
+Prot Processing:127
+Processing_Mut:1, From_Prot:127
+Processing_Mut:2, From_Prot:127
+Processing_Mut:3, From_Prot:127
+Processing_Mut:4, From_Prot:127
+Processing_Mut:5, From_Prot:127
+Processing_Mut:6, From_Prot:127
+Processing_Mut:7, From_Prot:127
+Processing_Mut:8, From_Prot:127
+Processing_Mut:9, From_Prot:127
+Processing_Mut:10, From_Prot:127
+Processing_Mut:11, From_Prot:127
+Processing_Mut:12, From_Prot:127
+Processing_Mut:13, From_Prot:127
+Processing_Mut:14, From_Prot:127
+Processing_Mut:15, From_Prot:127
+Processing_Mut:16, From_Prot:127
+Processing_Mut:17, From_Prot:127
+Processing_Mut:18, From_Prot:127
+Processing_Mut:19, From_Prot:127
+Processing_Mut:20, From_Prot:127
+Processing_Mut:21, From_Prot:127
+Processing_Mut:22, From_Prot:127
+Processing_Mut:23, From_Prot:127
+Processing_Mut:24, From_Prot:127
+Processing_Mut:25, From_Prot:127
+Processing_Mut:26, From_Prot:127
+Processing_Mut:27, From_Prot:127
+Processing_Mut:28, From_Prot:127
+Processing_Mut:29, From_Prot:127
+Processing_Mut:30, From_Prot:127
+Processing_Mut:31, From_Prot:127
+Took 50.43687415122986 for 1rn1C.pdb with 31 forward-mutations
+....................
+Prot Processing:128
+Processing_Mut:1, From_Prot:128
+Processing_Mut:2, From_Prot:128
+Processing_Mut:3, From_Prot:128
+Processing_Mut:4, From_Prot:128
+Processing_Mut:5, From_Prot:128
+Processing_Mut:6, From_Prot:128
+Processing_Mut:7, From_Prot:128
+Processing_Mut:8, From_Prot:128
+Processing_Mut:9, From_Prot:128
+Processing_Mut:10, From_Prot:128
+Processing_Mut:11, From_Prot:128
+Processing_Mut:12, From_Prot:128
+Processing_Mut:13, From_Prot:128
+Processing_Mut:14, From_Prot:128
+Processing_Mut:15, From_Prot:128
+Processing_Mut:16, From_Prot:128
+Processing_Mut:17, From_Prot:128
+Processing_Mut:18, From_Prot:128
+Processing_Mut:19, From_Prot:128
+Processing_Mut:20, From_Prot:128
+Processing_Mut:21, From_Prot:128
+Processing_Mut:22, From_Prot:128
+Processing_Mut:23, From_Prot:128
+Processing_Mut:24, From_Prot:128
+Processing_Mut:25, From_Prot:128
+Processing_Mut:26, From_Prot:128
+Processing_Mut:27, From_Prot:128
+Processing_Mut:28, From_Prot:128
+Took 43.98134517669678 for 1sakA.pdb with 28 forward-mutations
+....................
+Prot Processing:129
+Processing_Mut:1, From_Prot:129
+Processing_Mut:2, From_Prot:129
+Processing_Mut:3, From_Prot:129
+Processing_Mut:4, From_Prot:129
+Took 6.312572002410889 for 1shgA.pdb with 4 forward-mutations
+....................
+Prot Processing:130
+Processing_Mut:1, From_Prot:130
+Processing_Mut:2, From_Prot:130
+Processing_Mut:3, From_Prot:130
+Processing_Mut:4, From_Prot:130
+Took 12.003230094909668 for 3glyA.pdb with 4 forward-mutations
+....................
+Prot Processing:131
+Processing_Mut:1, From_Prot:131
+Processing_Mut:2, From_Prot:131
+Processing_Mut:3, From_Prot:131
+Processing_Mut:4, From_Prot:131
+Processing_Mut:5, From_Prot:131
+Processing_Mut:6, From_Prot:131
+Processing_Mut:7, From_Prot:131
+Processing_Mut:8, From_Prot:131
+Processing_Mut:9, From_Prot:131
+Processing_Mut:10, From_Prot:131
+Processing_Mut:11, From_Prot:131
+Processing_Mut:12, From_Prot:131
+Processing_Mut:13, From_Prot:131
+Processing_Mut:14, From_Prot:131
+Processing_Mut:15, From_Prot:131
+Processing_Mut:16, From_Prot:131
+Processing_Mut:17, From_Prot:131
+Processing_Mut:18, From_Prot:131
+Processing_Mut:19, From_Prot:131
+Processing_Mut:20, From_Prot:131
+Processing_Mut:21, From_Prot:131
+Took 33.09585928916931 for 1apsA.pdb with 21 forward-mutations
+....................
+
+# %% cell 22 [code] execution_count=None
+
+## output 0 type=stream mime=- image_data_chars=0
+['1lveA', '2immA']
+
+# %% cell 23 [code] execution_count=None
+
+## output 0 type=stream mime=- image_data_chars=0
+(0.5046657755393072, 2.4008447333492008e-169)
+(0.4679578847414099, 1.0316773834825308e-142)
+(0.3517800116434, 3.516441939464636e-77)
+(0.3092645336746983, 3.5398896152928775e-59)
+(0.30430195501028684, 2.9295207634882053e-57)
+(0.30395299805890225, 3.983402051297867e-57)
+(0.3021493043376491, 1.9371178527136337e-56)
+(-0.15037668069836824, 1.0136364730276811e-14)
+
+# %% cell 27 [code] execution_count=None
+
+## output 0 type=stream mime=- image_data_chars=0
+(0.2752044285125163, 9.492115203744281e-47)
+(0.5046657755393071, 2.4008447333502928e-169)
+(0.46795788474141, 1.0316773834822963e-142)
+(0.3517800116434, 3.516441939464636e-77)
+(0.14251585723493587, 2.3228561421629557e-13)
+(0.3043019550102869, 2.9295207634888715e-57)
+(0.30395299805890225, 3.983402051297867e-57)
+(0.302149304337649, 1.9371178527136337e-56)
+(0.21506272445083335, 8.622733497357982e-29)
+(0.25324429959430783, 1.2778686799293638e-39)
+(0.25550710329750653, 2.5289428922488456e-40)
+(0.24485252938100535, 4.512076931480806e-37)
+(0.31528987967630334, 1.4796599856543792e-61)
+(0.3203662453402101, 1.326519007613084e-63)
+(0.3092645336746983, 3.5398896152928775e-59)
+(0.1446322123757663, 1.016460141638051e-13)
+(-0.15037668069836818, 1.0136364730276811e-14)
+
+# %% cell 30 [code] execution_count=None
+
+## output 0 type=execute_result mime=text/plain image_data_chars=0
+<matplotlib.axes._subplots.AxesSubplot at 0x7f1f195abb10>
+
+## output 1 type=display_data mime=image/png,text/plain image_data_chars=163193
+<Figure size 432x288 with 2 Axes>

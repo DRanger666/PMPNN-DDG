@@ -1,0 +1,13 @@
+# Output export for colab_drive_copy notebook: Preparing_Fasta_Files_For_PROVEAN.ipynb
+# Generated from notebook outputs; image payloads are summarized, not embedded.
+
+
+# %% cell 0 [code] execution_count=1
+
+## output 0 type=stream mime=- image_data_chars=0
+Mounted at /content/drive
+
+# %% cell 1 [code] execution_count=2
+
+## output 0 type=stream mime=- image_data_chars=0
+/content/drive/MyDrive/ACCRE_PyRun_Setup

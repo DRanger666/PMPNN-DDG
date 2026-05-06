@@ -1,0 +1,245 @@
+# Output export for git_sajid_additions notebook: S669_ProteinMPNNTesting_V6.ipynb
+# Generated from notebook outputs; image payloads are summarized, not embedded.
+
+
+# %% cell 0 [code] execution_count=1
+
+## output 0 type=stream mime=- image_data_chars=0
+Mounted at /content/drive
+
+# %% cell 1 [code] execution_count=2
+
+## output 0 type=stream mime=- image_data_chars=0
+/content/drive/MyDrive/Protein_MPNN_Digging
+
+# %% cell 8 [code] execution_count=9
+
+## output 0 type=stream mime=- image_data_chars=0
+odict_keys(['features.embeddings.linear.weight', 'features.embeddings.linear.bias', 'features.edge_embedding.weight', 'features.norm_edges.weight', 'features.norm_edges.bias', 'W_e.weight', 'W_e.bias', 'W_s.weight', 'encoder_layers.0.norm1.weight', 'encoder_layers.0.norm1.bias', 'encoder_layers.0.norm2.weight', 'encoder_layers.0.norm2.bias', 'encoder_layers.0.norm3.weight', 'encoder_layers.0.norm3.bias', 'encoder_layers.0.W1.weight', 'encoder_layers.0.W1.bias', 'encoder_layers.0.W2.weight', 'encoder_layers.0.W2.bias', 'encoder_layers.0.W3.weight', 'encoder_layers.0.W3.bias', 'encoder_layers.0.W11.weight', 'encoder_layers.0.W11.bias', 'encoder_layers.0.W12.weight', 'encoder_layers.0.W12.bias', 'encoder_layers.0.W13.weight', 'encoder_layers.0.W13.bias', 'encoder_layers.0.dense.W_in.weight', 'encoder_layers.0.dense.W_in.bias', 'encoder_layers.0.dense.W_out.weight', 'encoder_layers.0.dense.W_out.bias', 'encoder_layers.1.norm1.weight', 'encoder_layers.1.norm1.bias', 'encoder_layers.1.norm2.weight', 'encoder_layers.1.norm2.bias', 'encoder_layers.1.norm3.weight', 'encoder_layers.1.norm3.bias', 'encoder_layers.1.W1.weight', 'encoder_layers.1.W1.bias', 'encoder_layers.1.W2.weight', 'encoder_layers.1.W2.bias', 'encoder_layers.1.W3.weight', 'encoder_layers.1.W3.bias', 'encoder_layers.1.W11.weight', 'encoder_layers.1.W11.bias', 'encoder_layers.1.W12.weight', 'encoder_layers.1.W12.bias', 'encoder_layers.1.W13.weight', 'encoder_layers.1.W13.bias', 'encoder_layers.1.dense.W_in.weight', 'encoder_layers.1.dense.W_in.bias', 'encoder_layers.1.dense.W_out.weight', 'encoder_layers.1.dense.W_out.bias', 'encoder_layers.2.norm1.weight', 'encoder_layers.2.norm1.bias', 'encoder_layers.2.norm2.weight', 'encoder_layers.2.norm2.bias', 'encoder_layers.2.norm3.weight', 'encoder_layers.2.norm3.bias', 'encoder_layers.2.W1.weight', 'encoder_layers.2.W1.bias', 'encoder_layers.2.W2.weight', 'encoder_layers.2.W2.bias', 'encoder_layers.2.W3.weight', 'encoder_layers.2.W3.bias', 'encoder_layers.2.W11.weight', 'encoder_layers.2.W11.bias', 'encoder_layers.2.W12.weight', 'encoder_layers.2.W12.bias', 'encoder_layers.2.W13.weight', 'encoder_layers.2.W13.bias', 'encoder_layers.2.dense.W_in.weight', 'encoder_layers.2.dense.W_in.bias', 'encoder_layers.2.dense.W_out.weight', 'encoder_layers.2.dense.W_out.bias', 'decoder_layers.0.norm1.weight', 'decoder_layers.0.norm1.bias', 'decoder_layers.0.norm2.weight', 'decoder_layers.0.norm2.bias', 'decoder_layers.0.W1.weight', 'decoder_layers.0.W1.bias', 'decoder_layers.0.W2.weight', 'decoder_layers.0.W2.bias', 'decoder_layers.0.W3.weight', 'decoder_layers.0.W3.bias', 'decoder_layers.0.dense.W_in.weight', 'decoder_layers.0.dense.W_in.bias', 'decoder_layers.0.dense.W_out.weight', 'decoder_layers.0.dense.W_out.bias', 'decoder_layers.1.norm1.weight', 'decoder_layers.1.norm1.bias', 'decoder_layers.1.norm2.weight', 'decoder_layers.1.norm2.bias', 'decoder_layers.1.W1.weight', 'decoder_layers.1.W1.bias', 'decoder_layers.1.W2.weight', 'decoder_layers.1.W2.bias', 'decoder_layers.1.W3.weight', 'decoder_layers.1.W3.bias', 'decoder_layers.1.dense.W_in.weight', 'decoder_layers.1.dense.W_in.bias', 'decoder_layers.1.dense.W_out.weight', 'decoder_layers.1.dense.W_out.bias', 'decoder_layers.2.norm1.weight', 'decoder_layers.2.norm1.bias', 'decoder_layers.2.norm2.weight', 'decoder_layers.2.norm2.bias', 'decoder_layers.2.W1.weight', 'decoder_layers.2.W1.bias', 'decoder_layers.2.W2.weight', 'decoder_layers.2.W2.bias', 'decoder_layers.2.W3.weight', 'decoder_layers.2.W3.bias', 'decoder_layers.2.dense.W_in.weight', 'decoder_layers.2.dense.W_in.bias', 'decoder_layers.2.dense.W_out.weight', 'decoder_layers.2.dense.W_out.bias', 'W_out.weight', 'W_out.bias'])
+
+# %% cell 9 [code] execution_count=10
+
+## output 0 type=display_data mime=application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+0it [00:00, ?it/s]
+
+# %% cell 10 [code] execution_count=11
+
+## output 0 type=display_data mime=application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+  0%|          | 0/93 [00:00<?, ?it/s]
+
+# %% cell 14 [code] execution_count=None
+
+## output 0 type=display_data mime=application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+0it [00:00, ?it/s]
+
+# %% cell 20 [code] execution_count=None
+
+## output 0 type=stream mime=- image_data_chars=0
+(-0.33765558573837523, 1.772522028540666e-18)
+(-0.29317501664721657, 4.112994128510723e-14)
+(-0.26048284702580865, 2.3531867527057347e-11)
+(-0.014504872775574313, 0.7146080137973188)
+(-0.1833792439540543, 3.125054175155275e-06)
+(-0.19004139936655964, 1.3320790981757033e-06)
+(-0.1840383857546425, 2.8761043604547314e-06)
+(-0.33492161096653633, 3.4543143279502605e-18)
+(-0.3551878105748296, 2.092163461919371e-20)
+(-0.3450605404622367, 2.812661897710935e-19)
+(-0.35931713121897724, 7.056787490196558e-21)
+(-0.17579722019642097, 7.950043847335436e-06)
+(-0.18339558867974545, 3.118638958930013e-06)
+(-0.17517328176139838, 8.570165531743268e-06)
+(-0.02120097737456519, 0.5929830207051151)
+(0.013977688826732376, 0.724551365126908)
+
+# %% cell 24 [code] execution_count=None
+
+## output 0 type=stream mime=- image_data_chars=0
+(-0.1760175004428737, 7.741516443498937e-06)
+(-0.33765558573837523, 1.772522028540666e-18)
+(-0.29317501664721657, 4.112994128510723e-14)
+(-0.26048284702580865, 2.3531867527057347e-11)
+(-0.014504872775574313, 0.7146080137973188)
+(-0.1833792439540543, 3.125054175155275e-06)
+(-0.19004139936655964, 1.3320790981757033e-06)
+(-0.1840383857546425, 2.8761043604547314e-06)
+(-0.33492161096653633, 3.4543143279502605e-18)
+(-0.3551878105748296, 2.092163461919371e-20)
+(-0.3450605404622367, 2.812661897710935e-19)
+(-0.35931713121897724, 7.056787490196558e-21)
+(-0.17579722019642097, 7.950043847335436e-06)
+(-0.18339558867974545, 3.118638958930013e-06)
+(-0.17517328176139838, 8.570165531743268e-06)
+(-0.02120097737456519, 0.5929830207051151)
+(0.013977688826732376, 0.724551365126908)
+
+# %% cell 26 [code] execution_count=None
+
+## output 0 type=execute_result mime=text/plain image_data_chars=0
+{(0.0, 1.0): -0.36,
+ (0.01, 0.99): -0.36,
+ (0.02, 0.99): -0.36,
+ (0.02, 0.98): -0.36,
+ (0.03, 0.97): -0.36,
+ (0.04, 0.97): -0.36,
+ (0.04, 0.96): -0.36,
+ (0.05, 0.95): -0.36,
+ (0.06, 0.95): -0.36,
+ (0.06, 0.94): -0.36,
+ (0.07, 0.93): -0.36,
+ (0.08, 0.93): -0.36,
+ (0.08, 0.92): -0.36,
+ (0.09, 0.91): -0.36,
+ (0.1, 0.91): -0.36,
+ (0.1, 0.9): -0.36,
+ (0.11, 0.89): -0.36,
+ (0.12, 0.89): -0.35,
+ (0.12, 0.88): -0.35,
+ (0.13, 0.87): -0.35,
+ (0.14, 0.87): -0.35,
+ (0.14, 0.86): -0.35,
+ (0.15, 0.85): -0.35,
+ (0.16, 0.85): -0.35,
+ (0.16, 0.84): -0.35,
+ (0.17, 0.83): -0.35,
+ (0.18, 0.83): -0.35,
+ (0.18, 0.82): -0.35,
+ (0.19, 0.81): -0.35,
+ (0.2, 0.81): -0.35,
+ (0.2, 0.8): -0.35,
+ (0.21, 0.79): -0.34,
+ (0.22, 0.79): -0.34,
+ (0.22, 0.78): -0.34,
+ (0.23, 0.77): -0.34,
+ (0.24, 0.77): -0.34,
+ (0.24, 0.76): -0.34,
+ (0.25, 0.75): -0.34,
+ (0.26, 0.75): -0.34,
+ (0.26, 0.74): -0.34,
+ (0.27, 0.73): -0.33,
+ (0.28, 0.73): -0.33,
+ (0.28, 0.72): -0.33,
+ (0.29, 0.72): -0.33,
+ (0.29, 0.71): -0.33,
+ (0.3, 0.71): -0.33,
+ (0.3, 0.7): -0.33,
+ (0.31, 0.69): -0.32,
+ (0.32, 0.69): -0.32,
+ (0.32, 0.68): -0.32,
+ (0.33, 0.67): -0.32,
+ (0.34, 0.67): -0.32,
+ (0.34, 0.66): -0.32,
+ (0.35, 0.65): -0.32,
+ (0.36, 0.65): -0.31,
+ (0.36, 0.64): -0.31,
+ (0.37, 0.63): -0.31,
+ (0.38, 0.63): -0.31,
+ (0.38, 0.62): -0.31,
+ (0.39, 0.61): -0.31,
+ (0.4, 0.61): -0.31,
+ (0.4, 0.6): -0.3,
+ (0.41, 0.59): -0.3,
+ (0.42, 0.59): -0.3,
+ (0.42, 0.58): -0.3,
+ (0.43, 0.57): -0.3,
+ (0.44, 0.57): -0.3,
+ (0.44, 0.56): -0.29,
+ (0.45, 0.55): -0.29,
+ (0.46, 0.55): -0.29,
+ (0.46, 0.54): -0.29,
+ (0.47, 0.53): -0.29,
+ (0.48, 0.53): -0.29,
+ (0.48, 0.52): -0.28,
+ (0.49, 0.51): -0.28,
+ (0.5, 0.51): -0.28,
+ (0.5, 0.5): -0.28,
+ (0.51, 0.49): -0.28,
+ (0.52, 0.49): -0.28,
+ (0.52, 0.48): -0.27,
+ (0.53, 0.47): -0.27,
+ (0.54, 0.47): -0.27,
+ (0.54, 0.46): -0.27,
+ (0.55, 0.46): -0.27,
+ (0.55, 0.45): -0.27,
+ (0.56, 0.45): -0.27,
+ (0.56, 0.44): -0.27,
+ (0.57, 0.44): -0.26,
+ (0.57, 0.43): -0.26,
+ (0.58, 0.43): -0.26,
+ (0.58, 0.42): -0.26,
+ (0.59, 0.41): -0.26,
+ (0.6, 0.41): -0.26,
+ (0.6, 0.4): -0.26,
+ (0.61, 0.39): -0.25,
+ (0.62, 0.39): -0.25,
+ (0.62, 0.38): -0.25,
+ (0.63, 0.37): -0.25,
+ (0.64, 0.37): -0.25,
+ (0.64, 0.36): -0.25,
+ (0.65, 0.35): -0.25,
+ (0.66, 0.35): -0.24,
+ (0.66, 0.34): -0.24,
+ (0.67, 0.33): -0.24,
+ (0.68, 0.33): -0.24,
+ (0.68, 0.32): -0.24,
+ (0.69, 0.31): -0.24,
+ (0.7, 0.31): -0.24,
+ (0.7, 0.3): -0.23,
+ (0.71, 0.29): -0.23,
+ (0.72, 0.29): -0.23,
+ (0.72, 0.28): -0.23,
+ (0.73, 0.27): -0.23,
+ (0.74, 0.27): -0.23,
+ (0.74, 0.26): -0.23,
+ (0.75, 0.25): -0.22,
+ (0.76, 0.25): -0.22,
+ (0.76, 0.24): -0.22,
+ (0.77, 0.23): -0.22,
+ (0.78, 0.23): -0.22,
+ (0.78, 0.22): -0.22,
+ (0.79, 0.21): -0.22,
+ (0.8, 0.21): -0.22,
+ (0.8, 0.2): -0.22,
+ (0.81, 0.19): -0.21,
+ (0.82, 0.19): -0.21,
+ (0.82, 0.18): -0.21,
+ (0.83, 0.17): -0.21,
+ (0.84, 0.17): -0.21,
+ (0.84, 0.16): -0.21,
+ (0.85, 0.15): -0.21,
+ (0.86, 0.15): -0.21,
+ (0.86, 0.14): -0.2,
+ (0.87, 0.13): -0.2,
+ (0.88, 0.13): -0.2,
+ (0.88, 0.12): -0.2,
+ (0.89, 0.11): -0.2,
+ (0.9, 0.11): -0.2,
+ (0.9, 0.1): -0.2,
+ (0.91, 0.09): -0.2,
+ (0.92, 0.09): -0.2,
+ (0.92, 0.08): -0.2,
+ (0.93, 0.07): -0.19,
+ (0.94, 0.07): -0.19,
+ (0.94, 0.06): -0.19,
+ (0.95, 0.05): -0.19,
+ (0.96, 0.05): -0.19,
+ (0.96, 0.04): -0.19,
+ (0.97, 0.03): -0.19,
+ (0.98, 0.03): -0.19,
+ (0.98, 0.02): -0.19,
+ (0.99, 0.01): -0.18,
+ (1.0, 0.01): -0.18,
+ (1.0, 0.0): -0.18}
+
+# %% cell 27 [code] execution_count=None
+
+## output 0 type=display_data mime=image/png,text/plain image_data_chars=27125
+<Figure size 432x288 with 1 Axes>
+
+# %% cell 28 [code] execution_count=None
+
+## output 0 type=execute_result mime=text/plain image_data_chars=0
+<matplotlib.axes._subplots.AxesSubplot at 0x7f70a741e950>
+
+## output 1 type=display_data mime=image/png,text/plain image_data_chars=163349
+<Figure size 432x288 with 2 Axes>

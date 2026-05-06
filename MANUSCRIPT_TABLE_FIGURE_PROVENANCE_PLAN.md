@@ -44,6 +44,7 @@ that exact source instead.
 Detailed feature-equation evidence is in:
 
 - `FEATURE_EQUATION_CODE_MAPPING_INITIAL.md`
+- `COLAB_NOTEBOOKS_DEEP_INVENTORY.md`
 
 ## Provenance Targets
 
@@ -65,6 +66,8 @@ For each item, record:
 ## Evidence Sources to Prefer
 
 1. Saved notebooks with executed outputs, if available.
+   The current deep inventory of the copied Drive `Colab Notebooks` folder and
+   the Git-side notebook copies is in `COLAB_NOTEBOOKS_DEEP_INVENTORY.md`.
 2. Result pickles that store final numerical summaries:
    - `feature_combo_result_dict.pickle`
    - `S_669_feature_combo_result_dict.pickle`
@@ -85,4 +88,3 @@ manuscript value -> exact executed notebook/output/result artifact -> code cell
 ```
 
 Only after that mapping is stable should the manuscript methods be updated.
-

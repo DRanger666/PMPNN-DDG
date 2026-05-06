@@ -1,0 +1,40 @@
+# Output export for colab_drive_copy notebook: Untitled1.ipynb
+# Generated from notebook outputs; image payloads are summarized, not embedded.
+
+
+# %% cell 2 [code] execution_count=27
+
+## output 0 type=stream mime=- image_data_chars=0
+CEM
+32
+SA
+27
+
+# %% cell 3 [code] execution_count=28
+
+## output 0 type=stream mime=- image_data_chars=0
+Inside `__getitem__` method!
+CEM
+Inside `__getitem__` method!
+32
+Inside `__getitem__` method!
+SA
+Inside `__getitem__` method!
+27
+Inside `__getitem__` method!
+DEFAULT IMAGINATION
+
+# %% cell 4 [code] execution_count=12
+
+## output 0 type=stream mime=- image_data_chars=0
+CEM
+32
+SA
+27
+DEFAULT_VALUE
+
+# %% cell 6 [code] execution_count=32
+
+## output 0 type=stream mime=- image_data_chars=0
+5
+5

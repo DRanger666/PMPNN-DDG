@@ -1,0 +1,664 @@
+# Source export for git_sajid_additions notebook: Quick_Dirty_MPNN_ML.ipynb
+# Generated from notebook cell sources only; outputs are omitted.
+
+
+# %% cell 0 [code]
+from google.colab import drive
+drive.mount('/content/drive',force_remount=True)
+import sys 
+installation_path = "/content/drive/MyDrive/Colab_Installations_V2"
+# The path is being modified so that everything installed in the installation path can now be used without re-installing (in this case, I just need biopython)
+sys.path.append(installation_path)
+protein_mpnn_path = "/content/drive/MyDrive/Protein_MPNN_Digging/ProteinMPNN/vanilla_proteinmpnn"
+sys.path.insert(0,protein_mpnn_path)
+
+# %% cell 1 [code]
+%cd /content/drive/MyDrive/Protein_MPNN_Digging
+
+# %% cell 2 [code]
+import numpy as np
+import pickle
+import os
+from tqdm.notebook import tqdm
+from Bio.PDB.Polypeptide import *
+from Bio.PDB import *
+import random
+
+# %% cell 3 [code]
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import Ridge
+from sklearn.linear_model import Lasso
+from sklearn.ensemble import RandomForestRegressor
+# from sklearn.linear_model import Ridge
+from scipy.stats import entropy
+from scipy.special import softmax
+from scipy.special import kl_div
+from scipy.stats import pearsonr
+from sklearn.svm import SVR
+from sklearn.preprocessing import Normalizer
+from sklearn.ensemble import GradientBoostingRegressor
+
+# %% cell 4 [code]
+with open("S_2648_full_feature_dict.pickle","rb") as f:
+    S_2648_two_level_dict = pickle.load(f)
+with open("S_921_full_feature_dict.pickle","rb") as f:
+    S_921_two_level_dict = pickle.load(f)
+with open("S_669_full_feature_dict.pickle","rb") as f:
+    S_669_two_level_dict = pickle.load(f)
+with open("Ssym_full_feature_dict.pickle","rb") as f:
+    Ssym_two_level_dict = pickle.load(f)
+
+# %% cell 5 [code]
+list_two_level_dict = [S_2648_two_level_dict,S_921_two_level_dict,S_669_two_level_dict,Ssym_two_level_dict]
+list_dataset_names = ["S_2648","S_921","S_669","Ssym"]
+
+# %% cell 6 [code]
+list_mapping_dict = []
+list_proteins_to_skip = []
+
+for name in list_dataset_names:
+    mapping_dict = {}
+    pdbDirectory = f"/content/drive/MyDrive/ACCRE_PyRun_Setup/{name}_PDB_Files"
+    parser = PDBParser(QUIET=True)
+    # some proteins need to be skipped for now due to ICODE related discrapency
+    proteins_to_skip = []
+
+    for filename in tqdm(os.listdir(pdbDirectory)):
+        filepath = os.path.join(pdbDirectory,filename)
+        structure = parser.get_structure(id=filename.split(".")[0],file=filepath)
+        model = structure[0]
+        inner_dict = {}
+        outer_key = filename.split(".")[0]
+        skip_flag = False
+        # single chain-assumption in action again
+        for chain in model:
+            for i,residue in enumerate(chain):
+                inner_key = f"{three_to_one(residue.get_resname())}{residue.get_id()[1]}"
+                if inner_key not in inner_dict:
+                    inner_dict[inner_key] = i
+                else:
+                    # For "2immA:N31" and "1lveA:S27", I have been fucked
+                    # Need to think whether this will effect other positions or I can just avoid these two-protein related mutations for now?
+                    # Let me just avoid these two proteins for now
+                    print("YOU HAVE JUST BEEN FUCKED BY ICODE")
+                    print(f"{outer_key}:{inner_key}")
+                    skip_flag = True
+        # The ICODE related problematic proteins will not be considered for now
+        if not skip_flag:
+            mapping_dict[outer_key] = inner_dict
+        else:
+            proteins_to_skip.append(outer_key)
+    list_proteins_to_skip.append(proteins_to_skip)
+    list_mapping_dict.append(mapping_dict)
+
+# %% cell 7 [code]
+# Create the six numpy arrays here, and then perform training on the next cell
+X_2648 = []
+y_2648 = []
+X_921 = []
+y_921 = []
+X_669 = []
+y_669 = []
+X_Ssym = []
+y_Ssym = []
+
+# This list will correspond to the "list_mapping_dict,list_dataset_names,list_two_level_dict,list_proteins_to_skip" lists in the above cells, 
+# and hold (X,y) tuples corresponding to the three datasets in the same order as those lists
+# currently, I intend to train, and test the model on "mut_wild_predictions","entropy_predictions", "neighbor_energy_change_predictions", "neighbor_forward_KL_predictions", 
+# and "neighbor_backward_KL_predictions" 
+# fourth and fifth features can probably be reduced to one feature by (0.5*fourth_feature+0.5*fifth_feature) since both of them are extremely correlated
+list_X = [X_2648,X_921,X_669,X_Ssym]
+list_y = [y_2648,y_921,y_669,y_Ssym]
+
+#######
+alpha_tok = "ACDEFGHIKLMNPQRSTVWYX"
+aa_1_N = {a:n for n,a in enumerate(alpha_tok)}
+for X,y,two_level_dict,mapping_dict,proteins_to_skip in zip(list_X,list_y,list_two_level_dict,list_mapping_dict,list_proteins_to_skip):
+    for prot,muts in two_level_dict.items():
+        if prot not in proteins_to_skip:
+            try:
+                cur_map_dict = mapping_dict[prot]
+            except:
+                continue
+            for mut in muts:
+                # adding the label to "y" at first
+                y.append(mut["ddg"])
+
+                # This "cur_X" will hold the features for the current mutation under-processing in the current inner loop iteration
+                cur_X = []
+                
+                ### first feature addition (mutation position energy-change)
+                center_mut_wild_energy = mut["center_mut_wild_energy"]
+                cur_X.append(center_mut_wild_energy)
+                ### first feature addition
+                
+                ### second feature addition (mutation position entropy)
+                center_entropy = mut["center_entropy"]
+                cur_X.append(center_entropy)
+                ### second feature addition
+
+                ### third feature addition (neighbor wildtype energy-change due to mutation)
+                weighted_neighbor_energy_changes = mut["V2_backward_weighted_neighbor_energy_changes"]
+                cur_X.append(weighted_neighbor_energy_changes)
+                ### third feature addition
+
+                ### fourth feature addition (forward KL of neighbors due to mutation at center)
+                weighted_neighbor_forward_KL = mut["weighted_neighbor_forward_KL"]
+                cur_X.append(weighted_neighbor_forward_KL)
+                ### fourth feature addition
+
+                ### fifth feature addition (backward KL of neighbors due to mutation at center)
+                weighted_neighbor_backward_KL = mut["V2_backward_weighted_neighbor_backward_KL"]
+                cur_X.append(weighted_neighbor_backward_KL)
+                ### fifth feature addition
+
+                ### sixth feature(PSSM features) addition
+                pssm_feature = mut["wild_pssm"]-mut["alternate_pssm"]
+                cur_X.append(pssm_feature)
+                ### adding the two PSSM features
+
+                ### seventh feature addition (entropy-change of neighbors due to mutation at center)
+                weighted_neighbor_entropy_changes = mut["V2_backward_weighted_neighbor_entropy_changes"]
+                cur_X.append(weighted_neighbor_entropy_changes)
+                ### seventh feature addition 
+
+                ### eigth feature addition (w/m attention change)
+                center_neighbor_weight_check_w_m = mut["center_neighbor_weight_check_w_m"]
+                cur_X.append(center_neighbor_weight_check_w_m)
+                ### eigth feature addition 
+
+                X.append(np.array(cur_X))
+
+# %% cell 8 [code]
+S_2648_X = np.array(list_X[0])
+S_2648_y = np.array(list_y[0])
+S_921_X = np.array(list_X[1])
+S_921_y = np.array(list_y[1])
+S_669_X = np.array(list_X[2])
+S_669_y = np.array(list_y[2])
+# Flipping the signs of the experimental DDG values in S_669_y to get coherent correlations (positive and higher is better)
+S_669_y = S_669_y * (-1)
+Ssym_X = np.array(list_X[3])
+Ssym_y = np.array(list_y[3])
+
+# %% cell 9 [code]
+print("S_921 single-feature correlations at a glance")
+print(pearsonr(S_921_y,S_921_X[:,0]))
+print(pearsonr(S_921_y,S_921_X[:,1]))
+print(pearsonr(S_921_y,S_921_X[:,2]))
+print(pearsonr(S_921_y,S_921_X[:,3]))
+print(pearsonr(S_921_y,S_921_X[:,4]))
+print(pearsonr(S_921_y,S_921_X[:,5]))
+print(pearsonr(S_921_y,S_921_X[:,6]))
+print(".............................................")
+
+print("S_669 single-feature correlations at a glance")
+print(pearsonr(S_669_y,S_669_X[:,0]))
+print(pearsonr(S_669_y,S_669_X[:,1]))
+print(pearsonr(S_669_y,S_669_X[:,2]))
+print(pearsonr(S_669_y,S_669_X[:,3]))
+print(pearsonr(S_669_y,S_669_X[:,4]))
+print(pearsonr(S_669_y,S_669_X[:,5]))
+print(pearsonr(S_669_y,S_669_X[:,6]))
+print(".............................................")
+
+print("S_2648 single-feature correlations at a glance")
+print(pearsonr(S_2648_y,S_2648_X[:,0]))
+print(pearsonr(S_2648_y,S_2648_X[:,1]))
+print(pearsonr(S_2648_y,S_2648_X[:,2]))
+print(pearsonr(S_2648_y,S_2648_X[:,3]))
+print(pearsonr(S_2648_y,S_2648_X[:,4]))
+print(pearsonr(S_2648_y,S_2648_X[:,5]))
+print(pearsonr(S_2648_y,S_2648_X[:,6]))
+print(".............................................")
+
+print("Ssym single-feature correlations at a glance")
+print(pearsonr(Ssym_y,Ssym_X[:,0]))
+print(pearsonr(Ssym_y,Ssym_X[:,1]))
+print(pearsonr(Ssym_y,Ssym_X[:,2]))
+print(pearsonr(Ssym_y,Ssym_X[:,3]))
+print(pearsonr(Ssym_y,Ssym_X[:,4]))
+print(pearsonr(Ssym_y,Ssym_X[:,5]))
+print(pearsonr(Ssym_y,Ssym_X[:,6]))
+print(".............................................")
+
+# %% cell 10 [code]
+# Let us try to add some reverse mutants quickly
+S_2648_X_aug = []
+S_2648_y_aug = []
+for X,y in zip(S_2648_X,S_2648_y):
+    S_2648_X_aug.append(X)
+    S_2648_X_aug.append(-1*X)
+    S_2648_y_aug.append(y)
+    S_2648_y_aug.append(-1*y)
+S_2648_X_aug = np.array(S_2648_X_aug)
+S_2648_y_aug = np.array(S_2648_y_aug)
+
+S_921_X_aug = []
+S_921_y_aug = []
+for X,y in zip(S_921_X,S_921_y):
+    S_921_X_aug.append(X)
+    S_921_X_aug.append(-1*X)
+    S_921_y_aug.append(y)
+    S_921_y_aug.append(-1*y)
+S_921_X_aug = np.array(S_921_X_aug)
+S_921_y_aug = np.array(S_921_y_aug)
+
+S_669_X_aug = []
+S_669_y_aug = []
+for X,y in zip(S_669_X,S_669_y):
+    S_669_X_aug.append(X)
+    S_669_X_aug.append(-1*X)
+    S_669_y_aug.append(y)
+    S_669_y_aug.append(-1*y)
+S_669_X_aug = np.array(S_669_X_aug)
+S_669_y_aug = np.array(S_669_y_aug)
+
+Ssym_X_aug = []
+Ssym_y_aug = []
+for X,y in zip(Ssym_X,Ssym_y):
+    Ssym_X_aug.append(X)
+    Ssym_X_aug.append(-1*X)
+    Ssym_y_aug.append(y)
+    Ssym_y_aug.append(-1*y)
+Ssym_X_aug = np.array(Ssym_X_aug)
+Ssym_y_aug = np.array(Ssym_y_aug)
+
+# %% cell 11 [code]
+# Now, traing linear regression on S_2648, and test on S_921 and S_669
+# the setting reg = Ridge(alpha=0.2,normalize=True).fit(S_2648_X_aug[:,[0,2,4,5]], S_2648_y_aug) seems quite good
+# Ridge(alpha=0.25,normalize=True).fit(S_2648_X_aug[:,[0,2,4,5]], S_2648_y_aug) is also good
+# Ridge(alpha=0,normalize=True) is also not bad
+# (center_mut_wild_energy,weighted_neighbor_energy_changes,weighted_neighbor_backward_KL,PSSM) seems the best combination for now
+# also, ridge with alpha=0.4 seems the best for now (specially, for S_669)
+# also, ridge with alpha=0.9, and (center_mut_wild_energy,weighted_neighbor_backward_KL,PSSM) gets the maximum for S_669 while reducing for S_sym
+reg = Ridge(alpha=0,normalize=True,max_iter=5000000).fit(S_2648_X_aug[:,[0,4,5,7]], S_2648_y_aug)
+print(pearsonr(S_2648_y,reg.predict(S_2648_X[:,[0,4,5,7]])))
+print(pearsonr(S_921_y_aug,reg.predict(S_921_X_aug[:,[0,4,5,7]])))
+print(pearsonr(S_669_y_aug,reg.predict(S_669_X_aug[:,[0,4,5,7]])))
+print(pearsonr(Ssym_y_aug,reg.predict(Ssym_X_aug[:,[0,4,5,7]])))
+
+# %% cell 12 [code]
+print(reg.coef_)
+print(reg.intercept_)
+
+# %% cell 13 [code]
+reg = Ridge(alpha=0,normalize=True).fit(S_2648_X_aug[:,[5,4]], S_2648_y_aug)
+print(pearsonr(S_2648_y,reg.predict(S_2648_X[:,[5,4]])))
+print(pearsonr(S_921_y_aug,reg.predict(S_921_X_aug[:,[5,4]])))
+print(pearsonr(S_669_y_aug,reg.predict(S_669_X_aug[:,[5,4]])))
+print(pearsonr(Ssym_y_aug,reg.predict(Ssym_X_aug[:,[5,4]])))
+
+# %% cell 14 [code]
+print(reg.coef_)
+print(reg.intercept_)
+
+# %% cell 15 [code]
+sv = SVR(C=50000)
+normalizer = Normalizer()
+normalizer.fit(S_2648_X_aug[:,[0,5,4,2,7]])
+sv.fit(normalizer.transform(S_2648_X_aug[:,[0,5,4,2,7]]),S_2648_y_aug)
+print(pearsonr(S_2648_y,sv.predict(normalizer.transform(S_2648_X[:,[0,5,4,2,7]]))))
+print(pearsonr(S_921_y_aug,sv.predict(normalizer.transform(S_921_X_aug[:,[0,5,4,2,7]]))))
+print(pearsonr(S_669_y_aug,sv.predict(normalizer.transform(S_669_X_aug[:,[0,5,4,2,7]]))))
+print(pearsonr(Ssym_y_aug,sv.predict(normalizer.transform(Ssym_X_aug[:,[0,5,4,2,7]]))))
+
+# %% cell 16 [code]
+gbr = GradientBoostingRegressor(min_samples_split=5,validation_fraction=0.4,n_iter_no_change=2,subsample=0.8,learning_rate=0.2)
+gbr.fit(S_2648_X_aug[:,[0,2,7]],S_2648_y_aug)
+print(pearsonr(S_2648_y,gbr.predict(S_2648_X[:,[0,2,7]])))
+print(pearsonr(S_921_y_aug,gbr.predict(S_921_X_aug[:,[0,2,7]])))
+print(pearsonr(S_669_y,gbr.predict(S_669_X[:,[0,2,7]])))
+print(pearsonr(Ssym_y,gbr.predict(Ssym_X[:,[0,2,7]])))
+
+# %% cell 17 [code]
+gbr.feature_importances_
+
+# %% cell 18 [code]
+# Now, traing linear regression on S_2648, and test on S_921 and S_669
+# rf = RandomForestRegressor(min_samples_split=62).fit(S_2648_X_aug[:,[0,2,4,5,7]],S_2648_y_aug)
+# rf = RandomForestRegressor(min_samples_split=84).fit(S_2648_X_aug[:,[0,2,4,5,7]],S_2648_y_aug) [not bad]
+# rf = RandomForestRegressor(min_samples_split=84).fit(S_2648_X_aug[:,[0,2,4,7]],S_2648_y_aug) [not bad]
+# seems like (0,2,4,5, and 7 are worth keeping with RF)
+# rf = RandomForestRegressor(min_samples_split=22,n_estimators=300,max_samples=0.2).fit(S_2648_X_aug[:,[0,4,5,7]],S_2648_y_aug) [great for balanced performance on everything]
+# rf = RandomForestRegressor(min_samples_split=22,n_estimators=300,max_samples=0.5).fit(S_2648_X_aug[:,[0,4,5,7]],S_2648_y_aug) [a bit better for Ssym, a bit worse for S_669]
+# rf = RandomForestRegressor(min_samples_split=22,n_estimators=300,max_samples=0.5).fit(S_2648_X_aug[:,[0,4,7]],S_2648_y_aug) [worth reporting without PSSM, only S_921 goes down significantly]
+# rf = RandomForestRegressor(min_samples_split=18,n_estimators=300,max_samples=0.5).fit(S_2648_X_aug[:,[0,4,7]],S_2648_y_aug) [seems good without PSSM]
+# "max_samples=0.2" seems like a great parameter for many cases, most probably, that type of diversity is needed
+# rf = RandomForestRegressor(min_samples_split=25,n_estimators=300,max_samples=0.2).fit(S_2648_X_aug[:,[0,4,5,7]],S_2648_y_aug) [another cool parameter setting]
+# rf = RandomForestRegressor(min_samples_split=84,n_estimators=300,max_samples=0.2).fit(S_2648_X_aug[:,[0,2,4,6,7]],S_2648_y_aug)
+# print(pearsonr(S_2648_y,rf.predict(S_2648_X[:,[0,2,4,6,7]])))
+# print(pearsonr(S_921_y_aug,rf.predict(S_921_X_aug[:,[0,2,4,6,7]])))
+# print(pearsonr(S_669_y_aug,rf.predict(S_669_X_aug[:,[0,2,4,6,7]])))
+# print(pearsonr(Ssym_y_aug,rf.predict(Ssym_X_aug[:,[0,2,4,6,7]])))
+
+# rf = RandomForestRegressor(min_samples_split=12,n_estimators=300,max_samples=0.2).fit(S_2648_X_aug[:,[0,4,5]],S_2648_y_aug) [not bad with three most important features]
+# rf = RandomForestRegressor(min_samples_split=12,n_estimators=300,max_samples=0.2).fit(S_2648_X_aug[:,[0,4,5,7]],S_2648_y_aug) [cool, good, awesome stuff]
+# rf = RandomForestRegressor(min_samples_split=5,n_estimators=300,max_samples=0.2).fit(S_2648_X_aug[:,[0,4,5,7]],S_2648_y_aug) [cool as fuck good shit]
+rf_5 = RandomForestRegressor(min_samples_split=5,n_estimators=300,max_samples=0.2,max_features="sqrt").fit(S_2648_X_aug[:,[0,4,5,7]],S_2648_y_aug)
+print(pearsonr(S_2648_y,rf_5.predict(S_2648_X[:,[0,4,5,7]])))
+print(pearsonr(S_921_y_aug,rf_5.predict(S_921_X_aug[:,[0,4,5,7]])))
+print(pearsonr(S_669_y_aug,rf_5.predict(S_669_X_aug[:,[0,4,5,7]])))
+print(pearsonr(Ssym_y_aug,rf_5.predict(Ssym_X_aug[:,[0,4,5,7]])))
+rf_5.feature_importances_
+
+# %% cell 19 [code]
+rf_3 = RandomForestRegressor(min_samples_split=3,n_estimators=300,max_samples=0.2,max_features="sqrt").fit(S_2648_X_aug[:,[0,4,5,7]],S_2648_y_aug)
+print(pearsonr(S_2648_y,rf_3.predict(S_2648_X[:,[0,4,5,7]])))
+print(pearsonr(S_921_y_aug,rf_3.predict(S_921_X_aug[:,[0,4,5,7]])))
+print(pearsonr(S_669_y_aug,rf_3.predict(S_669_X_aug[:,[0,4,5,7]])))
+print(pearsonr(Ssym_y_aug,rf_3.predict(Ssym_X_aug[:,[0,4,5,7]])))
+rf_3.feature_importances_
+
+# %% cell 20 [code]
+rf_25 = RandomForestRegressor(min_samples_split=25,n_estimators=300,max_samples=0.2,max_features="sqrt").fit(S_2648_X_aug[:,[0,4,5,7]],S_2648_y_aug)
+print(pearsonr(S_2648_y,rf_25.predict(S_2648_X[:,[0,4,5,7]])))
+print(pearsonr(S_921_y_aug,rf_25.predict(S_921_X_aug[:,[0,4,5,7]])))
+print(pearsonr(S_669_y_aug,rf_25.predict(S_669_X_aug[:,[0,4,5,7]])))
+print(pearsonr(Ssym_y_aug,rf_25.predict(Ssym_X_aug[:,[0,4,5,7]])))
+rf_25.feature_importances_
+
+# %% cell 21 [code]
+rf_45 = RandomForestRegressor(min_samples_split=45,n_estimators=300,max_samples=0.2,max_features="sqrt").fit(S_2648_X_aug[:,[0,4,5,7]],S_2648_y_aug)
+print(pearsonr(S_2648_y,rf_45.predict(S_2648_X[:,[0,4,5,7]])))
+print(pearsonr(S_921_y_aug,rf_45.predict(S_921_X_aug[:,[0,4,5,7]])))
+print(pearsonr(S_669_y_aug,rf_45.predict(S_669_X_aug[:,[0,4,5,7]])))
+print(pearsonr(Ssym_y_aug,rf_45.predict(Ssym_X_aug[:,[0,4,5,7]])))
+rf_45.feature_importances_
+
+# %% cell 22 [code]
+rf_75 = RandomForestRegressor(min_samples_split=75,n_estimators=300,max_samples=0.2,max_features="sqrt").fit(S_2648_X_aug[:,[0,4,5,7]],S_2648_y_aug)
+print(pearsonr(S_2648_y,rf_75.predict(S_2648_X[:,[0,4,5,7]])))
+print(pearsonr(S_921_y_aug,rf_75.predict(S_921_X_aug[:,[0,4,5,7]])))
+print(pearsonr(S_669_y_aug,rf_75.predict(S_669_X_aug[:,[0,4,5,7]])))
+print(pearsonr(Ssym_y_aug,rf_75.predict(Ssym_X_aug[:,[0,4,5,7]])))
+rf_75.feature_importances_
+
+# %% cell 23 [code]
+rf_2 = RandomForestRegressor(min_samples_split=2,n_estimators=300,max_samples=0.2,max_features="sqrt").fit(S_2648_X_aug[:,[0,4,5,7]],S_2648_y_aug)
+print(pearsonr(S_2648_y,rf_2.predict(S_2648_X[:,[0,4,5,7]])))
+print(pearsonr(S_921_y_aug,rf_2.predict(S_921_X_aug[:,[0,4,5,7]])))
+print(pearsonr(S_669_y_aug,rf_2.predict(S_669_X_aug[:,[0,4,5,7]])))
+print(pearsonr(Ssym_y_aug,rf_2.predict(Ssym_X_aug[:,[0,4,5,7]])))
+rf_2.feature_importances_
+
+# %% cell 24 [code]
+# pairwise-correlation heatmaps for figuring out what is going on with the whole (no-effect-of-bias-variance-tradeoff on testing datasets) situation
+import pandas as pd
+import seaborn as sns
+
+df_S_2648 = pd.DataFrame(
+    {'RF_75': rf_75.predict(S_2648_X_aug[:,[0,4,5,7]]),
+     'RF_45': rf_45.predict(S_2648_X_aug[:,[0,4,5,7]]),
+     'RF_25': rf_25.predict(S_2648_X_aug[:,[0,4,5,7]]),
+     'RF_5': rf_5.predict(S_2648_X_aug[:,[0,4,5,7]]),
+     'RF_3': rf_3.predict(S_2648_X_aug[:,[0,4,5,7]]),
+     'RF_2': rf_2.predict(S_2648_X_aug[:,[0,4,5,7]])
+    })
+corr = df_S_2648.corr()
+
+sns.set(font_scale=1.4)
+sns.heatmap(corr, 
+        xticklabels=corr.columns,
+        yticklabels=corr.columns)
+
+# %% cell 25 [code]
+# pairwise-correlation heatmaps for figuring out what is going on with the whole (no-effect-of-bias-variance-tradeoff on testing datasets) situation
+import pandas as pd
+import seaborn as sns
+
+df_921 = pd.DataFrame(
+    {'RF_75': rf_75.predict(S_921_X_aug[:,[0,4,5,7]]),
+     'RF_45': rf_45.predict(S_921_X_aug[:,[0,4,5,7]]),
+     'RF_25': rf_25.predict(S_921_X_aug[:,[0,4,5,7]]),
+     'RF_5': rf_5.predict(S_921_X_aug[:,[0,4,5,7]]),
+     'RF_3': rf_3.predict(S_921_X_aug[:,[0,4,5,7]]),
+     'RF_2': rf_2.predict(S_921_X_aug[:,[0,4,5,7]])
+    })
+corr = df_921.corr()
+
+sns.set(font_scale=1.4)
+sns.heatmap(corr, 
+        xticklabels=corr.columns,
+        yticklabels=corr.columns)
+
+# %% cell 26 [code]
+# pairwise-correlation heatmaps for figuring out what is going on with the whole (no-effect-of-bias-variance-tradeoff on testing datasets) situation
+import pandas as pd
+import seaborn as sns
+
+df_Ssym = pd.DataFrame(
+    {'RF_75': rf_75.predict(Ssym_X_aug[:,[0,4,5,7]]),
+     'RF_45': rf_45.predict(Ssym_X_aug[:,[0,4,5,7]]),
+     'RF_25': rf_25.predict(Ssym_X_aug[:,[0,4,5,7]]),
+     'RF_5': rf_5.predict(Ssym_X_aug[:,[0,4,5,7]]),
+     'RF_3': rf_3.predict(Ssym_X_aug[:,[0,4,5,7]]),
+     'RF_2': rf_2.predict(Ssym_X_aug[:,[0,4,5,7]])
+    })
+corr = df_Ssym.corr()
+
+sns.set(font_scale=1.4)
+sns.heatmap(corr, 
+        xticklabels=corr.columns,
+        yticklabels=corr.columns)
+
+# %% cell 27 [code]
+# pairwise-correlation heatmaps for figuring out what is going on with the whole (no-effect-of-bias-variance-tradeoff on testing datasets) situation
+import pandas as pd
+import seaborn as sns
+
+df_S_669 = pd.DataFrame(
+    {'RF_75': rf_75.predict(S_669_X_aug[:,[0,4,5,7]]),
+     'RF_45': rf_45.predict(S_669_X_aug[:,[0,4,5,7]]),
+     'RF_25': rf_25.predict(S_669_X_aug[:,[0,4,5,7]]),
+     'RF_5': rf_5.predict(S_669_X_aug[:,[0,4,5,7]]),
+     'RF_3': rf_3.predict(S_669_X_aug[:,[0,4,5,7]]),
+     'RF_2': rf_2.predict(S_669_X_aug[:,[0,4,5,7]])
+    })
+corr = df_S_669.corr()
+
+sns.set(font_scale=1.4)
+sns.heatmap(corr, 
+        xticklabels=corr.columns,
+        yticklabels=corr.columns)
+
+# %% cell 28 [code]
+# trying to do a quick-dirty manual ensemble here among RF models with different depths
+# print(pearsonr(S_2648_y,rf_2.predict(S_2648_X[:,[0,4,5,7]])))
+print(pearsonr(S_921_y_aug,(rf_2.predict(S_921_X_aug[:,[0,4,5,7]])+rf_25.predict(S_921_X_aug[:,[0,4,5,7]])+rf_75.predict(S_921_X_aug[:,[0,4,5,7]]))/3))
+print(pearsonr(S_669_y_aug,(rf_2.predict(S_669_X_aug[:,[0,4,5,7]])+rf_25.predict(S_669_X_aug[:,[0,4,5,7]])+rf_75.predict(S_669_X_aug[:,[0,4,5,7]]))/3))
+print(pearsonr(Ssym_y_aug,(rf_2.predict(Ssym_X_aug[:,[0,4,5,7]])+rf_25.predict(Ssym_X_aug[:,[0,4,5,7]])+rf_75.predict(Ssym_X_aug[:,[0,4,5,7]]))/3))
+
+# %% cell 29 [code]
+# another level of de-correlation by holding out mutations from a specific number of proteins for each of the random forests, and take their ensemble prediction
+# as the final prediction?
+
+# for this, let us at first get the ids of all the S_2648 proteins from the corresponding two-level dict that are not in the corresponding proteins_to_skip_list
+pdbIds_avail = []
+n_muts = []
+list_feature_importances = []
+for prot,muts in list_two_level_dict[0].items():
+    if prot not in list_proteins_to_skip[0]:
+        for mut in muts:
+            pdbIds_avail.append(prot)
+            # adding second time for the reverse mutation, since we are trianing on a reverse-augmented version of S_2648
+            pdbIds_avail.append(prot)
+id_set = set(pdbIds_avail)
+pdbIds_avail = np.array(pdbIds_avail)
+number_of_proteins_in_the_validation_set = 100
+# "n_ensemble" is the number of random forests to be trained on different protein-level mutant subsets
+# the subsets will contain all the forward and reverse mutations from the same protein
+n_ensemble = 20
+# "rf_models" list will hold the models trained on different protein-level mutation subsets 
+rf_models = []
+for i in range(n_ensemble):
+    cur_iteration_X = []
+    cur_iteration_y = []
+    val_proteins = random.sample(id_set, k=number_of_proteins_in_the_validation_set)
+    val_indices = (np.where(np.isin(pdbIds_avail, val_proteins) == True))[0]
+    for j,(X,y) in enumerate(zip(S_2648_X_aug,S_2648_y_aug)):
+        if j not in val_indices:
+            cur_iteration_X.append(X)
+            cur_iteration_y.append(y)
+    cur_iteration_X = np.array(cur_iteration_X)
+    cur_iteration_y = np.array(cur_iteration_y)
+    l_model = RandomForestRegressor(min_samples_split=5,n_estimators=300,max_samples=0.2).fit(cur_iteration_X[:,[0,4,5,7]],cur_iteration_y)
+    list_feature_importances.append(l_model.feature_importances_)
+    rf_models.append(l_model)
+    n_muts.append(len(cur_iteration_X))
+
+# %% cell 30 [code]
+# Now, we just have to take ensemble predictions, and see how it goes.....TADAAAA
+
+# the elements of these lists are going to be numpy arrays full of predictions 
+# for the corresponding datasets made by each of the trained and saved RF models in the above cell
+# S_2648_predictions = []
+S_921_predictions = []
+S_669_predictions = []
+Ssym_predictions = []
+
+for rf in rf_models:
+    # S_2648_predictions.append()
+    S_921_predictions.append(rf.predict(S_921_X_aug[:,[0,4,5,7]]))
+    S_669_predictions.append(rf.predict(S_669_X_aug[:,[0,4,5,7]]))
+    Ssym_predictions.append(rf.predict(Ssym_X_aug[:,[0,4,5,7]]))
+
+# %% cell 31 [code]
+S_921_ensemble_predictions = np.mean(np.array(S_921_predictions),axis=0)
+S_669_ensemble_predictions = np.mean(np.array(S_669_predictions),axis=0)
+Ssym_ensemble_predictions = np.mean(np.array(Ssym_predictions),axis=0)
+
+print(pearsonr(S_921_y_aug,S_921_ensemble_predictions))
+print(pearsonr(S_669_y_aug,S_669_ensemble_predictions))
+print(pearsonr(Ssym_y_aug,Ssym_ensemble_predictions))
+
+# %% cell 32 [code]
+for i in range(n_ensemble-1):
+    print(n_muts[i])
+    # print(pearsonr(S_921_predictions[i],S_921_predictions[i+1]))
+    print(pearsonr(S_921_predictions[i],S_921_y_aug))
+    # print(pearsonr(S_669_predictions[i],S_669_predictions[i+1]))
+    print(pearsonr(S_669_predictions[i],S_669_y_aug))
+    print(pearsonr(Ssym_predictions[i],Ssym_y_aug))
+    print(list_feature_importances[i])
+    print(".........................................")
+
+# %% cell 33 [code]
+# pairwise-correlation heatmaps for manuscript
+import pandas as pd
+import seaborn as sns
+
+df_Ssym = pd.DataFrame(
+    {'P_DP': S_2648_X[:,0],
+     'P_DEC': S_2648_X[:,5],
+     'Neighbor_Reverse_KL' : S_2648_X[:,4],
+     'Neighbor_Attention_Change_(W/M)' : S_2648_X[:,7],
+     'Neighbor_Energy_Change' : S_2648_X[:,2],
+     'Neighbor_Entropy_Change' : S_2648_X[:,6] 
+    })
+corr = df_Ssym.corr()
+
+sns.set(font_scale=1.4)
+sns.heatmap(corr, 
+        xticklabels=corr.columns,
+        yticklabels=corr.columns)
+
+# %% cell 34 [code]
+# pairwise-correlation heatmaps for manuscript
+import pandas as pd
+import seaborn as sns
+
+df_Ssym = pd.DataFrame(
+    {'P_DP': S_669_X[:,0],
+     'P_DEC': S_669_X[:,5],
+     'Neighbor_Reverse_KL' : S_669_X[:,4],
+     'Neighbor_Attention_Change_(W/M)' : S_669_X[:,7],
+     'Neighbor_Energy_Change' : S_669_X[:,2],
+     'Neighbor_Entropy_Change' : S_669_X[:,6] 
+    })
+corr = df_Ssym.corr()
+
+sns.set(font_scale=1.4)
+sns.heatmap(corr, 
+        xticklabels=corr.columns,
+        yticklabels=corr.columns)
+
+# %% cell 35 [code]
+# pairwise-correlation heatmaps for manuscript
+import pandas as pd
+import seaborn as sns
+
+df_Ssym = pd.DataFrame(
+    {'P_DP': Ssym_X[:,0],
+     'P_DEC': Ssym_X[:,5],
+     'Neighbor_Reverse_KL' : Ssym_X[:,4],
+     'Neighbor_Attention_Change_(W/M)' : Ssym_X[:,7],
+     'Neighbor_Energy_Change' : Ssym_X[:,2],
+     'Neighbor_Entropy_Change' : Ssym_X[:,6] 
+    })
+corr = df_Ssym.corr()
+
+sns.set(font_scale=1.4)
+sns.heatmap(corr, 
+        xticklabels=corr.columns,
+        yticklabels=corr.columns)
+
+# %% cell 36 [code]
+# pairwise-correlation heatmaps for manuscript
+import pandas as pd
+import seaborn as sns
+
+df_Ssym = pd.DataFrame(
+    {'P_DP': S_921_X[:,0],
+     'P_DEC': S_921_X[:,5],
+     'Neighbor_Reverse_KL' : S_921_X[:,4],
+     'Neighbor_Attention_Change_(W/M)' : S_921_X[:,7],
+     'Neighbor_Energy_Change' : S_921_X[:,2],
+     'Neighbor_Entropy_Change' : S_921_X[:,6]
+    })
+corr = df_Ssym.corr()
+
+sns.set(font_scale=1.4)
+sns.heatmap(corr, 
+        xticklabels=corr.columns,
+        yticklabels=corr.columns)
+
+# %% cell 37 [code]
+# let us now do a final analysis to see if correlations of the four features on S_2648 are good coefficients
+# but the problem is that, correlation changes based on subset of data chosen
+
+# let us do a quick stochastic-hill-climbing with individual correlations constituting the initial solution 
+# out target is to see how far the co-efficients move away from correlations
+# this can in someway also be used for checking the underlying co-variate shift
+
+# objective-function
+# we are expecting "X" to be a numpy array of shape (number_of_samples,n_features) 
+# and "coefficients" to be another numpy array of shape (1,n_features)
+def objective(X, y, coefficients):
+    # generate predictions for dataset
+    yhat = (X*coefficients).sum(axis=-1)
+    # calculate accuracy
+    # taking negative of correlation because the "hillclimbing" function written below was intended to
+    # minimize the objective function, and I do not want to tinker around with it at that level right now
+    score = -1*(pearsonr(y,yhat)[0])
+    return score
+
+# hill climbing local search algorithm
+def hillclimbing(X, y, solution, n_iter, step_size):
+	# evaluate the initial point
+	solution_eval = objective(X, y, solution)
+	# run the hill climb
+	for i in range(n_iter):
+		# take a step
+		candidate = solution + np.random.randn(len(solution)) * step_size
+		# evaluate candidate point
+		candidte_eval = objective(X, y, candidate)
+		# check if we should keep the new point
+		if candidte_eval <= solution_eval:
+			# store the new point
+			solution, solution_eval = candidate, candidte_eval
+			# report progress
+			print('>%d %.5f' % (i, solution_eval))
+	return [solution, solution_eval]
+
+hillclimbing(X=S_669_X[:,[0,4,5,7]],y=S_669_y,solution=(np.array([0.50,0.20,0.20,0.10]).reshape(1,-1)),n_iter=40000,step_size=0.00001)

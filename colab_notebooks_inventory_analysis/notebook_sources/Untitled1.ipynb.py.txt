@@ -1,0 +1,55 @@
+# Source export for colab_drive_copy notebook: Untitled1.ipynb
+# Generated from notebook cell sources only; outputs are omitted.
+
+
+# %% cell 0 [code]
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+    def __contains__(self,key):
+        try:
+            getattr(self,key)
+            return True
+        except:
+            return False
+
+    def __getitem__(self,key):
+        print ("Inside `__getitem__` method!")
+        if key in self:
+            return getattr(self,key)
+        else:
+            return "DEFAULT IMAGINATION"
+
+# %% cell 1 [code]
+p_1 = Person("CEM",32)
+p_2 = Person("SA",27)
+
+# %% cell 2 [code]
+print(p_1.name)
+print(p_1.age)
+print(p_2.name)
+print(p_2.age)
+
+# %% cell 3 [code]
+print(p_1["name"])
+print(p_1["age"])
+print(p_2["name"])
+print(p_2["age"])
+print(p_2["village"])
+
+# %% cell 4 [code]
+print(getattr(p_1,"name"))
+print(getattr(p_1,"age"))
+print(getattr(p_2,"name"))
+print(getattr(p_2,"age"))
+print(getattr(p_2,"village","DEFAULT_VALUE"))
+
+# %% cell 5 [code]
+import numpy as np
+
+# %% cell 6 [code]
+a = np.array([1,2,3,4,5])
+print(a.max())
+print(np.amax(a))

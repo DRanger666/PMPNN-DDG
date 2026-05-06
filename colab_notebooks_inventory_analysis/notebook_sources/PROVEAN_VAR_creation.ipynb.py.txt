@@ -1,0 +1,137 @@
+# Source export for colab_drive_copy notebook: PROVEAN_VAR_creation.ipynb
+# Generated from notebook cell sources only; outputs are omitted.
+
+
+# %% cell 0 [code]
+from google.colab import drive
+drive.mount('/content/drive',force_remount=True)
+import sys 
+installation_path = "/content/drive/MyDrive/Colab_Installations_V2"
+sys.path.insert(0,installation_path)
+
+# %% cell 1 [code]
+%cd /content/drive/MyDrive/ACCRE_PyRun_Setup
+
+# %% cell 2 [code]
+import os
+import re
+import pandas as pd
+from Bio.PDB.Polypeptide import *
+from Bio.PDB import *
+from Bio.SeqIO import write
+from Bio.Seq import Seq
+from Bio.SeqRecord import SeqRecord
+
+# %% cell 3 [code]
+# This function will create a two-level dictionary where the first level keys are pdbId + chain, 
+# and second level keys are resOneLetter+resSeq
+# the values for the second level dictionary are 1-based indexing of residues since provean expects that format in the VAR files
+def createStructureResPosMap(pdbDirectory):
+    two_level_dict = {}
+    parser = PDBParser(QUIET=True)
+    
+    for filename in os.listdir(pdbDirectory):
+        inner_dict = {}
+        structure = parser.get_structure(id=filename.split(".")[0],file=os.path.join(pdbDirectory,filename))
+        model = structure[0]
+        # Doing this because of the single chain assumption
+        chain = list(model.get_chains())[0]
+        for i,residue in enumerate(chain):
+            seqres = str(residue.get_id()[1])
+            name = three_to_one(residue.get_resname())
+            inner_dict[name + seqres] = (i + 1)
+        two_level_dict[filename.split(".")[0]] = inner_dict
+    
+    return two_level_dict
+
+# This function will clear all existing files from the varDirectory
+# Since we will be concatenating mutations one after the other in the same var file for the same PDB-Chain,
+# we want to empty out the directory beforehand to be sure that the file we are appending to has been created in the current run itself
+def clearDirectory(varDirectory):
+    for filename in os.listdir(varDirectory):
+        os.remove(os.path.join(varDirectory,filename))
+
+# need the PDB directory
+# need to load files from PDB directory after reading from the PremPS github page
+def premPSProcessing(pdbDirectory,varDirectory,url):
+    clearDirectory(varDirectory)
+    two_level_dict = createStructureResPosMap(pdbDirectory)
+    dataset =  pd.read_csv(url,delimiter="\t")
+    pdbIds = list(dataset["PDB Id"])
+    mutChains = list(dataset["Mutated Chain"])
+    mutations = list(dataset["Mutation_PDB"])
+
+    for pdbId, mutChain, mutation in zip(pdbIds,mutChains,mutations):
+        pos = [int(s) for s in re.findall('-?\d+',mutation)][0]
+        wild = mutation[0]
+        mut = mutation[len(mutation)-1]
+        pdbId = pdbId.lower()
+        filename = pdbId+mutChain+".pdb"
+
+          # If some pdb file is not in the target directory for some reason, skip it
+        if not os.path.isfile(os.path.join(pdbDirectory,filename)):
+            continue
+
+        name = wild
+        seqres = str(pos)
+        # where do I get this icode from?
+
+        seq_index = two_level_dict[filename.split(".")[0]][name+seqres]
+
+        # Now need to write this mutation information in a file in the varDirectory
+        # Append if file already exists, and create if it does not exist
+        with open(os.path.join(varDirectory,pdbId+mutChain+".var"),"a") as f:
+            f.write(f"{wild}{seq_index}{mut}\n")
+
+    return two_level_dict
+
+# The mutation information will be persed from csvLocation
+def S_669Processing(pdbDirectory,varDirectory,csvFile):
+    clearDirectory(varDirectory)
+    two_level_dict = createStructureResPosMap(pdbDirectory)
+    dataset = pd.read_csv(csvFile)
+    pdbIdsChains = list(dataset["Protein"])
+    pdbIds = []
+    mutChains = []
+    for pdbIdChain in pdbIdsChains:
+        pdbIds.append(pdbIdChain[0:-1])
+        mutChains.append(pdbIdChain[-1])
+    mutations = list(dataset["PDB_Mut"])
+
+    for pdbId, mutChain, mutation in zip(pdbIds,mutChains,mutations):
+        pos = [int(s) for s in re.findall('-?\d+',mutation)][0]
+        wild = mutation[0]
+        mut = mutation[len(mutation)-1]
+        pdbId = pdbId.lower()
+        filename = pdbId+mutChain+".pdb"
+
+          # If some pdb file is not in the target directory for some reason, skip it
+        if not os.path.isfile(os.path.join(pdbDirectory,filename)):
+            continue
+
+        name = wild
+        seqres = str(pos)
+        # where do I get this icode from?
+
+        seq_index = two_level_dict[filename.split(".")[0]][name+seqres]
+
+        # Now need to write this mutation information in a file in the varDirectory
+        # Append if file already exists, and create if it does not exist
+        with open(os.path.join(varDirectory,pdbId+mutChain+".var"),"a") as f:
+            f.write(f"{wild}{seq_index}{mut}\n")
+
+    return two_level_dict
+
+# %% cell 4 [code]
+pdbDirectory = "S_2648_PDB_Files"
+varDirectory = "Test_Var_Files"
+t_dict = premPSProcessing(pdbDirectory,varDirectory,"https://raw.githubusercontent.com/SajidAhmeduiu/PremPS/main/Datasets/S2648/S2648.txt")
+
+# %% cell 5 [code]
+print(t_dict["1a43A"])
+
+# %% cell 6 [code]
+# Why the hell am I getting seqres positions instead of sequence positions?
+for filename in os.listdir(varDirectory):
+    with open(os.path.join(varDirectory,filename),"r") as f:
+        print(f.read().splitlines())

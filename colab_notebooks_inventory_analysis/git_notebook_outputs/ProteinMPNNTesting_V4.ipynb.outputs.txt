@@ -1,0 +1,76 @@
+# Output export for git_sajid_additions notebook: ProteinMPNNTesting_V4.ipynb
+# Generated from notebook outputs; image payloads are summarized, not embedded.
+
+
+# %% cell 0 [code] execution_count=1
+
+## output 0 type=stream mime=- image_data_chars=0
+Mounted at /content/drive
+
+# %% cell 1 [code] execution_count=2
+
+## output 0 type=stream mime=- image_data_chars=0
+/content/drive/MyDrive/Protein_MPNN_Digging
+
+# %% cell 6 [code] execution_count=7
+
+## output 0 type=stream mime=- image_data_chars=0
+48
+
+# %% cell 9 [code] execution_count=76
+
+## output 0 type=stream mime=- image_data_chars=0
+odict_keys(['features.embeddings.linear.weight', 'features.embeddings.linear.bias', 'features.edge_embedding.weight', 'features.norm_edges.weight', 'features.norm_edges.bias', 'W_e.weight', 'W_e.bias', 'W_s.weight', 'encoder_layers.0.norm1.weight', 'encoder_layers.0.norm1.bias', 'encoder_layers.0.norm2.weight', 'encoder_layers.0.norm2.bias', 'encoder_layers.0.norm3.weight', 'encoder_layers.0.norm3.bias', 'encoder_layers.0.W1.weight', 'encoder_layers.0.W1.bias', 'encoder_layers.0.W2.weight', 'encoder_layers.0.W2.bias', 'encoder_layers.0.W3.weight', 'encoder_layers.0.W3.bias', 'encoder_layers.0.W11.weight', 'encoder_layers.0.W11.bias', 'encoder_layers.0.W12.weight', 'encoder_layers.0.W12.bias', 'encoder_layers.0.W13.weight', 'encoder_layers.0.W13.bias', 'encoder_layers.0.dense.W_in.weight', 'encoder_layers.0.dense.W_in.bias', 'encoder_layers.0.dense.W_out.weight', 'encoder_layers.0.dense.W_out.bias', 'encoder_layers.1.norm1.weight', 'encoder_layers.1.norm1.bias', 'encoder_layers.1.norm2.weight', 'encoder_layers.1.norm2.bias', 'encoder_layers.1.norm3.weight', 'encoder_layers.1.norm3.bias', 'encoder_layers.1.W1.weight', 'encoder_layers.1.W1.bias', 'encoder_layers.1.W2.weight', 'encoder_layers.1.W2.bias', 'encoder_layers.1.W3.weight', 'encoder_layers.1.W3.bias', 'encoder_layers.1.W11.weight', 'encoder_layers.1.W11.bias', 'encoder_layers.1.W12.weight', 'encoder_layers.1.W12.bias', 'encoder_layers.1.W13.weight', 'encoder_layers.1.W13.bias', 'encoder_layers.1.dense.W_in.weight', 'encoder_layers.1.dense.W_in.bias', 'encoder_layers.1.dense.W_out.weight', 'encoder_layers.1.dense.W_out.bias', 'encoder_layers.2.norm1.weight', 'encoder_layers.2.norm1.bias', 'encoder_layers.2.norm2.weight', 'encoder_layers.2.norm2.bias', 'encoder_layers.2.norm3.weight', 'encoder_layers.2.norm3.bias', 'encoder_layers.2.W1.weight', 'encoder_layers.2.W1.bias', 'encoder_layers.2.W2.weight', 'encoder_layers.2.W2.bias', 'encoder_layers.2.W3.weight', 'encoder_layers.2.W3.bias', 'encoder_layers.2.W11.weight', 'encoder_layers.2.W11.bias', 'encoder_layers.2.W12.weight', 'encoder_layers.2.W12.bias', 'encoder_layers.2.W13.weight', 'encoder_layers.2.W13.bias', 'encoder_layers.2.dense.W_in.weight', 'encoder_layers.2.dense.W_in.bias', 'encoder_layers.2.dense.W_out.weight', 'encoder_layers.2.dense.W_out.bias', 'decoder_layers.0.norm1.weight', 'decoder_layers.0.norm1.bias', 'decoder_layers.0.norm2.weight', 'decoder_layers.0.norm2.bias', 'decoder_layers.0.W1.weight', 'decoder_layers.0.W1.bias', 'decoder_layers.0.W2.weight', 'decoder_layers.0.W2.bias', 'decoder_layers.0.W3.weight', 'decoder_layers.0.W3.bias', 'decoder_layers.0.dense.W_in.weight', 'decoder_layers.0.dense.W_in.bias', 'decoder_layers.0.dense.W_out.weight', 'decoder_layers.0.dense.W_out.bias', 'decoder_layers.1.norm1.weight', 'decoder_layers.1.norm1.bias', 'decoder_layers.1.norm2.weight', 'decoder_layers.1.norm2.bias', 'decoder_layers.1.W1.weight', 'decoder_layers.1.W1.bias', 'decoder_layers.1.W2.weight', 'decoder_layers.1.W2.bias', 'decoder_layers.1.W3.weight', 'decoder_layers.1.W3.bias', 'decoder_layers.1.dense.W_in.weight', 'decoder_layers.1.dense.W_in.bias', 'decoder_layers.1.dense.W_out.weight', 'decoder_layers.1.dense.W_out.bias', 'decoder_layers.2.norm1.weight', 'decoder_layers.2.norm1.bias', 'decoder_layers.2.norm2.weight', 'decoder_layers.2.norm2.bias', 'decoder_layers.2.W1.weight', 'decoder_layers.2.W1.bias', 'decoder_layers.2.W2.weight', 'decoder_layers.2.W2.bias', 'decoder_layers.2.W3.weight', 'decoder_layers.2.W3.bias', 'decoder_layers.2.dense.W_in.weight', 'decoder_layers.2.dense.W_in.bias', 'decoder_layers.2.dense.W_out.weight', 'decoder_layers.2.dense.W_out.bias', 'W_out.weight', 'W_out.bias'])
+
+# %% cell 10 [code] execution_count=77
+
+## output 0 type=display_data mime=application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+0it [00:00, ?it/s]
+
+# %% cell 11 [code] execution_count=78
+
+## output 0 type=display_data mime=application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+  0%|          | 0/131 [00:00<?, ?it/s]
+
+## output 1 type=stream mime=- image_data_chars=0
+YOU HAVE JUST BEEN FUCKED BY ICODE
+1lveA:S27
+YOU HAVE JUST BEEN FUCKED BY ICODE
+1lveA:S27
+YOU HAVE JUST BEEN FUCKED BY ICODE
+2immA:N31
+YOU HAVE JUST BEEN FUCKED BY ICODE
+2immA:N31
+
+# %% cell 14 [code] execution_count=183
+
+## output 0 type=display_data mime=application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+0it [00:00, ?it/s]
+
+# %% cell 21 [code] execution_count=192
+
+## output 0 type=stream mime=- image_data_chars=0
+(0.5046771919089189, 2.3526913210832225e-169)
+(0.467779599977916, 1.3649844668852213e-142)
+(0.3481935215017128, 1.5028622794924656e-75)
+(0.16041510929343308, 1.4490805510662584e-16)
+
+# %% cell 26 [code] execution_count=167
+
+## output 0 type=stream mime=- image_data_chars=0
+(0.5056522378516612, 4.157346824071062e-170)
+(0.3521238866550162, 2.4469229322499657e-77)
+(0.1305505981029473, 1.9745681890281427e-11)
+
+# %% cell 32 [code] execution_count=None
+
+## output 0 type=display_data mime=image/png,text/plain image_data_chars=34177
+<Figure size 432x288 with 1 Axes>
+
+# %% cell 33 [code] execution_count=172
+
+## output 0 type=execute_result mime=text/plain image_data_chars=0
+<matplotlib.axes._subplots.AxesSubplot at 0x7fcda8cc07d0>
+
+## output 1 type=display_data mime=image/png,text/plain image_data_chars=21633
+<Figure size 432x288 with 2 Axes>

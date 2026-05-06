@@ -1,0 +1,973 @@
+# Output export for git_sajid_additions notebook: Quick_Dirty_MPNN_ML_V2_V4.ipynb
+# Generated from notebook outputs; image payloads are summarized, not embedded.
+
+
+# %% cell 0 [code] execution_count=1
+
+## output 0 type=stream mime=- image_data_chars=0
+Mounted at /content/drive
+
+# %% cell 1 [code] execution_count=2
+
+## output 0 type=stream mime=- image_data_chars=0
+/content/drive/MyDrive/Protein_MPNN_Digging
+
+# %% cell 6 [code] execution_count=7
+
+## output 0 type=display_data mime=application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+  0%|          | 0/131 [00:00<?, ?it/s]
+
+## output 1 type=stream mime=- image_data_chars=0
+YOU HAVE JUST BEEN FUCKED BY ICODE
+1lveA:S27
+YOU HAVE JUST BEEN FUCKED BY ICODE
+1lveA:S27
+YOU HAVE JUST BEEN FUCKED BY ICODE
+2immA:N31
+YOU HAVE JUST BEEN FUCKED BY ICODE
+2immA:N31
+
+## output 2 type=display_data mime=application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+  0%|          | 0/195 [00:00<?, ?it/s]
+
+## output 3 type=display_data mime=application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+  0%|          | 0/93 [00:00<?, ?it/s]
+
+## output 4 type=display_data mime=application/vnd.jupyter.widget-view+json,text/plain image_data_chars=0
+  0%|          | 0/357 [00:00<?, ?it/s]
+
+# %% cell 8 [code] execution_count=48
+
+## output 0 type=stream mime=- image_data_chars=0
+(2, 15, 128)
+(2, 15, 128)
+
+# %% cell 9 [code] execution_count=49
+
+## output 0 type=stream mime=- image_data_chars=0
+[0.07411781 0.07095533 0.05795309 0.0521657  0.04332693]
+[845.98846  155.17633  143.63986  125.45355  118.82783   93.4919
+  85.385735  75.64019   68.87806   66.370476]
+(39300, 128)
+<class 'numpy.ndarray'>
+
+# %% cell 10 [code] execution_count=50
+
+## output 0 type=stream mime=- image_data_chars=0
+[0.17047687 0.11342404 0.07886322 0.05022805 0.04171223]
+[1051.93524759  305.0935553   172.64641238  132.375325    114.63047795
+   90.10116451   73.05848729   69.88558352   64.60522651   61.08456182]
+(39300, 128)
+<class 'numpy.ndarray'>
+
+# %% cell 13 [code] execution_count=62
+
+## output 0 type=stream mime=- image_data_chars=0
+S_2648 single-feature correlations at a glance
+(0.5066529736537145, 6.977318145590863e-171)
+(-0.15030436008655998, 1.0440771163770327e-14)
+(0.30870099814242047, 5.870104605840723e-59)
+(0.25790872518638025, 4.451447521607761e-41)
+(0.3087009974609789, 5.870108192048068e-59)
+(-0.15030436046873363, 1.0440769531637886e-14)
+(0.028773005987116216, 0.14091957548275866)
+.............................................
+
+# %% cell 14 [code] execution_count=83
+
+## output 0 type=stream mime=- image_data_chars=0
+0.26 0.31
+
+## output 1 type=stream mime=- image_data_chars=0
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:21: MatplotlibDeprecationWarning: Support for uppercase single-letter colors is deprecated since Matplotlib 3.1 and will be removed in 3.3; please use lowercase instead.
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:21: MatplotlibDeprecationWarning: Using a string of single character colors as a color sequence is deprecated. Use an explicit list instead.
+
+## output 2 type=display_data mime=image/png,text/plain image_data_chars=33341
+<Figure size 700x500 with 1 Axes>
+
+# %% cell 15 [code] execution_count=84
+
+## output 0 type=stream mime=- image_data_chars=0
+0.15 0.03
+
+## output 1 type=stream mime=- image_data_chars=0
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:21: MatplotlibDeprecationWarning: Support for uppercase single-letter colors is deprecated since Matplotlib 3.1 and will be removed in 3.3; please use lowercase instead.
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:21: MatplotlibDeprecationWarning: Using a string of single character colors as a color sequence is deprecated. Use an explicit list instead.
+
+## output 2 type=display_data mime=image/png,text/plain image_data_chars=33921
+<Figure size 700x500 with 1 Axes>
+
+# %% cell 18 [code] execution_count=15
+
+## output 0 type=stream mime=- image_data_chars=0
+(0.7511915304713476, 0.0)
+(0.7188191834926682, 2.8860333630826e-147)
+(0.6156843790185055, 5.354798052969183e-134)
+(0.7316165115333608, 1.373463701993994e-115)
+
+## output 1 type=stream mime=- image_data_chars=0
+/usr/local/lib/python3.7/dist-packages/sklearn/linear_model/_base.py:145: FutureWarning: 'normalize' was deprecated in version 1.0 and will be removed in 1.2.
+If you wish to scale the data, use Pipeline with a StandardScaler in a preprocessing stage. To reproduce the previous behavior:
+
+from sklearn.pipeline import make_pipeline
+
+model = make_pipeline(StandardScaler(with_mean=False), Ridge())
+
+If you wish to pass a sample_weight parameter, you need to pass it as a fit parameter to each step of the pipeline as follows:
+
+kwargs = {s[0] + '__sample_weight': sample_weight for s in model.steps}
+model.fit(X, y, **kwargs)
+
+Set parameter alpha to: original_alpha * n_samples. 
+  FutureWarning,
+
+# %% cell 19 [code] execution_count=16
+
+## output 0 type=stream mime=- image_data_chars=0
+[ 0.27809452  0.01582197  0.00315951  0.00059364 -0.00411712  0.02602666
+ -0.02607926  0.00441499  0.28133533 -0.00928265  0.1920253   0.00316145]
+0.0944648492794847
+
+# %% cell 20 [code] execution_count=19
+
+## output 0 type=stream mime=- image_data_chars=0
+(0.9367390389379499, 0.0)
+(0.7717148877950495, 7.75902259221028e-183)
+(0.47981065050612964, 4.804211320641724e-38)
+(0.7274517063572093, 1.4366450679957317e-57)
+
+## output 1 type=execute_result mime=text/plain image_data_chars=0
+array([0.22805729, 0.05767971, 0.10079997, 0.05656147, 0.11376665,
+       0.06383039, 0.0637659 , 0.06621576, 0.0407944 , 0.07573701,
+       0.0502563 , 0.04497403, 0.03756112])
+
+# %% cell 21 [code] execution_count=20
+
+## output 0 type=stream mime=- image_data_chars=0
+(0.9354600459220591, 0.0)
+(0.7674392002299467, 1.2975050625095755e-179)
+(0.47736262641770233, 1.2692968045830674e-37)
+(0.7202697454004424, 5.947503161867698e-56)
+
+## output 1 type=execute_result mime=text/plain image_data_chars=0
+array([0.22643209, 0.1121636 , 0.06008392, 0.12454218, 0.07199351,
+       0.06649929, 0.0664911 , 0.04512027, 0.08029545, 0.05435771,
+       0.04943027, 0.04259062])
+
+# %% cell 22 [code] execution_count=30
+
+## output 0 type=display_data mime=image/png,text/plain image_data_chars=64925
+<Figure size 1400x1000 with 2 Axes>
+
+## output 1 type=display_data mime=text/plain image_data_chars=0
+<Figure size 432x288 with 0 Axes>
+
+# %% cell 23 [code] execution_count=32
+
+## output 0 type=execute_result mime=text/html,text/plain image_data_chars=0
+          DDG         A         B         C         D       E-1       E-2  \
+DDG  1.000000  0.506653  0.291537 -0.150304  0.308701  0.073913  0.336660   
+A    0.506653  1.000000  0.514658 -0.340462  0.331952  0.141369  0.165718   
+B    0.291537  0.514658  1.000000 -0.223649  0.382440  0.212651  0.141593   
+C   -0.150304 -0.340462 -0.223649  1.000000 -0.047038  0.067300 -0.136257   
+D    0.308701  0.331952  0.382440 -0.047038  1.000000  0.492633  0.171205   
+E-1  0.073913  0.141369  0.212651  0.067300  0.492633  1.000000 -0.095221   
+E-2  0.336660  0.165718  0.141593 -0.136257  0.171205 -0.095221  1.000000   
+E-3  0.256269  0.547897  0.398010 -0.547894  0.169664  0.118914  0.089578   
+E-4  0.204877  0.078585  0.095755  0.201958  0.088050  0.004878  0.197473   
+E-5  0.047127 -0.011028  0.058331  0.137475  0.068704  0.032526  0.020172   
+
+          E-3       E-4       E-5  
+DDG  0.256269  0.204877  0.047127  
+A    0.547897  0.078585 -0.011028  
+B    0.398010  0.095755  0.058331  
+C   -0.547894  0.201958  0.137475  
+D    0.169664  0.088050  0.068704  
+E-1  0.118914  0.004878  0.032526  
+E-2  0.089578  0.197473  0.020172  
+E-3  1.000000 -0.066716 -0.063130  
+E-4 -0.066716  1.000000  0.174738  
+E-5 -0.063130  0.174738  1.000000  
+
+  <div id="df-2a8957ae-dfbc-4397-a26b-1defb0626faa">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>DDG</th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+      <th>E-1</th>
+      <th>E-2</th>
+      <th>E-3</th>
+      <th>E-4</th>
+      <th>E-5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>DDG</th>
+      <td>1.000000</td>
+      <td>0.506653</td>
+      <td>0.291537</td>
+      <td>-0.150304</td>
+      <td>0.308701</td>
+      <td>0.073913</td>
+      <td>0.336660</td>
+      <td>0.256269</td>
+      <td>0.204877</td>
+      <td>0.047127</td>
+    </tr>
+    <tr>
+      <th>A</th>
+      <td>0.506653</td>
+      <td>1.000000</td>
+      <td>0.514658</td>
+      <td>-0.340462</td>
+      <td>0.331952</td>
+      <td>0.141369</td>
+      <td>0.165718</td>
+      <td>0.547897</td>
+      <td>0.078585</td>
+      <td>-0.011028</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>0.291537</td>
+      <td>0.514658</td>
+      <td>1.000000</td>
+      <td>-0.223649</td>
+      <td>0.382440</td>
+      <td>0.212651</td>
+      <td>0.141593</td>
+      <td>0.398010</td>
+      <td>0.095755</td>
+      <td>0.058331</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>-0.150304</td>
+      <td>-0.340462</td>
+      <td>-0.223649</td>
+      <td>1.000000</td>
+      <td>-0.047038</td>
+      <td>0.067300</td>
+      <td>-0.136257</td>
+      <td>-0.547894</td>
+      <td>0.201958</td>
+      <td>0.137475</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>0.308701</td>
+      <td>0.331952</td>
+      <td>0.382440</td>
+      <td>-0.047038</td>
+      <td>1.000000</td>
+      <td>0.492633</td>
+      <td>0.171205</td>
+      <td>0.169664</td>
+      <td>0.088050</td>
+      <td>0.068704</td>
+    </tr>
+    <tr>
+      <th>E-1</th>
+      <td>0.073913</td>
+      <td>0.141369</td>
+      <td>0.212651</td>
+      <td>0.067300</td>
+      <td>0.492633</td>
+      <td>1.000000</td>
+      <td>-0.095221</td>
+      <td>0.118914</td>
+      <td>0.004878</td>
+      <td>0.032526</td>
+    </tr>
+    <tr>
+      <th>E-2</th>
+      <td>0.336660</td>
+      <td>0.165718</td>
+      <td>0.141593</td>
+      <td>-0.136257</td>
+      <td>0.171205</td>
+      <td>-0.095221</td>
+      <td>1.000000</td>
+      <td>0.089578</td>
+      <td>0.197473</td>
+      <td>0.020172</td>
+    </tr>
+    <tr>
+      <th>E-3</th>
+      <td>0.256269</td>
+      <td>0.547897</td>
+      <td>0.398010</td>
+      <td>-0.547894</td>
+      <td>0.169664</td>
+      <td>0.118914</td>
+      <td>0.089578</td>
+      <td>1.000000</td>
+      <td>-0.066716</td>
+      <td>-0.063130</td>
+    </tr>
+    <tr>
+      <th>E-4</th>
+      <td>0.204877</td>
+      <td>0.078585</td>
+      <td>0.095755</td>
+      <td>0.201958</td>
+      <td>0.088050</td>
+      <td>0.004878</td>
+      <td>0.197473</td>
+      <td>-0.066716</td>
+      <td>1.000000</td>
+      <td>0.174738</td>
+    </tr>
+    <tr>
+      <th>E-5</th>
+      <td>0.047127</td>
+      <td>-0.011028</td>
+      <td>0.058331</td>
+      <td>0.137475</td>
+      <td>0.068704</td>
+      <td>0.032526</td>
+      <td>0.020172</td>
+      <td>-0.063130</td>
+      <td>0.174738</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2a8957ae-dfbc-4397-a26b-1defb0626faa')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-2a8957ae-dfbc-4397-a26b-1defb0626faa button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-2a8957ae-dfbc-4397-a26b-1defb0626faa');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  
+
+# %% cell 24 [code] execution_count=None
+
+## output 0 type=error mime=- image_data_chars=0
+NameError
+ignored
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m<ipython-input-1-16bb5132f815>[0m in [0;36m<module>[0;34m[0m
+[1;32m      8[0m df_Ssym = pd.DataFrame(
+[1;32m      9[0m [0;34m[0m[0m
+[0;32m---> 10[0;31m     {'DDG' : Ssym_y[0::2],
+[0m[1;32m     11[0m      [0;34m'P_DP'[0m[0;34m:[0m [0mSsym_X[0m[0;34m[[0m[0;36m0[0m[0;34m:[0m[0;34m:[0m[0;36m2[0m[0;34m,[0m[0;36m0[0m[0;34m][0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     12[0m      [0;34m'P_DEC'[0m[0;34m:[0m [0mSsym_X[0m[0;34m[[0m[0;36m0[0m[0;34m:[0m[0;34m:[0m[0;36m2[0m[0;34m,[0m[0;36m5[0m[0;34m][0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mNameError[0m: name 'Ssym_y' is not defined
+
+# %% cell 25 [code] execution_count=76
+
+## output 0 type=stream mime=- image_data_chars=0
+(0.7951054559001914, 0.0)
+(0.7675665691904682, 1.0425421922285914e-179)
+(0.7691868029071044, 6.369144375667188e-181)
+(0.643304272799088, 5.841115915467813e-150)
+(0.48122025849130307, 2.73596065678241e-38)
+(0.4753247385150954, 2.8328276613324236e-37)
+(0.8124495230466188, 5.980557836154855e-162)
+(0.7238214323884201, 9.573830318916375e-57)
+(0.7181928704994552, 1.708115513185573e-55)
+1.4915335516917998
+1.4907393676939005
+1.492327313042383
+1.453372497062347
+1.4559280249935969
+1.4508124677134284
+1.1003721524479986
+1.1039739722904418
+1.096758504079793
+
+## output 1 type=execute_result mime=text/plain image_data_chars=0
+array([0.2416164 , 0.09850827, 0.0583405 , 0.1270614 , 0.072926  ,
+       0.06839639, 0.06501885, 0.04437698, 0.08053017, 0.05217366,
+       0.04963963, 0.04141176])
+
+# %% cell 27 [code] execution_count=78
+
+## output 0 type=stream mime=- image_data_chars=0
+{'A': 0.8829334516693577, 'A+B': 0.9036086231810785, 'A+B+C': 0.9119422222441689, 'A+B+C+D': 0.9173010025827986, 'A+B+C+D+E': 0.9331357789688524, 'A+B+C+D+E+F': 0.934501129983057, 'A+B+C+D+E+F+G': 0.9353303941990047, 'A+B+C+D+E+F+G+H': 0.9357657864443959}
+{'A': 0.8588437047435545, 'A+B': 0.8023860445132496, 'A+B+C': 0.7765624192985355, 'A+B+C+D': 0.7541788719604942, 'A+B+C+D+E': 0.6878226501055112, 'A+B+C+D+E+F': 0.6808245643918215, 'A+B+C+D+E+F+G': 0.6782247663455709, 'A+B+C+D+E+F+G+H': 0.6766744490478409}
+
+# %% cell 28 [code] execution_count=79
+
+## output 0 type=stream mime=- image_data_chars=0
+{'A': 0.6406883983806305, 'A+B': 0.703328899285716, 'A+B+C': 0.7156668725249671, 'A+B+C+D': 0.7426311499774217, 'A+B+C+D+E': 0.7864864559993356, 'A+B+C+D+E+F': 0.8022714815856546, 'A+B+C+D+E+F+G': 0.8076551682707677, 'A+B+C+D+E+F+G+H': 0.8118413491812798}
+{'A': 1.4577634163117281, 'A+B': 1.3190223681759676, 'A+B+C': 1.2946304581479333, 'A+B+C+D': 1.2413275467370823, 'A+B+C+D+E': 1.149098669093934, 'A+B+C+D+E+F': 1.1202025429969538, 'A+B+C+D+E+F+G': 1.1095128183329066, 'A+B+C+D+E+F+G+H': 1.1009631892102054}
+
+# %% cell 29 [code] execution_count=80
+
+## output 0 type=stream mime=- image_data_chars=0
+{'A': 0.47302115619256135, 'A+B': 0.5290936877469211, 'A+B+C': 0.5780420385234404, 'A+B+C+D': 0.6019520209475583, 'A+B+C+D+E': 0.638329794136528, 'A+B+C+D+E+F': 0.6450164390214402, 'A+B+C+D+E+F+G': 0.641893515285423, 'A+B+C+D+E+F+G+H': 0.6430993657984322}
+{'A': 1.7180226581396387, 'A+B': 1.622093085662447, 'A+B+C': 1.550904655061736, 'A+B+C+D': 1.517030309760789, 'A+B+C+D+E': 1.4609304764114674, 'A+B+C+D+E+F': 1.4502780531733563, 'A+B+C+D+E+F+G': 1.455379405219905, 'A+B+C+D+E+F+G+H': 1.4536663191803803}
+
+# %% cell 30 [code] execution_count=81
+
+## output 0 type=stream mime=- image_data_chars=0
+{'A': 0.6491692364011791, 'A+B': 0.7010416806431414, 'A+B+C': 0.6985722039227716, 'A+B+C+D': 0.7309833780042638, 'A+B+C+D+E': 0.7591257504398808, 'A+B+C+D+E+F': 0.7877844523677066, 'A+B+C+D+E+F+G': 0.7909039290080782, 'A+B+C+D+E+F+G+H': 0.7933838787511099}
+{'A': 1.7723210451554892, 'A+B': 1.6761911547937893, 'A+B+C': 1.6902896414012545, 'A+B+C+D': 1.618830967959764, 'A+B+C+D+E': 1.5632951746953059, 'A+B+C+D+E+F': 1.506837878502324, 'A+B+C+D+E+F+G': 1.5007959951069874, 'A+B+C+D+E+F+G+H': 1.494635227345916}
+
+# %% cell 33 [code] execution_count=None
+
+## output 0 type=execute_result mime=text/html,text/plain image_data_chars=0
+               PCC  combo_length combo_signature
+A            0.688             1               A
+A+D          0.732             3             A+D
+A+E+F        0.749             5           A+E+F
+A+D+E+F      0.763             7         A+D+E+F
+A+B+D+E+F    0.757             9       A+B+D+E+F
+A+B+C+D+E+F  0.749            11     A+B+C+D+E+F
+
+  <div id="df-b488922b-d138-4601-85b8-5f6434a3e15a">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PCC</th>
+      <th>combo_length</th>
+      <th>combo_signature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>0.688</td>
+      <td>1</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>A+D</th>
+      <td>0.732</td>
+      <td>3</td>
+      <td>A+D</td>
+    </tr>
+    <tr>
+      <th>A+E+F</th>
+      <td>0.749</td>
+      <td>5</td>
+      <td>A+E+F</td>
+    </tr>
+    <tr>
+      <th>A+D+E+F</th>
+      <td>0.763</td>
+      <td>7</td>
+      <td>A+D+E+F</td>
+    </tr>
+    <tr>
+      <th>A+B+D+E+F</th>
+      <td>0.757</td>
+      <td>9</td>
+      <td>A+B+D+E+F</td>
+    </tr>
+    <tr>
+      <th>A+B+C+D+E+F</th>
+      <td>0.749</td>
+      <td>11</td>
+      <td>A+B+C+D+E+F</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-b488922b-d138-4601-85b8-5f6434a3e15a')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-b488922b-d138-4601-85b8-5f6434a3e15a button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-b488922b-d138-4601-85b8-5f6434a3e15a');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  
+
+# %% cell 34 [code] execution_count=None
+
+## output 0 type=execute_result mime=text/html,text/plain image_data_chars=0
+               PCC  combo_length combo_signature
+A            0.542             1               A
+A+B          0.582             3             A+B
+A+B+C        0.594             5           A+B+C
+A+B+F        0.594             5           A+B+F
+A+B+C+F      0.603             7         A+B+C+F
+A+B+C+E+F    0.601             9       A+B+C+E+F
+A+B+C+D+E+F  0.596            11     A+B+C+D+E+F
+
+  <div id="df-759f8d39-4b5e-482e-92f2-1e82267bd0f3">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PCC</th>
+      <th>combo_length</th>
+      <th>combo_signature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>0.542</td>
+      <td>1</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>A+B</th>
+      <td>0.582</td>
+      <td>3</td>
+      <td>A+B</td>
+    </tr>
+    <tr>
+      <th>A+B+C</th>
+      <td>0.594</td>
+      <td>5</td>
+      <td>A+B+C</td>
+    </tr>
+    <tr>
+      <th>A+B+F</th>
+      <td>0.594</td>
+      <td>5</td>
+      <td>A+B+F</td>
+    </tr>
+    <tr>
+      <th>A+B+C+F</th>
+      <td>0.603</td>
+      <td>7</td>
+      <td>A+B+C+F</td>
+    </tr>
+    <tr>
+      <th>A+B+C+E+F</th>
+      <td>0.601</td>
+      <td>9</td>
+      <td>A+B+C+E+F</td>
+    </tr>
+    <tr>
+      <th>A+B+C+D+E+F</th>
+      <td>0.596</td>
+      <td>11</td>
+      <td>A+B+C+D+E+F</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-759f8d39-4b5e-482e-92f2-1e82267bd0f3')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-759f8d39-4b5e-482e-92f2-1e82267bd0f3 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-759f8d39-4b5e-482e-92f2-1e82267bd0f3');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  
+
+# %% cell 35 [code] execution_count=None
+
+## output 0 type=execute_result mime=text/html,text/plain image_data_chars=0
+               PCC  combo_length combo_signature
+A            0.704             1               A
+A+B          0.742             3             A+B
+A+B+F        0.750             5           A+B+F
+A+C+D        0.750             5           A+C+D
+A+B+E+F      0.759             7         A+B+E+F
+A+B+D+E+F    0.761             9       A+B+D+E+F
+A+B+C+D+E+F  0.763            11     A+B+C+D+E+F
+
+  <div id="df-7907f3db-22f1-42ff-bdcf-43894d582c03">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PCC</th>
+      <th>combo_length</th>
+      <th>combo_signature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>0.704</td>
+      <td>1</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>A+B</th>
+      <td>0.742</td>
+      <td>3</td>
+      <td>A+B</td>
+    </tr>
+    <tr>
+      <th>A+B+F</th>
+      <td>0.750</td>
+      <td>5</td>
+      <td>A+B+F</td>
+    </tr>
+    <tr>
+      <th>A+C+D</th>
+      <td>0.750</td>
+      <td>5</td>
+      <td>A+C+D</td>
+    </tr>
+    <tr>
+      <th>A+B+E+F</th>
+      <td>0.759</td>
+      <td>7</td>
+      <td>A+B+E+F</td>
+    </tr>
+    <tr>
+      <th>A+B+D+E+F</th>
+      <td>0.761</td>
+      <td>9</td>
+      <td>A+B+D+E+F</td>
+    </tr>
+    <tr>
+      <th>A+B+C+D+E+F</th>
+      <td>0.763</td>
+      <td>11</td>
+      <td>A+B+C+D+E+F</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7907f3db-22f1-42ff-bdcf-43894d582c03')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-7907f3db-22f1-42ff-bdcf-43894d582c03 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-7907f3db-22f1-42ff-bdcf-43894d582c03');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  
