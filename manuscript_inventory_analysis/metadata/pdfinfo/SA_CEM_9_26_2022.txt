@@ -1,0 +1,19 @@
+Title:           Microsoft Word - SA_CEM_9_26_2022.docx
+Author:          ahmes10
+Producer:        Microsoft: Print To PDF
+CreationDate:    Mon Sep 26 23:15:38 2022 +06
+ModDate:         Mon Sep 26 23:15:38 2022 +06
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           18
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       1611625 bytes
+Optimized:       no
+PDF version:     1.7

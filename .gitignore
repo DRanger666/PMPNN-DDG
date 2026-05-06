@@ -1,0 +1,32 @@
+# Runtime/session scaffolding
+.agents/
+.codex/
+
+# Copied primary evidence payloads: keep manifests/logs tracked, not the bulk copy.
+drive_evidence_copy/sajidahmedprotres_drive/
+
+# Nested source clones are evidence inputs, not files owned by this workspace repo.
+source_repos/
+
+# Python and notebook runtime residue
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Large or binary experiment/model artifacts require explicit promotion.
+*.pickle
+*.pkl
+*.joblib
+*.npy
+*.npz
+*.pt
+*.pth
+*.h5
+*.hdf5
+
+# Local scratch/output archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+

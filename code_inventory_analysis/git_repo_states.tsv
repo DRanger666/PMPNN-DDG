@@ -1,0 +1,33 @@
+repo	field	value
+source_repo	head	121bef560acbf47ea98a47ba6fc08d35401cc17a
+source_repo	status_short	
+source_repo	remote_v	"origin	https://github.com/SajidAhmeduiu/ProteinMPNN.git (fetch)
+origin	https://github.com/SajidAhmeduiu/ProteinMPNN.git (push)"
+source_repo	recent_log	"121bef5 (HEAD -> main, origin/main, origin/HEAD) Local Run Updated Copy
+cc993ad Manuscript previous
+8891ef5 Final Figures on 23_9_2022
+670d024 Progress Pushing
+7db74de Huge Stuff Added For Feature Generation, and Classification
+13e3704 The new embedding change raw feature added, kernel PCA failed
+44432fa Publishable Version of ML Code
+6ee71e8 Two new features added (one has good correlation with both DDG, and backward KL)
+182bc16 Some changes to be dumped
+cf12a25 Added graph plotting to the MLscript
+79e0ce1 This version of the ML script can generate publicatio-ready data
+0659718 Model param, training, local-search, and everything needed has been added to this dirty ML script"
+drive_nested_repo	head	c602ced6ad4b6997d89afa9432607ac9d0572539
+drive_nested_repo	status_short	M vanilla_proteinmpnn/protein_mpnn_utils.py
+drive_nested_repo	remote_v	"origin	https://github.com/dauparas/ProteinMPNN.git (fetch)
+origin	https://github.com/dauparas/ProteinMPNN.git (push)"
+drive_nested_repo	recent_log	"c602ced (HEAD -> main, origin/main, origin/HEAD) updating af_backprop version
+4ec7228 adding logic to split chains
+06478cf adding support for MMalign (for TMscore compute)
+d2a72a9 add submit_example_8.sh for global polar AA bias, write git_hash to ouputs, and additional CA-only model - v_48_010
+441db78 fixing bug in model_num option (was always showing model 0)
+13d47cc removing example
+0143fa7 Update quickdemo_wAF2.ipynb
+d4aa027 cleaning up the code
+d1c1ba5 cleaning up options
+ba6b2b3 cleaning up the code, adding automated scan of all sequences
+7bfc279 Created using Colaboratory
+fdf27de Created using Colaboratory"

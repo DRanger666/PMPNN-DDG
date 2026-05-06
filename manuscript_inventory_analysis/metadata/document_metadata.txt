@@ -1,0 +1,155 @@
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/SA_9_20_2022.docx
+File Name                       : SA_9_20_2022.docx
+Create Date                     : 2022:09:20 19:15:00Z
+Modify Date                     : 2022:09:21 01:07:00Z
+Creator                         : Ahmed, Sajid
+Last Modified By                : Ahmed, Sajid
+Revision Number                 : 106
+Total Edit Time                 : 5.9 hours
+Pages                           : 17
+Words                           : 25778
+Characters                      : 146936
+Application                     : Microsoft Office Word
+App Version                     : 16.0000
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/SA_9_20_2022_Equation_Update_Attempt.docx
+File Name                       : SA_9_20_2022_Equation_Update_Attempt.docx
+Create Date                     : 2022:09:20 19:15:00Z
+Modify Date                     : 2022:09:21 18:27:00Z
+Creator                         : Ahmed, Sajid
+Last Modified By                : Ahmed, Sajid
+Revision Number                 : 145
+Total Edit Time                 : 23.2 hours
+Pages                           : 18
+Words                           : 25826
+Characters                      : 147214
+Application                     : Microsoft Office Word
+App Version                     : 16.0000
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/SA_9_21_2022.docx
+File Name                       : SA_9_21_2022.docx
+Create Date                     : 2022:09:21 18:28:00Z
+Modify Date                     : 2022:09:21 21:58:00Z
+Creator                         : Ahmed, Sajid
+Last Modified By                : Ahmed, Sajid
+Revision Number                 : 64
+Total Edit Time                 : 3.5 hours
+Pages                           : 18
+Words                           : 26962
+Characters                      : 153689
+Application                     : Microsoft Office Word
+App Version                     : 16.0000
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/SA_9_23_2022_CEM.docx
+File Name                       : SA_9_23_2022_CEM.docx
+Create Date                     : 2022:09:21 18:28:00Z
+Modify Date                     : 2022:09:26 17:13:00Z
+Creator                         : Ahmed, Sajid
+Last Modified By                : Ahmed, Sajid
+Revision Number                 : 253
+Total Edit Time                 : 3.2 days
+Pages                           : 18
+Words                           : 24909
+Characters                      : 141986
+Application                     : Microsoft Office Word
+App Version                     : 16.0000
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/SA_CEM_9_26_2022.docx
+File Name                       : SA_CEM_9_26_2022.docx
+Create Date                     : 2022:09:26 17:15:00Z
+Modify Date                     : 2022:09:26 22:19:00Z
+Creator                         : Ahmed, Sajid
+Last Modified By                : Ahmed, Sajid
+Revision Number                 : 5
+Total Edit Time                 : 5.1 hours
+Pages                           : 18
+Words                           : 24909
+Characters                      : 141987
+Application                     : Microsoft Office Word
+App Version                     : 16.0000
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/SA_CEM_9_26_2022_MJ.docx
+File Name                       : SA_CEM_9_26_2022_MJ.docx
+Create Date                     : 2022:09:28 11:07:00Z
+Modify Date                     : 2022:09:28 12:59:00Z
+Creator                         : Ahmed, Sajid
+Last Modified By                : Jens Meiler
+Revision Number                 : 33
+Total Edit Time                 : 1.9 hours
+Pages                           : 18
+Words                           : 25018
+Characters                      : 142606
+Application                     : Microsoft Office Word
+App Version                     : 16.0000
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/SA_CEM_9_26_2022_MJ_Issue_Adressing.docx
+File Name                       : SA_CEM_9_26_2022_MJ_Issue_Adressing.docx
+Create Date                     : 2022:09:28 11:07:00Z
+Modify Date                     : 2022:11:20 00:50:00Z
+Creator                         : Ahmed, Sajid
+Last Modified By                : Ahmed, Sajid
+Revision Number                 : 44
+Total Edit Time                 : 6.1 days
+Pages                           : 19
+Words                           : 25034
+Characters                      : 142695
+Application                     : Microsoft Office Word
+App Version                     : 16.0000
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/V1.docx
+File Name                       : V1.docx
+Create Date                     : 2022:09:01 16:25:00Z
+Modify Date                     : 2022:09:20 19:13:00Z
+Creator                         : Ahmed, Sajid
+Last Modified By                : Ahmed, Sajid
+Revision Number                 : 2002
+Total Edit Time                 : 19.0 days
+Pages                           : 16
+Words                           : 25358
+Characters                      : 144541
+Application                     : Microsoft Office Word
+App Version                     : 16.0000
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/V1_CEM.docx
+File Name                       : V1_CEM.docx
+Create Date                     : 2022:09:01 16:25:00Z
+Modify Date                     : 2022:09:08 10:17:38Z
+Creator                         : Ahmed, Sajid
+Last Modified By                : 
+Revision Number                 : 707
+Total Edit Time                 : 6.5 days
+Pages                           : 6
+Words                           : 1775
+Characters                      : 9949
+Application                     : LibreOffice/6.0.7.3$Linux_X86_64 LibreOffice_project/00m0$Build-3
+App Version                     : 16.0000
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/some_soul_wrenching_physics.docx
+File Name                       : some_soul_wrenching_physics.docx
+Create Date                     : 2022:09:28 19:05:00Z
+Modify Date                     : 2022:10:27 18:24:00Z
+Creator                         : Ahmed, Sajid
+Last Modified By                : Ahmed, Sajid
+Revision Number                 : 344
+Total Edit Time                 : 23.0 days
+Pages                           : 59
+Words                           : 42536
+Characters                      : 242457
+Application                     : Microsoft Office Word
+App Version                     : 16.0000
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/SA_9_20_2022.pdf
+File Name                       : SA_9_20_2022.pdf
+Create Date                     : 2022:09:20 19:03:05-05:00
+Modify Date                     : 2022:09:20 19:03:05-05:00
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/SA_9_20_2022_CEM.pdf
+File Name                       : SA_9_20_2022_CEM.pdf
+Create Date                     : 2022:09:20 19:03:05-05:00
+Modify Date                     : 2022:09:20 19:03:05-05:00
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/SA_9_21_2022.pdf
+File Name                       : SA_9_21_2022.pdf
+Create Date                     : 2022:09:21 16:58:40-05:00
+Modify Date                     : 2022:09:21 16:58:40-05:00
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/SA_9_23_2022_CEM.pdf
+File Name                       : SA_9_23_2022_CEM.pdf
+Create Date                     : 2022:09:23 20:02:46-05:00
+Modify Date                     : 2022:09:23 20:02:46-05:00
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/SA_CEM_9_26_2022.pdf
+File Name                       : SA_CEM_9_26_2022.pdf
+Create Date                     : 2022:09:26 12:15:38-05:00
+Modify Date                     : 2022:09:26 12:15:38-05:00
+======== drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/V1_PDF.pdf
+File Name                       : V1_PDF.pdf
+Create Date                     : 2022:09:15 15:37:30-05:00
+Modify Date                     : 2022:09:15 15:37:30-05:00
+   16 image files read

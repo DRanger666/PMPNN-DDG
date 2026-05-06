@@ -1,0 +1,26 @@
+file	comment_id	author	date	text
+SA_CEM_9_26_2022_MJ.docx	0	Jens Meiler	2022-09-28T07:40:00Z	Convert brackets to actual sentences Break up long sentences Adhere to standard headings Figure fonts throughout sans serif Expand figure caption so that figure can be understood without manuscripts
+SA_CEM_9_26_2022_MJ.docx	2	Jens Meiler	2022-09-28T06:09:00Z	Please add affiliations and contact information
+SA_CEM_9_26_2022_MJ.docx	13	Jens Meiler	2022-09-28T06:17:00Z	Be quantitative. Report most important performance metrics and improvements of these
+SA_CEM_9_26_2022_MJ.docx	33	Jens Meiler	2022-09-28T06:57:00Z	Shadings and color are not needed in the figure. Use Arial or Calibri font for figure
+SA_CEM_9_26_2022_MJ.docx	34	Jens Meiler	2022-09-28T06:58:00Z	Results would be the traditional heading here. All else are subheadings…
+SA_CEM_9_26_2022_MJ.docx	35	Jens Meiler	2022-09-28T07:06:00Z	Are the datasets non-overlapping?
+SA_CEM_9_26_2022_MJ.docx	44	Jens Meiler	2022-09-28T07:10:00Z	Same here. remove unnecessary shading, fix font
+SA_CEM_9_26_2022_MJ.docx	86	Jens Meiler	2022-09-28T07:24:00Z	Too many subheadings. ‘Results’ and then one more subheading…
+SA_CEM_9_26_2022_MJ.docx	112	Jens Meiler	2022-09-28T07:26:00Z	Low content figure – combine with other results, much white space, font mixture,
+SA_CEM_9_26_2022_MJ.docx	212	Jens Meiler	2022-09-28T07:58:00Z	Format tables as tables, not figures. Use journal example
+SA_CEM_9_26_2022_MJ_Issue_Adressing.docx	1	Jens Meiler	2022-09-28T07:40:00Z	Convert brackets to actual sentences Break up long sentences Adhere to standard headings Figure fonts throughout sans serif Expand figure caption so that figure can be understood without manuscripts
+SA_CEM_9_26_2022_MJ_Issue_Adressing.docx	3	Jens Meiler	2022-09-28T06:09:00Z	Please add affiliations and contact information
+SA_CEM_9_26_2022_MJ_Issue_Adressing.docx	14	Jens Meiler	2022-09-28T06:17:00Z	Be quantitative. Report most important performance metrics and improvements of these
+SA_CEM_9_26_2022_MJ_Issue_Adressing.docx	34	Jens Meiler	2022-09-28T06:57:00Z	Shadings and color are not needed in the figure. Use Arial or Calibri font for figure
+SA_CEM_9_26_2022_MJ_Issue_Adressing.docx	35	Jens Meiler	2022-09-28T06:58:00Z	Results would be the traditional heading here. All else are subheadings…
+SA_CEM_9_26_2022_MJ_Issue_Adressing.docx	36	Jens Meiler	2022-09-28T07:06:00Z	Are the datasets non-overlapping?
+SA_CEM_9_26_2022_MJ_Issue_Adressing.docx	45	Jens Meiler	2022-09-28T07:10:00Z	Same here. remove unnecessary shading, fix font
+SA_CEM_9_26_2022_MJ_Issue_Adressing.docx	87	Jens Meiler	2022-09-28T07:24:00Z	Too many subheadings. ‘Results’ and then one more subheading…
+SA_CEM_9_26_2022_MJ_Issue_Adressing.docx	112	Jens Meiler	2022-09-28T07:26:00Z	Low content figure – combine with other results, much white space, font mixture,
+SA_CEM_9_26_2022_MJ_Issue_Adressing.docx	270	Jens Meiler	2022-09-28T07:58:00Z	Format tables as tables, not figures. Use journal example
+V1_CEM.docx	0	Unknown Author	2022-09-08T09:36:40Z	Not sure what you mean with “information entropy”
+V1_CEM.docx	1	Unknown Author	2022-09-08T09:37:40Z	I would explain what each term is in the equation, including P, even if was already mentioned above. Reason is that if I am skimming through the text and stopping at the formulas I would prefer to have all info together close to the formula instead of going looking for it through the text. This is valid for all next equations.
+V1_CEM.docx	2	Unknown Author	2022-09-08T09:42:26Z	I would say just “as described above”. Intuition is not scientific for me (unless there is a special meaning I am not aware of) and this phrase sounds pompous for no reason.
+V1_CEM.docx	3	Unknown Author	2022-09-08T09:44:47Z	Not sure if it is me, but I see red inverse interrogation points in the equation, with only M being normal. I see the red signs also in eq 3.2.3. If you see it correctly it can be my linux word that doesn’t recognize the format
+V1_CEM.docx	4	Unknown Author	2022-09-08T10:14:59Z	You should use first the extended version and in parenthesis the RBF. I bet $1 Jens is going to correct this

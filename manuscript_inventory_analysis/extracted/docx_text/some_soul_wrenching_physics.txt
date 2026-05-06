@@ -1,0 +1,818 @@
+--------------------------------------------------------------------------------
+MICHELLE THALLER: So, Tom, you asked the question, "How does mass increase as you go faster?" And this is really a wonderful part of Einstein's theories. It actually is also relatively slippery and kind of complicated because to even answer this question at all, we have to ask the rather strange question: "What do you mean by mass? What is your definition of mass?" You may have heard that nothing with mass can possibly go at the speed of light. The only things that travel at the speed of light are photons pure energy, light, the speed of light. Nothing with any mass at all can travel at the speed of light because as it gets closer and closer to the speed of light, its mass increases. And if it were actually traveling at the speed of light, it would have an infinite mass.
+
+So, think about that. Even if you had a tiny little particle that was, say, billions of times less massive than an electron just a tiny, tiny little piece of mass if for some reason, that tiny thing accelerated to the speed of light, it would have an infinite mass. And that's a bit of a problem. So, let's talk about this. One of the things that you really have to realize is the speed of light is very, very special. It's not just simply a speed of something moving through space. As you go faster and faster and closer to the speed of light, time itself begins to slow down. And space begins to contract. As you go close to the speed of light, the entire universe becomes smaller and smaller until it basically just becomes a single point when you're going at the speed of light. And time, as you go closer to the speed of light, gets slower and slower until basically time is a single point at the speed of light.
+
+Light does not experience space or time. It's not just a speed going through something. All of the universe shifts around this constant, the speed of light. Time and space itself stop when you go that speed. So the reason you can't accelerate to the speed of light, and the reason we say you have an infinite mass is a little complicated because the idea that mass actually is a measurement of energy. You may remember Einstein's famous equation, E equals MC squared. Energy equals mass times the speed of light squared. Energy and mass are equivalent. Mass is basically a measurement of how much energy there is in an object. When you're moving, you have the energy of your motion, too. That's called kinetic energy, energy of motion. So E equals MC squared, now your mass has not just the stuff that's in you but also the energy of your motion.
+--------------------------------------------------------------------------------
+And that's why mass seems to increase as you go faster, and faster, and closer to the speed of light. It's not that you are actually getting any heavier. The increase in mass is something that's only observed by people that are watching you go by. If you were on a spaceship going very fast at the speed of light, you don't notice anything getting heavier. You are on your spaceship. You could jump up and down. You can skip rope. You can do whatever you want. You don't notice any change at all. But if people try to measure your mass as you go by, they not only are measuring your rest mass  --  your mass when you were still  --  but this added energy of this huge speed that you have through space. And that's called a relativistic mass. And it's a complex idea to think that mass itself is a measurement of energy, so that changes depending on how fast you're going. If you were to slow down on your spaceship, you would not keep that mass.
+You would go back to being the same mass you were before you started moving that quickly. So as you can see, it's a complicated answer depending on how you define mass. Because as you're going very close to the speed of light and you have a huge speed, you need to take into account that energy because of the equation E equals MC squared.
+
+But they're not easily exchanged. Because the speed of light is already an enormous number, and the equation demands that it be multiplied by itself (or squared) to become even larger, a small amount of mass contains a huge amount of energy. For example, PBS Nova explained, "If you could turn every one of the atoms in a paper clip into pure energy  --  leaving no mass whatsoever  --  the paper clip would yield [the equivalent energy of] 18 kilotons of TNT. That's roughly the size of the bomb that destroyed Hiroshima in 1945." 
+One of the many implications of Einstein's special relativity work is that time moves relative to the observer. An object in motion experiences time dilation, meaning that when an object is moving very fast it experiences time more slowly than when it is at rest.
+For example, when astronaut Scott Kelly spent nearly a year aboard the International Space Station starting in 2015, he was moving much faster than his twin brother, astronaut Mark Kelly, who spent the year on the planet's surface. Due to time dilation, Mark Kelly aged just a little faster than Scott  --  "five milliseconds," according to the earth-bound twin. Since Scott wasn't moving near lightspeed, the actual difference in aging due to time dilation was negligible. In fact, considering how much stress and radiation the airborne twin experienced aboard the ISS, some would argue Scott Kelly increased his rate of aging.
+
+But at speeds approaching the speed of light, the effects of time dilation could be much more apparent. Imagine a 15-year-old leaves her high school traveling at 99.5% of the speed of light for five years (from the teenage astronaut's perspective). When the 15-year-old got back to Earth, she would have aged those 5 years she spent traveling. Her classmates, however, would be 65 years old  --  50 years would have passed on the much slower-moving planet.
+
+We don't currently have the technology to travel anywhere near that speed. But with the precision of modern technology, time dilation does actually affect human engineering.
+GPS devices work by calculating a position based on communication with at least three satellites in distant Earth orbits. Those satellites have to keep track of incredibly precise time in order to pinpoint a location on the planet, so they work based on atomic clocks. But because those atomic clocks are on board satellites that are constantly whizzing through space at 8,700 mph (14,000 km/h), special relativity means that they tick an extra 7 microseconds, or 7 millionths of a second, each day, according to American Physical Society publication Physics Central. In order to maintain pace with Earth clocks, atomic clocks on GPS satellites need to subtract 7 microseconds each day.
+
+With additional effects from general relativity (Einstein's follow-up to special relativity that incorporates gravity), clocks closer to the center of a large gravitational mass like Earth tick more slowly than those farther away. That effect adds microseconds to each day on a GPS atomic clock, so in the end engineers subtract 7 microseconds and add 45 more back on. GPS clocks don't tick over to the next day until they have run a total of 38 microseconds longer than comparable clocks on Earth.
+
+Law of Motion:
+The forces acting on a body add as vectors, and so the total force on a body depends upon both the magnitudes and the directions of the individual forces. When the net force on a body is equal to zero, then by Newton's second law, the body does not accelerate, and it is said to be in mechanical equilibrium. A state of mechanical equilibrium is stable if, when the position of the body is changed slightly, the body remains near that equilibrium. Otherwise, the equilibrium is unstable.
+Newton's second law is sometimes presented as a definition of force, i.e., a force is that which exists when an inertial observer sees a body accelerating. In order for this to be more than a tautology  --  acceleration implies force, force implies acceleration  --  some other statement about force must also be made. For example, an equation detailing the force might be specified, like Newton's law of universal gravitation. By inserting such an expression for {\displaystyle {\vec {F}}} into Newton's second law, an equation with predictive power can be written.[[note 6]] Newton's second law has also been regarded as setting out a research program for physics, establishing that important goals of the subject are to identify the forces present in nature and to catalogue the constituents of matter.
+
+FRICTIONAL FORCE VS. GRAVITATIONAL FORCE:
+The force of friction: When two surfaces rub against each other, the force of friction comes into play. It always acts against the direction of motion.
+For example, a ball rolling on a ground stops after sometime because of frictional force acting between the ground and the ball.
+Gravitational force: The force applied by the earth to pull objects towards itself is called gravitational force.
+For example: fruits falling from a tree branch towards the ground.
+--------------------------------------------------------------------------------
+Inertial frame of reference
+An inertial frame of reference can be defined in analytical terms as a frame of reference that describes time and space homogeneously, isotropically, and in a time-independent manner.[[3]] Conceptually, the physics of a system in an inertial frame have no causes external to the system.[[4]] An inertial frame of reference may also be called an inertial reference frame, inertial frame, Galilean reference frame, or inertial space.[[5]]
+It is important to note that all inertial frames are in a state of constant, rectilinear motion with respect to one another; in other words, an accelerometer moving with any of them would detect zero acceleration. Measurements in one inertial frame can be converted to measurements in another by a simple transformation (the Galilean transformation in Newtonian physics and the Lorentz transformation in special relativity). In general relativity, in any region small enough for the curvature of spacetime and tidal forces[[6]] to be negligible, one can find a set of inertial frames that approximately describe that region.[[7]][[8]]
+
+Roche limit:
+In celestial mechanics, the Roche limit, also called Roche radius, is the distance from a celestial body within which a second celestial body, held together only by its own force of gravity, will disintegrate because the first body's tidal forces exceed the second body's gravitational self-attraction.[[1]] Inside the Roche limit, orbiting material disperses and forms rings, whereas outside the limit, material tends to coalesce. The Roche radius depends on the radius of the first body and on the ratio of the bodies' densities.
+Gravity creates stars and planets:
+Gravity is what holds the planets in orbit around the sun and what keeps the moon in orbit around Earth. The gravitational pull of the moon pulls the seas towards it, causing the ocean tides. Gravity creates stars and planets by pulling together the material from which they are made.
+
+Tidal Force
+The tidal force is a gravitational effect that stretches a body along the line towards the center of mass of another body due to a gradient (difference in strength) in gravitational field from the other body; it is responsible for diverse phenomena, including tides, tidal locking, breaking apart of celestial bodies and formation of ring systems within the Roche limit, and in extreme cases, spaghettification of objects. It arises because the gravitational field exerted on one body by another is not constant across its parts: the nearest side is attracted more strongly than the farthest side. It is this difference that causes a body to get stretched. Thus, the tidal force is also known as the differential force, as well as a secondary effect of the gravitational field.
+
+Gravitational Field:
+In physics, a gravitational field is a model used to explain the influences that a massive body extends into the space around itself, producing a force on another massive body.[[1]] Thus, a gravitational field is used to explain gravitational phenomena, and is measured in newtons per kilogram (N/kg). Equivalently, it is measured in meters per second squared (m/s[2]).
+In its original concept, gravity was a force between point masses. Following Isaac Newton, Pierre-Simon Laplace attempted to model gravity as some kind of radiation field or fluid, and since the 19th century, explanations for gravity have usually been taught in terms of a field model, rather than a point attraction.
+In a field model, rather than two particles attracting each other, the particles distort spacetime via their mass, and this distortion is what is perceived and measured as a "force".[[][citation needed][]] In such a model one states that matter moves in certain ways in response to the curvature of spacetime,[[2]] and that there is either no gravitational force,[[3]] or that gravity is a fictitious force.[[4]]
+Gravity is distinguished from other forces by its obedience to the equivalence principle.
+
+SpaceTime:
+In physics, spacetime is a mathematical model that combines the three dimensions of space and one dimension of time into a single four-dimensional manifold. Spacetime diagrams can be used to visualize relativistic effects, such as why different observers perceive differently where and when events occur.
+
+Radiation:
+In physics, radiation is the emission or transmission of energy in the form of waves or particles through space or through a material medium.
+          gravitational radiation, that takes the form of gravitational waves, or ripples in the curvature of spacetime
+Mass:
+Mass is the quantity of matter in a physical body. It is also a measure of the body's inertia, the resistance to acceleration (change of velocity) when a net force is applied.[[1]] An object's mass also determines the strength of its gravitational attraction to other bodies.
+The SI base unit of mass is the kilogram (kg). In physics, mass is not the same as weight, even though mass is often determined by measuring the object's weight using a spring scale, rather than balance scale comparing it directly with known masses. An object on the Moon would weigh less than it does on Earth because of the lower gravity, but it would still have the same mass. This is because weight is a force, while mass is the property that (along with gravity) determines the strength of this force.
+
+--------------------------------------------------------------------------------
+Matter
+
+In classical physics and general chemistry, matter is any substance that has mass and takes up space by having volume.[[1]] All everyday objects that can be touched are ultimately composed of atoms, which are made up of interacting subatomic particles, and in everyday as well as scientific usage, "matter" generally includes atoms and anything made up of them, and any particles (or combination of particles) that act as if they have both rest mass and volume. However it does not include massless particles such as photons, or other energy phenomena or waves such as light or heat.[[1]][: 21 ][[2]] Matter exists in various states (also known as phases). These include classical everyday phases such as solid, liquid, and gas  -  for example water exists as ice, liquid water, and gaseous steam  -  but other states are possible, including plasma, Bose - Einstein condensates, fermionic condensates, and quark - gluon plasma.[[3]]
+
+Volume:
+Volume is a measure of occupied three-dimensional space.[[1]] It is often quantified numerically using SI derived units (such as the cubic meter and liter) or by various imperial units (such as the gallon, quart, cubic inch). The definition of length (cubed) is interrelated with volume. The volume of a container is generally understood to be the capacity of the container; i.e., the amount of fluid (gas or liquid) that the container could hold, rather than the amount of space the container itself displaces.
+In ancient times, volume is measured using similar-shaped natural containers and later on, standardized containers. Some simple three-dimensional shapes can have its volume easily calculated using arithmetic formulas. Volumes of more complicated shapes can be calculated with integral calculus if a formula exists for the shape's boundary. Zero-, one- and two-dimensional objects have no volume; in fourth and higher dimensions, an analogous concept to the normal volume is the hypervolume.
+
+
+Spring Scale:
+A spring scale, spring balance or newton meter is a type of mechanical force gauge or weighing scale. It consists of a spring fixed at one end with a hook to attach an object at the other. It works in accordance with Hooke's Law, which states that the force needed to extend or compress a spring by some distance scales linearly with respect to that distance. Therefore, the scale markings on the spring balance are equally spaced.
+A spring balance can be calibrated for the accurate measurement of mass in the location in which they are used, but many spring balances are marked right on their face "Not Legal for Trade" or words of similar import due to the approximate nature of the theory used to mark the scale. Also, the spring in the scale can permanently stretch with repeated use.
+A spring scale will only read correctly in a frame of reference where the acceleration in the spring axis is constant (such as on earth, where the acceleration is due to gravity). This can be shown by taking a spring scale into an elevator, where the weight measured will change as the elevator moves up and down changing velocities.
+
+Hooke's law:
+In physics, Hooke's law is an empirical law which states that the force (F) needed to extend or compress a spring by some distance (x) scales linearly with respect to that distance -- that is, Fs = kx, where k is a constant factor characteristic of the spring (i.e., its stiffness), and x is small compared to the total possible deformation of the spring. The law is named after 17th-century British physicist Robert Hooke. He first stated the law in 1676 as a Latin anagram.[[1]][[2]] He published the solution of his anagram in 1678[[3]] as: ut tensio, sic vis ("as the extension, so the force" or "the extension is proportional to the force"). Hooke states in the 1678 work that he was aware of the law since 1660.
+Hooke's equation holds (to some extent) in many other situations where an elastic body is deformed, such as wind blowing on a tall building, and a musician plucking a string of a guitar. An elastic body or material for which this equation can be assumed is said to be linear-elastic or Hookean.
+Hooke's law is only a first-order linear approximation to the real response of springs and other elastic bodies to applied forces. It must eventually fail once the forces exceed some limit, since no material can be compressed beyond a certain minimum size, or stretched beyond a maximum size, without some permanent deformation or change of state. Many materials will noticeably deviate from Hooke's law well before those elastic limits are reached.
+
+Spacetime Diagram:
+A spacetime diagram is a graphical illustration of the properties of space and time in the special theory of relativity. Spacetime diagrams allow a qualitative understanding of the corresponding phenomena like time dilation and length contraction without mathematical equations.
+The history of an object's location throughout all time traces out a line, referred to as the object's world line, in a spacetime diagram. Points in spacetime diagrams represent a fixed position in space and time and are referred to as events.
+The most well-known class of spacetime diagrams are known as Minkowski diagrams, developed by Hermann Minkowski in 1908. Minkowski diagrams are two-dimensional graphs that depict events as happening in a universe consisting of one space dimension and one time dimension. Unlike a regular distance-time graph, the distance is displayed on the horizontal axis and time on the vertical axis. Additionally, the time and space units of measurement are chosen in such a way that an object moving at the speed of light is depicted as following a 45° angle to the diagram's axes.
+
+Kinetics and kinematics:
+Kinetics and kinematics are branches of physics that deal with the motion of an object. Although both the terms sound similar, there are a few differences between them.
+ Kinematics describes motion using equations of motion.
+ Kinetics explains how a body responds when a force or torque is applied to it.
+ Classical mechanics include kinetics and kinematics, which deal with the motion of objects or bodies in different spaces. The main distinction between kinetics and kinematics is that kinetics is associated with the study of various forces that result in motion. Kinematics, on the other hand, is concerned with the study of real motion of things or bodies without keeping in mind the force that creates the motion.
+      KINETICS:
+      Kinetics deals with the absolute motion of an object. It explains how a body responds when a force or torque is applied to the body. It is the study of forces that are acting on an object under a particular mechanism.
+ Kinetics deals with the absolute motion of an object. It explains how a body responds when a force or torque is applied to the body. It is the study of forces that are acting on an object under a particular mechanism.
+ Kinetics focus on the different types of motion such as rotational motion in which the object experiences force or torque. e.g. When a car is moving, in this case, it possesses some amount of kinetic energy.
+ Kinetic energy is defined as the energy of motion or movement of an object, rather than in its position. The faster the motion of an object, the higher will be the kinetic energy. Kinetic energy can be calculated as,
+                                K.E. = 1/2 mv[2]
+ The Units of K.E = Kg (m/sec) or joules. Therefore, kinetic energy is directly proportional to the mass of the object and to the square of its velocity
+ Kinetics deals with the absolute motion of an object. It explains how a body responds when a force or torque is applied to the body. It is the study of forces that are acting on an object under a particular mechanism.
+
+Kinematics and kinetics are sub-areas of biomechanics. Kinematics is the study of description of motion while kinetics is the study of explanation of motion. In kinematics, the focus is on the motion of the object, while kinetics focuses on the cause of motion dealing with the 'why.'
+For example, in the study of golf swing, kinematics focuses on details of the swing 'motion' such as the shape of the clubhead path, positions of the body and club at various swing events, velocities of the body parts and club, and the timing of slow-down of the body for speed-up of the club. In order to describe the swing motion objectively, it is important to accurately measure the motion first. This is why measurement of the motion is one of the central aspects of kinematics. Basic kinematic quantities include time, position, displacement (distance), velocity (speed), and acceleration. In addition to these, shapes of trajectories of various points on the body, club and orientation of motion planes of various body segments and club are also kinematic issues. A complex motion of an object can be resolved into the linear motion of the center of mass (COM) of the body and the angular motion of the body about its COM, which is also a kinematic issue. (See the Linear Motion vs. Angular Motion page for the definitions of linear and angular motion.) The kinematic sequence plot is based on the angular velocity patterns of body segments, lines, and club.
+:: Kinematics: The term kinematics means motion. Kinematics is the study of motion without regard for the cause. 
+:: Dynamics: On the other hand, dynamics is the study of the causes of motion.
+
+The invariant mass, rest mass, intrinsic mass, proper mass, or in the case of bound systems simply mass, is the portion of the total mass of an object or system of objects that is independent of the overall motion of the system. More precisely, it is a characteristic of the system's total energy and momentum that is the same in all frames of reference related by Lorentz transformations.[[1]] If a center-of-momentum frame exists for the system, then the invariant mass of a system is equal to its total mass in that "rest frame". In other reference frames, where the system's momentum is nonzero, the total mass (a.k.a. relativistic mass) of the system is greater than the invariant mass, but the invariant mass remains unchanged.
+Because of mass - energy equivalence, the rest energy of the system is simply the invariant mass times the speed of light squared. Similarly, the total energy of the system is its total (relativistic) mass times the speed of light squared.
+
+The word mass has two meanings in special relativity: invariant mass (also called rest mass) is an invariant quantity which is the same for all observers in all reference frames, while the relativistic mass is dependent on the velocity of the observer. According to the concept of mass - energy equivalence, invariant mass is equivalent to rest energy, while relativistic mass is equivalent to relativistic energy (also called total energy).
+The term "relativistic mass" tends not to be used in particle and nuclear physics and is often avoided by writers on special relativity, in favor of referring to the body's relativistic energy.[[1]] In contrast, "invariant mass" is usually preferred over rest energy. The measurable inertia and the warping of spacetime by a body in a given frame of reference is determined by its relativistic mass, not merely its invariant mass. For example, photons have zero rest mass but contribute to the inertia (and weight in a gravitational field) of any system containing them.
+
+In physics, mass - energy equivalence is the relationship between mass and energy in a system's rest frame, where the two values differ only by a constant and the units of measurement.[[1]][[2]] The principle is described by the physicist Albert Einstein's famous formula: {\displaystyle E=mc^{2}}.[[3]]
+
+rest frame:
+In special relativity, the rest frame of a particle is the frame of reference (a coordinate system attached to physical markers) in which the particle is at rest.
+The rest frame of compound objects (such as a fluid, or a solid made of many vibrating atoms) is taken to be the frame of reference in which the average momentum of the particles which make up the substance is zero (the particles may individually have momentum, but collectively have no net momentum). The rest frame of a container of gas, for example, would be the rest frame of the container itself, in which the gas molecules are not at rest, but are no more likely to be traveling in one direction than another. The rest frame of a river would be the frame of an unpowered boat, in which the mean velocity of the water is zero. This frame is also called the center-of-mass frame, or center-of-momentum frame.
+Linear Motion vs. Angular Motion
+Any complex motion of a body can be broken down to two simple motions: linear motion and angular motion. Linear motion is translation from one position to another while angular motion is rotation about an axis or center of rotation. Linear motion can also be viewed as motion of a point and have two types: rectilinear (straight path) and curvilinear (curved path).
+This club motion can then be broken down to two simple motions: linear motion of the mid-hand point (Figure 2A) and angular motion of the club about the mid-hand (Figure 2B). In this case, the mid-hand point was selected as the representative point of the club as the focus is how the hands guide the club and how the club rotates around the hands. This is actually a common practice in biomechanics to break down a complex motion to linear motion of a point on the object and angular motion of the object about the point. It is easier to handle these simple motions separately than the actual complex motion at once. Actually, since linear motion and angular motion are very different in nature, these must be separated for an in-depth analysis.
+
+Newtonian mechanics:
+Momentum:
+In Newtonian mechanics, linear momentum, translational momentum, or simply momentum is the product of the mass and velocity of an object. It is a vector quantity, possessing a magnitude and a direction. If m is an object's mass and v is its velocity (also a vector quantity), then the object's momentum p is p=mv: {\displaystyle \mathbf {p} =m\mathbf {v} .}
+In the International System of Units (SI), the unit of measurement of momentum is the kilogram metre per second (kg⋅m/s), which is equivalent to the newton-second.
+
+Frame of Reference:
+In physics and astronomy, a frame of reference (or reference frame) is an abstract coordinate system whose origin, orientation, and scale are specified by a set of reference points--geometric points whose position is identified both mathematically (with numerical coordinate values) and physically (signaled by conventional markers)
+For n dimensions, n + 1 reference points are sufficient to fully define a reference frame. Using rectangular Cartesian coordinates, a reference frame may be defined with a reference point at the origin and a reference point at one unit distance along each of the n coordinate axes.[[][citation needed][]]
+In Einsteinian relativity, reference frames are used to specify the relationship between a moving observer and the phenomenon under observation. In this context, the term often becomes observational frame of reference or observational reference frame, which implies that the observer is at rest in the frame, although not necessarily located at its origin. A relativistic reference frame includes (or implies) the coordinate time, which does not equate across different reference frames moving relatively to each other. The situation thus differs from Galilean relativity, in which all possible coordinate times are essentially equivalent.[[][citation needed][]]
+
+
+Scaling:
+In affine geometry, uniform scaling (or isotropic scaling[[1]]) is a linear transformation that enlarges (increases) or shrinks (diminishes) objects by a scale factor that is the same in all directions. The result of uniform scaling is similar (in the geometric sense) to the original. A scale factor of 1 is normally allowed, so that congruent shapes are also classed as similar. Uniform scaling happens, for example, when enlarging or reducing a photograph, or when creating a scale model of a building, car, airplane, etc.
+More general is scaling with a separate scale factor for each axis direction. Non-uniform scaling (anisotropic scaling) is obtained when at least one of the scaling factors is different from the others; a special case is directional scaling or stretching (in one direction). Non-uniform scaling changes the shape of the object; e.g. a square may change into a rectangle
+
+--------------------------------------------------------------------------------
+Time dilation
+In physics and relativity, time dilation is the difference in the elapsed time as measured by two clocks. It is either due to a relative velocity between them (special relativistic "kinetic" time dilation) or to a difference in gravitational potential between their locations (general relativistic gravitational time dilation). When unspecified, "time dilation" usually refers to the effect due to velocity.
+
+--------------------------------------------------------------------------------
+Gravitational time dilation
+Gravitational time dilation is a form of time dilation, an actual difference of elapsed time between two events as measured by observers situated at varying distances from a gravitating mass. The lower the gravitational potential (the closer the clock is to the source of gravitation), the slower time passes, speeding up as the gravitational potential increases (the clock getting away from the source of gravitation). Albert Einstein originally predicted this effect in his theory of relativity and it has since been confirmed by tests of general relativity.[[1]]
+This has been demonstrated by noting that atomic clocks at differing altitudes (and thus different gravitational potential) will eventually show different times. The effects detected in such Earth-bound experiments are extremely small, with differences being measured in nanoseconds. Relative to Earth's age in billions of years, Earth's core is effectively 2.5 years younger than its surface.[[2]] Demonstrating larger effects would require greater distances from the Earth or a larger gravitational source.
+
+--------------------------------------------------------------------------------
+World line
+
+The world line (or worldline) of an object is the path that an object traces in 4-dimensional spacetime. It is an important concept in modern physics, and particularly theoretical physics.
+The concept of a "world line" is distinguished from concepts such as an "orbit" or a "trajectory" (e.g., a planet's orbit in space or the trajectory of a car on a road) by the time dimension,
+In physics, a world line of an object (approximated as a point in space, e.g., a particle or observer) is the sequence of spacetime events corresponding to the history of the object. A world line is a special type of curve in spacetime. Below an equivalent definition will be explained: A world line is a time-like curve in spacetime. Each point of a world line is an event that can be labeled with the time and the spatial position of the object at that time.
+Two world lines that start out separately and then intersect, signify a collision or "encounter". Two world lines starting at the same event in spacetime, each following its own path afterwards, may represent the decay of a particle into two others or the emission of one particle by another.
+
+--------------------------------------------------------------------------------
+Proper time
+In relativity, proper time (from Latin, meaning own time) along a timelike world line is defined as the time as measured by a clock following that line. It is thus independent of coordinates, and is a Lorentz scalar.[[1]] The proper time interval between two events on a world line is the change in proper time. This interval is the quantity of interest, since proper time itself is fixed only up to an arbitrary additive constant, namely the setting of the clock at some event along the world line.
+
+Lorentz scalar:
+In a relativistic theory of physics, a Lorentz scalar is an expression, formed from items of the theory, which evaluates to a scalar, invariant under any Lorentz transformation. A Lorentz scalar may be generated from e.g., the scalar product of vectors, or from contracting tensors of the theory. While the components of vectors and tensors are in general altered under Lorentz transformations, Lorentz scalars remain unchanged.
+
+Lorentz transformations:
+In physics, the Lorentz transformations are a six-parameter family of linear transformations from a coordinate frame in spacetime to another frame that moves at a constant velocity relative to the former. The respective inverse transformation is then parameterized by the negative of this velocity. The transformations are named after the Dutch physicist Hendrik Lorentz.
+Point:
+In classical Euclidean geometry, a point is a primitive notion that models an exact location in the space, and has no length, width, or thickness.[[1]] In modern mathematics, a point refers more generally to an element of some set called a space.
+Being a primitive notion means that a point cannot be defined in terms of previously defined objects. That is, a point is defined only by some properties, called axioms, that it must satisfy; for example, "there is exactly one line that passes through two different points".
+Lorentz transformations:
+In physics, the Lorentz transformations are a six-parameter family of linear transformations from a coordinate frame in spacetime to another frame that moves at a constant velocity relative to the former. The respective inverse transformation is then parameterized by the negative of this velocity. The transformations are named after the Dutch physicist Hendrik Lorentz.
+The most common form of the transformation, parametrized by the real constant {\displaystyle v,} representing a velocity confined to the x-direction, is expressed as[[1]][[2]]
+{\displaystyle {\begin{aligned}t'&=\gamma \left(t-{\frac {vx}{c^{2}}}\right)\\x'&=\gamma \left(x-vt\right)\\y'&=y\\z'&=z\end{aligned}}}
+
+where (t, x, y, z) and (t′, x′, y′, z′) are the coordinates of an event in two frames with the origins coinciding at t=t′=0, where the primed frame is seen from the unprimed frame as moving with speed v along the x-axis, where c is the speed of light, and {\textstyle \gamma =\left({\sqrt {1-{\frac {v^{2}}{c^{2}}}}}\right)^{-1}} is the Lorentz factor. When speed v is much smaller than c, the Lorentz factor is negligibly different from 1, but as v approaches c, {\displaystyle \gamma } grows without bound. The value of v must be smaller than c for the transformation to make sense.
+
+
+
+A "stationary" observer in frame F defines events with coordinates t, x, y, z. Another frame F′ moves with velocity v relative to F, and an observer in this "moving" frame F′ defines events using the coordinates t′, x′, y′, z′.
+The coordinate axes in each frame are parallel (the x and x′ axes are parallel, the y and y′ axes are parallel, and the z and z′ axes are parallel), remain mutually perpendicular, and relative motion is along the coincident xx′ axes. At t = t′ = 0, the origins of both coordinate systems are the same, (x, y, z) = (x′, y′, z′) = (0, 0, 0). In other words, the times and positions are coincident at this event. If all these hold, then the coordinate systems are said to be in standard configuration, or synchronized.
+If an observer in F records an event t, x, y, z, then an observer in F′ records the same event with coordinates. where v is the relative velocity between frames in the x-direction, c is the speed of light, and (lowercase gamma) is the Lorentz factor. Here, v is the parameter of the transformation, for a given boost it is a constant number, but can take a continuous range of values. In the setup used here, positive relative velocity v > 0 is motion along the positive directions of the xx′ axes, zero relative velocity v = 0 is no relative motion, while negative relative velocity v < 0 is relative motion along the negative directions of the xx′ axes. The magnitude of relative velocity v cannot equal or exceed c, so only subluminal speeds −c < v < c are allowed. The corresponding range of γ is 1 <= γ < infinity.
+
+As an active transformation, an observer in F′ notices the coordinates of the event to be "boosted" in the negative directions of the xx′ axes, because of the −v in the transformations. This has the equivalent effect of the coordinate system F′ boosted in the positive directions of the xx′ axes, while the event does not change and is simply represented in another coordinate system, a passive transformation.
+
+The inverse relations (t, x, y, z in terms of t′, x′, y′, z′) can be found by algebraically solving the original set of equations. A more efficient way is to use physical principles. Here F′ is the "stationary" frame while F is the "moving" frame. According to the principle of relativity, there is no privileged frame of reference, so the transformations from F′ to F must take exactly the same form as the transformations from F to F′. The only difference is F moves with velocity −v relative to F′ (i.e., the relative velocity has the same magnitude but is oppositely directed). Thus, if an observer in F′ notes an event t′, x′, y′, z′, then an observer in F notes the same event with coordinates.
+
+A critical requirement of the Lorentz transformations is the invariance of the speed of light, a fact used in their derivation, and contained in the transformations themselves. If in F the equation for a pulse of light along the x direction is x = ct, then in F′ the Lorentz transformations give x′ = ct′, and vice versa, for any −c < v < c..
+ACTIVE and PASSIVE TRANSFORMATION:
+In analytic geometry, spatial transformations in the 3-dimensional Euclidean space {\displaystyle \mathbb {R} ^{3}} are distinguished into active or alibi transformations, and passive or alias transformations. An active transformation[[1]] is a transformation which actually changes the physical position (alibi, elsewhere) of a point, or rigid body, which can be defined in the absence of a coordinate system; whereas a passive transformation[[2]] is merely a change in the coordinate system in which the object is described (alias, other name) (change of coordinate map, or change of basis). By transformation, mathematicians usually refer to active transformations, while physicists and engineers could mean either. Both types of transformation can be represented by a combination of a translation and a linear transformation.
+{\displaystyle \gamma ={\frac {1}{\sqrt {1-{\frac {v^{2}}{c^{2}}}}}}}
+Put differently, a passive transformation refers to description of the same object in two different coordinate systems.[[3]] On the other hand, an active transformation is a transformation of one or more objects with respect to the same coordinate system.
+
+
+
+
+Historically, the transformations were the result of attempts by Lorentz and others to explain how the speed of light was observed to be independent of the reference frame, and to understand the symmetries of the laws of electromagnetism. The Lorentz transformation is in accordance with Albert Einstein's special relativity, but was derived first.
+
+Galilean Transformation:
+In physics, a Galilean transformation is used to transform between the coordinates of two reference frames which differ only by constant relative motion within the constructs of Newtonian physics. These transformations together with spatial rotations and translations in space and time form the inhomogeneous Galilean group (assumed throughout below). Without the translations in space and time the group is the homogeneous Galilean group. The Galilean group is the group of motions of Galilean relativity acting on the four dimensions of space and time, forming the Galilean geometry. This is the passive transformation point of view. In special relativity the homogenous and inhomogenous Galilean transformations are, respectively, replaced by the Lorentz transformations and Poincaré transformations; conversely, the group contraction in the classical limit c --> infinity of Poincaré transformations yields Galilean transformations.
+
+Classical Limit:
+The classical limit or correspondence limit is the ability of a physical theory to approximate or "recover" classical mechanics when considered over special values of its parameters.[[1]] The classical limit is used with physical theories that predict non-classical behavior.
+
+
+
+Projectile:
+A projectile is an object that is propelled by the application of an external force and then moves freely under the influence of gravity and air resistance.[[1]][[2]] Although any objects in motion through space are projectiles, they are commonly found in warfare and sports (for example, a thrown baseball, kicked football, fired bullet, shot arrow, stone released from catapult).[[3]][[4]]
+In ballistics mathematical equations of motion are used to analyze projectile trajectories through launch, flight, and impact.
+In projectile motion, the most important force applied to the `projectile' is the propelling force, in this case the propelling forces are the muscles that act upon the ball to make it move, and the stronger the force applied, the more propelling force, which means the projectile (the ball) will travel farther. See pitching, bowling.
+
+kinetic energy weapon:
+A kinetic energy weapon (also known as kinetic weapon, kinetic energy warhead, kinetic warhead, kinetic projectile, kinetic kill vehicle) is a weapon based solely on a projectile's kinetic energy instead of an explosive or any other kind of payload.
+The term Hit-to-kill, or kinetic kill, is also used in the military aerospace field to describe kinetic energy weapons. It has been used primarily in the anti-ballistic missiles (ABM) and anti-satellite weapons (ASAT) area, but some modern anti-aircraft missiles are also hit-to-kill. Hit-to-kill systems are part of the wider class of kinetic projectiles, a class that has widespread use in the anti-tank field.
+Typical kinetic energy weapons are blunt projectiles such as rocks and round shots, pointed ones such as arrows, and somewhat pointed ones such as bullets.
+
+Kinetic Energy:
+In physics, the kinetic energy of an object is the energy that it possesses due to its motion.[[1]] It is defined as the work needed to accelerate a body of a given mass from rest to its stated velocity. Having gained this energy during its acceleration, the body maintains this kinetic energy unless its speed changes. The same amount of work is done by the body when decelerating from its current speed to a state of rest. Formally, a kinetic energy is any term in a system's Lagrangian which includes a derivative with respect to time. [[2]][[3]]
+In classical mechanics, the kinetic energy of a non-rotating object of mass m traveling at a speed v is  12*m*v2{\textstyle {\frac {1}{2}}mv^{2}}.
+
+Work:
+In physics, work is the energy transferred to or from an object via the application of force along a displacement. In its simplest form, it is often represented as the product of force and displacement. A force is said to do positive work if (when applied) it has a component in the direction of the displacement of the point of application. A force does negative work if it has a component opposite to the direction of the displacement at the point of application of the force.
+
+--------------------------------------------------------------------------------
+Force
+In physics, a force is an influence that can change the motion of an object. A force can cause an object with mass to change its velocity (e.g. moving from a state of rest), i.e., to accelerate. Force can also be described intuitively as a push or a pull. A force has both magnitude and direction, making it a vector quantity. It is measured in the SI unit of newton (N). Force is represented by the symbol F (formerly P).
+If the mass of the object is constant, this law implies that the acceleration of an object is directly proportional to the net force acting on the object, is in the direction of the net force, and is inversely proportional to the mass of the object.
+Concepts related to force include: thrust, which increases the velocity of an object; drag, which decreases the velocity of an object; and torque, which produces changes in rotational speed of an object. In an extended body, each part usually applies forces on the adjacent parts; the distribution of such forces through the body is the internal mechanical stress.
+
+--------------------------------------------------------------------------------
+Thrust
+Thrust is a reaction force described quantitatively by Newton's third law. When a system expels or accelerates mass in one direction, the accelerated mass will cause a force of equal magnitude but opposite direction to be applied to that system.[[1]] The force applied on a surface in a direction perpendicular or normal to the surface is also called thrust. Force, and thus thrust, is measured using the International System of Units (SI) in newtons (symbol: N), and represents the amount needed to accelerate 1 kilogram of mass at the rate of 1 meter per second per second. In mechanical engineering, force orthogonal to the main load (such as in parallel helical gears) is referred to as static thrust.
+
+--------------------------------------------------------------------------------
+Drag (physics)
+In fluid dynamics, drag (sometimes called air resistance, a type of friction, or fluid resistance, another type of friction or fluid friction) is a force acting opposite to the relative motion of any object moving with respect to a surrounding fluid.[[1]] This can exist between two fluid layers (or surfaces) or between a fluid and a solid surface. Unlike other resistive forces, such as dry friction, which are nearly independent of velocity, the drag force depends on velocity.[[2]][[3]]
+Drag force is proportional to the velocity for low-speed flow and the squared velocity for high speed flow, where the distinction between low and high speed is measured by the Reynolds number. Even though the ultimate cause of drag is viscous friction, turbulent drag is independent of viscosity.[[4]]
+Drag forces always tend to decrease fluid velocity relative to the solid object in the fluid's path.
+
+Fluid Dynamics:
+In physics and engineering, fluid dynamics is a subdiscipline of fluid mechanics that describes the flow of fluids -- liquids and gases. It has several subdisciplines, including aerodynamics (the study of air and other gases in motion) and hydrodynamics (the study of liquids in motion). Fluid dynamics has a wide range of applications, including calculating forces and moments on aircraft, determining the mass flow rate of petroleum through pipelines, predicting weather patterns, understanding nebulae in interstellar space and modelling fission weapon detonation.
+
+Torque:
+In physics and mechanics, torque is the rotational equivalent of linear force.[[1]] It is also referred to as the moment, moment of force, rotational force or turning effect, depending on the field of study. It represents the capability of a force to produce change in the rotational motion of the body. The concept originated with the studies by Archimedes of the usage of levers, which is reflected in his famous quote: "Give me a lever and a place to stand and I will move the Earth". Just as a linear force is a push or a pull, a torque can be thought of as a twist to an object around a specific axis. Torque is defined as the product of the magnitude of the force and the perpendicular distance of the line of action of a force from the axis of rotation. The symbol for torque is typically tau{\displaystyle {\boldsymbol {\tau }}}tquta, the lowercase Greek letter tau. When being referred to as moment of force, it is commonly denoted by M.
+
+Line of Action:
+In physics, the line of action (also called line of application) of a force (F) is a geometric representation of how the force is applied. It is the line through the point at which the force is applied in the same direction as the vector F-->.[[1]][[2]]
+The concept is essential, for instance, for understanding the net effect of multiple forces applied to a body. For example, if two forces of equal magnitude act upon a rigid body along the same line of action but in opposite directions, they cancel and have no net effect. But if, instead, their lines of action are not identical, but merely parallel, then their effect is to create a moment on the body, which tends to rotate it.
+
+Rotation around a fixed axis:
+Rotation around a fixed axis is a special case of rotational motion. The fixed-axis hypothesis excludes the possibility of an axis changing its orientation and cannot describe such phenomena as wobbling or precession. According to Euler's rotation theorem, simultaneous rotation along a number of stationary axes at the same time is impossible; if two rotations are forced at the same time, a new axis of rotation will appear.
+This article assumes that the rotation is also stable, such that no torque is required to keep it going. The kinematics and dynamics of rotation around a fixed axis of a rigid body are mathematically much simpler than those for free rotation of a rigid body; they are entirely analogous to those of linear motion along a single fixed direction, which is not true for free rotation of a rigid body
+
+Rigid-Body Dynamics:
+In the physical science of dynamics, rigid-body dynamics studies the movement of systems of interconnected bodies under the action of external forces. The assumption that the bodies are rigid (i.e. they do not deform under the action of applied forces) simplifies analysis, by reducing the parameters that describe the configuration of the system to the translation and rotation of reference frames attached to each body.[[1]][[2]] This excludes bodies that display fluid, highly elastic, and plastic behavior.
+The dynamics of a rigid body system is described by the laws of kinematics and by the application of Newton's second law (kinetics) or their derivative form, Lagrangian mechanics. The solution of these equations of motion provides a description of the position, the motion and the acceleration of the individual components of the system, and overall the system itself, as a function of time. The formulation and solution of rigid body dynamics is an important tool in the computer simulation of mechanical systems.
+
+--------------------------------------------------------------------------------
+Stationary-action principle
+The stationary-action principle  -  also known as the principle of least action  -  is a variational principle that, when applied to the action of a mechanical system, yields the equations of motion for that system. The principle states that the trajectories (i.e. the solutions of the equations of motion) are stationary points of the system's action functional. The term "least action" is a historical misnomer since the principle has no minimality requirement: the value of the action functional need not be minimal (even locally) on the trajectories.[[1]] Least action refers to the absolute value of the action functional being minimized.
+
+--------------------------------------------------------------------------------
+Variational principle
+
+--------------------------------------------------------------------------------
+Functional (mathematics)
+In mathematics, a functional (as a noun) is a certain type of function. The exact definition of the term varies depending on the subfield (and sometimes even the author).
+          In linear algebra, it is synonymous with linear forms, which are linear mapping from a vector space {\displaystyle V} into its field of scalars (that is, an element of the dual space {\displaystyle V^{*}})[[1]]
+ In computer science, it is synonymous with higher-order functions, that is, functions that take functions as arguments or return them.
+          
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Field (mathematics)
+In mathematics, a field is a set on which addition, subtraction, multiplication, and division are defined and behave as the corresponding operations on rational and real numbers do. A field is thus a fundamental algebraic structure which is widely used in algebra, number theory, and many other areas of mathematics.[[][citation needed][]]
+
+--------------------------------------------------------------------------------
+Linear form
+ENERGY:
+In physics, energy (from Ancient Greek: ἐνέργεια, enérgeia, "activity") is the quantitative property that is transferred to a body or to a physical system, recognizable in the performance of work and in the form of heat and light. Energy is a conserved quantity -- the law of conservation of energy states that energy can be converted in form, but not created or destroyed. The unit of measurement for energy in the International System of Units (SI) is the joule (J).
+Common forms of energy include the kinetic energy of a moving object, the potential energy stored by an object (for instance due to its position in a field), the elastic energy stored in a solid object, chemical energy associated with chemical reactions, the radiant energy carried by electromagnetic radiation, and the internal energy contained within a thermodynamic system. All living organisms constantly take in and release energy.
+
+--------------------------------------------------------------------------------
+Conservative force
+In physics, a conservative force is a force with the property that the total work done in moving a particle between two points is independent of the path taken.[[1]] Equivalently, if a particle travels in a closed loop, the total work done (the sum of the force acting along the path multiplied by the displacement) by a conservative force is zero.[[2]]
+
+A conservative force depends only on the position of the object. If a force is conservative, it is possible to assign a numerical value for the potential at any point and conversely, when an object moves from one location to another, the force changes the potential energy of the object by an amount that does not depend on the path taken, contributing to the mechanical energy and the overall conservation of energy. If the force is not conservative, then defining a scalar potential is not possible, because taking different paths would lead to conflicting potential differences between the start and end points.
+
+Gravitational force is an example of a conservative force; Other examples of conservative forces are: force in elastic spring, electrostatic force between two electric charges, and magnetic force between two magnetic poles. The last two forces are called central forces as they act along the line joining the centres of two charged/magnetized bodies. A central force is conservative if and only if it is spherically symmetric.
+
+--------------------------------------------------------------------------------
+Scalar potential
+In mathematical physics, scalar potential, simply stated, describes the situation where the difference in the potential energies of an object in two different positions depends only on the positions, not upon the path taken by the object in traveling from one position to the other. It is a scalar field in three-space: a directionless value (scalar) that depends only on its location. A familiar example is potential energy due to gravity. 
+
+--------------------------------------------------------------------------------
+Potential Energy
+In physics, potential energy is the energy held by an object because of its position relative to other objects, stresses within itself, its electric charge, or other factors.[[1]][[2]]
+Common types of potential energy include the gravitational potential energy of an object, the elastic potential energy of an extended spring, and the electric potential energy of an electric charge in an electric field. The unit for energy in the International System of Units (SI) is the joule, which has the symbol J.
+The term potential energy was introduced by the 19th-century Scottish engineer and physicist William Rankine,[[3]][[4]] although it has links to Greek philosopher Aristotle's concept of potentiality. Potential energy is associated with forces that act on a body in a way that the total work done by these forces on the body depends only on the initial and final positions of the body in space. These forces, that are called conservative forces, can be represented at every point in space by vectors expressed as gradients of a certain scalar function called potential.
+Since the work of potential forces acting on a body that moves from a start to an end position is determined only by these two positions and does not depend on the trajectory of the body, there is a function known as potential that can be evaluated at the two positions to determine this work.
+
+There are various types of potential energy, each associated with a particular type of force. For example, the work of an elastic force is called elastic potential energy; work of the gravitational force is called gravitational potential energy; work of the Coulomb force is called electric potential energy; work of the strong nuclear force or weak nuclear force acting on the baryon charge is called nuclear potential energy; work of intermolecular forces is called intermolecular potential energy. Chemical potential energy, such as the energy stored in fossil fuels, is the work of the Coulomb force during rearrangement of configurations of electrons and nuclei in atoms and molecules. Thermal energy usually has two components: the kinetic energy of random motions of particles and the potential energy of their configuration.
+
+Configuration Space:
+In classical mechanics, the parameters that define the configuration of a system are called generalized coordinates, (In analytical mechanics, generalized coordinates are a set of parameters used to represent the state of a system in a configuration space. These parameters must uniquely define the configuration of the system relative to a reference state.[[1]] The generalized velocities are the time derivatives of the generalized coordinates of the system. The adjective "generalized" distinguishes these parameters from the traditional use of the term "coordinate" to refer to Cartesian coordinates), and the space defined by these coordinates is called the configuration space of the physical system. It is often the case that these parameters satisfy mathematical constraints, such that the set of actual configurations of the system is a manifold in the space of generalized coordinates. This manifold is called the configuration manifold of the system. Notice that this is a notion of "unrestricted" configuration space, i.e. in which different point particles may occupy the same position. In mathematics, in particular in topology, a notion of "restricted" configuration space is mostly used, in which the diagonals, representing "colliding" particles, are removed.
+An example of a generalized coordinate would be to describe the position of a pendulum using the angle of the pendulum relative to vertical, rather than by the x and y position of the pendulum.
+
+Although there may be many possible choices for generalized coordinates for a physical system, they are generally selected to simplify calculations, such as the solution of the equations of motion for the system. If the coordinates are independent of one another, the number of independent generalized coordinates is defined by the number of degrees of freedom of the system.[[2]][[3]]
+
+--------------------------------------------------------------------------------
+Configuration space (physics)
+In classical mechanics, the parameters that define the configuration of a system are called generalized coordinates, and the space defined by these coordinates is called the configuration space of the physical system. It is often the case that these parameters satisfy mathematical constraints, such that the set of actual configurations of the system is a manifold in the space of generalized coordinates. This manifold is called the configuration manifold of the system. Notice that this is a notion of "unrestricted" configuration space, i.e. in which different point particles may occupy the same position. In mathematics, in particular in topology, a notion of "restricted" configuration space is mostly used, in which the diagonals, representing "colliding" particles, are removed.
+
+--------------------------------------------------------------------------------
+Example: a particle in 3D space[edit]
+Example: a rigid body in 3D Space:
+
+Euler - Lagrange Equation:
+Because a differentiable functional is stationary at its local extrema, the Euler - Lagrange equation is useful for solving optimization problems in which, given some functional, one seeks the function minimizing or maximizing it. This is analogous to Fermat's theorem in calculus, stating that at any point where a differentiable function attains a local extremum its derivative is zero. In Lagrangian mechanics, according to Hamilton's principle of stationary action, the evolution of a physical system is described by the solutions to the Euler equation for the action of the system.
+
+--------------------------------------------------------------------------------
+Hamilton's principle
+
+--------------------------------------------------------------------------------
+Action (physics)
+In physics, action is a numerical value describing how a physical system has changed over time. Action is significant because the equations of motion of the system can be derived through the principle of stationary action.  
+In the simple case of a single particle moving with a specified velocity, the action is the momentum of the particle times the distance it moves, added up along its path, or equivalently, twice its kinetic energy times the length of time for which it has that amount of energy, added up over the period of time under consideration. For more complicated systems, all such quantities are added together.
+More formally, action is a mathematical functional which takes the trajectory, also called path or history, of the system as its argument and has a real number as its result. Generally, the action takes different values for different paths.[[1]] Action has dimensions of energy x time or momentum x length, and its SI unit is joule-second (like the Planck constant h).[[2]]
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Trajectory:
+--------------------------------------------------------------------------------
+A trajectory or flight path is the path that an object with mass in motion follows through space as a function of time. In classical mechanics, a trajectory is defined by Hamiltonian mechanics via canonical coordinates; hence, a complete trajectory is defined by position and momentum, simultaneously.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Canonical Coordinates:
+--------------------------------------------------------------------------------
+In mathematics and classical mechanics, canonical coordinates are sets of coordinates on phase space which can be used to describe a physical system at any given point in time. Canonical coordinates are used in the Hamiltonian formulation of classical mechanics. A closely related concept also appears in quantum mechanics; see the Stone - von Neumann theorem and canonical commutation relations for details.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Phase space:
+--------------------------------------------------------------------------------
+In dynamical system theory, a phase space is a space in which all possible states of a system are represented, with each possible state corresponding to one unique point in the phase space. For mechanical systems, the phase space usually consists of all possible values of position and momentum variables.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Outer product:
+--------------------------------------------------------------------------------
+In linear algebra, the outer product of two coordinate vectors is a matrix. If the two vectors have dimensions n and m, then their outer product is an n x m matrix. More generally, given two tensors (multidimensional arrays of numbers), their outer product is a tensor. The outer product of tensors is also referred to as their tensor product, and can be used to define the tensor algebra.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Position and momentum spaces:
+--------------------------------------------------------------------------------
+In physics and geometry, there are two closely related vector spaces, usually three-dimensional but in general of any finite dimension. Position space (also real space or coordinate space) is the set of all position vectors r in space, and has dimensions of length; a position vector defines a point in space. (If the position vector of a point particle varies with time, it will trace out a path, the trajectory of a particle.) Momentum space is the set of all momentum vectors p a physical system can have; the momentum vector of a particle corresponds to its motion, with units of [mass][length][time][−1].
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Mathematically, the duality between position and momentum is an example of Pontryagin duality. In particular, if a function is given in position space, f(r), then its Fourier transform obtains the function in momentum space, φ(p). Conversely, the inverse Fourier transform of a momentum space function is a position space function.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Multi-Particle Newtonian Momentum:
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Newton's second law of motion states that the rate of change of a body's momentum is equal to the net force acting on it. Momentum depends on the frame of reference, but in any inertial frame it is a conserved quantity, meaning that if a closed system is not affected by external forces, its total linear momentum does not change. Momentum is also conserved in special relativity (with a modified formula) and, in a modified form, in electrodynamics, quantum mechanics, quantum field theory, and general relativity. It is an expression of one of the fundamental symmetries of space and time: translational symmetry.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Gravitational energy
+Gravitational energy or gravitational potential energy is the potential energy a massive object has in relation to another massive object due to gravity. It is the potential energy associated with the gravitational field, which is released (converted into kinetic energy) when the objects fall towards each other. Gravitational potential energy increases when two objects are brought further apart.
+For two pairwise interacting point particles, the gravitational potential energy {\displaystyle U}UUUU is given by:
+U= -GMmR
+where  M  {\displaystyle M}MMMand m{\displaystyle m}are the masses of the two particles, R {\displaystyle R}  Ris the distance between them, and {\displaystyle G}G Gis the gravitational constant.[[1]]
+Close to the Earth's surface, the gravitational field is approximately constant, and the gravitational potential energy of an object reduces to:
+U=m*g*h
+where {\displaystyle m}  m is the object's mass, g {\textstyle g={GM_{\oplus }}/{R_{\oplus }^{2}}} gg  is the gravity of Earth, and h {\displaystyle h}h nhb   is the height of the object's center of mass above a chosen reference level.[[1]]
+
+Classical Mechanics:
+Classical mechanics[[note 1]] is a physical theory describing the motion of macroscopic objects, from projectiles to parts of machinery, and astronomical objects, such as spacecraft, planets, stars, and galaxies. For objects governed by classical mechanics, if the present state is known, it is possible to predict how it will move in the future (determinism), and how it has moved in the past (reversibility).
+The earliest development of classical mechanics is often referred to as Newtonian mechanics. It consists of the physical concepts based on foundational works of Sir Isaac Newton, and the mathematical methods invented by Gottfried Wilhelm Leibniz, Joseph-Louis Lagrange, Leonhard Euler, and other contemporaries, in the 17th century to describe the motion of bodies under the influence of a system of forces. Later, more abstract methods were developed, leading to the reformulations of classical mechanics known as Lagrangian mechanics and Hamiltonian mechanics. These advances, made predominantly in the 18th and 19th centuries, extend substantially beyond earlier works, particularly through their use of analytical mechanics. They are, with some modification, also used in all areas of modern physics.
+Classical mechanics provides extremely accurate results when studying large objects that are not extremely massive and speeds not approaching the speed of light. When the objects being examined have about the size of an atom diameter, it becomes necessary to introduce the other major sub-field of mechanics: quantum mechanics. To describe velocities that are not small compared to the speed of light, special relativity is needed. In cases where objects become extremely massive, general relativity becomes applicable. However, a number of modern sources do include relativistic mechanics in classical physics, which in their view represents classical mechanics in its most developed and accurate form. extremely massive, general relativity becomes applicable. However, a number of modern sources do include relativistic mechanics in classical physics, which in their view represents classical mechanics in its most developed and accurate form.
+
+--------------------------------------------------------------------------------
+Metaphysics
+Metaphysics is the branch of philosophy that studies the fundamental nature of reality, the first principles of being, identity and change, space and time, causality, necessity, and possibility.[[1]] It includes questions about the nature of consciousness and the relationship between mind and matter, between substance and attribute, and between potentiality and actuality.[[2]] The word "metaphysics" comes from two Greek words that, together, literally mean "after or behind or among [the study of] the natural". It has been suggested that the term might have been coined by a first century CE editor who assembled various small selections of Aristotle's works into the treatise we now know by the name Metaphysics (μετὰ τὰ φυσικά, meta ta physika, lit. 'after the Physics ', another of Aristotle's works).[[3]]
+Metaphysics studies questions related to what it is for something to exist and what types of existence there are. Metaphysics seeks to answer, in an abstract and fully general manner, the questions of
+ What there is
+ What it is like
+
+Metaphysical naturalism:
+Metaphysical naturalism (also called ontological naturalism, philosophical naturalism and antisupernaturalism) is a philosophical worldview which holds that there is nothing but natural elements, principles, and relations of the kind studied by the natural sciences. Methodological naturalism is a philosophical basis for science, for which metaphysical naturalism provides only one possible ontological foundation. Broadly, the corresponding theological perspective is religious naturalism or spiritual naturalism. More specifically, metaphysical naturalism rejects the supernatural concepts and explanations that are part of many religions.
+
+--------------------------------------------------------------------------------
+Abstract and concrete
+In metaphysics, the distinction between abstract and concrete refers to a divide between two types of entities. Many philosophers hold that this difference has fundamental metaphysical significance. Examples of concrete objects include plants, human beings and planets while things like numbers, sets and propositions are abstract objects.[[1]] There is no general consensus as to what the characteristic marks of concreteness and abstractness are. Popular suggestions include defining the distinction in terms of the difference between (1) existence inside or outside space-time, (2) having causes and effects or not, (3) having contingent or necessary existence, (4) being particular or universal, and (5) belonging to either the physical or the mental realm or to neither.[[2]][[3]][[4]] Despite this diversity of views, there is broad agreement concerning most objects as to whether they are abstract or concrete.[[1]] So under most interpretations, all these views would agree that, for example, plants are concrete objects while numbers are abstract objects.
+Abstract objects are most commonly used in philosophy and semantics. They are sometimes called abstracta in contrast to concreta. The term abstract object is said to have been coined by Willard Van Orman Quine.[[5]] Abstract object theory is a discipline that studies the nature and role of abstract objects. It holds that properties can be related to objects in two ways: through exemplification and through encoding. Concrete objects exemplify their properties while abstract objects merely encode them. This approach is also known as the dual copula strategy.[[6]]
+--------------------------------------------------------------------------------
+The dual copula strategy
+
+
+--------------------------------------------------------------------------------
+Naturalism (philosophy)
+In philosophy, naturalism is the idea or belief that only natural laws and forces (as opposed to supernatural ones) operate in the universe.[[1]]
+
+"Naturalism is not so much a special system as a point of view or tendency common to a number of philosophical and religious systems; not so much a well-defined set of positive and negative doctrines as an attitude or spirit pervading and influencing many doctrines. As the name implies, this tendency consists essentially in looking upon nature as the one original and fundamental source of all that exists, and in attempting to explain everything in terms of nature. Either the limits of nature are also the limits of existing reality, or at least the first cause, if its existence is found necessary, has nothing to do with the working of natural agencies. All events, therefore, find their adequate explanation within nature itself. But, as the terms nature and natural are themselves used in more than one sense, the term naturalism is also far from having one fixed meaning."
+ --  Dubray 1911
+
+--------------------------------------------------------------------------------
+Supernatural
+The supernatural are phenomena or entities that are not subject to the laws of nature. The term is derived from Medieval Latin supernaturalis, from Latin super- (above, beyond, or outside of) + natura (nature)[[1]] Though the corollary term "nature", has had multiple meanings since the ancient world, the term "supernatural" emerged in the Middle Ages[[2]] and did not exist in the ancient world.[[3]]
+The supernatural is featured in folklore and religious contexts,[[4]] but can also feature as an explanation in more secular contexts, as in the cases of superstitions or belief in the paranormal.[[5]] The term is attributed to non-physical entities, such as angels, demons, gods, and spirits. It also includes claimed abilities embodied in or provided by such beings, including magic, telekinesis, levitation, precognition, and extrasensory perception.
+The philosophy of naturalism contends that nothing exists beyond the natural world, and as such approaches supernatural claims with skepticism.[[6]]
+
+--------------------------------------------------------------------------------
+Wave propagation
+Wave propagation is any of the ways in which waves travel. Single wave propagation can be calculated by 2nd order wave equation (standing wavefield) or 1st order one-way wave equation.
+With respect to the direction of the oscillation relative to the propagation direction, we can distinguish between longitudinal wave and transverse waves.
+For electromagnetic waves, propagation may occur in a vacuum as well as in the material medium. Other wave types cannot propagate through a vacuum and need a transmission medium to exist.
+
+--------------------------------------------------------------------------------
+Longitudinal wave
+Longitudinal waves are waves in which the vibration of the medium is parallel ("along") to the direction the wave travels and displacement of the medium is in the same (or opposite) direction of the wave propagation.
+Mechanical longitudinal waves are also called compressional or compression waves, because they produce compression and rarefaction when traveling through a medium, and pressure waves, because they produce increases and decreases in pressure. A wave along the length of a stretched Slinky toy, where the distance between coils increases and decreases, is a good visualization. Real-world examples include sound waves (vibrations in pressure, a particle of displacement, and particle velocity propagated in an elastic medium) and seismic P-waves (created by earthquakes and explosions).
+The other main type of wave is the transverse wave, in which the displacements of the medium are at right angles to the direction of propagation. Transverse waves, for instance, describe some bulk sound waves in solid materials (but not in fluids); these are also called "shear waves" to differentiate them from the (longitudinal) pressure waves that these materials also support.
+
+--------------------------------------------------------------------------------
+Transverse wave
+In physics, a transverse wave is a wave whose oscillations are perpendicular to the direction of the wave's advance. This is in contrast to a longitudinal wave which travels in the direction of its oscillations. Water waves are an example of transverse wave.
+
+A simple example is given by the waves that can be created on a horizontal length of string by anchoring one end and moving the other end up and down. Another example is the waves that are created on the membrane of a drum. The waves propagate in directions that are parallel to the membrane plane, but the membrane itself gets displaced up and down, perpendicular to that plane. Light is another example of a transverse wave, where the oscillations are the electric and magnetic fields, which point at right angles to the ideal light rays that describe the direction of propagation.
+
+--------------------------------------------------------------------------------
+Magnetic field
+A magnetic field is a vector field that describes the magnetic influence on moving electric charges, electric currents,[[1]][: ch1 ][[2]] and magnetic materials. A moving charge in a magnetic field experiences a force perpendicular to its own velocity and to the magnetic field.[[1]][: ch13 ][[3]][: 278 ] A permanent magnet's magnetic field pulls on ferromagnetic materials such as iron, and attracts or repels other magnets. In addition, a magnetic field that varies with location will exert a force on a range of non-magnetic materials by affecting the motion of their outer atomic electrons. Magnetic fields surround magnetized materials, and are created by electric currents such as those used in electromagnets, and by electric fields varying in time. Since both strength and direction of a magnetic field may vary with location, it is described mathematically by a function assigning a vector to each point of space, called a vector field.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Photon
+A photon (from Ancient Greek φῶς, φωτός (phôs, phōtós) 'light') is an elementary particle that is a quantum of the electromagnetic field, including electromagnetic radiation such as light and radio waves, and the force carrier for the electromagnetic force. Photons are massless,[[a]] so they always move at the speed of light in vacuum, 299792458 m/s (or about 186,282 mi/s). The photon belongs to the class of bosons.
+As with other elementary particles, photons are best explained by quantum mechanics and exhibit wave - particle duality, their behavior featuring properties of both waves and particles.[[2]] The modern photon concept originated during the first two decades of the 20th century with the work of Albert Einstein, who built upon the research of Max Planck. While trying to explain how matter and electromagnetic radiation could be in thermal equilibrium with one another, Planck proposed that the energy stored within a material object should be regarded as composed of an integer number of discrete, equal-sized parts. To explain the photoelectric effect, Einstein introduced the idea that light itself is made of discrete units of energy. In 1926, Gilbert N. Lewis popularized the term photon for these energy units.[[3]][[4]][[5]] Subsequently, many other experiments validated Einstein's approach.[[6]][[7]][[8]]
+--------------------------------------------------------------------------------
+In the Standard Model of particle physics, photons and other elementary particles are described as a necessary consequence of physical laws having a certain symmetry at every point in spacetime. The intrinsic properties of particles, such as charge, mass, and spin, are determined by gauge symmetry. The photon concept has led to momentous advances in experimental and theoretical physics, including lasers, Bose - Einstein condensation, quantum field theory, and the probabilistic interpretation of quantum mechanics. It has been applied to photochemistry, high-resolution microscopy, and measurements of molecular distances. Moreover, photons have been studied as elements of quantum computers, and for applications in optical imaging and optical communication such as quantum cryptography.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Elementary particle
+In particle physics, an elementary particle or fundamental particle is a subatomic particle that is not composed of other particles.[[1]] Particles currently thought to be elementary include electrons, the fundamental fermions (quarks, leptons, antiquarks, and antileptons, which generally are matter particles and antimatter particles), as well as the fundamental bosons (gauge bosons and the Higgs boson), which generally are force particles that mediate interactions among fermions.[[1]] A particle containing two or more elementary particles is a composite particle. In particle physics, an elementary particle or fundamental particle is a subatomic particle that is not composed of other particles.[[1]] Particles currently thought to be elementary include electrons, the fundamental fermions (quarks, leptons, antiquarks, and antileptons, which generally are matter particles and antimatter particles), as well as the fundamental bosons (gauge bosons and the Higgs boson), which generally are force particles that mediate interactions among fermions.[[1]] A particle containing two or more elementary particles is a composite particle.
+--------------------------------------------------------------------------------
+Ordinary matter is composed of atoms, once presumed to be elementary particles  -  atomos meaning "unable to be cut" in Greek  -  although the atom's existence remained controversial until about 1905, as some leading physicists regarded molecules as mathematical illusions, and matter as ultimately composed of energy.[[1]][[2]] Subatomic constituents of the atom were first identified in the early 1930s; the electron and the proton, along with the photon, the particle of electromagnetic radiation.[[1]] At that time, the recent advent of quantum mechanics was radically altering the conception of particles, as a single particle could seemingly span a field as would a wave, a paradox still eluding satisfactory explanation.[[3]][[4]]
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Force carrier
+In quantum field theory, a force carrier, also known as messenger particle or intermediate particle, is a type of particle that gives rise to forces between other particles. These particles serve as the quanta of a particular kind of physical field.[[1]][[2]]
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Physical constant
+
+
+ 
+
+--------------------------------------------------------------------------------
+Field (physics) [Physical Field]
+In physics, a field is a physical quantity, represented by a scalar, vector, or tensor, that has a value for each point in space and time.[[1]][[2]][[3]] For example, on a weather map, the surface temperature is described by assigning a number to each point on the map; the temperature can be considered at a certain point in time or over some interval of time, to study the dynamics of temperature change. A surface wind map,[[4]] assigning an arrow to each point on a map that describes the wind speed and direction at that point, is an example of a vector field, i.e. a 1-dimensional (rank-1) tensor field. Field theories, mathematical descriptions of how field values change in space and time, are ubiquitous in physics. For instance, the electric field is another rank-1 tensor field, while electrodynamics can be formulated in terms of two interacting vector fields at each point in spacetime, or as a single-rank 2-tensor field.[[5]][[6]][[7]]
+In the modern framework of the quantum theory of fields, even without referring to a test particle, a field occupies space, contains energy, and its presence precludes a classical "true vacuum".[[8]] This has led physicists to consider electromagnetic fields to be a physical entity, making the field concept a supporting paradigm of the edifice of modern physics. "The fact that the electromagnetic field can possess momentum and energy makes it very real ... a particle makes a field, and a field acts on another particle, and the field has such familiar properties as energy content and momentum, just as particles can have."[[9]] In practice, the strength of most fields diminishes with distance, eventually becoming undetectable. For instance the strength of many relevant classical fields, such as the gravitational field in Newton's theory of gravity or the electrostatic field in classical electromagnetism, is inversely proportional to the square of the distance from the source (i.e., they follow Gauss's law).
+A field can be classified as a scalar field, a vector field, a spinor field or a tensor field according to whether the represented physical quantity is a scalar, a vector, a spinor, or a tensor, respectively. A field has a consistent tensorial character wherever it is defined: i.e. a field cannot be a scalar field somewhere and a vector field somewhere else. For example, the Newtonian gravitational field is a vector field: specifying its value at a point in spacetime requires three numbers, the components of the gravitational field vector at that point. Moreover, within each category (scalar, vector, tensor), a field can be either a classical field or a quantum field, depending on whether it is characterized by numbers or quantum operators respectively. In this theory an equivalent representation of field is a field particle, for instance a boson.[[10]] 
+
+
+
+
+Illustration of the electric field surrounding a positive (red) and a negative (blue) charge.
+Illustration of the electric field surrounding a positive (red) and a negative (blue) charge.
+
+--------------------------------------------------------------------------------
+Electromagnetism
+Electromagnetism is a branch of physics involving the study of the electromagnetic force, a type of physical interaction that occurs between electrically charged particles. The electromagnetic force is carried by electromagnetic fields composed of electric fields and magnetic fields, and it is responsible for electromagnetic radiation such as light. It is one of the four fundamental interactions (commonly called forces) in nature, together with the strong interaction, the weak interaction, and gravitation.[[1]] At high energy, the weak force and electromagnetic force are unified as a single electroweak force.
+Electromagnetic phenomena are defined in terms of the electromagnetic force, sometimes called the Lorentz force, which includes both electricity and magnetism as different manifestations of the same phenomenon. The electromagnetic force plays a major role in determining the internal properties of most objects encountered in daily life. The electromagnetic attraction between atomic nuclei and their orbital electrons holds atoms together. Electromagnetic forces are responsible for the chemical bonds between atoms which create molecules, and intermolecular forces. The electromagnetic force governs all chemical processes, which arise from interactions between the electrons of neighboring atoms. Electromagnetism is very widely used in modern technology, and electromagnetic theory is the basis of electric power engineering and electronics including digital technology.
+There are numerous mathematical descriptions of the electromagnetic field. Most prominently, Maxwell's equations describe how electric and magnetic fields are generated and altered by each other and by charges and currents.[[2]]
+The theoretical implications of electromagnetism, particularly the establishment of the speed of light based on properties of the "medium" of propagation (permeability and permittivity), led to the development of special relativity by Albert Einstein in 1905.
+
+--------------------------------------------------------------------------------
+Lorentz force
+
+This is valid, even for particles approaching the speed of light (that is, magnitude of v, |v| ≈ c).[[9]] So the two vector fields E and B are thereby defined throughout space and time, and these are called the "electric field" and "magnetic field". The fields are defined everywhere in space and time with respect to what force a test charge would receive regardless of whether a charge is present to experience the force.
+
+
+
+As a definition of E and B, the Lorentz force is only a definition in principle because a real particle (as opposed to the hypothetical "test charge" of infinitesimally-small mass and charge) would generate its own finite E and B fields, which would alter the electromagnetic force that it experiences.[[10]] In addition, if the charge experiences acceleration, as if forced into a curved trajectory, it emits radiation that causes it to lose kinetic energy.
+Electromotive Force:
+In electromagnetism and electronics, Electromotive Force (also electromotance, abbreviated EMF,[[1]][[2]] denoted by ὲ{\displaystyle {\mathcal {E}}}) is the electrical action produced by a non-electrical source, measured in volts.[[3]] Devices called electrical transducers provide an emf[[4]] by converting other forms of energy into electrical energy,[[4]] such as batteries (which convert chemical energy) or generators (which convert mechanical energy).[[3]] This energy conversion is achieved by physical forces applying physical work on electric charges. However, the term "electromotive force" is not actually a force. Volta's mistake of labeling it a "force" is a misnomer that persists as a historical relic.[[5]]
+
+An electronic - hydraulic analogy may view emf as the mechanical work done to water by a pump, which results in a pressure difference (analogous to voltage).[[6]]
+In electromagnetic induction, emf can be defined around a closed loop of a conductor as the electromagnetic work that would be done on an electric charge (such as an electron) if it travels once around the loop.[[7]]
+For two-terminal devices modeled as a Thévenin equivalent circuit, an equivalent emf can be measured as the open-circuit voltage between the two terminals. This emf can drive an electric current if an external circuit is attached to the terminals, in which case the device becomes the voltage source of that circuit.
+Although an emf gives rise to a voltage and can be measured as a voltage and may sometimes informally be called a "voltage", they are not the same phenomenon (see § Distinction with potential difference).
+
+--------------------------------------------------------------------------------
+Electrical conductor
+
+In physics and electrical engineering, a conductor is an object or type of material that allows the flow of charge (electric current) in one or more directions. Materials made of metal are common electrical conductors. Electric current is generated by the flow of negatively charged electrons, positively charged holes, and positive or negative ions in some cases.
+In order for current to flow within a closed electrical circuit, it is not necessary for one charged particle to travel from the component producing the current (the current source) to those consuming it (the loads). Instead, the charged particle simply needs to nudge its neighbor a finite amount, who will nudge its neighbor, and on and on until a particle is nudged into the consumer, thus powering it. Essentially what is occurring is a long chain of momentum transfer between mobile charge carriers; the Drude model of conduction describes this process more rigorously. This momentum transfer model makes metal an ideal choice for a conductor; metals, characteristically, possess a delocalized sea of electrons which gives the electrons enough mobility to collide and thus affect a momentum transfer.
+As discussed above, electrons are the primary mover in metals; however, other devices such as the cationic electrolyte(s) of a battery, or the mobile protons of the proton conductor of a fuel cell rely on positive charge carriers. Insulators are non-conducting materials with few mobile charges that support only insignificant electric currents.
+
+--------------------------------------------------------------------------------
+Charge carrier
+
+In physics, a charge carrier is a particle or quasiparticle that is free to move, carrying an electric charge, especially the particles that carry electric charges in electrical conductors.[[1]] Examples are electrons, ions and holes. The term is used most commonly in solid state physics.[[2]] In a conducting medium, an electric field can exert force on these free particles, causing a net motion of the particles through the medium; this is what constitutes an electric current.[[3]] In conducting media, particles serve to carry charge:
+          In many metals, the charge carriers are electrons. One or two of the valence electrons from each atom are able to move about freely within the crystal structure of the metal.[[4]] The free electrons are referred to as conduction electrons, and the cloud of free electrons is called a Fermi gas.[[5]][[6]] Many metals have electron and hole bands. In some, the majority carriers are holes.[[][citation needed][]]
+          In electrolytes, such as salt water, the charge carriers are ions,[[6]] which are atoms or molecules that have gained or lost electrons so they are electrically charged. Atoms that have gained electrons so they are negatively charged are called anions, atoms that have lost electrons so they are positively charged are called cations.[[7]] Cations and anions of the dissociated liquid also serve as charge carriers in melted ionic solids (see e.g. the Hall - Héroult process for an example of electrolysis of a melted ionic solid). Proton conductors are electrolytic conductors employing positive hydrogen ions as carriers.[[8]]
+          In a plasma, an electrically charged gas which is found in electric arcs through air, neon signs, and the sun and stars, the electrons and cations of ionized gas act as charge carriers.[[9]]
+          In a vacuum, free electrons can act as charge carriers. In the electronic component known as the vacuum tube (also called valve), the mobile electron cloud is generated by a heated metal cathode, by a process called thermionic emission.[[10]] When an electric field is applied strong enough to draw the electrons into a beam, this may be referred to as a cathode ray, and is the basis of the cathode ray tube display widely used in televisions and computer monitors until the 2000s.[[11]]
+          In semiconductors, which are the materials used to make electronic components like transistors and integrated circuits, two types of charge carrier are possible. In p-type semiconductors, "effective particles" known as electron holes with positive charge move through the crystal lattice, producing an electrical current. The "holes" are, in effect, electron vacancies in the valence-band electron population of the semiconductor and are treated as charge carriers because they are mobile, moving from atom site to atom site. In n-type semiconductors, electrons in the conduction band move through the crystal, resulting in an electrical current.
+         
+In some conductors, such as ionic solutions and plasmas, positive and negative charge carriers coexist, so in these cases an electric current consists of the two types of carriers moving in opposite directions. In other conductors, such as metals, there are only charge carriers of one polarity, so an electric current in them simply consists of charge carriers moving in one direction.
+
+--------------------------------------------------------------------------------
+Point Particle
+A point particle (ideal particle[[1]] or point-like particle, often spelled pointlike particle) is an idealization of particles heavily used in physics.[[2]] Its defining feature is that it lacks spatial extension; being dimensionless, it does not take up space.[[3]] A point particle is an appropriate representation of any object whenever its size, shape, and structure are irrelevant in a given context. For example, from far enough away, any finite-size object will look and behave as a point-like object. Point masses and point charges, discussed below, are two common cases. When a point particle has an additive property, such as mass or charge, it is often represented mathematically by a Dirac delta function.
+A point particle (ideal particle[[1]] or point-like particle, often spelled pointlike particle) is an idealization of particles heavily used in physics.[[2]] Its defining feature is that it lacks spatial extension; being dimensionless, it does not take up space.[[3]] A point particle is an appropriate representation of any object whenever its size, shape, and structure are irrelevant in a given context. For example, from far enough away, any finite-size object will look and behave as a point-like object. Point masses and point charges, discussed below, are two common cases. When a point particle has an additive property, such as mass or charge, it is often represented mathematically by a Dirac delta function.
+In quantum mechanics, the concept of a point particle is complicated by the Heisenberg uncertainty principle, because even an elementary particle, with no internal structure, occupies a nonzero volume. For example, the atomic orbit of an electron in the hydrogen atom occupies a volume of ~10[−30] m[3]. There is nevertheless a distinction between elementary particles such as electrons or quarks, which have no known internal structure, versus composite particles such as protons, which do have internal structure: A proton is made of three quarks. Elementary particles are sometimes called "point particles" in reference to their lack of internal structure, but this is in a different sense than discussed above.
+
+In quantum mechanics, the uncertainty principle (also known as Heisenberg's uncertainty principle) is any of a variety of mathematical inequalities[[1]] asserting a fundamental limit to the accuracy with which the values for certain pairs of physical quantities of a particle, such as position, x, and momentum, p, can be predicted from initial conditions.
+
+--------------------------------------------------------------------------------
+Heisenberg's Uncertainty Principle
+
+In quantum mechanics, the uncertainty principle (also known as Heisenberg's uncertainty principle) is any of a variety of mathematical inequalities[[1]] asserting a fundamental limit to the accuracy with which the values for certain pairs of physical quantities of a particle, such as position, x, and momentum, p, can be predicted from initial conditions.
+Such variable pairs are known as complementary variables or canonically conjugate variables; and, depending on interpretation, the uncertainty principle limits to what extent such conjugate properties maintain their approximate meaning, as the mathematical framework of quantum physics does not support the notion of simultaneously well-defined conjugate properties expressed by a single value. The uncertainty principle implies that it is in general not possible to predict the value of a quantity with arbitrary certainty, even if all initial conditions are specified.
+
+--------------------------------------------------------------------------------
+Complementarity (physics)
+
+In physics, complementarity is a conceptual aspect of quantum mechanics that Niels Bohr regarded as an essential feature of the theory.[[1]][[2]] The complementarity principle holds that objects have certain pairs of complementary properties which cannot all be observed or measured simultaneously. An example of such a pair is position and momentum. Bohr considered one of the foundational truths of quantum mechanics to be the fact that setting up an experiment to measure one quantity of a pair, for instance the position of an electron, excludes the possibility of measuring the other, yet understanding both experiments is necessary to characterize the object under study. In Bohr's view, the behavior of atomic and subatomic objects cannot be separated from the measuring instruments that create the context in which the measured objects behave. Consequently, there is no "single picture" that unifies the results obtained in these different experimental contexts, and only the "totality of the phenomena" together can provide a completely informative description.[[3]]
+
+--------------------------------------------------------------------------------
+Electric Field
+An electric field (sometimes E-field[[1]]) is the physical field that surrounds electrically charged particles and exerts force on all other charged particles in the field, either attracting or repelling them.[[2]] It also refers to the physical field for a system of charged particles.[[3]] Electric fields originate from electric charges and time-varying electric currents. Electric fields and magnetic fields are both manifestations of the electromagnetic field, one of the four fundamental interactions (also called forces) of nature.
+Electric fields are important in many areas of physics, and are exploited in electrical technology. In atomic physics and chemistry, for instance, the electric field is the attractive force holding the atomic nucleus and electrons together in atoms. It is also the force responsible for chemical bonding between atoms that result in molecules.
+The electric field is defined as a vector field that associates to each point in space the (electrostatic or Coulomb) force per unit of charge exerted on an infinitesimal positive test charge at rest at that point.[[4]][[5]][[6]] The derived SI unit for the electric field is the volt per meter (V/m), which is equal to the newton per coulomb (N/C).[[7]]
+
+--------------------------------------------------------------------------------
+Magnetic Field
+
+A magnetic field is a vector field that describes the magnetic influence on moving electric charges, electric currents,[[1]][: ch1 ][[2]] and magnetic materials. A moving charge in a magnetic field experiences a force perpendicular to its own velocity and to the magnetic field.[[1]][: ch13 ][[3]][: 278 ] A permanent magnet's magnetic field pulls on ferromagnetic materials such as iron, and attracts or repels other magnets. In addition, a magnetic field that varies with location will exert a force on a range of non-magnetic materials by affecting the motion of their outer atomic electrons.
+
+--------------------------------------------------------------------------------
+Valence electron
+In chemistry and physics, a valence electron is an electron in the outer shell associated with an atom, and that can participate in the formation of a chemical bond if the outer shell is not closed. In a single covalent bond, both atoms in the bond contribute one valence electron in order to form a shared pair.
+The presence of valence electrons can determine the element's chemical properties, such as its valence -- whether it may bond with other elements and, if so, how readily and with how many. In this way, a given element's reactivity is highly dependent upon its electronic configuration. For a main-group element, a valence electron can exist only in the outermost electron shell; for a transition metal, a valence electron can also be in an inner shell.
+An atom with a closed shell of valence electrons (corresponding to a noble gas configuration) tends to be chemically inert. Atoms with one or two valence electrons more than a closed shell are highly reactive due to the relatively low energy to remove the extra valence electrons to form a positive ion. An atom with one or two electrons fewer than a closed shell is reactive due to its tendency either to gain the missing valence electrons and form a negative ion, or else to share valence electrons and form a covalent bond.
+
+Similar to a core electron, a valence electron has the ability to absorb or release energy in the form of a photon. An energy gain can trigger the electron to move (jump) to an outer shell; this is known as atomic excitation. Or the electron can even break free from its associated atom's shell; this is ionization to form a positive ion. When an electron loses energy (thereby causing a photon to be emitted), then it can move to an inner shell which is not fully occupied.
+--------------------------------------------------------------------------------
+Force carrier
+In quantum field theory, a force carrier, also known as messenger particle or intermediate particle, is a type of particle that gives rise to forces between other particles. These particles serve as the quanta of a particular kind of physical field.[[1]][[2]]
+
+Quantum field theories describe nature in terms of fields. Each field has a complementary description as the set of particles of a particular type. A force between two particles can be described either as the action of a force field generated by one particle on the other, or in terms of the exchange of virtual force carrier particles between them.[[3]]
+
+--------------------------------------------------------------------------------
+Dissipative system
+A dissipative system is a thermodynamically open system which is operating out of, and often far from, thermodynamic equilibrium in an environment with which it exchanges energy and matter. A tornado may be thought of as a dissipative system. Dissipative systems stand in contrast to conservative systems.
+A dissipative structure is a dissipative system that has a dynamical regime that is in some sense in a reproducible steady state. This reproducible steady state may be reached by natural evolution of the system, by artifice, or by a combination of these two.
+
+--------------------------------------------------------------------------------
+Conservative System
+In mathematics, a conservative system is a dynamical system which stands in contrast to a dissipative system. Roughly speaking, such systems have no friction or other mechanism to dissipate the dynamics, and thus, their phase space does not shrink over time. Precisely speaking, they are those dynamical systems that have a null wandering set: under time evolution, no portion of the phase space ever "wanders away", never to be returned to or revisited. Alternately, conservative systems are those to which the Poincaré recurrence theorem applies. An important special case of conservative systems are the measure-preserving dynamical systems.
+
+--------------------------------------------------------------------------------
+Phase Space
+In dynamical system theory, a phase space is a space in which all possible states of a system are represented, with each possible state corresponding to one unique point in the phase space. For mechanical systems, the phase space usually consists of all possible values of position and momentum variables. It is the outer product of direct space and reciprocal space. The concept of phase space was developed in the late 19th century by Ludwig Boltzmann, Henri Poincaré, and Josiah Willard Gibbs.[[1]]
+
+--------------------------------------------------------------------------------
+
+
+
+Statistical Mechanics:
+In physics, statistical mechanics is a mathematical framework that applies statistical methods and probability theory to large assemblies of microscopic entities. It does not assume or postulate any natural laws, but explains the macroscopic behavior of nature from the behavior of such ensembles.
+Statistical mechanics arose out of the development of classical thermodynamics, a field for which it was successful in explaining macroscopic physical properties -- such as temperature, pressure, and heat capacity -- in terms of microscopic parameters that fluctuate about average values and are characterized by probability distributions. This established the fields of statistical thermodynamics and statistical physics.
+--------------------------------------------------------------------------------
+
+
+Reciprocal Space
+
+--------------------------------------------------------------------------------
+Electromagnet
+
+An electromagnet is a type of magnet in which the magnetic field is produced by an electric current. Electromagnets usually consist of wire wound into a coil. A current through the wire creates a magnetic field which is concentrated in the hole, denoting the center of the coil. The magnetic field disappears when the current is turned off. The wire turns are often wound around a magnetic core made from a ferromagnetic or ferrimagnetic material such as iron; the magnetic core concentrates the magnetic flux and makes a more powerful magnet.
+The main advantage of an electromagnet over a permanent magnet is that the magnetic field can be quickly changed by controlling the amount of electric current in the winding. However, unlike a permanent magnet that needs no power, an electromagnet requires a continuous supply of current to maintain the magnetic field.
+Electromagnets are widely used as components of other electrical devices, such as motors, generators, electromechanical solenoids, relays, loudspeakers, hard disks, MRI machines, scientific instruments, and magnetic separation equipment. Electromagnets are also employed in industry for picking up and moving heavy iron objects such as scrap iron and steel.[[2]]
+
+--------------------------------------------------------------------------------
+Electromagnetic Coil
+
+An electromagnetic coil is an electrical conductor such as a wire in the shape of a coil (spiral or helix).[[1]][[2]] Electromagnetic coils are used in electrical engineering, in applications where electric currents interact with magnetic fields, in devices such as electric motors, generators, inductors, electromagnets, transformers, and sensor coils. Either an electric current is passed through the wire of the coil to generate a magnetic field, or conversely, an external time-varying magnetic field through the interior of the coil generates an EMF (voltage) in the conductor.
+A current through any conductor creates a circular magnetic field around the conductor due to Ampere's law.[[3]] The advantage of using the coil shape is that it increases the strength of the magnetic field produced by a given current. The magnetic fields generated by the separate turns of wire all pass through the center of the coil and add (superpose) to produce a strong field there.[[3]] The more turns of wire, the stronger the field produced. Conversely, a changing external magnetic flux induces a voltage in a conductor such as a wire, due to Faraday's law of induction.[[3]][[4]] The induced voltage can be increased by winding the wire into a coil because the field lines intersect the circuit multiple times.[[3]]
+The direction of the magnetic field produced by a coil can be determined by the right hand grip rule. If the fingers of the right hand are wrapped around the magnetic core of a coil in the direction of conventional current through the wire, the thumb will point in the direction the magnetic field lines pass through the coil. The end of a magnetic core from which the field lines emerge is defined to be the North pole.
+There are many different types of coils used in electric and electronic equipment.
+
+--------------------------------------------------------------------------------
+Ampère's Circuital Law
+
+In classical electromagnetism, Ampère's circuital law (not to be confused with Ampère's force law that André-Marie Ampère discovered in 1823)[[1]] relates the integrated magnetic field around a closed loop to the electric current passing through the loop. James Clerk Maxwell (not Ampère) derived it using hydrodynamics in his 1861 published paper "On Physical Lines of Force"[[2]] In 1865 he generalized the equation to apply to time-varying currents by adding the displacement current term, resulting in the modern form of the law, sometimes called the Ampère - Maxwell law,[[3]][[4]][[5]] which is one of Maxwell's equations which form the basis of classical electromagnetism.
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Magnetostatics
+
+Magnetostatics is the study of magnetic fields in systems where the currents are steady (not changing with time). It is the magnetic analogue of electrostatics, where the charges are stationary. The magnetization need not be static; the equations of magnetostatics can be used to predict fast magnetic switching events that occur on time scales of nanoseconds or less.[[1]] Magnetostatics is even a good approximation when the currents are not static  --  as long as the currents do not alternate rapidly. Magnetostatics is widely used in applications of micromagnetics such as models of magnetic storage devices as in computer memory.
+
+--------------------------------------------------------------------------------
+Magnetic Moment
+
+In electromagnetism, the magnetic moment is the magnetic strength and orientation of a magnet or other object that produces a magnetic field. Examples of objects that have magnetic moments include loops of electric current (such as electromagnets), permanent magnets, elementary particles (such as electrons), various molecules, and many astronomical objects (such as many planets, some moons, stars, etc).
+More precisely, the term magnetic moment normally refers to a system's magnetic dipole moment, the component of the magnetic moment that can be represented by an equivalent magnetic dipole: a magnetic north and south pole separated by a very small distance. The magnetic dipole component is sufficient for small enough magnets or for large enough distances. Higher-order terms (such as the magnetic quadrupole moment) may be needed in addition to the dipole moment for extended objects.
+
+--------------------------------------------------------------------------------
+Magnetic dipole
+
+
+--------------------------------------------------------------------------------
+Magnetic monopole
+
+In particle physics, a magnetic monopole is a hypothetical elementary particle that is an isolated magnet with only one magnetic pole (a north pole without a south pole or vice versa).[[1]][[2]] A magnetic monopole would have a net north or south "magnetic charge". Modern interest in the concept stems from particle theories, notably the grand unified and superstring theories, which predict their existence.[[3]][[4]] The known elementary particles that have electric charge are electric monopoles.
+Magnetism in bar magnets and electromagnets is not caused by magnetic monopoles, and indeed, there is no known experimental or observational evidence that magnetic monopoles exist.
+Some condensed matter systems contain effective (non-isolated) magnetic monopole quasi-particles,[[5]] or contain phenomena that are mathematically analogous to magnetic monopoles.[[6]]
+
+
+
+--------------------------------------------------------------------------------
+Condensed matter physics
+
+Condensed matter physics is the field of physics that deals with the macroscopic and microscopic physical properties of matter, especially the solid and liquid phases which arise from electromagnetic forces between atoms. More generally, the subject deals with "condensed" phases of matter: systems of many constituents with strong interactions between them. More exotic condensed phases include the superconducting phase exhibited by certain materials at low temperature, the ferromagnetic and antiferromagnetic phases of spins on crystal lattices of atoms, and the Bose - Einstein condensate found in ultracold atomic systems. Condensed matter physicists seek to understand the behavior of these phases by experiments to measure various material properties, and by applying the physical laws of quantum mechanics, electromagnetism, statistical mechanics, and other theories to develop mathematical models.
+The diversity of systems and phenomena available for study makes condensed matter physics the most active field of contemporary physics: one third of all American physicists self-identify as condensed matter physicists,[[1]] and the Division of Condensed Matter Physics is the largest division at the American Physical Society.[[2]] The field overlaps with chemistry, materials science, engineering and nanotechnology, and relates closely to atomic physics and biophysics. The theoretical physics of condensed matter shares important concepts and methods with that of particle physics and nuclear physics.[[3]]
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Atomic physics
+
+Atomic physics is the field of physics that studies atoms as an isolated system of electrons and an atomic nucleus. Atomic physics typically refers to the study of atomic structure and the interaction between atoms.[[1]] It is primarily concerned with the way in which electrons are arranged around the nucleus and the processes by which these arrangements change. This comprises ions, neutral atoms and, unless otherwise stated, it can be assumed that the term atom includes ions.
+The term atomic physics can be associated with nuclear power and nuclear weapons, due to the synonymous use of atomic and nuclear in standard English. Physicists distinguish between atomic physics -- which deals with the atom as a system consisting of a nucleus and electrons -- and nuclear physics, which studies nuclear reactions and special properties of atomic nuclei.
+Atomic physics primarily considers atoms in isolation form. Atomic models will consist of a single nucleus that may be surrounded by one or more bound electrons. It is not concerned with the formation of molecules (although much of the physics is identical), nor does it examine atoms in a solid state as condensed matter. It is concerned with processes such as ionization and excitation by photons or collisions with atomic particles.
+While modelling atoms in isolation may not seem realistic, if one considers atoms in a gas or plasma then the time-scales for atom-atom interactions are huge in comparison to the atomic processes that are generally considered. This means that the individual atoms can be treated as if each were in isolation, as the vast majority of the time they are. By this consideration atomic physics provides the underlying theory in plasma physics and atmospheric physics, even though both deal with very large numbers of atoms.
+Electrons form notional shells around the nucleus. These are normally in a ground state but can be excited by the absorption of energy from light (photons), magnetic fields, or interaction with a colliding particle (typically ions or other electrons).
+Electrons that populate a shell are said to be in a bound state. The energy necessary to remove an electron from its shell (taking it to infinity) is called the binding energy. Any quantity of energy absorbed by the electron in excess of this amount is converted to kinetic energy according to the conservation of energy. The atom is said to have undergone the process of ionization.
+If the electron absorbs a quantity of energy less than the binding energy, it will be transferred to an excited state. After a certain time, the electron in an excited state will "jump" (undergo a transition) to a lower state. In a neutral atom, the system will emit a photon of the difference in energy, since energy is conserved.
+If an inner electron has absorbed more than the binding energy (so that the atom ionizes), then a more outer electron may undergo a transition to fill the inner orbital. In this case, a visible photon or a characteristic x-ray is emitted, or a phenomenon known as the Auger effect may take place, where the released energy is transferred to another bound electron, causing it to go into the continuum. The Auger effect allows one to multiply ionize an atom with a single photon.
+There are rather strict selection rules as to the electronic configurations that can be reached by excitation by light  --  however there are no such rules for excitation by collision processes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Spectral Line:
+A spectral line is a dark or bright line in an otherwise uniform and continuous spectrum, resulting from emission or absorption of light in a narrow frequency range, compared with the nearby frequencies. Spectral lines are often used to identify atoms and molecules. These "fingerprints" can be compared to the previously collected ones of atoms[[1]] and molecules,[[2]] and are thus used to identify the atomic and molecular components of stars and planets, which would otherwise be impossible.
+Spectral lines are the result of interaction between a quantum system (usually atoms, but sometimes molecules or atomic nuclei) and a single photon. When a photon has about the right amount of energy (which is connected to its frequency)[[3]] to allow a change in the energy state of the system (in the case of an atom this is usually an electron changing orbitals), the photon is absorbed. Then the energy will be spontaneously re-emitted, either as one photon at the same frequency as the original one or in a cascade, where the sum of the energies of the photons emitted will be equal to the energy of the one absorbed (assuming the system returns to its original state).
+A spectral line may be observed either as an emission line or an absorption line. Which type of line is observed depends on the type of material and its temperature relative to another emission source. An absorption line is produced when photons from a hot, broad spectrum source pass through a cooler material. The intensity of light, over a narrow frequency range, is reduced due to absorption by the material and re-emission in random directions. By contrast, a bright emission line is produced when photons from a hot material are detected, perhaps in the presence of a broad spectrum from a cooler source. The intensity of light, over a narrow frequency range, is increased due to emission by the hot material.
+
+Spectral lines are highly atom-specific, and can be used to identify the chemical composition of any medium. Several elements, including helium, thallium, and caesium, were discovered by spectroscopic means. Spectral lines also depend on the temperature and density of the material, so they are widely used to determine the physical conditions of stars and other celestial bodies that cannot be analyzed by other means.
+Depending on the material and its physical conditions, the energy of the involved photons can vary widely, with the spectral lines observed across the electromagnetic spectrum, from radio waves to gamma rays.
+
+Electromagnetic Spectrum:
+The electromagnetic spectrum is the range of frequencies (the spectrum) of electromagnetic radiation and their respective wavelengths and photon energies.
+
+The electromagnetic spectrum covers electromagnetic waves with frequencies ranging from below one hertz to above 10[25] hertz, corresponding to wavelengths from thousands of kilometers down to a fraction of the size of an atomic nucleus. This frequency range is divided into separate bands, and the electromagnetic waves within each frequency band are called by different names; beginning at the low frequency (long wavelength) end of the spectrum these are: radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays at the high-frequency (short wavelength) end. The electromagnetic waves in each of these bands have different characteristics, such as how they are produced, how they interact with matter, and their practical applications. There is no known limit for long and short wavelengths. Extreme ultraviolet, soft X-rays, hard X-rays and gamma rays are classified as ionizing radiation because their photons have enough energy to ionize atoms, causing chemical reactions. Exposure to ionizing radiation can be a health hazard, causing radiation sickness, DNA damage and cancer. Radiation of visible light and longer wavelengths are classified as nonionizing radiation because they have insufficient energy to cause these effects.
+
+Throughout most of the electromagnetic spectrum, spectroscopy can be used to separate waves of different frequencies, producing a spectrum of the constituent frequencies. Spectroscopy is used to study the interactions of electromagnetic waves with matter.[[4]]
+
+Humans have always been aware of visible light and radiant heat but for most of history it was not known that these phenomena were connected or were representatives of a more extensive principle. The ancient Greeks recognized that light traveled in straight lines and studied some of its properties, including reflection and refraction. Light was intensively studied from the beginning of the 17th century leading to the invention of important instruments like the telescope and microscope. Isaac Newton was the first to use the term spectrum for the range of colours that white light could be split into with a prism. Starting in 1666, Newton showed that these colours were intrinsic to light and could be recombined into white light. A debate arose over whether light had a wave nature or a particle nature with René Descartes, Robert Hooke and Christiaan Huygens favouring a wave description and Newton favoring a particle description. Huygens in particular had a well developed theory from which he was able to derive the laws of reflection and refraction. Around 1801, Thomas Young measured the wavelength of a light beam with his two-slit experiment thus conclusively demonstrating that light was a wave.
+
+In 1800, William Herschel discovered infrared radiation.[[5]] He was studying the temperature of different colours by moving a thermometer through light split by a prism. He noticed that the highest temperature was beyond red. He theorized that this temperature change was due to "calorific rays", a type of light ray that could not be seen. The next year, Johann Ritter, working at the other end of the spectrum, noticed what he called "chemical rays" (invisible light rays that induced certain chemical reactions). These behaved similarly to visible violet light rays, but were beyond them in the spectrum.[[6]] They were later renamed ultraviolet radiation.
+The study of electromagnetism began in 1820 when Hans Christian Ørsted discovered that electric currents produce magnetic fields (Oersted's law). Light was first linked to electromagnetism in 1845, when Michael Faraday noticed that the polarization of light traveling through a transparent material responded to a magnetic field (see Faraday effect). During the 1860s, James Clerk Maxwell developed four partial differential equations (Maxwell's equations) for the electromagnetic field. Two of these equations predicted the possibility and behavior of waves in the field. Analyzing the speed of these theoretical waves, Maxwell realized that they must travel at a speed that was about the known speed of light. This startling coincidence in value led Maxwell to make the inference that light itself is a type of electromagnetic wave. Maxwell's equations predicted an infinite range of frequencies of electromagnetic waves, all traveling at the speed of light. This was the first indication of the existence of the entire electromagnetic spectrum.
+Maxwell's predicted waves included waves at very low frequencies compared to infrared, which in theory might be created by oscillating charges in an ordinary electrical circuit of a certain type. Attempting to prove Maxwell's equations and detect such low frequency electromagnetic radiation, in 1886, the physicist Heinrich Hertz built an apparatus to generate and detect what are now called radio waves. Hertz found the waves and was able to infer (by measuring their wavelength and multiplying it by their frequency) that they traveled at the speed of light. Hertz also demonstrated that the new radiation could be both reflected and refracted by various dielectric media, in the same manner as light. For example, Hertz was able to focus the waves using a lens made of tree resin. In a later experiment, Hertz similarly produced and measured the properties of microwaves. These new types of waves paved the way for inventions such as the wireless telegraph and the radio.
+In 1895, Wilhelm Röntgen noticed a new type of radiation emitted during an experiment with an evacuated tube subjected to a high voltage. He called this radiation "x-rays" and found that they were able to travel through parts of the human body but were reflected or stopped by denser matter such as bones. Before long, many uses were found for this radiography.
+The last portion of the electromagnetic spectrum was filled in with the discovery of gamma rays. In 1900, Paul Villard was studying the radioactive emissions of radium when he identified a new type of radiation that he at first thought consisted of particles similar to known alpha and beta particles, but with the power of being far more penetrating than either. However, in 1910, British physicist William Henry Bragg demonstrated that gamma rays are electromagnetic radiation, not particles, and in 1914, Ernest Rutherford (who had named them gamma rays in 1903 when he realized that they were fundamentally different from charged alpha and beta particles) and Edward Andrade measured their wavelengths, and found that gamma rays were similar to X-rays, but with shorter wavelengths.
+The wave-particle debate was rekindled in 1901 when Max Planck discovered that light is only absorbed in discrete "quanta", now called photons, implying that light has a particle nature. This idea was made explicit by Albert Einstein in 1905, but never accepted by Planck and many other contemporaries. The modern position of science is that electromagnetic radiation has both a wave and a particle nature, the wave-particle duality. The contradictions arising from this position are still being debated by scientists and philosophers.
+
+
+
+
+
+Line Integral:
+Vector Valued Function:
+A vector valued function is a function where the domain is a subset of the real numbers and the range is a vector. In two dimensions. r(t)=x(t)ˆi+y(t)ˆj. In three dimensions. r(t)=x(t)ˆi+y(t)ˆj+z(t)ˆk.
+A vector-valued function is a function of the form ⇀r(t)=f(t)ˆi+g(t)ˆj or ⇀r(t)=f(t)ˆi+g(t)ˆj+h(t)ˆk, where the component functions f, g, and h are real-valued functions of the parameter t.
+
+Properties of Determinants:
+
+Properties of Determinants
+Determinant definition
+Although we have already seen lessons on how to obtain determinants such as the determinant of a 2x2 matrix and the determinant of a 3x3 matrix, we have not taken a moment to define what a matrix determinant is on itself. Therefore, this lesson will be dedicated to that, to learn the significance of matrix determinants and their properties, rules and even some of its applications.
+
+A determinant is a scaling factor for the array of numbers found in a matrix which can give us information about these values as components of a vector system or a linear equation system. The first thing to remember when working through these linear algebra operations is that we can only calculate determinants of squared matrices, which are those with the same amount of rows and columns (thus the "squared" name, since their width is the same as their length in terms of quantities of rows and columns), and so, a determinant is that informative factor that comes from a system of equations containing the same amount of unknowns as vectors, which then can be solved to find the value of each unknown. Thanks to the determinant we can also calculate a matrix inverse.
+When the determinant of a square matrix is zero, we call this a singular matrix. Recalling from lessons on the inverse of a 2 x 2 matrix and the inverse of 3 x 3 matrices with matrix row operations, we know that the operation of inverting a matrix happens to be the reciprocal of the matrix and thus, you can only obtain the inverse a matrix if the result multiplied by the original matrix produces the identity matrix.
+How is this important when talking about singular matrices? Well, in order to obtain the inverse of a matrix the general process requires you to obtain the determinant of the original matrix, swapping the positions of the values in the original and dividing this new matrix by the determinant gotten. Therefore, for a singular matrix this would mean to divide by zero, which cannot be done, and so, singular matrices are not invertible. Whenever you obtain a zero value as the result of a determinant, remember this matrix cannot be inverted. This note can simplify the process of certain problems you may need to solve in the future.
+
+How to find the determinant of a matrix
+As seen in past lessons, we obtain the determinant of a squared matrix through a simple general method. For the determinant of a 2x2 matrix we follow the process shown in the equation below:
+                    Equation 2: Determinant of a 2x2 matrix
+The same general method, with a slight variation, can be used to obtain the determinant of a 3x3 matrix:
+                    Equation 3: Determinant of a 3x3 matrix
+
+If you think you need a little bit more of practice solving determinants, please make sure to visit the two lessons referred above on the very first paragraph which explain how to solve a 2x2 and 3x3 operation. The determinant of a 4x4 matrix is solved similarly than the 3x3 through the general method of decomposing into a smaller square matrix and follow a process already known. For reference we have included the next rule on how to solve the 4x4 matrix determinant, but we will not be using it much through this lesson since these kind of operations tend to get lengthy as you can see:
+                    Equation 4: Determinant of a 4x4 matrix
+
+Now that we have seen what a determinant is and how to calculate it, let us focus on the main topic for this lesson: the properties of matrix determinants and some of their applications. In the next section you will see a combination of the definitions of the basic properties of determinants and then an example in each case. In some cases we will add applications to such problems.
+
+Effect of elementary row operations on determinant?
+
+1) Switching two rows or columns causes the determinant to switch sign
+2) Adding a multiple of one row to another causes the determinant to remain the same
+3) Multiplying a row as a constant results in the determinant scaling by that constant.
+Using the geometric definition of the determinant as the area spanned by the columns of the matrix, could someone give me a geometric interpretation of the above theorems? Thanks.
+
+https://math.stackexchange.com/questions/598219/effect-of-elementary-row-operations-on-determinant
+
+Row operation properties
+Having A being a nxn matrix (a square matrix). Then:
+           If a multiple of one row of matrix A is added to another row to produce matrix B, then det(B) = det(A). This rule can be explicitly explain below:
+              Equation 5: Explicit explanation for row operation property 1
+          Looking at an example with a determinant of 3x3 matrix:
+                    Equation 6: Example for row operation property 1
+          As you can see, this simple rule is used in the row-reduction method. In truth, all the row operation properties are useful while doing row-reduction of a matrix. Just remember that some operations can change the value of the determinant of the matrix, as you will see in the next ones.
+          
+          
+          If two rows of A are interchanged to produce matrix B, then det(B) = -det(A).
+          This is because changing the order of the values found in in the matrix will produce a different way how they are operated during the determinant. Take a look at the explicit explanation of this process:
+          Having matrix A and swapping two rows to produce matrix B
+                  Equation 7: Matrix A and B produced by switching rows
+          We know from property 1 that the determinant of matrix A is det(A)= aei-afh-bdi+bfg+cdh-ceg (you can check this in equation 5, since we are using the same matrix A for the explicit explanations). So we only take the time to obtain the determinant of B in this case:
+                           Equation 8: Determinant of matrix B
+          Next, we compare det(A) with det(B) by checking for equal terms. Remember that when multiplying variables and regular numbers, the order of the factors does not alter the product.
+                    Equation 9: Comparing the determinants of A and B
+          Rearranging the terms in det(B):
+                        Equation 10: Rearranging terms in det(B)
+          And now we rearrange the order of the variables on each term on det(B) to finally see how det(A) and det(B) are related:
+          Equation 11: determinant of A is equal to the negative determinant of B
+          Let us now look at an example with a 3x3 determinant:
+             Equation 12: Example of property for swapping rows in matrices
+Determinants and linear transformations:
+
+A linear transformation T:R[n]-->R[m] (confused?) is a mapping from n-dimensional space to m-dimensional space. Such a linear transformation can be associated with an (mxn) matrix.
+If we restrict ourselves to mappings within the same space, such as T:R[n]-->R[n], then T is associated with a square nxn matrix. One can calculate the determinant of such a square matrix, and such determinants are related to area or volume. It turns out that the determinant of a matrix tells us important geometrical properties of its associated linear transformation. We'll outline this relationship for one-dimensional, two-dimensional, and three-dimensional linear transformations.
+
+Determinants and linear transformations
+Suggested background
+ Matrices and linear transformations
+ The relationship between determinants and area or volume
+A linear transformation T:Rn-->RmT:Rn-->Rm (confused?) is a mapping from nn-dimensional space to mm-dimensional space. Such a linear transformation can be associated with an mxnmxn matrix.
+If we restrict ourselves to mappings within the same space, such as T:Rn-->RnT:Rn-->Rn, then TT is associated with a square nxnnxn matrix. One can calculate the determinant of such a square matrix, and such determinants are related to area or volume. It turns out that the determinant of a matrix tells us important geometrical properties of its associated linear transformation. We'll outline this relationship for one-dimensional, two-dimensional, and three-dimensionional linear transformations.
+One-dimensional linear transformations
+A one-dimensional linear transformation is a function T(x)=axT(x)=ax for some scalar aa. To view the one-dimensional case in the same way we view higher dimensional linear transformations, we can view aa as a 1x11x1 matrix. The determinant of the 1x11x1 matrix is just the number aa itself. Although this case is very simple, we can gather some intuition about linear maps by first looking at this case.
+An example one-dimensional linear transformation is the function T(x)=3xT(x)=3x. We could visualize this function by its graph, which is a line through the origin with slope 3. However, instead, let's view it as a mapping from the real line RR back onto the real line RR. In this case, we think of the function as x′=T(x)x′=T(x), which maps the number xx on the xx-axis to the new number T(x)T(x) on an x′x′-axis. TT takes the number 1 and maps it to 3. TT maps 0 to 0 and -1/2 to -3/2. We also use the language that 3 is the image of 1 under the mapping TT.
+We can summarize this mapping by looking how TT maps an interval of numbers. For example, TT maps the interval [0,1][0,1] to the interval [0,3][0,3], as illustrated by the following figure. We colored the interval [0,1][0,1] and its image [0,3][0,3] with a green to red gradient that illustrates how each point in the interval is mapped by TT. A point of a given color in [0,1][0,1] is mapped to a point of the same color in the image [0,3][0,3].
+                                       
+The fact that the determinant of the matrix associated with T is 3 means that T stretches objects so that their length is increased by a factor of 3. Since the determinant was positive, T preserves the orientation of objects: in both the interval [0,1] and its image [0,3], red points are to the right of green points.
+Another example is the linear transformation T(x)=−12x. As shown in the below figure, T maps the interval [0,1] onto the interval [−1/2,0]. The determinant of the matrix associated with TT is −1/2. Since the magnitude of this determinant is 1/2, T shrinks objects to be half their original length. The negative determinant indicates that T reverses the orientation of objects: as indicated by the colors, the right of the interval [0,1] is mapped onto the left of the interval [−1/2,0].
+                                       
+In general, the linear transformation T(x)=ax stretches objects to change their length by a factor of |a|. If a is positive, T preserves the orientation; if a is negative, T reverses orientation. We will obtain similar conclusions for higher-dimensional linear transformations in terms of the determinant of the associated matrix.
+
+The determinant of a matrix inverse
+If one applies the linear transformation T(x)=Ax to an object, then applying the linear transformation T[−][1](x)=A[−][1]x should map everything back to the original object. Since T expands by the factor |detA|, then T[−][1] must do the reverse, expanding by the factor 1/|det(A). The linear transformation T[−1] must also reverse orientation just when T reverses orientation. In other words, the determinant of A-1 must be related to the determinant of A by:
+                             det(A[-1]) = 1/det(A)
+
+The effect of multiplying matrices:
+The geometric interpretation allows us to quickly infer the determinant of a product A.B for nxn matrices A and B. If we apply the linear transformation S(x)=ABx to an object, it's the same thing as first applying the linear transformation T'(x)=Bx and then applying the linear transformation T(x)=Ax. (This follows from the fact that matrix multiplication is associative.)
+
+Since T expands by a factor of |det(A)|, and T' expands by a factor |det(B)|, applying both transformations in succession must expand by a factor |det(A)||det(B)|. Moreover, the combination of the two transformations can reverse orientation only if just one of T or T' orientation. We can summarize these observations with an equation for det (AB) that reflects the properties of the combined linear transformation S:
+                             det (AB)=det(A)det(B)
+
+The effect of scaling a matrix
+Since a linear transformation can always be written as T(x)= Ax for some matrix A, applying a linear transformation to a vector x is the same thing as multiplying by a matrix. For square matrices A, the absolute value of the determinant captures how applying TT expands or compresses objects. The nature of the expansion or compression depends on the underlying dimension. One-dimensional linear transformations expand length by a factor |det(A)|, two-dimensional linear transformations expand area by a factor |det(A)|, and three-dimensional linear transformations expand volume by a factor |det(A)|.
+How would the expansion of the linear transformation be affected if we scaled A? For example, if we doubled every entry of A, forming the matrix B=2A, how would the expansion of the linear transformation T'=Bx compare with that of the original T=Ax? In one dimension, the effect of doubling every vector would simply double the expansion of length by T. But, in two dimensions, doubling both components of every vector would lead to increasing the area expansion of T by a factor of 2[2]=4, compared to the area expansion of T. Similarly, doubling every component of the matrix associated with a three-dimensional T' would expand volume 2[3]=8 times more than the original T. Doubling every dimension of a three-dimensional object must lead to the eight-fold increase in volume.
+Since this expansion is captured by |det(A)|, we conclude that |det(2A)| =2|det(A)| in one-dimension,  |det(2A)|=2[2]|det(A)| in two-dimensions, and |det(2A)|=2[3]|det(A)| in three-dimensions. It turns out this works in higher dimensions (where a linear transformation expands higher-dimensional volume), and |det(2A) |=2[n]|det(A)| in for an nxn matrix A.
+
+There was, of course, nothing special about the number 2. By the same geometric argument, if we multiply every component of the matrix A by a positive number c, we will change the resulting expansion of T by the factor c in each of it dimensions. For an n-dimensional linear transformation, this multiplication will change its overall expansion by the factor c[n]. Hence, we can conclude that for an nxn matrix A. |det(cA)|=c[n]|det(A)|.
+
+What about negative numbers and the sign of the determinant? The sign of the determinant determines whether a linear transformation preserves or reverses orientation. In one dimension, multiplying the one component of the matrix by a negative number would correspond to reflecting in that one dimension. Therefore, multiply by a negative number would change the size of the determinant. We can conclude that for one dimension, det(cA)=c det(A) for any number c. (This result is painfully obvious since the determinant is just equal to the one number of A, but we discuss the one-dimensional case just to give intuition on higher dimensions.)
+
+In two dimensions, the situation is different. If we multiplied every component of A by a negative number, the change would correspond to flipping an object once across the x-axis and then once across the y-axis. Each of these reflections would change the orientation, but the two reflections cancel each other out. We cannot change the influence of a two-dimensional linear transformation T on orientation through multiplying all components of its matrix A by a negative number. Combining this result with the expansion due to the magnitude of c, we conclude that det(cA)=c[2]det(A) in two dimensions. This equation summarizes how multiplication by a number cannot change the determinant sign in two dimensions.
+
+In three-dimensions, multiplying the matrix A by a negative number does change the influence of T on orientation. The net effect of a reflection across each of the three coordinate axes would still be a change of orientation. Since any odd number of reflections would change orientation, we see that multiplying the determinant by c[n] will capture the effect on orientation in n-dimensions. We conclude that for an nxn matrix A and a real number c, det(cA) = c[n]det(A).
+
+Pivot Position:
+A pivot position in a matrix, A, is a position in the matrix that corresponds to a row - leading 1 in the reduced row echelon form of A. Since the reduced row echelon form of A is unique, the pivot positions are uniquely determined and do not depend on whether or not row interchanges are performed in the reduction process. Also, the pivot of a row must appear to the right of the pivot in the above row in row echelon form.
+
+Positive Definiteness:
+A matrix is positive definite if it's symmetric and all its eigenvalues are positive. The thing is, there are a lot of other equivalent ways to define a positive definite matrix. One equivalent definition can be derived using the fact that for a symmetric matrix the signs of the pivots are the signs of the eigenvalues. So, for example, if a 4 x 4 matrix has three positive pivots and one negative pivot, it will have three positive eigenvalues and one negative eigenvalue. This is proven in section 6.4 of the textbook. We can apply this fact to positive definite matrices to derive the next equivalent definition. A matrix is positive definite if it's symmetric and all its pivots are positive. Pivots are, in general, way easier to calculate than eigenvalues. Just perform elimination and examine the diagonal terms. No problem. In practice this is usually the way you'd like to do it. For example, in that matrix from the introduction:
+
+Another way we can test for if a matrix is positive definite is we can look at its n upper left determinants. Remember from section 5.2 that the kth pivot of a matrix is dk= det⁡(Ak)det⁡(Ak-1) 
+where Ak is the upper left k x k submatrix. All the pivots will be positive if and only if det (Ak) > 0 for all 1 k n. So, if all upper left k x k determinants of a symmetric matrix are positive, the matrix is positive definite.
+
+If x is an eigenvector of A, then x!=0, and Ax = λx. In this case, x - [T]Ax = Ax[T]x. If λ > 0, then as x[T]x> 0, we must have x[T]Ax> 0.
+
+The thing about positive definite matrices is x[T]Ax is always positive, for any non-zero vector x, not just for an eigenvector. In fact, this is an equivalent definition of a matrix being positive definite:
+"A matrix is positive definite, if x[T]Ax > 0, for all vectors x!=0."
+Frequently in physics, the energy of a system in state x is represented as x[T]Ax (or x[T]Ax), and so this is frequently called the energy-based definition of a positive definite matrix.
