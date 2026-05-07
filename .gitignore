@@ -9,6 +9,7 @@ drive_evidence_copy/sajidahmedprotres_drive/
 source_repos/
 
 # Python and notebook runtime residue
+.venv*/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
@@ -29,4 +30,3 @@ __pycache__/
 *.tar
 *.tar.gz
 *.tgz
-
