@@ -157,7 +157,7 @@ The relevant cells are located, and many values match directly. The `0.52`,
 `0.17`, `0.21`, and `0.39` manuscript values need follow-up before claiming
 complete number-level certainty.
 
-### Figure 6 / incremental feature contribution
+### Figure 6 / held-out incremental feature contribution
 
 Manuscript claim:
 
@@ -165,6 +165,14 @@ Manuscript claim:
   Ssym after RF training on S_2648, averaged over ten RF runs.
   Evidence:
   `SA_CEM_9_26_2022_MJ_Issue_Adressing.txt:135-144`.
+
+Interpretation:
+
+- Figure 6 supports the claim that the engineered feature groups contribute to
+  predictive performance when evaluated on independent test sets. It is
+  therefore feature-engineering validation evidence, but it remains held-out
+  evaluation evidence rather than S_2648 feature-selection/tuning evidence
+  unless code history shows it was used to choose features or parameters.
 
 Notebook-cell evidence:
 

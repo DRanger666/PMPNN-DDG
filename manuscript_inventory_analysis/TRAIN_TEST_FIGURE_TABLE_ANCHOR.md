@@ -28,7 +28,7 @@ artifacts use `Ssym` and `S_669`.
 | Figure 3 | S_2648 only | Training-set feature-engineering/encoding analysis | Match against S_2648 feature-correlation code only. Do not search for S_669/Ssym/S_921 versions as manuscript evidence. |
 | Figure 4 | S_2648 only | Training-set feature-label and feature-feature correlation analysis | Match against S_2648 correlation matrices/heatmaps for A, B, C, D, E. |
 | Figure 5 | S_2648 only | Training-set full feature-set decorrelation analysis | Match against S_2648 A-H correlation matrices/heatmaps. |
-| Figure 6 | S_669 and Ssym predictions from RF models trained on S_2648 | Independent-test evaluation / ablation-style result | Match against code that trains on S_2648 and evaluates incremental feature combinations on S_669/Ssym. Treat as held-out evaluation, not as feature-selection evidence, unless code/history proves it influenced feature choice. |
+| Figure 6 | S_669 and Ssym predictions from RF models trained on S_2648 | Held-out incremental feature-contribution validation | Match against code that trains on S_2648 and evaluates incremental feature combinations on S_669/Ssym. Treat it as evidence that the engineered features contribute to generalization performance. Do not treat it as feature-selection or tuning evidence unless code/history proves it influenced feature choice. |
 
 Supporting manuscript evidence:
 
@@ -68,9 +68,13 @@ When searching for manuscript-to-code matches:
 - For feature construction, feature efficacy, feature-feature correlation,
   kernel-PCA basis choice, and hyperparameter tuning, search first for S_2648
   code and outputs.
-- For Table 1, Table 2 PMPNN-DDG row, Table 3 PMPNN-DDG row, and Figure 6,
+- For Table 1, Table 2 PMPNN-DDG row, and Table 3 PMPNN-DDG row,
   search for code that trains on S_2648 and evaluates on the independent test
   set named in the figure/table.
+- For Figure 6, search for code that trains on S_2648 and evaluates
+  incremental feature combinations on S_669/Ssym. Interpret this as held-out
+  validation that the feature-engineering pipeline contributes to predictive
+  performance.
 - If a notebook uses S_669, Ssym, or S_921 to choose features, tune parameters,
   or decide which feature group to retain, flag it as a possible leakage risk.
   If it only reports predictions after S_2648-based model-development choices,
