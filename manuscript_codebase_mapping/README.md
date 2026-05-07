@@ -29,6 +29,8 @@ Current notes:
 - `S_921_TABLE1_NOTEBOOK_CELL_EVIDENCE.md`: Table 1 evidence for S_921.
 - `S669_SSYM_S2648_STAGE1_NOTEBOOK_CELL_EVIDENCE.md`: stage-one notebook-cell
   evidence for S_669, Ssym, and S_2648.
+- `STAGE5_PICKLE_GENERATION_BRIDGE.md`: working strategy and initial evidence
+  for using V3 PMPNN pickle dictionaries as the bridge from ProteinMPNN feature
+  extraction to RF evaluation.
 - `TRAIN_TEST_FIGURE_TABLE_ANCHOR.md`: dataset-role anchor for figures and
   tables.
-
