@@ -42,6 +42,27 @@ only:
 Therefore, PSSM features do not remain for these entries in the inspected V3 or
 full-feature dictionaries.
 
+## ACCRE Input Directory Finding
+
+After copying the dataset-specific ACCRE input directories from the Drive mount,
+the local evidence copy contains:
+
+```text
+drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files
+drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir
+```
+
+Both directories contain 93 files. The V3 pickle has 94 protein keys.
+
+The only V3 protein key absent from both copied S_669 input directories is:
+
+- `3dv0I`
+
+This means the current evidence for `3dv0I` is stronger than before: the
+mutation/DDG records exist in the V3 and full-feature dictionaries, but the
+corresponding PDB and PSSM input files are absent from the copied old S_669
+input directories.
+
 ## RF Implication
 
 The downstream RF feature assembly requires ProteinMPNN-derived fields and PSSM
@@ -57,16 +78,18 @@ The inspected RF notebook code has two relevant protein-level exclusion routes:
 - skip proteins already listed in `proteins_to_skip`
 - skip proteins that are absent from `mapping_dict`
 
-The exact original cause for `3dv0I` is not yet proven in this workspace because
-the old `ACCRE_PyRun_Setup/S_669_PDB_Files` directory and a local `3dv0I` PDB
-copy have not been found in the copied evidence.
+For `3dv0I`, the current best-supported cause is absence from the old S_669
+PDB/PSSM input directory. This is distinct from the direct ICODE-warning pattern
+seen for S_2648 `1lveA` and `2immA`. The saved S_669 notebook output shows a
+`0/93` PDB-directory progress total, but no saved ICODE warning for `3dv0I` and
+no per-protein `Took ... forward-mutations` trace.
 
 ## Later Rerun Requirement
 
 When the pipeline is reconstructed, rerun or reconstruct the ProteinMPNN feature
 extraction for `3dv0I` and include these 31 mutation instances deliberately.
 
-The rerun should determine whether the original exclusion was caused by missing
-PDB input, residue/ICODE mapping, ProteinMPNN extraction failure, or another
-upstream condition. The same class of check is needed for the excluded `S_2648`
-instances.
+The rerun should determine whether adding the missing `3dv0I` PDB/PSSM inputs
+is sufficient, or whether residue mapping, chain handling, ProteinMPNN parsing,
+or another upstream issue also appears once those inputs are restored. The same
+class of check is needed for the excluded `S_2648` instances.

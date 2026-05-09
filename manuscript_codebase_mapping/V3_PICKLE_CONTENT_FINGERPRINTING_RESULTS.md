@@ -63,7 +63,7 @@ statements later to avoid accidental overwrites.
 | `Ssym` | `proven` | V3 expected fields cover all 342 entries, saved execution trace covers all 15 proteins and all 342 mutation entries, and downstream V3 RF loads exist. |
 | `S_921` | `strong_candidate` | V3 expected fields cover all 921 entries and downstream V3 RF loads exist, but no saved execution trace matched the `Took ... forward-mutations` pattern. |
 | `S_2648` | `strong_candidate` | V3 expected fields exist, but 28 mutation entries lack the ProteinMPNN-derived feature-record fields. The best saved execution trace also covers 129/132 proteins and 2620/2648 mutation entries. |
-| `S_669` | `strong_candidate` | V3 expected fields exist, but 31 `3dv0I` mutation entries lack the ProteinMPNN-derived feature-record fields, and no saved execution trace matched the `Took ... forward-mutations` pattern. |
+| `S_669` | `strong_candidate` | V3 expected fields exist, but 31 `3dv0I` mutation entries lack the ProteinMPNN-derived feature-record fields. The copied S_669 ACCRE PDB/PSSM input directories have 93 proteins; `3dv0I` is the only V3 protein absent from both. |
 
 The authoritative status table is:
 
@@ -123,6 +123,19 @@ both `S_669_pmppn_info_dict_V3.pickle` and the matching
 `S_669_full_feature_dict.pickle` entries. No PSSM fields remain for these
 entries in those inspected dictionaries.
 
+After the ACCRE dataset input directories were copied locally, the S_669 check
+also confirms that `3dv0I` is absent from both copied old input directories:
+
+```text
+drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files
+drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir
+```
+
+That makes the current best-supported explanation a missing-input-directory
+case, not a direct ICODE-warning case. The saved S_669 notebook output shows a
+`0/93` PDB-directory progress total, but no saved `3dv0I` ICODE warning and no
+per-protein `Took ... forward-mutations` trace.
+
 ## Version-Lineage Finding
 
 The base pickle family already contains log-probability, neighbor-identity, and
@@ -168,7 +181,9 @@ generator-to-pickle edge is currently proven under the written rule.
 
 Later reproducibility work should reconstruct or rerun the ProteinMPNN feature
 extraction for the excluded `S_669` `3dv0I` instances and the excluded `S_2648`
-instances. The goal is to identify whether the original issue was missing PDB
-input, residue/ICODE mapping, ProteinMPNN extraction failure, or another
-upstream condition. Current manuscript numbers should not be described as
-covering those excluded mutation instances unless that is separately proven.
+instances. For `S_669`, the first concrete check is whether restoring `3dv0I`
+PDB/PSSM inputs is sufficient. For `S_2648`, the split remains: `1lveA` and
+`2immA` have direct ICODE skip evidence, while `2a01A` is absent from the copied
+S_2648 PDB/PSSM input directories. Current manuscript numbers should not be
+described as covering those excluded mutation instances unless that is
+separately proven.

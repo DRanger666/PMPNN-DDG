@@ -1,95 +1,95 @@
-protein_key	entry_count	pmpnn_feature_record_count	rf_assembly_required_count	pssm_field_count	missing_pmpnn_feature_record_count	missing_rf_assembly_required_count	missing_pssm_field_count
-1a0fA	1	1	1	1	0	0	0
-1a7vA	13	13	13	13	0	0	0
-1ba3A	4	4	4	4	0	0	0
-1bfmA	2	2	2	2	0	0	0
-1bnlA	1	1	1	1	0	0	0
-1d5gA	2	2	2	2	0	0	0
-1divA	50	50	50	50	0	0	0
-1dxxA	1	1	1	1	0	0	0
-1ekgA	4	4	4	4	0	0	0
-1f8iA	1	1	1	1	0	0	0
-1fh5H	1	1	1	1	0	0	0
-1frdA	1	1	1	1	0	0	0
-1ft8A	13	13	13	13	0	0	0
-1fxaA	11	11	11	11	0	0	0
-1g3pA	27	27	27	27	0	0	0
-1gluA	1	1	1	1	0	0	0
-1guaB	49	49	49	49	0	0	0
-1gwyA	1	1	1	1	0	0	0
-1h0xA	2	2	2	2	0	0	0
-1hcqA	2	2	2	2	0	0	0
-1iojA	1	1	1	1	0	0	0
-1ir3A	1	1	1	1	0	0	0
-1itmA	3	3	3	3	0	0	0
-1iv7B	3	3	3	3	0	0	0
-1iv9A	1	1	1	1	0	0	0
-1j8iA	6	6	6	6	0	0	0
-1jl9A	1	1	1	1	0	0	0
-1jlvA	3	3	3	3	0	0	0
-1l6hA	3	3	3	3	0	0	0
-1lvmA	5	5	5	5	0	0	0
-1n18A	4	4	4	4	0	0	0
-1n88A	17	17	17	17	0	0	0
-1nm1A	2	2	2	2	0	0	0
-1o1uA	6	6	6	6	0	0	0
-1o6xA	20	20	20	20	0	0	0
-1osiA	4	4	4	4	0	0	0
-1pflA	5	5	5	5	0	0	0
-1preA	1	1	1	1	0	0	0
-1prgA	7	7	7	7	0	0	0
-1r2yA	1	1	1	1	0	0	0
-1r6rA	4	4	4	4	0	0	0
-1spdA	2	2	2	2	0	0	0
-1x0jA	7	7	7	7	0	0	0
-1xwsA	4	4	4	4	0	0	0
-1xxnA	5	5	5	5	0	0	0
-1xzoA	4	4	4	4	0	0	0
-2arfA	1	1	1	1	0	0	0
-2bjdA	3	3	3	3	0	0	0
-2c9qA	2	2	2	2	0	0	0
-2clrB	4	4	4	4	0	0	0
-2dvvA	2	2	2	2	0	0	0
-2h3fA	1	1	1	1	0	0	0
-2hbbA	46	46	46	46	0	0	0
-2jieA	51	51	51	51	0	0	0
-2jucA	3	3	3	3	0	0	0
-2kj3A	9	9	9	9	0	0	0
-2ks4A	2	2	2	2	0	0	0
-2ltbA	6	6	6	6	0	0	0
-2m5sA	2	2	2	2	0	0	0
-2mpcA	3	3	3	3	0	0	0
-2n7zA	1	1	1	1	0	0	0
-2nteA	2	2	2	2	0	0	0
-2ouoA	1	1	1	1	0	0	0
-2pr5A	17	17	17	17	0	0	0
-2ptlA	68	68	68	68	0	0	0
-2rpnA	2	2	2	2	0	0	0
-2vy0A	2	2	2	2	0	0	0
-2wqgA	29	29	29	29	0	0	0
-2ztaA	8	8	8	8	0	0	0
-3bciA	2	2	2	2	0	0	0
-3bn0A	1	1	1	1	0	0	0
-3c2iA	12	12	12	12	0	0	0
-3d2aA	3	3	3	3	0	0	0
-3d3bA	5	5	5	5	0	0	0
-3dv0I	31	0	0	0	31	31	31
-3ecuA	1	1	1	1	0	0	0
-3fisA	1	1	1	1	0	0	0
-3g1gA	4	4	4	4	0	0	0
-3k82A	3	3	3	3	0	0	0
-3l15B	1	1	1	1	0	0	0
-3monB	2	2	2	2	0	0	0
-3o39A	6	6	6	6	0	0	0
-3s4mA	4	4	4	4	0	0	0
-3s92A	1	1	1	1	0	0	0
-4bjxA	1	1	1	1	0	0	0
-4buqA	2	2	2	2	0	0	0
-4he7A	3	3	3	3	0	0	0
-4n6v0	3	3	3	3	0	0	0
-4waaA	3	3	3	3	0	0	0
-4yeeA	1	1	1	1	0	0	0
-4yefA	1	1	1	1	0	0	0
-5jxbA	2	2	2	2	0	0	0
-5oaqA	1	1	1	1	0	0	0
-5vp3A	3	3	3	3	0	0	0
+protein_key	entry_count	pmpnn_feature_record_count	rf_assembly_required_count	pssm_field_count	missing_pmpnn_feature_record_count	missing_rf_assembly_required_count	missing_pssm_field_count	input_pdb_file_present	input_pssm_file_present
+1a0fA	1	1	1	1	0	0	0	True	True
+1a7vA	13	13	13	13	0	0	0	True	True
+1ba3A	4	4	4	4	0	0	0	True	True
+1bfmA	2	2	2	2	0	0	0	True	True
+1bnlA	1	1	1	1	0	0	0	True	True
+1d5gA	2	2	2	2	0	0	0	True	True
+1divA	50	50	50	50	0	0	0	True	True
+1dxxA	1	1	1	1	0	0	0	True	True
+1ekgA	4	4	4	4	0	0	0	True	True
+1f8iA	1	1	1	1	0	0	0	True	True
+1fh5H	1	1	1	1	0	0	0	True	True
+1frdA	1	1	1	1	0	0	0	True	True
+1ft8A	13	13	13	13	0	0	0	True	True
+1fxaA	11	11	11	11	0	0	0	True	True
+1g3pA	27	27	27	27	0	0	0	True	True
+1gluA	1	1	1	1	0	0	0	True	True
+1guaB	49	49	49	49	0	0	0	True	True
+1gwyA	1	1	1	1	0	0	0	True	True
+1h0xA	2	2	2	2	0	0	0	True	True
+1hcqA	2	2	2	2	0	0	0	True	True
+1iojA	1	1	1	1	0	0	0	True	True
+1ir3A	1	1	1	1	0	0	0	True	True
+1itmA	3	3	3	3	0	0	0	True	True
+1iv7B	3	3	3	3	0	0	0	True	True
+1iv9A	1	1	1	1	0	0	0	True	True
+1j8iA	6	6	6	6	0	0	0	True	True
+1jl9A	1	1	1	1	0	0	0	True	True
+1jlvA	3	3	3	3	0	0	0	True	True
+1l6hA	3	3	3	3	0	0	0	True	True
+1lvmA	5	5	5	5	0	0	0	True	True
+1n18A	4	4	4	4	0	0	0	True	True
+1n88A	17	17	17	17	0	0	0	True	True
+1nm1A	2	2	2	2	0	0	0	True	True
+1o1uA	6	6	6	6	0	0	0	True	True
+1o6xA	20	20	20	20	0	0	0	True	True
+1osiA	4	4	4	4	0	0	0	True	True
+1pflA	5	5	5	5	0	0	0	True	True
+1preA	1	1	1	1	0	0	0	True	True
+1prgA	7	7	7	7	0	0	0	True	True
+1r2yA	1	1	1	1	0	0	0	True	True
+1r6rA	4	4	4	4	0	0	0	True	True
+1spdA	2	2	2	2	0	0	0	True	True
+1x0jA	7	7	7	7	0	0	0	True	True
+1xwsA	4	4	4	4	0	0	0	True	True
+1xxnA	5	5	5	5	0	0	0	True	True
+1xzoA	4	4	4	4	0	0	0	True	True
+2arfA	1	1	1	1	0	0	0	True	True
+2bjdA	3	3	3	3	0	0	0	True	True
+2c9qA	2	2	2	2	0	0	0	True	True
+2clrB	4	4	4	4	0	0	0	True	True
+2dvvA	2	2	2	2	0	0	0	True	True
+2h3fA	1	1	1	1	0	0	0	True	True
+2hbbA	46	46	46	46	0	0	0	True	True
+2jieA	51	51	51	51	0	0	0	True	True
+2jucA	3	3	3	3	0	0	0	True	True
+2kj3A	9	9	9	9	0	0	0	True	True
+2ks4A	2	2	2	2	0	0	0	True	True
+2ltbA	6	6	6	6	0	0	0	True	True
+2m5sA	2	2	2	2	0	0	0	True	True
+2mpcA	3	3	3	3	0	0	0	True	True
+2n7zA	1	1	1	1	0	0	0	True	True
+2nteA	2	2	2	2	0	0	0	True	True
+2ouoA	1	1	1	1	0	0	0	True	True
+2pr5A	17	17	17	17	0	0	0	True	True
+2ptlA	68	68	68	68	0	0	0	True	True
+2rpnA	2	2	2	2	0	0	0	True	True
+2vy0A	2	2	2	2	0	0	0	True	True
+2wqgA	29	29	29	29	0	0	0	True	True
+2ztaA	8	8	8	8	0	0	0	True	True
+3bciA	2	2	2	2	0	0	0	True	True
+3bn0A	1	1	1	1	0	0	0	True	True
+3c2iA	12	12	12	12	0	0	0	True	True
+3d2aA	3	3	3	3	0	0	0	True	True
+3d3bA	5	5	5	5	0	0	0	True	True
+3dv0I	31	0	0	0	31	31	31	False	False
+3ecuA	1	1	1	1	0	0	0	True	True
+3fisA	1	1	1	1	0	0	0	True	True
+3g1gA	4	4	4	4	0	0	0	True	True
+3k82A	3	3	3	3	0	0	0	True	True
+3l15B	1	1	1	1	0	0	0	True	True
+3monB	2	2	2	2	0	0	0	True	True
+3o39A	6	6	6	6	0	0	0	True	True
+3s4mA	4	4	4	4	0	0	0	True	True
+3s92A	1	1	1	1	0	0	0	True	True
+4bjxA	1	1	1	1	0	0	0	True	True
+4buqA	2	2	2	2	0	0	0	True	True
+4he7A	3	3	3	3	0	0	0	True	True
+4n6v0	3	3	3	3	0	0	0	True	True
+4waaA	3	3	3	3	0	0	0	True	True
+4yeeA	1	1	1	1	0	0	0	True	True
+4yefA	1	1	1	1	0	0	0	True	True
+5jxbA	2	2	2	2	0	0	0	True	True
+5oaqA	1	1	1	1	0	0	0	True	True
+5vp3A	3	3	3	3	0	0	0	True	True

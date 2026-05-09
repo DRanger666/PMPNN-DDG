@@ -31,6 +31,14 @@ TABLE_DIR = ANALYSIS_DIR / "tables"
 
 S669_V3 = PICKLE_SOURCE_DIR / "S_669_pmppn_info_dict_V3.pickle"
 S669_FULL_FEATURE = PICKLE_SOURCE_DIR / "S_669_full_feature_dict.pickle"
+S669_ACCRE_COPY_DIR = (
+    WORKSPACE_ROOT
+    / "drive_evidence_copy"
+    / "sajidahmedprotres_drive"
+    / "ACCRE_PyRun_Setup"
+)
+S669_PDB_DIR = S669_ACCRE_COPY_DIR / "S_669_PDB_Files"
+S669_PSSM_DIR = S669_ACCRE_COPY_DIR / "S_669_pssm_dir"
 
 PSSM_FIELDS = {
     "wild_pssm",
@@ -96,12 +104,22 @@ def build_full_feature_lookup(full_feature_obj: Any) -> dict[tuple[str, int, str
     return lookup
 
 
+def collect_stems(directory: Path, suffix: str) -> set[str]:
+    return {
+        path.name[: -len(suffix)]
+        for path in directory.iterdir()
+        if path.is_file() and path.name.endswith(suffix)
+    }
+
+
 def main() -> None:
     TABLE_DIR.mkdir(parents=True, exist_ok=True)
 
     v3_obj, _ = load_pickle_with_audit(S669_V3)
     full_feature_obj, _ = load_pickle_with_audit(S669_FULL_FEATURE)
     full_feature_lookup = build_full_feature_lookup(full_feature_obj)
+    pdb_inputs = collect_stems(S669_PDB_DIR, ".pdb")
+    pssm_inputs = collect_stems(S669_PSSM_DIR, ".pssm")
 
     entry_rows: list[dict[str, Any]] = []
     field_rows: list[dict[str, Any]] = []
@@ -116,11 +134,15 @@ def main() -> None:
         has_pmpnn_record = not missing_pmpnn
         has_rf_required_fields = not missing_rf
         has_pssm_fields = not missing_pssm
+        has_input_pdb = protein in pdb_inputs
+        has_input_pssm = protein in pssm_inputs
 
         protein_summary[protein]["entry_count"] += 1
         protein_summary[protein]["pmpnn_record_count"] += int(has_pmpnn_record)
         protein_summary[protein]["rf_required_count"] += int(has_rf_required_fields)
         protein_summary[protein]["pssm_count"] += int(has_pssm_fields)
+        protein_summary[protein]["input_pdb_count"] += int(has_input_pdb)
+        protein_summary[protein]["input_pssm_count"] += int(has_input_pssm)
 
         full_feature_entry = full_feature_lookup.get((normalized, entry_index, mut))
         full_feature_fields = (
@@ -139,6 +161,8 @@ def main() -> None:
                 "has_pmpnn_feature_record": has_pmpnn_record,
                 "has_rf_assembly_required_fields": has_rf_required_fields,
                 "has_pssm_fields_in_v3": has_pssm_fields,
+                "input_pdb_file_present": has_input_pdb,
+                "input_pssm_file_present": has_input_pssm,
                 "missing_pmpnn_fields": json.dumps(missing_pmpnn),
                 "missing_rf_assembly_fields": json.dumps(missing_rf),
                 "missing_pssm_fields_in_v3": json.dumps(missing_pssm),
@@ -175,8 +199,42 @@ def main() -> None:
                 "missing_pmpnn_feature_record_count": entry_count - counts["pmpnn_record_count"],
                 "missing_rf_assembly_required_count": entry_count - counts["rf_required_count"],
                 "missing_pssm_field_count": entry_count - counts["pssm_count"],
+                "input_pdb_file_present": counts["input_pdb_count"] == entry_count,
+                "input_pssm_file_present": counts["input_pssm_count"] == entry_count,
             }
         )
+
+    v3_proteins = {row["protein_key"] for row in summary_rows}
+    input_comparison_rows = [
+        {
+            "metric": "v3_protein_count",
+            "value": len(v3_proteins),
+        },
+        {
+            "metric": "pdb_input_file_count",
+            "value": len(pdb_inputs),
+        },
+        {
+            "metric": "pssm_input_file_count",
+            "value": len(pssm_inputs),
+        },
+        {
+            "metric": "v3_proteins_absent_from_pdb_inputs",
+            "value": json.dumps(sorted(v3_proteins - pdb_inputs)),
+        },
+        {
+            "metric": "v3_proteins_absent_from_pssm_inputs",
+            "value": json.dumps(sorted(v3_proteins - pssm_inputs)),
+        },
+        {
+            "metric": "pdb_inputs_absent_from_v3_proteins",
+            "value": json.dumps(sorted(pdb_inputs - v3_proteins)),
+        },
+        {
+            "metric": "pssm_inputs_absent_from_v3_proteins",
+            "value": json.dumps(sorted(pssm_inputs - v3_proteins)),
+        },
+    ]
 
     write_tsv(
         TABLE_DIR / "s669_v3_entry_feature_completeness.tsv",
@@ -190,6 +248,8 @@ def main() -> None:
             "has_pmpnn_feature_record",
             "has_rf_assembly_required_fields",
             "has_pssm_fields_in_v3",
+            "input_pdb_file_present",
+            "input_pssm_file_present",
             "missing_pmpnn_fields",
             "missing_rf_assembly_fields",
             "missing_pssm_fields_in_v3",
@@ -212,12 +272,19 @@ def main() -> None:
             "missing_pmpnn_feature_record_count",
             "missing_rf_assembly_required_count",
             "missing_pssm_field_count",
+            "input_pdb_file_present",
+            "input_pssm_file_present",
         ],
     )
     write_tsv(
         TABLE_DIR / "s669_3dv0i_v3_remaining_fields.tsv",
         field_rows,
         ["protein_key", "entry_index", "mut", "field", "value_summary"],
+    )
+    write_tsv(
+        TABLE_DIR / "s669_input_directory_comparison.tsv",
+        input_comparison_rows,
+        ["metric", "value"],
     )
 
 

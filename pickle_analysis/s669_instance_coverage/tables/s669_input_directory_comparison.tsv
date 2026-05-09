@@ -1,0 +1,8 @@
+metric	value
+v3_protein_count	94
+pdb_input_file_count	93
+pssm_input_file_count	93
+v3_proteins_absent_from_pdb_inputs	"[""3dv0I""]"
+v3_proteins_absent_from_pssm_inputs	"[""3dv0I""]"
+pdb_inputs_absent_from_v3_proteins	[]
+pssm_inputs_absent_from_v3_proteins	[]
