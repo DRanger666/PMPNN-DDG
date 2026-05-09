@@ -1,0 +1,135 @@
+# V3 Pickle Content-Fingerprinting Results
+
+Date: 2026-05-09
+
+Script:
+
+```text
+scripts/fingerprint_v3_pickles.py
+```
+
+Primary outputs:
+
+```text
+pickle_analysis/v3_fingerprinting/tables/
+pickle_analysis/v3_fingerprinting/json/v3_pickle_fingerprints.json
+```
+
+## Scope
+
+This pass used only the workspace-local copied evidence under:
+
+```text
+drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/
+```
+
+It did not read the live FUSE mount and did not execute notebooks.
+
+The pass fingerprinted base, V2, and V3 PMPNN pickle dictionaries for:
+
+- `S_2648`
+- `S_921`
+- `S_669`
+- `Ssym`
+
+## Short Result
+
+All twelve target pickles loaded with the restricted audit unpickler. All V3
+pickles contain the expected ProteinMPNN-derived generator fields in their field
+union, and the candidate `*_ProteinMPNNTesting_V6_V2` notebook family assigns
+all seven expected fields:
+
+- `w_n_log_prob`
+- `m_n_log_prob`
+- `neighbor_aa_identities`
+- `neighbor_w_message_vector_coming_from_center`
+- `neighbor_m_message_vector_coming_from_center`
+- `neighbor_w_neighbor_embedding`
+- `neighbor_m_neighbor_embedding`
+
+The downstream RF notebook family has un-commented `rb` loads of the V3 pickle
+family. The candidate generator save references exist, but they are commented in
+the extracted notebook source state.
+
+## Evidence Status
+
+| Dataset | Status | Main reason |
+| --- | --- | --- |
+| `Ssym` | `proven` | V3 expected fields cover all 342 entries, saved execution trace covers all 15 proteins and all 342 mutation entries, and downstream V3 RF loads exist. |
+| `S_921` | `strong_candidate` | V3 expected fields cover all 921 entries and downstream V3 RF loads exist, but no saved execution trace matched the `Took ... forward-mutations` pattern. |
+| `S_2648` | `strong_candidate` | V3 expected fields exist, but they cover 2620/2648 entries. The best saved execution trace also covers 129/132 proteins and 2620/2648 mutation entries. |
+| `S_669` | `strong_candidate` | V3 expected fields exist, but they cover 638/669 entries, and no saved execution trace matched the `Took ... forward-mutations` pattern. |
+
+The authoritative status table is:
+
+```text
+pickle_analysis/v3_fingerprinting/tables/v3_dataset_evidence_status.tsv
+```
+
+## Incomplete V3 Field Coverage
+
+The V3 field-union match is not the same thing as per-entry completeness.
+
+For `S_2648`, the expected generator fields are absent from 28 entries across
+three proteins:
+
+- `1lveA`: 17 entries
+- `2a01A`: 1 entry
+- `2immA`: 10 entries
+
+For `S_669`, the expected generator fields are absent from 31 entries, all under:
+
+- `3dv0I`: 31 entries
+
+The entry-level evidence table is:
+
+```text
+pickle_analysis/v3_fingerprinting/tables/v3_missing_expected_fields_by_entry.tsv
+```
+
+This matters for the manuscript-to-code map. The RF notebooks may be filtering
+to feature-bearing entries before evaluation, or these missing-feature entries
+may reflect incomplete upstream ProteinMPNN processing. We should not assume the
+manuscript evaluation used every raw mutation entry until the RF feature-matrix
+assembly is traced.
+
+## Version-Lineage Finding
+
+The base pickle family already contains log-probability, neighbor-identity, and
+center-to-neighbor message-vector fields, but it lacks the neighbor embedding
+fields.
+
+The V2 family adds the larger engineered-feature set, including neighbor
+embeddings and scalar engineered features. The V3 family adds exactly one field
+relative to V2 across all four datasets:
+
+```text
+neighbor_message_change_m_w_raw
+```
+
+That V3-only raw field has shape `[15, 128, 1]` where present. The related
+scalar field is:
+
+```text
+neighbor_message_change_m_w
+```
+
+This supports treating message-change and neighbor-embedding-change as distinct
+engineered feature families, but the final RF feature-column mapping still needs
+to be traced before the manuscript feature labels are rewritten.
+
+## Next Mapping Step
+
+The next reliable step is downstream, not further pickle discovery:
+
+```text
+V3 PMPNN pickle dictionary
+-> RF feature-matrix assembly
+-> exact RF evaluation rows and feature-column blocks
+```
+
+For `S_2648` and `S_669`, specifically check whether the RF notebooks filter out
+the entries listed in `v3_missing_expected_fields_by_entry.tsv`. For `S_921`,
+look for an alternate saved output or notebook copy that contains the missing
+ProteinMPNN execution trace. For `Ssym`, the Stage 5 generator-to-pickle edge is
+currently proven under the written rule.

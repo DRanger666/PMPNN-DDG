@@ -3,6 +3,12 @@
 Stage 5 asks for the code path that generated the pickle dictionaries used by
 the RF notebooks.
 
+The content-fingerprinting pass has now been executed. See:
+
+```text
+manuscript_codebase_mapping/V3_PICKLE_CONTENT_FINGERPRINTING_RESULTS.md
+```
+
 The current working idea is sound: use the pickle files themselves as bridge
 objects between upstream ProteinMPNN execution and downstream manuscript-table
 evaluation.
@@ -117,20 +123,27 @@ The better interpretation is:
    consistent with a same-day V3 generation sweep.
 4. We still need content-level matching before calling this Stage 5 solved.
 
-## Next Proof Steps
+## Follow-Up Proof Steps
 
-For each V3 pickle:
+The original content-fingerprinting proof step is now complete and archived in:
 
-1. Create a structural fingerprint: top-level keys, mutation counts, per-entry
-   field schema, array shapes, and representative numeric hashes.
-2. Compare the fingerprint with the fields assigned by the candidate generator
-   notebook.
-3. Search saved notebook outputs for run-completion prints such as
-   `Took ... for ... with ... forward-mutations` near the candidate generation
-   cells.
-4. Verify that the RF notebooks load the same pickle version that produced the
-   manuscript evidence.
-5. Only after those checks, mark the edge
-   `ProteinMPNN feature-extraction code -> V3 PMPNN pickle dictionary` as
-   proven.
+```text
+pickle_analysis/v3_fingerprinting/
+```
 
+The follow-up proof step is to trace the downstream RF feature-matrix assembly:
+
+```text
+V3 PMPNN pickle dictionary
+-> RF feature matrix
+-> RF evaluation output
+-> manuscript table or figure value
+```
+
+This is especially important because the V3 pickles for `S_2648` and `S_669`
+contain some raw mutation entries without the expected ProteinMPNN-derived
+fields. Those entries are listed in:
+
+```text
+pickle_analysis/v3_fingerprinting/tables/v3_missing_expected_fields_by_entry.tsv
+```

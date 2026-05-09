@@ -36,3 +36,5 @@ Current notes:
   tables.
 - `V3_PICKLE_CONTENT_FINGERPRINTING_PLAN.md`: exact plan for the next
   content-level fingerprinting pass against candidate generator notebooks.
+- `V3_PICKLE_CONTENT_FINGERPRINTING_RESULTS.md`: executed fingerprinting
+  results, evidence statuses, incomplete-entry cautions, and next mapping step.
