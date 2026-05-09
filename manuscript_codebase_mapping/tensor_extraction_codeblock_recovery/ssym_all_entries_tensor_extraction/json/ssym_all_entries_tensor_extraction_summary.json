@@ -1,0 +1,107 @@
+{
+  "target_entry_count": 342,
+  "processed_entry_count": 342,
+  "ok_entry_count": 342,
+  "schema_failure_count": 0,
+  "error_count": 0,
+  "all_selected_entries_passed": true,
+  "seed": 0,
+  "runtime": {
+    "utils_path": "drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/ProteinMPNN/vanilla_proteinmpnn/protein_mpnn_utils.py",
+    "checkpoint_path": "drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/ProteinMPNN/vanilla_proteinmpnn/vanilla_model_weights/v_48_020.pt",
+    "device": "cpu",
+    "num_edges": 48
+  },
+  "by_protein": {
+    "1amqA": {
+      "target_entries": 4,
+      "ok": 4,
+      "schema_failure": 0,
+      "error": 0
+    },
+    "1bniA": {
+      "target_entries": 13,
+      "ok": 13,
+      "schema_failure": 0,
+      "error": 0
+    },
+    "1ceyA": {
+      "target_entries": 3,
+      "ok": 3,
+      "schema_failure": 0,
+      "error": 0
+    },
+    "1ey0A": {
+      "target_entries": 28,
+      "ok": 28,
+      "schema_failure": 0,
+      "error": 0
+    },
+    "1ihbA": {
+      "target_entries": 3,
+      "ok": 3,
+      "schema_failure": 0,
+      "error": 0
+    },
+    "1iobA": {
+      "target_entries": 1,
+      "ok": 1,
+      "schema_failure": 0,
+      "error": 0
+    },
+    "1l63A": {
+      "target_entries": 118,
+      "ok": 118,
+      "schema_failure": 0,
+      "error": 0
+    },
+    "1lz1A": {
+      "target_entries": 61,
+      "ok": 61,
+      "schema_failure": 0,
+      "error": 0
+    },
+    "1oh0A": {
+      "target_entries": 2,
+      "ok": 2,
+      "schema_failure": 0,
+      "error": 0
+    },
+    "1rn1C": {
+      "target_entries": 1,
+      "ok": 1,
+      "schema_failure": 0,
+      "error": 0
+    },
+    "1vqbA": {
+      "target_entries": 5,
+      "ok": 5,
+      "schema_failure": 0,
+      "error": 0
+    },
+    "2lzmA": {
+      "target_entries": 66,
+      "ok": 66,
+      "schema_failure": 0,
+      "error": 0
+    },
+    "2rn2A": {
+      "target_entries": 18,
+      "ok": 18,
+      "schema_failure": 0,
+      "error": 0
+    },
+    "4lyzA": {
+      "target_entries": 14,
+      "ok": 14,
+      "schema_failure": 0,
+      "error": 0
+    },
+    "5ptiA": {
+      "target_entries": 5,
+      "ok": 5,
+      "schema_failure": 0,
+      "error": 0
+    }
+  }
+}

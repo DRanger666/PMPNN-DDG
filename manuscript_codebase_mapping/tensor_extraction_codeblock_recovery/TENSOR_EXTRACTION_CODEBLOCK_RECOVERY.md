@@ -43,6 +43,29 @@ Smoke-test outputs:
 - `ssym_smoke_test/tables/ssym_tensor_field_schema_compare.tsv`
 - `ssym_smoke_test/json/ssym_tensor_extraction_smoke_summary.json`
 
+## Ssym All-Entry Tensor Experiment
+
+A dedicated all-entry Ssym tensor-only experiment has now been run:
+
+- Script: `scripts/test_ssym_tensor_extraction_all_entries.py`
+- Target: all saved `Ssym_pmppn_info_dict_V3.pickle` mutation entries
+- Mutation entries: `342`
+- Direct V3 tensor fields checked per entry: `16`
+- Successful entries: `342`
+- Schema failures: `0`
+- Runtime errors: `0`
+
+This result means the recovered Set 1 scaffold can traverse the complete Ssym
+V3 direct tensor-field surface without shape mismatches or finite-numeric
+failures. It does not validate engineered/PSSM feature construction.
+
+All-entry outputs:
+
+- `ssym_all_entries_tensor_extraction/SSYM_ALL_ENTRIES_TENSOR_EXTRACTION_EXPERIMENT.md`
+- `ssym_all_entries_tensor_extraction/tables/ssym_all_entries_mutation_status.tsv`
+- `ssym_all_entries_tensor_extraction/tables/ssym_all_entries_field_schema_compare.tsv`
+- `ssym_all_entries_tensor_extraction/json/ssym_all_entries_tensor_extraction_summary.json`
+
 Primary candidate notebooks:
 
 - `colab_notebooks_inventory_analysis/git_notebook_sources/ProteinMPNNTesting_V6_V2.ipynb.py.txt`: primary V3 tensor-extraction candidate; field assignments=16.
@@ -114,6 +137,6 @@ functions, or plain call-site extraction?
 
 ## Next Step
 
-Use the recovered Set 1 scaffold to continue testing Ssym entries and then
-stitch the engineered/PSSM feature-construction codeblocks into the V3 pickle
-reproduction pipeline.
+After committing the Ssym all-entry tensor experiment, move to the
+engineered/PSSM feature-construction segment for Ssym. Keep that as a separate
+experiment and separate commit.
