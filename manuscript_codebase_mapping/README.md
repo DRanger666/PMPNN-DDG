@@ -46,3 +46,6 @@ Current notes:
 - `tensor_extraction_codeblock_recovery/TENSOR_EXTRACTION_CODEBLOCK_RECOVERY.md`:
   Set 1 recovery note identifying the notebook-side ProteinMPNN inference-code
   changes that expose tensors for V3 pickle feature construction.
+- `tensor_extraction_codeblock_recovery/TENSOR_EXTRACTION_ALGORITHM_DEBUGGING.md`:
+  manuscript-algorithm comparison for the direct V3 tensor-extraction segment,
+  with current value-level mismatch evidence and suspicious operational choices.

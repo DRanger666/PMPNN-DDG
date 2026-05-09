@@ -59,6 +59,14 @@ This result means the recovered Set 1 scaffold can traverse the complete Ssym
 V3 direct tensor-field surface without shape mismatches or finite-numeric
 failures. It does not validate engineered/PSSM feature construction.
 
+Important value-level boundary: this is not a direct tensor-value reproduction.
+The closest-neighbor geometry fields match all `342/342` Ssym entries, but all
+other numeric direct tensor fields have value-level mismatches against the saved
+Ssym V3 pickle. See:
+
+- `ssym_all_entries_tensor_extraction/tables/ssym_tensor_value_mismatch_summary.tsv`
+- `TENSOR_EXTRACTION_ALGORITHM_DEBUGGING.md`
+
 All-entry outputs:
 
 - `ssym_all_entries_tensor_extraction/SSYM_ALL_ENTRIES_TENSOR_EXTRACTION_EXPERIMENT.md`
@@ -135,8 +143,10 @@ functions, or plain call-site extraction?
 - `tables/old_fork_proteinmpnn_history.tsv`: commits touching old fork
   ProteinMPNN source files.
 
-## Next Step
+## Current Debugging Boundary
 
-After committing the Ssym all-entry tensor experiment, move to the
-engineered/PSSM feature-construction segment for Ssym. Keep that as a separate
-experiment and separate commit.
+The Ssym engineered/PSSM feature-construction segment has been value-proven
+when it starts from saved V3 direct tensor fields. The remaining unresolved
+part is the direct tensor-extraction segment itself: the recovered V6_V2-style
+scaffold operationalizes the manuscript-level control flow, but it does not yet
+regenerate the saved Ssym V3 direct tensor values.
