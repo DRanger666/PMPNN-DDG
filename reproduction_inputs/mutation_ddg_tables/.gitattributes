@@ -1,0 +1,4 @@
+# Keep copied dataset snapshots byte-faithful. The PremPS text files use CRLF
+# line endings in the pinned clone.
+*.txt -text
+*.csv -text

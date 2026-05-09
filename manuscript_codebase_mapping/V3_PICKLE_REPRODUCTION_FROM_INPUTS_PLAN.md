@@ -76,15 +76,39 @@ Ssym:   https://raw.githubusercontent.com/SajidAhmeduiu/PremPS/main/Datasets/Eig
 S_669:  /content/drive/MyDrive/ACCRE_PyRun_Setup/Data_s669_with_predictions.csv
 ```
 
-The three PremPS URL-based files are not currently present as local evidence
-snapshots in this workspace. The S_669 CSV is also not present in the copied
-local ACCRE folder or elsewhere found in the workspace.
+The mutation/DDG input tables now have local snapshots:
+
+```text
+reproduction_inputs/mutation_ddg_tables/S_2648/S2648.txt
+reproduction_inputs/mutation_ddg_tables/S_921/S921.txt
+reproduction_inputs/mutation_ddg_tables/Ssym/Ssym.txt
+reproduction_inputs/mutation_ddg_tables/S_669/Data_s669_with_predictions.csv
+```
+
+The three PremPS files were snapshotted from:
+
+```text
+source_repos/SajidAhmeduiu_PremPS
+remote: https://github.com/SajidAhmeduiu/PremPS.git
+commit: e9269cc678c0d14b01440e33cc6d4b3778565c42
+```
+
+The S_669 CSV was recovered from the local FUSE mount and copied into the local
+evidence tree with size and mtime preserved:
+
+```text
+source: /home/mpr/sajidahmedprotres_drive/ACCRE_PyRun_Setup/Data_s669_with_predictions.csv
+copy:   drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/Data_s669_with_predictions.csv
+size:   318618 bytes
+mtime:  2022-03-11 06:01:18 +0600
+sha256: def876c7515278aa05ba29b33edaad10417aa91cfdcab68d1bebfb09f2cd2eee
+```
 
 For temporary code stitching, the `mut` and `ddg` entries already inside the
 target pickles can be used as a scaffold. That is useful for debugging the
-pipeline, but it is not independent raw-input provenance evidence. Independent
-reproducibility requires recovering or snapshotting the real mutation/DDG input
-tables.
+pipeline, but it is not independent raw-input provenance evidence. The first
+independent mutation/DDG table prerequisite is now satisfied by the local
+snapshots above.
 
 ## What Must Match
 
@@ -148,14 +172,10 @@ Checks:
 - mutation labels and order
 - DDG values
 
-Known blocker:
+Resolved prerequisite:
 
-- `Data_s669_with_predictions.csv` is missing locally.
-
-Temporary scaffold:
-
-- for S_669 only, generate the initial mutation dictionary from the target V3
-  pickle `mut`/`ddg` fields until the CSV is recovered.
+- `Data_s669_with_predictions.csv` is now available locally from the copied
+  Drive evidence and from the tracked reproduction-input snapshot.
 
 ### 3. Reproduce PDB Mapping and Skip Behavior
 
@@ -326,23 +346,32 @@ scripts/audit_pdb_pssm_input_coverage.py
 The first implementation should reuse the notebook logic directly and change as
 little as possible. Cleanup can come after matching.
 
-## Current Missing Inputs or Unresolved Requirements
+## Resolved Inputs And Remaining Requirements
 
-Missing or unresolved:
+Resolved on 2026-05-09:
 
 - local independent copy of `Data_s669_with_predictions.csv`
 - local commit-pinned snapshots of the PremPS dataset text files used for
   S_2648, S_921, and Ssym
-- runnable reproduction environment with at least PyTorch, Biopython, pandas,
-  NumPy, SciPy, scikit-learn, and openpyxl; the existing
-  `.venv_pickle_analysis` has NumPy/pandas/SciPy/scikit-learn but currently
-  lacks PyTorch, Biopython, and openpyxl
+- runnable CPU reproduction environment named
+  `.venv_proteinmpnn_ddg_reproduction`, with PyTorch, Biopython, pandas, NumPy,
+  SciPy, scikit-learn, openpyxl, tqdm, and Matplotlib installed
+
+Still unresolved, but not blockers:
+
 - exact original Python/PyTorch/Biopython runtime versions from the 2022 Colab
   run
 - exact original RNG state, if ProteinMPNN outputs are not invariant to the
   `torch.randn(...)` decoding-order tensor
 - exact historical save timing for the final V3 object after later engineered
   fields and PSSM fields were added
+
+Working rule for the unresolved items:
+
+- test runtime and RNG effects empirically on small controlled subsets;
+- reconstruct a clear final save point after all target V3 fields are present;
+- compare regenerated objects to the 2022 target pickles by value, not by
+  pickle bytes.
 
 Available:
 
@@ -357,9 +386,8 @@ Available:
 
 1. Write the comparison script first. It will define the value-level truth
    criterion before any regeneration code is trusted.
-2. Write a mutation-table audit script. It should load either real mutation/DDG
-   tables or a temporary `mut`/`ddg` scaffold from the target pickle and report
-   whether the initial dictionary matches the target.
+2. Write a mutation-table audit script. It should load the local mutation/DDG
+   table snapshots and report whether the initial dictionary matches the target.
 3. Reproduce Ssym initial dictionary, PDB mapping, raw ProteinMPNN fields, and
    final engineered/PSSM fields.
 4. If Ssym matches, repeat for S_921.
