@@ -58,7 +58,8 @@ The `rF-R` value is computed in the full-feature branch of the same RF-loop logi
 results_tracking_dict["S_921_forward_reverse_PCC"] = pearsonr(S_921_aug_preds[0::2], S_921_aug_preds[1::2])[0]
 ```
 
-That computation appears in `git_notebook_sources`, lines 1025-1029, and in the parallel V3 source extract, lines 983-987.
+That computation appears in `git_notebook_sources`, lines 1025-1029, and in the
+parallel `.ipynb.py.txt` V3 code-cell text file, lines 983-987.
 
 Saved notebook output in `Quick_Dirty_MPNN_ML_V2_V3.ipynb` and the Drive-side `Quick_Dirty_MPNN_ML_V2_VGRAPHS_V1.ipynb` records:
 

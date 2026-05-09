@@ -14,9 +14,10 @@ ProteinMPNN feature-extraction notebook/code
 -> manuscript table/figure output
 ```
 
-The immediate target is the first edge. Filename matches and nearby save cells
-are not enough, because the candidate save cells appear commented in the
-extracted notebook state.
+The immediate target is the first edge. Filename matches and nearby save
+statements are not enough, because the V3 `with open(..., "wb")` save
+statements are commented in the `.ipynb.py.txt` code-cell text files available
+in this workspace.
 
 ## Target Pickles
 
@@ -44,8 +45,8 @@ Current strongest candidate generator family:
 - `S669_ProteinMPNNTesting_V6_V2.ipynb.py.txt` for `S_669`
 - `Ssym_ProteinMPNNTesting_V6_V2.ipynb.py.txt` for `Ssym`
 
-These extracts should be treated as candidate generation code until content
-matching and execution traces strengthen the edge.
+These `.ipynb.py.txt` files should be treated as candidate generation code
+until content matching and execution traces strengthen the edge.
 
 ## Planned Evidence Passes
 
@@ -74,7 +75,7 @@ matching and execution traces strengthen the edge.
 - `proven`: saved execution trace, schema match, count match, and downstream
   RF-load evidence all align.
 - `strong candidate`: filename, schema, count, and timeline evidence align, but
-  one of execution trace or direct saved-state evidence is missing.
+  saved output trace evidence or another direct run artifact is incomplete.
 - `unresolved`: field/schema/count mismatch, ambiguous notebook version, or
   incompatible downstream load evidence.
 
@@ -84,4 +85,3 @@ matching and execution traces strengthen the edge.
 - TSV/JSON outputs under `pickle_analysis/`.
 - A concise mapping note under `manuscript_codebase_mapping/` summarizing the
   evidence status for each dataset.
-

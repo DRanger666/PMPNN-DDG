@@ -48,8 +48,13 @@ all seven expected fields:
 - `neighbor_m_neighbor_embedding`
 
 The downstream RF notebook family has un-commented `rb` loads of the V3 pickle
-family. The candidate generator save references exist, but they are commented in
-the extracted notebook source state.
+family. The candidate generator save references exist, but the V3
+`with open(..., "wb")` save statements are commented in the `.ipynb.py.txt`
+code-cell text files inspected here.
+
+That does not imply that these notebooks did not generate the V3 pickle files.
+It is compatible with saving the pickle files once and commenting the save
+statements later to avoid accidental overwrites.
 
 ## Evidence Status
 

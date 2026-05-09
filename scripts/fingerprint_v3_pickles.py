@@ -557,8 +557,8 @@ def extract_generator_schema() -> list[dict[str, Any]]:
         rows.append(
             {
                 "dataset": dataset,
-                "candidate_source": str(source_path.relative_to(WORKSPACE_ROOT)),
-                "source_exists": source_path.exists(),
+                "candidate_code_cell_text_file": str(source_path.relative_to(WORKSPACE_ROOT)),
+                "code_cell_text_file_exists": source_path.exists(),
                 "mut_assignment_fields": json.dumps(assignment_fields),
                 "mut_assignment_count": len(assignments),
                 "expected_generator_fields_found": json.dumps(
@@ -839,7 +839,10 @@ def build_evidence_status(
         if not downstream_load_refs:
             caveats.append("no downstream V3 RF load reference found")
         if status != "proven":
-            caveats.append("candidate save cells remain commented in extracted source")
+            caveats.append(
+                "V3 with open(..., \"wb\") save statement is commented in the "
+                "inspected .ipynb.py.txt code-cell text file"
+            )
 
         rows.append(
             {
@@ -1012,8 +1015,8 @@ def main() -> None:
         generator_rows,
         [
             "dataset",
-            "candidate_source",
-            "source_exists",
+            "candidate_code_cell_text_file",
+            "code_cell_text_file_exists",
             "mut_assignment_fields",
             "mut_assignment_count",
             "expected_generator_fields_found",

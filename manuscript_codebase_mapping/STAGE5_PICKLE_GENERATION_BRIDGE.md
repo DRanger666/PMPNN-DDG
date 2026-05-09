@@ -81,7 +81,7 @@ the dictionaries directly upstream of the current manuscript Table 1 evidence.
 The strongest current candidate code path for V3 generation is the matched
 `*_ProteinMPNNTesting_V6_V2` notebook family:
 
-| Dataset | Candidate source extract | Filename save evidence |
+| Dataset | Candidate code-cell text file | Filename save evidence |
 | --- | --- | --- |
 | `S_2648` | `ProteinMPNNTesting_V6_V2.ipynb.py.txt` | lines 1954-1955 |
 | `S_921` | `S921_ProteinMPNNTesting_V6_V2.ipynb.py.txt` | lines 1954-1955 |
@@ -110,9 +110,15 @@ Representative line ranges:
 
 ## Current Caution
 
-The candidate save cells appear commented in the extracted notebook sources.
-That means we should not claim yet that the saved notebook state executed those
-exact write lines as currently displayed.
+In the `.ipynb.py.txt` code-cell text files inspected here, the V3
+`with open(..., "wb")` save statements are commented. This does not imply that
+these notebooks did not generate the pickle files. It is compatible with a
+save-once workflow where the save statement was commented later to avoid
+overwriting manuscript-linked artifacts.
+
+The narrower evidence point is that the currently inspected `.ipynb.py.txt`
+code-cell text files alone are not direct proof that those save statements were
+uncommented at the moment the V3 pickle files were created.
 
 The better interpretation is:
 
