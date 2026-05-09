@@ -84,6 +84,13 @@ seen for S_2648 `1lveA` and `2immA`. The saved S_669 notebook output shows a
 `0/93` PDB-directory progress total, but no saved ICODE warning for `3dv0I` and
 no per-protein `Took ... forward-mutations` trace.
 
+A later side-check against a freshly downloaded current RCSB `3DV0` file is
+recorded separately:
+
+```text
+manuscript_codebase_mapping/S669_3DV0I_RCSB_REFERENCE_CHECK.md
+```
+
 ## Later Rerun Requirement
 
 When the pipeline is reconstructed, rerun or reconstruct the ProteinMPNN feature
