@@ -207,11 +207,25 @@ Known instance-level absence cases:
 For the first stitching phase, reproduce the old target behavior. Do not force
 these missing instances into the regenerated pickle yet.
 
-### 4. Reproduce the ProteinMPNN-DDG V3 Tensor-Extraction Segment
+### 4. Recover ProteinMPNN Inference-Code Changes for Tensor Extraction
 
 Overall target: reproduce the ProteinMPNN-DDG V3 pickle objects. The
 ProteinMPNN-derived tensor extraction is only one upstream segment of that V3
 pickle pipeline; it is not a standalone goal.
+
+Two recoverable codeblock sets must be separated:
+
+1. ProteinMPNN inference-code changes that expose the tensors needed for
+   ProteinMPNN-DDG feature engineering. This includes message tensors, neighbor
+   embedding tensors, neighbor identity/index information, log-probability
+   tensors, and any other intermediate values stored in or used to create the
+   V3 pickle fields.
+2. ProteinMPNN-DDG feature-engineering codeblocks that consume those exposed
+   tensors, PSSM rows, mutation records, and PDB-derived neighbor mappings to
+   create the final V3 pickle fields.
+
+The first set must be recovered before the second set can be stitched together
+reliably.
 
 Primary ProteinMPNN-derived tensor fields:
 
@@ -254,7 +268,7 @@ If outputs are not invariant, exact value-level reproduction may require the
 original RNG state and original file-processing order. That information is not
 currently known.
 
-### 5. Reproduce Engineered/PSSM Fields Added After Tensor Extraction
+### 5. Recover Engineered/PSSM Feature-Construction Codeblocks
 
 The target V3 pickles contain more than the direct ProteinMPNN-derived tensor
 fields. They also contain scalar engineered fields and PSSM fields, including:
