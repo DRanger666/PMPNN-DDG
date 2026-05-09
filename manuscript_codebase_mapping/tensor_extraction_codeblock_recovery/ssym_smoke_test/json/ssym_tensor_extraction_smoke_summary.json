@@ -1,0 +1,14 @@
+{
+  "protein_key": "1amqA",
+  "mutation_label": "C191Y",
+  "sequence_index": 179,
+  "seed": 0,
+  "all_shapes_match": true,
+  "all_generated_numeric_finite": true,
+  "runtime": {
+    "utils_path": "drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/ProteinMPNN/vanilla_proteinmpnn/protein_mpnn_utils.py",
+    "checkpoint_path": "drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/ProteinMPNN/vanilla_proteinmpnn/vanilla_model_weights/v_48_020.pt",
+    "device": "cpu",
+    "num_edges": 48
+  }
+}

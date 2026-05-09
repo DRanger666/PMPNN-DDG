@@ -13,6 +13,36 @@ useful history, but it does not by itself contain the complete V6_V2 behavior.
 
 Primary V6_V2 notebooks with all direct V3 tensor-field assignments: True.
 
+## Recovered Set 1 Scaffold
+
+The V6_V2 tensor-extraction behavior is now represented in a small workspace
+module:
+
+- `proteinmpnn_ddg/recovered_v6v2.py`
+
+This module keeps the scope narrow: it loads the recovered ProteinMPNN utility
+source, applies the two V6_V2 tensor-return changes, and exposes helpers for
+one-mutation tensor extraction. It does not construct engineered/PSSM features
+and does not claim full V3 pickle reproduction.
+
+The first smoke test is:
+
+- `scripts/smoke_test_ssym_tensor_extraction.py`
+
+Current Ssym test target:
+
+- Protein: `1amqA`
+- Mutation: `C191Y`
+- PDB residue-map sequence index: `179`
+- Result: all direct V3 tensor-field shapes match the saved Ssym V3 target
+  entry, and all generated numeric tensors are finite.
+
+Smoke-test outputs:
+
+- `ssym_smoke_test/SSYM_TENSOR_EXTRACTION_SMOKE_TEST.md`
+- `ssym_smoke_test/tables/ssym_tensor_field_schema_compare.tsv`
+- `ssym_smoke_test/json/ssym_tensor_extraction_smoke_summary.json`
+
 Primary candidate notebooks:
 
 - `colab_notebooks_inventory_analysis/git_notebook_sources/ProteinMPNNTesting_V6_V2.ipynb.py.txt`: primary V3 tensor-extraction candidate; field assignments=16.
@@ -84,8 +114,6 @@ functions, or plain call-site extraction?
 
 ## Next Step
 
-Extract the V6_V2 tensor-extraction codeblocks into a small reproduction
-module without changing behavior, then test that module on Ssym first.
-Only after those exposed tensors are reproduced should the engineered/PSSM
-feature-construction codeblocks be stitched into the V3 pickle reproduction
-pipeline.
+Use the recovered Set 1 scaffold to continue testing Ssym entries and then
+stitch the engineered/PSSM feature-construction codeblocks into the V3 pickle
+reproduction pipeline.
