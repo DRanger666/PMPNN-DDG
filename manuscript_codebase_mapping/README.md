@@ -43,3 +43,6 @@ Current notes:
   content-level fingerprinting pass against candidate generator notebooks.
 - `V3_PICKLE_CONTENT_FINGERPRINTING_RESULTS.md`: executed fingerprinting
   results, evidence statuses, incomplete-entry cautions, and next mapping step.
+- `tensor_extraction_codeblock_recovery/TENSOR_EXTRACTION_CODEBLOCK_RECOVERY.md`:
+  Set 1 recovery note identifying the notebook-side ProteinMPNN inference-code
+  changes that expose tensors for V3 pickle feature construction.
