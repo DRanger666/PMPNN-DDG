@@ -207,12 +207,13 @@ Known instance-level absence cases:
 For the first stitching phase, reproduce the old target behavior. Do not force
 these missing instances into the regenerated pickle yet.
 
-### 4. Reproduce ProteinMPNN-Derived Fields
+### 4. Reproduce the ProteinMPNN-DDG V3 Tensor-Extraction Segment
 
-Run the notebook-derived ProteinMPNN extraction code for a small controlled
-subset first.
+Overall target: reproduce the ProteinMPNN-DDG V3 pickle objects. The
+ProteinMPNN-derived tensor extraction is only one upstream segment of that V3
+pickle pipeline; it is not a standalone goal.
 
-Primary raw ProteinMPNN-derived fields:
+Primary ProteinMPNN-derived tensor fields:
 
 ```text
 log_prob
@@ -253,9 +254,9 @@ If outputs are not invariant, exact value-level reproduction may require the
 original RNG state and original file-processing order. That information is not
 currently known.
 
-### 5. Reproduce Engineered Fields Added After ProteinMPNN Extraction
+### 5. Reproduce Engineered/PSSM Fields Added After Tensor Extraction
 
-The target V3 pickles contain more than the seven raw ProteinMPNN neighbor
+The target V3 pickles contain more than the direct ProteinMPNN-derived tensor
 fields. They also contain scalar engineered fields and PSSM fields, including:
 
 ```text
@@ -284,17 +285,17 @@ wild_pssm
 alternate_pssm
 ```
 
-This means the V3 reproduction pipeline cannot stop at the commented
-`with open(..., "wb")` save cell near the raw ProteinMPNN extraction block.
-The regenerated object must run the later feature-construction cells before the
-V3 value-level comparison.
+This means the ProteinMPNN-DDG V3 pickle reproduction pipeline cannot stop at
+the commented `with open(..., "wb")` save cell near the tensor-extraction
+block. The regenerated object must run the later feature-construction cells
+before the V3 value-level comparison.
 
 Open evidence issue:
 
-- The extracted notebook source shows the V3 save line near the raw
-  ProteinMPNN extraction block, but the target V3 pickles contain later
-  engineered and PSSM fields. Therefore, the exact historical save timing is not
-  fully represented by the visible commented save cell. The practical
+- The extracted notebook source shows the V3 save line near the
+  ProteinMPNN-derived tensor-extraction block, but the target V3 pickles contain
+  later engineered and PSSM fields. Therefore, the exact historical save timing
+  is not fully represented by the visible commented save cell. The practical
   reproduction pipeline should save after all fields present in the target V3
   pickle have been reconstructed.
 
@@ -304,9 +305,9 @@ Do not wait for a full four-dataset run before checking.
 
 Compare in this order:
 
-1. one protein, one mutation, raw ProteinMPNN fields
-2. one protein, all mutations, raw ProteinMPNN fields
-3. one dataset, raw ProteinMPNN fields
+1. one protein, one mutation, ProteinMPNN-derived tensor fields
+2. one protein, all mutations, ProteinMPNN-derived tensor fields
+3. one dataset, ProteinMPNN-derived tensor fields
 4. one dataset, engineered fields
 5. one dataset, full V3 pickle
 6. all four datasets
@@ -388,8 +389,8 @@ Available:
    criterion before any regeneration code is trusted.
 2. Write a mutation-table audit script. It should load the local mutation/DDG
    table snapshots and report whether the initial dictionary matches the target.
-3. Reproduce Ssym initial dictionary, PDB mapping, raw ProteinMPNN fields, and
-   final engineered/PSSM fields.
+3. Reproduce Ssym initial dictionary, PDB mapping, ProteinMPNN-derived tensor
+   fields, and final engineered/PSSM fields.
 4. If Ssym matches, repeat for S_921.
 5. Then handle S_2648 and S_669 with explicit expected absence reports.
 6. Only then start the separate rerun effort for the missing instances.
