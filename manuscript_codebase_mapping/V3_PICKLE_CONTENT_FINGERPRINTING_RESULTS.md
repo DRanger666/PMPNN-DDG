@@ -62,8 +62,8 @@ statements later to avoid accidental overwrites.
 | --- | --- | --- |
 | `Ssym` | `proven` | V3 expected fields cover all 342 entries, saved execution trace covers all 15 proteins and all 342 mutation entries, and downstream V3 RF loads exist. |
 | `S_921` | `strong_candidate` | V3 expected fields cover all 921 entries and downstream V3 RF loads exist, but no saved execution trace matched the `Took ... forward-mutations` pattern. |
-| `S_2648` | `strong_candidate` | V3 expected fields exist, but they cover 2620/2648 entries. The best saved execution trace also covers 129/132 proteins and 2620/2648 mutation entries. |
-| `S_669` | `strong_candidate` | V3 expected fields exist, but they cover 638/669 entries, and no saved execution trace matched the `Took ... forward-mutations` pattern. |
+| `S_2648` | `strong_candidate` | V3 expected fields exist, but 28 mutation entries lack the ProteinMPNN-derived feature-record fields. The best saved execution trace also covers 129/132 proteins and 2620/2648 mutation entries. |
+| `S_669` | `strong_candidate` | V3 expected fields exist, but 31 `3dv0I` mutation entries lack the ProteinMPNN-derived feature-record fields, and no saved execution trace matched the `Took ... forward-mutations` pattern. |
 
 The authoritative status table is:
 
@@ -71,18 +71,22 @@ The authoritative status table is:
 pickle_analysis/v3_fingerprinting/tables/v3_dataset_evidence_status.tsv
 ```
 
-## Incomplete V3 Field Coverage
+## Instance-Level Missing ProteinMPNN Feature Records
 
-The V3 field-union match is not the same thing as per-entry completeness.
+The V3 field-union match is not the same thing as per-mutation-instance
+completeness. The issue below is not a partly populated field schema. These are
+mutation entries that retain dataset labels but do not have the
+ProteinMPNN-derived feature record needed by the RF feature assembly.
 
-For `S_2648`, the expected generator fields are absent from 28 entries across
-three proteins:
+For `S_2648`, 28 mutation entries lack the expected ProteinMPNN-derived feature
+record fields across three proteins:
 
 - `1lveA`: 17 entries
 - `2a01A`: 1 entry
 - `2immA`: 10 entries
 
-For `S_669`, the expected generator fields are absent from 31 entries, all under:
+For `S_669`, 31 mutation entries lack the expected ProteinMPNN-derived feature
+record fields, all under:
 
 - `3dv0I`: 31 entries
 
@@ -92,11 +96,23 @@ The entry-level evidence table is:
 pickle_analysis/v3_fingerprinting/tables/v3_missing_expected_fields_by_entry.tsv
 ```
 
-This matters for the manuscript-to-code map. The RF notebooks may be filtering
-to feature-bearing entries before evaluation, or these missing-feature entries
-may reflect incomplete upstream ProteinMPNN processing. We should not assume the
-manuscript evaluation used every raw mutation entry until the RF feature-matrix
-assembly is traced.
+This matters for the manuscript-to-code map. The RF feature assembly requires
+these fields. If one of these mutation entries reached the mutation-level
+feature-extraction loop, the notebook would fail rather than evaluate that
+entry. Therefore the operational question is where those mutation entries were
+excluded, most likely at protein-level mapping/skip logic before the
+mutation-level loop.
+
+For the targeted `S_669` check, see:
+
+```text
+pickle_analysis/s669_instance_coverage/tables/
+```
+
+That check confirms that the 31 `3dv0I` entries contain only `ddg` and `mut` in
+both `S_669_pmppn_info_dict_V3.pickle` and the matching
+`S_669_full_feature_dict.pickle` entries. No PSSM fields remain for these
+entries in those inspected dictionaries.
 
 ## Version-Lineage Finding
 
@@ -133,8 +149,17 @@ V3 PMPNN pickle dictionary
 -> exact RF evaluation rows and feature-column blocks
 ```
 
-For `S_2648` and `S_669`, specifically check whether the RF notebooks filter out
-the entries listed in `v3_missing_expected_fields_by_entry.tsv`. For `S_921`,
-look for an alternate saved output or notebook copy that contains the missing
-ProteinMPNN execution trace. For `Ssym`, the Stage 5 generator-to-pickle edge is
-currently proven under the written rule.
+For `S_2648` and `S_669`, specifically trace the protein-level skip/mapping
+logic that excluded the entries listed in
+`v3_missing_expected_fields_by_entry.tsv`. For `S_921`, look for an alternate
+saved output or notebook copy that contains the missing ProteinMPNN execution
+trace; the currently inspected V3 pickle itself has complete per-entry
+ProteinMPNN-derived feature records. For `Ssym`, the Stage 5
+generator-to-pickle edge is currently proven under the written rule.
+
+Later reproducibility work should reconstruct or rerun the ProteinMPNN feature
+extraction for the excluded `S_669` `3dv0I` instances and the excluded `S_2648`
+instances. The goal is to identify whether the original issue was missing PDB
+input, residue/ICODE mapping, ProteinMPNN extraction failure, or another
+upstream condition. Current manuscript numbers should not be described as
+covering those excluded mutation instances unless that is separately proven.

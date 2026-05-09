@@ -408,7 +408,7 @@
       "best_trace_all_counts_match": true,
       "best_trace_printed_mutation_sum": 2620,
       "best_trace_unique_protein_count": 129,
-      "caveats": "V3 expected generator fields are not present on all entries: ['m_n_log_prob', 'neighbor_aa_identities', 'neighbor_m_message_vector_coming_from_center', 'neighbor_m_neighbor_embedding', 'neighbor_w_message_vector_coming_from_center', 'neighbor_w_neighbor_embedding', 'w_n_log_prob'] | best saved execution trace covers 129/132 proteins and 2620/2648 mutation entries | V3 with open(..., \"wb\") save statement is commented in the inspected .ipynb.py.txt code-cell text file",
+      "caveats": "some mutation entries lack the ProteinMPNN-derived feature-record fields: ['m_n_log_prob', 'neighbor_aa_identities', 'neighbor_m_message_vector_coming_from_center', 'neighbor_m_neighbor_embedding', 'neighbor_w_message_vector_coming_from_center', 'neighbor_w_neighbor_embedding', 'w_n_log_prob'] | best saved execution trace covers 129/132 proteins and 2620/2648 mutation entries | V3 with open(..., \"wb\") save statement is commented in the inspected .ipynb.py.txt code-cell text file",
       "complete_execution_trace_coverage": false,
       "complete_v3_expected_field_coverage": false,
       "dataset": "S_2648",
@@ -446,7 +446,7 @@
       "best_trace_all_counts_match": false,
       "best_trace_printed_mutation_sum": 0,
       "best_trace_unique_protein_count": 0,
-      "caveats": "V3 expected generator fields are not present on all entries: ['m_n_log_prob', 'neighbor_aa_identities', 'neighbor_m_message_vector_coming_from_center', 'neighbor_m_neighbor_embedding', 'neighbor_w_message_vector_coming_from_center', 'neighbor_w_neighbor_embedding', 'w_n_log_prob'] | no saved execution trace matched the Took ... forward-mutations pattern | V3 with open(..., \"wb\") save statement is commented in the inspected .ipynb.py.txt code-cell text file",
+      "caveats": "some mutation entries lack the ProteinMPNN-derived feature-record fields: ['m_n_log_prob', 'neighbor_aa_identities', 'neighbor_m_message_vector_coming_from_center', 'neighbor_m_neighbor_embedding', 'neighbor_w_message_vector_coming_from_center', 'neighbor_w_neighbor_embedding', 'w_n_log_prob'] | no saved execution trace matched the Took ... forward-mutations pattern | V3 with open(..., \"wb\") save statement is commented in the inspected .ipynb.py.txt code-cell text file",
       "complete_execution_trace_coverage": false,
       "complete_v3_expected_field_coverage": false,
       "dataset": "S_669",
@@ -11952,7 +11952,7 @@
       }
     }
   },
-  "generated_at_utc": "2026-05-09T06:27:48.119899+00:00",
+  "generated_at_utc": "2026-05-09T07:02:35.690211+00:00",
   "generator_schema": [
     {
       "candidate_code_cell_text_file": "code_inventory_analysis/notebook_sources/git_sajid_additions/ProteinMPNNTesting_V6_V2.ipynb.py.txt",

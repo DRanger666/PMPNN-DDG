@@ -821,7 +821,7 @@ def build_evidence_status(
             caveats.append(f"V3 pickle missing generator fields: {sorted(v3_missing)}")
         elif not complete_v3_expected_field_coverage:
             caveats.append(
-                "V3 expected generator fields are not present on all entries: "
+                "some mutation entries lack the ProteinMPNN-derived feature-record fields: "
                 f"{sorted(v3_not_in_all_entries)}"
             )
         if not generator_schema_match:
