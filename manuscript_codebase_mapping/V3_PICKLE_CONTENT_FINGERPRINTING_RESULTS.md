@@ -85,6 +85,15 @@ record fields across three proteins:
 - `2a01A`: 1 entry
 - `2immA`: 10 entries
 
+A targeted `S_2648` check separates these into two current evidence classes:
+`1lveA` and `2immA` have saved ICODE skip evidence, while `2a01A` is absent from
+the saved execution trace without an ICODE warning. See:
+
+```text
+manuscript_codebase_mapping/S2648_INSTANCE_LEVEL_FEATURE_ABSENCE.md
+pickle_analysis/s2648_instance_coverage/tables/
+```
+
 For `S_669`, 31 mutation entries lack the expected ProteinMPNN-derived feature
 record fields, all under:
 
