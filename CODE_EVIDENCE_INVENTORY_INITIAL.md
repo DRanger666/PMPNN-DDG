@@ -38,7 +38,7 @@ Generated inventory artifacts:
 
 Generator script:
 
-- `tools/inventory_code_relationships.py`
+- `scripts/inventory_code_relationships.py`
 - `MANUSCRIPT_TABLE_FIGURE_PROVENANCE_PLAN.md`
 
 ## High-Level Relationship Model

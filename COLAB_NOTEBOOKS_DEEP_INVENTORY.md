@@ -17,7 +17,7 @@ The generated inventory artifacts are under:
 
 The inventory script is:
 
-`tools/inventory_colab_notebooks.py`
+`scripts/inventory_colab_notebooks.py`
 
 The script reads notebook JSON, source text, notebook output metadata, and text
 outputs. It does not execute notebooks and does not unpickle old result
@@ -460,4 +460,3 @@ Weak or unresolved evidence:
 5. Build a table mapping each manuscript figure/table to:
    source notebook, cell number, source hash, output hash/text, and artifact
    file if any.
-

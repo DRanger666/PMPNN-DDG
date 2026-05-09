@@ -34,3 +34,5 @@ Current notes:
   extraction to RF evaluation.
 - `TRAIN_TEST_FIGURE_TABLE_ANCHOR.md`: dataset-role anchor for figures and
   tables.
+- `V3_PICKLE_CONTENT_FINGERPRINTING_PLAN.md`: exact plan for the next
+  content-level fingerprinting pass against candidate generator notebooks.

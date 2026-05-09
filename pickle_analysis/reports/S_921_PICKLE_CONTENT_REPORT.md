@@ -27,7 +27,7 @@ inputs under `pickle_analysis/S_921_target_pickles`.
 
 Inspection script:
 
-`tools/inspect_s921_pickles.py`
+`scripts/inspect_s921_pickles.py`
 
 Environment:
 
