@@ -142,6 +142,9 @@ functions, or plain call-site extraction?
   from V3 pickle field to exposed tensor or direct code value.
 - `tables/old_fork_proteinmpnn_history.tsv`: commits touching old fork
   ProteinMPNN source files.
+- `PROTEINMPNNTESTING_V7_TARGETED_AUDIT.md`: targeted audit showing that
+  `ProteinMPNNTesting_V7.ipynb` is an S_2648 feature-analysis/PSSM notebook,
+  not a direct V3 tensor-generation source.
 
 ## Current Debugging Boundary
 
