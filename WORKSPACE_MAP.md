@@ -78,8 +78,9 @@ workspace.
 
 - `workspace_operations/`
   - Workspace-level operating rules, workstream boundaries, session/worktree
-    coordination, package-role decisions, and Git-tracking policy. This
-    directory should stay clean and should not become a generic notes folder.
+    coordination, package-role decisions, runtime-environment contracts, and
+    Git-tracking policy. This directory should stay clean and should not become
+    a generic notes folder.
 
 ## Root Files
 
@@ -109,7 +110,8 @@ These root items may exist locally but are not durable project evidence:
 
 - `.venv_proteinmpnn_ddg_reproduction/`
   - Current local Python environment for ProteinMPNN-DDG recovery and
-    reproduction work.
+    reproduction work. Its operating role is documented in
+    `workspace_operations/RUNTIME_ENVIRONMENT.md`.
 
 - `.git/`
   - Git repository metadata.

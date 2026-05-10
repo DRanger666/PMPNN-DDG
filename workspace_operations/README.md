@@ -13,6 +13,7 @@ Belongs here:
 - workstream boundaries;
 - Codex-session and Git-worktree coordination rules;
 - package-role and update-discipline decisions;
+- runtime-environment operating contracts;
 - Git-tracking policy and other workspace-wide operating constraints;
 - concise status summaries, if later needed, that point to detailed evidence
   instead of duplicating it.
@@ -26,6 +27,9 @@ Does not belong here:
 - generated data tables;
 - one-off scratch notes.
 
+If information is important but would clutter this directory, create or use a
+more specific home for it and make the route visible from `WORKSPACE_MAP.md`.
+
 Current documents:
 
 - `WORKSTREAM_SEPARATION.md`: separates historical recovery/reproduction,
@@ -34,5 +38,7 @@ Current documents:
   and two-Git-worktree/branch operating plan, with terminology rules.
 - `RECOVERY_PACKAGE_ROLE.md`: defines the role, boundaries, and update
   discipline for the `proteinmpnn_ddg_recovery/` Python package.
+- `RUNTIME_ENVIRONMENT.md`: defines the role, inspection commands, and update
+  discipline for the local Python runtime used by recovery/reproduction work.
 - `WORKSPACE_GIT_TRACKING.md`: defines tracked versus ignored workspace
   artifacts and the promotion rule for normally ignored evidence.
