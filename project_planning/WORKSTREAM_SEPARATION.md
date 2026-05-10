@@ -38,7 +38,7 @@ Primary locations:
 
 - `manuscript_codebase_mapping/`
 - `pickle_analysis/`
-- `proteinmpnn_ddg/`
+- `proteinmpnn_ddg_recovery/`
 - `scripts/`
 
 ## Workstream 2: Algorithm Design And Implication Analysis

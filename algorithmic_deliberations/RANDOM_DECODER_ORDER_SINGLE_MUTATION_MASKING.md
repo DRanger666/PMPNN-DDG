@@ -47,9 +47,9 @@ The recovered V6_V2-style forward path uses:
 
 Relevant code:
 
-- `proteinmpnn_ddg/recovered_v6v2.py`: patched `ProteinMPNN.forward`
-- `proteinmpnn_ddg/recovered_v6v2.py`: `fixed_positions_dict_for_one_designable_position`
-- `proteinmpnn_ddg/recovered_v6v2.py`: `featurize_for_one_designable_position`
+- `proteinmpnn_ddg_recovery/recovered_v6v2.py`: patched `ProteinMPNN.forward`
+- `proteinmpnn_ddg_recovery/recovered_v6v2.py`: `fixed_positions_dict_for_one_designable_position`
+- `proteinmpnn_ddg_recovery/recovered_v6v2.py`: `featurize_for_one_designable_position`
 
 With one designable position, `chain_M * chain_M_pos * mask` has exactly one
 nonzero entry. That pushes the designable residue to the end of the order, while

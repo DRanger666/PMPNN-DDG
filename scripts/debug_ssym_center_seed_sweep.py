@@ -24,7 +24,7 @@ WORKSPACE_ROOT = Path(__file__).resolve().parents[1]
 if str(WORKSPACE_ROOT) not in sys.path:
     sys.path.insert(0, str(WORKSPACE_ROOT))
 
-from proteinmpnn_ddg.recovered_v6v2 import (  # noqa: E402
+from proteinmpnn_ddg_recovery.recovered_v6v2 import (  # noqa: E402
     DEFAULT_SSYM_PDB_DIR,
     build_residue_index_map,
     featurize_for_one_designable_position,

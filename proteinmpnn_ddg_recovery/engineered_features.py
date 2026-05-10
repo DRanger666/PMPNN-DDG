@@ -21,7 +21,7 @@ import numpy as np
 from scipy.special import expit, kl_div, softmax
 from scipy.stats import entropy
 
-from proteinmpnn_ddg.recovered_v6v2 import AA_TO_INDEX
+from proteinmpnn_ddg_recovery.recovered_v6v2 import AA_TO_INDEX
 
 
 WORKSPACE_ROOT = Path(__file__).resolve().parents[1]

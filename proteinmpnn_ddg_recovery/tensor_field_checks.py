@@ -8,7 +8,7 @@ from typing import Any
 
 import numpy as np
 
-from proteinmpnn_ddg.recovered_v6v2 import V3_TENSOR_FIELDS
+from proteinmpnn_ddg_recovery.recovered_v6v2 import V3_TENSOR_FIELDS
 
 
 SCHEMA_FIELDNAMES = [

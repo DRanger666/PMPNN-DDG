@@ -18,7 +18,7 @@ Primary V6_V2 notebooks with all direct V3 tensor-field assignments: True.
 The V6_V2 tensor-extraction behavior is now represented in a small workspace
 module:
 
-- `proteinmpnn_ddg/recovered_v6v2.py`
+- `proteinmpnn_ddg_recovery/recovered_v6v2.py`
 
 This module keeps the scope narrow: it loads the recovered ProteinMPNN utility
 source, applies the two V6_V2 tensor-return changes, and exposes helpers for

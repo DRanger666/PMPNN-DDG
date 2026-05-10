@@ -126,7 +126,7 @@ def load_proteinmpnn_utils(utils_path: Path = DEFAULT_UTILS_PATH) -> types.Modul
     if not utils_path.exists():
         raise FileNotFoundError(f"ProteinMPNN utility source not found: {utils_path}")
 
-    module_name = "proteinmpnn_ddg_recovered_v6v2_utils"
+    module_name = "proteinmpnn_ddg_recovery_recovered_v6v2_utils"
     spec = importlib.util.spec_from_file_location(module_name, utils_path)
     if spec is None or spec.loader is None:
         raise ImportError(f"Could not create import spec for {utils_path}")

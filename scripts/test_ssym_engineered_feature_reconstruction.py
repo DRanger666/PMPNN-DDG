@@ -27,16 +27,16 @@ WORKSPACE_ROOT = Path(__file__).resolve().parents[1]
 if str(WORKSPACE_ROOT) not in sys.path:
     sys.path.insert(0, str(WORKSPACE_ROOT))
 
-from proteinmpnn_ddg.engineered_features import (  # noqa: E402
+from proteinmpnn_ddg_recovery.engineered_features import (  # noqa: E402
     DEFAULT_SSYM_PSSM_DIR,
     V3_ENGINEERED_AND_PSSM_FIELDS,
     compute_v3_engineered_and_pssm_features,
 )
-from proteinmpnn_ddg.recovered_v6v2 import (  # noqa: E402
+from proteinmpnn_ddg_recovery.recovered_v6v2 import (  # noqa: E402
     DEFAULT_SSYM_PDB_DIR,
     build_residue_index_map,
 )
-from proteinmpnn_ddg.tensor_field_checks import write_tsv  # noqa: E402
+from proteinmpnn_ddg_recovery.tensor_field_checks import write_tsv  # noqa: E402
 
 
 DEFAULT_TARGET_PICKLE = (
