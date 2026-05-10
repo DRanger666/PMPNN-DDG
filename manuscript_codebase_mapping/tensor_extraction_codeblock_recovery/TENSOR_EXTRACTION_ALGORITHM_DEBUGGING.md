@@ -84,6 +84,15 @@ order. The V6_V2 code uses:
 
 `decoding_order = torch.argsort((chain_M + 0.0001) * torch.abs(randn))`
 
+Important nuance: even when exactly one residue is designable, random decoder
+order can still affect extracted tensors. The designable residue is last, but
+the fixed residues are randomly ordered before it, and their decoder hidden
+states are still updated. Later decoder layers can therefore pass order-
+conditioned fixed-residue states into the designable residue. This issue is
+tracked separately as a scientific/method note:
+
+- `../../algorithmic_deliberations/RANDOM_DECODER_ORDER_SINGLE_MUTATION_MASKING.md`
+
 The current all-entry script also resets the PyTorch seed per mutation entry.
 That is not how the notebook code reads: the notebook appears to consume the
 runtime RNG stream continuously as it loops through proteins, mutations, and
