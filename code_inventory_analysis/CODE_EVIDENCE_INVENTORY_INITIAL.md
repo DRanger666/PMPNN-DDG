@@ -39,7 +39,7 @@ Generated inventory artifacts:
 Generator script:
 
 - `scripts/inventory_code_relationships.py`
-- `MANUSCRIPT_TABLE_FIGURE_PROVENANCE_PLAN.md`
+- `manuscript_codebase_mapping/MANUSCRIPT_TABLE_FIGURE_PROVENANCE_PLAN.md`
 
 ## High-Level Relationship Model
 
@@ -288,7 +288,7 @@ matches the manuscript feature family at the current evidence level.
 
 The detailed equation-to-code mapping is recorded in:
 
-- `FEATURE_EQUATION_CODE_MAPPING_INITIAL.md`
+- `manuscript_codebase_mapping/FEATURE_EQUATION_CODE_MAPPING_INITIAL.md`
 
 Remaining caution:
 
@@ -357,8 +357,8 @@ mapping pass:
    - `incremental_feature_result_dict.pickle`
    - `list_incremental_feature_result_dict.pickle`
 3. Avoid unpickling large model artifacts until there is a sandboxed plan.
-4. Use `FEATURE_EQUATION_CODE_MAPPING_INITIAL.md` as the entry point for the
-   now-resolved feature E index question.
+4. Use `manuscript_codebase_mapping/FEATURE_EQUATION_CODE_MAPPING_INITIAL.md`
+   as the entry point for the now-resolved feature E index question.
 5. Search for missing `ACCRE_PyRun_Setup` evidence only after this mapping is
    explicit, so any found files can be classified instead of dumped into the
    workspace blindly.

@@ -2,62 +2,121 @@
 
 Date: 2026-05-10
 
-Purpose: quick map of the major workspace directories and their intended roles.
+Purpose: first-navigation helper for the workspace root.
 
-This workspace is for recovering, reproducing, and later extending the 2022
-ProteinMPNN-DDG work. Directory names should make ownership and evidence status
-clear.
+This file should answer one question quickly: what does each root-level item do,
+and where should a person go next? It is not a status log, evidence notebook, or
+decision archive.
 
-## Active Recovery Code
+## Maintenance Rule
 
-- `proteinmpnn_ddg_recovery/`
-  - Workspace-local Python package for recovered/reproduction code.
-  - Built gradually from recovered notebook/code evidence.
-  - Imported by scripts under `scripts/`.
-  - Behavior changes here can change downstream analysis scripts.
-  - This is not the final cleaned ProteinMPNN-DDG package.
+Keep this file current whenever a root-level file or directory is created,
+renamed, moved, or given a new role.
 
-- `scripts/`
-  - Runnable analysis, audit, comparison, and reproduction scripts.
-  - Scripts should import reusable recovered logic from
-    `proteinmpnn_ddg_recovery/` instead of duplicating it.
+If a root-level item cannot be described here with a clear and useful purpose,
+move it to the right subdirectory, rename it, or remove it from the durable
+workspace.
 
-## Evidence And Analysis Areas
+## Root Directories
+
+- `algorithmic_deliberations/`
+  - Scientific/method-level analysis for tensor-generation behavior,
+    robustness questions, reviewer-facing implications, and future method
+    design. This is not historical reproduction evidence by itself.
+
+- `code_inventory_analysis/`
+  - Generated inventories and summary notes about the old ProteinMPNN fork,
+    copied code evidence, notebook/source relationships, and source-repo
+    provenance.
+
+- `colab_notebooks_inventory_analysis/`
+  - Generated inventories, source exports, output-text exports, and
+    cross-comparisons for copied 2022 Colab notebooks and Git-side notebooks.
 
 - `drive_evidence_copy/`
-  - Timestamp-preserving local copy of selected Drive evidence.
-  - Bulk copied payloads are not tracked by Git by default.
+  - Timestamp-preserving local evidence-copy manifests, rsync logs, and copied
+    Drive payloads. Bulk copied payloads under
+    `drive_evidence_copy/sajidahmedprotres_drive/` are ignored by Git unless
+    deliberately promoted.
 
-- `source_repos/`
-  - Local clones of source/reference repositories.
-  - Treated as evidence inputs, not code owned by this workspace repo.
-
-- `manuscript_inventory_analysis/`
-  - Inventory of manuscript-folder contents, extracted text, metadata,
-    comparisons, and manuscript-file relationships.
+- `external_reference_structures/`
+  - Downloaded external reference structure/metadata checks used to interpret
+    historical dataset issues, currently including the S_669 `3DV0` reference
+    check.
 
 - `manuscript_codebase_mapping/`
   - Evidence linking manuscript numbers, figures, tables, notebook cells,
     pickles, datasets, and upstream ProteinMPNN-derived artifacts.
 
+- `manuscript_inventory_analysis/`
+  - Inventory of copied manuscript-folder contents, extracted text, document
+    metadata, tracked-change/comment artifacts, comparisons, and manuscript
+    file relationships.
+
 - `pickle_analysis/`
-  - Pickle inspection, schema/field summaries, instance-coverage notes, and
-    value-comparison outputs.
+  - Pickle inspection reports, schema/field summaries, instance-coverage notes,
+    mutation-table audits, and value-comparison outputs.
 
-- `algorithmic_deliberations/`
-  - Scientific/method-level analysis that may matter for manuscript framing,
-    robustness, reviewer response, or future method design.
+- `proteinmpnn_ddg_recovery/`
+  - Workspace-local Python package for recovered ProteinMPNN-DDG reproduction
+    code. Scripts import reusable recovery logic from here; edits can change
+    downstream script behavior.
 
-- `project_planning/`
-  - Workflow-level decision records that govern how this workspace is operated.
+- `reproduction_inputs/`
+  - Local input tables and manifests needed for reproduction attempts, including
+    mutation/DDG tables for S_2648, S_669, S_921, and Ssym.
 
-## Current Workflow Anchor
+- `scripts/`
+  - Runnable analysis, audit, comparison, and reproduction scripts. Reusable
+    logic should live in `proteinmpnn_ddg_recovery/`, not be duplicated across
+    scripts.
 
-Historical recovery should use `proteinmpnn_ddg_recovery/` for shared recovered
-logic and `scripts/` for executable analyses. When a script result changes after
-editing `proteinmpnn_ddg_recovery/`, the change should be treated as a package
-behavior change, not an isolated script change.
+- `source_repos/`
+  - Local clones of source/reference repositories used as evidence inputs.
+    Nested repository contents are ignored by this workspace Git repo unless a
+    small derived note or manifest is deliberately tracked elsewhere.
 
-Algorithmic redesign ideas should first be recorded under
-`algorithmic_deliberations/` and should not silently overwrite the historical
-recovery target.
+- `workspace_operations/`
+  - Workspace-level operating rules, workstream boundaries, session/worktree
+    coordination, package-role decisions, and Git-tracking policy. This
+    directory should stay clean and should not become a generic notes folder.
+
+## Root Files
+
+- `WORKSPACE_MAP.md`
+  - This first-navigation map. Keep it short, accurate, and synchronized with
+    the actual root.
+
+- `RESUME_CODEX_THREAD.md`
+  - Local resume note for returning to this Codex thread/workspace context.
+
+- `.gitignore`
+  - Tracked ignore policy for runtime scaffolding, copied evidence payloads,
+    nested source clones, Python residue, and large binary artifacts.
+
+## Local Runtime Items
+
+These root items may exist locally but are not durable project evidence:
+
+- `.agents/`
+  - Local agent/runtime scaffolding ignored by Git.
+
+- `.codex/`
+  - Local Codex/runtime scaffolding ignored by Git.
+
+- `.venv_pickle_analysis/`
+  - Earlier local Python environment created for pickle inspection.
+
+- `.venv_proteinmpnn_ddg_reproduction/`
+  - Current local Python environment for ProteinMPNN-DDG recovery and
+    reproduction work.
+
+- `.git/`
+  - Git repository metadata.
+
+## Root Hygiene
+
+The root should stay sparse. Detailed evidence notes, generated reports,
+analysis outputs, and workflow policies belong in the named directories above.
+
+When adding a new durable root item, update this file in the same commit.

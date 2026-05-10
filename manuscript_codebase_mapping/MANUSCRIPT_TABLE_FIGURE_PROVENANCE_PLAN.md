@@ -43,8 +43,8 @@ that exact source instead.
 
 Detailed feature-equation evidence is in:
 
-- `FEATURE_EQUATION_CODE_MAPPING_INITIAL.md`
-- `COLAB_NOTEBOOKS_DEEP_INVENTORY.md`
+- `manuscript_codebase_mapping/FEATURE_EQUATION_CODE_MAPPING_INITIAL.md`
+- `colab_notebooks_inventory_analysis/COLAB_NOTEBOOKS_DEEP_INVENTORY.md`
 
 ## Provenance Targets
 
@@ -67,7 +67,8 @@ For each item, record:
 
 1. Saved notebooks with executed outputs, if available.
    The current deep inventory of the copied Drive `Colab Notebooks` folder and
-   the Git-side notebook copies is in `COLAB_NOTEBOOKS_DEEP_INVENTORY.md`.
+   the Git-side notebook copies is in
+   `colab_notebooks_inventory_analysis/COLAB_NOTEBOOKS_DEEP_INVENTORY.md`.
 2. Result pickles that store final numerical summaries:
    - `feature_combo_result_dict.pickle`
    - `S_669_feature_combo_result_dict.pickle`

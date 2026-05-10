@@ -302,7 +302,7 @@ in the final model input.
 2. Feature B needs manuscript cleanup if the manuscript numbers are confirmed
    to come from this final code path and the manuscript does not describe its
    message-ratio weighting. This is also recorded as an open provenance item in
-   `MANUSCRIPT_TABLE_FIGURE_PROVENANCE_PLAN.md`.
+   `manuscript_codebase_mapping/MANUSCRIPT_TABLE_FIGURE_PROVENANCE_PLAN.md`.
 3. The notebook comments at `Quick_Dirty_MPNN_ML_V2_VGRAPHS_V1.ipynb.py.txt`
    around column `61..70` say "neighbor_kpca_features" for reverse message
    KPCA. That looks like a stale copy-paste comment; the variables used there

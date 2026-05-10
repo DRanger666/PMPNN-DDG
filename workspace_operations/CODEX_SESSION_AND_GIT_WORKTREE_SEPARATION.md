@@ -79,7 +79,7 @@ Communication should happen through durable artifacts first:
 
 - commits;
 - notes under `algorithmic_deliberations/`;
-- planning notes under `project_planning/`;
+- operating notes under `workspace_operations/`;
 - explicit prompts from the user pointing one session to the other session's
   notes or commits.
 
