@@ -41,6 +41,10 @@ Primary locations:
 - `proteinmpnn_ddg_recovery/`
 - `scripts/`
 
+The package-level workflow role of `proteinmpnn_ddg_recovery/` is tracked in:
+
+- `RECOVERY_PACKAGE_ROLE.md`
+
 ## Workstream 2: Algorithm Design And Implication Analysis
 
 Goal: understand whether the tensor-generation and feature-engineering
