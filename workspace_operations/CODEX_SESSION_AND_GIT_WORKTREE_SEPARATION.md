@@ -104,13 +104,24 @@ change:
 - Manuscript-facing decision -> defer until synthesis work explicitly uses both
   recovery evidence and algorithmic analysis.
 
-## Current Status
+## Status Verification
 
-As of this note:
+Do not rely on this note as proof of current Git or Codex state. Verify the
+state directly before acting.
 
-- The current workspace is the Main recovery session workspace.
-- The `main` branch is the recovery/reproduction branch.
-- The Algorithmic Codex session and algorithmic Git worktree branch have not
-  yet been created.
-- The exact Codex session UUID still needs to be verified before generating a
-  fork command.
+Useful checks:
+
+```bash
+git status --short --branch
+git worktree list
+git branch --list algorithmic-deliberations
+```
+
+The intended algorithmic worktree path is:
+
+```text
+/home/mpr/proteinmpnn_ddg_algorithmic_deliberations
+```
+
+The exact Codex session UUID must still be verified from local Codex session
+metadata immediately before emitting or running a `codex fork` command.
