@@ -3,7 +3,11 @@
 .codex/
 
 # Copied primary evidence payloads: keep manifests/logs tracked, not the bulk copy.
-drive_evidence_copy/sajidahmedprotres_drive/
+drive_evidence_copy/sajidahmedprotres_drive/*
+
+# The cleaned 2022 manuscript folder is core project evidence and is tracked.
+!drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/
+!drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/**
 
 # Nested source clones are evidence inputs, not files owned by this workspace repo.
 source_repos/

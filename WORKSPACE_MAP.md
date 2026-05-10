@@ -36,9 +36,10 @@ workspace.
 
 - `drive_evidence_copy/`
   - Timestamp-preserving local evidence-copy manifests, rsync logs, and copied
-    Drive payloads. Bulk copied payloads under
-    `drive_evidence_copy/sajidahmedprotres_drive/` are ignored by Git unless
-    deliberately promoted.
+    Drive payloads. The cleaned manuscript evidence folder under
+    `drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/` is
+    deliberately tracked; other bulk copied payloads remain ignored unless
+    explicitly promoted.
 
 - `external_reference_structures/`
   - Downloaded external reference structure/metadata checks used to interpret

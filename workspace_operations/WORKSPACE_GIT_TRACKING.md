@@ -12,11 +12,16 @@ This repository is a local-only provenance repo for the
 - Generated inventory TSVs and source-only notebook exports.
 - Rsync manifests and logs documenting copied evidence provenance.
 - Small text summaries derived from controlled inspection of old artifacts.
+- The cleaned manuscript evidence folder at
+  `drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/`, because
+  the manuscript is the anchor artifact for recovery, reproduction, and
+  algorithmic-deliberation work.
 
 ## Do Not Track By Default
 
 - Copied Drive evidence payloads under
-  `drive_evidence_copy/sajidahmedprotres_drive/`.
+  `drive_evidence_copy/sajidahmedprotres_drive/`, except explicitly promoted
+  evidence such as the cleaned manuscript folder.
 - Nested cloned repositories under `source_repos/`.
 - Binary model/result artifacts such as pickle, NumPy, PyTorch, or joblib files.
 - Runtime scaffolding under `.agents/` and `.codex/`.
