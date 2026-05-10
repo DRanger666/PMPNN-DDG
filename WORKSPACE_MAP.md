@@ -2,7 +2,8 @@
 
 Date: 2026-05-10
 
-Purpose: first-navigation helper for the workspace root.
+Purpose: first-navigation helper for this physical workspace root:
+`/home/mpr/github_account_history_porting_2022_continuation`.
 
 This file should answer one question quickly: what does each root-level item do,
 and where should a person go next? It is not a status log, evidence notebook, or
@@ -10,8 +11,8 @@ decision archive.
 
 ## Maintenance Rule
 
-Keep this file current whenever a root-level file or directory is created,
-renamed, moved, or given a new role.
+Keep this file current whenever a root-level file or directory in this physical
+worktree is created, renamed, moved, or given a new role.
 
 If a root-level item cannot be described here with a clear and useful purpose,
 move it to the right subdirectory, rename it, or remove it from the durable
@@ -94,7 +95,8 @@ workspace.
 
 ## Local Runtime Items
 
-These root items may exist locally but are not durable project evidence:
+These root items exist in this physical worktree but are not durable project
+evidence:
 
 - `.agents/`
   - Local agent/runtime scaffolding ignored by Git.
