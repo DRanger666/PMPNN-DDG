@@ -13,6 +13,8 @@ Belongs here:
 - workstream boundaries;
 - current recovery-boundary summaries;
 - Codex-session and Git-worktree coordination rules;
+- path-reference discipline for relative paths, absolute paths, and
+  cross-worktree write safety;
 - package-role and update-discipline decisions;
 - runtime-environment operating contracts;
 - Git-tracking policy and other workspace-wide operating constraints;
@@ -39,6 +41,9 @@ Current documents:
   algorithm design/implication analysis, and later manuscript synthesis.
 - `CODEX_SESSION_AND_GIT_WORKTREE_SEPARATION.md`: defines the two-Codex-session
   and two-Git-worktree/branch operating plan, with terminology rules.
+- `PATH_REFERENCE_DISCIPLINE.md`: defines when to use relative paths, when
+  absolute paths are justified, and how scripts should avoid writing into the
+  wrong worktree.
 - `RECOVERY_PACKAGE_ROLE.md`: defines the role, boundaries, and update
   discipline for the `proteinmpnn_ddg_recovery/` Python package.
 - `RUNTIME_ENVIRONMENT.md`: defines the role, inspection commands, and update

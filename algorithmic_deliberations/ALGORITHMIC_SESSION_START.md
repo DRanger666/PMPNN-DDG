@@ -12,8 +12,9 @@ Start with these files, in this order:
 1. `workspace_operations/CURRENT_RECOVERY_BOUNDARY.md`
 2. `workspace_operations/CODEX_SESSION_AND_GIT_WORKTREE_SEPARATION.md`
 3. `workspace_operations/RUNTIME_ENVIRONMENT.md`
-4. `algorithmic_deliberations/RANDOM_DECODER_ORDER_SINGLE_MUTATION_MASKING.md`
-5. `manuscript_codebase_mapping/tensor_extraction_codeblock_recovery/TENSOR_EXTRACTION_ALGORITHM_DEBUGGING.md`
+4. `workspace_operations/PATH_REFERENCE_DISCIPLINE.md`
+5. `algorithmic_deliberations/RANDOM_DECODER_ORDER_SINGLE_MUTATION_MASKING.md`
+6. `manuscript_codebase_mapping/tensor_extraction_codeblock_recovery/TENSOR_EXTRACTION_ALGORITHM_DEBUGGING.md`
 
 ## Current Proven Boundary
 
@@ -89,3 +90,8 @@ algorithmic worktree and record that decision.
 
 Do not silently install packages into the main workspace venv from the
 algorithmic worktree.
+
+Also follow `workspace_operations/PATH_REFERENCE_DISCIPLINE.md`: repository
+paths should usually be relative to the current worktree, while absolute paths
+should be reserved for live mounts, separate worktree locations, shared runtime
+environments, and exact command lines where the physical location is the point.

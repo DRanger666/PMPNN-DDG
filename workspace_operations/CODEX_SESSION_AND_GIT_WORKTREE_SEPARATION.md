@@ -87,6 +87,17 @@ The main recovery session can inspect the algorithmic worktree when needed, but
 it should treat that work as a separate line of inquiry until deliberately
 merged.
 
+## Path Discipline
+
+The two-worktree setup depends on path discipline. Repository-internal notes and
+script defaults should use paths relative to the current worktree unless an
+absolute machine path is intentionally required.
+
+Use:
+
+- `PATH_REFERENCE_DISCIPLINE.md` for relative-path and absolute-path rules;
+- `RUNTIME_ENVIRONMENT.md` for the shared main-workspace venv rule.
+
 ## Merge Discipline
 
 The Algorithmic Codex session may produce method notes or experiments that are
