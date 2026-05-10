@@ -157,12 +157,22 @@ These appear to be the main dataset-specific notebooks that generate
 | `S_669` | `S669_ProteinMPNNTesting_V6_V2.ipynb` | `/content/drive/MyDrive/ACCRE_PyRun_Setup/Data_s669_with_predictions.csv` | `/content/drive/MyDrive/ACCRE_PyRun_Setup/S_669_PDB_Files` | `/content/drive/MyDrive/ACCRE_PyRun_Setup/S_669_pssm_dir` | `S_669_pmppn_info_dict_V3.pickle` |
 | `Ssym` | `Ssym_ProteinMPNNTesting_V6_V2.ipynb` | PremPS GitHub `Datasets/Eight test sets/Ssym.txt` | `/content/drive/MyDrive/ACCRE_PyRun_Setup/Ssym_PDB_Files` | `/content/drive/MyDrive/ACCRE_PyRun_Setup/Ssym_pssm_dir` | `Ssym_pmppn_info_dict_V3.pickle` |
 
-Important missing-evidence point:
+Historical missing-evidence point from the initial inventory:
 
 - The `ACCRE_PyRun_Setup` folder, dataset PDB directories, PSSM directories,
   and `Data_s669_with_predictions.csv` were not found inside this workspace
   copy. The generated pickles are present, but the raw PDB/PSSM/CSV inputs
-  needed to rerun feature extraction are not currently present here.
+  needed to rerun feature extraction were not present in the workspace at that
+  time.
+
+Current status:
+
+- This initial-inventory finding has since been resolved for the dataset-input
+  layer. The workspace now contains a deliberately selected local snapshot at
+  `drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/`.
+- That local snapshot contains the four dataset PDB/PSSM directory pairs and
+  `Data_s669_with_predictions.csv`. It is not a full mirror of the original
+  FUSE-mount folder with the same name.
 
 ### Family 3: ML, Feature Assembly, Result Tables, and Figures
 
@@ -324,9 +334,13 @@ Not yet reproducible from current evidence alone:
 - Clean runnable tools or notebooks, because the observed notebooks are still
   Colab/path-specific and heavily stateful.
 
-## Missing Evidence Watchlist
+## Historical Missing Evidence Watchlist
 
-Search next, if needed:
+This list reflects the initial inventory state. The ACCRE dataset-input items
+below were later recovered as a selected local snapshot, not as a full mirror of
+the original FUSE-mount folder.
+
+Previously missing:
 
 - `ACCRE_PyRun_Setup/`
 - `Data_s669_with_predictions.csv`
@@ -359,6 +373,6 @@ mapping pass:
 3. Avoid unpickling large model artifacts until there is a sandboxed plan.
 4. Use `manuscript_codebase_mapping/FEATURE_EQUATION_CODE_MAPPING_INITIAL.md`
    as the entry point for the now-resolved feature E index question.
-5. Search for missing `ACCRE_PyRun_Setup` evidence only after this mapping is
-   explicit, so any found files can be classified instead of dumped into the
-   workspace blindly.
+5. Treat the local `ACCRE_PyRun_Setup/` path as the selected dataset-input
+   snapshot. Do not search or import broader original-mount ACCRE material
+   unless a specific recovery task requires it.
