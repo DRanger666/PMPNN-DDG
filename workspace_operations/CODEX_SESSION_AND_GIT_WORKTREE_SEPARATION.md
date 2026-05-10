@@ -98,6 +98,20 @@ Use:
 - `PATH_REFERENCE_DISCIPLINE.md` for relative-path and absolute-path rules;
 - `RUNTIME_ENVIRONMENT.md` for the shared main-workspace venv rule.
 
+## Workspace Map Discipline
+
+`WORKSPACE_MAP.md` is a first-navigation helper for the physical worktree root
+where it lives.
+
+Once two Git worktrees have different root-level files or directories, their
+`WORKSPACE_MAP.md` files should diverge deliberately. Each map should describe
+the root items that actually exist in that physical checkout, including ignored
+local items when they are important for navigation.
+
+Do not force identical workspace maps across `main` and
+`algorithmic-deliberations` just because both branches share repository
+history.
+
 ## Merge Discipline
 
 The Algorithmic Codex session may produce method notes or experiments that are
