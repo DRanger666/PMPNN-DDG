@@ -78,9 +78,9 @@ workspace.
 
 - `workspace_operations/`
   - Workspace-level operating rules, workstream boundaries, session/worktree
-    coordination, package-role decisions, runtime-environment contracts, and
-    Git-tracking policy. This directory should stay clean and should not become
-    a generic notes folder.
+    coordination, recovery-boundary anchors, package-role decisions,
+    runtime-environment contracts, and Git-tracking policy. This directory
+    should stay clean and should not become a generic notes folder.
 
 ## Root Files
 

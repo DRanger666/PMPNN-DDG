@@ -11,6 +11,7 @@ This directory must stay clean. It is not a generic notes folder.
 Belongs here:
 
 - workstream boundaries;
+- current recovery-boundary summaries;
 - Codex-session and Git-worktree coordination rules;
 - package-role and update-discipline decisions;
 - runtime-environment operating contracts;
@@ -32,6 +33,8 @@ more specific home for it and make the route visible from `WORKSPACE_MAP.md`.
 
 Current documents:
 
+- `CURRENT_RECOVERY_BOUNDARY.md`: states the current reproduced segment, the
+  unresolved direct-tensor segment, and the main/fork work ownership boundary.
 - `WORKSTREAM_SEPARATION.md`: separates historical recovery/reproduction,
   algorithm design/implication analysis, and later manuscript synthesis.
 - `CODEX_SESSION_AND_GIT_WORKTREE_SEPARATION.md`: defines the two-Codex-session
