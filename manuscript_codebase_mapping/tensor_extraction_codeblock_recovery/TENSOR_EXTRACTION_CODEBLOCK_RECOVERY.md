@@ -145,6 +145,10 @@ functions, or plain call-site extraction?
 - `PROTEINMPNNTESTING_V7_TARGETED_AUDIT.md`: targeted audit showing that
   `ProteinMPNNTesting_V7.ipynb` is an S_2648 feature-analysis/PSSM notebook,
   not a direct V3 tensor-generation source.
+- `PICKLE_ARTIFACT_REUSE_TENSOR_REPRODUCIBILITY_HYPOTHESIS.md`: working
+  hypothesis that downstream notebooks reused saved PMPNN info pickles, which
+  could explain why upstream direct-tensor reproducibility issues did not
+  surface during the original 2022 work.
 
 ## Current Debugging Boundary
 
