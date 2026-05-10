@@ -16,12 +16,17 @@ This repository is a local-only provenance repo for the
   `drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/`, because
   the manuscript is the anchor artifact for recovery, reproduction, and
   algorithmic-deliberation work.
+- The ACCRE reproduction-input subset at
+  `drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/`, because it
+  contains dataset PDB files, PSSM files, and the S_669 mutation/prediction CSV
+  needed for ProteinMPNN-DDG reproduction attempts.
 
 ## Do Not Track By Default
 
 - Copied Drive evidence payloads under
   `drive_evidence_copy/sajidahmedprotres_drive/`, except explicitly promoted
-  evidence such as the cleaned manuscript folder.
+  evidence such as the cleaned manuscript folder and the ACCRE
+  reproduction-input subset.
 - Nested cloned repositories under `source_repos/`.
 - Binary model/result artifacts such as pickle, NumPy, PyTorch, or joblib files.
 - Runtime scaffolding under `.agents/` and `.codex/`.
