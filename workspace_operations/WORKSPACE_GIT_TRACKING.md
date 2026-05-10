@@ -20,6 +20,17 @@ This repository is a local-only provenance repo for the
 - Nested cloned repositories under `source_repos/`.
 - Binary model/result artifacts such as pickle, NumPy, PyTorch, or joblib files.
 - Runtime scaffolding under `.agents/` and `.codex/`.
+- `RESUME_CODEX_THREAD.md`, because it is a workspace-local operational resume
+  index. It must not propagate across branches, Git worktrees, clones, or
+  unrelated physical workspaces.
+
+## Resume Note Rule
+
+`RESUME_CODEX_THREAD.md` is local runtime state, not repository evidence.
+
+Keep it untracked and ignored locally. A separate physical workspace or Git
+worktree should create its own resume note only when that note points to
+sessions that are operationally relevant from that directory.
 
 ## Promotion Rule
 
@@ -37,4 +48,3 @@ Inside the current Codex sandbox, `.git` may appear as an empty read-only
 `tmpfs` mountpoint. The real `.git` directory exists outside that sandbox mask.
 For root-level Git commands from Codex, run Git outside the sandbox when normal
 `git status` reports that the workspace is not a repository.
-

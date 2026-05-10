@@ -88,9 +88,6 @@ workspace.
   - This first-navigation map. Keep it short, accurate, and synchronized with
     the actual root.
 
-- `RESUME_CODEX_THREAD.md`
-  - Local resume note for returning to this Codex thread/workspace context.
-
 - `.gitignore`
   - Tracked ignore policy for runtime scaffolding, copied evidence payloads,
     nested source clones, Python residue, and large binary artifacts.
@@ -112,6 +109,10 @@ These root items may exist locally but are not durable project evidence:
   - Current local Python environment for ProteinMPNN-DDG recovery and
     reproduction work. Its operating role is documented in
     `workspace_operations/RUNTIME_ENVIRONMENT.md`.
+
+- `RESUME_CODEX_THREAD.md`
+  - Optional workspace-local Codex resume index ignored by Git. It should only
+    list sessions operationally relevant from this physical workspace.
 
 - `.git/`
   - Git repository metadata.

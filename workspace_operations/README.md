@@ -17,7 +17,8 @@ Belongs here:
   cross-worktree write safety;
 - package-role and update-discipline decisions;
 - runtime-environment operating contracts;
-- Git-tracking policy and other workspace-wide operating constraints;
+- Git-tracking policy, workspace-local resume-note handling, and other
+  workspace-wide operating constraints;
 - concise status summaries, if later needed, that point to detailed evidence
   instead of duplicating it.
 
@@ -49,4 +50,5 @@ Current documents:
 - `RUNTIME_ENVIRONMENT.md`: defines the role, inspection commands, and update
   discipline for the local Python runtime used by recovery/reproduction work.
 - `WORKSPACE_GIT_TRACKING.md`: defines tracked versus ignored workspace
-  artifacts and the promotion rule for normally ignored evidence.
+  artifacts, including the local-only resume note rule, and the promotion rule
+  for normally ignored evidence.
