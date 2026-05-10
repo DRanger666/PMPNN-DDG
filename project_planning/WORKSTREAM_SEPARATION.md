@@ -65,6 +65,11 @@ Primary location:
 
 - `algorithmic_deliberations/`
 
+Operational separation between the main recovery session and the future
+algorithmic session is tracked in:
+
+- `CODEX_SESSION_AND_GIT_WORKTREE_SEPARATION.md`
+
 ## Workstream 3: Manuscript Synthesis
 
 Goal: decide how recovered provenance and algorithmic analysis should affect a
