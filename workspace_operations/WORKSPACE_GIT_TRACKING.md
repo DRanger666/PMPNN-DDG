@@ -1,6 +1,6 @@
 # Workspace Git Tracking Policy
 
-Date: 2026-05-06
+Date: 2026-05-10
 
 This repository is a local-only provenance repo for the
 `github_account_history_porting_2022_continuation` workspace.
@@ -16,6 +16,11 @@ This repository is a local-only provenance repo for the
   `drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/`, because
   the manuscript is the anchor artifact for recovery, reproduction, and
   algorithmic-deliberation work.
+- The copied 2022 Colab notebook evidence folder at
+  `drive_evidence_copy/sajidahmedprotres_drive/Colab Notebooks/`, because raw
+  notebooks contain source cells, saved outputs, and metadata needed for
+  code-provenance mapping and algorithmic recovery. The current snapshot is
+  small enough to track directly.
 - The selected ACCRE dataset-input snapshot at
   `drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/`, because it
   contains dataset PDB files, PSSM files, and the S_669 mutation/prediction CSV
@@ -26,8 +31,8 @@ This repository is a local-only provenance repo for the
 
 - Copied Drive evidence payloads under
   `drive_evidence_copy/sajidahmedprotres_drive/`, except explicitly promoted
-  evidence such as the cleaned manuscript folder and the selected ACCRE
-  dataset-input snapshot.
+  evidence such as the cleaned manuscript folder, the copied Colab notebook
+  folder, and the selected ACCRE dataset-input snapshot.
 - Nested cloned repositories under `source_repos/`.
 - Binary model/result artifacts such as pickle, NumPy, PyTorch, or joblib files.
 - Runtime scaffolding under `.agents/` and `.codex/`.

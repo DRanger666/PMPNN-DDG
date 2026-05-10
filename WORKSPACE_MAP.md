@@ -36,11 +36,12 @@ workspace.
 
 - `drive_evidence_copy/`
   - Timestamp-preserving local evidence-copy manifests, rsync logs, and copied
-    Drive payloads. The cleaned manuscript evidence folder and selected ACCRE
-    dataset-input snapshot under `drive_evidence_copy/sajidahmedprotres_drive/`
-    are deliberately tracked. The local ACCRE snapshot is not a full mirror of
-    the original FUSE-mount folder; other bulk copied payloads remain ignored
-    unless explicitly promoted for a concrete recovery need.
+    Drive payloads. The cleaned manuscript evidence folder, copied Colab
+    notebooks, and selected ACCRE dataset-input snapshot under
+    `drive_evidence_copy/sajidahmedprotres_drive/` are deliberately tracked.
+    The local ACCRE snapshot is not a full mirror of the original FUSE-mount
+    folder; other bulk copied payloads remain ignored unless explicitly
+    promoted for a concrete recovery need.
 
 - `external_reference_structures/`
   - Downloaded external reference structure/metadata checks used to interpret

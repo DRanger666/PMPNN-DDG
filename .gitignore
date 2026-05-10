@@ -9,6 +9,10 @@ drive_evidence_copy/sajidahmedprotres_drive/*
 !drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/
 !drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/**
 
+# The copied 2022 Colab notebooks are core code-provenance evidence and are tracked.
+!drive_evidence_copy/sajidahmedprotres_drive/Colab Notebooks/
+!drive_evidence_copy/sajidahmedprotres_drive/Colab Notebooks/**
+
 # The ACCRE dataset input subset is core reproduction evidence and is tracked.
 !drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/
 !drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/**
