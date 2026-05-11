@@ -30,6 +30,19 @@ These pickles use the older six-feature map in
 | E | `Neighbor_Entropy` | 6 |
 | F | `PSSM` | 5 |
 
+Direct answer for the unsuffixed `feature_combo_*` pair:
+
+- `feature_combo_model_dict.pickle` contains 63 RF models, one for every
+  non-empty subset of A-F.
+- Each model was trained on `S_2648_X_aug[:, f_index_comb]` and
+  `S_2648_y_aug`.
+- The full A-F model uses columns `[0, 4, 7, 2, 6, 5]` in label order.
+- The corresponding saved model inspection confirms `n_features_in_` equals
+  the number of selected labels for each model key.
+
+The suffixed `S_669_feature_combo_*` pair uses the same A-F feature map, but it
+is trained on `S_669_X_aug` and `S_669_y_aug`, not on `S_2648`.
+
 Do not equate this older A-F label map with the later manuscript Figure 6 A-H
 map without an explicit code bridge. In the later Figure 6 notebook, feature E
 is a five-column block and features G/H are present.
@@ -97,6 +110,10 @@ Limited utility for final manuscript-number reproduction:
   manuscript claims, because the final manuscript frames S_669 as an
   independent test set, whereas this pair trains on S_669.
 
+The targeted incremental-feature inspection is recorded separately in
+`FIGURE6_INCREMENTAL_FEATURE_PICKLE_ANALYSIS.md`, with generated TSV/JSON
+outputs in `code_inventory_analysis/incremental_feature_pickle_inspection/`.
+
 ## Working Decision
 
 Treat these four pickles as historically useful exploratory evidence, not as
@@ -109,4 +126,3 @@ For current recovery/reproduction, prioritize:
 2. Table 1 RF evaluation notebook cells and their loaded V3 feature pickles.
 3. These four `feature_combo` pickles only when tracing older feature-selection
    or draft-figure history.
-

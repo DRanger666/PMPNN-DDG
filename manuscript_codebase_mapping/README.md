@@ -40,6 +40,9 @@ Current notes:
 - `FEATURE_COMBO_PICKLE_UTILITY_ASSESSMENT.md`: utility assessment for the
   historical `feature_combo` model/result pickles, separating early A-F
   all-combination exploration from final manuscript Figure 6/Table 1 evidence.
+- `FIGURE6_INCREMENTAL_FEATURE_PICKLE_ANALYSIS.md`: targeted analysis of
+  `list_incremental_feature_result_dict.pickle`, the later A-H incremental
+  feature map, and the Figure 6-style S_669/Ssym total-PCC values.
 - `TRAIN_TEST_FIGURE_TABLE_ANCHOR.md`: dataset-role anchor for figures and
   tables.
 - `V3_PICKLE_CONTENT_FINGERPRINTING_PLAN.md`: exact plan for the next
