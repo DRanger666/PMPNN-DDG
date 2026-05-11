@@ -10,6 +10,27 @@ not duplicate it.
 
 ## Reproduced So Far
 
+At the final RF-result level, manuscript Table 1 has been numerically recovered
+for the three independent test-set rows:
+
+```text
+list_incremental_feature_result_dict.pickle
++ saved notebook-output evidence for rF-R
+-> manuscript Table 1 PMPNN-DDG rows for S_669, Ssym, and S_921
+```
+
+Current result:
+
+- `18/21` Table 1 numeric cells match by pickle-only evidence.
+- The remaining `3/21` `rF-R` cells match through saved notebook-output
+  evidence.
+- Including saved notebook-output evidence, all Table 1 numeric cells for
+  `S_669`, `Ssym`, and `S_921` are currently matched.
+
+Evidence:
+
+- `manuscript_codebase_mapping/TABLE1_NUMERICAL_RECOVERY_MILESTONE.md`
+
 For Ssym, the feature-construction segment has been reproduced at value level:
 
 ```text

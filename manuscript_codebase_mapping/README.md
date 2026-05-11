@@ -43,6 +43,10 @@ Current notes:
 - `FIGURE6_INCREMENTAL_FEATURE_PICKLE_ANALYSIS.md`: targeted analysis of
   `list_incremental_feature_result_dict.pickle`, the later A-H incremental
   feature map, and the Figure 6-style S_669/Ssym total-PCC values.
+- `TABLE1_NUMERICAL_RECOVERY_MILESTONE.md`: concise milestone note recording
+  that `list_incremental_feature_result_dict.pickle` matches 18/21 Table 1
+  numeric cells, while the remaining three `rF-R` cells match through saved
+  notebook-output evidence.
 - `TRAIN_TEST_FIGURE_TABLE_ANCHOR.md`: dataset-role anchor for figures and
   tables.
 - `V3_PICKLE_CONTENT_FINGERPRINTING_PLAN.md`: exact plan for the next
