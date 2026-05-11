@@ -1,6 +1,6 @@
 # Current Recovery Boundary
 
-Date: 2026-05-11
+Date: 2026-05-12
 
 Purpose: short coordination anchor for what has been reproduced and what still
 needs recovery, reconciliation, or algorithmic study.
@@ -116,7 +116,7 @@ Known issues requiring recovery or reconciliation include:
 Evidence and current debugging notes:
 
 - `manuscript_codebase_mapping/tensor_extraction_codeblock_recovery/TENSOR_EXTRACTION_ALGORITHM_DEBUGGING.md`
-- `algorithmic_deliberations/RANDOM_DECODER_ORDER_SINGLE_MUTATION_MASKING.md`
+- `v3_tensor_extraction_reconciliation/RANDOM_DECODER_ORDER_SINGLE_MUTATION_MASKING.md`
 
 ## Work Ownership
 
@@ -127,15 +127,19 @@ Main recovery session:
 - keep value-level reproduction evidence under `manuscript_codebase_mapping/`,
   `pickle_analysis/`, `scripts/`, and `proteinmpnn_ddg_recovery/`.
 
-Algorithmic Git worktree and Codex session:
+V3 tensor-reconciliation Git worktree and Codex session:
 
-- study tensor-generation implications, robustness, and scientifically
-  defensible alternatives;
+- study the unresolved upstream V3 direct-tensor extraction mismatch, including
+  tensor-generation implications, robustness, and scientifically defensible
+  stabilization choices;
 - test diagnostic variants without presenting them as historical facts;
-- record method-level reasoning under `algorithmic_deliberations/`;
+- record focused reconciliation notes under
+  `v3_tensor_extraction_reconciliation/`;
+- promote durable method-science conclusions to `method_science/` when they
+  should outlive the focused reconciliation task;
 - communicate back through durable notes and commits before anything is merged
   into the main recovery track.
 
-As of this note, the algorithmic Git worktree/Codex session is the intended next
-split point. Once it is created, update this note only if the recovery boundary
-or work ownership changes.
+As of this note, the dedicated Git worktree/Codex session is the intended next
+split point for V3 tensor-extraction reconciliation. Once it is created, update
+this note only if the recovery boundary or work ownership changes.

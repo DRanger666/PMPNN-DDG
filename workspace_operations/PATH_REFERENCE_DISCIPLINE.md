@@ -1,9 +1,9 @@
 # Path Reference Discipline
 
-Date: 2026-05-10
+Date: 2026-05-12
 
 Purpose: prevent accidental cross-worktree writes now that the project uses a
-main recovery worktree and a separate algorithmic-deliberation worktree.
+main recovery worktree and a separate V3 tensor-reconciliation worktree.
 
 ## Rule
 
@@ -21,14 +21,15 @@ Use relative paths for repository-internal material:
 scripts/...
 proteinmpnn_ddg_recovery/...
 workspace_operations/...
-algorithmic_deliberations/...
+method_science/...
+v3_tensor_extraction_reconciliation/...
 manuscript_codebase_mapping/...
 pickle_analysis/...
 drive_evidence_copy/sajidahmedprotres_drive/...
 ```
 
 These paths should mean "inside the current Git worktree", whether the current
-worktree is the main recovery checkout or the algorithmic-deliberation checkout.
+worktree is the main recovery checkout or the V3 tensor-reconciliation checkout.
 
 ## Allowed Absolute Paths
 

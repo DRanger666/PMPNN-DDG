@@ -40,7 +40,8 @@ Current documents:
   portable core recovery artifacts, the unresolved direct-tensor segment, and
   the main/fork work ownership boundary.
 - `WORKSTREAM_SEPARATION.md`: separates historical recovery/reproduction,
-  algorithm design/implication analysis, and later manuscript synthesis.
+  durable method science, focused V3 direct-tensor reconciliation, and later
+  manuscript synthesis.
 - `CODEX_SESSION_AND_GIT_WORKTREE_SEPARATION.md`: defines the two-Codex-session
   and two-Git-worktree/branch operating plan, with terminology rules.
 - `PATH_REFERENCE_DISCIPLINE.md`: defines when to use relative paths, when

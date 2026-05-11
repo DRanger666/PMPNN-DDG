@@ -14,8 +14,8 @@ This repository is a local-only provenance repo for the
 - Small text summaries derived from controlled inspection of old artifacts.
 - The cleaned manuscript evidence folder at
   `drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/`, because
-  the manuscript is the anchor artifact for recovery, reproduction, and
-  algorithmic-deliberation work.
+  the manuscript is the anchor artifact for recovery, reproduction, method
+  science, and V3 direct-tensor reconciliation work.
 - The copied 2022 Colab notebook evidence folder at
   `drive_evidence_copy/sajidahmedprotres_drive/Colab Notebooks/`, because raw
   notebooks contain source cells, saved outputs, and metadata needed for

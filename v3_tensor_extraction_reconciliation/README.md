@@ -1,7 +1,7 @@
-# Algorithmic Deliberations
+# V3 Tensor Extraction Reconciliation
 
-Purpose: capture scientific and method-level issues that arise while recovering
-the ProteinMPNN-DDG pipeline.
+Purpose: focus the dedicated fork/worktree effort on the unresolved upstream
+V3 direct-tensor extraction problem.
 
 This directory is separate from:
 
@@ -9,11 +9,22 @@ This directory is separate from:
 - `manuscript_codebase_mapping/`, which maps manuscript claims, tables, and
   figures to code and artifacts.
 - `pickle_analysis/`, which records artifact-level pickle inspection.
+- `method_science/`, which stores durable scientific method notes that should
+  remain useful after historical recovery is complete.
 
-Use this directory for questions that may matter scientifically even after the
-historical pipeline is recovered. These notes should be written tightly enough
-to support future manuscript revision, reviewer response planning, and method
-design decisions.
+Use this directory for the focused reconciliation problem:
+
+```text
+PDB
++ mutation table
++ ProteinMPNN weights/code
++ RNG/order behavior
+-> saved V3 direct tensor fields
+```
+
+This includes random decoder order, directed neighbor asymmetry, attended
+neighbor ranking, tensor-value mismatch, and diagnostic variants that help
+separate candidate historical behavior from future method design.
 
 Each note should state:
 
@@ -28,9 +39,6 @@ Current notes:
 - `ALGORITHMIC_SESSION_START.md`: startup handoff for the Algorithmic Codex
   session and Git worktree, including the current proven boundary, unresolved
   direct-tensor segment, initial questions, and runtime note.
-- `FEATURE_E_MESSAGE_KPCA_AND_AUGMENTATION.md`: scientific/method note on
-  feature E as message-KPCA in the augmented RF matrix, K-neighbor tensor-bundle
-  semantics, and why pre-augmentation column numbers caused confusion.
 - `RANDOM_DECODER_ORDER_SINGLE_MUTATION_MASKING.md`: why random decoder order
   can affect ProteinMPNN-DDG tensor extraction even when exactly one residue is
   designable.

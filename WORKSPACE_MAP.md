@@ -1,6 +1,6 @@
 # ProteinMPNN-DDG Workspace Map
 
-Date: 2026-05-11
+Date: 2026-05-12
 
 Purpose: first-navigation helper for this physical workspace root:
 `/home/mpr/github_account_history_porting_2022_continuation`.
@@ -19,11 +19,6 @@ move it to the right subdirectory, rename it, or remove it from the durable
 workspace.
 
 ## Root Directories
-
-- `algorithmic_deliberations/`
-  - Scientific/method-level analysis for tensor-generation behavior,
-    robustness questions, reviewer-facing implications, and future method
-    design. This is not historical reproduction evidence by itself.
 
 - `code_inventory_analysis/`
   - Generated inventories and summary notes about the old ProteinMPNN fork,
@@ -62,6 +57,11 @@ workspace.
     metadata, tracked-change/comment artifacts, comparisons, and manuscript
     file relationships.
 
+- `method_science/`
+  - Durable scientific method notes for ProteinMPNN-DDG: feature semantics,
+    algorithmic interpretation, reviewer-facing reasoning, and pseudocode or
+    diagram seeds that should remain useful beyond the recovery stage.
+
 - `pickle_analysis/`
   - Pickle inspection reports, schema/field summaries, instance-coverage notes,
     mutation-table audits, and value-comparison outputs.
@@ -86,6 +86,12 @@ workspace.
   - Local clones of source/reference repositories used as evidence inputs.
     Nested repository contents are ignored by this workspace Git repo unless a
     small derived note or manifest is deliberately tracked elsewhere.
+
+- `v3_tensor_extraction_reconciliation/`
+  - Focused notes and handoff material for reconciling the unresolved upstream
+    V3 direct-tensor extraction segment, including random decoder order,
+    directed neighbor asymmetry, tensor-value mismatch, and diagnostic
+    stabilization questions.
 
 - `workspace_operations/`
   - Workspace-level operating rules, workstream boundaries, session/worktree

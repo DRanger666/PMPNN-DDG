@@ -91,7 +91,7 @@ states are still updated. Later decoder layers can therefore pass order-
 conditioned fixed-residue states into the designable residue. This issue is
 tracked separately as a scientific/method note:
 
-- `../../algorithmic_deliberations/RANDOM_DECODER_ORDER_SINGLE_MUTATION_MASKING.md`
+- `../../v3_tensor_extraction_reconciliation/RANDOM_DECODER_ORDER_SINGLE_MUTATION_MASKING.md`
 
 The current all-entry script also resets the PyTorch seed per mutation entry.
 That is not how the notebook code reads: the notebook appears to consume the

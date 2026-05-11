@@ -1,18 +1,19 @@
 # ProteinMPNN-DDG Workstream Separation
 
-Date: 2026-05-10
+Date: 2026-05-12
 
-Purpose: keep the recovery effort, algorithm-design effort, and later
-manuscript synthesis effort distinct while the ProteinMPNN-DDG project is being
-revived.
+Purpose: keep historical recovery, durable method science, focused V3
+direct-tensor reconciliation, and later manuscript synthesis distinct while the
+ProteinMPNN-DDG project is being revived.
 
 ## Core Position
 
-The project now has at least three related but separate workstreams:
+The project now has four related but separate workstreams:
 
 1. Historical recovery and reproduction.
-2. Algorithm design and implication analysis.
-3. Later synthesis of recovered evidence and improved algorithmic framing into
+2. Durable method science and algorithmic interpretation.
+3. Focused V3 direct-tensor extraction reconciliation.
+4. Later synthesis of recovered evidence and improved algorithmic framing into
    manuscript/submission material.
 
 These should not be merged prematurely.
@@ -45,42 +46,72 @@ The package-level workflow role of `proteinmpnn_ddg_recovery/` is tracked in:
 
 - `RECOVERY_PACKAGE_ROLE.md`
 
-## Workstream 2: Algorithm Design And Implication Analysis
+## Workstream 2: Durable Method Science
 
-Goal: understand whether the tensor-generation and feature-engineering
-algorithm is scientifically well-framed, robust, and defensible.
+Goal: preserve scientific reasoning about the ProteinMPNN-DDG method that
+should remain useful after historical recovery is complete.
 
 This workstream should study questions such as:
 
-- What does single-mutation masking imply inside a multi-layer ProteinMPNN
-  decoder?
-- How does random decoder order affect extracted tensors?
-- Do tensor-level variations materially affect engineered scalar/vector
-  features?
-- Should future ProteinMPNN-DDG use deterministic ordering, stochastic
-  ordering, seed averaging, or another explicitly justified design?
+- What does each engineered feature mean scientifically?
+- Which feature definitions need pseudocode, diagrams, or clearer mathematical
+  framing?
 - Which algorithmic choices need main-text explanation, supplementary analysis,
   or reviewer-response preparation?
+- Which current interpretations should carry forward into a cleaned
+  ProteinMPNN-DDG method?
 
 Rule: this workstream can propose better algorithmic framing or future method
 changes, but it should not overwrite the historical recovery target.
 
 Primary location:
 
-- `algorithmic_deliberations/`
+- `method_science/`
+
+## Workstream 3: Focused V3 Direct-Tensor Extraction Reconciliation
+
+Goal: reconcile the unresolved upstream segment:
+
+```text
+PDB
++ mutation table
++ ProteinMPNN weights/code
++ RNG/order behavior
+-> saved V3 direct tensor fields
+```
+
+This workstream should study questions such as:
+
+- What does single-mutation masking imply inside a multi-layer ProteinMPNN
+  decoder?
+- How does random decoder order affect extracted tensors?
+- How does directed neighbor-graph asymmetry affect center-to-neighbor tensor
+  extraction?
+- Which tensor-extraction choices can explain current value-level mismatch
+  against saved V3 direct tensor fields?
+- Which diagnostic variants are candidate-historical, and which are future
+  method-design alternatives?
+
+Rule: this workstream may run diagnostic variants, but it must label them
+clearly and must not present cleaner alternatives as historical facts.
+
+Primary location:
+
+- `v3_tensor_extraction_reconciliation/`
 
 Operational separation between the main recovery session and the future
-algorithmic session is tracked in:
+dedicated reconciliation session is tracked in:
 
 - `CODEX_SESSION_AND_GIT_WORKTREE_SEPARATION.md`
 
-## Workstream 3: Manuscript Synthesis
+## Workstream 4: Manuscript Synthesis
 
-Goal: decide how recovered provenance and algorithmic analysis should affect a
-revived manuscript, preprint, supplementary material, and accompanying code.
+Goal: decide how recovered provenance, method-science notes, and V3
+reconciliation results should affect a revived manuscript, preprint,
+supplementary material, and accompanying code.
 
 This workstream comes later. It should merge evidence from Workstream 1 and
-analysis from Workstream 2 into submission-facing decisions.
+analysis from Workstreams 2 and 3 into submission-facing decisions.
 
 Possible outcomes:
 
@@ -102,7 +133,9 @@ When a new finding appears, classify it before writing it down:
 
 - Artifact/provenance evidence -> `manuscript_codebase_mapping/` or
   `pickle_analysis/`.
-- Scientific/method deliberation -> `algorithmic_deliberations/`.
+- Durable scientific/method reasoning -> `method_science/`.
+- Focused V3 direct-tensor mismatch/reconciliation work ->
+  `v3_tensor_extraction_reconciliation/`.
 - Submission-facing integration decision -> later manuscript synthesis notes.
 
 This separation is meant to prevent three different questions from being
@@ -110,4 +143,5 @@ collapsed:
 
 1. What happened in 2022?
 2. What is scientifically defensible now?
-3. What should be written or submitted later?
+3. Why do current direct-tensor extraction attempts mismatch saved V3 tensors?
+4. What should be written or submitted later?

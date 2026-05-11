@@ -1,9 +1,10 @@
-# Algorithmic Session Start
+# V3 Tensor Extraction Reconciliation Session Start
 
 Date: 2026-05-10
 
-Purpose: startup note for the Algorithmic Codex session and its dedicated Git
-worktree. This note is a narrow handoff. It is not a general project summary.
+Purpose: startup note for the dedicated Codex session and Git worktree focused
+on V3 direct-tensor extraction reconciliation. This note is a narrow handoff.
+It is not a general project summary.
 
 ## Read First
 
@@ -13,7 +14,7 @@ Start with these files, in this order:
 2. `workspace_operations/CODEX_SESSION_AND_GIT_WORKTREE_SEPARATION.md`
 3. `workspace_operations/RUNTIME_ENVIRONMENT.md`
 4. `workspace_operations/PATH_REFERENCE_DISCIPLINE.md`
-5. `algorithmic_deliberations/RANDOM_DECODER_ORDER_SINGLE_MUTATION_MASKING.md`
+5. `v3_tensor_extraction_reconciliation/RANDOM_DECODER_ORDER_SINGLE_MUTATION_MASKING.md`
 6. `manuscript_codebase_mapping/tensor_extraction_codeblock_recovery/TENSOR_EXTRACTION_ALGORITHM_DEBUGGING.md`
 
 ## Current Proven Boundary
@@ -30,7 +31,7 @@ saved Ssym V3 direct tensor fields
 That result does not prove full V3 pickle regeneration. It proves the
 feature-construction segment starting from already-saved direct tensor fields.
 
-## Algorithmic Work Target
+## Reconciliation Work Target
 
 The unresolved segment is:
 
@@ -42,7 +43,7 @@ PDB
 -> saved V3 direct tensor fields
 ```
 
-The algorithmic session should study this direct-tensor segment and the method
+The dedicated session should study this direct-tensor segment and the method
 choices around it. Its job is not to rewrite historical recovery claims.
 
 ## Initial Questions
@@ -66,7 +67,9 @@ choices around it. Its job is not to rewrite historical recovery claims.
   method design.
 - Keep generated outputs small, summarized, or intentionally ignored unless a
   result must be preserved.
-- Record important reasoning under `algorithmic_deliberations/`.
+- Record direct-tensor reconciliation reasoning under
+  `v3_tensor_extraction_reconciliation/`.
+- Record durable scientific method notes under `method_science/`.
 - Communicate back to the main recovery track through notes and commits.
 - Assume the user is working interactively with the forked session; do not treat
   this as an autonomous background worker.

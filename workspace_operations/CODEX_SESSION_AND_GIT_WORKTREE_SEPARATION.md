@@ -1,10 +1,10 @@
 # Codex Session And Git Worktree Separation
 
-Date: 2026-05-10
+Date: 2026-05-12
 
 Purpose: prevent ambiguity between Codex conversation forks and Git
 branch/worktree separation while the ProteinMPNN-DDG project splits into a main
-recovery track and a focused algorithmic-deliberation track.
+recovery track and a focused V3 direct-tensor extraction reconciliation track.
 
 ## Stable Terms
 
@@ -18,11 +18,12 @@ Use these terms consistently.
   usually checked out to a dedicated Git branch.
 - **Main recovery session**: this Codex session, responsible for the whole
   manuscript/recovery/reproduction view.
-- **Algorithmic Codex session**: a future Codex session fork dedicated to
-  algorithmic analysis, tensor-generation implications, robustness experiments,
-  and method-design thinking.
-- **Algorithmic Git worktree branch**: the dedicated Git worktree plus branch
-  used by the Algorithmic Codex session.
+- **V3 tensor-reconciliation Codex session**: a future Codex session fork
+  dedicated to the unresolved upstream V3 direct-tensor extraction problem,
+  including random decoder order, directed neighbor asymmetry, tensor-value
+  mismatch, and scientifically defensible stabilization.
+- **V3 tensor-reconciliation Git worktree branch**: the dedicated Git worktree
+  plus branch used by the V3 tensor-reconciliation Codex session.
 
 Avoid the phrase "branch fork" without qualification. Say either "Codex session
 fork" or "Git branch/worktree".
@@ -42,19 +43,20 @@ The project should run with two coordinated but separated workspaces:
 | Role | Codex session | Filesystem checkout | Git branch | Primary goal |
 | --- | --- | --- | --- | --- |
 | Main recovery | current session | `/home/mpr/github_account_history_porting_2022_continuation` | `main` | recover/reproduce 2022 manuscript evidence and artifact provenance |
-| Algorithmic deliberation | Codex session fork | `/home/mpr/proteinmpnn_ddg_algorithmic_deliberations` | `algorithmic-deliberations` | study tensor-generation design, implications, robustness, and future framing |
+| V3 tensor reconciliation | Codex session fork | `/home/mpr/proteinmpnn_ddg_algorithmic_deliberations` | `algorithmic-deliberations` | reconcile saved V3 direct tensor fields with manuscript logic and executable ProteinMPNN-DDG tensor-extraction code |
 
-The Algorithmic Codex session should own new work under
-`algorithmic_deliberations/` and any clearly labeled algorithmic experiment
-artifacts. It should not silently rewrite historical recovery conclusions.
+The V3 tensor-reconciliation Codex session should own focused work under
+`v3_tensor_extraction_reconciliation/` and any clearly labeled tensor
+reconciliation experiment artifacts. It should not silently rewrite historical
+recovery conclusions.
 
 The Main recovery session should continue owning manuscript-code mapping,
-pickle provenance, recovery scripts, and synthesis decisions that depend on
-historical evidence.
+pickle provenance, recovery scripts, durable method-science notes under
+`method_science/`, and synthesis decisions that depend on historical evidence.
 
 ## Setup Sequence
 
-Before creating the Algorithmic Codex session:
+Before creating the V3 tensor-reconciliation Codex session:
 
 1. Ensure the current workspace is clean.
 2. Push local commits from `main`.
@@ -78,12 +80,13 @@ session metadata before emitting the final command.
 Communication should happen through durable artifacts first:
 
 - commits;
-- notes under `algorithmic_deliberations/`;
+- focused reconciliation notes under `v3_tensor_extraction_reconciliation/`;
+- durable scientific method notes under `method_science/`;
 - operating notes under `workspace_operations/`;
 - explicit prompts from the user pointing one session to the other session's
   notes or commits.
 
-The main recovery session can inspect the algorithmic worktree when needed, but
+The main recovery session can inspect the reconciliation worktree when needed, but
 it should treat that work as a separate line of inquiry until deliberately
 merged.
 
@@ -114,16 +117,18 @@ history.
 
 ## Merge Discipline
 
-The Algorithmic Codex session may produce method notes or experiments that are
-scientifically valuable but not historical evidence.
+The V3 tensor-reconciliation Codex session may produce method notes or
+experiments that are scientifically valuable but not historical evidence.
 
 Before merging anything from the algorithmic branch into `main`, classify the
 change:
 
 - Historical recovery evidence -> merge only if it strengthens provenance or
   reproduction.
-- Algorithmic method note -> merge if it belongs in the shared scientific
-  deliberation record.
+- Durable method-science note -> merge if it belongs in the shared scientific
+  method record under `method_science/`.
+- Focused V3 tensor-reconciliation note -> merge if it should be visible to the
+  main recovery track as part of the unresolved direct-tensor evidence.
 - Experimental output -> merge only if small, interpretable, and needed for a
   durable conclusion; otherwise keep generated outputs local or summarized.
 - Manuscript-facing decision -> defer until synthesis work explicitly uses both

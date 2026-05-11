@@ -41,10 +41,13 @@ Do not treat this package as:
   separately understood;
 - a dumping ground for one-off scripts or large generated outputs.
 
-If an algorithmic design alternative is being studied, first record the
-scientific reasoning under `algorithmic_deliberations/`. Only move code into
-`proteinmpnn_ddg_recovery/` when it is either recovered historical behavior or a
-clearly labeled recovery-support helper.
+If an algorithmic design alternative is being studied, first record the durable
+scientific reasoning under `method_science/`. If the issue is specifically
+about reconciling saved V3 direct tensor fields with executable tensor
+extraction, record the focused work under
+`v3_tensor_extraction_reconciliation/`. Only move code into
+`proteinmpnn_ddg_recovery/` when it is either recovered historical behavior or
+a clearly labeled recovery-support helper.
 
 ## Relationship To Scripts
 
@@ -86,7 +89,9 @@ package, but that is a later decision.
 For now:
 
 - historical recovery/reproduction code lives here;
-- algorithmic deliberation lives in `algorithmic_deliberations/`;
+- durable scientific method interpretation lives in `method_science/`;
+- focused V3 direct-tensor reconciliation lives in
+  `v3_tensor_extraction_reconciliation/`;
 - manuscript-facing synthesis waits until recovery evidence and algorithmic
   analysis are intentionally merged.
 
