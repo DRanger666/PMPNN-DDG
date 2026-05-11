@@ -39,7 +39,7 @@ Absolute paths are appropriate for:
 - separate Git worktree locations, for example
   `/home/mpr/proteinmpnn_ddg_algorithmic_deliberations`;
 - shared runtime environments, for example the main-workspace venv path used
-  by the algorithmic worktree before it has its own venv;
+  by the V3 tensor-reconciliation worktree before it has its own venv;
 - exact shell commands where the filesystem location is the point;
 - source/copy comparisons where both the live source and local copied evidence
   path must be shown.

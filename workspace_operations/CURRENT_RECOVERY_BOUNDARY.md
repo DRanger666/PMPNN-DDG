@@ -3,7 +3,7 @@
 Date: 2026-05-12
 
 Purpose: short coordination anchor for what has been reproduced and what still
-needs recovery, reconciliation, or algorithmic study.
+needs recovery, V3 tensor reconciliation, or method-science study.
 
 This is not a detailed evidence report. It should point to detailed evidence,
 not duplicate it.

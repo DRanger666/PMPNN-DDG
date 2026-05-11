@@ -21,8 +21,8 @@ Python 3.12.3
 
 This environment is the current local runtime for main-worker
 ProteinMPNN-DDG recovery, reproduction, inspection, and focused experiments.
-The future algorithmic worktree/session should treat this file as the runtime
-contract unless a separate environment decision is recorded.
+The V3 tensor-reconciliation worktree/session should treat this file as the
+runtime contract unless a separate environment decision is recorded.
 
 ## Role
 
@@ -84,8 +84,9 @@ Before changing this environment:
 4. Record any behavior change in the relevant analysis note.
 5. Commit the note/spec update with a message explaining the runtime implication.
 
-Do not silently mutate this environment from the future algorithmic worktree if
-that mutation can affect the main recovery workspace. Record the decision first.
+Do not silently mutate this environment from the V3 tensor-reconciliation
+worktree if that mutation can affect the main recovery workspace. Record the
+decision first.
 
 ## Known Gap
 

@@ -63,8 +63,8 @@ Before creating the V3 tensor-reconciliation Codex session:
 3. Create a separate Git worktree checked out to the
    `algorithmic-deliberations` branch.
 4. Resolve the current Codex session UUID from local session metadata.
-5. Launch the Codex session fork with `-C` pointing at the algorithmic
-   worktree.
+5. Launch the Codex session fork with `-C` pointing at the V3
+   tensor-reconciliation worktree.
 
 Command shape, with the UUID verified at execution time:
 
@@ -120,8 +120,8 @@ history.
 The V3 tensor-reconciliation Codex session may produce method notes or
 experiments that are scientifically valuable but not historical evidence.
 
-Before merging anything from the algorithmic branch into `main`, classify the
-change:
+Before merging anything from the V3 tensor-reconciliation branch into `main`,
+classify the change:
 
 - Historical recovery evidence -> merge only if it strengthens provenance or
   reproduction.
@@ -147,7 +147,7 @@ git worktree list
 git branch --list algorithmic-deliberations
 ```
 
-The intended algorithmic worktree path is:
+The current V3 tensor-reconciliation worktree path is:
 
 ```text
 /home/mpr/proteinmpnn_ddg_algorithmic_deliberations
