@@ -21,4 +21,7 @@ Current notes:
 
 - `FEATURE_E_MESSAGE_KPCA_AND_AUGMENTATION.md`: feature E as message-KPCA in
   the augmented RF matrix, K-neighbor tensor-bundle semantics, and the
-  pre-augmentation versus post-augmentation column-number distinction.
+  pre-augmentation versus post-augmentation column-number distinction. Also
+  records the raw vector sign convention for reverse augmentation and the
+  distinction between sign-flipped raw embedding vectors and sign-invariant
+  scalar feature D.

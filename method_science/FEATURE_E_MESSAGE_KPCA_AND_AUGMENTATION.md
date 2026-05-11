@@ -89,6 +89,35 @@ stored paired WT/MT bundle by algebraic sign, swap, and inversion rules.
 The final notebook first builds a staging matrix `S_*_X`. That matrix contains
 both direct-oriented and reverse-oriented PCA/KPCA blocks.
 
+The raw vector sign convention is:
+
+```text
+neighbor_embedding_change[j] = E_j(WT center) - E_j(MT center)
+neighbor_message_change[j]   = M_j(WT center) - M_j(MT center)
+```
+
+Under the synthetic reverse mutation `MTPosWT`, the roles of WT-center and
+MT-center swap. Therefore, the reverse-oriented raw vectors are algebraically
+the negative of the forward-oriented raw vectors:
+
+```text
+reverse_embedding_change[j] = -neighbor_embedding_change[j]
+reverse_message_change[j]   = -neighbor_message_change[j]
+```
+
+This sign flip applies to raw vector ingredients used for PCA/KPCA projection.
+It does not mean the scalar feature D itself is negated. The manuscript defines
+D as a sum of L2 norms:
+
+```text
+D = sum_j ||E_j(WT center) - E_j(MT center)||_2
+```
+
+So scalar D is unchanged by reverse orientation. The final RF augmentation code
+reflects this: the reverse row keeps the scalar D column unchanged, while the
+reverse-oriented raw embedding/message PCA/KPCA blocks are derived from
+sign-flipped raw vectors.
+
 In the staging matrix:
 
 ```text
