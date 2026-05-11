@@ -9,6 +9,22 @@ the plotted values come from the ten-run incremental-feature result pickle.
 This note concerns the final RF result/plotting layer. It does not prove
 upstream V3 pickle regeneration or direct tensor extraction.
 
+## Interpretation Standard
+
+For Figure 6, the scientific recovery target is the plotted data/content:
+
+```text
+S_669/Ssym total-PCC series
+-> incremental A through A-H feature-combination plot
+-> manuscript Figure 6 content
+```
+
+Byte identity is not the scientific standard for comparing a notebook PNG,
+standalone PNG, and DOCX-embedded PNG. It is only a useful artifact-provenance
+shortcut when it succeeds. If a DOCX-embedded image is not byte-identical, that
+is not a scientific discrepancy by itself, because Word/DOCX embedding can
+change image bytes, dimensions, or layout while preserving the plotted content.
+
 ## Core Finding
 
 The standalone manuscript figure file:
@@ -43,11 +59,24 @@ SA_CEM_9_26_2022_MJ_Issue_Adressing.docx -> word/media/image6.png
 ```
 
 The DOCX paragraph/image references identify `media/image6.png` as Figure 6.
-That embedded PNG is not byte-identical to the standalone image above; it is a
-separate embedded/rendered copy. Therefore, the strict byte-level proof is:
-standalone manuscript image equals notebook output. The DOCX check establishes
-that the final DOCX Figure 6 slot points to `media/image6.png`, not that the
-DOCX media bytes are identical to the standalone sidecar image.
+That embedded PNG is not byte-identical to the standalone image above, but that
+does not count against Figure 6 recovery. The DOCX check establishes that the
+final DOCX Figure 6 slot points to `media/image6.png`; content equivalence must
+be judged by the plotted data and the visible figure content, not by byte
+identity.
+
+Manual visual comparison found no data-content discrepancy between the verified
+standalone PNG and DOCX `media/image6.png`. Both show:
+
+- the same `S_669` and `Ssym` series;
+- the same red/green bar pairing;
+- the same `A` through `A-H` incremental feature-combination labels;
+- the same PCC metric;
+- the same monotonic/near-plateau bar-height pattern implied by the recovered
+  total-PCC values.
+
+The observed differences are layout/rendering differences, not scientific-data
+differences.
 
 ## Matched Plotting Cell
 

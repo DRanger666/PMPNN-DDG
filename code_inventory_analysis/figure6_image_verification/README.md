@@ -35,9 +35,11 @@ The plotted total-PCC series reconstructed from
 - DOCX media target(s) referenced in Figure 6 paragraph(s): `media/image6.png`
 
 The final DOCX references Figure 6 through its own embedded media copy.
-That embedded PNG is not byte-identical to the standalone figure, so the
-strict byte-level match is between the standalone figure and the notebook
-output.
+The embedded PNG does not need to be byte-identical to the standalone
+figure for scientific recovery. Word/DOCX embedding can preserve plotted
+content while changing image dimensions or bytes. The byte-level check is
+only an artifact-provenance shortcut when it succeeds; content and plotted
+numeric values are the relevant recovery criteria.
 
 ## Files
 

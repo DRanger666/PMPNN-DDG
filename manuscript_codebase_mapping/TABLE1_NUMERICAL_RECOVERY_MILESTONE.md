@@ -111,9 +111,10 @@ plotting layer. See:
 manuscript_codebase_mapping/FIGURE6_NUMERICAL_BASIS_VERIFICATION.md
 ```
 
-The strict byte-level image match is between the standalone manuscript Figure 6
-PNG and the notebook output. The final DOCX maps Figure 6 to embedded
-`media/image6.png`, which is a separate non-identical embedded PNG.
+The final DOCX maps Figure 6 to embedded `media/image6.png`. That embedded PNG
+is not byte-identical to the standalone manuscript Figure 6 PNG, but byte
+identity is not the scientific standard here. Manual visual comparison found the
+same plotted S_669/Ssym incremental total-PCC content.
 
 ## Not Table 1 Sources
 

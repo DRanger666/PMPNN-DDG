@@ -47,7 +47,7 @@ Current notes:
   the manuscript Figure 6 standalone image is the saved output of the
   incremental-feature plotting cell, with plotted S_669/Ssym total-PCC values
   reconstructed from `list_incremental_feature_result_dict.pickle`, plus the
-  DOCX embedded-image mapping caveat.
+  DOCX embedded-image mapping and content-equivalence interpretation.
 - `TABLE1_NUMERICAL_RECOVERY_MILESTONE.md`: concise milestone note recording
   that `list_incremental_feature_result_dict.pickle` matches 18/21 Table 1
   numeric cells, while the remaining three `rF-R` cells match through saved

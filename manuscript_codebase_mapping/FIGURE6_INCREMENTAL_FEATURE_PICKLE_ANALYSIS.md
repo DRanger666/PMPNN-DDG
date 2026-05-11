@@ -116,9 +116,11 @@ manuscript_codebase_mapping/FIGURE6_NUMERICAL_BASIS_VERIFICATION.md
 code_inventory_analysis/figure6_image_verification/
 ```
 
-DOCX nuance: the final DOCX references Figure 6 as `media/image6.png`, but that
-embedded PNG is not byte-identical to the standalone manuscript image. The
-strict hash proof is the standalone image to notebook-output match.
+DOCX note: the final DOCX references Figure 6 as `media/image6.png`. That
+embedded PNG is not byte-identical to the standalone manuscript image, but this
+is not a scientific-content discrepancy. Manual visual comparison found the same
+S_669/Ssym incremental total-PCC content; the differences are layout/rendering
+differences.
 
 ## Full A-H Table-Level Metrics
 

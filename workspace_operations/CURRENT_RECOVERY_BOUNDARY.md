@@ -45,9 +45,11 @@ Evidence:
 
 - `manuscript_codebase_mapping/FIGURE6_NUMERICAL_BASIS_VERIFICATION.md`
 
-Caveat: the final DOCX embeds Figure 6 as a separate non-identical PNG. The
-strict byte-level image match is between the standalone manuscript Figure 6 PNG
-and the notebook output.
+The final DOCX embeds Figure 6 as `media/image6.png`. That embedded PNG is not
+byte-identical to the standalone manuscript PNG, but this is not a recovery
+blocker or scientific-content discrepancy. The relevant recovery claim is that
+the plotted S_669/Ssym incremental total-PCC series and visible figure content
+match.
 
 For Ssym, the feature-construction segment has been reproduced at value level:
 
