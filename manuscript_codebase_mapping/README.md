@@ -37,6 +37,9 @@ Current notes:
 - `STAGE5_PICKLE_GENERATION_BRIDGE.md`: working strategy and initial evidence
   for using V3 PMPNN pickle dictionaries as the bridge from ProteinMPNN feature
   extraction to RF evaluation.
+- `FEATURE_COMBO_PICKLE_UTILITY_ASSESSMENT.md`: utility assessment for the
+  historical `feature_combo` model/result pickles, separating early A-F
+  all-combination exploration from final manuscript Figure 6/Table 1 evidence.
 - `TRAIN_TEST_FIGURE_TABLE_ANCHOR.md`: dataset-role anchor for figures and
   tables.
 - `V3_PICKLE_CONTENT_FINGERPRINTING_PLAN.md`: exact plan for the next
