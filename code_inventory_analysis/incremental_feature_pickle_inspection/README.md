@@ -82,7 +82,7 @@ The RFs are trained on `S_2648_X_aug[:, f_index_comb]` and `S_2648_y_aug`.
 | B | 6 | V2_backward_weighted_neighbor_entropy_changes | weighted backward neighbor entropy change |
 | C | 7 | center_neighbor_weight_check_w_m | center-to-neighbor message norm ratio |
 | D | 8 | neighbor_embedding_change_m_w | summed neighbor embedding change |
-| E | 31,32,33,34,35 | first five columns selected from reverse neighbor-embedding KPCA block | columns 31..40 are reverse neighbor-embedding KPCA |
+| E | 31,32,33,34,35 | first five selected message-KPCA columns in the augmented RF matrix | augmented columns 31..40 are message-KPCA slots |
 | F | 5 | wild_pssm - alternate_pssm | PSSM delta |
 | G | 9 | wild_pssm | wild-type PSSM value |
 | H | 10 | alternate_pssm | mutant amino-acid PSSM value |
@@ -90,10 +90,13 @@ The RFs are trained on `S_2648_X_aug[:, f_index_comb]` and `S_2648_y_aug`.
 The full A-H model therefore uses these feature-matrix columns:
 `[0, 6, 7, 8, 31, 32, 33, 34, 35, 5, 9, 10]`.
 
-Important reconciliation note: in this code path, feature E is columns 31..35.
-The same source file identifies columns 31..40 as reverse neighbor-embedding
-KPCA features. This is code-level evidence and should be reconciled separately
-against manuscript wording before making a final methods claim.
+Important column-interpretation note: feature E is selected from
+`S_*_X_aug[:, 31:36]`, not from the pre-augmentation `S_*_X[:, 31:36]`.
+In the pre-augmentation matrix, raw columns 31..40 are reverse-oriented
+neighbor-embedding KPCA features. During augmentation/column compaction,
+message-KPCA columns move into augmented columns 31..40. Therefore the final
+A-H RF feature E is message-KPCA in the model input, aligned with the
+manuscript-level feature family.
 
 Observed saved-object note: the inspected ten-run list pickle contains the
 feature-combination metric dictionaries shown above. It does not contain the

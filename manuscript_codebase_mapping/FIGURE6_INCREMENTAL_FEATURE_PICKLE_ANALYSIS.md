@@ -25,7 +25,7 @@ The later A-H workflow defines this map in
 | B | `6` | `V2_backward_weighted_neighbor_entropy_changes` |
 | C | `7` | `center_neighbor_weight_check_w_m` |
 | D | `8` | `neighbor_embedding_change_m_w` |
-| E | `31,32,33,34,35` | first five selected columns from the reverse neighbor-embedding KPCA block |
+| E | `31,32,33,34,35` | first five selected message-KPCA columns in the augmented RF matrix |
 | F | `5` | `wild_pssm - alternate_pssm` |
 | G | `9` | `wild_pssm` |
 | H | `10` | `alternate_pssm` |
@@ -36,12 +36,12 @@ The full A-H RF therefore uses columns
 Feature B's exact source field is weighted; it should not be described as a
 plain unweighted neighbor-entropy sum.
 
-Important reconciliation note: the same source file identifies columns
-`31..40` as reverse neighbor-embedding KPCA features
-(`Quick_Dirty_MPNN_ML_V2_VGRAPHS_V1.ipynb.py.txt:358`). Therefore, in this
-code path, E is not selected from the message-change PCA/KPCA blocks. That is
-code-level evidence; the manuscript wording still needs separate reconciliation
-before final method text is locked.
+Important column-interpretation note: the feature map is applied to
+`S_*_X_aug`, not to the pre-augmentation `S_*_X`. In the pre-augmentation
+matrix, columns `31..40` are reverse-oriented neighbor-embedding KPCA features.
+During augmentation/column compaction, message-KPCA columns move into augmented
+columns `31..40`. Therefore, in the final RF input, E is selected from the
+message-KPCA block and is aligned with the manuscript-level feature family.
 
 ## Training/Evaluation Loop
 
