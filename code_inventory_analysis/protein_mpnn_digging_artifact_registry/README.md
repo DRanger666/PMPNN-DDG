@@ -3,17 +3,17 @@
 This report is generated from the copied local evidence tree:
 
 - Evidence root: `drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging`
-- Generated at: `2026-05-11T03:27:30.090407+00:00`
+- Generated at: `2026-05-11T03:57:30.812070+00:00`
 - File count: `184`
 - Total bytes: `2238258031`
 
 ## Main Findings
 
-- The copied `Protein_MPNN_Digging` tree is not currently tracked by the workspace Git repository.
+- The copied `Protein_MPNN_Digging` tree is only partially tracked by the workspace Git repository; promoted files are represented in `artifact_registry.tsv` with `git_tracked_now=yes`.
 - The V3 `*_pmppn_info_dict_V3.pickle` files, trained model pickles, and ProteinMPNN `.pt` checkpoints are binary artifacts; they need Git LFS or an external artifact-store decision before promotion.
 - The nested `ProteinMPNN/.git` metadata should not be committed as a nested Git directory. Preserve the source state by pinned commit, patch/diff, or an archive/bundle decision.
 - The nested copied ProteinMPNN checkout HEAD is `c602ced6ad4b6997d89afa9432607ac9d0572539` with status `M vanilla_proteinmpnn/protein_mpnn_utils.py`.
-- Checkpoint usage lines mentioning `v_48_020` were found: `73`.
+- Checkpoint usage lines mentioning `v_48_020` were found: `76`.
 
 ## Artifact Classes
 
@@ -63,7 +63,7 @@ This report is generated from the copied local evidence tree:
 
 ## Dependency Map
 
-- Dependency/reference rows written: `502`
+- Dependency/reference rows written: `527`
 - Referenced artifacts: `36`
 - Reference states are intentionally simple: `active_or_text`, `commented`, and `note_or_generated_inventory`.
 

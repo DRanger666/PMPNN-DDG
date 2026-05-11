@@ -108,6 +108,7 @@ def write_tsv(path: Path, rows: Iterable[dict[str, object]], fields: list[str]) 
             handle,
             fieldnames=fields,
             delimiter="\t",
+            lineterminator="\n",
             extrasaction="ignore",
         )
         writer.writeheader()
@@ -506,8 +507,8 @@ def nested_source_state_rows() -> list[dict[str, object]]:
                     "repo_path": rel_workspace(repo) if repo.is_relative_to(WORKSPACE) else str(repo),
                     "field": "exists",
                     "value": "no",
-                    "stderr": "",
-                    "returncode": "",
+                    "stderr": "NA",
+                    "returncode": "NA",
                 }
             )
             continue
@@ -553,8 +554,8 @@ def nested_source_state_rows() -> list[dict[str, object]]:
                     "repo_path": rel_workspace(repo) if repo.is_relative_to(WORKSPACE) else str(repo),
                     "field": f"key_file:{relative}",
                     "value": value,
-                    "stderr": "",
-                    "returncode": "",
+                    "stderr": "NA",
+                    "returncode": "NA",
                 }
             )
     return rows
@@ -679,7 +680,7 @@ def write_markdown_summary(
         "",
         "## Main Findings",
         "",
-        "- The copied `Protein_MPNN_Digging` tree is not currently tracked by the workspace Git repository.",
+        "- The copied `Protein_MPNN_Digging` tree is only partially tracked by the workspace Git repository; promoted files are represented in `artifact_registry.tsv` with `git_tracked_now=yes`.",
         "- The V3 `*_pmppn_info_dict_V3.pickle` files, trained model pickles, and ProteinMPNN `.pt` checkpoints are binary artifacts; they need Git LFS or an external artifact-store decision before promotion.",
         "- The nested `ProteinMPNN/.git` metadata should not be committed as a nested Git directory. Preserve the source state by pinned commit, patch/diff, or an archive/bundle decision.",
         f"- The nested copied ProteinMPNN checkout HEAD is `{nested_head}` with status `{nested_status or 'clean'}`.",

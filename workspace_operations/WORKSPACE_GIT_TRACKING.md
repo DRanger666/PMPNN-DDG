@@ -1,6 +1,6 @@
 # Workspace Git Tracking Policy
 
-Date: 2026-05-10
+Date: 2026-05-11
 
 This repository is a local-only provenance repo for the
 `github_account_history_porting_2022_continuation` workspace.
@@ -26,6 +26,14 @@ This repository is a local-only provenance repo for the
   contains dataset PDB files, PSSM files, and the S_669 mutation/prediction CSV
   needed for ProteinMPNN-DDG reproduction attempts. This local directory is not
   a full mirror of the original FUSE-mount folder with the same name.
+- Narrowly promoted Protein_MPNN_Digging recovery artifacts, tracked with Git
+  LFS rather than regular Git:
+  `S_2648_pmppn_info_dict_V3.pickle`, `S_669_pmppn_info_dict_V3.pickle`,
+  `S_921_pmppn_info_dict_V3.pickle`, `Ssym_pmppn_info_dict_V3.pickle`, and
+  `reproduction_inputs/proteinmpnn_checkpoints/vanilla_model_weights/v_48_020.pt`.
+  The checkpoint is a byte-identical curated copy from the nested historical
+  ProteinMPNN checkout, because files inside an embedded Git repository cannot
+  be safely promoted as ordinary files in the parent workspace repo.
 
 ## Do Not Track By Default
 
@@ -35,6 +43,8 @@ This repository is a local-only provenance repo for the
   folder, and the selected ACCRE dataset-input snapshot.
 - Nested cloned repositories under `source_repos/`.
 - Binary model/result artifacts such as pickle, NumPy, PyTorch, or joblib files.
+  The only current exceptions are the explicitly promoted Git LFS files listed
+  above.
 - Runtime scaffolding under `.agents/` and `.codex/`.
 - `RESUME_CODEX_THREAD.md`, because it is a workspace-local operational resume
   index. It must not propagate across branches, Git worktrees, clones, or

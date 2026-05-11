@@ -44,7 +44,7 @@ when a manuscript-number or reproduction dependency requires them.
 
 ## Immediate Consequence
 
-The next storage work should not be "track the whole directory." It should be:
+The storage work should not be "track the whole directory." It should be:
 
 1. Promote or package the exact vanilla `v_48_020.pt` checkpoint and the
    relevant ProteinMPNN source changes needed for tensor extraction.
@@ -53,3 +53,24 @@ The next storage work should not be "track the whole directory." It should be:
 3. Trace whether the two feature-combination model pickles are loaded by the
    manuscript-number-producing notebooks before promoting roughly 1.2 GB of
    trained-model artifacts.
+
+## Promotion Applied
+
+The following artifacts are now promoted with exact path-specific Git LFS rules:
+
+- `S_2648_pmppn_info_dict_V3.pickle`
+- `S_669_pmppn_info_dict_V3.pickle`
+- `S_921_pmppn_info_dict_V3.pickle`
+- `Ssym_pmppn_info_dict_V3.pickle`
+- `reproduction_inputs/proteinmpnn_checkpoints/vanilla_model_weights/v_48_020.pt`
+
+This does not promote the whole `Protein_MPNN_Digging/` tree. The nested
+`ProteinMPNN/.git` directory, non-target checkpoint weights, V2/base/full
+feature pickles, trained RF model pickles, and runtime caches remain untracked
+unless separately promoted with a documented reason.
+
+The checkpoint is promoted as a curated byte-identical copy outside the nested
+ProteinMPNN checkout. Directly staging the file from inside
+`Protein_MPNN_Digging/ProteinMPNN/` is blocked by the embedded Git repository
+boundary, and tracking the nested repository itself would be the wrong storage
+shape for this workspace.

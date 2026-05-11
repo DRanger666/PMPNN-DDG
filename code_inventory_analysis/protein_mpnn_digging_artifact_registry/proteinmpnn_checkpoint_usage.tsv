@@ -355,6 +355,9 @@ drive_evidence_copy/sajidahmedprotres_drive/Colab Notebooks/Ssym_ProteinMPNNTest
 drive_evidence_copy/sajidahmedprotres_drive/Colab Notebooks/proteinmpnn_quickdemo.ipynb	raw_colab_notebook_copy	1	v_48_002,v_48_010,v_48_020,v_48_030,model_name,checkpoint_path,vanilla_model_weights,ProteinMPNN(,protein_mpnn_utils	active_or_text	"{""cells"":[{""cell_type"":""markdown"",""metadata"":{""id"":""AYZebfKn8gef""},""source"":[""#ProteinMPNN\n"",""This notebook is intended as a quick demo, more features to come!""]},{""cell_type"":""code"",""execution_count"":null,""metadata"":{""id"":""iYDU3ftml2k5""},""outputs"":[],""source"":[""#@title Clone github repo\n"",""import json, time, os, sys, glob\n"",""\n"",""if not os.path.isdir(\""ProteinMPNN\""):\n"",""  os.system(\""git clone -q https://github.com/dauparas/ProteinMPNN.git\"")\n"",""sys.path.append('/content/ProteinMPNN/vanilla_proteinmpnn')""]},{""cell_type"":""code"",""source"":[""#@title Setup Model\n"",""import matplotlib.pyplot as plt\n"",""import shutil\n"",""import warnings\n"",""import numpy as np\n"",""import torch\n"",""from torch "
 manuscript_codebase_mapping/V3_PICKLE_REPRODUCTION_FROM_INPUTS_PLAN.md	manuscript_codebase_mapping_note	56	v_48_020,vanilla_model_weights	note_or_generated_inventory	source_repos/SajidAhmeduiu_ProteinMPNN/vanilla_proteinmpnn/vanilla_model_weights/v_48_020.pt
 manuscript_codebase_mapping/V3_PICKLE_REPRODUCTION_FROM_INPUTS_PLAN.md	manuscript_codebase_mapping_note	395	v_48_020	note_or_generated_inventory	- old ProteinMPNN fork code and `v_48_020.pt` model weight
+manuscript_codebase_mapping/tensor_extraction_codeblock_recovery/NESTED_PROTEINMPNN_DIRTY_UTILS_AUDIT.md	manuscript_codebase_mapping_note	9	protein_mpnn_utils	note_or_generated_inventory	- Dirty file: `vanilla_proteinmpnn/protein_mpnn_utils.py`.
+manuscript_codebase_mapping/tensor_extraction_codeblock_recovery/NESTED_PROTEINMPNN_DIRTY_UTILS_AUDIT.md	manuscript_codebase_mapping_note	83	protein_mpnn_utils	note_or_generated_inventory	`protein_mpnn_utils.py` path by default, so the historical parser,
+manuscript_codebase_mapping/tensor_extraction_codeblock_recovery/NESTED_PROTEINMPNN_DIRTY_UTILS_AUDIT.md	manuscript_codebase_mapping_note	99	protein_mpnn_utils	note_or_generated_inventory	The dirty nested `protein_mpnn_utils.py` is important historical evidence, but
 manuscript_codebase_mapping/tensor_extraction_codeblock_recovery/ssym_all_entries_tensor_extraction/SSYM_ALL_ENTRIES_TENSOR_EXTRACTION_EXPERIMENT.md	manuscript_codebase_mapping_note	32	protein_mpnn_utils	note_or_generated_inventory	- Utils source: `drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/ProteinMPNN/vanilla_proteinmpnn/protein_mpnn_utils.py`
 manuscript_codebase_mapping/tensor_extraction_codeblock_recovery/ssym_all_entries_tensor_extraction/SSYM_ALL_ENTRIES_TENSOR_EXTRACTION_EXPERIMENT.md	manuscript_codebase_mapping_note	33	v_48_020,vanilla_model_weights	note_or_generated_inventory	- Checkpoint: `drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/ProteinMPNN/vanilla_proteinmpnn/vanilla_model_weights/v_48_020.pt`
 manuscript_codebase_mapping/tensor_extraction_codeblock_recovery/ssym_all_entries_tensor_extraction/json/ssym_all_entries_tensor_extraction_summary.json	manuscript_codebase_mapping_note	10	protein_mpnn_utils	note_or_generated_inventory	"""utils_path"": ""drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/ProteinMPNN/vanilla_proteinmpnn/protein_mpnn_utils.py"","
@@ -367,14 +370,16 @@ manuscript_codebase_mapping/tensor_extraction_codeblock_recovery/tables/old_fork
 manuscript_codebase_mapping/tensor_extraction_codeblock_recovery/tables/tensor_extraction_source_versions.tsv	manuscript_codebase_mapping_note	31	protein_mpnn_utils	note_or_generated_inventory	"old_fork_python_source	source_repos/SajidAhmeduiu_ProteinMPNN/ca_proteinmpnn/protein_mpnn_utils.py	NA	False	False	False	False	False	False	False	False	False	0	False	NA"
 manuscript_codebase_mapping/tensor_extraction_codeblock_recovery/tables/tensor_extraction_source_versions.tsv	manuscript_codebase_mapping_note	33	protein_mpnn_utils	note_or_generated_inventory	"old_fork_python_source	source_repos/SajidAhmeduiu_ProteinMPNN/vanilla_proteinmpnn/protein_mpnn_utils.py	NA	False	False	False	True	False	False	False	False	False	0	False	old fork source contains neighbor-info history, not complete V6_V2 tensor returns"
 proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	44	protein_mpnn_utils	active_or_text	"/ ""protein_mpnn_utils.py"""
-proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	53	vanilla_model_weights	active_or_text	"/ ""vanilla_model_weights"""
-proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	54	v_48_020	active_or_text	"/ ""v_48_020.pt"""
-proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	95	checkpoint_path	active_or_text	checkpoint_path: Path
-proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	224	checkpoint_path	active_or_text	checkpoint_path: Path = DEFAULT_CHECKPOINT_PATH,
-proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	233	checkpoint_path	active_or_text	checkpoint_path = Path(checkpoint_path)
-proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	234	checkpoint_path	active_or_text	checkpoint = torch.load(checkpoint_path, map_location=device)
-proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	235	ProteinMPNN(	active_or_text	model = utils.ProteinMPNN(
-proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	255	checkpoint_path	active_or_text	checkpoint_path=checkpoint_path,
+proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	50	vanilla_model_weights	active_or_text	"/ ""vanilla_model_weights"""
+proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	51	v_48_020	active_or_text	"/ ""v_48_020.pt"""
+proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	92	checkpoint_path	active_or_text	checkpoint_path: Path
+proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	221	checkpoint_path	active_or_text	checkpoint_path: Path = DEFAULT_CHECKPOINT_PATH,
+proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	230	checkpoint_path	active_or_text	checkpoint_path = Path(checkpoint_path)
+proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	231	checkpoint_path	active_or_text	checkpoint = torch.load(checkpoint_path, map_location=device)
+proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	232	ProteinMPNN(	active_or_text	model = utils.ProteinMPNN(
+proteinmpnn_ddg_recovery/recovered_v6v2.py	current_recovery_code	252	checkpoint_path	active_or_text	checkpoint_path=checkpoint_path,
+reproduction_inputs/proteinmpnn_checkpoints/README.md	reproduction_input_note_or_data	6	v_48_020,vanilla_model_weights	commented	## `vanilla_model_weights/v_48_020.pt`
+reproduction_inputs/proteinmpnn_checkpoints/README.md	reproduction_input_note_or_data	9	v_48_020,vanilla_model_weights	active_or_text	`drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/ProteinMPNN/vanilla_proteinmpnn/vanilla_model_weights/v_48_020.pt`
 scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	58	v_48_002	active_or_text	"""v_48_002"","
 scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	59	v_48_010	active_or_text	"""v_48_010"","
 scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	60	v_48_020	active_or_text	"""v_48_020"","
@@ -386,12 +391,12 @@ scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	65	van
 scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	66	ca_model_weights	active_or_text	"""ca_model_weights"","
 scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	67	ProteinMPNN(	active_or_text	"""ProteinMPNN("","
 scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	68	protein_mpnn_utils	active_or_text	"""protein_mpnn_utils"","
-scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	534	protein_mpnn_utils	active_or_text	"""vanilla_proteinmpnn/protein_mpnn_utils.py"","
-scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	536	v_48_020,vanilla_model_weights	active_or_text	"""vanilla_proteinmpnn/vanilla_model_weights/v_48_020.pt"","
-scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	537	protein_mpnn_utils	active_or_text	"""ca_proteinmpnn/protein_mpnn_utils.py"","
-scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	538	v_48_020,ca_model_weights	active_or_text	"""ca_proteinmpnn/ca_model_weights/v_48_020.pt"","
-scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	649	v_48_020	active_or_text	"if ""v_48_020"" in str(row[""line_text""]) or ""v_48_020"" in str(row[""terms""])"
-scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	686	v_48_020	active_or_text	"f""- Checkpoint usage lines mentioning `v_48_020` were found: `{len(v48_020_rows)}`."","
+scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	535	protein_mpnn_utils	active_or_text	"""vanilla_proteinmpnn/protein_mpnn_utils.py"","
+scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	537	v_48_020,vanilla_model_weights	active_or_text	"""vanilla_proteinmpnn/vanilla_model_weights/v_48_020.pt"","
+scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	538	protein_mpnn_utils	active_or_text	"""ca_proteinmpnn/protein_mpnn_utils.py"","
+scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	539	v_48_020,ca_model_weights	active_or_text	"""ca_proteinmpnn/ca_model_weights/v_48_020.pt"","
+scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	650	v_48_020	active_or_text	"if ""v_48_020"" in str(row[""line_text""]) or ""v_48_020"" in str(row[""terms""])"
+scripts/inventory_protein_mpnn_digging_artifacts.py	current_recovery_code	687	v_48_020	active_or_text	"f""- Checkpoint usage lines mentioning `v_48_020` were found: `{len(v48_020_rows)}`."","
 scripts/inventory_tensor_extraction_codeblocks.py	current_recovery_code	51	protein_mpnn_utils	active_or_text	"""vanilla_proteinmpnn/protein_mpnn_utils.py"","
 scripts/inventory_tensor_extraction_codeblocks.py	current_recovery_code	53	protein_mpnn_utils	active_or_text	"""ca_proteinmpnn/protein_mpnn_utils.py"","
 scripts/inventory_tensor_extraction_codeblocks.py	current_recovery_code	386	protein_mpnn_utils	active_or_text	"r""(ProteinMPNNTesting|S921_ProteinMPNNTesting|S669_ProteinMPNNTesting|Ssym_ProteinMPNNTesting|protein_mpnn_utils|protein_mpnn_run)"""
@@ -400,3 +405,4 @@ scripts/smoke_test_ssym_tensor_extraction.py	current_recovery_code	111	checkpoin
 scripts/smoke_test_ssym_tensor_extraction.py	current_recovery_code	185	checkpoint_path	active_or_text	"""checkpoint_path"": str(runtime.checkpoint_path.relative_to(WORKSPACE_ROOT)),"
 scripts/test_ssym_tensor_extraction_all_entries.py	current_recovery_code	118	checkpoint_path	active_or_text	"""checkpoint_path"": str(runtime.checkpoint_path.relative_to(WORKSPACE_ROOT)),"
 scripts/test_ssym_tensor_extraction_all_entries.py	current_recovery_code	165	checkpoint_path	active_or_text	"f""- Checkpoint: `{summary['runtime']['checkpoint_path']}`"","
+workspace_operations/WORKSPACE_GIT_TRACKING.md	workspace_operations_note	33	v_48_020,vanilla_model_weights	note_or_generated_inventory	`reproduction_inputs/proteinmpnn_checkpoints/vanilla_model_weights/v_48_020.pt`.

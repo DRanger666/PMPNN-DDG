@@ -45,11 +45,8 @@ DEFAULT_UTILS_PATH = (
 )
 DEFAULT_CHECKPOINT_PATH = (
     WORKSPACE_ROOT
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
-    / "Protein_MPNN_Digging"
-    / "ProteinMPNN"
-    / "vanilla_proteinmpnn"
+    / "reproduction_inputs"
+    / "proteinmpnn_checkpoints"
     / "vanilla_model_weights"
     / "v_48_020.pt"
 )
@@ -588,4 +585,3 @@ def extract_mutation_tensor_fields(
         sequence_index=sequence_index,
         fields=fields,
     )
-

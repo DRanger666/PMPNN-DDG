@@ -11,4 +11,4 @@ runtime_cache	do_not_track	2	0	0	114563
 trained_feature_combo_model_pickle	git_lfs_candidate_after_deep_inspection	2	0	2	1190292480
 uncategorized_small_artifact	decide_after_dependency_review	2	0	0	2871
 v2_pmpnn_info_pickle	git_lfs_candidate_if_needed_for_lineage	4	0	4	271800106
-v3_pmpnn_info_pickle	git_lfs_candidate_required_for_recovery	4	0	4	317792839
+v3_pmpnn_info_pickle	git_lfs_candidate_required_for_recovery	4	4	4	317792839

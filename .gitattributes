@@ -1,0 +1,5 @@
+drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_2648_pmppn_info_dict_V3.pickle filter=lfs diff=lfs merge=lfs -text
+drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_669_pmppn_info_dict_V3.pickle filter=lfs diff=lfs merge=lfs -text
+drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_921_pmppn_info_dict_V3.pickle filter=lfs diff=lfs merge=lfs -text
+drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/Ssym_pmppn_info_dict_V3.pickle filter=lfs diff=lfs merge=lfs -text
+reproduction_inputs/proteinmpnn_checkpoints/vanilla_model_weights/v_48_020.pt filter=lfs diff=lfs merge=lfs -text

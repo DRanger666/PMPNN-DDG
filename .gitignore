@@ -17,6 +17,14 @@ drive_evidence_copy/sajidahmedprotres_drive/*
 !drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/
 !drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/**
 
+# Narrowly promoted Protein_MPNN_Digging recovery artifacts.
+!drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/
+drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/*
+!drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_2648_pmppn_info_dict_V3.pickle
+!drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_669_pmppn_info_dict_V3.pickle
+!drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_921_pmppn_info_dict_V3.pickle
+!drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/Ssym_pmppn_info_dict_V3.pickle
+
 # Nested source clones are evidence inputs, not files owned by this workspace repo.
 source_repos/
 
@@ -36,6 +44,13 @@ __pycache__/
 *.pth
 *.h5
 *.hdf5
+
+# Re-allow exact promoted binary artifacts after the broad binary rules above.
+!drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_2648_pmppn_info_dict_V3.pickle
+!drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_669_pmppn_info_dict_V3.pickle
+!drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_921_pmppn_info_dict_V3.pickle
+!drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/Ssym_pmppn_info_dict_V3.pickle
+!reproduction_inputs/proteinmpnn_checkpoints/vanilla_model_weights/v_48_020.pt
 
 # Local scratch/output archives
 *.zip
