@@ -50,14 +50,17 @@ choices around it. Its job is not to rewrite historical recovery claims.
 
 1. Which ProteinMPNN tensor-extraction choices can explain the mismatch between
    recovered V6_V2-style tensors and saved V3 direct tensor fields?
-2. How does random decoder order affect center-residue tensors, neighbor
+2. Does saved V3 direct-tensor extraction require a center-designable pass
+   followed by K separate neighbor-designable passes, and how does RNG/order
+   state advance across those passes?
+3. How does random decoder order affect center-residue tensors, neighbor
    tensors, attended-neighbor ranking, and downstream scalar features?
-3. What are the consequences of directed neighbor-graph asymmetry, especially
+4. What are the consequences of directed neighbor-graph asymmetry, especially
    when the center residue is absent from a selected neighbor's local
    neighborhood?
-4. Which diagnostic variants can be tested without labeling them as historical
+5. Which diagnostic variants can be tested without labeling them as historical
    evidence?
-5. Which tensor-generation choices are scientifically defensible for a future
+6. Which tensor-generation choices are scientifically defensible for a future
    ProteinMPNN-DDG method, even if they differ from the 2022 pipeline?
 
 ## Operating Rules
