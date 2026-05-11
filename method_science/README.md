@@ -19,9 +19,16 @@ finding first appeared during recovery work.
 
 Current notes:
 
-- `FEATURE_E_MESSAGE_KPCA_AND_AUGMENTATION.md`: feature E as message-KPCA in
-  the augmented RF matrix, K-neighbor tensor-bundle semantics, and the
-  pre-augmentation versus post-augmentation column-number distinction. Also
-  records the raw vector sign convention for reverse augmentation and the
-  distinction between sign-flipped raw embedding vectors and sign-invariant
-  scalar feature D.
+- `V3_NEIGHBOR_VECTOR_EXTRACTION_SEMANTICS.md`: center-designable plus
+  one-selected-neighbor-designable-at-a-time extraction semantics that feed
+  features B, C, D, and E.
+- `FORWARD_REVERSE_AUGMENTATION_FEATURE_SEMANTICS.md`: feature-orientation
+  rules for synthetic reverse rows, including sign flips, swaps, reciprocals,
+  and the distinction between raw vector differences and scalar features.
+- `FEATURE_B_WEIGHTED_NEIGHBOR_ENTROPY_SEMANTICS.md`: feature B as recovered
+  from the code path, including the message-norm-ratio weighting caveat.
+- `FEATURE_D_NEIGHBOR_EMBEDDING_CHANGE_SEMANTICS.md`: feature D as a
+  sign-invariant norm-sum over raw neighbor-embedding difference vectors.
+- `FEATURE_E_MESSAGE_KPCA_AUGMENTED_MATRIX_SEMANTICS.md`: feature E as
+  message-KPCA in the augmented RF matrix, including the pre-augmentation versus
+  post-augmentation column-number distinction.
