@@ -37,7 +37,7 @@ Absolute paths are appropriate for:
 
 - live source mounts, for example `/home/mpr/sajidahmedprotres_drive`;
 - separate Git worktree locations, for example
-  `/home/mpr/proteinmpnn_ddg_algorithmic_deliberations`;
+  `/home/mpr/proteinmpnn_ddg_v3_tensor_extraction_reconciliation`;
 - shared runtime environments, for example the main-workspace venv path used
   by the V3 tensor-reconciliation worktree before it has its own venv;
 - exact shell commands where the filesystem location is the point;

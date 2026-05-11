@@ -85,14 +85,15 @@ The canonical environment currently lives in the main workspace:
 /home/mpr/github_account_history_porting_2022_continuation/.venv_proteinmpnn_ddg_reproduction/
 ```
 
-Because Git worktrees do not copy ignored virtual environments, the algorithmic
-worktree may not contain its own `.venv_proteinmpnn_ddg_reproduction/`
+Because Git worktrees do not copy ignored virtual environments, the V3
+tensor-reconciliation worktree may not contain its own
+`.venv_proteinmpnn_ddg_reproduction/`
 directory. For initial read-only or diagnostic runs, use the main workspace
 venv by absolute path, or deliberately create a separate equivalent venv in the
-algorithmic worktree and record that decision.
+V3 tensor-reconciliation worktree and record that decision.
 
 Do not silently install packages into the main workspace venv from the
-algorithmic worktree.
+V3 tensor-reconciliation worktree.
 
 Also follow `workspace_operations/PATH_REFERENCE_DISCIPLINE.md`: repository
 paths should usually be relative to the current worktree, while absolute paths

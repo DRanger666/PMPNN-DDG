@@ -36,9 +36,10 @@ Each note should state:
 
 Current notes:
 
-- `ALGORITHMIC_SESSION_START.md`: startup handoff for the Algorithmic Codex
-  session and Git worktree, including the current proven boundary, unresolved
-  direct-tensor segment, initial questions, and runtime note.
+- `V3_TENSOR_RECONCILIATION_SESSION_START.md`: startup handoff for the V3
+  tensor-reconciliation Codex session and Git worktree, including the current
+  proven boundary, unresolved direct-tensor segment, initial questions, and
+  runtime note.
 - `RANDOM_DECODER_ORDER_SINGLE_MUTATION_MASKING.md`: why random decoder order
   can affect ProteinMPNN-DDG tensor extraction even when exactly one residue is
   designable.

@@ -43,7 +43,7 @@ The project should run with two coordinated but separated workspaces:
 | Role | Codex session | Filesystem checkout | Git branch | Primary goal |
 | --- | --- | --- | --- | --- |
 | Main recovery | current session | `/home/mpr/github_account_history_porting_2022_continuation` | `main` | recover/reproduce 2022 manuscript evidence and artifact provenance |
-| V3 tensor reconciliation | Codex session fork | `/home/mpr/proteinmpnn_ddg_algorithmic_deliberations` | `algorithmic-deliberations` | reconcile saved V3 direct tensor fields with manuscript logic and executable ProteinMPNN-DDG tensor-extraction code |
+| V3 tensor reconciliation | Codex session fork | `/home/mpr/proteinmpnn_ddg_v3_tensor_extraction_reconciliation` | `v3-tensor-extraction-reconciliation` | reconcile saved V3 direct tensor fields with manuscript logic and executable ProteinMPNN-DDG tensor-extraction code |
 
 The V3 tensor-reconciliation Codex session should own focused work under
 `v3_tensor_extraction_reconciliation/` and any clearly labeled tensor
@@ -61,7 +61,7 @@ Before creating the V3 tensor-reconciliation Codex session:
 1. Ensure the current workspace is clean.
 2. Push local commits from `main`.
 3. Create a separate Git worktree checked out to the
-   `algorithmic-deliberations` branch.
+   `v3-tensor-extraction-reconciliation` branch.
 4. Resolve the current Codex session UUID from local session metadata.
 5. Launch the Codex session fork with `-C` pointing at the V3
    tensor-reconciliation worktree.
@@ -69,7 +69,7 @@ Before creating the V3 tensor-reconciliation Codex session:
 Command shape, with the UUID verified at execution time:
 
 ```bash
-codex fork -C /home/mpr/proteinmpnn_ddg_algorithmic_deliberations <current-session-uuid>
+codex fork -C /home/mpr/proteinmpnn_ddg_v3_tensor_extraction_reconciliation <current-session-uuid>
 ```
 
 Do not infer the session UUID from chat memory. Verify it from local Codex
@@ -112,8 +112,8 @@ the root items that actually exist in that physical checkout, including ignored
 local items when they are important for navigation.
 
 Do not force identical workspace maps across `main` and
-`algorithmic-deliberations` just because both branches share repository
-history.
+`v3-tensor-extraction-reconciliation` just because both branches share
+repository history.
 
 ## Merge Discipline
 
@@ -144,13 +144,13 @@ Useful checks:
 ```bash
 git status --short --branch
 git worktree list
-git branch --list algorithmic-deliberations
+git branch --list v3-tensor-extraction-reconciliation
 ```
 
 The current V3 tensor-reconciliation worktree path is:
 
 ```text
-/home/mpr/proteinmpnn_ddg_algorithmic_deliberations
+/home/mpr/proteinmpnn_ddg_v3_tensor_extraction_reconciliation
 ```
 
 The exact Codex session UUID must still be verified from local Codex session
