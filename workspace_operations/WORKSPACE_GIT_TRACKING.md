@@ -29,13 +29,19 @@ This repository is a local-only provenance repo for the
 - Narrowly promoted Protein_MPNN_Digging recovery artifacts, tracked with Git
   LFS rather than regular Git:
   `S_2648_pmppn_info_dict_V3.pickle`, `S_669_pmppn_info_dict_V3.pickle`,
-  `S_921_pmppn_info_dict_V3.pickle`, `Ssym_pmppn_info_dict_V3.pickle`, and
+  `S_921_pmppn_info_dict_V3.pickle`, `Ssym_pmppn_info_dict_V3.pickle`,
+  `list_incremental_feature_result_dict.pickle`, and
   `reproduction_inputs/proteinmpnn_checkpoints/vanilla_model_weights/v_48_020.pt`.
   The four pickles are dataset-specific V3 reference artifacts for
-  recovery/reproduction analysis. The checkpoint is the current tensor-extraction
-  model input and is a byte-identical curated copy from the nested historical
-  ProteinMPNN checkout, because files inside an embedded Git repository cannot
-  be safely promoted as ordinary files in the parent workspace repo.
+  recovery/reproduction analysis. The incremental-feature result pickle is the
+  recovered final RF result artifact that supports the Table 1 and Figure 6
+  evidence layer. The checkpoint is the current tensor-extraction model input
+  and is a byte-identical curated copy from the nested historical ProteinMPNN
+  checkout, because files inside an embedded Git repository cannot be safely
+  promoted as ordinary files in the parent workspace repo.
+  This promotion does not include the older `feature_combo_*` pickles; current
+  evidence classifies those as earlier exploratory artifacts, not the final
+  Table 1/Figure 6 source.
 
 ## Do Not Track By Default
 

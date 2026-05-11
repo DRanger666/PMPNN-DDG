@@ -76,12 +76,16 @@ does not prove end-to-end V3 pickle regeneration.
 
 ## Portable Core Artifacts
 
-The workspace now tracks two small classes of indispensable recovery inputs via
+The workspace now tracks three small classes of indispensable recovery inputs via
 Git LFS:
 
 - the four dataset-specific V3 PMPNN info pickles under
   `drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/`, used as
   saved reference artifacts for recovery/reproduction analysis;
+- the final ten-run incremental-feature RF result pickle
+  `drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/list_incremental_feature_result_dict.pickle`,
+  used as the recovered numerical source for the Table 1 and Figure 6 final
+  RF-result evidence layer;
 - the curated ProteinMPNN checkpoint
   `reproduction_inputs/proteinmpnn_checkpoints/vanilla_model_weights/v_48_020.pt`,
   used as the current tensor-extraction model input.

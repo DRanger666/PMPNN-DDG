@@ -24,6 +24,7 @@ drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/*
 !drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_669_pmppn_info_dict_V3.pickle
 !drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_921_pmppn_info_dict_V3.pickle
 !drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/Ssym_pmppn_info_dict_V3.pickle
+!drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/list_incremental_feature_result_dict.pickle
 
 # Nested source clones are evidence inputs, not files owned by this workspace repo.
 source_repos/
@@ -50,6 +51,7 @@ __pycache__/
 !drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_669_pmppn_info_dict_V3.pickle
 !drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_921_pmppn_info_dict_V3.pickle
 !drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/Ssym_pmppn_info_dict_V3.pickle
+!drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/list_incremental_feature_result_dict.pickle
 !reproduction_inputs/proteinmpnn_checkpoints/vanilla_model_weights/v_48_020.pt
 
 # Local scratch/output archives

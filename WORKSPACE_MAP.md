@@ -42,7 +42,10 @@ workspace.
     The local ACCRE snapshot is not a full mirror of the original FUSE-mount
     folder. The four promoted `Protein_MPNN_Digging/*_pmppn_info_dict_V3.pickle`
     files are tracked with Git LFS because they are dataset-specific
-    recovery/reproduction reference artifacts. Other bulk copied payloads
+    recovery/reproduction reference artifacts. The promoted
+    `Protein_MPNN_Digging/list_incremental_feature_result_dict.pickle` file is
+    tracked with Git LFS because it is the recovered final RF result artifact
+    for the Table 1 and Figure 6 evidence layer. Other bulk copied payloads
     remain ignored unless explicitly promoted for a concrete recovery need.
 
 - `external_reference_structures/`
@@ -101,8 +104,8 @@ workspace.
     nested source clones, Python residue, and large binary artifacts.
 
 - `.gitattributes`
-  - Git LFS rules for the promoted V3 PMPNN info pickles and curated
-    ProteinMPNN checkpoint.
+  - Git LFS rules for the promoted V3 PMPNN info pickles, final incremental RF
+    result pickle, and curated ProteinMPNN checkpoint.
 
 ## Local Runtime Items
 
