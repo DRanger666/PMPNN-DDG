@@ -28,6 +28,9 @@ Current notes:
 - `ALGORITHMIC_SESSION_START.md`: startup handoff for the Algorithmic Codex
   session and Git worktree, including the current proven boundary, unresolved
   direct-tensor segment, initial questions, and runtime note.
+- `FEATURE_E_MESSAGE_KPCA_AND_AUGMENTATION.md`: scientific/method note on
+  feature E as message-KPCA in the augmented RF matrix, K-neighbor tensor-bundle
+  semantics, and why pre-augmentation column numbers caused confusion.
 - `RANDOM_DECODER_ORDER_SINGLE_MUTATION_MASKING.md`: why random decoder order
   can affect ProteinMPNN-DDG tensor extraction even when exactly one residue is
   designable.
