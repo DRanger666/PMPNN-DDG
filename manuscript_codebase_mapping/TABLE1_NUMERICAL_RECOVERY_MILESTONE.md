@@ -89,17 +89,31 @@ Evidence notes:
 - `manuscript_codebase_mapping/S669_SSYM_S2648_STAGE1_NOTEBOOK_CELL_EVIDENCE.md`
 - `manuscript_codebase_mapping/S_921_TABLE1_NOTEBOOK_CELL_EVIDENCE.md`
 
-## Figure 6 Implication
+## Figure 6 Connection
 
 The same ten-run result pickle also stores the A through A-H total-PCC series
 for `S_669` and `Ssym`.
 
-This strongly supports the current interpretation that the underlying numerical
-values used for the Figure 6-style incremental-feature plot have been recovered
-from `list_incremental_feature_result_dict.pickle`.
+Follow-up verification showed that the standalone manuscript Figure 6 image is
+byte-identical to the saved output of
+`Quick_Dirty_MPNN_ML_V2_VGRAPHS_V1.ipynb` cell index `40`, and that matched
+cell plots:
 
-Remaining Figure 6-specific work: compare the recovered total-PCC series against
-the final embedded manuscript figure, caption, and any exported figure image.
+```text
+dict_mean(list_S_669_total_PCC)
+dict_mean(list_Ssym_total_PCC)
+```
+
+Therefore, the numerical basis of Figure 6 is verified at the result-pickle and
+plotting layer. See:
+
+```text
+manuscript_codebase_mapping/FIGURE6_NUMERICAL_BASIS_VERIFICATION.md
+```
+
+The strict byte-level image match is between the standalone manuscript Figure 6
+PNG and the notebook output. The final DOCX maps Figure 6 to embedded
+`media/image6.png`, which is a separate non-identical embedded PNG.
 
 ## Not Table 1 Sources
 

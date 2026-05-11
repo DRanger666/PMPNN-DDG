@@ -31,6 +31,24 @@ Evidence:
 
 - `manuscript_codebase_mapping/TABLE1_NUMERICAL_RECOVERY_MILESTONE.md`
 
+At the final RF plotting layer, manuscript Figure 6 has also been numerically
+recovered for the S_669/Ssym incremental-feature total-PCC plot:
+
+```text
+list_incremental_feature_result_dict.pickle
+-> S_669/Ssym total-PCC means
+-> exact notebook output image
+-> manuscript Figure 6 standalone image
+```
+
+Evidence:
+
+- `manuscript_codebase_mapping/FIGURE6_NUMERICAL_BASIS_VERIFICATION.md`
+
+Caveat: the final DOCX embeds Figure 6 as a separate non-identical PNG. The
+strict byte-level image match is between the standalone manuscript Figure 6 PNG
+and the notebook output.
+
 For Ssym, the feature-construction segment has been reproduced at value level:
 
 ```text

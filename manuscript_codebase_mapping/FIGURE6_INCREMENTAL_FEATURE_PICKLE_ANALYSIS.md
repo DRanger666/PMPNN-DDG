@@ -79,7 +79,7 @@ The older `incremental_feature_result_dict.pickle` is a single-run dictionary.
 It lacks `S_2648` metrics and should not be treated as the final ten-run Figure
 6 source object.
 
-## Figure 6 Candidate Values
+## Figure 6 Verified Image Values
 
 The combined bar-plot cell uses:
 
@@ -93,11 +93,32 @@ The ten-run means from `list_incremental_feature_result_dict.pickle` are:
 | S_669 total PCC | 0.471635 | 0.526012 | 0.577201 | 0.601057 | 0.637371 | 0.643767 | 0.643525 | 0.643995 |
 | Ssym total PCC | 0.641138 | 0.700699 | 0.716445 | 0.742638 | 0.786866 | 0.802690 | 0.808748 | 0.812228 |
 
-These values are exactly the quantity series used by the Figure 6-style
-S_669/Ssym total-PCC plotting cell. The code-to-pickle match is strong for the
-stored result object. The remaining manuscript-level step is to compare these
-values against the final embedded manuscript figure/caption and any exported
-figure image.
+These values are exactly the quantity series used by the Figure 6 S_669/Ssym
+total-PCC plotting cell.
+
+The standalone manuscript image
+`drive_evidence_copy/sajidahmedprotres_drive/MPNN_DDG_Manuscript/Feature_Combinations_MultiPlot.png`
+is byte-identical to the saved output of
+`source_repos/SajidAhmeduiu_ProteinMPNN/Sajid_Additions/Quick_Dirty_MPNN_ML_V2_VGRAPHS_V1.ipynb`
+cell index `40`, output index `0`.
+
+Exact shared SHA256:
+
+```text
+9cec9fcf1d3f466b8bf0f1766bc98c20152b2c617c5d872d3e3588f79143da95
+```
+
+Therefore the numerical basis of the manuscript Figure 6 image is verified at
+the result-pickle/plotting layer. See:
+
+```text
+manuscript_codebase_mapping/FIGURE6_NUMERICAL_BASIS_VERIFICATION.md
+code_inventory_analysis/figure6_image_verification/
+```
+
+DOCX nuance: the final DOCX references Figure 6 as `media/image6.png`, but that
+embedded PNG is not byte-identical to the standalone manuscript image. The
+strict hash proof is the standalone image to notebook-output match.
 
 ## Full A-H Table-Level Metrics
 
@@ -115,6 +136,5 @@ For the full A-H combination, the ten-run means are:
 | Ssym | reverse | 0.718826 | 1.102374 |
 | Ssym | total | 0.812228 | 1.100381 |
 
-Rounded to two decimals, these match the expected style of the manuscript
-reported table values for S_921 and provide the corresponding held-out values
-for S_669 and Ssym.
+Rounded to two decimals, these match the manuscript Table 1 values for the six
+non-`rF-R` columns for S_669, S_921, and Ssym.
