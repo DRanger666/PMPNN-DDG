@@ -1,6 +1,6 @@
 # ProteinMPNN-DDG Workspace Map
 
-Date: 2026-05-10
+Date: 2026-05-11
 
 Purpose: first-navigation helper for this physical workspace root:
 `/home/mpr/github_account_history_porting_2022_continuation`.
@@ -113,6 +113,12 @@ evidence:
 - `.venv_proteinmpnn_ddg_reproduction/`
   - Current local Python environment for ProteinMPNN-DDG recovery and
     reproduction work. Its operating role is documented in
+    `workspace_operations/RUNTIME_ENVIRONMENT.md`.
+
+- `.venv_sklearn_legacy_pickle_inspection/`
+  - Auxiliary local Python environment for inspecting old scikit-learn model
+    pickles that cannot be deserialized by the current reproduction runtime.
+    Its narrow role is documented in
     `workspace_operations/RUNTIME_ENVIRONMENT.md`.
 
 - `RESUME_CODEX_THREAD.md`

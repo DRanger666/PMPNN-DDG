@@ -1,6 +1,6 @@
 # Runtime Environment
 
-Date: 2026-05-10
+Date: 2026-05-11
 
 Purpose: define the operating role of the local Python environment used for
 ProteinMPNN-DDG recovery and reproduction work.
@@ -95,3 +95,31 @@ stage, but it is a reproducibility gap.
 
 When the dependency set stabilizes, create a deliberate rebuild spec or frozen
 manifest in a dedicated location and reference it from this document.
+
+## Auxiliary Legacy Inspection Environment
+
+Path:
+
+```text
+.venv_sklearn_legacy_pickle_inspection/
+```
+
+Python/scikit-learn:
+
+```text
+Python 3.10.15
+scikit-learn 1.1.3
+```
+
+Purpose: deserialize and inspect 2022-era scikit-learn model pickles that cannot
+be loaded by the canonical reproduction venv's newer scikit-learn runtime.
+
+Known trigger: `feature_combo_model_dict.pickle` and
+`S_669_feature_combo_model_dict.pickle` fail under scikit-learn 1.8.0 because
+their saved tree-node dtype is from an older scikit-learn version. Under this
+auxiliary runtime, both load with warnings identifying the saved estimator
+version as scikit-learn 1.0.2.
+
+This environment is not the canonical runtime for ProteinMPNN-DDG reproduction.
+Use it only for legacy model-pickle inspection unless a separate runtime
+decision is recorded.
