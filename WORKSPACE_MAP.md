@@ -40,8 +40,10 @@ workspace.
     notebooks, and selected ACCRE dataset-input snapshot under
     `drive_evidence_copy/sajidahmedprotres_drive/` are deliberately tracked.
     The local ACCRE snapshot is not a full mirror of the original FUSE-mount
-    folder; other bulk copied payloads remain ignored unless explicitly
-    promoted for a concrete recovery need.
+    folder. The four promoted `Protein_MPNN_Digging/*_pmppn_info_dict_V3.pickle`
+    files are tracked with Git LFS because they are dataset-specific
+    recovery/reproduction reference artifacts. Other bulk copied payloads
+    remain ignored unless explicitly promoted for a concrete recovery need.
 
 - `external_reference_structures/`
   - Downloaded external reference structure/metadata checks used to interpret
@@ -68,7 +70,9 @@ workspace.
 
 - `reproduction_inputs/`
   - Local input tables and manifests needed for reproduction attempts, including
-    mutation/DDG tables for S_2648, S_669, S_921, and Ssym.
+    mutation/DDG tables for S_2648, S_669, S_921, and Ssym, plus the curated
+    Git-LFS-tracked ProteinMPNN `v_48_020.pt` checkpoint used as the current
+    tensor-extraction model input.
 
 - `scripts/`
   - Runnable analysis, audit, comparison, and reproduction scripts. Reusable
@@ -95,6 +99,10 @@ workspace.
 - `.gitignore`
   - Tracked ignore policy for runtime scaffolding, copied evidence payloads,
     nested source clones, Python residue, and large binary artifacts.
+
+- `.gitattributes`
+  - Git LFS rules for the promoted V3 PMPNN info pickles and curated
+    ProteinMPNN checkpoint.
 
 ## Local Runtime Items
 

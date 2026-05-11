@@ -36,8 +36,9 @@ more specific home for it and make the route visible from `WORKSPACE_MAP.md`.
 
 Current documents:
 
-- `CURRENT_RECOVERY_BOUNDARY.md`: states the current reproduced segment, the
-  unresolved direct-tensor segment, and the main/fork work ownership boundary.
+- `CURRENT_RECOVERY_BOUNDARY.md`: states the current reproduced segment,
+  portable core recovery artifacts, the unresolved direct-tensor segment, and
+  the main/fork work ownership boundary.
 - `WORKSTREAM_SEPARATION.md`: separates historical recovery/reproduction,
   algorithm design/implication analysis, and later manuscript synthesis.
 - `CODEX_SESSION_AND_GIT_WORKTREE_SEPARATION.md`: defines the two-Codex-session

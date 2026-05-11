@@ -31,7 +31,9 @@ This repository is a local-only provenance repo for the
   `S_2648_pmppn_info_dict_V3.pickle`, `S_669_pmppn_info_dict_V3.pickle`,
   `S_921_pmppn_info_dict_V3.pickle`, `Ssym_pmppn_info_dict_V3.pickle`, and
   `reproduction_inputs/proteinmpnn_checkpoints/vanilla_model_weights/v_48_020.pt`.
-  The checkpoint is a byte-identical curated copy from the nested historical
+  The four pickles are dataset-specific V3 reference artifacts for
+  recovery/reproduction analysis. The checkpoint is the current tensor-extraction
+  model input and is a byte-identical curated copy from the nested historical
   ProteinMPNN checkout, because files inside an embedded Git repository cannot
   be safely promoted as ordinary files in the parent workspace repo.
 

@@ -1,6 +1,6 @@
 # Current Recovery Boundary
 
-Date: 2026-05-10
+Date: 2026-05-11
 
 Purpose: short coordination anchor for what has been reproduced and what still
 needs recovery, reconciliation, or algorithmic study.
@@ -32,6 +32,18 @@ Current result:
 
 Important scope limit: this proves the saved-tensor-to-feature segment only. It
 does not prove end-to-end V3 pickle regeneration.
+
+## Portable Core Artifacts
+
+The workspace now tracks two small classes of indispensable recovery inputs via
+Git LFS:
+
+- the four dataset-specific V3 PMPNN info pickles under
+  `drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/`, used as
+  saved reference artifacts for recovery/reproduction analysis;
+- the curated ProteinMPNN checkpoint
+  `reproduction_inputs/proteinmpnn_checkpoints/vanilla_model_weights/v_48_020.pt`,
+  used as the current tensor-extraction model input.
 
 ## Still Unresolved
 
