@@ -64,6 +64,12 @@ main method-science or manuscript-synthesis record only after they are clearly
 classified as durable ProteinMPNN-DDG context rather than branch-local
 exploration.
 
+The ThermoMPNN enquiry worktree is intentionally sparse. It should not mirror
+the main recovery workspace and should not contain copied Drive evidence,
+inventories, pickle analysis, manuscript-code mapping, recovery scripts,
+reproduction inputs, or recovery-package work unless a small subset is
+deliberately promoted for a specific ThermoMPNN enquiry.
+
 ## Setup Sequence
 
 Before creating the V3 tensor-reconciliation Codex session:

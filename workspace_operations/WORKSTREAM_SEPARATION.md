@@ -132,6 +132,12 @@ Primary branch/worktree:
 - Git worktree: `/home/mpr/proteinmpnn_ddg_thermompnn_method_enquiries`
 - Primary branch-local directory: `thermompnn_enquiries/`
 
+Branch-shape rule: this worktree should stay sparse. It should not carry
+`drive_evidence_copy/`, inventory directories, pickle analysis,
+manuscript-code mapping, recovery scripts, reproduction inputs, or recovery
+package work by default. Promote only narrow context that is actually needed
+for a ThermoMPNN enquiry, and explain that promotion in the commit.
+
 ## Workstream 5: Manuscript Synthesis
 
 Goal: decide how recovered provenance, method-science notes, and V3
