@@ -22,6 +22,9 @@ Current notes:
 - `V3_NEIGHBOR_VECTOR_EXTRACTION_SEMANTICS.md`: center-designable plus
   one-selected-neighbor-designable-at-a-time extraction semantics that feed
   features B, C, D, and E.
+- `V3_DIRECTED_NEIGHBOR_ASYMMETRY_SEMANTICS.md`: directed top-k graph
+  asymmetry between neighbor-to-center selection messages and
+  center-to-neighbor feature messages.
 - `FORWARD_REVERSE_AUGMENTATION_FEATURE_SEMANTICS.md`: feature-orientation
   rules for synthetic reverse rows, including sign flips, swaps, reciprocals,
   and the distinction between raw vector differences and scalar features.
