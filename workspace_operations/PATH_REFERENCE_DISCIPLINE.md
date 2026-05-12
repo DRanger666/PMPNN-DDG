@@ -3,7 +3,8 @@
 Date: 2026-05-12
 
 Purpose: prevent accidental cross-worktree writes now that the project uses a
-main recovery worktree and a separate V3 tensor-reconciliation worktree.
+main recovery worktree plus separate V3 tensor-reconciliation and ThermoMPNN
+enquiry worktrees.
 
 ## Rule
 
@@ -23,13 +24,15 @@ proteinmpnn_ddg_recovery/...
 workspace_operations/...
 method_science/...
 v3_tensor_extraction_reconciliation/...
+thermompnn_enquiries/...
 manuscript_codebase_mapping/...
 pickle_analysis/...
 drive_evidence_copy/sajidahmedprotres_drive/...
 ```
 
 These paths should mean "inside the current Git worktree", whether the current
-worktree is the main recovery checkout or the V3 tensor-reconciliation checkout.
+worktree is the main recovery checkout, the V3 tensor-reconciliation checkout,
+or the ThermoMPNN enquiry checkout.
 
 ## Allowed Absolute Paths
 
@@ -37,7 +40,8 @@ Absolute paths are appropriate for:
 
 - live source mounts, for example `/home/mpr/sajidahmedprotres_drive`;
 - separate Git worktree locations, for example
-  `/home/mpr/proteinmpnn_ddg_v3_tensor_extraction_reconciliation`;
+  `/home/mpr/proteinmpnn_ddg_v3_tensor_extraction_reconciliation` or
+  `/home/mpr/proteinmpnn_ddg_thermompnn_method_enquiries`;
 - shared runtime environments, for example the main-workspace venv path used
   by the V3 tensor-reconciliation worktree before it has its own venv;
 - exact shell commands where the filesystem location is the point;
@@ -65,7 +69,7 @@ silently writing into the other checkout.
 
 ## Shared-Write Caution
 
-The two Git worktrees prevent ordinary working-directory interference. They do
+Separate Git worktrees prevent ordinary working-directory interference. They do
 not isolate writes to machine-global paths.
 
 Be careful with:

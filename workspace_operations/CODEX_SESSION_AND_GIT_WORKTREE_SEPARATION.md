@@ -3,8 +3,8 @@
 Date: 2026-05-12
 
 Purpose: prevent ambiguity between Codex conversation forks and Git
-branch/worktree separation while the ProteinMPNN-DDG project splits into a main
-recovery track and a focused V3 direct-tensor extraction reconciliation track.
+branch/worktree separation while the ProteinMPNN-DDG project splits into
+separate recovery, V3 tensor-reconciliation, and ThermoMPNN enquiry tracks.
 
 ## Stable Terms
 
@@ -24,6 +24,9 @@ Use these terms consistently.
   mismatch, and scientifically defensible stabilization.
 - **V3 tensor-reconciliation Git worktree branch**: the dedicated Git worktree
   plus branch used by the V3 tensor-reconciliation Codex session.
+- **ThermoMPNN enquiry Git worktree branch**: the dedicated Git worktree plus
+  branch for ThermoMPNN method-landscape, dataset, and future-extension
+  questions.
 
 Avoid the phrase "branch fork" without qualification. Say either "Codex session
 fork" or "Git branch/worktree".
@@ -38,12 +41,13 @@ it does not automatically move to a different Git worktree.
 
 ## Intended Operating Model
 
-The project should run with two coordinated but separated workspaces:
+The project should run with coordinated but separated workspaces:
 
 | Role | Codex session | Filesystem checkout | Git branch | Primary goal |
 | --- | --- | --- | --- | --- |
 | Main recovery | current session | `/home/mpr/github_account_history_porting_2022_continuation` | `main` | recover/reproduce 2022 manuscript evidence and artifact provenance |
 | V3 tensor reconciliation | Codex session fork | `/home/mpr/proteinmpnn_ddg_v3_tensor_extraction_reconciliation` | `v3-tensor-extraction-reconciliation` | reconcile saved V3 direct tensor fields with manuscript logic and executable ProteinMPNN-DDG tensor-extraction code |
+| ThermoMPNN enquiries | separate/future Codex session as needed | `/home/mpr/proteinmpnn_ddg_thermompnn_method_enquiries` | `thermompnn-method-enquiries` | study ThermoMPNN as post-2022 method-landscape, dataset, and future-extension context |
 
 The V3 tensor-reconciliation Codex session should own focused work under
 `v3_tensor_extraction_reconciliation/` and any clearly labeled tensor
@@ -53,6 +57,12 @@ recovery conclusions.
 The Main recovery session should continue owning manuscript-code mapping,
 pickle provenance, recovery scripts, durable method-science notes under
 `method_science/`, and synthesis decisions that depend on historical evidence.
+
+The ThermoMPNN enquiry worktree should own branch-local notes and probes under
+`thermompnn_enquiries/`. ThermoMPNN conclusions should be promoted back to the
+main method-science or manuscript-synthesis record only after they are clearly
+classified as durable ProteinMPNN-DDG context rather than branch-local
+exploration.
 
 ## Setup Sequence
 
@@ -90,10 +100,14 @@ The main recovery session can inspect the reconciliation worktree when needed, b
 it should treat that work as a separate line of inquiry until deliberately
 merged.
 
+The same rule applies to the ThermoMPNN enquiry worktree: inspect it when
+needed, but do not treat branch-local ThermoMPNN probes as main-branch recovery
+evidence until deliberately promoted or merged.
+
 ## Path Discipline
 
-The two-worktree setup depends on path discipline. Repository-internal notes and
-script defaults should use paths relative to the current worktree unless an
+The multi-worktree setup depends on path discipline. Repository-internal notes
+and script defaults should use paths relative to the current worktree unless an
 absolute machine path is intentionally required.
 
 Use:
@@ -106,13 +120,12 @@ Use:
 `WORKSPACE_MAP.md` is a first-navigation helper for the physical worktree root
 where it lives.
 
-Once two Git worktrees have different root-level files or directories, their
+Once Git worktrees have different root-level files or directories, their
 `WORKSPACE_MAP.md` files should diverge deliberately. Each map should describe
 the root items that actually exist in that physical checkout, including ignored
 local items when they are important for navigation.
 
-Do not force identical workspace maps across `main` and
-`v3-tensor-extraction-reconciliation` just because both branches share
+Do not force identical workspace maps across branches just because they share
 repository history.
 
 ## Merge Discipline
@@ -145,12 +158,19 @@ Useful checks:
 git status --short --branch
 git worktree list
 git branch --list v3-tensor-extraction-reconciliation
+git branch --list thermompnn-method-enquiries
 ```
 
 The current V3 tensor-reconciliation worktree path is:
 
 ```text
 /home/mpr/proteinmpnn_ddg_v3_tensor_extraction_reconciliation
+```
+
+The current ThermoMPNN enquiry worktree path is:
+
+```text
+/home/mpr/proteinmpnn_ddg_thermompnn_method_enquiries
 ```
 
 The exact Codex session UUID must still be verified from local Codex session

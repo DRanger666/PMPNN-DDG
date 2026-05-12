@@ -3,17 +3,18 @@
 Date: 2026-05-12
 
 Purpose: keep historical recovery, durable method science, focused V3
-direct-tensor reconciliation, and later manuscript synthesis distinct while the
-ProteinMPNN-DDG project is being revived.
+direct-tensor reconciliation, ThermoMPNN method enquiries, and later manuscript
+synthesis distinct while the ProteinMPNN-DDG project is being revived.
 
 ## Core Position
 
-The project now has four related but separate workstreams:
+The project now has five related but separate workstreams:
 
 1. Historical recovery and reproduction.
 2. Durable method science and algorithmic interpretation.
 3. Focused V3 direct-tensor extraction reconciliation.
-4. Later synthesis of recovered evidence and improved algorithmic framing into
+4. ThermoMPNN method-landscape and dataset enquiries.
+5. Later synthesis of recovered evidence and improved algorithmic framing into
    manuscript/submission material.
 
 These should not be merged prematurely.
@@ -104,14 +105,42 @@ dedicated reconciliation session is tracked in:
 
 - `CODEX_SESSION_AND_GIT_WORKTREE_SEPARATION.md`
 
-## Workstream 4: Manuscript Synthesis
+## Workstream 4: ThermoMPNN Method Enquiries
+
+Goal: study ThermoMPNN as a post-2022 method and dataset reference that may
+affect ProteinMPNN-DDG revision, extension, benchmarking, or manuscript
+framing.
+
+This workstream should study questions such as:
+
+- Which ThermoMPNN datasets, weak-supervision choices, and benchmarks are
+  relevant to ProteinMPNN-DDG?
+- How does ThermoMPNN use ProteinMPNN code, weights, embeddings, or learned
+  representations differently from ProteinMPNN-DDG?
+- Which 2022 manuscript claims become outdated in a post-ThermoMPNN method
+  landscape?
+- Which ThermoMPNN ideas should be incorporated only after the current
+  ProteinMPNN-DDG reproduction baseline is recovered and stable?
+
+Rule: this workstream is comparative and forward-looking. It should not replace
+the historical recovery target, and it should not be treated as evidence that
+the 2022 ProteinMPNN-DDG pipeline behaved differently.
+
+Primary branch/worktree:
+
+- Git branch: `thermompnn-method-enquiries`
+- Git worktree: `/home/mpr/proteinmpnn_ddg_thermompnn_method_enquiries`
+- Primary branch-local directory: `thermompnn_enquiries/`
+
+## Workstream 5: Manuscript Synthesis
 
 Goal: decide how recovered provenance, method-science notes, and V3
-reconciliation results should affect a revived manuscript, preprint,
-supplementary material, and accompanying code.
+reconciliation results, plus later ThermoMPNN enquiry findings, should affect a
+revived manuscript, preprint, supplementary material, and accompanying code.
 
-This workstream comes later. It should merge evidence from Workstream 1 and
-analysis from Workstreams 2 and 3 into submission-facing decisions.
+This workstream comes later. It should merge evidence from Workstream 1,
+analysis from Workstreams 2 and 3, and carefully selected comparative context
+from Workstream 4 into submission-facing decisions.
 
 Possible outcomes:
 
@@ -136,6 +165,8 @@ When a new finding appears, classify it before writing it down:
 - Durable scientific/method reasoning -> `method_science/`.
 - Focused V3 direct-tensor mismatch/reconciliation work ->
   `v3_tensor_extraction_reconciliation/`.
+- ThermoMPNN comparative/dataset/method-landscape enquiry ->
+  `thermompnn_enquiries/` on the `thermompnn-method-enquiries` branch.
 - Submission-facing integration decision -> later manuscript synthesis notes.
 
 This separation is meant to prevent three different questions from being
@@ -144,4 +175,6 @@ collapsed:
 1. What happened in 2022?
 2. What is scientifically defensible now?
 3. Why do current direct-tensor extraction attempts mismatch saved V3 tensors?
-4. What should be written or submitted later?
+4. What did later methods such as ThermoMPNN change about the comparison
+   landscape?
+5. What should be written or submitted later?
