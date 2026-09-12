@@ -29,7 +29,8 @@ Current notes:
 - `S_921_TABLE1_NOTEBOOK_CELL_EVIDENCE.md`: Table 1 evidence for S_921.
 - `S669_SSYM_S2648_STAGE1_NOTEBOOK_CELL_EVIDENCE.md`: stage-one notebook-cell
   evidence for S_669, Ssym, and S_2648.
-- `S2648_INSTANCE_LEVEL_FEATURE_ABSENCE.md`: S_2648 missing ProteinMPNN feature
+- `S2648_INSTANCE_LEVEL_FEATURE_ABSENCE.md`
+- `UNPROCESSABLE_MUTATIONS_AND_DATASET_GAPS.md`: **2026-09-12 regen** per-mutation failure audit (error classes, PDB checks, hist V3 comparison); tables in `tables/unprocessable_mutations.*`: S_2648 missing ProteinMPNN feature
   records and current exclusion-cause evidence.
 - `S669_3DV0I_INSTANCE_LEVEL_FEATURE_ABSENCE.md`: S_669 `3dv0I` missing
   ProteinMPNN feature records, copied-input-directory evidence, and RF

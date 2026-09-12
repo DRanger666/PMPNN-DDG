@@ -175,12 +175,30 @@ alone does not help. Details:
 
 ## PDB → clean MPNN → regenerated features → RF (measured)
 
+### Integrity audit (unprocessable mutations)
+
+**Exclusions are not metric-driven.** Every failed PDB→features job is listed with
+error class, PDB path, checks performed, justification, and historical V3
+stub-vs-full comparison:
+
+- `manuscript_codebase_mapping/UNPROCESSABLE_MUTATIONS_AND_DATASET_GAPS.md`
+- `manuscript_codebase_mapping/tables/unprocessable_mutations.tsv`
+- `manuscript_codebase_mapping/tables/unprocessable_mutations.json`
+- Regenerator: `scripts/audit_unprocessable_mutations.py`
+
+S_2648: **2619/2648** ok; **29** errors —
+`duplicate_residue_labels` 27 (`1lveA`,`2immA`), `missing_pdb` 1 (`2a01A`),
+`chain_parse_keyerror` 1 (`1rtpA`). Historical V3 also lacked MPNN features for
+the 28 `1lveA`+`2immA`+`2a01A` stubs; **`1rtpA/K80S` had full historical features**
+but failed this regen on PDB chain `1` vs key suffix `A` (new gap, documented).
+Ssym: **342/342** (zero unprocessable).
+
 ### Regenerated pickles
 
 | Dataset | Status | Artifact | Notes |
 | --- | --- | --- | --- |
 | Ssym | **done** 342/342 (~500s) | `reproduction_runs/2026-09-12/pdb_to_features_ssym/regenerated_v3_features.pickle` | PSSM exact vs hist; MPNN tensors not bit-exact |
-| S_2648 (train) | **done** 2619/2648 (~3480s) | `reproduction_runs/2026-09-12/pdb_to_features_s2648/regenerated_v3_features.pickle` | 29 worker fails: `1lveA` (17), `2immA` (10), `1rtpA`, `2a01A` — same gap class as historical |
+| S_2648 (train) | **done** 2619/2648 (~3480s) | `reproduction_runs/2026-09-12/pdb_to_features_s2648/regenerated_v3_features.pickle` | 29 fails audited: ICODE dups 27 + missing PDB 1 + chain KeyError 1 (`1rtpA` new vs hist); see integrity doc |
 | S_669 | in progress / queued | `reproduction_runs/2026-09-12/pdb_to_features_s669/` | `--resume` supported |
 | S_921 | commands ready | see `reproduction_runs/2026-09-12/logs/READY_COMMANDS_remaining_datasets.sh` | |
 
@@ -247,8 +265,9 @@ S_669 / S_921 PDB→features (S_669 kicked off with `--resume`).
 2. **Feature E** not bit-identical to 2022 Colab (unseeded KPCA subsample); seeded
    re-fit is protocol-aligned and sufficient for current RF metrics.
 3. **S_669 / S_2648 gaps:** saved path skips 31 on S_669; regenerated S_2648 had
-   29 worker failures (`1lveA`, `2immA`, `1rtpA`, `2a01A`) — same class as
-   historical incomplete entries.
+   29 audited failures (see `UNPROCESSABLE_MUTATIONS_AND_DATASET_GAPS.md`). 28
+   align with historical `ddg`+`mut` stubs; `1rtpA` is a new regen-only chain-id
+   gap vs a historically complete entry.
 4. Large historical model pickles (`feature_combo_model_dict.pickle`, etc.) not
    in the narrowly promoted LFS set — not required for this RF retrain.
 5. S_669 / S_921 regenerated pickles not yet folded into RF (S_669 running).
