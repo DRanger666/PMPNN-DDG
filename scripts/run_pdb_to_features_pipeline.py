@@ -31,6 +31,7 @@ Outputs under --output-dir:
 from __future__ import annotations
 
 import argparse
+import gc
 import csv
 import json
 import pickle
@@ -421,6 +422,11 @@ def main() -> int:
         help="Compare regenerated scalars/tensors to historical V3 pickle (diagnostic).",
     )
     parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="Skip mutations already ok in mutation_status.tsv / partial pickle.",
+    )
+    parser.add_argument(
         "--skip-reference-compare",
         action="store_true",
         help="Explicitly skip reference compare even if --compare-reference set.",
@@ -467,7 +473,31 @@ def main() -> int:
     n_ok = 0
     n_error = 0
 
+    completed_keys: set[tuple[str, str]] = set()
+    status_path = table_dir / "mutation_status.tsv"
+    existing_status = []
+    if args.resume and status_path.exists():
+        with status_path.open("r", newline="", encoding="utf-8") as handle:
+            existing_status = list(csv.DictReader(handle, delimiter="\t"))
+        for row in existing_status:
+            if row.get("status") == "ok":
+                completed_keys.add((row["protein_key"], row["mutation_label"]))
+        if (output_dir / "regenerated_v3_features.partial.pickle").exists():
+            with (output_dir / "regenerated_v3_features.partial.pickle").open("rb") as handle:
+                regenerated = pickle.load(handle)
+            print(
+                f"Resume: loaded partial pickle with "
+                f"{sum(len(v) for v in regenerated.values())} entries; "
+                f"skipping {len(completed_keys)} completed jobs",
+                flush=True,
+            )
+        status_rows.extend(existing_status)
+
+    last_protein = None
     for index, job in enumerate(jobs):
+        key = (job["protein_key"], job["mutation_label"])
+        if key in completed_keys:
+            continue
         maybe_seed(args.seed, args.seed_mode, index)
         try:
             entry, status = process_job(
@@ -480,6 +510,7 @@ def main() -> int:
             )
             regenerated.setdefault(job["protein_key"], []).append(entry)
             status_rows.append(status)
+            completed_keys.add(key)
             n_ok += 1
             print(
                 f"[{index + 1}/{len(jobs)}] ok {job['protein_key']} "
@@ -505,6 +536,20 @@ def main() -> int:
                 flush=True,
             )
 
+        # Drop cached structure when moving to a new protein to limit RSS.
+        if last_protein is not None and job["protein_key"] != last_protein:
+            proteins.pop(last_protein, None)
+            residue_maps.pop(last_protein, None)
+        last_protein = job["protein_key"]
+
+        if (index + 1) % 5 == 0 or index + 1 == len(jobs):
+            write_tsv(status_path, status_rows, STATUS_FIELDS)
+            with (output_dir / "regenerated_v3_features.partial.pickle").open("wb") as handle:
+                pickle.dump(regenerated, handle, protocol=pickle.HIGHEST_PROTOCOL)
+            gc.collect()
+            if hasattr(torch, "cuda") and torch.cuda.is_available():
+                torch.cuda.empty_cache()
+
     pickle_path = output_dir / "regenerated_v3_features.pickle"
     with pickle_path.open("wb") as handle:
         pickle.dump(regenerated, handle, protocol=pickle.HIGHEST_PROTOCOL)
@@ -521,8 +566,8 @@ def main() -> int:
     summary = {
         "dataset": args.dataset,
         "n_jobs": len(jobs),
-        "n_ok": n_ok,
-        "n_error": n_error,
+        "n_ok": sum(1 for r in status_rows if r.get("status") == "ok"),
+        "n_error": sum(1 for r in status_rows if r.get("status") == "error"),
         "seed": args.seed,
         "seed_mode": args.seed_mode,
         "elapsed_seconds": time.time() - t_run,

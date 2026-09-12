@@ -463,7 +463,7 @@ def run_v6v2_forward(
         S[0, mutation_zero_index] = AA_TO_INDEX[alternate_aa]
 
     randn = torch.randn(featurized.chain_M.shape, device=featurized.X.device)
-    with torch.no_grad():
+    with torch.inference_mode():
         return runtime.model(
             featurized.X,
             S,
