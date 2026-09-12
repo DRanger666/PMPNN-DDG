@@ -16,6 +16,11 @@ For each flagged item we ask, **before** any “fix”:
 Only after that classification do we decide: change code, change wording, or
 leave alone. Prefer open questions + evidence over assuming bugs.
 
+
+**Branch bar (2026-09-12):** reproduce manuscript numbers and probe mismatches;
+do **not** treat bit/byte-identical historical V3 extraction as unresolved work.
+See `REPRODUCTION_BAR_NOT_BYTE_IDENTICAL_V3.md`.
+
 Related detail notes (may use older “deviation” wording; this checklist
 supersedes tone):
 
@@ -37,12 +42,12 @@ out random order among fixed residues or seeding.
 | 1. Conflict? | **Not established.** Absence from prose ≠ contradiction. |
 | 2. Shorthand / incomplete? | **Plausible.** ProteinMPNN’s standard forward uses random order; authors may have treated it as library behavior. |
 | 3. Unused alternate? | N/A (this is extraction machinery, not an unused engineered scalar). |
-| 4. Unresolved? | **Yes** for bit-exact V3 regeneration (seed/order still fail `log_prob` match). **No** for RF-from-saved-V3 metrics. |
+| 4. Unresolved? | **No as a milestone.** Bit-exact match to historical V3 `log_prob` is **not expected** (stochastic decoder order). Open only as scientific description of RNG, not as a regeneration failure. Manuscript / RF correspondence is the bar. |
 
-**Action.** Leave recovery code as-is for RF work. Treat RNG/order as an open
-regeneration question, not a confirmed method error. Document in status; do not
-“fix toward manuscript” by inventing a non-random order the paper never
-required.
+**Action.** Leave extraction code as-is. Document RNG/order as expected
+stochasticity (not a failed V3 reconciliation). Do not “fix toward manuscript”
+by inventing a non-random order the paper never required. Judge success by
+manuscript Tables/Figures from the public tensor→feature→RF path.
 
 ---
 
@@ -87,10 +92,11 @@ top-k graph, insert zero message vectors (see asymmetry note).
 | 1. Conflict? | **No.** Silence ≠ conflict. |
 | 2. Shorthand / incomplete? | **Likely.** Implementation necessity once you read directed `E_idx`; may never have been considered prose-worthy. |
 | 3. Unused alternate? | N/A. |
-| 4. Unresolved? | Frequency / impact on C/E still worth measuring; not a blocker for RF-from-saved-V3. |
+| 4. Unresolved? | Frequency / impact on C/E still worth measuring as optional diagnostics; not a blocker for manuscript reproduction. |
 
-**Action.** Leave alone. Optional future count of zero-vector rate in saved V3;
-do not change primary path without evidence it was unintended.
+**Action.** Leave alone. Optional count of zero-vector rate on regenerated
+tensors (or reference dumps); do not change primary path without evidence it
+was unintended. Do not frame this as V3 byte-reconciliation work.
 
 ---
 
@@ -108,7 +114,7 @@ first **5** of those 10 in the augmented matrix.
 | 1. Conflict? | **No** at family level (message-change KPCA). |
 | 2. Shorthand / incomplete? | **Yes**—component count / subsample are notebook details. |
 | 3. Unused alternate? | Embedding KPCA is also fit; **not** selected as Feature E in final A–H map. |
-| 4. Unresolved? | Bit-exact E vs 2022 Colab (unseeded subsample) unresolved; protocol-level re-fit with explicit seed is enough for RF comparison. |
+| 4. Unresolved? | Bit-exact E vs 2022 Colab (unseeded subsample) is **not** a goal; protocol-level re-fit with explicit seed + manuscript PCC probing is enough (see `FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md`). |
 
 **Action.** Keep message-KPCA E as in notebooks. Label re-fit seed. Do not
 swap in embedding-KPCA as “Feature E” without new evidence.
@@ -169,18 +175,19 @@ other sets.
 
 When reporting metrics, always state:
 
-1. Feature source: saved historical V3 engineered (+ re-fit KPCA E, seed noted).
+1. Feature source: **regenerated extraction tensors** (public LFS path) or, for
+   diagnostics only, historical V3 engineered fields (+ KPCA E seed noted).
 2. Feature B mode: `historical_weighted` (primary vs Table 1) or
    `manuscript_unweighted` (diagnostic only).
 3. RF config: `manuscript_literal` and/or `notebook_table1`.
 4. S_669 sign flip: applied.
-5. Not claimed: PDB→V3 bit-exact regeneration; bit-exact Feature E vs 2022 Colab.
+5. **Not claimed / not a failure mode:** PDB→historical-V3 bit-exact regeneration;
+   bit-exact Feature E vs 2022 Colab. Stochastic drift vs V3 dumps is expected.
 
-**Decision summary for primary RF vs paper:** use saved historical fields
-(including weighted Feature B) + manuscript/notebook RF settings as labeled
-experiments. Treat Feature B wording, decoder RNG, and zero-vector policy as
-**open fidelity questions**, not confirmed defects requiring code changes
-before metrics.
+**Decision summary for primary RF vs paper:** regenerate from the public
+tensor→feature path; compare to manuscript Tables/Figures; probe residuals
+rationally. Treat Feature B wording, decoder RNG description, and zero-vector
+policy as **open fidelity / wording questions**, not as “failed V3 reconciliation.”
 
 
 ---

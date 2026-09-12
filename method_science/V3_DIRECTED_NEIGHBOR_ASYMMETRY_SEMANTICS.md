@@ -105,13 +105,17 @@ Feature D uses neighbor embedding changes, not the center-to-neighbor message
 vector itself. However, it still depends on the same selected-neighbor set, so
 the message-norm-based selection stage remains relevant for Feature D.
 
-## Experiments Needed
+## Optional diagnostics (not a V3-reconciliation milestone)
 
-The V3 tensor-extraction reconciliation work should quantify this directly:
+Byte-identical historical V3 extraction is **not** the branch bar
+(`REPRODUCTION_BAR_NOT_BYTE_IDENTICAL_V3.md`). If measuring directed-graph
+effects is useful for method clarity, optional counts on **regenerated**
+extraction tensors (or reference V3 dumps) can still include:
 
 - reciprocal-edge coverage for selected top-15 neighbors;
-- zero-vector frequency in saved V3 direct tensor fields;
+- zero-vector frequency in center-to-neighbor message fields;
 - whether zero-vector patterns match non-reciprocal `E_idx` cases;
 - how reciprocal-edge absence relates to distance rank, message-norm rank, and
   protein/dataset identity;
-- whether alternate handling changes scalar features and RF-level performance.
+- whether alternate handling changes scalar features and RF-level performance
+  vs **manuscript** metrics (not vs V3 pickle identity).

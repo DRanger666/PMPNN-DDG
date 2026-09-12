@@ -76,5 +76,6 @@ This distinction matters for:
 - random decoder-order analysis;
 - directed neighbor-graph asymmetry;
 - zero-vector handling when the directed center-to-neighbor edge is absent;
-- value-level V3 direct-tensor reconciliation;
+- (historical) value-level comparison to Digging V3 dumps — **retired** as a
+  success criterion; see `manuscript_codebase_mapping/REPRODUCTION_BAR_NOT_BYTE_IDENTICAL_V3.md`;
 - future method wording, pseudocode, and reviewer-facing explanation.

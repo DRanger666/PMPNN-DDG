@@ -30,6 +30,19 @@ feature tables on LFS. Figs 3–5 and Tables 1–3 / Fig 6 have been regenerated
 from that path. Formal tallies:
 [`manuscript_codebase_mapping/MANUSCRIPT_RESULTS_MATCH.md`](manuscript_codebase_mapping/MANUSCRIPT_RESULTS_MATCH.md).
 
+
+## What we are *not* optimizing for
+
+**Byte-identical historical V3 extraction is not the bar.** Stochasticity in
+decoder order / RNG and KernelPCA subsampling makes value-level identity to
+2022 Digging `*_pmppn_info_dict_V3.pickle` dumps an ill-posed target. The old
+`v3_tensor_extraction_reconciliation` track is **retired** (removed from this
+branch; see git history).
+
+We reproduce **manuscript numbers** (Tables 1–3, Figures 3–6) from the public
+tensor→feature→RF path and **probe mismatches rationally**. Stance note:
+[`manuscript_codebase_mapping/REPRODUCTION_BAR_NOT_BYTE_IDENTICAL_V3.md`](manuscript_codebase_mapping/REPRODUCTION_BAR_NOT_BYTE_IDENTICAL_V3.md).
+
 ## Manuscript results correspondence
 
 | Artifact | Role | Regenerated status (this branch) |

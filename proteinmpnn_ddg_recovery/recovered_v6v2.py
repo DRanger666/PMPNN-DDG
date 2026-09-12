@@ -609,7 +609,7 @@ def extract_mutation_tensor_fields(
 
     Optional ``neighbor_indices_override`` replays a saved
     ``top_15_neighbor_indices`` list instead of ranking center-pass message
-    norms. This is a diagnostic mode for V3 reconciliation, not a claim that
+    norms. Diagnostic only (historical V3 comparisons); not a claim that
     historical extraction used an external neighbor list.
     """
 

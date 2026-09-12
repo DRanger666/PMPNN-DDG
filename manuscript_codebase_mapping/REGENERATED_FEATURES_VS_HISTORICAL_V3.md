@@ -34,3 +34,12 @@ PDB (+ fallback) + mutation table + v_48_020.pt
 
 Legacy notebook keys (`log_prob`, `top_15_attention_weights`, …) remain as
 aliases. Note: “attention” legacy names are **message L2 norms**, not attention.
+
+## Retired: byte-identical V3 reconciliation
+
+Do **not** treat closeness or identity to Digging V3 pickles as the regeneration
+oracle. Stochastic decoder order and KernelPCA subsampling make that target
+ill-posed. Authoritative stance:
+`REPRODUCTION_BAR_NOT_BYTE_IDENTICAL_V3.md`. Historical V3 remains useful for
+column maps and naming only.
+

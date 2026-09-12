@@ -6,16 +6,16 @@ This directory is for method definitions, feature semantics, reviewer-facing
 scientific reasoning, pseudocode seeds, and diagram seeds that should remain
 useful after historical recovery is complete.
 
-It is separate from:
+It is separate from `manuscript_codebase_mapping/`, which records evidence
+linking manuscript claims, tables, figures, code, and regenerated artifacts.
 
-- `manuscript_codebase_mapping/`, which records evidence linking manuscript
-  claims, tables, figures, notebooks, code, and artifacts.
-- `pickle_analysis/`, which records artifact-level pickle inspection.
-- `v3_tensor_extraction_reconciliation/`, which focuses on the unresolved
-  upstream direct-tensor extraction mismatch.
-
-Use this directory when a finding is scientifically durable, even if the
-finding first appeared during recovery work.
+**Note:** `v3_tensor_extraction_reconciliation/` and pickle-inventory trees are
+**not** active goals on this branch. Byte-identical historical V3 extraction is
+retired as a success criterion; see
+`manuscript_codebase_mapping/REPRODUCTION_BAR_NOT_BYTE_IDENTICAL_V3.md`.
+Filenames below still say “V3” where they discuss neighbor-extraction semantics
+recovered from that era — that is naming history, not a call to re-reconcile
+pickles.
 
 Current notes:
 
