@@ -66,24 +66,15 @@ DEFAULT_SSYM_PDB_DIR = (
 
 ALPHABET = "ACDEFGHIKLMNPQRSTVWYX"
 AA_TO_INDEX = {aa: index for index, aa in enumerate(ALPHABET)}
-V3_TENSOR_FIELDS = [
-    "log_prob",
-    "top_15_attention_weights",
-    "top_10_attention_weights",
-    "top_5_attention_weights",
-    "top_15_neighbor_indices",
-    "top_10_neighbor_indices",
-    "top_5_neighbor_indices",
-    "top_15_closest_neighbor_indices",
-    "top_10_closest_neighbor_indices",
-    "w_n_log_prob",
-    "m_n_log_prob",
-    "neighbor_aa_identities",
-    "neighbor_w_message_vector_coming_from_center",
-    "neighbor_m_message_vector_coming_from_center",
-    "neighbor_w_neighbor_embedding",
-    "neighbor_m_neighbor_embedding",
-]
+from proteinmpnn_ddg_recovery.extraction_tensor_schema import (  # noqa: E402
+    EXTRACTION_TENSOR_FIELDS,
+    V3_TENSOR_FIELDS_LEGACY,
+    with_legacy_aliases,
+)
+
+# Canonical descriptive names for new saves; legacy list kept for older checks.
+EXTRACTION_TENSOR_FIELDS = list(EXTRACTION_TENSOR_FIELDS)
+V3_TENSOR_FIELDS = list(V3_TENSOR_FIELDS_LEGACY)  # backward-compat alias
 
 
 @dataclass(frozen=True)
@@ -675,15 +666,16 @@ def extract_mutation_tensor_fields(
         # identity fields are forced to the saved indices for downstream replay.
 
     fields: dict[str, Any] = {
-        "log_prob": log_probs.cpu().numpy(),
-        "top_15_attention_weights": top_15_attention_vals.cpu().numpy(),
-        "top_10_attention_weights": top_10_attention_vals.cpu().numpy(),
-        "top_5_attention_weights": top_5_attention_vals.cpu().numpy(),
-        "top_15_neighbor_indices": top_15_neighbor_indices.cpu().numpy(),
-        "top_10_neighbor_indices": top_10_neighbor_indices.cpu().numpy(),
-        "top_5_neighbor_indices": top_5_neighbor_indices.cpu().numpy(),
-        "top_15_closest_neighbor_indices": top_15_closest_neighbor_indices.cpu().numpy(),
-        "top_10_closest_neighbor_indices": top_10_closest_neighbor_indices.cpu().numpy(),
+        "center_masked_log_probs": log_probs.cpu().numpy(),
+        # Message L2 norms (not attention) used to rank neighbors:
+        "message_norm_top15_weights": top_15_attention_vals.cpu().numpy(),
+        "message_norm_top10_weights": top_10_attention_vals.cpu().numpy(),
+        "message_norm_top5_weights": top_5_attention_vals.cpu().numpy(),
+        "message_norm_top15_residue_indices": top_15_neighbor_indices.cpu().numpy(),
+        "message_norm_top10_residue_indices": top_10_neighbor_indices.cpu().numpy(),
+        "message_norm_top5_residue_indices": top_5_neighbor_indices.cpu().numpy(),
+        "spatial_nearest_top15_residue_indices": top_15_closest_neighbor_indices.cpu().numpy(),
+        "spatial_nearest_top10_residue_indices": top_10_closest_neighbor_indices.cpu().numpy(),
     }
 
     neighbor_w_log_probs = []
@@ -694,7 +686,7 @@ def extract_mutation_tensor_fields(
     neighbor_w_embeddings = []
     neighbor_m_embeddings = []
 
-    for neighbor_index_value in fields["top_15_neighbor_indices"]:
+    for neighbor_index_value in fields["message_norm_top15_residue_indices"]:
         neighbor_index = int(neighbor_index_value)
         neighbor_aa_identities.append(seq_chain[neighbor_index])
 
@@ -743,15 +735,17 @@ def extract_mutation_tensor_fields(
 
     fields.update(
         {
-            "w_n_log_prob": neighbor_w_log_probs,
-            "m_n_log_prob": neighbor_m_log_probs,
-            "neighbor_aa_identities": neighbor_aa_identities,
-            "neighbor_w_message_vector_coming_from_center": neighbor_w_messages,
-            "neighbor_m_message_vector_coming_from_center": neighbor_m_messages,
-            "neighbor_w_neighbor_embedding": neighbor_w_embeddings,
-            "neighbor_m_neighbor_embedding": neighbor_m_embeddings,
+            "neighbor_log_probs_center_wt": neighbor_w_log_probs,
+            "neighbor_log_probs_center_mt": neighbor_m_log_probs,
+            "neighbor_residue_aa_ids": neighbor_aa_identities,
+            "center_to_neighbor_messages_center_wt": neighbor_w_messages,
+            "center_to_neighbor_messages_center_mt": neighbor_m_messages,
+            "neighbor_embeddings_center_wt": neighbor_w_embeddings,
+            "neighbor_embeddings_center_mt": neighbor_m_embeddings,
         }
     )
+    # Dual-write legacy notebook keys for engineered_features / RF compatibility.
+    fields = with_legacy_aliases(fields, primary="canonical")
 
     return MutationTensorExtraction(
         protein_key=protein_key,

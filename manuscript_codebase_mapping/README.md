@@ -68,5 +68,5 @@ Current notes:
 
 ## Manuscript-path vs historical V3
 
-- `MANUSCRIPT_PATH_VS_HISTORICAL_V3.md` — naming + save modes + Drive layout
+- `REGENERATED_FEATURES_VS_HISTORICAL_V3.md` — naming + save modes + Drive layout
 - `UNPROCESSABLE_MUTATIONS_AND_DATASET_GAPS.md` — integrity audit

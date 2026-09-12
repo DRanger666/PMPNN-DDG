@@ -4,12 +4,12 @@
 # BLOCKER (2026-09-12): this box has no rclone binary and no configured remotes.
 # After parent installs rclone and authorizes a remote (e.g. gdrive:), run:
 #
-#   export RCLONE_REMOTE=gdrive:ProteinMPNN-DDG/manuscript_path_tensors
-#   bash scripts/upload_manuscript_path_tensors_to_drive.sh
+#   export RCLONE_REMOTE=gdrive:ProteinMPNN-DDG/pmpnn_ddg_extraction_tensors
+#   bash scripts/upload_pmpnn_ddg_extraction_tensors_to_drive.sh
 #
 # Local sources (preferred names first):
-#   reproduction_runs/<date>/pdb_to_features_*/manuscript_path_features.pickle
-#   reproduction_runs/<date>/manuscript_path_tensors/
+#   reproduction_runs/<date>/pdb_to_features_*/pmpnn_ddg_features.pickle
+#   reproduction_runs/<date>/pmpnn_ddg_extraction_tensors/
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
@@ -22,15 +22,15 @@ if ! command -v rclone >/dev/null 2>&1; then
   echo "ERROR: rclone not installed on this box."
   echo "Install rclone, create a Google Drive remote, then re-run."
   echo "Suggested Drive layout:"
-  echo "  ProteinMPNN-DDG/manuscript_path_tensors/${DATE}/{S_2648,S_669,S_921,Ssym}/"
+  echo "  ProteinMPNN-DDG/pmpnn_ddg_extraction_tensors/${DATE}/{S_2648,S_669,S_921,Ssym}/"
   exit 2
 fi
 if [[ -z "$REMOTE" ]]; then
-  echo "ERROR: set RCLONE_REMOTE, e.g. gdrive:ProteinMPNN-DDG/manuscript_path_tensors/${DATE}"
+  echo "ERROR: set RCLONE_REMOTE, e.g. gdrive:ProteinMPNN-DDG/pmpnn_ddg_extraction_tensors/${DATE}"
   exit 2
 fi
 
-mkdir -p "$LOCAL_ROOT/manuscript_path_tensors"
+mkdir -p "$LOCAL_ROOT/pmpnn_ddg_extraction_tensors"
 for ds in S_2648 S_669 S_921 Ssym ssym s2648; do
   :
 done
@@ -47,16 +47,16 @@ for src in "${!MAP[@]}"; do
   src_dir="$LOCAL_ROOT/$src"
   [[ -d "$src_dir" ]] || continue
   dest_name="${MAP[$src]}"
-  # Prefer manuscript_path_features.pickle; fall back to legacy alias
+  # Prefer pmpnn_ddg_features.pickle; fall back to legacy alias
   pickle=""
-  if [[ -f "$src_dir/manuscript_path_features.pickle" ]]; then
-    pickle="$src_dir/manuscript_path_features.pickle"
+  if [[ -f "$src_dir/pmpnn_ddg_features.pickle" ]]; then
+    pickle="$src_dir/pmpnn_ddg_features.pickle"
   elif [[ -f "$src_dir/regenerated_v3_features.pickle" ]]; then
     pickle="$src_dir/regenerated_v3_features.pickle"
   fi
   echo "Sync $src_dir → ${REMOTE}/${dest_name}/"
   rclone copy "$src_dir" "${REMOTE}/${dest_name}/" \
-    --include "manuscript_path_features.pickle" \
+    --include "pmpnn_ddg_features.pickle" \
     --include "regenerated_v3_features.pickle" \
     --include "MANUSCRIPT_PATH_ARTIFACT_SCHEMA.md" \
     --include "PIPELINE_REPORT.md" \

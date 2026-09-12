@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""PDB + mutation table + ProteinMPNN → manuscript-path tensors/features → RF.
+"""PDB + mutation table + ProteinMPNN → PMPNN-DDG features / extraction tensors → RF.
 
 Manuscript path (not historical V3 pickle recovery):
 
   ACCRE PDB dirs + mutation_ddg_tables + v_48_020.pt
     → modified_proteinmpnn (baked-in extraction hooks)
     → proteinmpnn_ddg_recovery.features (A–H)
-    → manuscript_path_features.pickle (+ optional full tensors)
+    → features.pickle (+ optional full tensors)
 
 Historical Digging `*_pmppn_info_dict_V3.pickle` files are a separate legacy
-artifact class. This pipeline regenerates the manuscript computation path.
+artifact class. This pipeline regenerates PDB→ProteinMPNN→features for paper metrics.
 
 Prefer --by-protein-subprocess with --save-mode full|both for durable artifacts.
 --compact-for-rf remains available for memory-light RF-only shards.
@@ -67,9 +67,10 @@ ACCRE = (
     / "ACCRE_PyRun_Setup"
 )
 TABLES = WORKSPACE_ROOT / "reproduction_inputs" / "mutation_ddg_tables"
-MANUSCRIPT_PATH_FEATURES_PICKLE = "manuscript_path_features.pickle"
-MANUSCRIPT_PATH_FEATURES_PARTIAL = "manuscript_path_features.partial.pickle"
-LEGACY_V3_FEATURES_PICKLE_ALIAS = "regenerated_v3_features.pickle"  # compat symlink name
+FEATURES_PICKLE = "features.pickle"
+FEATURES_PARTIAL_PICKLE = "features.partial.pickle"
+LEGACY_V3_FEATURES_PICKLE_ALIAS = "regenerated_v3_features.pickle"  # compat only
+EXTRACTION_TENSORS_PICKLE = "extraction_tensors.pickle"
 DEFAULT_PDB_FALLBACK_DIR = (
     WORKSPACE_ROOT / "reproduction_inputs" / "independent_pdb_fetches" / "curated"
 )
@@ -409,7 +410,7 @@ def run_by_protein_subprocess(
                 status_rows.extend(payload["statuses"])
                 global_index += len(protein_jobs)
                 print(f"  resume skip {protein_key} (shard exists)", flush=True)
-                with (output_dir / MANUSCRIPT_PATH_FEATURES_PARTIAL).open("wb") as handle:
+                with (output_dir / FEATURES_PARTIAL_PICKLE).open("wb") as handle:
                     pickle.dump(regenerated, handle, protocol=pickle.HIGHEST_PROTOCOL)
                 write_tsv(table_dir / "mutation_status.tsv", status_rows, STATUS_FIELDS)
                 continue
@@ -466,7 +467,7 @@ def run_by_protein_subprocess(
         regenerated[protein_key] = payload["entries"]
         status_rows.extend(payload["statuses"])
         global_index += len(protein_jobs)
-        with (output_dir / "manuscript_path_features.partial.pickle").open("wb") as handle:
+        with (output_dir / "features.partial.pickle").open("wb") as handle:
             pickle.dump(regenerated, handle, protocol=pickle.HIGHEST_PROTOCOL)
         write_tsv(table_dir / "mutation_status.tsv", status_rows, STATUS_FIELDS)
         gc.collect()
@@ -533,7 +534,7 @@ def run_inprocess(
         gc.collect()
         if (index + 1) % 5 == 0 or index + 1 == len(jobs):
             write_tsv(table_dir / "mutation_status.tsv", status_rows, STATUS_FIELDS)
-            with (output_dir / "manuscript_path_features.partial.pickle").open("wb") as handle:
+            with (output_dir / "features.partial.pickle").open("wb") as handle:
                 pickle.dump(regenerated, handle, protocol=pickle.HIGHEST_PROTOCOL)
     return regenerated, status_rows
 
@@ -662,9 +663,24 @@ def main() -> int:
             pdb_fallback_dir=pdb_fallback_dir,
         )
 
-    pickle_path = output_dir / MANUSCRIPT_PATH_FEATURES_PICKLE
+    # Primary on-disk name depends on richness:
+    #   rf_compact → features.pickle (RF scalars)
+    #   full/both  → extraction_tensors.pickle (full intermediates + features)
+    if args.save_mode in ("full", "both"):
+        pickle_path = output_dir / EXTRACTION_TENSORS_PICKLE
+    else:
+        pickle_path = output_dir / FEATURES_PICKLE
     with pickle_path.open("wb") as handle:
         pickle.dump(regenerated, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    # Always expose features.pickle for RF overrides when we saved full (symlink/copy).
+    features_alias = output_dir / FEATURES_PICKLE
+    if args.save_mode in ("full", "both") and pickle_path.name != features_alias.name:
+        try:
+            if features_alias.exists() or features_alias.is_symlink():
+                features_alias.unlink()
+            features_alias.symlink_to(pickle_path.name)
+        except OSError:
+            pass
     # Compat alias for older RF override paths / docs that still say regenerated_v3_*.
     legacy_alias = output_dir / LEGACY_V3_FEATURES_PICKLE_ALIAS
     try:
@@ -676,11 +692,11 @@ def main() -> int:
         with legacy_alias.open("wb") as handle:
             pickle.dump(regenerated, handle, protocol=pickle.HIGHEST_PROTOCOL)
     write_tsv(table_dir / "mutation_status.tsv", status_rows, STATUS_FIELDS)
-    schema_note = output_dir / "MANUSCRIPT_PATH_ARTIFACT_SCHEMA.md"
+    schema_note = output_dir / "ARTIFACT_SCHEMA.md"
     if not schema_note.exists():
         schema_note.write_text(
             "# Manuscript-path artifact schema\n\n"
-            "See `manuscript_codebase_mapping/MANUSCRIPT_PATH_VS_HISTORICAL_V3.md`.\n"
+            "See `manuscript_codebase_mapping/REGENERATED_FEATURES_VS_HISTORICAL_V3.md`.\n"
             f"save_mode={args.save_mode}\n"
             f"primary_pickle={pickle_path.name}\n"
             f"legacy_alias={legacy_alias.name}\n"
@@ -703,7 +719,7 @@ def main() -> int:
         "seed_mode": args.seed_mode,
         "by_protein_subprocess": args.by_protein_subprocess,
         "save_mode": args.save_mode,
-        "artifact_kind": "manuscript_path",
+        "artifact_kind": "pmpnn_ddg_features",
         "compact_for_rf": args.compact_for_rf,
         "resume": args.resume,
         "elapsed_seconds": time.time() - t_run,

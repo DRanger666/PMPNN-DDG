@@ -3,7 +3,7 @@
 
 Save modes:
   rf_compact — RF training scalars only (small)
-  full       — full manuscript-path entry (ProteinMPNN tensors + engineered + A–H + PSSM)
+  full       — full full extraction+feature entry (ProteinMPNN tensors + engineered + A–H + PSSM)
   both       — write full shard; also emit compact entries in the same payload under
                keys entries_full / entries_rf_compact (pipeline splits as needed)
 """
@@ -72,7 +72,7 @@ def main():
             seq_idx = residue_map[mut[:-1]]
             extracted = extract_mutation_tensor_fields(runtime, protein, args.protein_key, mut, seq_idx)
             entry = build_v3_entry_from_extraction(extracted, float(job["ddg"]), pssm_dir=args.pssm_dir)
-            entry["artifact_kind"] = "manuscript_path"
+            entry["artifact_kind"] = "pmpnn_ddg_extraction"
             entry["protein_key"] = args.protein_key
             entry["sequence_index"] = int(seq_idx)
             if save_mode in ("full", "both"):
@@ -94,7 +94,7 @@ def main():
         "entries": entries_primary,
         "statuses": statuses,
         "save_mode": save_mode,
-        "artifact_kind": "manuscript_path",
+        "artifact_kind": "pmpnn_ddg_extraction",
     }
     if save_mode == "both":
         payload["entries_full"] = entries_full
