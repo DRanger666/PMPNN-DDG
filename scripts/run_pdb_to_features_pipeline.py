@@ -44,6 +44,14 @@ import numpy as np
 import torch
 
 WORKSPACE_ROOT = Path(__file__).resolve().parents[1]
+
+def rel_workspace(path: Path) -> str:
+    path = Path(path)
+    try:
+        return str(path.resolve().relative_to(WORKSPACE_ROOT))
+    except ValueError:
+        return str(path)
+
 if str(WORKSPACE_ROOT) not in sys.path:
     sys.path.insert(0, str(WORKSPACE_ROOT))
 
@@ -313,7 +321,7 @@ def compare_to_reference(
                     n_scalar_close[field] += 1
 
     return {
-        "reference_pickle": str(reference_path.relative_to(WORKSPACE_ROOT)),
+        "reference_pickle": rel_workspace(reference_path),
         "n_compared": n_compared,
         "n_missing_in_ref": n_missing_in_ref,
         "top15_neighbor_exact": n_top15_exact,
@@ -423,7 +431,11 @@ def main() -> int:
     mutation_table = args.mutation_table or preset["mutation_table"]
     pdb_dir = args.pdb_dir or preset["pdb_dir"]
     pssm_dir = args.pssm_dir or preset["pssm_dir"]
-    output_dir = args.output_dir
+    output_dir = Path(args.output_dir).expanduser()
+    if not output_dir.is_absolute():
+        output_dir = (WORKSPACE_ROOT / output_dir).resolve()
+    else:
+        output_dir = output_dir.resolve()
     table_dir = output_dir / "tables"
     json_dir = output_dir / "json"
     table_dir.mkdir(parents=True, exist_ok=True)
@@ -514,14 +526,14 @@ def main() -> int:
         "seed": args.seed,
         "seed_mode": args.seed_mode,
         "elapsed_seconds": time.time() - t_run,
-        "mutation_table": str(mutation_table.relative_to(WORKSPACE_ROOT)),
-        "pdb_dir": str(pdb_dir.relative_to(WORKSPACE_ROOT)),
-        "pssm_dir": str(pssm_dir.relative_to(WORKSPACE_ROOT)),
-        "output_pickle": str(pickle_path.relative_to(WORKSPACE_ROOT)),
+        "mutation_table": rel_workspace(mutation_table),
+        "pdb_dir": rel_workspace(pdb_dir),
+        "pssm_dir": rel_workspace(pssm_dir),
+        "output_pickle": rel_workspace(pickle_path),
         "tensor_fields": V3_TENSOR_FIELDS,
         "runtime": {
-            "utils_path": str(runtime.utils_path.relative_to(WORKSPACE_ROOT)),
-            "checkpoint_path": str(runtime.checkpoint_path.relative_to(WORKSPACE_ROOT)),
+            "utils_path": rel_workspace(runtime.utils_path),
+            "checkpoint_path": rel_workspace(runtime.checkpoint_path),
             "device": str(runtime.device),
             "num_edges": int(runtime.checkpoint["num_edges"]),
         },

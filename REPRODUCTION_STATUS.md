@@ -24,6 +24,38 @@ etc.) are tracked skeptically in
 `manuscript_codebase_mapping/MANUSCRIPT_TENSOR_EXTRACTION_FIDELITY.md` — conflict
 vs shorthand vs unused alternate vs unresolved — not assumed bugs.
 
+## Clean PDB → modified ProteinMPNN → features path (active)
+
+**Primary deliverable on this branch:** runnable extraction from local PDBs.
+
+```text
+ACCRE_*_PDB_Files + mutation_ddg_tables + v_48_020.pt
+  → modified_proteinmpnn/ (baked-in DecLayer + forward hooks)
+  → proteinmpnn_ddg_recovery.features (A–H callables)
+  → regenerated V3-shaped pickle
+  → train_eval_rf_from_v3_features.py (--v3-pickle-override)
+```
+
+| Piece | Path |
+| --- | --- |
+| Clean MPNN fork | `modified_proteinmpnn/` (`MODIFICATIONS.md`) |
+| Feature A–H API | `proteinmpnn_ddg_recovery/features/` |
+| Pipeline entrypoint | `scripts/run_pdb_to_features_pipeline.py` |
+| Architecture note | `manuscript_codebase_mapping/CLEAN_MODIFIED_PROTEINMPNN_AND_FEATURES.md` |
+| Slice smoke (16) | `reproduction_runs/2026-09-12/pdb_to_features_ssym_slice16/` |
+
+Slice-16 diagnostic vs historical Ssym V3: PSSM 16/16; ProteinMPNN-derived
+scalars/tensors not bit-exact (expected under open RNG/order questions). Runtime
+utils path confirmed: `modified_proteinmpnn/protein_mpnn_utils.py`.
+
+```bash
+.venv_proteinmpnn_ddg_reproduction/bin/python scripts/run_pdb_to_features_pipeline.py \
+  --dataset Ssym --seed-mode continuous --compare-reference \
+  --output-dir reproduction_runs/2026-09-12/pdb_to_features_ssym
+```
+
+---
+
 ## Honest scope
 
 ```text
