@@ -1,76 +1,34 @@
-# Manuscript-Codebase Mapping
+# Manuscript–codebase mapping
 
-This directory is for evidence that connects manuscript claims, table rows, and
-figures to code, notebook outputs, pickle files, datasets, and upstream
-ProteinMPNN artifacts.
+Evidence and notes that connect **this branch’s regenerated pipeline** to the
+bioRxiv PMPNN-DDG manuscript (DOI `10.64898/2026.08.23.746499`).
 
-This is a separate stage from manuscript inventory. Manuscript inventory answers:
-what manuscript files exist, how they relate to each other, and what text,
-metadata, tracked-change artifacts, figures, and tables they contain.
-
-Manuscript-codebase mapping answers: where did a manuscript number or figure
-come from, and how far upstream can we prove its provenance?
-
-Use this provenance chain as the working model:
+Primary chain on this branch:
 
 ```text
-manuscript number, figure, or table row
-<- notebook cell/output that emitted the value or artifact
-<- RF training/evaluation variables used by that cell
-<- feature matrix assembled from pickle dictionaries
-<- pickle dictionary file loaded into the notebook
-<- code that created the pickle dictionary
-<- ProteinMPNN outputs, mutation rows, structures, and dataset files used by that code
+extraction tensors → ProteinMPNN features A–E + PSSM features F–H
+  → Figures 3–5 / RF → Tables 1–3 + Figure 6
+  → MANUSCRIPT_RESULTS_MATCH.md
 ```
 
-Current notes:
+## Start here
 
-- `MANUSCRIPT_NUMBER_PROVENANCE_VIEWPOINT.md`: general provenance standard.
-- `S_921_TABLE1_NOTEBOOK_CELL_EVIDENCE.md`: Table 1 evidence for S_921.
-- `S669_SSYM_S2648_STAGE1_NOTEBOOK_CELL_EVIDENCE.md`: stage-one notebook-cell
-  evidence for S_669, Ssym, and S_2648.
-- `S2648_INSTANCE_LEVEL_FEATURE_ABSENCE.md`
-- `UNPROCESSABLE_MUTATIONS_AND_DATASET_GAPS.md`: **2026-09-12 regen** per-mutation failure audit (error classes, PDB checks, hist V3 comparison); tables in `tables/unprocessable_mutations.*`: S_2648 missing ProteinMPNN feature
-  records and current exclusion-cause evidence.
-- `S669_3DV0I_INSTANCE_LEVEL_FEATURE_ABSENCE.md`: S_669 `3dv0I` missing
-  ProteinMPNN feature records, copied-input-directory evidence, and RF
-  implication.
-- `STAGE5_PICKLE_GENERATION_BRIDGE.md`: working strategy and initial evidence
-  for using V3 PMPNN pickle dictionaries as the bridge from ProteinMPNN feature
-  extraction to RF evaluation.
-- `FEATURE_COMBO_PICKLE_UTILITY_ASSESSMENT.md`: utility assessment for the
-  historical `feature_combo` model/result pickles, separating early A-F
-  all-combination exploration from final manuscript Figure 6/Table 1 evidence.
-- `FIGURE6_INCREMENTAL_FEATURE_PICKLE_ANALYSIS.md`: targeted analysis of
-  `list_incremental_feature_result_dict.pickle`, the later A-H incremental
-  feature map, and the Figure 6-style S_669/Ssym total-PCC values.
-- `FIGURE6_NUMERICAL_BASIS_VERIFICATION.md`
-- `FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md`: seed-sweep experiment showing residual Fig 4–5 |Δ|≈0.02 E* correlations are KernelPCA subsample stochasticity (not a Feature A–H bug); suggested one-line manuscript caveat.
-: exact hash-based verification that
-  the manuscript Figure 6 standalone image is the saved output of the
-  incremental-feature plotting cell, with plotted S_669/Ssym total-PCC values
-  reconstructed from `list_incremental_feature_result_dict.pickle`, plus the
-  DOCX embedded-image mapping and content-equivalence interpretation.
-- `TABLE1_NUMERICAL_RECOVERY_MILESTONE.md`: concise milestone note recording
-  that `list_incremental_feature_result_dict.pickle` matches 18/21 Table 1
-  numeric cells, while the remaining three `rF-R` cells match through saved
-  notebook-output evidence.
-- `TRAIN_TEST_FIGURE_TABLE_ANCHOR.md`: dataset-role anchor for figures and
-  tables.
-- `V3_PICKLE_CONTENT_FINGERPRINTING_PLAN.md`: exact plan for the next
-  content-level fingerprinting pass against candidate generator notebooks.
-- `V3_PICKLE_CONTENT_FINGERPRINTING_RESULTS.md`: executed fingerprinting
-  results, evidence statuses, incomplete-entry cautions, and next mapping step.
-- `tensor_extraction_codeblock_recovery/TENSOR_EXTRACTION_CODEBLOCK_RECOVERY.md`:
-  Set 1 recovery note identifying the notebook-side ProteinMPNN inference-code
-  changes that expose tensors for V3 pickle feature construction.
-- `tensor_extraction_codeblock_recovery/TENSOR_EXTRACTION_ALGORITHM_DEBUGGING.md`:
-  manuscript-algorithm comparison for the direct V3 tensor-extraction segment,
-  with current value-level mismatch evidence and suspicious operational choices.
+- `MANUSCRIPT_RESULTS_MATCH.md` — formal regenerated vs manuscript tallies
+- `TRAIN_TEST_FIGURE_TABLE_ANCHOR.md` — which dataset each table/figure uses
+- `MANUSCRIPT_TO_VARIABLE_NAMING.md` — BioRxiv method language → variable names
+- `UNPROCESSABLE_MUTATIONS_AND_DATASET_GAPS.md` — integrity audit (+ `tables/`)
+- `MANUSCRIPT_TENSOR_EXTRACTION_FIDELITY.md` — open fidelity questions (e.g. Feature B)
+- `FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md` — Fig 4–5 residual E* PCCs vs KernelPCA seed
+- `CLEAN_MODIFIED_PROTEINMPNN_AND_FEATURES.md` — clean fork + per-feature modules
 
-## Manuscript-path vs historical V3
+## Supporting notes (still useful)
 
-- `REGENERATED_FEATURES_VS_HISTORICAL_V3.md` — naming + save modes + Drive layout
-- `UNPROCESSABLE_MUTATIONS_AND_DATASET_GAPS.md` — integrity audit
+- `REGENERATED_FEATURES_VS_HISTORICAL_V3.md` — regen vs historical naming/save modes
+- `FEATURE_EQUATION_CODE_MAPPING_INITIAL.md` — equation ↔ code map
+- `S669_3DV0I_*` / `S2648_INSTANCE_LEVEL_FEATURE_ABSENCE.md` — specific gap investigations
+- `TABLE1_NUMERICAL_RECOVERY_MILESTONE.md` / `FIGURE6_*` — historical saved-artifact provenance (not a substitute for regen match)
+- `S_921_TABLE1_NOTEBOOK_CELL_EVIDENCE.md` / `S669_SSYM_S2648_STAGE1_NOTEBOOK_CELL_EVIDENCE.md` — notebook-cell provenance
 
-- `MANUSCRIPT_TO_VARIABLE_NAMING.md` — BioRxiv §§3.1–3.3 objects → canonical Python keys (with legacy aliases).
+Obsolete inventory trees (`code_inventory_analysis`, Colab/manuscript inventory,
+pickle archaeology, V3 reconciliation sessions) were removed from this branch;
+see git history if needed.

@@ -108,8 +108,8 @@ Broader provenance and historical recovery:
 Fig 4–5 KernelPCA subsample experiment (repo burden; suggested manuscript caveat):
 [`manuscript_codebase_mapping/FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md`](manuscript_codebase_mapping/FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md).
 
-Older coordination note (may lag this README on regen status):
-[`workspace_operations/CURRENT_RECOVERY_BOUNDARY.md`](workspace_operations/CURRENT_RECOVERY_BOUNDARY.md).
+Obsolete inventory / workspace-archaeology trees were removed from this branch
+(see git history if needed).
 
 ## Open items
 
