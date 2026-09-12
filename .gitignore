@@ -62,3 +62,8 @@ __pycache__/
 
 # Independent PDB fetch raw depositions (re-download via script); curated extracts tracked.
 reproduction_inputs/independent_pdb_fetches/raw/
+
+# Promoted manuscript-path compact feature pickles (Git LFS)
+!reproduction_inputs/manuscript_path_features_2026-09-12/
+!reproduction_inputs/manuscript_path_features_2026-09-12/**
+!reproduction_inputs/manuscript_path_features_2026-09-12/*.pickle
