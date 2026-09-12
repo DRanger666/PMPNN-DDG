@@ -10,6 +10,13 @@ This is distinct from historical pickle/notebook recovery
 which prove that *saved* artifacts match published numbers. Here the claim is
 that **code on this branch**, run end-to-end, reproduces those numbers.
 
+## Public reproducibility bar
+
+**tensors → features → RF / figures / tables**, with **every number** from
+tensors, features, and derived artifacts published on this GitHub branch (LFS
+as needed). Compact pickles are interim/convenience only; full extraction
+tensors are required for a finished manuscript-corresponding release.
+
 ## Status summary
 
 | ID | Claim | Regenerated-pipeline status | Notes |

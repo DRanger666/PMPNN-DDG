@@ -5,8 +5,21 @@ This branch is the **manuscript-corresponding code path** for the bioRxiv prepri
 co-first author Sajid Ahmed).
 
 Goal: a clean, reviewable pipeline from PDB → ProteinMPNN extraction tensors →
-features A–H → Random Forest train/eval whose **reported numbers match the
-manuscript’s full results layer** (not only Table 1).
+features A–H → Random Forest train/eval / figures / tables whose **reported
+numbers match the manuscript’s full results layer** (not only Table 1).
+
+## Public reproducibility bar (non-negotiable)
+
+```text
+full extraction tensors  →  features  →  RF / figures / tables / audits
+```
+
+Every number in that chain — tensors, features, and everything derived — must be
+**publicly available through this GitHub repo** (Git LFS for large pickles).
+Compact RF-only pickles are a convenience subset, not a substitute for
+publishing the full tensors they come from. Interim compact-based figure/RF
+checks are fine while full runs finish; the branch is not done until the
+published artifacts let a reviewer recompute those numbers from tensors upward.
 
 ## Manuscript results correspondence
 
@@ -52,8 +65,9 @@ Entry points:
 - `scripts/train_eval_rf_from_v3_features.py` — RF train/eval from feature pickles
 - `scripts/verify_table1_results_layer.py` / `scripts/verify_figure6_image_basis.py` — historical result-layer checks
 
-Prefer **`--save-mode full`** (or `both`). Intermediate extraction tensors are
-scientific assets; compact-only is for explicit throwaway smoke tests.
+Default **`--save-mode full`** (or `both`). Full extraction tensors are the
+scientific source of truth and must land on LFS. Compact-only is for explicit
+throwaway smoke tests — never the published end state.
 
 ## Regenerated artifacts (2026-09-12)
 
