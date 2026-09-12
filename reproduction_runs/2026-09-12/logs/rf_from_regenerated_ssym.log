@@ -1,0 +1,25 @@
+Feature B mode: historical_weighted
+Loading saved historical V3 pickles...
+  override Ssym <- reproduction_runs/2026-09-12/pdb_to_features_ssym/regenerated_v3_features.pickle
+  S_2648: kept=2620 skipped=28
+  S_921: kept=921 skipped=0
+  S_669: kept=638 skipped=31
+  Ssym: kept=342 skipped=0
+Fitting PCA/KPCA on S_2648 raw vectors (seed=0, sample=10000)...
+  embedding neighbors stacked shape=[39300, 128]; message stacked shape=[39300, 128]
+Projecting instances and building forward+reverse matrices...
+  S_2648: forward=2620 aug=(5240, 41) full_AH_dims=12
+  S_921: forward=921 aug=(1842, 41) full_AH_dims=12
+  Applied S_669 DDG sign flip (y *= -1) per notebook protocol
+  S_669: forward=638 aug=(1276, 41) full_AH_dims=12
+  Ssym: forward=342 aug=(684, 41) full_AH_dims=12
+Training/evaluating config=notebook_table1 n_runs=3...
+  [notebook_table1] run 1/3 done (0.9s elapsed)
+  [notebook_table1] run 2/3 done (1.7s elapsed)
+  [notebook_table1] run 3/3 done (2.6s elapsed)
+  S_669: rF+R ours=0.6443 (round 0.64) paper=0.64; RMSE ours=1.4518 (round 1.45) paper=1.45; rF-R ours=-0.9934 (round -0.99) paper=-0.99
+  Ssym: rF+R ours=0.8134 (round 0.81) paper=0.81; RMSE ours=1.0983 (round 1.10) paper=1.10; rF-R ours=-0.9950 (round -1.00) paper=-0.99
+  S_921: rF+R ours=0.7949 (round 0.79) paper=0.79; RMSE ours=1.4928 (round 1.49) paper=1.49; rF-R ours=-0.9963 (round -1.00) paper=-1.00
+Wrote reproduction_runs/2026-09-12/rf_from_regenerated_ssym/ours_vs_paper_table1.tsv
+Wrote reproduction_runs/2026-09-12/rf_from_regenerated_ssym/rf_train_eval_summary.json
+Wrote reproduction_runs/2026-09-12/rf_from_regenerated_ssym/rf_per_run_metrics.json
