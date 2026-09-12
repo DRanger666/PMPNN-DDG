@@ -1,0 +1,113 @@
+{
+  "fetched": [
+    {
+      "protein_key": "1lveA",
+      "source": "RCSB",
+      "source_url": "https://files.rcsb.org/download/1lve.pdb",
+      "raw_path": "reproduction_inputs/independent_pdb_fetches/raw/1lve.pdb",
+      "curated_path": "reproduction_inputs/independent_pdb_fetches/curated/1lveA.pdb",
+      "source_chain": "A",
+      "curated_chain": "A",
+      "n_polymer_residues": 114,
+      "size_bytes": 72179,
+      "sha256": "0dcfcc31f12e5c4571149423e665a0562006253243eeb459c0272bf8d4daf401",
+      "fetched_utc": "2026-09-12T15:01:35.819476Z",
+      "note": "Single-chain polymer extract for independent re-processing of pipeline failures"
+    },
+    {
+      "protein_key": "2immA",
+      "source": "RCSB",
+      "source_url": "https://files.rcsb.org/download/2imm.pdb",
+      "raw_path": "reproduction_inputs/independent_pdb_fetches/raw/2imm.pdb",
+      "curated_path": "reproduction_inputs/independent_pdb_fetches/curated/2immA.pdb",
+      "source_chain": "A",
+      "curated_chain": "A",
+      "n_polymer_residues": 114,
+      "size_bytes": 70235,
+      "sha256": "e2d249eed3c945e662a81eb8620a1e5b95aed96aa65ef459e3dda6564ed53d22",
+      "fetched_utc": "2026-09-12T15:01:35.833495Z",
+      "note": "Single-chain polymer extract for independent re-processing of pipeline failures"
+    },
+    {
+      "protein_key": "1rtpA",
+      "source": "RCSB",
+      "source_url": "https://files.rcsb.org/download/1rtp.pdb",
+      "raw_path": "reproduction_inputs/independent_pdb_fetches/raw/1rtp.pdb",
+      "curated_path": "reproduction_inputs/independent_pdb_fetches/curated/1rtpA.pdb",
+      "source_chain": "1",
+      "curated_chain": "A",
+      "n_polymer_residues": 109,
+      "size_bytes": 67157,
+      "sha256": "11cd396c7f56efe474f68b93e2cdc8369102a6ee9688e4a9367cea15c01f3e1d",
+      "fetched_utc": "2026-09-12T15:01:35.857084Z",
+      "note": "Single-chain polymer extract for independent re-processing of pipeline failures"
+    },
+    {
+      "protein_key": "2a01A",
+      "source": "RCSB",
+      "source_url": "https://files.rcsb.org/download/2a01.pdb",
+      "raw_path": "reproduction_inputs/independent_pdb_fetches/raw/2a01.pdb",
+      "curated_path": "reproduction_inputs/independent_pdb_fetches/curated/2a01A.pdb",
+      "source_chain": "A",
+      "curated_chain": "A",
+      "n_polymer_residues": 243,
+      "size_bytes": 160388,
+      "sha256": "7f54fa92b75ab2c556e16ebc5c93cd4171a5e30185e2c632a249036551de23d5",
+      "fetched_utc": "2026-09-12T15:01:35.919257Z",
+      "note": "Single-chain polymer extract for independent re-processing of pipeline failures"
+    },
+    {
+      "protein_key": "3dv0I",
+      "source": "RCSB",
+      "source_url": "https://files.rcsb.org/download/3dv0.pdb",
+      "raw_path": "reproduction_inputs/independent_pdb_fetches/raw/3dv0.pdb",
+      "curated_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
+      "source_chain": "I",
+      "curated_chain": "I",
+      "n_polymer_residues": 43,
+      "size_bytes": 24308,
+      "sha256": "449e16435cf8a799f8709b3e5109049cfb0248ca8b116e0eecfee96682975bfd",
+      "fetched_utc": "2026-09-12T15:01:36.082809Z",
+      "note": "Single-chain polymer extract for independent re-processing of pipeline failures"
+    }
+  ],
+  "accre_comparison": [
+    {
+      "protein_key": "1lveA",
+      "accre_exists": true,
+      "accre_chain": "A",
+      "curated_chain": "A",
+      "accre_len": 114,
+      "curated_len": 114,
+      "seq_identical": true
+    },
+    {
+      "protein_key": "2immA",
+      "accre_exists": true,
+      "accre_chain": "A",
+      "curated_chain": "A",
+      "accre_len": 114,
+      "curated_len": 114,
+      "seq_identical": true
+    },
+    {
+      "protein_key": "1rtpA",
+      "accre_exists": true,
+      "accre_chain": "1",
+      "curated_chain": "A",
+      "accre_len": 109,
+      "curated_len": 109,
+      "seq_identical": true
+    },
+    {
+      "protein_key": "2a01A",
+      "accre_exists": false,
+      "seq_identical": null
+    },
+    {
+      "protein_key": "3dv0I",
+      "accre_exists": false,
+      "seq_identical": null
+    }
+  ]
+}

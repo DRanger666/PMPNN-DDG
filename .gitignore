@@ -59,3 +59,6 @@ __pycache__/
 *.tar
 *.tar.gz
 *.tgz
+
+# Independent PDB fetch raw depositions (re-download via script); curated extracts tracked.
+reproduction_inputs/independent_pdb_fetches/raw/
