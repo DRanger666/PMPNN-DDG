@@ -169,7 +169,8 @@ silent drops as matches. This RF run uses 2647 train / 638 S_669 eval mutations.
 - `TRAIN_TEST_FIGURE_TABLE_ANCHOR.md` — dataset roles for each table/figure
 - `MANUSCRIPT_TO_VARIABLE_NAMING.md` — BioRxiv method language → variable names
 - `UNPROCESSABLE_MUTATIONS_AND_DATASET_GAPS.md` — integrity audit
-- `../workspace_operations/CURRENT_RECOVERY_BOUNDARY.md` — recovery vs regen boundary
+- `REPRODUCTION_BAR_NOT_BYTE_IDENTICAL_V3.md` — manuscript numbers (not V3 bytes) are the bar
+- `../README.md` — regenerated Tables 1–3 / Figures 3–6 + branch roles vs `main`
 - RF outputs: `reproduction_runs/2026-09-12/rf_from_extraction_tensors/ours_vs_paper_table1.tsv`
 
 ### Full-tensor promotion log

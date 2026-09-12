@@ -165,7 +165,7 @@ other sets.
 | Feature | Manuscript idea | Code / RF column | Classification |
 | --- | --- | --- | --- |
 | A | Center WT↔MT energy / log-prob change | `center_mut_wild_energy` | **Match** (no open conflict). |
-| C | Message-norm **ratio** sum (NR) | `center_neighbor_weight_check_w_m` | **Match** with Fig. 3 NR choice. |
+| C | Message-norm **ratio** sum (NR) | `center_neighbor_weight_check_w_m` | **Match** forward / Fig. 3 NR; reverse row uses `1/Σ` not `Σ 1/r` (Item H). |
 | D | Embedding change-norm sum (CN) | `neighbor_embedding_change_m_w` | **Match** at family level. |
 | F/G/H | PSSM delta / WT / MT | saved PSSM fields | **Match**. |
 
@@ -191,6 +191,30 @@ policy as **open fidelity / wording questions**, not as “failed V3 reconciliat
 
 
 ---
+
+
+---
+
+## Item H — Reverse Feature C: `1/Σ r_j` vs `Σ 1/r_j`
+
+**What forward C is.** Message-norm-ratio sum
+`C = Σ_j ‖M_j^WT‖/‖M_j^MT‖` (`center_neighbor_weight_check_w_m`).
+
+**What exact reverse would be.** After swapping WT/MT centers:
+`Σ_j ‖M_j^MT‖/‖M_j^WT‖ = Σ_j 1/r_j`.
+
+**What F+R augmentation does.** `rev[C] = 1 / C_fwd` (reciprocal of the sum) in
+`rf_feature_matrix_packing.augment_forward_reverse` — matching Digging/notebook.
+
+| Q | Working answer |
+| --- | --- |
+| 1. Conflict? | **Possible method gap** vs a literal “swap WT/MT then recompute C.” Not a conflict with the *shipped* Table 1 path. |
+| 2. Shorthand / incomplete? | **Leading hypothesis.** Synthetic reverse rows used a cheap reciprocal on the scalar rather than re-summing inverted ratios. |
+| 3. Unused alternate? | Exact `Σ 1/r_j` was not the RF column historically. |
+| 4. Unresolved? | **Yes as wording/method clarity**; **No as a regeneration blocker** if the goal is manuscript numbers. |
+
+**Action.** Keep `1/Σ` for primary RF. Do not “fix” to `Σ 1/r_j` without a labeled diagnostic retrain. Documented in
+`method_science/FORWARD_REVERSE_AUGMENTATION_FEATURE_SEMANTICS.md`.
 
 ## Empirical note (2026-09-12 RF diagnostic)
 

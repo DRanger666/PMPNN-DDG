@@ -64,7 +64,7 @@ weighted neighbor energy change    -> sign flip
 neighbor forward/backward KL       -> swap
 PSSM difference                    -> sign flip
 weighted neighbor entropy change   -> sign flip
-message norm ratio                 -> reciprocal
+message norm ratio (Feature C)     -> reciprocal of *sum* (1/Σ r_j), NOT Σ 1/r_j
 scalar feature D                   -> unchanged
 wild/alternate PSSM scalar fields  -> swap
 ```
@@ -75,6 +75,37 @@ For PCA/KPCA blocks:
 reverse embedding PCA/KPCA -> transform sign-flipped raw embedding changes
 reverse message PCA/KPCA   -> transform sign-flipped raw message changes
 ```
+
+
+## Feature C reverse: `1/Σ` vs `Σ 1/x` (important)
+
+Forward Feature C (NR) is a **sum of per-neighbor ratios**:
+
+```text
+C_fwd = Σ_j r_j ,   r_j = ‖M_j^WT‖ / ‖M_j^MT‖
+```
+
+If WT and MT centers swap, the *exact* reverse Feature C is the sum of inverted
+ratios:
+
+```text
+C_exact_rev = Σ_j (‖M_j^MT‖ / ‖M_j^WT‖) = Σ_j 1/r_j
+```
+
+The Digging / notebook F+R augmenter did **not** recompute that. It took the
+reciprocal of the already-summed forward scalar:
+
+```text
+C_rev_notebook = 1 / C_fwd = 1 / Σ_j r_j
+```
+
+Those are equal only if there is a single neighbor (or all `r_j` identical).
+In general `1/Σ r_j ≠ Σ 1/r_j` (harmonic vs arithmetic structure).
+
+**Classification:** this is a **documented historical augmentation shortcut**,
+not an accidental typo we discovered yesterday. Primary RF vs Table 1 keeps
+`1/Σ` to match the published protocol. Exact `Σ 1/r_j` is an optional diagnostic
+only — same spirit as Feature B weighted vs Eq. 1. See fidelity checklist Item H.
 
 ## Working Rule
 

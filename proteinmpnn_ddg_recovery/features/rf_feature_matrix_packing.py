@@ -244,6 +244,10 @@ def augment_forward_reverse(
         rev[4] = row[3]
         rev[5] = -1.0 * row[5]
         rev[6] = -1.0 * row[6]
+        # Feature C reverse shortcut: 1/Σ_j r_j  (r_j = ‖M_j^WT‖/‖M_j^MT‖).
+        # Algebraically exact reverse C would be Σ_j 1/r_j = Σ_j ‖M_j^MT‖/‖M_j^WT‖.
+        # Notebook / Digging used the reciprocal-of-sum; we keep that for Table 1
+        # fidelity (see MANUSCRIPT_TENSOR_EXTRACTION_FIDELITY Item H).
         denom = row[7]
         rev[7] = 1.0 / denom if abs(denom) > 1e-12 else 0.0
         rev[8] = row[8]

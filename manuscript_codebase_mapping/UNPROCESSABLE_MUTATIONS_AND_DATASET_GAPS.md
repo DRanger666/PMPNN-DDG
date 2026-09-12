@@ -61,8 +61,11 @@ All 31 S_669 failures are `3dv0I`: ACCRE PDB/PSSM missing historically; independ
 
 ### S_921 / Ssym
 
-- S_921 (partial status while regen continues): n_ok=120, n_error=0
-- Ssym: n_ok=342, n_error=0 (zero unprocessable)
+- **S_921: n_ok=921 / n_jobs=921, n_error=0** (195 proteins; sealed on LFS extraction
+  tensors + A–H features). No rows in `tables/unprocessable_mutations.tsv`.
+- **Ssym: n_ok=342 / n_jobs=342, n_error=0** (zero unprocessable).
+
+(The earlier `n_ok=120` line was a mid-regen status snapshot and is obsolete.)
 
 ## Code changes (PDB processing)
 
