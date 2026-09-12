@@ -70,3 +70,5 @@ Current notes:
 
 - `REGENERATED_FEATURES_VS_HISTORICAL_V3.md` — naming + save modes + Drive layout
 - `UNPROCESSABLE_MUTATIONS_AND_DATASET_GAPS.md` — integrity audit
+
+- `MANUSCRIPT_TO_VARIABLE_NAMING.md` — BioRxiv §§3.1–3.3 objects → canonical Python keys (with legacy aliases).
