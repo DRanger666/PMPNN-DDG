@@ -65,3 +65,8 @@ Current notes:
 - `tensor_extraction_codeblock_recovery/TENSOR_EXTRACTION_ALGORITHM_DEBUGGING.md`:
   manuscript-algorithm comparison for the direct V3 tensor-extraction segment,
   with current value-level mismatch evidence and suspicious operational choices.
+
+## Manuscript-path vs historical V3
+
+- `MANUSCRIPT_PATH_VS_HISTORICAL_V3.md` — naming + save modes + Drive layout
+- `UNPROCESSABLE_MUTATIONS_AND_DATASET_GAPS.md` — integrity audit
