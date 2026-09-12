@@ -60,3 +60,7 @@ reproduction_inputs/independent_pdb_fetches/raw/
 !reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/
 !reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/**
 !reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/**/*.pkl
+
+# Pipeline run logs (local only)
+reproduction_runs/**/logs/
+reproduction_runs/**/*.nohup.log

@@ -1,5 +1,0 @@
-encoding	pearson_signed	pearson_abs	notebook_target_abs	verdict
-message_NR	-0.159874	0.159874	0.26	mismatch
-message_CN	0.045217	0.045217	0.31	mismatch
-neighbor_embedding_NR	0.274916	0.274916	0.15	mismatch
-neighbor_embedding_CN	0.293150	0.293150	0.03	mismatch
