@@ -102,10 +102,10 @@ C_rev_notebook = 1 / C_fwd = 1 / Σ_j r_j
 Those are equal only if there is a single neighbor (or all `r_j` identical).
 In general `1/Σ r_j ≠ Σ 1/r_j` (harmonic vs arithmetic structure).
 
-**Classification:** this is a **documented historical augmentation shortcut**,
-not an accidental typo we discovered yesterday. Primary RF vs Table 1 keeps
-`1/Σ` to match the published protocol. Exact `Σ 1/r_j` is an optional diagnostic
-only — same spirit as Feature B weighted vs Eq. 1. See fidelity checklist Item H.
+**Classification:** historical Digging/notebook used `1/Σ` (scale artifact on
+naive F+R Feature-C↔label PCC). Manuscript Eq. (2) implies exact `Σ 1/r_j` under
+WT↔MT swap. **Branch decision (2026-09-12):** primary RF uses `exact_sum_inv`;
+`reciprocal_of_sum` is diagnostic only. See fidelity checklist Item H.
 
 ## Working Rule
 

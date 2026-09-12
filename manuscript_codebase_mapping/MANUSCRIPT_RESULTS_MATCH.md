@@ -21,16 +21,16 @@ tensors are required for a finished manuscript-corresponding release.
 
 | ID | Claim | Regenerated-pipeline status | Notes |
 | --- | --- | --- | --- |
-| Table 1 | S669 / Ssym / S921 independent-test metrics | **6 match / 15 near / 0 mismatch of 21 (notebook_table1, 2dp)** | `rf_from_extraction_tensors` from all four extraction tensors |
-| Table 2 | S669 PMPNN-DDG row | **near** | Same RF as Table 1 S669 (extraction tensors) |
-| Table 3 | Ssym PMPNN-DDG row | **near** | Same RF as Table 1 Ssym (extraction tensors) |
-| Figure 6 | Incremental A→H total-PCC on S669/Ssym | **7/8 combos within 0.02 abs of historical series** | `rf_from_extraction_tensors` |
+| Table 1 | S669 / Ssym / S921 independent-test metrics | **5 match / 15 near / 1 mismatch of 21 (notebook_table1, 2dp)** | `rf_exact_reverse_feature_c` (exact reverse C = Eq. 2); mismatch = S921 rmsR 1.47 vs 1.49 |
+| Table 2 | S669 PMPNN-DDG row | **near** | Same RF as Table 1 S669 (exact reverse C) |
+| Table 3 | Ssym PMPNN-DDG row | **near** | Same RF as Table 1 Ssym (exact reverse C) |
+| Figure 6 | Incremental A→H total-PCC on S669/Ssym | **5/8 combos both datasets within 0.02; 13/16 cells** | `rf_exact_reverse_feature_c`; S669 mid-combos with C dip ~0.02 vs Digging series |
 | Figures 3–5 | S2648 train-set feature analyses | **milestone** | Fig3 from extraction tensors (message NR match); Figs4–5 5 match / 6 near / 2 mismatch of 13 |
 | Figures 1–2 | Pipeline / method schematics | N/A (non-numeric) | |
 
-**Last updated:** 2026-09-12 21:08 UTC
+**Last updated:** 2026-09-12 (exact reverse Feature C = branch default)
 **Feature source:** extraction tensors (ProteinMPNN A–E + PSSM F–H) under `reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/`; RF tables also `*_features.pickle` / `*_proteinmpnn_and_pssm_features.pickle`.
-**Protocol:** `train_eval_rf_from_v3_features.py` with extraction-tensor overrides; Feature B `historical_weighted`; KPCA seed 0; S_669 ΔΔG sign flip.
+**Protocol:** `train_eval_rf_from_v3_features.py` with extraction-tensor overrides; Feature B `historical_weighted`; Feature C reverse **`exact_sum_inv`** (Eq. 2); KPCA seed 0; S_669 ΔΔG sign flip. Historical notebook `1/Σ` reverse C retired as primary (diagnostic flag only).
 
 **Coverage note:** S_2648 kept 2647/2648; S_669 kept 638/669 (unprocessable gaps audited); Ssym 342/342; S_921 921/921.
 
@@ -45,31 +45,32 @@ tensors are required for a finished manuscript-corresponding release.
 
 | Dataset | Metric | Manuscript | Regenerated | Verdict |
 | --- | --- | ---: | ---: | --- |
-| S_669 | rF | 0.48 | 0.4701 (→0.47) | **near** |
-| S_669 | rR | 0.48 | 0.4710 (→0.47) | **near** |
-| S_669 | rF+R | 0.64 | 0.6387 (→0.64) | **match** |
-| S_669 | rF-R | -0.99 | -0.9941 (→-0.99) | **match** |
-| S_669 | rmsF | 1.45 | 1.4609 (→1.46) | **near** |
-| S_669 | rmsR | 1.45 | 1.4601 (→1.46) | **near** |
-| S_669 | rmsF+R | 1.45 | 1.4605 (→1.46) | **near** |
-| Ssym | rF | 0.72 | 0.7337 (→0.73) | **near** |
-| Ssym | rR | 0.72 | 0.7298 (→0.73) | **near** |
-| Ssym | rF+R | 0.81 | 0.8190 (→0.82) | **near** |
-| Ssym | rF-R | -0.99 | -0.9955 (→-1.00) | **near** |
-| Ssym | rmsF | 1.10 | 1.0832 (→1.08) | **near** |
-| Ssym | rmsR | 1.10 | 1.0885 (→1.09) | **near** |
-| Ssym | rmsF+R | 1.10 | 1.0858 (→1.09) | **near** |
-| S_921 | rF | 0.77 | 0.7658 (→0.77) | **match** |
-| S_921 | rR | 0.77 | 0.7656 (→0.77) | **match** |
-| S_921 | rF+R | 0.79 | 0.7937 (→0.79) | **match** |
-| S_921 | rF-R | -1.00 | -0.9962 (→-1.00) | **match** |
-| S_921 | rmsF | 1.49 | 1.4952 (→1.50) | **near** |
-| S_921 | rmsR | 1.49 | 1.4964 (→1.50) | **near** |
-| S_921 | rmsF+R | 1.49 | 1.4958 (→1.50) | **near** |
+| S_669 | rF | 0.48 | 0.4703 (→0.47) | **near** |
+| S_669 | rR | 0.48 | 0.4686 (→0.47) | **near** |
+| S_669 | rF+R | 0.64 | 0.6367 (→0.64) | **match** |
+| S_669 | rF-R | -0.99 | -0.9934 (→-0.99) | **match** |
+| S_669 | rmsF | 1.45 | 1.4628 (→1.46) | **near** |
+| S_669 | rmsR | 1.45 | 1.4648 (→1.46) | **near** |
+| S_669 | rmsF+R | 1.45 | 1.4638 (→1.46) | **near** |
+| Ssym | rF | 0.72 | 0.7252 (→0.73) | **near** |
+| Ssym | rR | 0.72 | 0.7248 (→0.72) | **match** |
+| Ssym | rF+R | 0.81 | 0.8170 (→0.82) | **near** |
+| Ssym | rF-R | -0.99 | -0.9950 (→-0.99) | **match** |
+| Ssym | rmsF | 1.1 | 1.0916 (→1.09) | **near** |
+| Ssym | rmsR | 1.1 | 1.0913 (→1.09) | **near** |
+| Ssym | rmsF+R | 1.1 | 1.0915 (→1.09) | **near** |
+| S_921 | rF | 0.77 | 0.7628 (→0.76) | **near** |
+| S_921 | rR | 0.77 | 0.7641 (→0.76) | **near** |
+| S_921 | rF+R | 0.79 | 0.8001 (→0.8) | **near** |
+| S_921 | rF-R | -1 | -0.9962 (→-1) | **match** |
+| S_921 | rmsF | 1.49 | 1.4765 (→1.48) | **near** |
+| S_921 | rmsR | 1.49 | 1.4735 (→1.47) | **mismatch** |
+| S_921 | rmsF+R | 1.49 | 1.4750 (→1.48) | **near** |
 
-Primary headlines (rF+R): S_669 **0.64**; Ssym **0.82**; S_921 **0.79**.
+Primary headlines (rF+R): S_669 **0.64**; Ssym **0.82**; S_921 **0.80**.
 
-Source: `reproduction_runs/2026-09-12/rf_from_extraction_tensors/` (extraction-tensor overrides).
+Source: `reproduction_runs/2026-09-12/rf_exact_reverse_feature_c/` (extraction tensors; `--feature-c-reverse-mode exact_sum_inv`).
+Pre-fix baseline (notebook `1/Σ` reverse C): `reproduction_runs/2026-09-12/rf_from_extraction_tensors/`.
 
 
 ## Table 2 — S669 external comparison (PMPNN-DDG row only)
@@ -92,17 +93,16 @@ Source: `reproduction_runs/2026-09-12/rf_from_extraction_tensors/` (extraction-t
 
 | Combo | S_669 ours | S_669 hist | Δ | Ssym ours | Ssym hist | Δ | Approx |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| A | 0.4863 | 0.4716 | +0.0147 | 0.6596 | 0.6411 | +0.0185 | within 0.02 |
-| A-B | 0.5224 | 0.5260 | -0.0036 | 0.7155 | 0.7007 | +0.0148 | within 0.02 |
-| A-C | 0.5673 | 0.5772 | -0.0099 | 0.7369 | 0.7164 | +0.0205 | Ssym Δ=0.0205 (edge) |
-| A-D | 0.5920 | 0.6011 | -0.0091 | 0.7508 | 0.7426 | +0.0082 | within 0.02 |
-| A-E | 0.6322 | 0.6374 | -0.0052 | 0.7923 | 0.7869 | +0.0054 | within 0.02 |
-| A-F | 0.6392 | 0.6438 | -0.0046 | 0.8103 | 0.8027 | +0.0076 | within 0.02 |
-| A-G | 0.6391 | 0.6435 | -0.0044 | 0.8151 | 0.8087 | +0.0064 | within 0.02 |
-| A-H | 0.6387 | 0.6440 | -0.0053 | 0.8190 | 0.8122 | +0.0068 | within 0.02 |
+| A | 0.4865 | 0.4716 | +0.0149 | 0.6607 | 0.6411 | +0.0196 | within 0.02 |
+| A-B | 0.5222 | 0.5260 | -0.0038 | 0.7155 | 0.7007 | +0.0148 | within 0.02 |
+| A-C | 0.5562 | 0.5772 | -0.0210 | 0.7360 | 0.7164 | +0.0196 | S669 Δ=-0.0210 (edge) |
+| A-D | 0.5801 | 0.6011 | -0.0210 | 0.7498 | 0.7426 | +0.0072 | S669 Δ=-0.0210 (edge) |
+| A-E | 0.6154 | 0.6374 | -0.0220 | 0.7864 | 0.7869 | -0.0005 | S669 Δ=-0.0220 (edge) |
+| A-F | 0.6359 | 0.6438 | -0.0079 | 0.8081 | 0.8027 | +0.0054 | within 0.02 |
+| A-G | 0.6362 | 0.6435 | -0.0073 | 0.8129 | 0.8087 | +0.0042 | within 0.02 |
+| A-H | 0.6367 | 0.6440 | -0.0073 | 0.8170 | 0.8122 | +0.0048 | within 0.02 |
 
-Hist: `FIGURE6_NUMERICAL_BASIS_VERIFICATION.md`. Ours: 10-run mean rF+R from extraction tensors. **7/8 within 0.02**.
-
+Hist: Digging incremental series (`FIGURE6_NUMERICAL_BASIS_VERIFICATION.md`). Ours: 10-run mean rF+R with **exact reverse Feature C**. **5/8** combos within 0.02 on both datasets (13/16 cells); mid-combos that include C dip slightly on S669 vs Digging — expected when replacing notebook `1/Σ` reverse C.
 
 ## Figures 3–5 — S2648 training analyses
 

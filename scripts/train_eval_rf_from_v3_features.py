@@ -59,6 +59,7 @@ REQUIRED_FIELDS = [
     "alternate_pssm",
     "V2_backward_weighted_neighbor_entropy_changes",
     "center_neighbor_weight_check_w_m",
+    "center_neighbor_weight_check_m_w",
     "neighbor_embedding_change_m_w",
     "neighbor_embedding_change_m_w_raw",
     "neighbor_message_change_m_w_raw",
@@ -164,7 +165,7 @@ def manuscript_unweighted_feature_b(mut: dict[str, Any]) -> float:
 def build_raw_instances(
     two_level: dict[str, list[dict[str, Any]]],
     feature_b_mode: str = "historical_weighted",
-) -> tuple[list[list[Any]], list[float], list[np.ndarray], list[np.ndarray], dict[str, int]]:
+) -> tuple[list[list[Any]], list[float], list[np.ndarray], list[np.ndarray], list[float], dict[str, int]]:
     """Build per-mutation raw feature lists before KPCA projection.
 
     Matches notebook cell 8 scalar packing (indices 0..10 + 4 raw matrices).
@@ -173,6 +174,7 @@ def build_raw_instances(
     y: list[float] = []
     n_e_c_raw: list[np.ndarray] = []
     n_m_c_raw: list[np.ndarray] = []
+    exact_reverse_c: list[float] = []
     skipped = 0
     kept = 0
     for _prot, muts in two_level.items():
@@ -215,9 +217,11 @@ def build_raw_instances(
             y.append(float(mut["ddg"]))
             n_e_c_raw.append(neighbor_embedding_change)
             n_m_c_raw.append(message_change)
+            # Exact reverse Feature C = Σ_j ‖M_j^MT‖/‖M_j^WT‖ (already on entry).
+            exact_reverse_c.append(float(mut["center_neighbor_weight_check_m_w"]))
             kept += 1
     stats = {"kept": kept, "skipped_incomplete": skipped}
-    return X, y, n_e_c_raw, n_m_c_raw, stats
+    return X, y, n_e_c_raw, n_m_c_raw, exact_reverse_c, stats
 
 
 def fit_projection(
@@ -253,9 +257,20 @@ def project_instances(X: list[list[Any]], proj: dict[str, Any]) -> list[list[flo
     return out
 
 
-def augment_forward_reverse(X: np.ndarray, y: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
+def augment_forward_reverse(
+    X: np.ndarray,
+    y: np.ndarray,
+    *,
+    feature_c_reverse_mode: str = "exact_sum_inv",
+    exact_reverse_c: np.ndarray | None = None,
+) -> tuple[np.ndarray, np.ndarray]:
     """F+R expand: 71-col dual-direction rows → interleaved 41-col training rows."""
-    return packing.augment_forward_reverse(X, y)
+    return packing.augment_forward_reverse(
+        X,
+        y,
+        feature_c_reverse_mode=feature_c_reverse_mode,
+        exact_reverse_c=exact_reverse_c,
+    )
 
 
 def combo_indices(combo: tuple[str, ...]) -> list[int]:
@@ -421,6 +436,12 @@ def main() -> int:
     )
     parser.add_argument("--n-jobs", type=int, default=-1)
     parser.add_argument(
+        "--feature-c-reverse-mode",
+        choices=("exact_sum_inv", "reciprocal_of_sum"),
+        default="exact_sum_inv",
+        help="Reverse-row Feature C: exact Σ 1/r_j (default) vs historical 1/Σ r_j",
+    )
+    parser.add_argument(
         "--feature-b-mode",
         choices=["historical_weighted", "manuscript_unweighted"],
         default="historical_weighted",
@@ -436,6 +457,7 @@ def main() -> int:
     digging = args.digging_dir
 
     print(f"Feature B mode: {args.feature_b_mode}", flush=True)
+    print(f"Feature C reverse mode: {args.feature_c_reverse_mode}", flush=True)
     print("Loading feature pickles (historical V3 and/or manuscript-path overrides)...", flush=True)
     names = ["S_2648", "S_921", "S_669", "Ssym"]
     pickles = {
@@ -467,8 +489,8 @@ def main() -> int:
     coverage = {}
     for name in names:
         two_level = load_v3(pickles[name])
-        X, y, n_e, n_m, stats = build_raw_instances(two_level, feature_b_mode=args.feature_b_mode)
-        raw[name] = {"X": X, "y": y, "n_e": n_e, "n_m": n_m}
+        X, y, n_e, n_m, exact_c_rev, stats = build_raw_instances(two_level, feature_b_mode=args.feature_b_mode)
+        raw[name] = {"X": X, "y": y, "n_e": n_e, "n_m": n_m, "exact_reverse_c": exact_c_rev}
         coverage[name] = stats
         print(f"  {name}: kept={stats['kept']} skipped={stats['skipped_incomplete']}", flush=True)
 
@@ -497,7 +519,12 @@ def main() -> int:
         if name == "S_669":
             y_mat = y_mat * (-1.0)
             print("  Applied S_669 DDG sign flip (y *= -1) per notebook protocol", flush=True)
-        X_aug, y_aug = augment_forward_reverse(X_mat, y_mat)
+        X_aug, y_aug = augment_forward_reverse(
+            X_mat,
+            y_mat,
+            feature_c_reverse_mode=args.feature_c_reverse_mode,
+            exact_reverse_c=np.asarray(raw[name]["exact_reverse_c"], dtype=np.float64),
+        )
         datasets_aug[name] = (X_aug, y_aug)
         matrix_shapes[name] = {
             "n_forward": int(X_mat.shape[0]),
@@ -551,6 +578,7 @@ def main() -> int:
         ),
         "v3_pickle_overrides": {k: str(pickles[k]) for k in override_labels},
         "feature_b_mode": args.feature_b_mode,
+        "feature_c_reverse_mode": args.feature_c_reverse_mode,
         "feature_source_paths": {k: str(v) for k, v in pickles.items()},
         "kpca_seed": args.kpca_seed,
         "kpca_sample_size": args.kpca_sample_size,

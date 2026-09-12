@@ -21,10 +21,10 @@ All numbers below come from the **public extraction-tensor path** on this branch
 
 | Manuscript artifact | What it is | Regenerated verdict | Where to look |
 | --- | --- | --- | --- |
-| **Table 1** | S669 / Ssym / S921 independent-test metrics | **6 match / 15 near / 0 mismatch** of 21 (2 d.p., `notebook_table1`) | [`ours_vs_paper_table1.tsv`](reproduction_runs/2026-09-12/rf_from_extraction_tensors/ours_vs_paper_table1.tsv) |
+| **Table 1** | S669 / Ssym / S921 independent-test metrics | **5 match / 15 near / 1 mismatch** of 21 (2 d.p., `notebook_table1`; exact reverse C) | [`ours_vs_paper_table1.tsv`](reproduction_runs/2026-09-12/rf_exact_reverse_feature_c/ours_vs_paper_table1.tsv) |
 | **Table 2** | S669 vs external methods (PMPNN-DDG row) | **near** (same RF as Table 1 S669) | same RF run; externals = literature |
 | **Table 3** | Ssym vs external methods (PMPNN-DDG row) | **near** (same RF as Table 1 Ssym) | same RF run; externals = literature |
-| **Figure 6** | Incremental A→H total-PCC (S669 / Ssym) | **7 / 8** combos within 0.02 of historical series | [`rf_train_eval_summary.json`](reproduction_runs/2026-09-12/rf_from_extraction_tensors/rf_train_eval_summary.json) |
+| **Figure 6** | Incremental A→H total-PCC (S669 / Ssym) | **5 / 8** combos within 0.02 both sets (13/16 cells); exact reverse C | [`rf_per_run_metrics.json`](reproduction_runs/2026-09-12/rf_exact_reverse_feature_c/rf_per_run_metrics.json) |
 | **Figure 3** | NR vs CN for messages (C) and neighbor embeddings (D) on S2648 | message NR **match**; others **near**; neighbor-embedding NR Δ≈0.02 | [PNG](reproduction_runs/2026-09-12/s2648_train_feature_figures/figure3_norm_ratio_vs_change_norm.png) · [claims](reproduction_runs/2026-09-12/s2648_train_feature_figures/figure3_claim_comparison.tsv) |
 | **Figure 4** | S2648 feature–feature correlations (A–E) | **5 match / 6 near / 2 mismatch** of 13 at `kpca_seed=0` | [PNG](reproduction_runs/2026-09-12/s2648_train_feature_figures/figure4_feature_feature_correlation.png) · [claims](reproduction_runs/2026-09-12/s2648_train_feature_figures/figure45_claim_comparison.tsv) |
 | **Figure 5** | S2648 feature–feature / feature–label (A–H) | same tallies as Fig 4 family | [PNG](reproduction_runs/2026-09-12/s2648_train_feature_figures/figure5_feature_feature_correlation.png) · [claims](reproduction_runs/2026-09-12/s2648_train_feature_figures/figure45_claim_comparison.tsv) |
@@ -39,20 +39,22 @@ Dataset roles (train vs test per figure/table):
 | --- | ---: | ---: | ---: | ---: |
 | S669 | 0.64 | **0.64** | 1.45 | 1.46 (near) |
 | Ssym | 0.81 | **0.82** (near) | 1.10 | 1.09 (near) |
-| S921 | 0.79 | **0.79** | 1.49 | 1.50 (near) |
+| S921 | 0.79 | **0.80** (near) | 1.49 | 1.48 (near) |
 
 Full 21-cell grid (rF, rR, rF+R, rF-R, rms*): see
 [`MANUSCRIPT_RESULTS_MATCH.md`](manuscript_codebase_mapping/MANUSCRIPT_RESULTS_MATCH.md#table-1--independent-test-performance-pmpnn-ddg)
 and [`ours_vs_paper_table1.tsv`](reproduction_runs/2026-09-12/rf_from_extraction_tensors/ours_vs_paper_table1.tsv).
 
 RF protocol: train on S2648 (+ forward/reverse augmentation); Feature B
-`historical_weighted`; KPCA seed 0; S669 ΔΔG sign flip. Run directory:
-[`reproduction_runs/2026-09-12/rf_from_extraction_tensors/`](reproduction_runs/2026-09-12/rf_from_extraction_tensors/).
+`historical_weighted`; reverse Feature C **`exact_sum_inv`** (Eq. 2; not notebook
+`1/Σ`); KPCA seed 0; S669 ΔΔG sign flip. Run directory:
+[`reproduction_runs/2026-09-12/rf_exact_reverse_feature_c/`](reproduction_runs/2026-09-12/rf_exact_reverse_feature_c/).
 
 ### Figure 6 — incremental feature contribution
 
-10-run mean rF+R for combos A … A–H on S669 and Ssym. **7/8** within 0.02 abs of
-the historical Digging series; one Ssym A–C edge at Δ≈0.0205. Detail table:
+10-run mean rF+R for combos A … A–H on S669 and Ssym under **exact reverse C**.
+**5/8** combos within 0.02 on both datasets (13/16 cells); S669 mid-combos that
+include C sit just past 0.02 vs Digging. Detail table:
 [`MANUSCRIPT_RESULTS_MATCH.md`](manuscript_codebase_mapping/MANUSCRIPT_RESULTS_MATCH.md#figure-6--incremental-feature-contribution).
 
 ### Figures 3–5 — S2648 training analyses (no RF)
@@ -123,7 +125,8 @@ truth.
 | Extraction tensors (LFS) | [`reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/`](reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/) |
 | Feature tables A–H (LFS) | [`reproduction_inputs/pmpnn_ddg_features_2026-09-12/`](reproduction_inputs/pmpnn_ddg_features_2026-09-12/) |
 | Fig 3–5 PNGs + claim TSVs | [`reproduction_runs/2026-09-12/s2648_train_feature_figures/`](reproduction_runs/2026-09-12/s2648_train_feature_figures/) |
-| RF / Table 1 / Fig 6 metrics | [`reproduction_runs/2026-09-12/rf_from_extraction_tensors/`](reproduction_runs/2026-09-12/rf_from_extraction_tensors/) |
+| RF / Table 1 / Fig 6 metrics (exact reverse C) | [`reproduction_runs/2026-09-12/rf_exact_reverse_feature_c/`](reproduction_runs/2026-09-12/rf_exact_reverse_feature_c/) |
+| RF baseline (historical `1/Σ` reverse C) | [`reproduction_runs/2026-09-12/rf_from_extraction_tensors/`](reproduction_runs/2026-09-12/rf_from_extraction_tensors/) |
 | Historical Digging pickles (reference only) | [`reproduction_inputs/historical_reference_pickles/`](reproduction_inputs/historical_reference_pickles/) |
 | BioRxiv → variable names | [`MANUSCRIPT_TO_VARIABLE_NAMING.md`](manuscript_codebase_mapping/MANUSCRIPT_TO_VARIABLE_NAMING.md) |
 | RF packing (71→41; Feature E cols) | [`rf_feature_matrix_packing.py`](proteinmpnn_ddg_recovery/features/rf_feature_matrix_packing.py) |
@@ -165,6 +168,7 @@ archaeology was pruned here on purpose.
 - [x] **Figures 3–5** regenerated and linked above
 - [x] **Tables 1–3 + Figure 6** from extraction-tensor RF, match write-up filled
 - [x] Fig 4–5 residuals explained via KernelPCA subsample experiment
+- [x] Reverse Feature C fixed to Eq. (2) `Σ 1/r_j` (exact); historical `1/Σ` diagnostic only
 - [x] Retired byte-identical V3 reconciliation; removed `drive_evidence_copy` from this branch
 
 **Still open / author decisions:**

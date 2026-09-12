@@ -213,8 +213,12 @@ policy as **open fidelity / wording questions**, not as “failed V3 reconciliat
 | 3. Unused alternate? | Exact `Σ 1/r_j` was not the RF column historically. |
 | 4. Unresolved? | **Yes as wording/method clarity**; **No as a regeneration blocker** if the goal is manuscript numbers. |
 
-**Action.** Keep `1/Σ` for primary RF. Do not “fix” to `Σ 1/r_j` without a labeled diagnostic retrain. Documented in
-`method_science/FORWARD_REVERSE_AUGMENTATION_FEATURE_SEMANTICS.md`.
+**Action (2026-09-12 decision).** Primary path uses **`exact_sum_inv`**
+(`Σ 1/r_j`), matching Eq. (2) under WT↔MT swap. Digging/notebook `1/Σ` remains
+only as `--feature-c-reverse-mode reciprocal_of_sum` for diagnostics. Naive F+R
+stacked Feature-C↔label PCC under `1/Σ` is a **scale artifact**, not stronger
+signal. RF outputs: `reproduction_runs/2026-09-12/rf_exact_reverse_feature_c/`.
+See `method_science/FORWARD_REVERSE_AUGMENTATION_FEATURE_SEMANTICS.md`.
 
 ## Empirical note (2026-09-12 RF diagnostic)
 

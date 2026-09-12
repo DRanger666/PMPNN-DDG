@@ -219,12 +219,30 @@ def feature_E_from_dual_direction_row(row: Sequence[float]) -> np.ndarray:
 
 
 def augment_forward_reverse(
-    dual_direction_rows: np.ndarray, labels: np.ndarray
+    dual_direction_rows: np.ndarray,
+    labels: np.ndarray,
+    *,
+    feature_c_reverse_mode: str = "exact_sum_inv",
+    exact_reverse_c: np.ndarray | None = None,
 ) -> tuple[np.ndarray, np.ndarray]:
-    """Expand 71-col intermediate rows → interleaved F/R 41-col training matrix."""
+    """Expand 71-col intermediate rows → interleaved F/R 41-col training matrix.
+
+    ``feature_c_reverse_mode``:
+      - ``exact_sum_inv``: reverse C = Σ_j 1/r_j (= ``center_neighbor_weight_check_m_w``);
+        requires ``exact_reverse_c`` aligned with rows.
+      - ``reciprocal_of_sum``: historical Digging/notebook bug/shortcut ``1/Σ_j r_j``.
+    """
+    if feature_c_reverse_mode not in {"exact_sum_inv", "reciprocal_of_sum"}:
+        raise ValueError(f"Unknown feature_c_reverse_mode={feature_c_reverse_mode!r}")
+    if feature_c_reverse_mode == "exact_sum_inv":
+        if exact_reverse_c is None:
+            raise ValueError("exact_sum_inv requires exact_reverse_c (Σ 1/r_j per mutation)")
+        if len(exact_reverse_c) != len(dual_direction_rows):
+            raise ValueError("exact_reverse_c length must match dual_direction_rows")
+
     X_aug: list[np.ndarray] = []
     y_aug: list[float] = []
-    for row, label in zip(dual_direction_rows, labels):
+    for i, (row, label) in enumerate(zip(dual_direction_rows, labels)):
         forward = np.concatenate(
             [
                 row[SLICE_SCALARS],
@@ -244,12 +262,11 @@ def augment_forward_reverse(
         rev[4] = row[3]
         rev[5] = -1.0 * row[5]
         rev[6] = -1.0 * row[6]
-        # Feature C reverse shortcut: 1/Σ_j r_j  (r_j = ‖M_j^WT‖/‖M_j^MT‖).
-        # Algebraically exact reverse C would be Σ_j 1/r_j = Σ_j ‖M_j^MT‖/‖M_j^WT‖.
-        # Notebook / Digging used the reciprocal-of-sum; we keep that for Table 1
-        # fidelity (see MANUSCRIPT_TENSOR_EXTRACTION_FIDELITY Item H).
-        denom = row[7]
-        rev[7] = 1.0 / denom if abs(denom) > 1e-12 else 0.0
+        if feature_c_reverse_mode == "exact_sum_inv":
+            rev[7] = float(exact_reverse_c[i])
+        else:
+            denom = row[7]
+            rev[7] = 1.0 / denom if abs(denom) > 1e-12 else 0.0
         rev[8] = row[8]
         rev[9] = row[10]
         rev[10] = row[9]
