@@ -1,0 +1,273 @@
+Dataset=S_2648 jobs=2648 pdb_dir=/workspace/ProteinMPNN-DDG/drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_2648_PDB_Files seed_mode=per_entry seed=0 subprocess=True compact=True resume=True
+[protein 1/132] 1e65A n_mut=21
+  resume skip 1e65A (shard exists)
+[protein 2/132] 1a43A n_mut=5
+  resume skip 1a43A (shard exists)
+[protein 3/132] 1a5eA n_mut=3
+  resume skip 1a5eA (shard exists)
+[protein 4/132] 1aepA n_mut=4
+  resume skip 1aepA (shard exists)
+[protein 5/132] 1ag2A n_mut=10
+  resume skip 1ag2A (shard exists)
+[protein 6/132] 1aj3A n_mut=63
+  resume skip 1aj3A (shard exists)
+[protein 7/132] 1akyA n_mut=6
+  resume skip 1akyA (shard exists)
+[protein 8/132] 1am7A n_mut=2
+  resume skip 1am7A (shard exists)
+[protein 9/132] 1amqA n_mut=14
+  resume skip 1amqA (shard exists)
+[protein 10/132] 1ankA n_mut=4
+  resume skip 1ankA (shard exists)
+[protein 11/132] 1aonU n_mut=4
+  resume skip 1aonU (shard exists)
+[protein 12/132] 1apsA n_mut=21
+  resume skip 1apsA (shard exists)
+[protein 13/132] 1arrA n_mut=17
+  resume skip 1arrA (shard exists)
+[protein 14/132] 1azpA n_mut=1
+  resume skip 1azpA (shard exists)
+[protein 15/132] 1b26A n_mut=3
+  resume skip 1b26A (shard exists)
+[protein 16/132] 1b8eA n_mut=1
+  resume skip 1b8eA (shard exists)
+[protein 17/132] 1blcA n_mut=1
+  resume skip 1blcA (shard exists)
+[protein 18/132] 1bniA n_mut=153
+  resume skip 1bniA (shard exists)
+[protein 19/132] 1boyA n_mut=1
+  resume skip 1boyA (shard exists)
+[protein 20/132] 1btaA n_mut=12
+  resume skip 1btaA (shard exists)
+[protein 21/132] 1bvcA n_mut=41
+  resume skip 1bvcA (shard exists)
+[protein 22/132] 1c9oA n_mut=25
+  resume skip 1c9oA (shard exists)
+[protein 23/132] 1cahA n_mut=2
+  resume skip 1cahA (shard exists)
+[protein 24/132] 1ceyA n_mut=14
+  resume skip 1ceyA (shard exists)
+[protein 25/132] 1chkA n_mut=3
+  resume skip 1chkA (shard exists)
+[protein 26/132] 1cseI n_mut=5
+  resume skip 1cseI (shard exists)
+[protein 27/132] 1cspA n_mut=21
+  resume skip 1cspA (shard exists)
+[protein 28/132] 1cunA n_mut=26
+  resume skip 1cunA (shard exists)
+[protein 29/132] 1dktA n_mut=17
+  resume skip 1dktA (shard exists)
+[protein 30/132] 1ey0A n_mut=482
+  resume skip 1ey0A (shard exists)
+[protein 31/132] 1fkjA n_mut=36
+  resume skip 1fkjA (shard exists)
+[protein 32/132] 1fnaA n_mut=34
+  resume skip 1fnaA (shard exists)
+[protein 33/132] 1ftgA n_mut=27
+  resume skip 1ftgA (shard exists)
+[protein 34/132] 1fvkA n_mut=5
+  resume skip 1fvkA (shard exists)
+[protein 35/132] 1g4iA n_mut=9
+  resume skip 1g4iA (shard exists)
+[protein 36/132] 1g6nA n_mut=1
+  resume skip 1g6nA (shard exists)
+[protein 37/132] 1h7mA n_mut=26
+  resume skip 1h7mA (shard exists)
+[protein 38/132] 1hfzA n_mut=22
+  resume skip 1hfzA (shard exists)
+[protein 39/132] 1hk0X n_mut=10
+  resume skip 1hk0X (shard exists)
+[protein 40/132] 1hmeA n_mut=3
+  resume skip 1hmeA (shard exists)
+[protein 41/132] 1hmkA n_mut=25
+  resume skip 1hmkA (shard exists)
+[protein 42/132] 1hmsA n_mut=17
+  resume skip 1hmsA (shard exists)
+[protein 43/132] 1huuA n_mut=5
+  resume skip 1huuA (shard exists)
+[protein 44/132] 1ietA n_mut=1
+  resume skip 1ietA (shard exists)
+[protein 45/132] 1ifcA n_mut=14
+  resume skip 1ifcA (shard exists)
+[protein 46/132] 1igvA n_mut=15
+  resume skip 1igvA (shard exists)
+[protein 47/132] 1ihbA n_mut=5
+  resume skip 1ihbA (shard exists)
+[protein 48/132] 1imqA n_mut=8
+  resume skip 1imqA (shard exists)
+[protein 49/132] 1io2A n_mut=5
+  resume skip 1io2A (shard exists)
+[protein 50/132] 1iroA n_mut=2
+  resume skip 1iroA (shard exists)
+[protein 51/132] 1jiwI n_mut=2
+  resume skip 1jiwI (shard exists)
+[protein 52/132] 1kcqA n_mut=2
+  resume skip 1kcqA (shard exists)
+[protein 53/132] 1kdxA n_mut=1
+  resume skip 1kdxA (shard exists)
+[protein 54/132] 1ke4A n_mut=1
+  resume skip 1ke4A (shard exists)
+[protein 55/132] 1kfwA n_mut=2
+  resume skip 1kfwA (shard exists)
+[protein 56/132] 1lbiA n_mut=1
+  resume skip 1lbiA (shard exists)
+[protein 57/132] 1lniA n_mut=43
+  resume skip 1lniA (shard exists)
+[protein 58/132] 1lucA n_mut=1
+  resume skip 1lucA (shard exists)
+[protein 59/132] 1lucB n_mut=2
+  resume skip 1lucB (shard exists)
+[protein 60/132] 1lveA n_mut=17
+  resume skip 1lveA (shard exists)
+[protein 61/132] 1lz1A n_mut=110
+  resume skip 1lz1A (shard exists)
+[protein 62/132] 1mbgA n_mut=3
+  resume skip 1mbgA (shard exists)
+[protein 63/132] 1mgrA n_mut=8
+  resume skip 1mgrA (shard exists)
+[protein 64/132] 1mjcA n_mut=9
+  resume skip 1mjcA (shard exists)
+[protein 65/132] 1msiA n_mut=6
+  resume skip 1msiA (shard exists)
+[protein 66/132] 1n0jA n_mut=3
+  resume skip 1n0jA (shard exists)
+[protein 67/132] 1oh0A n_mut=5
+  resume skip 1oh0A (shard exists)
+[protein 68/132] 1oiaA n_mut=7
+  resume skip 1oiaA (shard exists)
+[protein 69/132] 1oncA n_mut=3
+  resume skip 1oncA (shard exists)
+[protein 70/132] 1pdoA n_mut=3
+  resume skip 1pdoA (shard exists)
+[protein 71/132] 1pgaA n_mut=12
+  resume skip 1pgaA (shard exists)
+[protein 72/132] 1pohA n_mut=13
+  resume skip 1pohA (shard exists)
+[protein 73/132] 1qgvA n_mut=1
+  resume skip 1qgvA (shard exists)
+[protein 74/132] 1qlpA n_mut=43
+  resume skip 1qlpA (shard exists)
+[protein 75/132] 1qm4A n_mut=1
+  resume skip 1qm4A (shard exists)
+[protein 76/132] 1qndA n_mut=1
+  resume skip 1qndA (shard exists)
+[protein 77/132] 1rg8A n_mut=17
+  resume skip 1rg8A (shard exists)
+[protein 78/132] 1rhgA n_mut=10
+  resume skip 1rhgA (shard exists)
+[protein 79/132] 1risA n_mut=16
+  resume skip 1risA (shard exists)
+[protein 80/132] 1rn1C n_mut=31
+  resume skip 1rn1C (shard exists)
+[protein 81/132] 1ropA n_mut=20
+  resume skip 1ropA (shard exists)
+[protein 82/132] 1rtbA n_mut=37
+  resume skip 1rtbA (shard exists)
+[protein 83/132] 1rtpA n_mut=1
+  resume skip 1rtpA (shard exists)
+[protein 84/132] 1sakA n_mut=28
+  resume skip 1sakA (shard exists)
+[protein 85/132] 1shfA n_mut=36
+  resume skip 1shfA (shard exists)
+[protein 86/132] 1shgA n_mut=4
+  resume skip 1shgA (shard exists)
+[protein 87/132] 1ssoA n_mut=1
+  resume skip 1ssoA (shard exists)
+[protein 88/132] 1supA n_mut=6
+  resume skip 1supA (shard exists)
+[protein 89/132] 1tenA n_mut=28
+  resume skip 1tenA (shard exists)
+[protein 90/132] 1titA n_mut=8
+  resume skip 1titA (shard exists)
+[protein 91/132] 1tpkA n_mut=6
+  resume skip 1tpkA (shard exists)
+[protein 92/132] 1ttqA n_mut=8
+  resume skip 1ttqA (shard exists)
+[protein 93/132] 1tyvA n_mut=6
+  resume skip 1tyvA (shard exists)
+[protein 94/132] 1ubqA n_mut=11
+  resume skip 1ubqA (shard exists)
+[protein 95/132] 1uzcA n_mut=45
+  resume skip 1uzcA (shard exists)
+[protein 96/132] 1vqbA n_mut=90
+  resume skip 1vqbA (shard exists)
+[protein 97/132] 1witA n_mut=1
+  resume skip 1witA (shard exists)
+[protein 98/132] 1wq5A n_mut=44
+  resume skip 1wq5A (shard exists)
+[protein 99/132] 1yu5X n_mut=1
+  resume skip 1yu5X (shard exists)
+[protein 100/132] 1yyjA n_mut=37
+  resume skip 1yyjA (shard exists)
+[protein 101/132] 1zg4A n_mut=2
+  resume skip 1zg4A (shard exists)
+[protein 102/132] 1znjB n_mut=8
+  resume skip 1znjB (shard exists)
+[protein 103/132] 2a01A n_mut=1
+  resume skip 2a01A (shard exists)
+[protein 104/132] 2a36A n_mut=8
+  resume skip 2a36A (shard exists)
+[protein 105/132] 2abdA n_mut=29
+  resume skip 2abdA (shard exists)
+[protein 106/132] 2ci2I n_mut=75
+  resume skip 2ci2I (shard exists)
+[protein 107/132] 2driA n_mut=2
+  resume skip 2driA (shard exists)
+[protein 108/132] 2h61A n_mut=5
+  resume skip 2h61A (shard exists)
+[protein 109/132] 2hprA n_mut=1
+  resume skip 2hprA (shard exists)
+[protein 110/132] 2immA n_mut=10
+  resume skip 2immA (shard exists)
+[protein 111/132] 2lzmA n_mut=98
+  resume skip 2lzmA (shard exists)
+[protein 112/132] 2nvhA n_mut=14
+  resume skip 2nvhA (shard exists)
+[protein 113/132] 2ocjA n_mut=5
+  resume skip 2ocjA (shard exists)
+[protein 114/132] 2rn2A n_mut=70
+  resume skip 2rn2A (shard exists)
+[protein 115/132] 2trxA n_mut=8
+  resume skip 2trxA (shard exists)
+[protein 116/132] 2ts1A n_mut=2
+  resume skip 2ts1A (shard exists)
+[protein 117/132] 3ecaA n_mut=4
+  resume skip 3ecaA (shard exists)
+[protein 118/132] 3fvjA n_mut=3
+  resume skip 3fvjA (shard exists)
+[protein 119/132] 3glyA n_mut=4
+  resume skip 3glyA (shard exists)
+[protein 120/132] 3hhrA n_mut=10
+  resume skip 3hhrA (shard exists)
+[protein 121/132] 3mbpA n_mut=7
+  resume skip 3mbpA (shard exists)
+[protein 122/132] 3olmD n_mut=10
+  resume skip 3olmD (shard exists)
+[protein 123/132] 3pgkA n_mut=9
+  resume skip 3pgkA (shard exists)
+[protein 124/132] 3silA n_mut=2
+  resume skip 3silA (shard exists)
+[protein 125/132] 3ssiA n_mut=19
+  resume skip 3ssiA (shard exists)
+[protein 126/132] 4br1A n_mut=4
+  resume skip 4br1A (shard exists)
+[protein 127/132] 4lyzA n_mut=57
+  resume skip 4lyzA (shard exists)
+[protein 128/132] 4rexA n_mut=3
+  resume skip 4rexA (shard exists)
+[protein 129/132] 4v2fA n_mut=1
+  resume skip 4v2fA (shard exists)
+[protein 130/132] 5croA n_mut=10
+  resume skip 5croA (shard exists)
+[protein 131/132] 5dfrA n_mut=102
+  resume skip 5dfrA (shard exists)
+[protein 132/132] 5ptiA n_mut=21
+  resume skip 5ptiA (shard exists)
+{
+  "dataset": "S_2648",
+  "n_jobs": 2648,
+  "n_ok": 2647,
+  "n_error": 1,
+  "elapsed_seconds": 11.758630514144897,
+  "output_pickle": "reproduction_runs/2026-09-12/pdb_to_features_s2648/regenerated_v3_features.pickle"
+}

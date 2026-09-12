@@ -186,21 +186,22 @@ stub-vs-full comparison:
 - `manuscript_codebase_mapping/tables/unprocessable_mutations.json`
 - Regenerator: `scripts/audit_unprocessable_mutations.py`
 
-S_2648: **2619/2648** ok; **29** errors —
-`duplicate_residue_labels` 27 (`1lveA`,`2immA`), `missing_pdb` 1 (`2a01A`),
-`chain_parse_keyerror` 1 (`1rtpA`). Historical V3 also lacked MPNN features for
-the 28 `1lveA`+`2immA`+`2a01A` stubs; **`1rtpA/K80S` had full historical features**
-but failed this regen on PDB chain `1` vs key suffix `A` (new gap, documented).
-Ssym: **342/342** (zero unprocessable).
+S_2648: **2647/2648** ok; **1** remaining (`2a01A/L141R` `missing_pssm` after
+independent RCSB PDB fetch + ICODE/chain parser fixes). **28/29** prior errors
+recovered (`1lveA` 17 + `2immA` 10 + `1rtpA` 1). ACCRE vs RCSB sequences matched
+for the ICODE/chain cases (parser bugs, not corrupt snapshots).
+S_669: **638/669** ok; **31** remaining (`3dv0I` `missing_pssm` after independent
+`3DV0` chain I fetch — PDB parses; PSSM absent).
+Ssym: **342/342** (zero unprocessable). S_921 regen in progress with `--resume`.
 
 ### Regenerated pickles
 
 | Dataset | Status | Artifact | Notes |
 | --- | --- | --- | --- |
 | Ssym | **done** 342/342 (~500s) | `reproduction_runs/2026-09-12/pdb_to_features_ssym/regenerated_v3_features.pickle` | PSSM exact vs hist; MPNN tensors not bit-exact |
-| S_2648 (train) | **done** 2619/2648 (~3480s) | `reproduction_runs/2026-09-12/pdb_to_features_s2648/regenerated_v3_features.pickle` | 29 fails audited: ICODE dups 27 + missing PDB 1 + chain KeyError 1 (`1rtpA` new vs hist); see integrity doc |
-| S_669 | in progress / queued | `reproduction_runs/2026-09-12/pdb_to_features_s669/` | `--resume` supported |
-| S_921 | commands ready | see `reproduction_runs/2026-09-12/logs/READY_COMMANDS_remaining_datasets.sh` | |
+| S_2648 (train) | **done** 2647/2648 (recovered 28/29) | `reproduction_runs/2026-09-12/pdb_to_features_s2648/regenerated_v3_features.pickle` | Remaining: `2a01A/L141R` missing_pssm; see integrity doc |
+| S_669 | **done** 638/669 | `reproduction_runs/2026-09-12/pdb_to_features_s669/regenerated_v3_features.pickle` | 31× `3dv0I` missing_pssm after independent PDB |
+| S_921 | in progress (`--resume`) | `reproduction_runs/2026-09-12/pdb_to_features_s921/` | |
 
 Always: `--by-protein-subprocess --compact-for-rf --seed-mode per_entry` (+ `--resume`).
 
@@ -209,7 +210,7 @@ Always: `--by-protein-subprocess --compact-for-rf --seed-mode per_entry` (+ `--r
 **Artifact:** `reproduction_runs/2026-09-12/rf_from_regenerated_s2648_ssym/`  
 **Overrides:** S_2648 + Ssym regenerated; S_669 / S_921 still saved historical V3.  
 **Protocol:** 10-run, `full-ah-only`, `historical_weighted` Feature B, `kpca-seed 0`.  
-**Coverage:** train kept 2619 (0 incomplete among regenerated); S_669 still skips 31 saved gaps.
+**Coverage (pre-recovery RF):** train kept 2619. **Post-recovery:** retrain with 2647 S_2648 examples (see `rf_from_regenerated_s2648_ssym_post_recovery/`). S_669 still skips 31 `3dv0I` (missing_pssm).
 
 #### `notebook_table1` (primary vs Table 1)
 

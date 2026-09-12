@@ -1,0 +1,761 @@
+Dataset=S_669 jobs=669 pdb_dir=/workspace/ProteinMPNN-DDG/drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files seed_mode=per_entry seed=0 subprocess=True compact=True resume=True
+[protein 1/94] 1a0fA n_mut=1
+ok 1a0fA S11A
+[protein 2/94] 1a7vA n_mut=13
+ok 1a7vA A104H
+ok 1a7vA A66H
+ok 1a7vA A91H
+ok 1a7vA D3H
+ok 1a7vA D58H
+ok 1a7vA E73H
+ok 1a7vA K13H
+ok 1a7vA K20H
+ok 1a7vA K31H
+ok 1a7vA K39H
+ok 1a7vA K49H
+ok 1a7vA K84H
+ok 1a7vA K97H
+[protein 3/94] 1ba3A n_mut=4
+ok 1ba3A H461D
+ok 1ba3A H489D
+ok 1ba3A H489K
+ok 1ba3A H489M
+[protein 4/94] 1bfmA n_mut=2
+ok 1bfmA M35W
+ok 1bfmA M35Y
+[protein 5/94] 1bnlA n_mut=1
+ok 1bnlA D76A
+[protein 6/94] 1d5gA n_mut=2
+ok 1d5gA H71Y
+ok 1d5gA I20F
+[protein 7/94] 1divA n_mut=50
+ok 1divA D23A
+ok 1divA D23N
+ok 1divA D8N
+ok 1divA E100A
+ok 1divA E100G
+ok 1divA E17Q
+ok 1divA E38Q
+ok 1divA E48Q
+ok 1divA E54Q
+ok 1divA H106Q
+ok 1divA H134Q
+ok 1divA H144Q
+ok 1divA I115A
+ok 1divA I121A
+ok 1divA I4A
+ok 1divA I4V
+ok 1divA I79A
+ok 1divA I93A
+ok 1divA I98A
+ok 1divA K10M
+ok 1divA K14M
+ok 1divA K15M
+ok 1divA K7M
+ok 1divA K96A
+ok 1divA K96G
+ok 1divA L102A
+ok 1divA L108A
+ok 1divA L110A
+ok 1divA L117A
+ok 1divA L133A
+ok 1divA L141A
+ok 1divA L30A
+ok 1divA L30V
+ok 1divA L6A
+ok 1divA L6I
+ok 1divA L6V
+ok 1divA L72A
+ok 1divA M1A
+ok 1divA M1G
+ok 1divA V129A
+ok 1divA V131A
+ok 1divA V137A
+ok 1divA V143A
+ok 1divA V145A
+ok 1divA V21A
+ok 1divA V21I
+ok 1divA V21L
+ok 1divA V3A
+ok 1divA V3I
+ok 1divA V3L
+[protein 8/94] 1dxxA n_mut=1
+ok 1dxxA K18N
+[protein 9/94] 1ekgA n_mut=4
+ok 1ekgA L198C
+ok 1ekgA L200C
+ok 1ekgA L203C
+ok 1ekgA S181F
+[protein 10/94] 1f8iA n_mut=1
+ok 1f8iA F345A
+[protein 11/94] 1fh5H n_mut=1
+ok 1fh5H S18N
+[protein 12/94] 1frdA n_mut=1
+ok 1frdA H42R
+[protein 13/94] 1ft8A n_mut=13
+ok 1ft8A I264V
+ok 1ft8A L212V
+ok 1ft8A L238I
+ok 1ft8A L267I
+ok 1ft8A L293I
+ok 1ft8A L293V
+ok 1ft8A L315A
+ok 1ft8A L317I
+ok 1ft8A L348I
+ok 1ft8A L349I
+ok 1ft8A M216L
+ok 1ft8A S339A
+ok 1ft8A V287A
+[protein 14/94] 1fxaA n_mut=11
+ok 1fxaA E94D
+ok 1fxaA E94K
+ok 1fxaA E94Q
+ok 1fxaA E95K
+ok 1fxaA F65A
+ok 1fxaA F65I
+ok 1fxaA F65W
+ok 1fxaA F65Y
+ok 1fxaA R42A
+ok 1fxaA R42H
+ok 1fxaA T48A
+[protein 15/94] 1g3pA n_mut=27
+ok 1g3pA A147K
+ok 1g3pA D160A
+ok 1g3pA D160C
+ok 1g3pA D160E
+ok 1g3pA D160F
+ok 1g3pA D160G
+ok 1g3pA D160H
+ok 1g3pA D160I
+ok 1g3pA D160K
+ok 1g3pA D160L
+ok 1g3pA D160M
+ok 1g3pA D160N
+ok 1g3pA D160P
+ok 1g3pA D160Q
+ok 1g3pA D160R
+ok 1g3pA D160S
+ok 1g3pA D160T
+ok 1g3pA D160V
+ok 1g3pA D160W
+ok 1g3pA D160Y
+ok 1g3pA F136V
+ok 1g3pA N138G
+ok 1g3pA N139K
+ok 1g3pA N139V
+ok 1g3pA Q137N
+ok 1g3pA Q145N
+ok 1g3pA R144V
+[protein 16/94] 1gluA n_mut=1
+ok 1gluA C500A
+[protein 17/94] 1guaB n_mut=49
+ok 1guaB A118G
+ok 1guaB A118L
+ok 1guaB A85G
+ok 1guaB A97G
+ok 1guaB C81A
+ok 1guaB C81I
+ok 1guaB C95A
+ok 1guaB C96A
+ok 1guaB C96L
+ok 1guaB C96M
+ok 1guaB D117A
+ok 1guaB D129A
+ok 1guaB D80A
+ok 1guaB E104A
+ok 1guaB E124A
+ok 1guaB E125A
+ok 1guaB I58A
+ok 1guaB I58F
+ok 1guaB I58L
+ok 1guaB K109A
+ok 1guaB L112A
+ok 1guaB L121A
+ok 1guaB L126A
+ok 1guaB L62A
+ok 1guaB L78A
+ok 1guaB L82A
+ok 1guaB L82I
+ok 1guaB L82V
+ok 1guaB L86A
+ok 1guaB L91A
+ok 1guaB M76A
+ok 1guaB N56M
+ok 1guaB N64A
+ok 1guaB P63A
+ok 1guaB P93A
+ok 1guaB Q66A
+ok 1guaB R100A
+ok 1guaB R59A
+ok 1guaB R89L
+ok 1guaB S77A
+ok 1guaB S77T
+ok 1guaB T68A
+ok 1guaB V128A
+ok 1guaB V60A
+ok 1guaB V69A
+ok 1guaB V70A
+ok 1guaB V72A
+ok 1guaB V72I
+ok 1guaB V98A
+[protein 18/94] 1gwyA n_mut=1
+ok 1gwyA A8D
+[protein 19/94] 1h0xA n_mut=2
+ok 1h0xA P18A
+ok 1h0xA P62A
+[protein 20/94] 1hcqA n_mut=2
+ok 1hcqA C67A
+ok 1hcqA C67S
+[protein 21/94] 1iojA n_mut=1
+ok 1iojA G15A
+[protein 22/94] 1ir3A n_mut=1
+ok 1ir3A W1175F
+[protein 23/94] 1itmA n_mut=3
+ok 1itmA C24T
+ok 1itmA C3T
+ok 1itmA W91S
+[protein 24/94] 1iv7B n_mut=3
+ok 1iv7B A173C
+ok 1iv7B F189C
+ok 1iv7B L162C
+[protein 25/94] 1iv9A n_mut=1
+ok 1iv9A S76Y
+[protein 26/94] 1j8iA n_mut=6
+ok 1j8iA K25A
+ok 1j8iA K66A
+ok 1j8iA R23A
+ok 1j8iA R35A
+ok 1j8iA R43A
+ok 1j8iA R9A
+[protein 27/94] 1jl9A n_mut=1
+ok 1jl9A A25C
+[protein 28/94] 1jlvA n_mut=3
+ok 1jlvA E64D
+ok 1jlvA E64N
+ok 1jlvA E64Q
+[protein 29/94] 1l6hA n_mut=3
+ok 1l6hA F39A
+ok 1l6hA Y45A
+ok 1l6hA Y48A
+[protein 30/94] 1lvmA n_mut=5
+ok 1lvmA E106G
+ok 1lvmA K45F
+ok 1lvmA L56V
+ok 1lvmA Q58F
+ok 1lvmA S135G
+[protein 31/94] 1n18A n_mut=4
+ok 1n18A E100G
+ok 1n18A G85R
+ok 1n18A H46R
+ok 1n18A V148I
+[protein 32/94] 1n88A n_mut=17
+ok 1n88A F21A
+ok 1n88A I39A
+ok 1n88A I80A
+ok 1n88A I89A
+ok 1n88A I8V
+ok 1n88A L13A
+ok 1n88A L57A
+ok 1n88A V12A
+ok 1n88A V30A
+ok 1n88A V43A
+ok 1n88A V49A
+ok 1n88A V51A
+ok 1n88A V54A
+ok 1n88A V81A
+ok 1n88A V83A
+ok 1n88A Y18A
+ok 1n88A Y26A
+[protein 33/94] 1nm1A n_mut=2
+ok 1nm1A D187N
+ok 1nm1A D187Y
+[protein 34/94] 1o1uA n_mut=6
+ok 1o1uA E110A
+ok 1o1uA N61A
+ok 1o1uA Q51A
+ok 1o1uA Q99A
+ok 1o1uA T38A
+ok 1o1uA W49Y
+[protein 35/94] 1o6xA n_mut=20
+ok 1o6xA A31G
+ok 1o6xA A50G
+ok 1o6xA D38A
+ok 1o6xA E14A
+ok 1o6xA E20G
+ok 1o6xA F39L
+ok 1o6xA F65A
+ok 1o6xA H51A
+ok 1o6xA I15V
+ok 1o6xA I23V
+ok 1o6xA I71V
+ok 1o6xA I75A
+ok 1o6xA K41A
+ok 1o6xA L26V
+ok 1o6xA N58A
+ok 1o6xA Q60G
+ok 1o6xA V12A
+ok 1o6xA V52A
+ok 1o6xA V64G
+ok 1o6xA Y73L
+[protein 36/94] 1osiA n_mut=4
+ok 1osiA I11V
+ok 1osiA S92F
+ok 1osiA V126M
+ok 1osiA V15I
+[protein 37/94] 1pflA n_mut=5
+ok 1pflA A20T
+ok 1pflA G117V
+ok 1pflA M113T
+ok 1pflA Q138L
+ok 1pflA T108M
+[protein 38/94] 1preA n_mut=1
+ok 1preA C159S
+[protein 39/94] 1prgA n_mut=7
+ok 1prgA E460K
+ok 1prgA F360L
+ok 1prgA P467L
+ok 1prgA Q286P
+ok 1prgA R288H
+ok 1prgA R357A
+ok 1prgA V290M
+[protein 40/94] 1r2yA n_mut=1
+ok 1r2yA R244E
+[protein 41/94] 1r6rA n_mut=4
+ok 1r6rA I88N
+ok 1r6rA L50S
+ok 1r6rA L54S
+ok 1r6rA L81N
+[protein 42/94] 1spdA n_mut=2
+ok 1spdA C111S
+ok 1spdA C6A
+[protein 43/94] 1x0jA n_mut=7
+ok 1x0jA D160N
+ok 1x0jA D160Y
+ok 1x0jA D161N
+ok 1x0jA D161Y
+ok 1x0jA E140K
+ok 1x0jA R100L
+ok 1x0jA Y153H
+[protein 44/94] 1xwsA n_mut=4
+ok 1xwsA E124Q
+ok 1xwsA E135K
+ok 1xwsA E142D
+ok 1xwsA Y53H
+[protein 45/94] 1xxnA n_mut=5
+ok 1xxnA N181R
+ok 1xxnA N32D
+ok 1xxnA N54E
+ok 1xxnA S22E
+ok 1xxnA S27E
+[protein 46/94] 1xzoA n_mut=4
+ok 1xzoA F42W
+ok 1xzoA W101F
+ok 1xzoA W36A
+ok 1xzoA W36F
+[protein 47/94] 2arfA n_mut=1
+ok 2arfA H1069Q
+[protein 48/94] 2bjdA n_mut=3
+ok 2bjdA V84D
+ok 2bjdA V84P
+ok 2bjdA Y86E
+[protein 49/94] 2c9qA n_mut=2
+ok 2c9qA Y79F
+ok 2c9qA Y79W
+[protein 50/94] 2clrB n_mut=4
+ok 2clrB H13F
+ok 2clrB H31F
+ok 2clrB H51F
+ok 2clrB H84A
+[protein 51/94] 2dvvA n_mut=2
+ok 2dvvA Q443H
+ok 2dvvA R419W
+[protein 52/94] 2h3fA n_mut=1
+ok 2h3fA E12A
+[protein 53/94] 2hbbA n_mut=46
+ok 2hbbA A22G
+ok 2hbbA A26G
+ok 2hbbA A36G
+ok 2hbbA A39G
+ok 2hbbA A42G
+ok 2hbbA A46G
+ok 2hbbA A49G
+ok 2hbbA D23A
+ok 2hbbA D23N
+ok 2hbbA D8A
+ok 2hbbA D8N
+ok 2hbbA E17A
+ok 2hbbA E17Q
+ok 2hbbA E38A
+ok 2hbbA E38Q
+ok 2hbbA E48Q
+ok 2hbbA F31A
+ok 2hbbA F5L
+ok 2hbbA G24A
+ok 2hbbA G34A
+ok 2hbbA I18A
+ok 2hbbA I18V
+ok 2hbbA I37A
+ok 2hbbA I37V
+ok 2hbbA I4V
+ok 2hbbA K10E
+ok 2hbbA K10M
+ok 2hbbA K12A
+ok 2hbbA K12G
+ok 2hbbA K12M
+ok 2hbbA K14A
+ok 2hbbA K14G
+ok 2hbbA K14M
+ok 2hbbA K15G
+ok 2hbbA K15M
+ok 2hbbA K7M
+ok 2hbbA L30A
+ok 2hbbA L35A
+ok 2hbbA L44A
+ok 2hbbA L47A
+ok 2hbbA L6A
+ok 2hbbA M1A
+ok 2hbbA T40S
+ok 2hbbA V21A
+ok 2hbbA V3A
+ok 2hbbA V9A
+[protein 54/94] 2jieA n_mut=51
+ok 2jieA C170A
+ok 2jieA C170Q
+ok 2jieA E157D
+ok 2jieA E167A
+ok 2jieA E225A
+ok 2jieA E225H
+ok 2jieA E409A
+ok 2jieA E409D
+ok 2jieA E426S
+ok 2jieA F418A
+ok 2jieA H104R
+ok 2jieA I247E
+ok 2jieA I247N
+ok 2jieA L174A
+ok 2jieA L174R
+ok 2jieA M224A
+ok 2jieA M326A
+ok 2jieA N166A
+ok 2jieA N166C
+ok 2jieA N223A
+ok 2jieA N223G
+ok 2jieA N223H
+ok 2jieA N223R
+ok 2jieA N223Y
+ok 2jieA N296A
+ok 2jieA N296C
+ok 2jieA N407A
+ok 2jieA N407C
+ok 2jieA Q22S
+ok 2jieA R243A
+ok 2jieA R243D
+ok 2jieA R243K
+ok 2jieA S17A
+ok 2jieA S19A
+ok 2jieA S334A
+ok 2jieA S403A
+ok 2jieA T18A
+ok 2jieA T221A
+ok 2jieA T355A
+ok 2jieA W123F
+ok 2jieA W123H
+ok 2jieA W328A
+ok 2jieA W328C
+ok 2jieA W328H
+ok 2jieA W328R
+ok 2jieA W402C
+ok 2jieA W402R
+ok 2jieA W412Y
+ok 2jieA Y21A
+ok 2jieA Y297A
+ok 2jieA Y297F
+[protein 55/94] 2jucA n_mut=3
+ok 2jucA C57D
+ok 2jucA C57S
+ok 2jucA R18A
+[protein 56/94] 2kj3A n_mut=9
+ok 2kj3A D288A
+ok 2kj3A E272A
+ok 2kj3A G278A
+ok 2kj3A K229A
+ok 2kj3A L241A
+ok 2kj3A S273A
+ok 2kj3A V239A
+ok 2kj3A V264A
+ok 2kj3A V267A
+[protein 57/94] 2ks4A n_mut=2
+ok 2ks4A D9A
+ok 2ks4A E2A
+[protein 58/94] 2ltbA n_mut=6
+ok 2ltbA L558P
+ok 2ltbA L569R
+ok 2ltbA M619K
+ok 2ltbA R533Q
+ok 2ltbA R555Q
+ok 2ltbA R555W
+[protein 59/94] 2m5sA n_mut=2
+ok 2m5sA D302A
+ok 2m5sA H305A
+[protein 60/94] 2mpcA n_mut=3
+ok 2mpcA A89T
+ok 2mpcA R42A
+ok 2mpcA R42W
+[protein 61/94] 2n7zA n_mut=1
+ok 2n7zA P88A
+[protein 62/94] 2nteA n_mut=2
+ok 2nteA I738V
+ok 2nteA R658C
+[protein 63/94] 2ouoA n_mut=1
+ok 2ouoA A420D
+[protein 64/94] 2pr5A n_mut=17
+ok 2pr5A A33Y
+ok 2pr5A A81M
+ok 2pr5A D109E
+ok 2pr5A H22K
+ok 2pr5A H22W
+ok 2pr5A M111F
+ok 2pr5A N107F
+ok 2pr5A N107Y
+ok 2pr5A N124F
+ok 2pr5A N124Y
+ok 2pr5A T30M
+ok 2pr5A T50M
+ok 2pr5A T54Y
+ok 2pr5A V120I
+ok 2pr5A V25I
+ok 2pr5A V88L
+ok 2pr5A V90I
+[protein 65/94] 2ptlA n_mut=68
+ok 2ptlA A22G
+ok 2ptlA A27P
+ok 2ptlA A27V
+ok 2ptlA A34G
+ok 2ptlA A34V
+ok 2ptlA A43G
+ok 2ptlA A47G
+ok 2ptlA A49G
+ok 2ptlA A51G
+ok 2ptlA A66G
+ok 2ptlA D52A
+ok 2ptlA D52G
+ok 2ptlA D64A
+ok 2ptlA E35A
+ok 2ptlA E46G
+ok 2ptlA E46I
+ok 2ptlA E60A
+ok 2ptlA F26A
+ok 2ptlA F26L
+ok 2ptlA F36A
+ok 2ptlA F36L
+ok 2ptlA F40G
+ok 2ptlA F40L
+ok 2ptlA F76L
+ok 2ptlA F76V
+ok 2ptlA G29A
+ok 2ptlA G29V
+ok 2ptlA G38A
+ok 2ptlA G59A
+ok 2ptlA G69A
+ok 2ptlA I20A
+ok 2ptlA I20V
+ok 2ptlA I25A
+ok 2ptlA I25V
+ok 2ptlA I74A
+ok 2ptlA I74V
+ok 2ptlA K21A
+ok 2ptlA K37A
+ok 2ptlA K42G
+ok 2ptlA K55A
+ok 2ptlA K56A
+ok 2ptlA K68A
+ok 2ptlA K75A
+ok 2ptlA L24A
+ok 2ptlA L54A
+ok 2ptlA L72A
+ok 2ptlA N23A
+ok 2ptlA N28A
+ok 2ptlA N58A
+ok 2ptlA N73A
+ok 2ptlA S30A
+ok 2ptlA S45A
+ok 2ptlA S45G
+ok 2ptlA T19A
+ok 2ptlA T31A
+ok 2ptlA T33A
+ok 2ptlA T39A
+ok 2ptlA T44A
+ok 2ptlA T53G
+ok 2ptlA T62A
+ok 2ptlA T71A
+ok 2ptlA V18A
+ok 2ptlA V63A
+ok 2ptlA V65A
+ok 2ptlA Y48A
+ok 2ptlA Y50A
+ok 2ptlA Y70A
+ok 2ptlA Y70L
+[protein 66/94] 2rpnA n_mut=2
+ok 2rpnA E7L
+ok 2rpnA V21K
+[protein 67/94] 2vy0A n_mut=2
+ok 2vy0A D287A
+ok 2vy0A E53A
+[protein 68/94] 2wqgA n_mut=29
+ok 2wqgA D15A
+ok 2wqgA D38A
+ok 2wqgA D39A
+ok 2wqgA D39N
+ok 2wqgA E40Q
+ok 2wqgA E41G
+ok 2wqgA I36A
+ok 2wqgA I36V
+ok 2wqgA K14A
+ok 2wqgA K14G
+ok 2wqgA K19A
+ok 2wqgA K28A
+ok 2wqgA L13A
+ok 2wqgA L16A
+ok 2wqgA L8A
+ok 2wqgA Q12A
+ok 2wqgA Q12G
+ok 2wqgA Q33A
+ok 2wqgA R34A
+ok 2wqgA S23A
+ok 2wqgA S6A
+ok 2wqgA S6G
+ok 2wqgA T9S
+ok 2wqgA V10A
+ok 2wqgA V10G
+ok 2wqgA V11A
+ok 2wqgA V11G
+ok 2wqgA V24A
+ok 2wqgA Y5F
+[protein 69/94] 2ztaA n_mut=8
+ok 2ztaA E11Q
+ok 2ztaA E20Q
+ok 2ztaA E22Q
+ok 2ztaA K15A
+ok 2ztaA K27A
+ok 2ztaA K28A
+ok 2ztaA K8A
+ok 2ztaA R25A
+[protein 70/94] 3bciA n_mut=2
+ok 3bciA E96Q
+ok 3bciA T153V
+[protein 71/94] 3bn0A n_mut=1
+ok 3bn0A I20V
+[protein 72/94] 3c2iA n_mut=12
+ok 3c2iA D156E
+ok 3c2iA F155S
+ok 3c2iA L100V
+ok 3c2iA P152R
+ok 3c2iA R106Q
+ok 3c2iA R106W
+ok 3c2iA R111G
+ok 3c2iA R133C
+ok 3c2iA R133H
+ok 3c2iA S134C
+ok 3c2iA T158A
+ok 3c2iA T158M
+[protein 73/94] 3d2aA n_mut=3
+ok 3d2aA M134E
+ok 3d2aA M137P
+ok 3d2aA S163P
+[protein 74/94] 3d3bA n_mut=5
+ok 3d3bA D118A
+ok 3d3bA D118E
+ok 3d3bA D118K
+ok 3d3bA D118N
+ok 3d3bA D118R
+[protein 75/94] 3dv0I n_mut=31
+Traceback (most recent call last):
+  File "/workspace/ProteinMPNN-DDG/scripts/_pdb_to_features_one_protein.py", line 68, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/ProteinMPNN-DDG/scripts/_pdb_to_features_one_protein.py", line 45, in main
+    residue_map = build_residue_index_map(pdb_path, chain_id)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ProteinMPNN-DDG/proteinmpnn_ddg_recovery/recovered_v6v2.py", line 356, in build_residue_index_map
+    structure = parser.get_structure(id=Path(pdb_path).stem, file=str(pdb_path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ProteinMPNN-DDG/.venv_proteinmpnn_ddg_reproduction/lib/python3.12/site-packages/Bio/PDB/PDBParser.py", line 85, in get_structure
+    with as_handle(file) as handle:
+         ^^^^^^^^^^^^^^^
+  File "/home/box/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/workspace/ProteinMPNN-DDG/.venv_proteinmpnn_ddg_reproduction/lib/python3.12/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/ProteinMPNN-DDG/drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb'
+[protein 76/94] 3ecuA n_mut=1
+ok 3ecuA H46R
+[protein 77/94] 3fisA n_mut=1
+ok 3fisA P61A
+[protein 78/94] 3g1gA n_mut=4
+ok 3g1gA D155Y
+ok 3g1gA F167Y
+ok 3g1gA I190V
+ok 3g1gA R185W
+[protein 79/94] 3k82A n_mut=3
+ok 3k82A E334L
+ok 3k82A E334Q
+ok 3k82A E401R
+[protein 80/94] 3l15B n_mut=1
+ok 3l15B Y442H
+[protein 81/94] 3monB n_mut=2
+ok 3monB R39G
+ok 3monB W3C
+[protein 82/94] 3o39A n_mut=6
+ok 3o39A F115I
+ok 3o39A F115L
+ok 3o39A H96L
+ok 3o39A L32P
+ok 3o39A Q100L
+ok 3o39A Q49L
+[protein 83/94] 3s4mA n_mut=4
+ok 3s4mA D122Y
+ok 3s4mA G130V
+ok 3s4mA I154F
+ok 3s4mA W155R
+[protein 84/94] 3s92A n_mut=1
+ok 3s92A H395R
+[protein 85/94] 4bjxA n_mut=1
+ok 4bjxA A89V
+[protein 86/94] 4buqA n_mut=2
+ok 4buqA Y137A
+ok 4buqA Y48A
+[protein 87/94] 4he7A n_mut=3
+ok 4he7A A19D
+ok 4he7A A19G
+ok 4he7A A19K
+[protein 88/94] 4n6v0 n_mut=3
+ok 4n6v0 H75W
+ok 4n6v0 P36G
+ok 4n6v0 P79S
+[protein 89/94] 4waaA n_mut=3
+ok 4waaA K65A
+ok 4waaA K67A
+ok 4waaA R27A
+[protein 90/94] 4yeeA n_mut=1
+ok 4yeeA V134T
+[protein 91/94] 4yefA n_mut=1
+ok 4yefA T134V
+[protein 92/94] 5jxbA n_mut=2
+ok 5jxbA D329G
+ok 5jxbA D329P
+[protein 93/94] 5oaqA n_mut=1
+ok 5oaqA Y429H
+[protein 94/94] 5vp3A n_mut=3
+ok 5vp3A R39K
+ok 5vp3A S128G
+ok 5vp3A V183T
+{
+  "dataset": "S_669",
+  "n_jobs": 669,
+  "n_ok": 638,
+  "n_error": 31,
+  "elapsed_seconds": 1091.4499597549438,
+  "output_pickle": "reproduction_runs/2026-09-12/pdb_to_features_s669/regenerated_v3_features.pickle"
+}

@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Audit PDB→features pipeline failures into reviewer-facing TSV/JSON.
 
-Re-checks each non-ok row in mutation_status.tsv: PDB/PSSM existence, Bio.PDB
-chains, notebook-style residue-map duplicates (ICODE ignored), and historical
-V3 pickle completeness. Exclusions are input/structure failures — not RF metrics.
+Re-checks each non-ok row in mutation_status.tsv including independent PDB
+fallback dir, ICODE-aware maps (post-fix), PSSM presence, and historical V3
+stub-vs-full comparison. Exclusions are input/structure/PSSM failures — not RF
+metrics. Prefer regenerating after recovery runs; see
+UNPROCESSABLE_MUTATIONS_AND_DATASET_GAPS.md.
 """
 from __future__ import annotations
 
@@ -20,6 +22,9 @@ from Bio.Data.IUPACData import protein_letters_3to1
 from Bio.PDB import PDBParser
 
 WORKSPACE_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_PDB_FALLBACK = (
+    WORKSPACE_ROOT / "reproduction_inputs" / "independent_pdb_fetches" / "curated"
+)
 ACCRE = (
     WORKSPACE_ROOT
     / "drive_evidence_copy"
