@@ -44,7 +44,9 @@ Current notes:
 - `FIGURE6_INCREMENTAL_FEATURE_PICKLE_ANALYSIS.md`: targeted analysis of
   `list_incremental_feature_result_dict.pickle`, the later A-H incremental
   feature map, and the Figure 6-style S_669/Ssym total-PCC values.
-- `FIGURE6_NUMERICAL_BASIS_VERIFICATION.md`: exact hash-based verification that
+- `FIGURE6_NUMERICAL_BASIS_VERIFICATION.md`
+- `FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md`: seed-sweep experiment showing residual Fig 4–5 |Δ|≈0.02 E* correlations are KernelPCA subsample stochasticity (not a Feature A–H bug); suggested one-line manuscript caveat.
+: exact hash-based verification that
   the manuscript Figure 6 standalone image is the saved output of the
   incremental-feature plotting cell, with plotted S_669/Ssym total-PCC values
   reconstructed from `list_incremental_feature_result_dict.pickle`, plus the

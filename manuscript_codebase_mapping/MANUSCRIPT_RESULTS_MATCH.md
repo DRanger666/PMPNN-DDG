@@ -112,7 +112,7 @@ Artifacts: `reproduction_runs/2026-09-12/s2648_train_feature_figures/`.
 | Figure | Regenerated artifact | Verdict |
 | --- | --- | --- |
 | Figure 3 | Norm-Ratio vs Change-Norm for messages (C family) and neighbor embeddings (D family) from `S2648_extraction_tensors.pickle` | **partial** — message NR match (|r|≈0.15); message CN near; neighbor-embedding CN near; neighbor-embedding NR Δ≈0.02 vs notebook 0.26 |
-| Figure 4 | Feature–feature correlations (A–E) | **5 match / 6 near / 2 mismatch of 13** |
+| Figure 4 | Feature–feature correlations (A–E) | **5 match / 6 near / 2 mismatch of 13 at kpca_seed=0**; residuals = KPCA subsample stochasticity ([experiment](FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md)) |
 | Figure 5 | Feature–feature correlations (A–H) | **same** |
 
 ### Figure 3 — NR vs CN (extraction tensors)
@@ -125,6 +125,10 @@ Artifacts: `reproduction_runs/2026-09-12/s2648_train_feature_figures/`.
 | message_CN | 0.04 | 0.03 | **near** |
 
 Manuscript Feature C = message Norm-Ratio; Feature D = neighbor-embedding Change-Norm.
+
+### Figure 4–5 claim spot-checks (2dp)
+
+**Interpretation of residual mismatches:** explained by KernelPCA subsample seed (experiment: `FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md`). Not a Feature A–H definition bug. seed=0 leaves two |Δ|=0.02 cells; seed=7 matches those cells at 2dp.
 
 ### Figure 4–5 claim spot-checks (2dp)
 
@@ -160,6 +164,8 @@ silent drops as matches. This RF run uses 2647 train / 638 S_669 eval mutations.
 
 ## Related docs
 
+- `FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md` — seed sweep showing Fig 4–5 residual |Δ|≈0.02 is KernelPCA subsample noise; suggested manuscript caveat
+
 - `TRAIN_TEST_FIGURE_TABLE_ANCHOR.md` — dataset roles for each table/figure
 - `MANUSCRIPT_TO_VARIABLE_NAMING.md` — BioRxiv method language → variable names
 - `UNPROCESSABLE_MUTATIONS_AND_DATASET_GAPS.md` — integrity audit
@@ -175,3 +181,4 @@ silent drops as matches. This RF run uses 2647 train / 638 S_669 eval mutations.
 - 2026-09-12 20:50 UTC: **ALL full extraction tensors on LFS** — Ssym, S2648 (2647), S669 (638 after 2jieA recover), S921 (921/921). ProteinMPNN+PSSM features pickles on LFS for S2648/S669/S921 (+Ssym). Public bar tensors→features path unblocked for RF/figures.
 - 2026-09-12 20:59 UTC: Naming locked: extraction tensors source of truth (ProteinMPNN-extracted A–E + PSSM F–H). RF relaunched from `*_extraction_tensors.pickle`. Figs4–5 from S2648 tensors → 7/4/2 of 13.
 - 2026-09-12 21:08 UTC: Figs 3–5 milestone + Tables 1–3/Fig6 from extraction-tensor RF. Table1 6/15/0; Fig6 7/8; Figs4–5 5/6/2.
+- 2026-09-12 21:20 UTC: Documented Fig 4–5 KPCA subsample sensitivity experiment (seed 0 vs 1/2/7); residuals not treated as feature bugs.
