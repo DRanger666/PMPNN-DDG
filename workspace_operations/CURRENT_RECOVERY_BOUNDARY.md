@@ -143,3 +143,15 @@ V3 tensor-reconciliation Git worktree and Codex session:
 As of this note, the dedicated Git worktree/Codex session is the intended next
 split point for V3 tensor-extraction reconciliation. Once it is created, update
 this note only if the recovery boundary or work ownership changes.
+
+
+## Regenerated compact-feature RF (2026-09-12)
+
+Four-dataset compact features on LFS under `reproduction_inputs/pmpnn_ddg_features_2026-09-12/`
+(including S921). RF outputs:
+`reproduction_runs/2026-09-12/rf_from_promoted_compact_features/`.
+
+Formal match write-up (Tables 1–3 PMPNN-DDG rows + Figure 6):
+`manuscript_codebase_mapping/MANUSCRIPT_RESULTS_MATCH.md` (linked from top-level README).
+
+Full extraction tensors: Ssym promoted; S2648 large-protein prebatch + resume in progress; S669/S921 full queued after.
