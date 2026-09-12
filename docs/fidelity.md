@@ -1,7 +1,6 @@
 # Manuscript ↔ Code Fidelity Checklist (skeptical framing)
 
-Date: 2026-09-12  
-Branch: `reproduce-paper-results`
+Date: 2026-09-12
 
 ## How to read this note
 
@@ -19,13 +18,13 @@ leave alone. Prefer open questions + evidence over assuming bugs.
 
 **Branch bar (2026-09-12):** reproduce manuscript numbers and probe mismatches;
 do **not** treat bit/byte-identical historical V3 extraction as unresolved work.
-See `REPRODUCTION_BAR_NOT_BYTE_IDENTICAL_V3.md`.
+See `docs/reproducibility.md`.
 
 Related detail notes (may use older “deviation” wording; this checklist
 supersedes tone):
 
 - `FEATURE_EQUATION_CODE_MAPPING_INITIAL.md`
-- `method_science/V3_DIRECTED_NEIGHBOR_ASYMMETRY_SEMANTICS.md`
+- `docs/methods/V3_DIRECTED_NEIGHBOR_ASYMMETRY_SEMANTICS.md`
 
 ---
 
@@ -218,14 +217,14 @@ policy as **open fidelity / wording questions**, not as “failed V3 reconciliat
 (`Σ 1/r_j`), matching Eq. (2) under WT↔MT swap. Digging/notebook `1/Σ` remains
 only as `--feature-c-reverse-mode reciprocal_of_sum` for diagnostics. Naive F+R
 stacked Feature-C↔label PCC under `1/Σ` is a **scale artifact**, not stronger
-signal. RF outputs: `reproduction_runs/2026-09-12/rf_exact_reverse_feature_c/`.
+signal. RF outputs: `results/table1/`.
 See `method_science/FORWARD_REVERSE_AUGMENTATION_FEATURE_SEMANTICS.md`.
 
 ## Empirical note (2026-09-12 RF diagnostic)
 
 A short 3-run RF retrain with `--feature-b-mode manuscript_unweighted` and
 `notebook_table1` settings still rounded to paper rF+R / RMSE on S_669, Ssym,
-and S_921 (`reproduction_runs/2026-09-12/rf_from_v3_features_manuscript_B/`).
+and S921 (`results/table1/`).
 
 That does **not** prove the manuscript equation and the weighted V2 field are
 the same object; it only shows Table 1-level metrics are not highly sensitive

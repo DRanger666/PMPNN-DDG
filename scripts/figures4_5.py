@@ -8,7 +8,7 @@ Figure 3 (Norm-Ratio vs Change-Norm for C/D) is NOT regenerated here: compact
 features store a single C/D encoding. Dual-encoding comparison needs a dedicated
 recompute path (documented as blocked).
 
-Uses the same KPCA Feature-E construction as train_eval_rf_from_v3_features.py.
+Uses the same KPCA Feature-E construction as train_eval_rf.py.
 Feature E columns on the unaugmented 71-col matrix are 46:51 (message KPCA),
 not FEATURE_TO_INDEX["E"] which applies only after forward/reverse augmentation.
 """
@@ -49,7 +49,7 @@ def build_from_pickle(pickle_path: Path, kpca_seed: int = 0):
     import importlib.util
 
     spec = importlib.util.spec_from_file_location(
-        "rfmod", WORKSPACE / "scripts/train_eval_rf_from_v3_features.py"
+        "rfmod", WORKSPACE / "scripts/train_eval_rf.py"
     )
     rfmod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(rfmod)

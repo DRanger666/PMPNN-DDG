@@ -1,26 +1,16 @@
 #!/usr/bin/env python3
-"""Train/evaluate RF on Features A–H built from saved historical V3 pickles.
+"""Train and evaluate the PMPNN-DDG Random Forest (Tables 1–3, Figure 6).
 
-Feature source label: saved_historical_V3_engineered (+ KPCA Feature E fit on
-S_2648 center→neighbor message-change matrices; also fits neighbor-embedding-change
-projections used in the Digging 71→41 packing — see rf_feature_matrix_packing.py).
+Loads published extraction tensors from data/tensors/, builds features A–H
+(with KernelPCA Feature E fit on S2648), trains on S2648 with forward/reverse
+augmentation, and evaluates S669 / Ssym / S921.
 
-Default path loads saved historical V3 engineered pickles (RF + metrics
-vs Table 1). Optional ``--v3-pickle-override DATASET=PATH`` swaps in regenerated
-pickles from ``run_pdb_to_features_pipeline.py`` for end-to-end eval.
+RF hyperparameters:
 
-Primary RF hyperparams follow the BioRxiv manuscript text:
-  RandomForestRegressor(n_estimators=500, max_samples=0.5)  # other defaults
+  manuscript_literal  RandomForestRegressor(n_estimators=500, max_samples=0.5)
+  notebook_table1     plus min_samples_split=2, max_features="sqrt"  (Table 1)
 
-Secondary (notebook Table-1 / Fig-6 source cell) explicitly sets:
-  min_samples_split=2, n_estimators=500, max_samples=0.5, max_features="sqrt"
-
-Optional tertiary: early notebook settings
-  min_samples_split=5, n_estimators=300, max_samples=0.2, max_features="sqrt"
-
-Protocol mirrors Quick_Dirty_MPNN_ML_V2_VGRAPHS_V1.ipynb cells that produced
-list_incremental_feature_result_dict.pickle (train on S2648 with forward+reverse
-augmentation; evaluate S669/Ssym/S921; 10 RF runs for means).
+Ten runs, mean metrics. Headline number is rF+R.
 """
 
 from __future__ import annotations
@@ -413,7 +403,7 @@ def main() -> int:
         metavar="DATASET=PATH",
         help=(
             "Replace a dataset pickle with a regenerated V3-shaped pickle "
-            "(repeatable). Example: Ssym=reproduction_runs/.../manuscript_path_features.pickle"
+            "(repeatable). Example: Ssym=data/tensors/Ssym_extraction_tensors.pickle"
         ),
     )
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)

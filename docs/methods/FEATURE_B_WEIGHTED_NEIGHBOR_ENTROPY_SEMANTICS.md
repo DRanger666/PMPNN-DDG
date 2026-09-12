@@ -42,7 +42,7 @@ the weighting choice is explicitly discussed.
 
 The current recovered implementation also preserves the historical notebook
 array-shape behavior during V3 feature reconstruction. In
-`proteinmpnn_ddg_recovery/engineered_features.py`, the message-norm-ratio
+`pmpnn_ddg/engineered_features.py`, the message-norm-ratio
 weights are intentionally not flattened because that preserves the saved V3
 pickle values. Any future cleanup that changes this behavior must be treated as
 a deliberate method revision, not as historical recovery.

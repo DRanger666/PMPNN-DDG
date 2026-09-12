@@ -1,12 +1,6 @@
 # Figures 4–5: KernelPCA subsample sensitivity (not a feature bug)
 
-**Date:** 2026-09-12  
-**Branch:** `reproduce-paper-results`  
-**Purpose:** Explain the residual Fig 4–5 correlation mismatches after Feature E
-was confirmed to be **center→neighbor message-change** KernelPCA (not
-neighbor-embedding projections). This note is **repo documentation** of a
-reproduction experiment. It is not manuscript narrative about “re-fitting in
-2026.”
+**Date:** 2026-09-12
 
 ## Scientific context
 
@@ -53,7 +47,7 @@ Same feature table and protocol; only `np.random.default_rng(seed)` for the
 | 2 | 0.49 | 0.16 | 0.27 | 0.21 | 0.54 |
 | 7 | 0.49 | 0.16 | **0.26** | **0.20** | 0.55 |
 
-Raw probe log: `reproduction_runs/2026-09-12/s2648_train_feature_figures/kpca_seed_probe.log`
+Raw probe log: `results/figures/kpca_seed_probe.log`
 
 ### Conclusion
 
@@ -86,14 +80,12 @@ Exact wording is for the authors to finalize.
 ## How to re-run
 
 ```bash
-# Figs 4–5 heatmaps + claim table (seed 0 by default)
-.venv_proteinmpnn_ddg_reproduction/bin/python scripts/regenerate_s2648_train_feature_figures.py \
-  --features-pickle reproduction_inputs/pmpnn_ddg_features_2026-09-12/S2648_proteinmpnn_and_pssm_features.pickle \
-  --output-dir reproduction_runs/2026-09-12/s2648_train_feature_figures \
+PYTHONPATH=. python scripts/figures4_5.py \
+  --features-pickle data/features/S2648_features.pickle \
+  --output-dir results/figures \
   --kpca-seed 0
 ```
 
-Seed sweep used the same `fit_projection` / `project_instances` path as RF
-(`scripts/train_eval_rf_from_v3_features.py`) with
-`FEATURE_E_COLS_ON_DUAL_DIRECTION_ROW` from
-`proteinmpnn_ddg_recovery/features/rf_feature_matrix_packing.py`.
+Seed sweep used the same `fit_projection` / `project_instances` path as
+`scripts/train_eval_rf.py`, with `FEATURE_E_COLS_ON_DUAL_DIRECTION_ROW` from
+`pmpnn_ddg/features/rf_feature_matrix_packing.py`.

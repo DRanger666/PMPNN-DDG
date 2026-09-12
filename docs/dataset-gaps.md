@@ -1,13 +1,11 @@
 # Unprocessable Mutations and Dataset Gaps (PDB → features)
 
-Date: 2026-09-12 (updated after independent PDB re-download + parser fixes)  
-Branch: `reproduce-paper-results`  
+Date: 2026-09-12
 Machine-readable companions:
 
-- `manuscript_codebase_mapping/tables/unprocessable_mutations.tsv`
-- `manuscript_codebase_mapping/tables/unprocessable_mutations.json`
-- Copy under `reproduction_runs/2026-09-12/unprocessable_mutations_audit/`
-- Independent PDBs: `reproduction_inputs/independent_pdb_fetches/`
+- `docs/tables/unprocessable_mutations.tsv`
+- `docs/tables/unprocessable_mutations.json`
+- Fallback PDBs: `data/independent_pdbs/`
 
 ## Non-negotiable framing (reviewer-facing)
 
@@ -71,7 +69,7 @@ All 31 S_669 failures are `3dv0I`: ACCRE PDB/PSSM missing historically; independ
 
 1. **ICODE-aware `build_residue_index_map`**: keys `{AA}{seqnum}{icode}` when ICODE non-blank (PremPS `V27BL` → `V27B`).
 2. **`resolve_pdb_chain_id`**: exact match → alphabet-to-number (`A`→`1`) → sole polymer chain; remap ProteinMPNN seq/coords keys to logical chain.
-3. **`resolve_pdb_path` + `--pdb-fallback-dir`**: use `reproduction_inputs/independent_pdb_fetches/curated/` when ACCRE lacks the file.
+3. **`resolve_pdb_path` + `--pdb-fallback-dir`**: use `data/independent_pdbs/curated/` when a dataset PDB directory lacks the file.
 4. **Fetch script**: `scripts/fetch_independent_problem_pdbs.py`.
 
 ## Investigation method (per remaining failure)

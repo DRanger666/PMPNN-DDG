@@ -142,7 +142,7 @@ Inferred from those observations:
 ## Remaining Checks
 
 1. Implement the staging-matrix and augmented-matrix construction in
-   `proteinmpnn_ddg_recovery/` without training RF models yet.
+   `pmpnn_ddg/` without training RF models yet.
 2. Confirm matrix shapes, row identities, labels, and column blocks for all
    four datasets.
 3. Confirm that `E = columns 31..35` pulls message-KPCA columns after

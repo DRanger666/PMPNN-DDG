@@ -1,7 +1,7 @@
 # Extraction / feature schema (BioRxiv §§3.1–3.3)
 
 Date: 2026-09-12  
-Code: `proteinmpnn_ddg_recovery/extraction_tensor_schema.py`
+Code: `pmpnn_ddg/extraction_tensor_schema.py`
 
 Canonical Python keys name the **scientific objects** in the method text.
 Legacy Digging/notebook keys are dual-written as aliases for RF compatibility.

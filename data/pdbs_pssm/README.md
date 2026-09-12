@@ -1,11 +1,13 @@
-# ACCRE dataset PDB + PSSM inputs
+# PDB coordinates and PSSMs
 
-PDB structure directories and PSSM directories used by the PDB→extraction-tensor
-pipeline on `reproduce-paper-results`.
+Per-dataset structure files and PSI-BLAST PSSMs used by `scripts/extract.py`.
 
-Formerly nested under `drive_evidence_copy/.../ACCRE_PyRun_Setup/` (recovery
-Drive mirror). That wrapper lived for archaeology on `main`; on this branch the
-inputs are first-class under `reproduction_inputs/`.
+| Directory | Role |
+| --- | --- |
+| `S_2648_PDB_Files/`, `S_2648_pssm_dir/` | S2648 train |
+| `S_669_PDB_Files/`, `S_669_pssm_dir/` | S669 test |
+| `S_921_PDB_Files/`, `S_921_pssm_dir/` | S921 test |
+| `Ssym_PDB_Files/`, `Ssym_pssm_dir/` | Ssym test |
 
-Independent PDB fallbacks for missing ACCRE files:
-`../independent_pdb_fetches/curated/`.
+Fallback structures for a few missing PDBs:
+[`../independent_pdbs/curated/`](../independent_pdbs/).

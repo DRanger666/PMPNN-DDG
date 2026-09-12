@@ -1,9 +1,16 @@
-# PMPNN-DDG extraction tensors (2026-09-12)
+# Extraction tensors
 
-Full ProteinMPNN extraction intermediates for number-by-number review.
+Published ProteinMPNN intermediates plus engineered features A–H. **This is
+the source of truth for Table 1 and Figure 3.**
 
-Canonical keys (e.g. `center_masked_log_probs`, `message_norm_top15_weights`)
-are documented in `SCHEMA.md`. Legacy notebook keys are dual-written as aliases.
+| File | Dataset | n |
+| --- | --- | ---: |
+| `S2648_extraction_tensors.pickle` | S2648 (train) | 2647 |
+| `S669_extraction_tensors.pickle` | S669 (test) | 638 |
+| `S921_extraction_tensors.pickle` | S921 (test) | 921 |
+| `Ssym_extraction_tensors.pickle` | Ssym (test) | 342 |
 
-Not historical Digging V3 pickles. Compact RF features:
-`../pmpnn_ddg_features_2026-09-12/`.
+Canonical keys (`center_masked_log_probs`, `message_norm_top15_weights`, …)
+are documented in [SCHEMA.md](SCHEMA.md). Stored as Git LFS.
+
+Compact RF-only tables: [`../features/`](../features/).

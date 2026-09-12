@@ -28,47 +28,47 @@ DEFAULT_PDB_FALLBACK = (
 ACCRE = (
     WORKSPACE_ROOT
     / "data"
-    / "accre_dataset_pdb_pssm"
+    / "pdbs_pssm"
 )
 DIGGING = (
     WORKSPACE_ROOT
     / "data"
-    / "historical_reference_pickles"
+    / "historical"
 )
 
 DEFAULT_DATASETS = {
     "S_2648": {
         "status_tsv": WORKSPACE_ROOT
-        / "reproduction_runs/2026-09-12/pdb_to_features_s2648/tables/mutation_status.tsv",
+        / "results/extraction/s2648/tables/mutation_status.tsv",
         "summary_json": WORKSPACE_ROOT
-        / "reproduction_runs/2026-09-12/pdb_to_features_s2648/json/pipeline_summary.json",
+        / "results/extraction/s2648/json/pipeline_summary.json",
         "pdb_dir": ACCRE / "S_2648_PDB_Files",
         "pssm_dir": ACCRE / "S_2648_pssm_dir",
         "hist_pickle": DIGGING / "S_2648_pmppn_info_dict_V3.pickle",
     },
     "S_669": {
         "status_tsv": WORKSPACE_ROOT
-        / "reproduction_runs/2026-09-12/pdb_to_features_s669/tables/mutation_status.tsv",
+        / "results/extraction/s669/tables/mutation_status.tsv",
         "summary_json": WORKSPACE_ROOT
-        / "reproduction_runs/2026-09-12/pdb_to_features_s669/json/pipeline_summary.json",
+        / "results/extraction/s669/json/pipeline_summary.json",
         "pdb_dir": ACCRE / "S_669_PDB_Files",
         "pssm_dir": ACCRE / "S_669_pssm_dir",
         "hist_pickle": DIGGING / "S_669_pmppn_info_dict_V3.pickle",
     },
     "S_921": {
         "status_tsv": WORKSPACE_ROOT
-        / "reproduction_runs/2026-09-12/pdb_to_features_s921/tables/mutation_status.tsv",
+        / "results/extraction/s921/tables/mutation_status.tsv",
         "summary_json": WORKSPACE_ROOT
-        / "reproduction_runs/2026-09-12/pdb_to_features_s921/json/pipeline_summary.json",
+        / "results/extraction/s921/json/pipeline_summary.json",
         "pdb_dir": ACCRE / "S_921_PDB_Files",
         "pssm_dir": ACCRE / "S_921_pssm_dir",
         "hist_pickle": DIGGING / "S_921_pmppn_info_dict_V3.pickle",
     },
     "Ssym": {
         "status_tsv": WORKSPACE_ROOT
-        / "reproduction_runs/2026-09-12/pdb_to_features_ssym/tables/mutation_status.tsv",
+        / "results/extraction/ssym/tables/mutation_status.tsv",
         "summary_json": WORKSPACE_ROOT
-        / "reproduction_runs/2026-09-12/pdb_to_features_ssym/json/pipeline_summary.json",
+        / "results/extraction/ssym/json/pipeline_summary.json",
         "pdb_dir": ACCRE / "Ssym_PDB_Files",
         "pssm_dir": ACCRE / "Ssym_pssm_dir",
         "hist_pickle": DIGGING / "Ssym_pmppn_info_dict_V3.pickle",
@@ -369,13 +369,8 @@ def main() -> int:
         if args.require_complete and summary.get("skipped"):
             raise SystemExit(f"dataset {name} incomplete: {summary}")
 
-    out_tables = WORKSPACE_ROOT / "manuscript_codebase_mapping" / "tables"
-    out_run = (
-        WORKSPACE_ROOT
-        / "reproduction_runs"
-        / "2026-09-12"
-        / "unprocessable_mutations_audit"
-    )
+    out_tables = WORKSPACE_ROOT / "docs" / "tables"
+    out_run = WORKSPACE_ROOT / "results" / "dataset_gaps"
     out_tables.mkdir(parents=True, exist_ok=True)
     out_run.mkdir(parents=True, exist_ok=True)
 

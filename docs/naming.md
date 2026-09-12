@@ -2,8 +2,8 @@
 
 Date: 2026-09-12  
 Source: BioRxiv PMPNN-DDG §§3.1–3.3 (DOI `10.64898/2026.08.23.746499`)  
-Machine-readable aliases: `proteinmpnn_ddg_recovery/extraction_tensor_schema.py`  
-Full shapes + dual-write policy: `proteinmpnn_ddg_recovery/SCHEMA.md`
+Machine-readable aliases: `pmpnn_ddg/extraction_tensor_schema.py`  
+Full shapes + dual-write policy: `pmpnn_ddg/SCHEMA.md`
 
 This table is the human-facing map from method-text objects to Python storage
 keys. Prefer the **canonical** names in new code and saved pickles. Legacy
@@ -69,7 +69,7 @@ Never call these vague “emb” / “m” columns. Scientific objects:
 | Neighbor embedding change ΔE_j | §3.2.3 Feature D uses Σ‖ΔE_j‖; raw (K,128) also PCA/KPCA’d | **Not** Feature E |
 | Center→neighbor message change ΔM_j | §3.2.4 Feature E = Σ RBF₁₋₅(ΔM_j) | Feature E = first 5 message-change KPCA comps |
 
-Module: `proteinmpnn_ddg_recovery/features/rf_feature_matrix_packing.py`
+Module: `pmpnn_ddg/features/rf_feature_matrix_packing.py`
 
 - **71-col dual-direction row** — one mutation; scalars + forward/reverse projection blocks for ΔE and ΔM side-by-side. Feature E indices: `46:51`.
 - **41-col F+R row** — after augmentation; two rows per mutation. Feature E indices: `31:36`.

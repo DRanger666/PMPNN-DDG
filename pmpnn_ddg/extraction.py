@@ -41,8 +41,7 @@ DEFAULT_UTILS_PATH = (
     WORKSPACE_ROOT / "modified_proteinmpnn" / "protein_mpnn_utils.py"
 )
 LEGACY_DIGGING_UTILS_PATH = (
-    # Digging vanilla tree lived under drive_evidence_copy on main only.
-    # Prefer DEFAULT_UTILS_PATH (modified_proteinmpnn) on this branch.
+# Prefer DEFAULT_UTILS_PATH (modified_proteinmpnn).
     WORKSPACE_ROOT
     / "modified_proteinmpnn"
     / "protein_mpnn_utils.py"

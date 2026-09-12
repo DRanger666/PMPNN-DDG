@@ -1,15 +1,25 @@
 cff-version: 1.2.0
 title: PMPNN-DDG
-message: Please cite the bioRxiv preprint (full author list there).
+message: Please cite the bioRxiv preprint.
 type: software
 url: https://github.com/dRanger666/PMPNN-DDG
 identifiers:
   - type: doi
     value: 10.64898/2026.08.23.746499
 repository-code: https://github.com/dRanger666/PMPNN-DDG
+authors:
+  - family-names: Ahmed
+    given-names: Sajid
+  - family-names: Jani
+    given-names: Md Rafsan
 preferred-citation:
   type: article
   title: "PMPNN-DDG: an accurate machine learning-based ΔΔG prediction pipeline trained on a novel interpretable feature set extracted from ProteinMPNN"
   year: 2026
   doi: 10.64898/2026.08.23.746499
   url: https://doi.org/10.64898/2026.08.23.746499
+  authors:
+    - family-names: Ahmed
+      given-names: Sajid
+    - family-names: Jani
+      given-names: Md Rafsan

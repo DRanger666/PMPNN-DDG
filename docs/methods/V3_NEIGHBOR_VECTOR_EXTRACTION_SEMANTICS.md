@@ -62,7 +62,7 @@ This extraction logic is upstream of several features:
 - The manuscript's neighbor-vector extraction section says top-K neighbor
   positions are masked one by one separately while the mutation position is
   unmasked and set to WT or MT.
-- `proteinmpnn_ddg_recovery/recovered_v6v2.py` makes the center residue
+- `pmpnn_ddg/extraction.py` makes the center residue
   designable first, then loops over `top_15_neighbor_indices` and makes each
   selected neighbor designable one at a time.
 - The extracted `ProteinMPNNTesting_V6_V2.ipynb` source says the neighbor

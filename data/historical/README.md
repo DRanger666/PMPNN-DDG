@@ -1,13 +1,9 @@
-# Historical Digging reference pickles
+# Reference pickles from the original analysis
 
-Saved 2022 Digging artifacts used only as **reference** (column maps, historical
-Table 1 / Figure 6 result layer checks) — **not** the regeneration oracle.
+Not required to reproduce Table 1 from `data/tensors/`.
 
-- `*_pmppn_info_dict_V3.pickle` — historical engineered-feature dumps
-- `list_incremental_feature_result_dict.pickle` — historical RF incremental results
+- `*_pmppn_info_dict_V3.pickle` — original engineered-feature dumps
+- `list_incremental_feature_result_dict.pickle` — original incremental RF series
+  (Figure 6 comparison)
 
-Public bar remains regenerated extraction tensors → features → RF. See
-`manuscript_codebase_mapping/REPRODUCTION_BAR_NOT_BYTE_IDENTICAL_V3.md`.
-
-Full Drive/Colab/manuscript evidence copies remain on branch `main` under
-`drive_evidence_copy/`.
+Public reproduction uses the extraction tensors, not these files.
