@@ -21,7 +21,7 @@ that **code on this branch**, run end-to-end, reproduces those numbers.
 | Figures 3–5 | S2648 train-set feature analyses | **Figs 4–5: 5 match / 6 near / 2 mismatch of 13** (after Feature E column fix); Fig 3 blocked | Prior “E blow-up” was dual-direction vs augmented index mix-up; remaining Δ≤0.02 on two claims |
 | Figures 1–2 | Pipeline / method schematics | N/A (non-numeric) | |
 
-**Last updated:** 2026-09-12 18:30 UTC
+**Last updated:** 2026-09-12 18:46 UTC
 **Feature pickles:** `reproduction_inputs/pmpnn_ddg_features_2026-09-12/` (all four datasets, Git LFS)  
 **Protocol:** `train_eval_rf_from_v3_features.py`; Feature B `historical_weighted`; KPCA seed 0; S_669 ΔΔG sign flip per notebook.
 
@@ -98,9 +98,14 @@ Interpretation: monotonic A→H lift is reproduced; pointwise values are close b
 
 ## Figures 3–5 — S2648 training analyses
 
-Regenerated from promoted compact `S2648_features.pickle` (2647 instances) via
-`scripts/regenerate_s2648_train_feature_figures.py` (matplotlib heatmaps; KPCA seed 0).
+**Source of truth:** full extraction tensors (`S2648_extraction_tensors.pickle`) → recompute features
+(including both NR and CN for C and D) → figures. Compact `S2648_features.pickle` is a convenience
+subset used only until full tensors are promoted.
+
+Interim Figs 4–5 (compact, 2647 instances): `scripts/regenerate_s2648_train_feature_figures.py`
+(matplotlib; KPCA seed 0; Feature E = message-change KPCA via `rf_feature_matrix_packing.FEATURE_E_COLS_ON_DUAL_DIRECTION_ROW`).
 Artifacts: `reproduction_runs/2026-09-12/s2648_train_feature_figures/`.
+Fig 3 script: `scripts/regenerate_s2648_figure3_from_full_tensors.py` (runs after promote).
 
 **Feature E column fix (2026-09-12):** `FEATURE_TO_INDEX["E"]=[31..35]` is valid only on the
 *augmented* 41-col RF matrix. On the unaugmented 71-col `project_instances` matrix,
@@ -109,7 +114,7 @@ and produced false E mismatches; RF Table 1 was unaffected (uses augment then [3
 
 | Figure | Regenerated artifact | Verdict |
 | --- | --- | --- |
-| Figure 3 | Norm-Ratio vs Change-Norm for C/D | **blocked** — compact features store a single C/D encoding; need dual-encoding recompute |
+| Figure 3 | Norm-Ratio vs Change-Norm for C/D | **waiting on S2648 full extraction tensors** — recompute both NR and CN from `center_to_neighbor_messages_*` and `neighbor_embeddings_*`; compact is only a convenience subset |
 | Figure 4 | `figure4_feature_feature_correlation.png` + corr CSV | **near/match** — 5 match / 6 near / 2 mismatch of 13 claims |
 | Figure 5 | `figure5_feature_feature_correlation.png` + corr CSV | **near/match** — same claim table (`figure45_claim_comparison.tsv`) |
 
@@ -136,7 +141,7 @@ Recomputed after fixing Feature E columns to **message-change KPCA** on the
 
 **Root cause of earlier 9 mismatches:** figure script applied augmented-matrix E indices `[31..35]` to the unaugmented 71-col row (those columns are neighbor-embedding-change KPCA reverse). True Feature E is message-change KPCA at `[46..50]` on that row / `[31..35]` only after F+R packing.
 
-**Remaining:** two claims at |Δ_rounded|=0.02 (E3 vs ΔΔG, E2 vs E4) — consistent with re-fit KPCA subsample (seed 0) vs historical unseeded fit; not a wrong scientific object. Fig 3 still blocked (dual C/D encodings).
+**Remaining:** two claims at |Δ_rounded|=0.02 (E3 vs ΔΔG, E2 vs E4) — consistent with re-fit KPCA subsample (seed 0) vs historical unseeded fit; not a wrong scientific object. Fig 3 is **not** permanently blocked: after `S2648_extraction_tensors.pickle` is promoted, recompute Feature C/D under both Norm-Ratio and Change-Norm from full tensors (messages → C family; neighbor embeddings E_j^WT/E_j^MT → D family) and redraw Figs 3–5 from those features. Compact pickles remain a convenience subset only.
 
 ## Figures 1–2
 
