@@ -481,8 +481,8 @@ def main() -> int:
     rng = np.random.default_rng(args.kpca_seed)
     proj = fit_projection(raw["S_2648"]["n_e"], raw["S_2648"]["n_m"], args.kpca_sample_size, rng)
     print(
-        f"  embedding neighbors stacked shape={proj['full_e_shape']}; "
-        f"message stacked shape={proj['full_m_shape']}",
+        f"  neighbor-embedding ΔE stacked shape={proj.get('full_neighbor_embedding_change_shape', proj.get('full_e_shape'))}; "
+        f"message ΔM stacked shape={proj.get('full_message_change_shape', proj.get('full_m_shape'))}",
         flush=True,
     )
 
