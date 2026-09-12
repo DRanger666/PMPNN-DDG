@@ -2,7 +2,8 @@
 """Train/evaluate RF on Features A–H built from saved historical V3 pickles.
 
 Feature source label: saved_historical_V3_engineered (+ KPCA Feature E fit on
-S_2648 neighbor_message_change_m_w_raw from those same pickles).
+S_2648 center→neighbor message-change matrices; also fits neighbor-embedding-change
+projections used in the Digging 71→41 packing — see rf_feature_matrix_packing.py).
 
 Default path loads saved historical V3 engineered pickles (RF + metrics
 vs Table 1). Optional ``--v3-pickle-override DATASET=PATH`` swaps in regenerated
@@ -35,9 +36,8 @@ from typing import Any
 
 import numpy as np
 from scipy.stats import pearsonr, entropy
-from sklearn.decomposition import KernelPCA, PCA
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.preprocessing import StandardScaler
+from proteinmpnn_ddg_recovery.features import rf_feature_matrix_packing as packing
 
 
 WORKSPACE = Path(__file__).resolve().parents[1]
@@ -65,17 +65,9 @@ REQUIRED_FIELDS = [
     "neighbor_message_change_m_w_raw",
 ]
 
-# Manuscript A–H map from VGRAPHS notebook feature_to_index_map
-FEATURE_TO_INDEX = {
-    "A": 0,  # center_mut_wild_energy
-    "B": 6,  # V2_backward_weighted_neighbor_entropy_changes
-    "C": 7,  # center_neighbor_weight_check_w_m
-    "D": 8,  # neighbor_embedding_change_m_w
-    "E": [31, 32, 33, 34, 35],  # first 5 message-KPCA cols in augmented matrix
-    "F": 5,  # wild_pssm - alternate_pssm
-    "G": 9,  # wild_pssm
-    "H": 10,  # alternate_pssm
-}
+# Manuscript A–H → columns on the *augmented* 41-col F/R matrix.
+# Neighbor-embedding vs message-change layout: rf_feature_matrix_packing.py
+FEATURE_TO_INDEX = packing.MANUSCRIPT_AH_TO_AUGMENTED_INDEX
 
 FULL_AH = ("A", "B", "C", "D", "E", "F", "G", "H")
 INCREMENTAL = [
@@ -209,146 +201,66 @@ def build_raw_instances(
             cur_X.append(float(mut["wild_pssm"]))  # 9
             cur_X.append(float(mut["alternate_pssm"]))  # 10
 
-            emb_raw = np.asarray(mut["neighbor_embedding_change_m_w_raw"], dtype=np.float64)
-            msg_raw = np.asarray(mut["neighbor_message_change_m_w_raw"], dtype=np.float64).squeeze()
-            cur_X.append(emb_raw)  # -4
-            cur_X.append(-1.0 * emb_raw)  # -3
-            cur_X.append(msg_raw)  # -2
-            cur_X.append(-1.0 * msg_raw)  # -1
+            neighbor_embedding_change = np.asarray(
+                mut["neighbor_embedding_change_m_w_raw"], dtype=np.float64
+            )  # ΔE_j (Digging m_w orientation)
+            message_change = np.asarray(
+                mut["neighbor_message_change_m_w_raw"], dtype=np.float64
+            ).squeeze()  # ΔM_j center→neighbor message change
+            cur_X.append(neighbor_embedding_change)  # -4
+            cur_X.append(-1.0 * neighbor_embedding_change)  # -3 rev pack
+            cur_X.append(message_change)  # -2
+            cur_X.append(-1.0 * message_change)  # -1 rev pack
 
             X.append(cur_X)
             y.append(float(mut["ddg"]))
-            n_e_c_raw.append(emb_raw)
-            n_m_c_raw.append(msg_raw)
+            n_e_c_raw.append(neighbor_embedding_change)
+            n_m_c_raw.append(message_change)
             kept += 1
     stats = {"kept": kept, "skipped_incomplete": skipped}
     return X, y, n_e_c_raw, n_m_c_raw, stats
 
 
 def fit_projection(
-    n_e_c_raw_2648: list[np.ndarray],
-    n_m_c_raw_2648: list[np.ndarray],
+    neighbor_embedding_change_matrices_2648: list[np.ndarray],
+    center_to_neighbor_message_change_matrices_2648: list[np.ndarray],
     kpca_sample_size: int,
     rng: np.random.Generator,
 ) -> dict[str, Any]:
-    """Fit StandardScaler + PCA/KPCA for embedding and message change vectors."""
-    full_e = np.concatenate(n_e_c_raw_2648, axis=0)
-    full_m = np.concatenate(n_m_c_raw_2648, axis=0)
-    reduced_dimension = 5
-
-    def _fit_pair(full: np.ndarray) -> tuple[StandardScaler, PCA, KernelPCA]:
-        n_sample = min(kpca_sample_size, full.shape[0])
-        indices = rng.choice(full.shape[0], size=n_sample, replace=False)
-        scaling = StandardScaler()
-        scaling.fit(full)
-        pca = PCA(n_components=reduced_dimension)
-        kpca = KernelPCA(n_components=reduced_dimension + 5, kernel="rbf")
-        scaled_sample = scaling.transform(full[indices, :])
-        pca.fit(scaled_sample)
-        kpca.fit(scaled_sample)
-        return scaling, pca, kpca
-
-    e_scaling, e_pca, e_kpca = _fit_pair(full_e)
-    m_scaling, m_pca, m_kpca = _fit_pair(full_m)
-    return {
-        "e_scaling": e_scaling,
-        "e_pca": e_pca,
-        "e_kpca": e_kpca,
-        "m_scaling": m_scaling,
-        "m_pca": m_pca,
-        "m_kpca": m_kpca,
-        "full_e_shape": list(full_e.shape),
-        "full_m_shape": list(full_m.shape),
-    }
+    """Fit projections on neighbor-embedding ΔE and center→neighbor message ΔM."""
+    return packing.fit_neighbor_change_projections(
+        neighbor_embedding_change_matrices_2648,
+        center_to_neighbor_message_change_matrices_2648,
+        kpca_sample_size,
+        rng,
+    )
 
 
 def project_instances(X: list[list[Any]], proj: dict[str, Any]) -> list[list[float]]:
-    """Append summed PCA/KPCA features; return flat float lists (length 71)."""
+    """Project ΔE / ΔM into the 71-col dual-direction intermediate row."""
     out: list[list[float]] = []
     for instance in X:
         scalars = [float(v) for v in instance[:11]]
-        emb = np.asarray(instance[-4], dtype=np.float64)
-        emb_rev = np.asarray(instance[-3], dtype=np.float64)
-        msg = np.asarray(instance[-2], dtype=np.float64)
-        msg_rev = np.asarray(instance[-1], dtype=np.float64)
-
-        e_s = proj["e_scaling"]
-        e_pca = proj["e_pca"]
-        e_kpca = proj["e_kpca"]
-        m_s = proj["m_scaling"]
-        m_pca = proj["m_pca"]
-        m_kpca = proj["m_kpca"]
-
-        cur_pca = e_pca.transform(e_s.transform(emb)).sum(axis=0)
-        cur_kpca = e_kpca.transform(e_s.transform(emb)).sum(axis=0)
-        rev_pca = e_pca.transform(e_s.transform(emb_rev)).sum(axis=0)
-        rev_kpca = e_kpca.transform(e_s.transform(emb_rev)).sum(axis=0)
-        m_cur_pca = m_pca.transform(m_s.transform(msg)).sum(axis=0)
-        m_cur_kpca = m_kpca.transform(m_s.transform(msg)).sum(axis=0)
-        m_rev_pca = m_pca.transform(m_s.transform(msg_rev)).sum(axis=0)
-        m_rev_kpca = m_kpca.transform(m_s.transform(msg_rev)).sum(axis=0)
-
-        flat = list(scalars)
-        flat.extend(cur_pca.tolist())  # 11:16
-        flat.extend(cur_kpca.tolist())  # 16:26
-        flat.extend(rev_pca.tolist())  # 26:31
-        flat.extend(rev_kpca.tolist())  # 31:41
-        flat.extend(m_cur_pca.tolist())  # 41:46
-        flat.extend(m_cur_kpca.tolist())  # 46:56
-        flat.extend(m_rev_pca.tolist())  # 56:61
-        flat.extend(m_rev_kpca.tolist())  # 61:71
-        out.append(flat)
+        neighbor_embedding_change = np.asarray(instance[-4], dtype=np.float64)
+        message_change = np.asarray(instance[-2], dtype=np.float64)
+        out.append(
+            packing.project_dual_direction_row(
+                scalars,
+                neighbor_embedding_change,
+                message_change,
+                proj,
+            )
+        )
     return out
 
 
 def augment_forward_reverse(X: np.ndarray, y: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
-    """Build augmented matrix matching notebook cell 19 layout (41 cols)."""
-    X_aug = []
-    y_aug = []
-    for row, label in zip(X, y):
-        forward = []
-        forward.extend(row[0:11])
-        forward.extend(row[11:16])
-        forward.extend(row[16:26])
-        forward.extend(row[41:46])
-        forward.extend(row[46:56])
-        forward_arr = np.asarray(forward, dtype=np.float64)
-
-        rev = np.zeros_like(forward_arr)
-        rev[0] = -1.0 * row[0]
-        rev[1] = row[1]
-        rev[2] = -1.0 * row[2]
-        rev[3] = row[4]
-        rev[4] = row[3]
-        rev[5] = -1.0 * row[5]
-        rev[6] = -1.0 * row[6]
-        # notebook: rev_X[7] = 1/X[7]
-        denom = row[7]
-        rev[7] = 1.0 / denom if abs(denom) > 1e-12 else 0.0
-        rev[8] = row[8]
-        rev[9] = row[10]
-        rev[10] = row[9]
-        rev[11:16] = row[26:31]
-        rev[16:26] = row[31:41]
-        rev[26:31] = row[56:61]
-        rev[31:41] = row[61:71]
-
-        X_aug.append(forward_arr)
-        X_aug.append(rev)
-        y_aug.append(label)
-        y_aug.append(-1.0 * label)
-    return np.asarray(X_aug, dtype=np.float64), np.asarray(y_aug, dtype=np.float64)
+    """F+R expand: 71-col dual-direction rows → interleaved 41-col training rows."""
+    return packing.augment_forward_reverse(X, y)
 
 
 def combo_indices(combo: tuple[str, ...]) -> list[int]:
-    idxs: list[int] = []
-    for label in combo:
-        mapped = FEATURE_TO_INDEX[label]
-        if isinstance(mapped, list):
-            idxs.extend(mapped)
-        else:
-            idxs.append(mapped)
-    return idxs
+    return packing.manuscript_combo_indices(combo)
 
 
 def evaluate_split(y_true: np.ndarray, y_pred: np.ndarray) -> dict[str, float]:
@@ -562,7 +474,7 @@ def main() -> int:
         print(f"  {name}: kept={stats['kept']} skipped={stats['skipped_incomplete']}", flush=True)
 
     print(
-        f"Fitting PCA/KPCA on S_2648 raw vectors (seed={args.kpca_seed}, "
+        f"Fitting neighbor-embedding ΔE + message ΔM PCA/KPCA on S_2648 (seed={args.kpca_seed}, "
         f"sample={args.kpca_sample_size})...",
         flush=True,
     )

@@ -28,3 +28,7 @@ __all__ = [
     "project_feature_e",
     "compute_features_fgh",
 ]
+
+# RF dual-direction / F+R packing (neighbor-embedding ΔE vs message ΔM)
+from proteinmpnn_ddg_recovery.features import rf_feature_matrix_packing
+

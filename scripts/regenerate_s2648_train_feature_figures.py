@@ -93,9 +93,15 @@ def main():
     # where message-KPCA is columns 46:56 — Feature E is the first 5 of those.
     # Using [31..35] here previously selected embedding-rev KPCA and fabricated
     # Fig 4–5 E mismatches (e.g. E1 vs D ≈ 0.91 instead of ≈ 0.49).
-    UNAUGMENTED_E_COLS = [46, 47, 48, 49, 50]
+    from proteinmpnn_ddg_recovery.features.rf_feature_matrix_packing import (
+        FEATURE_E_COLS_ON_DUAL_DIRECTION_ROW,
+    )
+    UNAUGMENTED_E_COLS = list(FEATURE_E_COLS_ON_DUAL_DIRECTION_ROW)
     print("matrix", Xf.shape, "stats", stats)
-    print("Feature E columns (unaugmented message-KPCA):", UNAUGMENTED_E_COLS)
+    print(
+        "Feature E cols on dual-direction (71) row = message-change KPCA[:5]:",
+        UNAUGMENTED_E_COLS,
+    )
 
     def col(name):
         i = idx[name]
