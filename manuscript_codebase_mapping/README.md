@@ -1,5 +1,10 @@
 # Manuscript–codebase mapping
 
+**Still useful on this branch:** living match / integrity / fidelity / naming
+docs for the regenerated pipeline. Not the pruned inventory archaeology on
+`main`. On `main`, the same directory name holds earlier notebook↔pickle
+provenance from the recovery phase.
+
 Evidence and notes that connect **this branch’s regenerated pipeline** to the
 bioRxiv PMPNN-DDG manuscript (DOI `10.64898/2026.08.23.746499`).
 

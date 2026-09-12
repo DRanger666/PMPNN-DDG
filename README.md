@@ -31,6 +31,30 @@ from that path. Formal tallies:
 [`manuscript_codebase_mapping/MANUSCRIPT_RESULTS_MATCH.md`](manuscript_codebase_mapping/MANUSCRIPT_RESULTS_MATCH.md).
 
 
+## Branch roles
+
+| Branch | Role |
+| --- | --- |
+| **`reproduce-paper-results`** (this) | Living manuscript pipeline: tensors → features → RF/figures → match tallies |
+| **[`main`](https://github.com/DRanger666/ProteinMPNN-DDG/tree/main)** | Historical recovery archive: Drive evidence, inventories, Digging V3/RF pickles, early notebook provenance |
+
+`main` has its own README explaining that split. Do not look to `main` for the
+public regeneration bar.
+
+## `manuscript_codebase_mapping/` on this branch
+
+**Still useful** — it is the evidence / results layer for *this* pipeline, not
+the deleted inventory archaeology:
+
+- match tallies (`MANUSCRIPT_RESULTS_MATCH.md`)
+- integrity audit (`UNPROCESSABLE_MUTATIONS_AND_DATASET_GAPS.md`)
+- reproduction bar / retired V3 reconciliation (`REPRODUCTION_BAR_NOT_BYTE_IDENTICAL_V3.md`)
+- Fig 4–5 KernelPCA probing, fidelity checklist, BioRxiv→variable naming
+
+Older notebook-cell / saved-pickle provenance notes in the same folder are
+supporting history. The inventory trees that used to sit beside it on `main`
+were pruned here on purpose.
+
 ## What we are *not* optimizing for
 
 **Byte-identical historical V3 extraction is not the bar.** Stochasticity in
