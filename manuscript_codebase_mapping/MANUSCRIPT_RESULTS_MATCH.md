@@ -18,10 +18,10 @@ that **code on this branch**, run end-to-end, reproduces those numbers.
 | Table 2 | S669 PMPNN-DDG row | **near** | Same RF outputs as Table 1 S669; external rows = literature |
 | Table 3 | Ssym PMPNN-DDG row | **near** | Same RF outputs as Table 1 Ssym; external rows = literature |
 | Figure 6 | Incremental A→H total-PCC on S669/Ssym | **8/8 combos within 0.02 abs of historical series (not bit-exact; trend retained)** | Incremental combos in same RF run |
-| Figures 3–5 | S2648 train-set feature analyses | **Partial** | Figs 4–5 from compact S2648 features (4 match / 9 mismatch of 13 claims); Fig 3 blocked (dual C/D encodings) |
+| Figures 3–5 | S2648 train-set feature analyses | **Partial (improved)** | Figs 4–5: 5 match / 6 near / 2 mismatch of 13 after message-KPCA E cols 46–50 fix; Fig 3 blocked (dual C/D) |
 | Figures 1–2 | Pipeline / method schematics | N/A (non-numeric) | |
 
-**Last updated:** 2026-09-12 18:16 UTC  
+**Last updated:** 2026-09-12 18:30 UTC
 **Feature pickles:** `reproduction_inputs/pmpnn_ddg_features_2026-09-12/` (all four datasets, Git LFS)  
 **Protocol:** `train_eval_rf_from_v3_features.py`; Feature B `historical_weighted`; KPCA seed 0; S_669 ΔΔG sign flip per notebook.
 
@@ -102,28 +102,36 @@ Regenerated from promoted compact `S2648_features.pickle` (2647 instances) via
 `scripts/regenerate_s2648_train_feature_figures.py` (matplotlib heatmaps; KPCA seed 0).
 Artifacts: `reproduction_runs/2026-09-12/s2648_train_feature_figures/`.
 
+**Feature E column fix (2026-09-12):** `FEATURE_TO_INDEX["E"]=[31..35]` is valid only on the
+*augmented* 41-col RF matrix. On the unaugmented 71-col `project_instances` matrix,
+message-KPCA (Feature E) is columns **46–50**. Earlier runs used 31–35 (embedding-rev KPCA)
+and produced false E mismatches; RF Table 1 was unaffected (uses augment then [31..35]).
+
 | Figure | Regenerated artifact | Verdict |
 | --- | --- | --- |
-| Figure 3 | Norm-Ratio vs Change-Norm for C/D | **blocked** — compact features store a single C/D encoding; need dual-encoding recompute (see stage-1 notebook evidence) |
-| Figure 4 | `figure4_feature_feature_correlation.png` + corr CSV | **partial** — non-E claims match; E* / H↔E1 claims mismatch (KPCA axis orientation / component ordering likely) |
-| Figure 5 | `figure5_feature_feature_correlation.png` + corr CSV | **partial** — same claim table as Fig 4 (`figure45_claim_comparison.tsv`: 4 match / 9 mismatch of 13) |
+| Figure 3 | Norm-Ratio vs Change-Norm for C/D | **blocked** — compact features store a single C/D encoding; need dual-encoding recompute |
+| Figure 4 | `figure4_feature_feature_correlation.png` + corr CSV | **near/match** — 5 match / 6 near / 2 mismatch of 13 claims |
+| Figure 5 | `figure5_feature_feature_correlation.png` + corr CSV | **near/match** — same claim table (`figure45_claim_comparison.tsv`) |
 
-### Figure 4–5 claim spot-checks (2dp)
+### Figure 4–5 claim spot-checks (2dp, after E-col fix)
 
 | Claim | Manuscript | Ours (2dp) | Verdict |
 | --- | ---: | ---: | --- |
 | C vs ΔΔG | -0.15 | -0.15 | match |
 | A vs B | 0.52 | 0.52 | match |
+| E1 vs D | 0.49 | 0.49 | match |
+| E2 vs D | 0.17 | 0.18 | near |
+| E4 vs ΔΔG | 0.21 | 0.22 | near |
+| E3 vs A | 0.55 | 0.54 | near |
+| E3 vs B | 0.40 | 0.39 | near |
+| E3 vs C | 0.55 | 0.54 (|r|; sign flip) | near |
+| E3 vs ΔΔG | 0.26 | 0.24 | mismatch (Δ=0.02) |
+| E2 vs E4 | 0.20 | 0.18 | mismatch (Δ=0.02) |
 | F vs A | 0.32 | 0.32 | match |
 | G vs A | 0.15 | 0.15 | match |
-| E1 vs D | 0.49 | 0.91 | mismatch |
-| E2 vs D | 0.17 | -0.11 | mismatch |
-| E3 vs A/B/C/ΔΔG | 0.55/0.40/0.55/0.26 | 0.12/0.21/0.01/0.07 | mismatch |
-| E4 vs ΔΔG | 0.21 | -0.10 | mismatch |
-| E2 vs E4 | 0.20 | 0.13 | mismatch |
-| H vs E1 | 0.39 | 0.34 (|r|) | mismatch (Δ=0.05) |
+| H vs E1 | 0.39 | 0.38 (|r|) | near |
 
-**Blockers:** (1) Fig 3 dual C/D encodings not in compact pickle; (2) Feature B wording still open (`MANUSCRIPT_TENSOR_EXTRACTION_FIDELITY.md` Item B) — RF uses `historical_weighted`; (3) E-component sign/order vs manuscript KPCA not locked.
+**Remaining blockers:** (1) Fig 3 dual C/D encodings; (2) Feature B wording open (`MANUSCRIPT_TENSOR_EXTRACTION_FIDELITY.md` Item B) — RF uses `historical_weighted`; (3) two borderline 0.02 claim deltas on E3↔ΔΔG and E2↔E4.
 
 **Full S2648 extraction tensors** still required for Feature B / tensor-fidelity audits, not for Figs 4–5 heatmaps from compact features.
 
