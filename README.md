@@ -17,7 +17,8 @@ Formal cell-by-cell tallies:
 ## Reproduced tables and figures
 
 All numbers below come from the **public extraction-tensor path** on this branch
-(2026-09-12), not from historical Digging pickle replay alone.
+(2026-09-12), with reverse Feature C = manuscript Eq. (2) `Σ 1/r_j`
+(`exact_sum_inv`). Not Digging pickle replay; not notebook `1/Σ` reverse C.
 
 | Manuscript artifact | What it is | Regenerated verdict | Where to look |
 | --- | --- | --- | --- |
@@ -43,7 +44,7 @@ Dataset roles (train vs test per figure/table):
 
 Full 21-cell grid (rF, rR, rF+R, rF-R, rms*): see
 [`MANUSCRIPT_RESULTS_MATCH.md`](manuscript_codebase_mapping/MANUSCRIPT_RESULTS_MATCH.md#table-1--independent-test-performance-pmpnn-ddg)
-and [`ours_vs_paper_table1.tsv`](reproduction_runs/2026-09-12/rf_from_extraction_tensors/ours_vs_paper_table1.tsv).
+and [`ours_vs_paper_table1.tsv`](reproduction_runs/2026-09-12/rf_exact_reverse_feature_c/ours_vs_paper_table1.tsv).
 
 RF protocol: train on S2648 (+ forward/reverse augmentation); Feature B
 `historical_weighted`; reverse Feature C **`exact_sum_inv`** (Eq. 2; not notebook
@@ -108,7 +109,7 @@ PDB + mutation tables + PSSM
 | PDB → tensors / features | `scripts/run_pdb_to_features_pipeline.py` (`--save-mode full` or `both`) |
 | Figure 3 | `scripts/regenerate_s2648_figure3_from_full_tensors.py` |
 | Figures 4–5 | `scripts/regenerate_s2648_train_feature_figures.py` |
-| RF → Tables 1–3 / Fig 6 | `scripts/train_eval_rf_from_v3_features.py` with `--v3-pickle-override` on the four extraction tensors |
+| RF → Tables 1–3 / Fig 6 | `scripts/train_eval_rf_from_v3_features.py` with extraction-tensor overrides; default `--feature-c-reverse-mode exact_sum_inv` |
 
 Default save mode is **`full`** (or `both`). Extraction tensors are the source of
 truth.
@@ -160,20 +161,9 @@ archaeology was pruned here on purpose.
 
 ---
 
-## Open items
+## Still open
 
-**Done (do not treat as open):**
-
-- [x] Extraction tensors + A–H features for all four datasets on LFS
-- [x] **Figures 3–5** regenerated and linked above
-- [x] **Tables 1–3 + Figure 6** from extraction-tensor RF, match write-up filled
-- [x] Fig 4–5 residuals explained via KernelPCA subsample experiment
-- [x] Reverse Feature C fixed to Eq. (2) `Σ 1/r_j` (exact); historical `1/Σ` diagnostic only
-- [x] Retired byte-identical V3 reconciliation; removed `drive_evidence_copy` from this branch
-
-**Still open / author decisions:**
-
-- [ ] **Feature B** weighting vs manuscript Eq. 1 — deliberate classification; RF uses historical weighted B
-- [ ] Optional **manuscript** one-liner on KernelPCA subsample sensitivity for Figs 4–5 (suggested text in the KPCA note — not recovery chronology)
-- [ ] Public `github.com/dRanger666/PMPNN-DDG` cited in the paper (out of scope until confirmed)
-- [ ] Do not merge PR until ownership/review agreed
+- **Feature B** weighting vs manuscript Eq. 1 — still needs a deliberate call; RF uses historical weighted B for now ([fidelity notes](manuscript_codebase_mapping/MANUSCRIPT_TENSOR_EXTRACTION_FIDELITY.md))
+- Optional **manuscript** one-liner on KernelPCA subsample sensitivity for Figs 4–5 (suggested text in [`FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md`](manuscript_codebase_mapping/FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md))
+- Public `github.com/dRanger666/PMPNN-DDG` cited in the paper (out of scope until confirmed)
+- Do not merge this PR until ownership/review is agreed
