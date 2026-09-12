@@ -16,7 +16,7 @@ Formal status (tables, figures, match/mismatch, how to re-run verification):
 
 **Regen RF status (2026-09-12 17:57 UTC):** Table1 7 match / 14 near / 0 mismatch of 21 (rounded-to-2dp vs BioRxiv); T2 S669=near; T3 Ssym=near; Fig6=8/8 combos within 0.02 abs of historical series (not bit-exact; trend retained). Details: [`MANUSCRIPT_RESULTS_MATCH.md`](manuscript_codebase_mapping/MANUSCRIPT_RESULTS_MATCH.md).
 
-**Figs 3–5 status (2026-09-12 18:16 UTC):** Fig3 blocked (dual C/D); Figs4–5 partial from compact S2648 (4/13 claim match); full tensors still in progress.
+**Figs 3–5 status (2026-09-12 18:30 UTC):** Fig3 blocked (dual C/D); Figs4–5 5 match / 6 near / 2 mismatch of 13 after message-KPCA E cols 46–50 fix; full tensors in progress.
 
 That document is the branch’s source of truth for correspondence. Historical
 recovery notes (pickle/notebook provenance) remain under
