@@ -170,8 +170,8 @@ silent drops as matches. This RF run uses 2647 train / 638 S_669 eval mutations.
 
 ### Full-tensor promotion log
 
-- 2026-09-12 19:23 UTC: S2648 full tensors + features-from-full on LFS (`S2648_extraction_tensors.pickle`, `S2648_features_from_full_tensors.pickle`; 2647/2648 ok; gap 2a01A L141R missing PSSM). Fig3 regenerated from full tensors. S669 full extraction running.
+- 2026-09-12 19:23 UTC: S2648 full tensors + ProteinMPNN+PSSM features (from extraction tensors) on LFS (`S2648_extraction_tensors.pickle`, `S2648_extraction_tensors.pickle` (includes A–H); 2647/2648 ok; gap 2a01A L141R missing PSSM). Fig3 regenerated from full tensors. S669 full extraction running.
 - 2026-09-12 20:04 UTC: S669 present on LFS (S669_extraction_tensors.pickle)
-- 2026-09-12 20:27 UTC: S669 full tensors+features-from-full on LFS after 2jieA batch recovery (638 entries; commit 576af46). S921 full mid-run.
+- 2026-09-12 20:27 UTC: S669 full tensors+ProteinMPNN+PSSM features (from extraction tensors) on LFS after 2jieA batch recovery (638 entries; commit 576af46). S921 full mid-run.
 - 2026-09-12 20:46 UTC: S921 present on LFS (S921_extraction_tensors.pickle)
-- 2026-09-12 20:50 UTC: **ALL full extraction tensors on LFS** — Ssym, S2648 (2647), S669 (638 after 2jieA recover), S921 (921/921). Features-from-full pickles on LFS for S2648/S669/S921 (+Ssym). Public bar tensors→features path unblocked for RF/figures.
+- 2026-09-12 20:50 UTC: **ALL full extraction tensors on LFS** — Ssym, S2648 (2647), S669 (638 after 2jieA recover), S921 (921/921). ProteinMPNN+PSSM features pickles on LFS for S2648/S669/S921 (+Ssym). Public bar tensors→features path unblocked for RF/figures.

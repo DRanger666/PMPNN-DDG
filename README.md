@@ -31,9 +31,9 @@ Formal status (tables, figures, match/mismatch, how to re-run verification):
 
 **Regen RF status (2026-09-12 17:57 UTC):** Table1 7 match / 14 near / 0 mismatch of 21 (rounded-to-2dp vs BioRxiv); T2 S669=near; T3 Ssym=near; Fig6=8/8 combos within 0.02 abs of historical series (not bit-exact; trend retained). Details: [`MANUSCRIPT_RESULTS_MATCH.md`](manuscript_codebase_mapping/MANUSCRIPT_RESULTS_MATCH.md).
 
-**Full extraction / public bar (2026-09-12 20:50 UTC):** ALL complete on LFS — Ssym+S2648+S669+S921 full tensors + features-from-full. Fig3 from S2648 full tensors. Next: RF+Figs4–5 from full-tensor features.
+**Full extraction / public bar (2026-09-12 20:50 UTC):** ALL complete on LFS — Ssym+S2648+S669+S921 **extraction tensors** (contain ProteinMPNN A–E + PSSM F–H). Fig3 from S2648 tensors. Next: RF + Figs 4–5 from those ProteinMPNN+PSSM features.
 
-**Figs 3–5 status (2026-09-12 19:23 UTC):** Fig3 from full S2648 tensors (msg NR match; emb CN/msg CN near; emb NR Δ≈0.02); Figs4–5 still interim compact — re-run from full-tensor features next.
+**Figs 3–5 status (2026-09-12 19:23 UTC):** Fig3 from S2648 extraction tensors (message NR match; neighbor-embedding CN / message CN near; neighbor-embedding NR Δ≈0.02); Figs4–5 — re-run from ProteinMPNN+PSSM features next.
 
 That document is the branch’s source of truth for correspondence. Historical
 recovery notes (pickle/notebook provenance) remain under
@@ -104,8 +104,7 @@ Operational boundary (what is recovered vs still open):
 
 ## Open items (branch work)
 
-- Finish full extraction tensors for S2648 / S669 / S921 (Ssym done).
-- Promote remaining feature/tensor pickles via LFS as they complete.
-- RF retrain/eval on regenerated features; fill **MANUSCRIPT_RESULTS_MATCH.md**.
+- Full extraction tensors for all four datasets are on LFS.
+- RF retrain/eval on ProteinMPNN+PSSM features derived from published extraction tensors; refresh **MANUSCRIPT_RESULTS_MATCH.md**.
 - Feature B weighting vs manuscript equation — treat as an open fidelity question
   until deliberately classified (see mapping notes).
