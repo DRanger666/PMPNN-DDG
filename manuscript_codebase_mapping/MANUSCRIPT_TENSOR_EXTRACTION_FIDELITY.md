@@ -181,3 +181,18 @@ When reporting metrics, always state:
 experiments. Treat Feature B wording, decoder RNG, and zero-vector policy as
 **open fidelity questions**, not confirmed defects requiring code changes
 before metrics.
+
+
+---
+
+## Empirical note (2026-09-12 RF diagnostic)
+
+A short 3-run RF retrain with `--feature-b-mode manuscript_unweighted` and
+`notebook_table1` settings still rounded to paper rF+R / RMSE on S_669, Ssym,
+and S_921 (`reproduction_runs/2026-09-12/rf_from_v3_features_manuscript_B/`).
+
+That does **not** prove the manuscript equation and the weighted V2 field are
+the same object; it only shows Table 1-level metrics are not highly sensitive
+to this swap under the current protocol. Primary comparison remains
+`historical_weighted`. Classification of Item B stays: open wording / incomplete
+prose vs intended weighted method — **not** a confirmed bug.
