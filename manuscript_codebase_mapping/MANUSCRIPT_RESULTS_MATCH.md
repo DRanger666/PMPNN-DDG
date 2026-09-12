@@ -28,7 +28,7 @@ tensors are required for a finished manuscript-corresponding release.
 | Figures 3–5 | S2648 train-set feature analyses | **Figs 4–5: 5 match / 6 near / 2 mismatch of 13** (after Feature E column fix); Fig 3 blocked | Prior “E blow-up” was dual-direction vs augmented index mix-up; remaining Δ≤0.02 on two claims |
 | Figures 1–2 | Pipeline / method schematics | N/A (non-numeric) | |
 
-**Last updated:** 2026-09-12 18:46 UTC
+**Last updated:** 2026-09-12 19:23 UTC
 **Feature pickles:** `reproduction_inputs/pmpnn_ddg_features_2026-09-12/` (all four datasets, Git LFS)  
 **Protocol:** `train_eval_rf_from_v3_features.py`; Feature B `historical_weighted`; KPCA seed 0; S_669 ΔΔG sign flip per notebook.
 
@@ -121,7 +121,7 @@ and produced false E mismatches; RF Table 1 was unaffected (uses augment then [3
 
 | Figure | Regenerated artifact | Verdict |
 | --- | --- | --- |
-| Figure 3 | Norm-Ratio vs Change-Norm for C/D | **waiting on S2648 full extraction tensors** — recompute both NR and CN from `center_to_neighbor_messages_*` and `neighbor_embeddings_*`; compact is only a convenience subset |
+| Figure 3 | `figure3_norm_ratio_vs_change_norm.png` from full tensors | **partial** — message NR |r|=0.15 **match**; message CN 0.04 near (nb 0.03); neighbor-embedding CN 0.32 near (nb 0.31); neighbor-embedding NR 0.28 vs nb 0.26 (mismatch) |
 | Figure 4 | `figure4_feature_feature_correlation.png` + corr CSV | **near/match** — 5 match / 6 near / 2 mismatch of 13 claims |
 | Figure 5 | `figure5_feature_feature_correlation.png` + corr CSV | **near/match** — same claim table (`figure45_claim_comparison.tsv`) |
 
@@ -167,3 +167,7 @@ silent drops as matches. This RF run uses 2647 train / 638 S_669 eval mutations.
 - `UNPROCESSABLE_MUTATIONS_AND_DATASET_GAPS.md` — integrity audit
 - `../workspace_operations/CURRENT_RECOVERY_BOUNDARY.md` — recovery vs regen boundary
 - RF outputs: `reproduction_runs/2026-09-12/rf_from_promoted_compact_features/ours_vs_paper_table1.tsv`
+
+### Full-tensor promotion log
+
+- 2026-09-12 19:23 UTC: S2648 full tensors + features-from-full on LFS (`S2648_extraction_tensors.pickle`, `S2648_features_from_full_tensors.pickle`; 2647/2648 ok; gap 2a01A L141R missing PSSM). Fig3 regenerated from full tensors. S669 full extraction running.
