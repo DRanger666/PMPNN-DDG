@@ -1,3 +1,0 @@
-# Output export for colab_drive_copy notebook: Untitled0.ipynb
-# Generated from notebook outputs; image payloads are summarized, not embedded.
-

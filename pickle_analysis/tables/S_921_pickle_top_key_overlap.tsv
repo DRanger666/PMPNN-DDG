@@ -1,7 +1,0 @@
-left_file	right_file	left_key_count	right_key_count	intersection_count	union_count	jaccard	left_only_sample	right_only_sample
-S_921_full_feature_dict.pickle	S_921_pmppn_info_dict.pickle	195	195	195	195	1.000000	[]	[]
-S_921_full_feature_dict.pickle	S_921_pmppn_info_dict_V2.pickle	195	195	195	195	1.000000	[]	[]
-S_921_full_feature_dict.pickle	S_921_pmppn_info_dict_V3.pickle	195	195	195	195	1.000000	[]	[]
-S_921_pmppn_info_dict.pickle	S_921_pmppn_info_dict_V2.pickle	195	195	195	195	1.000000	[]	[]
-S_921_pmppn_info_dict.pickle	S_921_pmppn_info_dict_V3.pickle	195	195	195	195	1.000000	[]	[]
-S_921_pmppn_info_dict_V2.pickle	S_921_pmppn_info_dict_V3.pickle	195	195	195	195	1.000000	[]	[]
