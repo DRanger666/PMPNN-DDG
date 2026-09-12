@@ -203,8 +203,9 @@ policy as **open fidelity / wording questions**, not as “failed V3 reconciliat
 **What exact reverse would be.** After swapping WT/MT centers:
 `Σ_j ‖M_j^MT‖/‖M_j^WT‖ = Σ_j 1/r_j`.
 
-**What F+R augmentation does.** `rev[C] = 1 / C_fwd` (reciprocal of the sum) in
-`rf_feature_matrix_packing.augment_forward_reverse` — matching Digging/notebook.
+**What F+R augmentation does now.** Default `exact_sum_inv`: `rev[C] = Σ 1/r_j`
+(`center_neighbor_weight_check_m_w`). Optional `reciprocal_of_sum` restores Digging
+`1/C_fwd` for diagnostics only.
 
 | Q | Working answer |
 | --- | --- |
