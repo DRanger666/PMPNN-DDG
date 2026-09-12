@@ -360,6 +360,7 @@ def run_by_protein_subprocess(
     seed_mode: str,
     compact_for_rf: bool,
     output_dir: Path,
+    resume: bool = False,
 ) -> tuple[dict[str, list[dict[str, Any]]], list[dict[str, Any]]]:
     worker = WORKSPACE_ROOT / "scripts" / "_pdb_to_features_one_protein.py"
     shard_dir = output_dir / "shards"
@@ -379,6 +380,24 @@ def run_by_protein_subprocess(
     for protein_i, (protein_key, protein_jobs) in enumerate(by_protein.items(), start=1):
         jobs_path = shard_dir / f"{protein_key}.jobs.pkl"
         out_path = shard_dir / f"{protein_key}.out.pkl"
+        print(
+            f"[protein {protein_i}/{len(by_protein)}] {protein_key} "
+            f"n_mut={len(protein_jobs)}",
+            flush=True,
+        )
+        if resume and out_path.exists():
+            try:
+                payload = pickle.load(out_path.open("rb"))
+                regenerated[protein_key] = payload["entries"]
+                status_rows.extend(payload["statuses"])
+                global_index += len(protein_jobs)
+                print(f"  resume skip {protein_key} (shard exists)", flush=True)
+                with (output_dir / "regenerated_v3_features.partial.pickle").open("wb") as handle:
+                    pickle.dump(regenerated, handle, protocol=pickle.HIGHEST_PROTOCOL)
+                write_tsv(table_dir / "mutation_status.tsv", status_rows, STATUS_FIELDS)
+                continue
+            except Exception as exc:  # noqa: BLE001
+                print(f"  resume reload failed for {protein_key}: {exc}; re-running", flush=True)
         with jobs_path.open("wb") as handle:
             pickle.dump(protein_jobs, handle)
         cmd = [
@@ -409,11 +428,6 @@ def run_by_protein_subprocess(
         ]
         if compact_for_rf:
             cmd.append("--compact-for-rf")
-        print(
-            f"[protein {protein_i}/{len(by_protein)}] {protein_key} "
-            f"n_mut={len(protein_jobs)}",
-            flush=True,
-        )
         completed = subprocess.run(cmd, check=False)
         if completed.returncode != 0 or not out_path.exists():
             for job in protein_jobs:
@@ -529,6 +543,11 @@ def main() -> int:
     parser.add_argument("--compare-reference", action="store_true")
     parser.add_argument("--by-protein-subprocess", action="store_true")
     parser.add_argument("--compact-for-rf", action="store_true")
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="With --by-protein-subprocess, reuse existing shards/*.out.pkl",
+    )
     args = parser.parse_args()
 
     preset = DATASET_PRESETS[args.dataset]
@@ -555,7 +574,8 @@ def main() -> int:
     print(
         f"Dataset={args.dataset} jobs={len(jobs)} pdb_dir={pdb_dir} "
         f"seed_mode={args.seed_mode} seed={args.seed} "
-        f"subprocess={args.by_protein_subprocess} compact={args.compact_for_rf}",
+        f"subprocess={args.by_protein_subprocess} compact={args.compact_for_rf} "
+        f"resume={args.resume}",
         flush=True,
     )
 
@@ -572,6 +592,7 @@ def main() -> int:
             seed_mode=args.seed_mode,
             compact_for_rf=args.compact_for_rf,
             output_dir=output_dir,
+            resume=args.resume,
         )
         runtime = load_runtime(
             utils_path=args.utils_path,
@@ -617,6 +638,7 @@ def main() -> int:
         "seed_mode": args.seed_mode,
         "by_protein_subprocess": args.by_protein_subprocess,
         "compact_for_rf": args.compact_for_rf,
+        "resume": args.resume,
         "elapsed_seconds": time.time() - t_run,
         "mutation_table": rel_workspace(mutation_table),
         "pdb_dir": rel_workspace(pdb_dir),
