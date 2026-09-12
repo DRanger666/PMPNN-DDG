@@ -8,14 +8,15 @@ Evidence source:
 ``colab_notebooks_inventory_analysis/git_notebook_sources/*_ProteinMPNNTesting_V6_V2.ipynb.py.txt``
 
 Design choice:
-The recovered notebook copied most ProteinMPNN code into notebook cells. To keep
-this code maintainable while preserving behavior, this module imports the
-recovered ProteinMPNN source file and applies the two V6_V2 behavioral patches
-explicitly:
+Default utils path is ``modified_proteinmpnn/protein_mpnn_utils.py`` — a clean
+dauparas-based fork with the two V6_V2 extraction hooks baked in:
 
 1. ``DecLayer.forward`` returns the scaled decoder message tensor.
 2. ``ProteinMPNN.forward`` returns ``log_probs``, ``decoder_messages``, and
    final node embeddings ``h_V``.
+
+If a vanilla (unpatched) utils path is supplied, the same hooks are applied via
+``patch_utils_for_v6v2_tensor_returns`` for backward compatibility.
 """
 
 from __future__ import annotations
@@ -34,7 +35,12 @@ from Bio.PDB import PDBParser
 
 
 WORKSPACE_ROOT = Path(__file__).resolve().parents[1]
+# Clean fork with baked-in DecLayer / forward extraction hooks.
+# (Not the Digging nested annotated utils — those lack the V6_V2 returns.)
 DEFAULT_UTILS_PATH = (
+    WORKSPACE_ROOT / "modified_proteinmpnn" / "protein_mpnn_utils.py"
+)
+LEGACY_DIGGING_UTILS_PATH = (
     WORKSPACE_ROOT
     / "drive_evidence_copy"
     / "sajidahmedprotres_drive"
@@ -225,7 +231,22 @@ def load_runtime(
 
     device = torch.device(device)
     utils = load_proteinmpnn_utils(utils_path)
-    patch_utils_for_v6v2_tensor_returns(utils)
+    # Clean modified_proteinmpnn already returns messages; only patch vanilla.
+    if getattr(utils, "PMPNN_DDG_EXTRACTION_HOOKS", False):
+        pass  # clean modified_proteinmpnn (or previously patched)
+    else:
+        needs_patch = True
+        try:
+            import inspect
+
+            src = inspect.getsource(utils.DecLayer.forward)
+            if "h_message / self.scale" in src or "h_message/self.scale" in src:
+                needs_patch = False
+        except (OSError, TypeError):
+            needs_patch = True
+        if needs_patch:
+            patch_utils_for_v6v2_tensor_returns(utils)
+        utils.PMPNN_DDG_EXTRACTION_HOOKS = True
 
     checkpoint_path = Path(checkpoint_path)
     checkpoint = torch.load(checkpoint_path, map_location=device)
