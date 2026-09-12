@@ -51,6 +51,7 @@ from proteinmpnn_ddg_recovery.recovered_v6v2 import (  # noqa: E402
     extract_mutation_tensor_fields,
     load_runtime,
     load_single_chain_protein,
+    resolve_pdb_path,
 )
 from proteinmpnn_ddg_recovery.tensor_field_checks import write_tsv  # noqa: E402
 
@@ -62,6 +63,10 @@ ACCRE = (
     / "ACCRE_PyRun_Setup"
 )
 TABLES = WORKSPACE_ROOT / "reproduction_inputs" / "mutation_ddg_tables"
+DEFAULT_PDB_FALLBACK_DIR = (
+    WORKSPACE_ROOT / "reproduction_inputs" / "independent_pdb_fetches" / "curated"
+)
+
 DIGGING = (
     WORKSPACE_ROOT
     / "drive_evidence_copy"
@@ -214,14 +219,17 @@ def process_job(
     pssm_dir: Path,
     residue_maps: dict[str, dict[str, int]],
     proteins: dict[str, dict[str, Any]],
+    pdb_fallback_dir: Path | None = None,
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     protein_key = job["protein_key"]
     mutation_label = job["mutation_label"]
     chain_id = protein_key[-1]
-    pdb_path = pdb_dir / f"{protein_key}.pdb"
     t0 = time.time()
-    if not pdb_path.exists():
-        raise FileNotFoundError(f"Missing PDB: {pdb_path}")
+    pdb_path = resolve_pdb_path(
+        protein_key,
+        pdb_dir,
+        fallback_dirs=[pdb_fallback_dir] if pdb_fallback_dir else None,
+    )
     if protein_key not in residue_maps:
         residue_maps[protein_key] = build_residue_index_map(pdb_path, chain_id)
     if protein_key not in proteins:
@@ -361,6 +369,7 @@ def run_by_protein_subprocess(
     compact_for_rf: bool,
     output_dir: Path,
     resume: bool = False,
+    pdb_fallback_dir: Path | None = None,
 ) -> tuple[dict[str, list[dict[str, Any]]], list[dict[str, Any]]]:
     worker = WORKSPACE_ROOT / "scripts" / "_pdb_to_features_one_protein.py"
     shard_dir = output_dir / "shards"
@@ -426,6 +435,8 @@ def run_by_protein_subprocess(
             "--global-index-base",
             str(global_index),
         ]
+        if pdb_fallback_dir is not None:
+            cmd.extend(["--pdb-fallback-dir", str(pdb_fallback_dir)])
         if compact_for_rf:
             cmd.append("--compact-for-rf")
         completed = subprocess.run(cmd, check=False)
@@ -465,6 +476,7 @@ def run_inprocess(
     seed_mode: str,
     compact_for_rf: bool,
     output_dir: Path,
+    pdb_fallback_dir: Path | None = None,
 ) -> tuple[dict[str, list[dict[str, Any]]], list[dict[str, Any]]]:
     regenerated: dict[str, list[dict[str, Any]]] = {}
     status_rows: list[dict[str, Any]] = []
@@ -478,7 +490,8 @@ def run_inprocess(
         maybe_seed(seed, seed_mode, index)
         try:
             entry, status = process_job(
-                runtime, job, pdb_dir, pssm_dir, residue_maps, proteins
+                runtime, job, pdb_dir, pssm_dir, residue_maps, proteins,
+                pdb_fallback_dir=pdb_fallback_dir,
             )
             if compact_for_rf:
                 entry = compact_entry_for_rf(entry)
@@ -523,6 +536,13 @@ def main() -> int:
     parser.add_argument("--dataset", choices=list(DATASET_PRESETS.keys()), default="Ssym")
     parser.add_argument("--mutation-table", type=Path, default=None)
     parser.add_argument("--pdb-dir", type=Path, default=None)
+    parser.add_argument(
+        "--pdb-fallback-dir",
+        type=Path,
+        default=DEFAULT_PDB_FALLBACK_DIR,
+        help="Independent PDB fetches used when ACCRE pdb-dir lacks a file "
+        f"(default: {DEFAULT_PDB_FALLBACK_DIR})",
+    )
     parser.add_argument("--pssm-dir", type=Path, default=None)
     parser.add_argument("--checkpoint", type=Path, default=DEFAULT_CHECKPOINT_PATH)
     parser.add_argument("--utils-path", type=Path, default=DEFAULT_UTILS_PATH)
@@ -553,6 +573,7 @@ def main() -> int:
     preset = DATASET_PRESETS[args.dataset]
     mutation_table = args.mutation_table or preset["mutation_table"]
     pdb_dir = args.pdb_dir or preset["pdb_dir"]
+    pdb_fallback_dir = args.pdb_fallback_dir
     pssm_dir = args.pssm_dir or preset["pssm_dir"]
     output_dir = Path(args.output_dir).expanduser()
     if not output_dir.is_absolute():
@@ -593,6 +614,7 @@ def main() -> int:
             compact_for_rf=args.compact_for_rf,
             output_dir=output_dir,
             resume=args.resume,
+            pdb_fallback_dir=pdb_fallback_dir,
         )
         runtime = load_runtime(
             utils_path=args.utils_path,
@@ -614,6 +636,7 @@ def main() -> int:
             seed_mode=args.seed_mode,
             compact_for_rf=args.compact_for_rf,
             output_dir=output_dir,
+            pdb_fallback_dir=pdb_fallback_dir,
         )
 
     pickle_path = output_dir / "regenerated_v3_features.pickle"
@@ -642,6 +665,7 @@ def main() -> int:
         "elapsed_seconds": time.time() - t_run,
         "mutation_table": rel_workspace(mutation_table),
         "pdb_dir": rel_workspace(pdb_dir),
+        "pdb_fallback_dir": rel_workspace(pdb_fallback_dir) if pdb_fallback_dir else None,
         "pssm_dir": rel_workspace(pssm_dir),
         "output_pickle": rel_workspace(pickle_path),
         "tensor_fields": V3_TENSOR_FIELDS,

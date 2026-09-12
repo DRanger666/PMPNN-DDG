@@ -302,16 +302,128 @@ def return_neighbor_info(
     return distance_func_local(ca_coordinates, mask, num_edges=num_edges)
 
 
+
+def resolve_pdb_path(
+    protein_key: str,
+    pdb_dir: Path,
+    fallback_dirs: list[Path] | None = None,
+) -> Path:
+    """Locate ``{protein_key}.pdb`` in ``pdb_dir`` or optional fallback dirs."""
+
+    primary = Path(pdb_dir) / f"{protein_key}.pdb"
+    if primary.exists():
+        return primary
+    for directory in fallback_dirs or []:
+        if directory is None:
+            continue
+        candidate = Path(directory) / f"{protein_key}.pdb"
+        if candidate.exists():
+            return candidate
+    raise FileNotFoundError(f"Missing PDB: {primary}")
+
+
+def list_polymer_chain_ids(pdb_path: Path) -> list[str]:
+    """Return Bio.PDB chain IDs that contain at least one standard polymer residue."""
+
+    parser = PDBParser(QUIET=True)
+    structure = parser.get_structure(id=Path(pdb_path).stem, file=str(pdb_path))
+    model = structure[0]
+    chain_ids: list[str] = []
+    for chain in model:
+        if any(residue.id[0] == " " for residue in chain):
+            chain_ids.append(chain.id)
+    return chain_ids
+
+
+def alphabet_chain_to_numeric(chain_id: str) -> str | None:
+    """Map A→1 … Z→26 (notebook PSSM fallback convention)."""
+
+    if len(chain_id) == 1 and chain_id.isalpha():
+        return str(ord(chain_id.upper()) - ord("A") + 1)
+    return None
+
+
+def resolve_pdb_chain_id(pdb_path: Path, requested_chain_id: str) -> tuple[str, str]:
+    """Resolve the on-disk chain id for a protein_key chain suffix.
+
+    Returns ``(parse_chain_id, logical_chain_id)``. ``logical_chain_id`` is always
+    ``requested_chain_id`` (the protein_key suffix) so downstream dict keys stay
+    stable. ``parse_chain_id`` is the chain letter/digit actually present in the
+    PDB file.
+
+    Resolution order:
+    1. Exact match for ``requested_chain_id``
+    2. Alphabet→number fallback (``A``→``1``) when that chain exists
+    3. Sole polymer chain in the file (common for single-chain ACCRE extracts)
+    """
+
+    available = list_polymer_chain_ids(pdb_path)
+    if not available:
+        raise ValueError(f"No polymer chains found in {pdb_path}")
+    if requested_chain_id in available:
+        return requested_chain_id, requested_chain_id
+    numeric = alphabet_chain_to_numeric(requested_chain_id)
+    if numeric is not None and numeric in available:
+        return numeric, requested_chain_id
+    if len(available) == 1:
+        return available[0], requested_chain_id
+    raise KeyError(
+        f"Chain {requested_chain_id!r} not in {pdb_path.name}; available={available}"
+    )
+
+
+def remap_protein_chain_keys(
+    protein: dict[str, Any],
+    from_chain_id: str,
+    to_chain_id: str,
+) -> dict[str, Any]:
+    """Rename seq/coords keys from the parsed chain id to the logical chain id."""
+
+    if from_chain_id == to_chain_id:
+        return protein
+    remapped = copy.deepcopy(protein)
+    seq_from = f"seq_chain_{from_chain_id}"
+    seq_to = f"seq_chain_{to_chain_id}"
+    coords_from = f"coords_chain_{from_chain_id}"
+    coords_to = f"coords_chain_{to_chain_id}"
+    if seq_from not in remapped:
+        raise KeyError(f"Missing {seq_from} while remapping to {to_chain_id}")
+    remapped[seq_to] = remapped.pop(seq_from)
+    coords = remapped.pop(coords_from)
+    new_coords = {}
+    for atom in ["N", "CA", "C", "O"]:
+        old_key = f"{atom}_chain_{from_chain_id}"
+        new_key = f"{atom}_chain_{to_chain_id}"
+        new_coords[new_key] = coords[old_key]
+    remapped[coords_to] = new_coords
+    return remapped
+
+
 def load_single_chain_protein(
     runtime: ProteinMPNNRuntime,
     pdb_path: Path,
     chain_id: str,
 ) -> dict[str, Any]:
-    """Parse one PDB chain and apply the V6_V2 gap-removal step."""
+    """Parse one PDB chain and apply the V6_V2 gap-removal step.
 
-    pdb_dict_list = runtime.utils.parse_PDB(str(pdb_path), input_chain_list=[chain_id])
+    ``chain_id`` is the logical id from ``protein_key[-1]``. If the PDB uses a
+    different id (numeric chains, sole-chain extracts), the structure is parsed
+    under the on-disk id and keys are remapped back to ``chain_id``.
+    """
+
+    parse_chain_id, logical_chain_id = resolve_pdb_chain_id(pdb_path, chain_id)
+    pdb_dict_list = runtime.utils.parse_PDB(
+        str(pdb_path), input_chain_list=[parse_chain_id]
+    )
     if not pdb_dict_list:
-        raise ValueError(f"No parseable chain {chain_id!r} found in {pdb_path}")
+        raise ValueError(f"No parseable chain {parse_chain_id!r} found in {pdb_path}")
+    protein0 = pdb_dict_list[0]
+    if int(protein0.get("num_of_chains", 0)) < 1 or not protein0.get(
+        f"seq_chain_{parse_chain_id}", ""
+    ):
+        raise ValueError(
+            f"parse_PDB returned empty chain {parse_chain_id!r} for {pdb_path}"
+        )
 
     dataset = runtime.utils.StructureDatasetPDB(
         pdb_dict_list,
@@ -322,7 +434,8 @@ def load_single_chain_protein(
         raise ValueError(f"Expected one parsed protein from {pdb_path}, found {len(dataset)}")
 
     protein = copy.deepcopy(dataset[0])
-    return remove_gaps_from_single_chain_protein(protein, chain_id)
+    protein = remap_protein_chain_keys(protein, parse_chain_id, logical_chain_id)
+    return remove_gaps_from_single_chain_protein(protein, logical_chain_id)
 
 
 def remove_gaps_from_single_chain_protein(
@@ -350,27 +463,45 @@ def remove_gaps_from_single_chain_protein(
 
 
 def build_residue_index_map(pdb_path: Path, chain_id: str) -> dict[str, int]:
-    """Build the notebook-style residue-label to zero-based sequence-index map."""
+    """Build residue-label → zero-based index map (PremPS / ICODE-aware).
 
+    Labels match mutation-table prefixes (``mut[:-1]``):
+    - blank ICODE → ``{AA}{seqnum}`` (e.g. ``M4``)
+    - non-blank ICODE → ``{AA}{seqnum}{icode}`` (e.g. ``V27B`` for PremPS ``V27BL``)
+
+    Polymer residues only (``hetflag == " "``), in Bio.PDB chain order, which
+    matches ProteinMPNN ``parse_PDB`` sequence order after gap removal for the
+    ACCRE single-chain extracts used here.
+
+    ``chain_id`` is the logical protein_key suffix; on-disk chain ids are
+    resolved via :func:`resolve_pdb_chain_id`.
+    """
+
+    parse_chain_id, _logical = resolve_pdb_chain_id(pdb_path, chain_id)
     parser = PDBParser(QUIET=True)
     structure = parser.get_structure(id=Path(pdb_path).stem, file=str(pdb_path))
     model = structure[0]
-    chain = model[chain_id]
+    chain = model[parse_chain_id]
 
     mapping: dict[str, int] = {}
     duplicates: list[str] = []
-    for index, residue in enumerate(chain):
+    index = 0
+    for residue in chain:
+        hetflag, seqnum, icode = residue.get_id()
+        if hetflag != " ":
+            continue
         residue_name = residue.get_resname().title()
         one_letter = protein_letters_3to1.get(residue_name, "X")
-        key = f"{one_letter}{residue.get_id()[1]}"
+        icode_s = icode.strip()
+        key = f"{one_letter}{seqnum}{icode_s}" if icode_s else f"{one_letter}{seqnum}"
         if key in mapping:
             duplicates.append(key)
         else:
             mapping[key] = index
-
+        index += 1
     if duplicates:
         raise ValueError(
-            f"Duplicate residue labels in {pdb_path.name} chain {chain_id}: {duplicates}"
+            f"Duplicate residue labels in {pdb_path.name} chain {parse_chain_id}: {duplicates}"
         )
     return mapping
 

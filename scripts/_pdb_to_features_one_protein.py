@@ -10,6 +10,7 @@ sys.path.insert(0, str(WORKSPACE_ROOT))
 from proteinmpnn_ddg_recovery.features.compute_bundle import build_v3_entry_from_extraction
 from proteinmpnn_ddg_recovery.recovered_v6v2 import (
     build_residue_index_map, extract_mutation_tensor_fields, load_runtime, load_single_chain_protein,
+    resolve_pdb_path,
 )
 RF_KEEP_FIELDS = [
     "mut","ddg","center_mut_wild_energy","center_entropy",
@@ -28,6 +29,8 @@ def main():
     p.add_argument("--jobs-pickle", type=Path, required=True)
     p.add_argument("--out-pickle", type=Path, required=True)
     p.add_argument("--pdb-dir", type=Path, required=True)
+    p.add_argument("--pdb-fallback-dir", type=Path, default=None,
+                   help="Optional dir of independently fetched PDBs used when pdb-dir lacks the file")
     p.add_argument("--pssm-dir", type=Path, required=True)
     p.add_argument("--checkpoint", type=Path, required=True)
     p.add_argument("--utils-path", type=Path, required=True)
@@ -41,7 +44,9 @@ def main():
     np.random.seed(args.seed); torch.manual_seed(args.seed)
     runtime = load_runtime(utils_path=args.utils_path, checkpoint_path=args.checkpoint, device=args.device)
     chain_id = args.protein_key[-1]
-    pdb_path = args.pdb_dir / f"{args.protein_key}.pdb"
+    pdb_path = resolve_pdb_path(
+        args.protein_key, args.pdb_dir, fallback_dirs=[args.pdb_fallback_dir] if args.pdb_fallback_dir else None
+    )
     residue_map = build_residue_index_map(pdb_path, chain_id)
     protein = load_single_chain_protein(runtime, pdb_path, chain_id)
     entries, statuses = [], []
