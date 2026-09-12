@@ -57,3 +57,8 @@ decoder RNG, Feature B weighting wording, zero-vector fallback.
   --output-dir reproduction_runs/2026-09-12/rf_from_regenerated_ssym \
   --n-runs 3 --full-ah-only --configs notebook_table1
 ```
+
+## Measured (2026-09-12)
+
+- Full Ssym PDB→features: **342/342** via `--by-protein-subprocess --compact-for-rf`.
+- RF (saved S_2648 train, regenerated Ssym eval, 3× notebook_table1): Ssym rF+R **0.81**, rmsF+R **1.10** (paper match) despite non-bit-exact tensors vs historical V3.

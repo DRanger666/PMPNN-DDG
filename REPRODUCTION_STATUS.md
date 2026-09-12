@@ -172,6 +172,45 @@ alone does not help. Details:
 
 ---
 
+
+## PDB → clean MPNN → regenerated Ssym → RF (measured)
+
+**Full Ssym regeneration succeeded:** 342/342 with
+`--by-protein-subprocess --compact-for-rf --seed-mode per_entry`
+(~500s). Artifact:
+`reproduction_runs/2026-09-12/pdb_to_features_ssym/regenerated_v3_features.pickle`.
+
+Diagnostic vs historical V3: PSSM 342/342; ProteinMPNN-derived scalars/tensors
+**not** bit-exact (expected under open RNG questions).
+
+**Partial E2E RF** (train saved S_2648; eval regenerated Ssym; 3-run
+`notebook_table1`, `historical_weighted` B):
+
+| Dataset | Metric | Regenerated-Ssym path | Paper |
+| --- | --- | ---: | ---: |
+| Ssym | rF+R | 0.8134 → **0.81** | 0.81 |
+| Ssym | rmsF+R | 1.0983 → **1.10** | 1.10 |
+| S_669 / S_921 | (still saved features) | match prior saved-V3 RF | Table 1 |
+
+Command:
+
+```bash
+.venv_proteinmpnn_ddg_reproduction/bin/python scripts/run_pdb_to_features_pipeline.py \
+  --dataset Ssym --seed-mode per_entry \
+  --by-protein-subprocess --compact-for-rf --compare-reference \
+  --output-dir reproduction_runs/2026-09-12/pdb_to_features_ssym
+
+.venv_proteinmpnn_ddg_reproduction/bin/python scripts/train_eval_rf_from_v3_features.py \
+  --v3-pickle-override Ssym=reproduction_runs/2026-09-12/pdb_to_features_ssym/regenerated_v3_features.pickle \
+  --output-dir reproduction_runs/2026-09-12/rf_from_regenerated_ssym \
+  --n-runs 3 --full-ah-only --configs notebook_table1
+```
+
+Still needed for **full** E2E: regenerate S_2648 (train) and ideally S_669/S_921
+the same way. Long single-process runs OOM’d on this host — always use
+subprocess-per-protein for large sets.
+
+
 ## Remaining blockers (honest)
 
 1. **PDB → V3 direct tensors** value-level match (attended neighbors, log_probs).
