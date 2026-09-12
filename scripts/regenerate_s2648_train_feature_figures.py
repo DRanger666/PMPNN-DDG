@@ -9,6 +9,8 @@ features store a single C/D encoding. Dual-encoding comparison needs a dedicated
 recompute path (documented as blocked).
 
 Uses the same KPCA Feature-E construction as train_eval_rf_from_v3_features.py.
+Feature E columns on the unaugmented 71-col matrix are 46:51 (message KPCA),
+not FEATURE_TO_INDEX["E"] which applies only after forward/reverse augmentation.
 """
 from __future__ import annotations
 
@@ -84,8 +86,16 @@ def main():
 
     Xf, y, stats, idx = build_from_pickle(args.features_pickle, args.kpca_seed)
     # forward-only for correlations (notebook uses aug[0::2] == forward)
-    # build_raw_instances returns forward mutations only; augmentation is later in RF
+    # build_raw_instances returns forward mutations only; augmentation is later in RF.
+    #
+    # IMPORTANT: FEATURE_TO_INDEX["E"] = [31..35] is valid only on the *augmented*
+    # 41-col matrix (message-KPCA block). project_instances returns a 71-col matrix
+    # where message-KPCA is columns 46:56 — Feature E is the first 5 of those.
+    # Using [31..35] here previously selected embedding-rev KPCA and fabricated
+    # Fig 4–5 E mismatches (e.g. E1 vs D ≈ 0.91 instead of ≈ 0.49).
+    UNAUGMENTED_E_COLS = [46, 47, 48, 49, 50]
     print("matrix", Xf.shape, "stats", stats)
+    print("Feature E columns (unaugmented message-KPCA):", UNAUGMENTED_E_COLS)
 
     def col(name):
         i = idx[name]
@@ -100,11 +110,11 @@ def main():
             "B": col("B"),
             "C": col("C"),
             "D": col("D"),
-            "E-1": Xf[:, idx["E"][0]],
-            "E-2": Xf[:, idx["E"][1]],
-            "E-3": Xf[:, idx["E"][2]],
-            "E-4": Xf[:, idx["E"][3]],
-            "E-5": Xf[:, idx["E"][4]],
+            "E-1": Xf[:, UNAUGMENTED_E_COLS[0]],
+            "E-2": Xf[:, UNAUGMENTED_E_COLS[1]],
+            "E-3": Xf[:, UNAUGMENTED_E_COLS[2]],
+            "E-4": Xf[:, UNAUGMENTED_E_COLS[3]],
+            "E-5": Xf[:, UNAUGMENTED_E_COLS[4]],
         }
     )
     df5 = df4.copy()
