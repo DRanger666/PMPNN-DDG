@@ -1,7 +1,7 @@
 # Results vs. the preprint
 
 Cell-by-cell comparison of numbers regenerated from `data/tensors/` against
-Ahmed & Jani, bioRxiv [10.64898/2026.08.23.746499](https://doi.org/10.64898/2026.08.23.746499).
+Sajid Ahmed and Md Rafsan Jani, bioRxiv [10.64898/2026.08.23.746499](https://doi.org/10.64898/2026.08.23.746499).
 
 **Protocol.** `scripts/train_eval_rf.py --n-runs 10 --configs notebook_table1`
 (Feature C reverse = Eq. 2; KPCA seed 0). Artifacts:

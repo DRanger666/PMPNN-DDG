@@ -5,7 +5,7 @@ single-point mutation. Features come from
 [ProteinMPNN](https://github.com/dauparas/ProteinMPNN) (A–E) and from PSSM
 evolutionary scores (F–H).
 
-**Paper:** Sajid Ahmed & Md Rafsan Jani,
+**Paper:** Sajid Ahmed and Md Rafsan Jani,
 [*PMPNN-DDG: an accurate machine learning-based ΔΔG prediction pipeline trained
 on a novel interpretable feature set extracted from ProteinMPNN*](https://doi.org/10.64898/2026.08.23.746499),
 bioRxiv (2026). DOI [10.64898/2026.08.23.746499](https://doi.org/10.64898/2026.08.23.746499).
@@ -115,12 +115,12 @@ docs/                      methods notes, fidelity, dataset gaps
 
 ## Citation
 
-Please cite the preprint (full author list there):
+Please cite:
 
 ```
-Ahmed S, Jani MR. PMPNN-DDG: an accurate machine learning-based ΔΔG
-prediction pipeline trained on a novel interpretable feature set extracted
-from ProteinMPNN. bioRxiv 2026.08.23.746499 (2026).
+Sajid Ahmed, Md Rafsan Jani. PMPNN-DDG: an accurate machine learning-based
+ΔΔG prediction pipeline trained on a novel interpretable feature set
+extracted from ProteinMPNN. bioRxiv 2026.08.23.746499 (2026).
 doi: 10.64898/2026.08.23.746499
 ```
 
