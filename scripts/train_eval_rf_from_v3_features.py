@@ -4,8 +4,9 @@
 Feature source label: saved_historical_V3_engineered (+ KPCA Feature E fit on
 S_2648 neighbor_message_change_m_w_raw from those same pickles).
 
-This does NOT regenerate ProteinMPNN tensors from PDB. It proves the RF +
-metrics loop against manuscript Table 1 targets.
+Default path loads saved historical V3 engineered pickles (RF + metrics
+vs Table 1). Optional ``--v3-pickle-override DATASET=PATH`` swaps in regenerated
+pickles from ``run_pdb_to_features_pipeline.py`` for end-to-end eval.
 
 Primary RF hyperparams follow the BioRxiv manuscript text:
   RandomForestRegressor(n_estimators=500, max_samples=0.5)  # other defaults
@@ -454,7 +455,10 @@ def write_comparison_tsv(path: Path, summaries: list[dict[str, Any]]) -> None:
                         "paper_rounded": f"{info['paper_rounded']:.2f}",
                         "abs_diff_rounded": f"{info['abs_diff_rounded']:.2f}",
                         "match_rounded": str(info["match_rounded"]),
-                        "feature_source": f"saved_historical_V3_engineered+KPCA_E|B={summary.get('feature_b_mode', '?')}",
+                        "feature_source": (
+                            f"{summary.get('feature_source_label', 'saved_historical_V3_engineered+KPCA_E')}"
+                            f"|B={summary.get('feature_b_mode', '?')}"
+                        ),
                     }
                 )
     with path.open("w", newline="") as handle:
@@ -479,6 +483,16 @@ def write_comparison_tsv(path: Path, summaries: list[dict[str, Any]]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--digging-dir", type=Path, default=DEFAULT_DIGGING)
+    parser.add_argument(
+        "--v3-pickle-override",
+        action="append",
+        default=[],
+        metavar="DATASET=PATH",
+        help=(
+            "Replace a dataset pickle with a regenerated V3-shaped pickle "
+            "(repeatable). Example: Ssym=reproduction_runs/.../regenerated_v3_features.pickle"
+        ),
+    )
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--n-runs", type=int, default=10)
     parser.add_argument("--kpca-sample-size", type=int, default=10000)
@@ -519,6 +533,25 @@ def main() -> int:
         "S_669": digging / "S_669_pmppn_info_dict_V3.pickle",
         "Ssym": digging / "Ssym_pmppn_info_dict_V3.pickle",
     }
+    override_labels: dict[str, str] = {}
+    for item in args.v3_pickle_override:
+        if "=" not in item:
+            raise SystemExit(
+                f"--v3-pickle-override must be DATASET=PATH, got {item!r}"
+            )
+        ds_name, raw_path = item.split("=", 1)
+        if ds_name not in pickles:
+            raise SystemExit(
+                f"Unknown dataset in override {ds_name!r}; expected one of {list(pickles)}"
+            )
+        pickles[ds_name] = Path(raw_path)
+        override_labels[ds_name] = "regenerated_pdb_pipeline"
+        print(f"  override {ds_name} <- {pickles[ds_name]}", flush=True)
+    meta_feature_source_preview = (
+        "mixed_regenerated+" + ",".join(sorted(override_labels))
+        if override_labels
+        else "saved_historical_V3_engineered+KPCA_E"
+    )
     raw: dict[str, Any] = {}
     coverage = {}
     for name in names:
@@ -579,6 +612,7 @@ def main() -> int:
             n_jobs=args.n_jobs,
         )
         summary["feature_b_mode"] = args.feature_b_mode
+        summary["feature_source_label"] = meta_feature_source_preview
         summaries.append(summary)
         for ds_name, means in summary["full_ah_means"].items():
             paper = MANUSCRIPT_ROUNDED[ds_name]
@@ -592,8 +626,19 @@ def main() -> int:
                 flush=True,
             )
 
+    feature_source_parts = []
+    for name in names:
+        if name in override_labels:
+            feature_source_parts.append(f"{name}:regenerated_pdb_pipeline")
+        else:
+            feature_source_parts.append(f"{name}:saved_historical_V3")
     meta = {
-        "feature_source": "saved_historical_V3_engineered+KPCA_E_from_same_pickles",
+        "feature_source": (
+            "mixed|" + ",".join(feature_source_parts)
+            if override_labels
+            else "saved_historical_V3_engineered+KPCA_E_from_same_pickles"
+        ),
+        "v3_pickle_overrides": {k: str(pickles[k]) for k in override_labels},
         "feature_b_mode": args.feature_b_mode,
         "feature_source_paths": {k: str(v) for k, v in pickles.items()},
         "kpca_seed": args.kpca_seed,
