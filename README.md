@@ -4,6 +4,15 @@ Manuscript-corresponding reproduction of bioRxiv **PMPNN-DDG**
 (DOI [10.64898/2026.08.23.746499](https://doi.org/10.64898/2026.08.23.746499);
 co-first author Sajid Ahmed).
 
+**Git history on this repository starts 2026-05-06**, three and a half months
+before the preprint (bioRxiv 2026-08-23 / posted 2026-08-27). See
+[the first commit](https://github.com/dRanger666/PMPNN-DDG/commit/ddd89dfd9b9a8b79c44c0acec4660fb3f7367d23)
+and the [full commit list](https://github.com/dRanger666/PMPNN-DDG/commits/main)
+(143 commits; 67 dated before the preprint). This is a reconstruction of
+the 2022 analysis, versioned in git from May 2026. GitHub's "Created" date on
+*this URL* is 2026-09-12 (when the public mirror was opened); it is not the
+start of the work.
+
 ```text
 PDB → extraction tensors → ProteinMPNN features A–E + PSSM features F–H
     → Figures 3–5 / Random Forest → Tables 1–3 + Figure 6
@@ -165,5 +174,5 @@ archaeology was pruned here on purpose.
 
 - **Feature B** weighting vs manuscript Eq. 1 — still needs a deliberate call; RF uses historical weighted B for now ([fidelity notes](manuscript_codebase_mapping/MANUSCRIPT_TENSOR_EXTRACTION_FIDELITY.md))
 - Optional **manuscript** one-liner on KernelPCA subsample sensitivity for Figs 4–5 (suggested text in [`FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md`](manuscript_codebase_mapping/FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md))
-- Public `github.com/dRanger666/PMPNN-DDG` cited in the paper (out of scope until confirmed)
+- Public repo is [github.com/dRanger666/PMPNN-DDG](https://github.com/dRanger666/PMPNN-DDG)
 - Do not merge this PR until ownership/review is agreed
