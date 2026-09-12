@@ -25,8 +25,8 @@ RF_KEEP_FIELDS = [
     "V2_backward_weighted_neighbor_backward_KL","wild_pssm","alternate_pssm",
     "V2_backward_weighted_neighbor_entropy_changes","center_neighbor_weight_check_w_m",
     "neighbor_embedding_change_m_w","neighbor_embedding_change_m_w_raw",
-    "neighbor_message_change_m_w_raw","feature_A","feature_B_historical_weighted",
-    "feature_B_manuscript_unweighted","feature_C","feature_D","feature_F","feature_G","feature_H",
+    "neighbor_message_change_m_w_raw","feature_A","feature_B_historical_weighted", "feature_B_entropy_change_sum_weighted",
+    "feature_B_manuscript_unweighted", "feature_B_entropy_change_sum_unweighted","feature_C","feature_D","feature_F","feature_G","feature_H",
 ]
 def compact(entry):
     return {k: entry[k] for k in RF_KEEP_FIELDS if k in entry}

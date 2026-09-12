@@ -127,6 +127,8 @@ def build_v3_entry_from_extraction(
         extraction.fields["w_n_log_prob"],
         extraction.fields["m_n_log_prob"],
     )
+    entry["feature_B_entropy_change_sum_weighted"] = entry["feature_B_historical_weighted"]
+    entry["feature_B_entropy_change_sum_unweighted"] = entry["feature_B_manuscript_unweighted"]
     entry["feature_C"] = ah["C"]
     entry["feature_D"] = ah["D"]
     entry["feature_F"] = ah["F"]

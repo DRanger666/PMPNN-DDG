@@ -666,16 +666,17 @@ def extract_mutation_tensor_fields(
         # identity fields are forced to the saved indices for downstream replay.
 
     fields: dict[str, Any] = {
+        # §3.1 center-masked pass
         "center_masked_log_probs": log_probs.cpu().numpy(),
-        # Message L2 norms (not attention) used to rank neighbors:
-        "message_norm_top15_weights": top_15_attention_vals.cpu().numpy(),
-        "message_norm_top10_weights": top_10_attention_vals.cpu().numpy(),
-        "message_norm_top5_weights": top_5_attention_vals.cpu().numpy(),
-        "message_norm_top15_residue_indices": top_15_neighbor_indices.cpu().numpy(),
-        "message_norm_top10_residue_indices": top_10_neighbor_indices.cpu().numpy(),
-        "message_norm_top5_residue_indices": top_5_neighbor_indices.cpu().numpy(),
-        "spatial_nearest_top15_residue_indices": top_15_closest_neighbor_indices.cpu().numpy(),
-        "spatial_nearest_top10_residue_indices": top_10_closest_neighbor_indices.cpu().numpy(),
+        # Message L2 norms rank "most attended" neighbors (NOT attention):
+        "neighbor_to_center_message_l2_norms_top15": top_15_attention_vals.cpu().numpy(),
+        "neighbor_to_center_message_l2_norms_top10": top_10_attention_vals.cpu().numpy(),
+        "neighbor_to_center_message_l2_norms_top5": top_5_attention_vals.cpu().numpy(),
+        "most_attended_neighbor_indices_top15": top_15_neighbor_indices.cpu().numpy(),
+        "most_attended_neighbor_indices_top10": top_10_neighbor_indices.cpu().numpy(),
+        "most_attended_neighbor_indices_top5": top_5_neighbor_indices.cpu().numpy(),
+        "spatial_nearest_neighbor_indices_top15": top_15_closest_neighbor_indices.cpu().numpy(),
+        "spatial_nearest_neighbor_indices_top10": top_10_closest_neighbor_indices.cpu().numpy(),
     }
 
     neighbor_w_log_probs = []
@@ -686,7 +687,7 @@ def extract_mutation_tensor_fields(
     neighbor_w_embeddings = []
     neighbor_m_embeddings = []
 
-    for neighbor_index_value in fields["message_norm_top15_residue_indices"]:
+    for neighbor_index_value in fields["most_attended_neighbor_indices_top15"]:
         neighbor_index = int(neighbor_index_value)
         neighbor_aa_identities.append(seq_chain[neighbor_index])
 
@@ -735,13 +736,14 @@ def extract_mutation_tensor_fields(
 
     fields.update(
         {
-            "neighbor_log_probs_center_wt": neighbor_w_log_probs,
-            "neighbor_log_probs_center_mt": neighbor_m_log_probs,
-            "neighbor_residue_aa_ids": neighbor_aa_identities,
-            "center_to_neighbor_messages_center_wt": neighbor_w_messages,
-            "center_to_neighbor_messages_center_mt": neighbor_m_messages,
-            "neighbor_embeddings_center_wt": neighbor_w_embeddings,
-            "neighbor_embeddings_center_mt": neighbor_m_embeddings,
+            # §3.1 neighbor-masked passes (PjWT/PjMT, MjWT/MjMT, EjWT/EjMT)
+            "neighbor_log_probs_wt": neighbor_w_log_probs,
+            "neighbor_log_probs_mt": neighbor_m_log_probs,
+            "neighbor_aa_identities": neighbor_aa_identities,
+            "center_to_neighbor_messages_wt": neighbor_w_messages,
+            "center_to_neighbor_messages_mt": neighbor_m_messages,
+            "neighbor_embeddings_wt": neighbor_w_embeddings,
+            "neighbor_embeddings_mt": neighbor_m_embeddings,
         }
     )
     # Dual-write legacy notebook keys for engineered_features / RF compatibility.
