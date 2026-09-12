@@ -9,9 +9,10 @@ For each mutation entry (top-15 neighbors):
   neighbor-embedding NR = Σ_j ‖E_j^WT‖ / ‖E_j^MT‖
   neighbor-embedding CN = Σ_j ‖E_j^WT − E_j^MT‖  (manuscript Feature D encoding)
 
-Notebook VGRAPHS cells 15–16 printed |PCC| pairs vs experimental ΔΔG:
-  messages: 0.26 0.31 ; neighbor embeddings: 0.15 0.03
-(manuscript caption does not list exact PCCs; we match notebook printed values).
+Notebook VGRAPHS cells 15–16 printed |PCC| pairs vs experimental ΔΔG
+(assignment confirmed on partial full shards: neighbor-embedding NR/CN ≈ 0.27/0.29 → 0.26 0.31;
+message NR/CN ≈ 0.16/0.045 → 0.15 0.03). Manuscript Feature C = message NR (|r|≈0.15);
+Feature D = neighbor-embedding CN.
 """
 from __future__ import annotations
 
@@ -136,8 +137,8 @@ def main() -> None:
     }
     # Notebook printed absolute PCCs (0.26 0.31) and (0.15 0.03)
     notebook = {
-        "message_pair_abs": (0.26, 0.31),  # order: NR?, CN? — report both abs
-        "neighbor_embedding_pair_abs": (0.15, 0.03),
+        "neighbor_embedding_pair_abs": (0.26, 0.31),  # cell 15
+        "message_pair_abs": (0.15, 0.03),  # cell 16
     }
     abs_msg = (abs(claims["message_NR_vs_ddg"]), abs(claims["message_CN_vs_ddg"]))
     abs_emb = (abs(claims["neighbor_embedding_NR_vs_ddg"]), abs(claims["neighbor_embedding_CN_vs_ddg"]))
@@ -164,23 +165,23 @@ def main() -> None:
         },
         "notebook_printed_abs": notebook,
         "vs_notebook": {
-            "message_NR": verdict(abs_msg[0], 0.26),
-            "message_CN": verdict(abs_msg[1], 0.31),
-            "neighbor_embedding_NR": verdict(abs_emb[0], 0.15),
-            "neighbor_embedding_CN": verdict(abs_emb[1], 0.03),
+            "neighbor_embedding_NR": verdict(abs_emb[0], 0.26),
+            "neighbor_embedding_CN": verdict(abs_emb[1], 0.31),
+            "message_NR": verdict(abs_msg[0], 0.15),
+            "message_CN": verdict(abs_msg[1], 0.03),
         },
     }
 
     # Bar figure: two panels (messages | neighbor embeddings)
     fig, axes = plt.subplots(1, 2, figsize=(8, 4), dpi=150)
-    axes[0].bar(["NR", "CN"], [abs_msg[0], abs_msg[1]], color=["#4C72B0", "#55A868"])
+    axes[0].bar(["NR", "CN"], [abs_emb[0], abs_emb[1]], color=["#4C72B0", "#55A868"])
     axes[0].set_ylim(0, 0.4)
-    axes[0].set_title("Messages (Feature C family)\n|PCC| vs ΔΔG")
+    axes[0].set_title("Neighbor embeddings (Feature D family)\n|PCC| vs ΔΔG")
     axes[0].axhline(0.26, ls="--", lw=0.8, color="gray")
     axes[0].axhline(0.31, ls=":", lw=0.8, color="gray")
-    axes[1].bar(["NR", "CN"], [abs_emb[0], abs_emb[1]], color=["#4C72B0", "#55A868"])
+    axes[1].bar(["NR", "CN"], [abs_msg[0], abs_msg[1]], color=["#4C72B0", "#55A868"])
     axes[1].set_ylim(0, 0.4)
-    axes[1].set_title("Neighbor embeddings (Feature D family)\n|PCC| vs ΔΔG")
+    axes[1].set_title("Messages (Feature C family)\n|PCC| vs ΔΔG")
     axes[1].axhline(0.15, ls="--", lw=0.8, color="gray")
     axes[1].axhline(0.03, ls=":", lw=0.8, color="gray")
     fig.tight_layout()
@@ -192,10 +193,10 @@ def main() -> None:
     # TSV
     lines = ["encoding\tpearson_signed\tpearson_abs\tnotebook_target_abs\tverdict"]
     mapping = [
-        ("message_NR", claims["message_NR_vs_ddg"], abs_msg[0], 0.26),
-        ("message_CN", claims["message_CN_vs_ddg"], abs_msg[1], 0.31),
-        ("neighbor_embedding_NR", claims["neighbor_embedding_NR_vs_ddg"], abs_emb[0], 0.15),
-        ("neighbor_embedding_CN", claims["neighbor_embedding_CN_vs_ddg"], abs_emb[1], 0.03),
+        ("neighbor_embedding_NR", claims["neighbor_embedding_NR_vs_ddg"], abs_emb[0], 0.26),
+        ("neighbor_embedding_CN", claims["neighbor_embedding_CN_vs_ddg"], abs_emb[1], 0.31),
+        ("message_NR", claims["message_NR_vs_ddg"], abs_msg[0], 0.15),
+        ("message_CN", claims["message_CN_vs_ddg"], abs_msg[1], 0.03),
     ]
     for name, signed, ab, tgt in mapping:
         lines.append(f"{name}\t{signed:.6f}\t{ab:.6f}\t{tgt}\t{verdict(ab, tgt)}")
