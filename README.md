@@ -31,7 +31,7 @@ Formal status (tables, figures, match/mismatch, how to re-run verification):
 
 **Regen RF status (2026-09-12 17:57 UTC):** Table1 7 match / 14 near / 0 mismatch of 21 (rounded-to-2dp vs BioRxiv); T2 S669=near; T3 Ssym=near; Fig6=8/8 combos within 0.02 abs of historical series (not bit-exact; trend retained). Details: [`MANUSCRIPT_RESULTS_MATCH.md`](manuscript_codebase_mapping/MANUSCRIPT_RESULTS_MATCH.md).
 
-**Full extraction / public bar (2026-09-12 19:23 UTC):** S2648 full tensors+features-from-full on LFS (2647/2648); Fig3 from full tensors (msg NR match; others near/partial); S669 full in progress; S921 queued. Compact features are interim only.
+**Full extraction / public bar (2026-09-12 20:27 UTC):** Ssym+S2648+S669 full tensors+features-from-full on LFS (S669 638 after 2jieA recover); S921 full in progress; Fig3 from S2648 full tensors.
 
 **Figs 3–5 status (2026-09-12 19:23 UTC):** Fig3 from full S2648 tensors (msg NR match; emb CN/msg CN near; emb NR Δ≈0.02); Figs4–5 still interim compact — re-run from full-tensor features next.
 

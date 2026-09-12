@@ -28,7 +28,7 @@ tensors are required for a finished manuscript-corresponding release.
 | Figures 3–5 | S2648 train-set feature analyses | **Figs 4–5: 5 match / 6 near / 2 mismatch of 13** (after Feature E column fix); Fig 3 blocked | Prior “E blow-up” was dual-direction vs augmented index mix-up; remaining Δ≤0.02 on two claims |
 | Figures 1–2 | Pipeline / method schematics | N/A (non-numeric) | |
 
-**Last updated:** 2026-09-12 19:23 UTC
+**Last updated:** 2026-09-12 20:27 UTC
 **Feature pickles:** `reproduction_inputs/pmpnn_ddg_features_2026-09-12/` (all four datasets, Git LFS)  
 **Protocol:** `train_eval_rf_from_v3_features.py`; Feature B `historical_weighted`; KPCA seed 0; S_669 ΔΔG sign flip per notebook.
 
@@ -172,3 +172,4 @@ silent drops as matches. This RF run uses 2647 train / 638 S_669 eval mutations.
 
 - 2026-09-12 19:23 UTC: S2648 full tensors + features-from-full on LFS (`S2648_extraction_tensors.pickle`, `S2648_features_from_full_tensors.pickle`; 2647/2648 ok; gap 2a01A L141R missing PSSM). Fig3 regenerated from full tensors. S669 full extraction running.
 - 2026-09-12 20:04 UTC: S669 present on LFS (S669_extraction_tensors.pickle)
+- 2026-09-12 20:27 UTC: S669 full tensors+features-from-full on LFS after 2jieA batch recovery (638 entries; commit 576af46). S921 full mid-run.
