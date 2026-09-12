@@ -4,7 +4,7 @@ Minimal ProteinMPNN utility fork for PMPNN-DDG feature extraction.
 
 ```text
 PDB → modified_proteinmpnn (this package)
-    → proteinmpnn_ddg_recovery extraction + features A–H
+    → pmpnn_ddg extraction + features A–H
     → Random Forest
 ```
 

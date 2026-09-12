@@ -1,9 +1,0 @@
-protein_key	mutation_label	sequence_index	status	elapsed_seconds	error_type	error_message
-1amqA	C191Y	179	ok	3.619	NA	NA
-1amqA	C191F	179	ok	3.580	NA	NA
-1amqA	C191W	179	ok	3.539	NA	NA
-1amqA	C191S	179	ok	3.559	NA	NA
-1bniA	F7L	4	ok	0.954	NA	NA
-1bniA	L14A	11	ok	0.958	NA	NA
-1bniA	T26A	23	ok	1.038	NA	NA
-1bniA	I51V	48	ok	0.948	NA	NA

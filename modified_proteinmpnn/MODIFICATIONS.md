@@ -28,5 +28,5 @@
 
 - V6_V2 notebook cells (`Ssym_ProteinMPNNTesting_V6_V2` et al.): DecLayer /
   ProteinMPNN.forward return shapes above
-- Prior recovery: `proteinmpnn_ddg_recovery/recovered_v6v2.py` (historically
+- Prior recovery: `pmpnn_ddg/recovered_v6v2.py` (historically
   monkeypatched Digging utils; now loads this clean package by default)

@@ -1,31 +1,11 @@
-# drive_evidence_copy lives on branch main only (recovery archive).
-# On this branch: ACCRE PDB/PSSM → reproduction_inputs/accre_dataset_pdb_pssm/
-# Historical Digging pickles → reproduction_inputs/historical_reference_pickles/
-
-# Runtime/session scaffolding
-.agents/
-.codex/
-
-# Copied primary evidence payloads: keep manifests/logs tracked, not the bulk copy.
-
-# The cleaned 2022 manuscript folder is core project evidence and is tracked.
-
-# The copied 2022 Colab notebooks are core code-provenance evidence and are tracked.
-
-# The ACCRE dataset input subset is core reproduction evidence and is tracked.
-
-# Narrowly promoted Protein_MPNN_Digging recovery artifacts.
-
-# Nested source clones are evidence inputs, not files owned by this workspace repo.
-source_repos/
-
-# Python and notebook runtime residue
 .venv*/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
+.agents/
+.codex/
 
-# Large or binary experiment/model artifacts require explicit promotion.
+# Broad binary ignore; LFS-tracked paths are re-allowed below.
 *.pickle
 *.pkl
 *.joblib
@@ -35,32 +15,21 @@ __pycache__/
 *.pth
 *.h5
 *.hdf5
-
-# Re-allow exact promoted binary artifacts after the broad binary rules above.
-!reproduction_inputs/proteinmpnn_checkpoints/vanilla_model_weights/v_48_020.pt
-
-# Local scratch/output archives
 *.zip
 *.tar
 *.tar.gz
-*.tgz
 
-# Independent PDB fetch raw depositions (re-download via script); curated extracts tracked.
-reproduction_inputs/independent_pdb_fetches/raw/
+!data/checkpoints/vanilla_model_weights/v_48_020.pt
+!data/tensors/
+!data/tensors/**
+!data/tensors/*.pickle
+!data/tensors/shards/
+!data/tensors/shards/**
+!data/features/
+!data/features/**
+!data/features/*.pickle
+!data/historical/
+!data/historical/**
+!data/historical/*.pickle
 
-# Promoted manuscript-path compact feature pickles (Git LFS)
-!reproduction_inputs/pmpnn_ddg_features_2026-09-12/
-!reproduction_inputs/pmpnn_ddg_features_2026-09-12/**
-!reproduction_inputs/pmpnn_ddg_features_2026-09-12/*.pickle
-
-# Promoted manuscript-path full extraction tensors (Git LFS)
-!reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/
-!reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/**
-!reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/*.pickle
-!reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/
-!reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/**
-!reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/**/*.pkl
-
-# Pipeline run logs (local only)
-reproduction_runs/**/logs/
-reproduction_runs/**/*.nohup.log
+results/extraction/

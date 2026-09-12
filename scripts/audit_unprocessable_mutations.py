@@ -23,16 +23,16 @@ from Bio.PDB import PDBParser
 
 WORKSPACE_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_PDB_FALLBACK = (
-    WORKSPACE_ROOT / "reproduction_inputs" / "independent_pdb_fetches" / "curated"
+    WORKSPACE_ROOT / "data" / "independent_pdb_fetches" / "curated"
 )
 ACCRE = (
     WORKSPACE_ROOT
-    / "reproduction_inputs"
+    / "data"
     / "accre_dataset_pdb_pssm"
 )
 DIGGING = (
     WORKSPACE_ROOT
-    / "reproduction_inputs"
+    / "data"
     / "historical_reference_pickles"
 )
 
