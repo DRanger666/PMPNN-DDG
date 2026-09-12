@@ -1,0 +1,272 @@
+{
+  "meta": {
+    "coverage": {
+      "S_2648": {
+        "kept": 2620,
+        "skipped_incomplete": 28
+      },
+      "S_669": {
+        "kept": 638,
+        "skipped_incomplete": 31
+      },
+      "S_921": {
+        "kept": 921,
+        "skipped_incomplete": 0
+      },
+      "Ssym": {
+        "kept": 342,
+        "skipped_incomplete": 0
+      }
+    },
+    "feature_b_mode": "manuscript_unweighted",
+    "feature_source": "saved_historical_V3_engineered+KPCA_E_from_same_pickles",
+    "feature_source_paths": {
+      "S_2648": "/workspace/ProteinMPNN-DDG/drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_2648_pmppn_info_dict_V3.pickle",
+      "S_669": "/workspace/ProteinMPNN-DDG/drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_669_pmppn_info_dict_V3.pickle",
+      "S_921": "/workspace/ProteinMPNN-DDG/drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/S_921_pmppn_info_dict_V3.pickle",
+      "Ssym": "/workspace/ProteinMPNN-DDG/drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/Ssym_pmppn_info_dict_V3.pickle"
+    },
+    "feature_to_index": {
+      "A": 0,
+      "B": 6,
+      "C": 7,
+      "D": 8,
+      "E": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "F": 5,
+      "G": 9,
+      "H": 10
+    },
+    "kpca_sample_size": 10000,
+    "kpca_seed": 0,
+    "matrix_shapes": {
+      "S_2648": {
+        "full_ah_n_features": 12,
+        "n_aug": 5240,
+        "n_aug_features": 41,
+        "n_forward": 2620
+      },
+      "S_669": {
+        "full_ah_n_features": 12,
+        "n_aug": 1276,
+        "n_aug_features": 41,
+        "n_forward": 638
+      },
+      "S_921": {
+        "full_ah_n_features": 12,
+        "n_aug": 1842,
+        "n_aug_features": 41,
+        "n_forward": 921
+      },
+      "Ssym": {
+        "full_ah_n_features": 12,
+        "n_aug": 684,
+        "n_aug_features": 41,
+        "n_forward": 342
+      }
+    },
+    "note": "Feature E is re-fit KernelPCA on S_2648 message-change vectors (notebook used unseeded np.random.choice); KPCA values are therefore not bit-identical to the historical Colab run, but protocol-aligned."
+  },
+  "summaries": [
+    {
+      "config_name": "notebook_table1",
+      "elapsed_sec": 3.503434658050537,
+      "full_ah_means": {
+        "S_669": {
+          "rF": 0.4788479820811458,
+          "rF+R": 0.643172255008327,
+          "rF-R": -0.994080563027531,
+          "rR": 0.4773054253149111,
+          "rmsF": 1.4529001716738368,
+          "rmsF+R": 1.4534963895953048,
+          "rmsR": 1.4540914121201258
+        },
+        "S_921": {
+          "rF": 0.7670151224628708,
+          "rF+R": 0.7948419713620004,
+          "rF-R": -0.9962673218478161,
+          "rR": 0.7698959919821654,
+          "rmsF": 1.4968828277203183,
+          "rmsF+R": 1.4936037852718533,
+          "rmsR": 1.4903136606375182
+        },
+        "Ssym": {
+          "rF": 0.7153516105879815,
+          "rF+R": 0.8099419746571934,
+          "rF-R": -0.9947625307970952,
+          "rR": 0.717688834884188,
+          "rmsF": 1.1066938956825898,
+          "rmsF+R": 1.105043356470256,
+          "rmsR": 1.103367141836519
+        }
+      },
+      "full_ah_vs_manuscript": {
+        "S_669": {
+          "rF": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 0.4788479820811458,
+            "ours_rounded": 0.48,
+            "paper_rounded": 0.48
+          },
+          "rF+R": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 0.643172255008327,
+            "ours_rounded": 0.64,
+            "paper_rounded": 0.64
+          },
+          "rF-R": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": -0.994080563027531,
+            "ours_rounded": -0.99,
+            "paper_rounded": -0.99
+          },
+          "rR": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 0.4773054253149111,
+            "ours_rounded": 0.48,
+            "paper_rounded": 0.48
+          },
+          "rmsF": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 1.4529001716738368,
+            "ours_rounded": 1.45,
+            "paper_rounded": 1.45
+          },
+          "rmsF+R": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 1.4534963895953048,
+            "ours_rounded": 1.45,
+            "paper_rounded": 1.45
+          },
+          "rmsR": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 1.4540914121201258,
+            "ours_rounded": 1.45,
+            "paper_rounded": 1.45
+          }
+        },
+        "S_921": {
+          "rF": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 0.7670151224628708,
+            "ours_rounded": 0.77,
+            "paper_rounded": 0.77
+          },
+          "rF+R": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 0.7948419713620004,
+            "ours_rounded": 0.79,
+            "paper_rounded": 0.79
+          },
+          "rF-R": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": -0.9962673218478161,
+            "ours_rounded": -1.0,
+            "paper_rounded": -1.0
+          },
+          "rR": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 0.7698959919821654,
+            "ours_rounded": 0.77,
+            "paper_rounded": 0.77
+          },
+          "rmsF": {
+            "abs_diff_rounded": 0.010000000000000009,
+            "match_rounded": false,
+            "ours_mean": 1.4968828277203183,
+            "ours_rounded": 1.5,
+            "paper_rounded": 1.49
+          },
+          "rmsF+R": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 1.4936037852718533,
+            "ours_rounded": 1.49,
+            "paper_rounded": 1.49
+          },
+          "rmsR": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 1.4903136606375182,
+            "ours_rounded": 1.49,
+            "paper_rounded": 1.49
+          }
+        },
+        "Ssym": {
+          "rF": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 0.7153516105879815,
+            "ours_rounded": 0.72,
+            "paper_rounded": 0.72
+          },
+          "rF+R": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 0.8099419746571934,
+            "ours_rounded": 0.81,
+            "paper_rounded": 0.81
+          },
+          "rF-R": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": -0.9947625307970952,
+            "ours_rounded": -0.99,
+            "paper_rounded": -0.99
+          },
+          "rR": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 0.717688834884188,
+            "ours_rounded": 0.72,
+            "paper_rounded": 0.72
+          },
+          "rmsF": {
+            "abs_diff_rounded": 0.010000000000000009,
+            "match_rounded": false,
+            "ours_mean": 1.1066938956825898,
+            "ours_rounded": 1.11,
+            "paper_rounded": 1.1
+          },
+          "rmsF+R": {
+            "abs_diff_rounded": 0.010000000000000009,
+            "match_rounded": false,
+            "ours_mean": 1.105043356470256,
+            "ours_rounded": 1.11,
+            "paper_rounded": 1.1
+          },
+          "rmsR": {
+            "abs_diff_rounded": 0.0,
+            "match_rounded": true,
+            "ours_mean": 1.103367141836519,
+            "ours_rounded": 1.1,
+            "paper_rounded": 1.1
+          }
+        }
+      },
+      "n_runs": 3,
+      "rf_kwargs": {
+        "max_features": "sqrt",
+        "max_samples": 0.5,
+        "min_samples_split": 2,
+        "n_estimators": 500
+      }
+    }
+  ]
+}
