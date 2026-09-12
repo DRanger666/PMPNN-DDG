@@ -59,3 +59,19 @@ Datasets: `Ssym`, `S2648`, `S669`, `S921`.
 | `most_attended_neighbor_indices_top15` | `top_15_neighbor_indices` |
 | `center_to_neighbor_messages_wt` | `neighbor_w_message_vector_coming_from_center` |
 | `neighbor_embeddings_mt` | `neighbor_m_neighbor_embedding` |
+
+## RF packing: neighbor-embedding ΔE vs message ΔM (71 → 41)
+
+Never call these vague “emb” / “m” columns. Scientific objects:
+
+| Object | Manuscript | Role in packing |
+| --- | --- | --- |
+| Neighbor embedding change ΔE_j | §3.2.3 Feature D uses Σ‖ΔE_j‖; raw (K,128) also PCA/KPCA’d | **Not** Feature E |
+| Center→neighbor message change ΔM_j | §3.2.4 Feature E = Σ RBF₁₋₅(ΔM_j) | Feature E = first 5 message-change KPCA comps |
+
+Module: `proteinmpnn_ddg_recovery/features/rf_feature_matrix_packing.py`
+
+- **71-col dual-direction row** — one mutation; scalars + forward/reverse projection blocks for ΔE and ΔM side-by-side. Feature E indices: `46:51`.
+- **41-col F+R row** — after augmentation; two rows per mutation. Feature E indices: `31:36`.
+
+Do **not** apply augmented E indices to the dual-direction matrix (that bug selected neighbor-embedding-change KPCA and broke Figs 4–5).

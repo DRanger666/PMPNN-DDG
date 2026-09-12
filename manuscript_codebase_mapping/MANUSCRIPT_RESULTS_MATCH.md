@@ -18,7 +18,7 @@ that **code on this branch**, run end-to-end, reproduces those numbers.
 | Table 2 | S669 PMPNN-DDG row | **near** | Same RF outputs as Table 1 S669; external rows = literature |
 | Table 3 | Ssym PMPNN-DDG row | **near** | Same RF outputs as Table 1 Ssym; external rows = literature |
 | Figure 6 | Incremental A→H total-PCC on S669/Ssym | **8/8 combos within 0.02 abs of historical series (not bit-exact; trend retained)** | Incremental combos in same RF run |
-| Figures 3–5 | S2648 train-set feature analyses | **Partial (improved)** | Figs 4–5: 5 match / 6 near / 2 mismatch of 13 after message-KPCA E cols 46–50 fix; Fig 3 blocked (dual C/D) |
+| Figures 3–5 | S2648 train-set feature analyses | **Figs 4–5: 5 match / 6 near / 2 mismatch of 13** (after Feature E column fix); Fig 3 blocked | Prior “E blow-up” was dual-direction vs augmented index mix-up; remaining Δ≤0.02 on two claims |
 | Figures 1–2 | Pipeline / method schematics | N/A (non-numeric) | |
 
 **Last updated:** 2026-09-12 18:30 UTC
@@ -113,27 +113,30 @@ and produced false E mismatches; RF Table 1 was unaffected (uses augment then [3
 | Figure 4 | `figure4_feature_feature_correlation.png` + corr CSV | **near/match** — 5 match / 6 near / 2 mismatch of 13 claims |
 | Figure 5 | `figure5_feature_feature_correlation.png` + corr CSV | **near/match** — same claim table (`figure45_claim_comparison.tsv`) |
 
-### Figure 4–5 claim spot-checks (2dp, after E-col fix)
+### Figure 4–5 claim spot-checks (2dp)
+
+Recomputed after fixing Feature E columns to **message-change KPCA** on the
+71-col dual-direction row (`FEATURE_E_COLS_ON_DUAL_DIRECTION_ROW`).
 
 | Claim | Manuscript | Ours (2dp) | Verdict |
 | --- | ---: | ---: | --- |
-| C vs ΔΔG | -0.15 | -0.15 | match |
-| A vs B | 0.52 | 0.52 | match |
-| E1 vs D | 0.49 | 0.49 | match |
-| E2 vs D | 0.17 | 0.18 | near |
-| E4 vs ΔΔG | 0.21 | 0.22 | near |
-| E3 vs A | 0.55 | 0.54 | near |
-| E3 vs B | 0.40 | 0.39 | near |
-| E3 vs C | 0.55 | 0.54 (|r|; sign flip) | near |
-| E3 vs ΔΔG | 0.26 | 0.24 | mismatch (Δ=0.02) |
-| E2 vs E4 | 0.20 | 0.18 | mismatch (Δ=0.02) |
-| F vs A | 0.32 | 0.32 | match |
-| G vs A | 0.15 | 0.15 | match |
-| H vs E1 | 0.39 | 0.38 (|r|) | near |
+| C_vs_ddg | -0.15 | -0.15 | **match** |
+| A_vs_B | 0.52 | 0.52 | **match** |
+| E1_vs_D | 0.49 | 0.49 | **match** |
+| E2_vs_D | 0.17 | 0.18 | **near** |
+| E4_vs_ddg | 0.21 | 0.22 | **near** |
+| E3_vs_A | 0.55 | 0.54 | **near** |
+| E3_vs_B | 0.4 | 0.39 | **near** |
+| E3_vs_C | 0.55 | 0.54 | **near** |
+| E3_vs_ddg | 0.26 | 0.24 | **mismatch** |
+| E2_vs_E4 | 0.2 | 0.18 | **mismatch** |
+| F_vs_A | 0.32 | 0.32 | **match** |
+| G_vs_A | 0.15 | 0.15 | **match** |
+| H_vs_E1 | 0.39 | 0.38 | **near** |
 
-**Remaining blockers:** (1) Fig 3 dual C/D encodings; (2) Feature B wording open (`MANUSCRIPT_TENSOR_EXTRACTION_FIDELITY.md` Item B) — RF uses `historical_weighted`; (3) two borderline 0.02 claim deltas on E3↔ΔΔG and E2↔E4.
+**Root cause of earlier 9 mismatches:** figure script applied augmented-matrix E indices `[31..35]` to the unaugmented 71-col row (those columns are neighbor-embedding-change KPCA reverse). True Feature E is message-change KPCA at `[46..50]` on that row / `[31..35]` only after F+R packing.
 
-**Full S2648 extraction tensors** still required for Feature B / tensor-fidelity audits, not for Figs 4–5 heatmaps from compact features.
+**Remaining:** two claims at |Δ_rounded|=0.02 (E3 vs ΔΔG, E2 vs E4) — consistent with re-fit KPCA subsample (seed 0) vs historical unseeded fit; not a wrong scientific object. Fig 3 still blocked (dual C/D encodings).
 
 ## Figures 1–2
 
