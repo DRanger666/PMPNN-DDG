@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
-"""PDB + mutation table + ProteinMPNN → V3 tensors → engineered/PSSM features.
+"""PDB + mutation table + ProteinMPNN → manuscript-path tensors/features → RF.
 
-Clean reproduction path:
+Manuscript path (not historical V3 pickle recovery):
 
   ACCRE PDB dirs + mutation_ddg_tables + v_48_020.pt
     → modified_proteinmpnn (baked-in extraction hooks)
     → proteinmpnn_ddg_recovery.features (A–H)
-    → regenerated V3-shaped pickle under reproduction_runs/
+    → manuscript_path_features.pickle (+ optional full tensors)
 
-Prefer --by-protein-subprocess --compact-for-rf for full datasets (isolates RSS).
+Historical Digging `*_pmppn_info_dict_V3.pickle` files are a separate legacy
+artifact class. This pipeline regenerates the manuscript computation path.
+
+Prefer --by-protein-subprocess with --save-mode full|both for durable artifacts.
+--compact-for-rf remains available for memory-light RF-only shards.
 """
 
 from __future__ import annotations
@@ -63,6 +67,9 @@ ACCRE = (
     / "ACCRE_PyRun_Setup"
 )
 TABLES = WORKSPACE_ROOT / "reproduction_inputs" / "mutation_ddg_tables"
+MANUSCRIPT_PATH_FEATURES_PICKLE = "manuscript_path_features.pickle"
+MANUSCRIPT_PATH_FEATURES_PARTIAL = "manuscript_path_features.partial.pickle"
+LEGACY_V3_FEATURES_PICKLE_ALIAS = "regenerated_v3_features.pickle"  # compat symlink name
 DEFAULT_PDB_FALLBACK_DIR = (
     WORKSPACE_ROOT / "reproduction_inputs" / "independent_pdb_fetches" / "curated"
 )
@@ -370,6 +377,7 @@ def run_by_protein_subprocess(
     output_dir: Path,
     resume: bool = False,
     pdb_fallback_dir: Path | None = None,
+    save_mode: str = "full",
 ) -> tuple[dict[str, list[dict[str, Any]]], list[dict[str, Any]]]:
     worker = WORKSPACE_ROOT / "scripts" / "_pdb_to_features_one_protein.py"
     shard_dir = output_dir / "shards"
@@ -401,7 +409,7 @@ def run_by_protein_subprocess(
                 status_rows.extend(payload["statuses"])
                 global_index += len(protein_jobs)
                 print(f"  resume skip {protein_key} (shard exists)", flush=True)
-                with (output_dir / "regenerated_v3_features.partial.pickle").open("wb") as handle:
+                with (output_dir / MANUSCRIPT_PATH_FEATURES_PARTIAL).open("wb") as handle:
                     pickle.dump(regenerated, handle, protocol=pickle.HIGHEST_PROTOCOL)
                 write_tsv(table_dir / "mutation_status.tsv", status_rows, STATUS_FIELDS)
                 continue
@@ -437,8 +445,7 @@ def run_by_protein_subprocess(
         ]
         if pdb_fallback_dir is not None:
             cmd.extend(["--pdb-fallback-dir", str(pdb_fallback_dir)])
-        if compact_for_rf:
-            cmd.append("--compact-for-rf")
+        cmd.extend(["--save-mode", save_mode])
         completed = subprocess.run(cmd, check=False)
         if completed.returncode != 0 or not out_path.exists():
             for job in protein_jobs:
@@ -459,7 +466,7 @@ def run_by_protein_subprocess(
         regenerated[protein_key] = payload["entries"]
         status_rows.extend(payload["statuses"])
         global_index += len(protein_jobs)
-        with (output_dir / "regenerated_v3_features.partial.pickle").open("wb") as handle:
+        with (output_dir / "manuscript_path_features.partial.pickle").open("wb") as handle:
             pickle.dump(regenerated, handle, protocol=pickle.HIGHEST_PROTOCOL)
         write_tsv(table_dir / "mutation_status.tsv", status_rows, STATUS_FIELDS)
         gc.collect()
@@ -526,7 +533,7 @@ def run_inprocess(
         gc.collect()
         if (index + 1) % 5 == 0 or index + 1 == len(jobs):
             write_tsv(table_dir / "mutation_status.tsv", status_rows, STATUS_FIELDS)
-            with (output_dir / "regenerated_v3_features.partial.pickle").open("wb") as handle:
+            with (output_dir / "manuscript_path_features.partial.pickle").open("wb") as handle:
                 pickle.dump(regenerated, handle, protocol=pickle.HIGHEST_PROTOCOL)
     return regenerated, status_rows
 
@@ -562,13 +569,28 @@ def main() -> int:
     )
     parser.add_argument("--compare-reference", action="store_true")
     parser.add_argument("--by-protein-subprocess", action="store_true")
-    parser.add_argument("--compact-for-rf", action="store_true")
+    parser.add_argument(
+        "--compact-for-rf",
+        action="store_true",
+        help="Deprecated alias for --save-mode rf_compact",
+    )
+    parser.add_argument(
+        "--save-mode",
+        choices=["rf_compact", "full", "both"],
+        default=None,
+        help="Artifact richness: full=durable manuscript-path tensors+features; "
+        "rf_compact=RF scalars only; both=full primary + rf compact sidecar. "
+        "Default: full (or rf_compact if --compact-for-rf).",
+    )
     parser.add_argument(
         "--resume",
         action="store_true",
         help="With --by-protein-subprocess, reuse existing shards/*.out.pkl",
     )
     args = parser.parse_args()
+    if args.save_mode is None:
+        args.save_mode = "rf_compact" if args.compact_for_rf else "full"
+    args.compact_for_rf = args.save_mode == "rf_compact"
 
     preset = DATASET_PRESETS[args.dataset]
     mutation_table = args.mutation_table or preset["mutation_table"]
@@ -595,7 +617,7 @@ def main() -> int:
     print(
         f"Dataset={args.dataset} jobs={len(jobs)} pdb_dir={pdb_dir} "
         f"seed_mode={args.seed_mode} seed={args.seed} "
-        f"subprocess={args.by_protein_subprocess} compact={args.compact_for_rf} "
+        f"subprocess={args.by_protein_subprocess} save_mode={args.save_mode} "
         f"resume={args.resume}",
         flush=True,
     )
@@ -615,6 +637,7 @@ def main() -> int:
             output_dir=output_dir,
             resume=args.resume,
             pdb_fallback_dir=pdb_fallback_dir,
+            save_mode=args.save_mode,
         )
         runtime = load_runtime(
             utils_path=args.utils_path,
@@ -634,15 +657,34 @@ def main() -> int:
             pssm_dir=pssm_dir,
             seed=args.seed,
             seed_mode=args.seed_mode,
-            compact_for_rf=args.compact_for_rf,
+            compact_for_rf=(args.save_mode == "rf_compact"),
             output_dir=output_dir,
             pdb_fallback_dir=pdb_fallback_dir,
         )
 
-    pickle_path = output_dir / "regenerated_v3_features.pickle"
+    pickle_path = output_dir / MANUSCRIPT_PATH_FEATURES_PICKLE
     with pickle_path.open("wb") as handle:
         pickle.dump(regenerated, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    # Compat alias for older RF override paths / docs that still say regenerated_v3_*.
+    legacy_alias = output_dir / LEGACY_V3_FEATURES_PICKLE_ALIAS
+    try:
+        if legacy_alias.exists() or legacy_alias.is_symlink():
+            legacy_alias.unlink()
+        legacy_alias.symlink_to(pickle_path.name)
+    except OSError:
+        # Fall back to a second copy name only if symlinks are unavailable.
+        with legacy_alias.open("wb") as handle:
+            pickle.dump(regenerated, handle, protocol=pickle.HIGHEST_PROTOCOL)
     write_tsv(table_dir / "mutation_status.tsv", status_rows, STATUS_FIELDS)
+    schema_note = output_dir / "MANUSCRIPT_PATH_ARTIFACT_SCHEMA.md"
+    if not schema_note.exists():
+        schema_note.write_text(
+            "# Manuscript-path artifact schema\n\n"
+            "See `manuscript_codebase_mapping/MANUSCRIPT_PATH_VS_HISTORICAL_V3.md`.\n"
+            f"save_mode={args.save_mode}\n"
+            f"primary_pickle={pickle_path.name}\n"
+            f"legacy_alias={legacy_alias.name}\n"
+        )
 
     reference_compare = None
     if args.compare_reference:
@@ -660,6 +702,8 @@ def main() -> int:
         "seed": args.seed,
         "seed_mode": args.seed_mode,
         "by_protein_subprocess": args.by_protein_subprocess,
+        "save_mode": args.save_mode,
+        "artifact_kind": "manuscript_path",
         "compact_for_rf": args.compact_for_rf,
         "resume": args.resume,
         "elapsed_seconds": time.time() - t_run,
