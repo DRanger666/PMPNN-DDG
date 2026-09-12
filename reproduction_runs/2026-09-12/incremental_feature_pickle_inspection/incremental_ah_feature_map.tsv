@@ -1,0 +1,9 @@
+label	columns	code_field_or_expression	column_block_meaning_from_source
+A	0	center_mut_wild_energy	center wild-vs-mutant log-probability/energy change
+B	6	V2_backward_weighted_neighbor_entropy_changes	weighted backward neighbor entropy change
+C	7	center_neighbor_weight_check_w_m	center-to-neighbor message norm ratio
+D	8	neighbor_embedding_change_m_w	summed neighbor embedding change
+E	31,32,33,34,35	first five columns selected from reverse neighbor-embedding KPCA block	columns 31..40 are reverse neighbor-embedding KPCA
+F	5	wild_pssm - alternate_pssm	PSSM delta
+G	9	wild_pssm	wild-type PSSM value
+H	10	alternate_pssm	mutant amino-acid PSSM value

@@ -1,0 +1,7 @@
+label	columns	code_field_or_expression	notebook_comment_name	workflow
+A	0	center_mut_wild_energy	P_DP	feature_combo_* V2 all-combinations
+B	4	V2_backward_weighted_neighbor_backward_KL	BACK_KL	feature_combo_* V2 all-combinations
+C	7	center_neighbor_weight_check_w_m	W/M	feature_combo_* V2 all-combinations
+D	2	V2_backward_weighted_neighbor_energy_changes	Neighbor_Energy	feature_combo_* V2 all-combinations
+E	6	V2_backward_weighted_neighbor_entropy_changes	Neighbor_Entropy	feature_combo_* V2 all-combinations
+F	5	wild_pssm - alternate_pssm	PSSM	feature_combo_* V2 all-combinations

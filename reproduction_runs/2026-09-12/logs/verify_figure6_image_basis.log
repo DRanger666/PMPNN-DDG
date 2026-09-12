@@ -1,0 +1,5 @@
+wrote code_inventory_analysis/figure6_image_verification
+exact_matches=1
+docx_exact_media_matches=0
+docx_figure6_targets=media/image6.png
+match source_repos/SajidAhmeduiu_ProteinMPNN/Sajid_Additions/Quick_Dirty_MPNN_ML_V2_VGRAPHS_V1.ipynb cell=40 output=0 9cec9fcf1d3f466b8bf0f1766bc98c20152b2c617c5d872d3e3588f79143da95

@@ -118,6 +118,8 @@ def notebook_output_rows(manuscript_hash: str) -> tuple[list[dict[str, Any]], li
     matches: list[dict[str, Any]] = []
 
     for notebook_path in NOTEBOOKS:
+        if not notebook_path.exists():
+            continue
         notebook = json.loads(notebook_path.read_text(encoding="utf-8"))
         for cell_index, cell in enumerate(notebook.get("cells", [])):
             source = "".join(cell.get("source", []))

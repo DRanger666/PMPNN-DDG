@@ -1,0 +1,14 @@
+field	baseline_exact	baseline_allclose	baseline_n	continuous_rng_exact	continuous_rng_allclose	continuous_rng_n	replay_neighbors_exact	replay_neighbors_allclose	replay_neighbors_n
+log_prob	0	0	6	0	0	6	0	0	6
+top_15_neighbor_indices	0	0	6	0	0	6	6	6	6
+top_10_neighbor_indices	0	0	6	1	1	6	6	6	6
+top_5_neighbor_indices	6	6	6	5	5	6	6	6	6
+top_15_closest_neighbor_indices	6	6	6	6	6	6	6	6	6
+top_10_closest_neighbor_indices	6	6	6	6	6	6	6	6	6
+top_15_attention_weights	0	0	6	0	0	6	0	0	6
+w_n_log_prob	0	0	6	0	0	6	0	0	6
+m_n_log_prob	0	0	6	0	0	6	0	0	6
+neighbor_w_message_vector_coming_from_center	0	0	6	0	0	6	0	0	6
+neighbor_m_message_vector_coming_from_center	0	0	6	0	0	6	0	0	6
+neighbor_w_neighbor_embedding	0	0	6	0	0	6	0	0	6
+neighbor_m_neighbor_embedding	0	0	6	0	0	6	0	0	6

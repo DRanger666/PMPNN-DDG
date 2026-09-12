@@ -1,0 +1,36 @@
+[
+  {
+    "first_item_keys": [
+      "S_2648_direct_PCC",
+      "S_2648_direct_RMSE",
+      "S_2648_reverse_PCC",
+      "S_2648_reverse_RMSE",
+      "S_2648_total_PCC",
+      "S_2648_total_RMSE",
+      "S_669_direct_PCC",
+      "S_669_direct_RMSE",
+      "S_669_reverse_PCC",
+      "S_669_reverse_RMSE",
+      "S_669_total_PCC",
+      "S_669_total_RMSE",
+      "S_921_direct_PCC",
+      "S_921_direct_RMSE",
+      "S_921_reverse_PCC",
+      "S_921_reverse_RMSE",
+      "S_921_total_PCC",
+      "S_921_total_RMSE",
+      "Ssym_direct_PCC",
+      "Ssym_direct_RMSE",
+      "Ssym_reverse_PCC",
+      "Ssym_reverse_RMSE",
+      "Ssym_total_PCC",
+      "Ssym_total_RMSE"
+    ],
+    "item_types": [
+      "builtins.dict"
+    ],
+    "len": 10,
+    "pickle_file": "list_incremental_feature_result_dict.pickle",
+    "type": "builtins.list"
+  }
+]

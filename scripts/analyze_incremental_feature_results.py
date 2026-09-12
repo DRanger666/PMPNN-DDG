@@ -476,9 +476,15 @@ def main() -> None:
     all_rows: list[dict[str, object]] = []
     object_summaries: list[dict[str, Any]] = []
     for pickle_file in PICKLE_FILES:
+        pickle_path = EVIDENCE_ROOT / pickle_file
+        if not pickle_path.exists():
+            print(f"skip missing pickle: {pickle_file}")
+            continue
         obj = load_pickle(pickle_file)
         object_summaries.append(object_summary(pickle_file, obj))
         all_rows.extend(flatten_pickle(pickle_file, obj))
+    if not all_rows:
+        raise SystemExit("No incremental-feature pickles found under evidence root.")
 
     summary_rows = summarize_rows(all_rows)
     figure6_rows = filter_summary(

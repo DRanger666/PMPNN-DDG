@@ -460,8 +460,15 @@ def extract_mutation_tensor_fields(
     protein_key: str,
     mutation_label: str,
     sequence_index: int,
+    neighbor_indices_override: list[int] | None = None,
 ) -> MutationTensorExtraction:
-    """Recover V6_V2 ProteinMPNN-derived tensor fields for one mutation."""
+    """Recover V6_V2 ProteinMPNN-derived tensor fields for one mutation.
+
+    Optional ``neighbor_indices_override`` replays a saved
+    ``top_15_neighbor_indices`` list instead of ranking center-pass message
+    norms. This is a diagnostic mode for V3 reconciliation, not a claim that
+    historical extraction used an external neighbor list.
+    """
 
     chain_id = protein_key[-1]
     alternate_aa = mutation_label[-1]
@@ -498,6 +505,22 @@ def extract_mutation_tensor_fields(
     top_5_neighbor_indices = local_neighbors[0, sequence_index, top_5_local_indices]
     top_15_closest_neighbor_indices = local_neighbors[0, sequence_index, 1:16]
     top_10_closest_neighbor_indices = local_neighbors[0, sequence_index, 1:11]
+
+    if neighbor_indices_override is not None:
+        if len(neighbor_indices_override) != 15:
+            raise ValueError(
+                f"neighbor_indices_override must have length 15, got {len(neighbor_indices_override)}"
+            )
+        override = torch.tensor(
+            neighbor_indices_override,
+            dtype=top_15_neighbor_indices.dtype,
+            device=top_15_neighbor_indices.device,
+        )
+        top_15_neighbor_indices = override
+        top_10_neighbor_indices = override[:10]
+        top_5_neighbor_indices = override[:5]
+        # Attention weights remain from the center-pass ranking; neighbor
+        # identity fields are forced to the saved indices for downstream replay.
 
     fields: dict[str, Any] = {
         "log_prob": log_probs.cpu().numpy(),
