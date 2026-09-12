@@ -27,15 +27,13 @@ DEFAULT_PDB_FALLBACK = (
 )
 ACCRE = (
     WORKSPACE_ROOT
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
-    / "ACCRE_PyRun_Setup"
+    / "reproduction_inputs"
+    / "accre_dataset_pdb_pssm"
 )
 DIGGING = (
     WORKSPACE_ROOT
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
-    / "Protein_MPNN_Digging"
+    / "reproduction_inputs"
+    / "historical_reference_pickles"
 )
 
 DEFAULT_DATASETS = {

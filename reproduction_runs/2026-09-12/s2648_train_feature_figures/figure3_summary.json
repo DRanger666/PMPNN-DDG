@@ -1,0 +1,33 @@
+{
+  "n_instances": 2647,
+  "n_missing_keys": 0,
+  "source": "reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/S2648_extraction_tensors.pickle",
+  "pearson_signed": {
+    "message_NR_vs_ddg": -0.15358394888382315,
+    "message_CN_vs_ddg": 0.037262655217490774,
+    "neighbor_embedding_NR_vs_ddg": 0.2751865048247673,
+    "neighbor_embedding_CN_vs_ddg": 0.31858958931478776
+  },
+  "pearson_abs": {
+    "message_NR": 0.15358394888382315,
+    "message_CN": 0.037262655217490774,
+    "neighbor_embedding_NR": 0.2751865048247673,
+    "neighbor_embedding_CN": 0.31858958931478776
+  },
+  "notebook_printed_abs": {
+    "neighbor_embedding_pair_abs": [
+      0.26,
+      0.31
+    ],
+    "message_pair_abs": [
+      0.15,
+      0.03
+    ]
+  },
+  "vs_notebook": {
+    "neighbor_embedding_NR": "mismatch",
+    "neighbor_embedding_CN": "near",
+    "message_NR": "match",
+    "message_CN": "near"
+  }
+}

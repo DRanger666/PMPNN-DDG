@@ -41,12 +41,10 @@ DEFAULT_UTILS_PATH = (
     WORKSPACE_ROOT / "modified_proteinmpnn" / "protein_mpnn_utils.py"
 )
 LEGACY_DIGGING_UTILS_PATH = (
+    # Digging vanilla tree lived under drive_evidence_copy on main only.
+    # Prefer DEFAULT_UTILS_PATH (modified_proteinmpnn) on this branch.
     WORKSPACE_ROOT
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
-    / "Protein_MPNN_Digging"
-    / "ProteinMPNN"
-    / "vanilla_proteinmpnn"
+    / "modified_proteinmpnn"
     / "protein_mpnn_utils.py"
 )
 DEFAULT_CHECKPOINT_PATH = (
@@ -58,9 +56,8 @@ DEFAULT_CHECKPOINT_PATH = (
 )
 DEFAULT_SSYM_PDB_DIR = (
     WORKSPACE_ROOT
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
-    / "ACCRE_PyRun_Setup"
+    / "reproduction_inputs"
+    / "accre_dataset_pdb_pssm"
     / "Ssym_PDB_Files"
 )
 

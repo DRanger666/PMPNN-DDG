@@ -1,0 +1,25 @@
+Dataset=Ssym jobs=16 pdb_dir=/workspace/ProteinMPNN-DDG/drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/Ssym_PDB_Files seed_mode=continuous seed=0
+[1/16] ok 1amqA C191Y (3.530s)
+[2/16] ok 1amqA C191F (3.278s)
+[3/16] ok 1amqA C191W (3.213s)
+[4/16] ok 1amqA C191S (3.139s)
+[5/16] ok 1bniA F7L (0.978s)
+[6/16] ok 1bniA L14A (0.975s)
+[7/16] ok 1bniA T26A (0.988s)
+[8/16] ok 1bniA I51V (0.986s)
+[9/16] ok 1bniA I76A (0.958s)
+[10/16] ok 1bniA I76V (0.961s)
+[11/16] ok 1bniA Y78F (0.976s)
+[12/16] ok 1bniA I88A (1.024s)
+[13/16] ok 1bniA I88V (0.987s)
+[14/16] ok 1bniA L89V (1.025s)
+[15/16] ok 1bniA S91A (1.018s)
+[16/16] ok 1bniA I96A (1.008s)
+{
+  "dataset": "Ssym",
+  "n_jobs": 16,
+  "n_ok": 16,
+  "n_error": 0,
+  "elapsed_seconds": 25.199209451675415,
+  "output_pickle": "reproduction_runs/2026-09-12/pdb_to_features_ssym_slice16/regenerated_v3_features.pickle"
+}

@@ -27,42 +27,32 @@ import xml.etree.ElementTree as ET
 
 
 WORKSPACE = Path(__file__).resolve().parents[1]
-OUTPUT_DIR = WORKSPACE / "code_inventory_analysis" / "figure6_image_verification"
+OUTPUT_DIR = WORKSPACE / "reproduction_runs" / "figure6_image_verification"
 
+# Manuscript PNGs / DOCX / Colab notebooks live on branch `main` under
+# `drive_evidence_copy/` (recovery archive). Optional local overrides:
+_MAIN_DRIVE = WORKSPACE / "drive_evidence_copy" / "sajidahmedprotres_drive"
 MANUSCRIPT_FIGURE = (
-    WORKSPACE
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
-    / "MPNN_DDG_Manuscript"
-    / "Feature_Combinations_MultiPlot.png"
+    _MAIN_DRIVE / "MPNN_DDG_Manuscript" / "Feature_Combinations_MultiPlot.png"
 )
-
 MANUSCRIPT_DOCX = (
-    WORKSPACE
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
+    _MAIN_DRIVE
     / "MPNN_DDG_Manuscript"
     / "SA_CEM_9_26_2022_MJ_Issue_Adressing.docx"
 )
-
 NOTEBOOKS = [
     WORKSPACE
     / "source_repos"
     / "SajidAhmeduiu_ProteinMPNN"
     / "Sajid_Additions"
     / "Quick_Dirty_MPNN_ML_V2_VGRAPHS_V1.ipynb",
-    WORKSPACE
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
-    / "Colab Notebooks"
-    / "Quick_Dirty_MPNN_ML_V2_VGRAPHS_V1.ipynb",
+    _MAIN_DRIVE / "Colab Notebooks" / "Quick_Dirty_MPNN_ML_V2_VGRAPHS_V1.ipynb",
 ]
 
 RESULT_PICKLE = (
     WORKSPACE
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
-    / "Protein_MPNN_Digging"
+    / "reproduction_inputs"
+    / "historical_reference_pickles"
     / "list_incremental_feature_result_dict.pickle"
 )
 

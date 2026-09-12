@@ -24,9 +24,8 @@ from typing import Any
 WORKSPACE = Path(__file__).resolve().parents[1]
 DEFAULT_PICKLE = (
     WORKSPACE
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
-    / "Protein_MPNN_Digging"
+    / "reproduction_inputs"
+    / "historical_reference_pickles"
     / "list_incremental_feature_result_dict.pickle"
 )
 DEFAULT_OUTPUT_DIR = (

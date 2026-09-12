@@ -1,0 +1,24 @@
+[2026-09-12T15:46:15Z] Waiting for Ssym full parent to exit
+[2026-09-12T16:06:30Z] Ssym full processes gone
+[2026-09-12T16:06:30Z] Promoting Ssym full
+-rw-r--r-- 1 box box 18M Sep 12 16:06 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/Ssym_extraction_tensors.pickle
+verified_ok_entries=224 missing_keys=[] size_bytes=18778420
+pipeline {'dataset': 'Ssym', 'n_jobs': 342, 'n_ok': 224, 'n_error': 118, 'elapsed_seconds': 2071.17351937294, 'save_mode': 'full', 'output_pickle': 'reproduction_runs/2026-09-12/pdb_to_features_ssym_extraction_full/extraction_tensors.pickle'}
+[reproduce-paper-results b143d49] Promote Ssym full extraction tensors (save-mode full) with Git LFS
+ 16 files changed, 53 insertions(+)
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/Ssym_extraction_tensors.pickle
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/Ssym/1amqA.out.pkl
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/Ssym/1bniA.out.pkl
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/Ssym/1ceyA.out.pkl
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/Ssym/1ey0A.out.pkl
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/Ssym/1ihbA.out.pkl
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/Ssym/1iobA.out.pkl
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/Ssym/1lz1A.out.pkl
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/Ssym/1oh0A.out.pkl
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/Ssym/1rn1C.out.pkl
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/Ssym/1vqbA.out.pkl
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/Ssym/2lzmA.out.pkl
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/Ssym/2rn2A.out.pkl
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/Ssym/4lyzA.out.pkl
+ create mode 100644 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/Ssym/5ptiA.out.pkl
+fatal: could not read Username for 'https://github.com': No such device or address

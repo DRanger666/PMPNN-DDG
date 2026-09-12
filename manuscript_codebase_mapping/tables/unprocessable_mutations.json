@@ -114,7 +114,7 @@
       "mutation_label": "L141R",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '2a01A' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_2648_pssm_dir",
+      "exception_message": "No PSSM file for '2a01A' in reproduction_inputs/accre_dataset_pdb_pssm/S_2648_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/2a01A.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -126,7 +126,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_2648_PDB_Files/2a01A.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/2a01A.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_2648_pssm_dir/2a01A.pssm | Polymer chains in resolved PDB: ['A'] | resolve_pdb_chain_id \u2192 parse='A' logical='A' | ICODE-aware residue map builds: n=243 | Mutation key 'L141' \u2192 140",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_2648_PDB_Files/2a01A.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/2a01A.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_2648_pssm_dir/2a01A.pssm | Polymer chains in resolved PDB: ['A'] | resolve_pdb_chain_id \u2192 parse='A' logical='A' | ICODE-aware residue map builds: n=243 | Mutation key 'L141' \u2192 140",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "L141R",
@@ -136,7 +136,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '2a01A' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_2648_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '2a01A' in reproduction_inputs/accre_dataset_pdb_pssm/S_2648_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -144,7 +144,7 @@
       "mutation_label": "A131G",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -156,7 +156,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'A131' \u2192 4",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'A131' \u2192 4",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "A131G",
@@ -166,7 +166,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -174,7 +174,7 @@
       "mutation_label": "A139G",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -186,7 +186,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'A139' \u2192 12",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'A139' \u2192 12",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "A139G",
@@ -196,7 +196,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -204,7 +204,7 @@
       "mutation_label": "A165G",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -216,7 +216,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'A165' \u2192 38",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'A165' \u2192 38",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "A165G",
@@ -226,7 +226,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -234,7 +234,7 @@
       "mutation_label": "A168G",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -246,7 +246,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'A168' \u2192 41",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'A168' \u2192 41",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "A168G",
@@ -256,7 +256,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -264,7 +264,7 @@
       "mutation_label": "D145A",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -276,7 +276,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'D145' \u2192 18",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'D145' \u2192 18",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "D145A",
@@ -286,7 +286,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -294,7 +294,7 @@
       "mutation_label": "D145N",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -306,7 +306,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'D145' \u2192 18",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'D145' \u2192 18",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "D145N",
@@ -316,7 +316,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -324,7 +324,7 @@
       "mutation_label": "D162N",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -336,7 +336,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'D162' \u2192 35",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'D162' \u2192 35",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "D162N",
@@ -346,7 +346,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -354,7 +354,7 @@
       "mutation_label": "D164A",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -366,7 +366,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'D164' \u2192 37",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'D164' \u2192 37",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "D164A",
@@ -376,7 +376,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -384,7 +384,7 @@
       "mutation_label": "D164G",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -396,7 +396,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'D164' \u2192 37",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'D164' \u2192 37",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "D164G",
@@ -406,7 +406,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -414,7 +414,7 @@
       "mutation_label": "D164N",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -426,7 +426,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'D164' \u2192 37",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'D164' \u2192 37",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "D164N",
@@ -436,7 +436,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -444,7 +444,7 @@
       "mutation_label": "E141A",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -456,7 +456,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'E141' \u2192 14",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'E141' \u2192 14",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "E141A",
@@ -466,7 +466,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -474,7 +474,7 @@
       "mutation_label": "E141Q",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -486,7 +486,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'E141' \u2192 14",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'E141' \u2192 14",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "E141Q",
@@ -496,7 +496,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -504,7 +504,7 @@
       "mutation_label": "I130A",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -516,7 +516,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'I130' \u2192 3",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'I130' \u2192 3",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "I130A",
@@ -526,7 +526,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -534,7 +534,7 @@
       "mutation_label": "I130G",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -546,7 +546,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'I130' \u2192 3",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'I130' \u2192 3",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "I130G",
@@ -556,7 +556,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -564,7 +564,7 @@
       "mutation_label": "I130V",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -576,7 +576,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'I130' \u2192 3",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'I130' \u2192 3",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "I130V",
@@ -586,7 +586,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -594,7 +594,7 @@
       "mutation_label": "I146A",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -606,7 +606,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'I146' \u2192 19",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'I146' \u2192 19",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "I146A",
@@ -616,7 +616,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -624,7 +624,7 @@
       "mutation_label": "I146V",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -636,7 +636,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'I146' \u2192 19",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'I146' \u2192 19",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "I146V",
@@ -646,7 +646,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -654,7 +654,7 @@
       "mutation_label": "I163V",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -666,7 +666,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'I163' \u2192 36",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'I163' \u2192 36",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "I163V",
@@ -676,7 +676,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -684,7 +684,7 @@
       "mutation_label": "L159A",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -696,7 +696,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'L159' \u2192 32",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'L159' \u2192 32",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "L159A",
@@ -706,7 +706,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -714,7 +714,7 @@
       "mutation_label": "L159G",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -726,7 +726,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'L159' \u2192 32",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'L159' \u2192 32",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "L159G",
@@ -736,7 +736,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -744,7 +744,7 @@
       "mutation_label": "L159V",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -756,7 +756,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'L159' \u2192 32",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'L159' \u2192 32",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "L159V",
@@ -766,7 +766,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -774,7 +774,7 @@
       "mutation_label": "L167A",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -786,7 +786,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'L167' \u2192 40",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'L167' \u2192 40",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "L167A",
@@ -796,7 +796,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -804,7 +804,7 @@
       "mutation_label": "L167V",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -816,7 +816,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'L167' \u2192 40",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'L167' \u2192 40",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "L167V",
@@ -826,7 +826,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -834,7 +834,7 @@
       "mutation_label": "V129A",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -846,7 +846,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'V129' \u2192 2",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'V129' \u2192 2",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "V129A",
@@ -856,7 +856,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -864,7 +864,7 @@
       "mutation_label": "V129G",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -876,7 +876,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'V129' \u2192 2",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'V129' \u2192 2",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "V129G",
@@ -886,7 +886,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -894,7 +894,7 @@
       "mutation_label": "V135A",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -906,7 +906,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'V135' \u2192 8",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'V135' \u2192 8",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "V135A",
@@ -916,7 +916,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -924,7 +924,7 @@
       "mutation_label": "V144A",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -936,7 +936,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'V144' \u2192 17",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'V144' \u2192 17",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "V144A",
@@ -946,7 +946,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -954,7 +954,7 @@
       "mutation_label": "V149A",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -966,7 +966,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'V149' \u2192 22",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'V149' \u2192 22",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "V149A",
@@ -976,7 +976,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -984,7 +984,7 @@
       "mutation_label": "V149G",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -996,7 +996,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'V149' \u2192 22",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'V149' \u2192 22",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "V149G",
@@ -1006,7 +1006,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -1014,7 +1014,7 @@
       "mutation_label": "V158A",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -1026,7 +1026,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'V158' \u2192 31",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'V158' \u2192 31",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "V158A",
@@ -1036,7 +1036,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     },
     {
       "dataset": "S_669",
@@ -1044,7 +1044,7 @@
       "mutation_label": "Y138F",
       "error_class": "missing_pssm",
       "exception_type": "FileNotFoundError",
-      "exception_message": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir",
+      "exception_message": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir",
       "pdb_path": "reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb",
       "pdb_exists": true,
       "pssm_exists": false,
@@ -1056,7 +1056,7 @@
       "icode_residue_count": 0,
       "map_builds_with_icode": true,
       "independent_seq_matches_accre": null,
-      "what_was_checked": "ACCRE PDB exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'Y138' \u2192 11",
+      "what_was_checked": "ACCRE PDB exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files/3dv0I.pdb | Independent curated PDB exists=True: reproduction_inputs/independent_pdb_fetches/curated/3dv0I.pdb | PSSM exists=False: reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir/3dv0I.pssm | Polymer chains in resolved PDB: ['I'] | resolve_pdb_chain_id \u2192 parse='I' logical='I' | ICODE-aware residue map builds: n=43 | Mutation key 'Y138' \u2192 11",
       "justification": "Independent RCSB/PDBe re-download provided a usable PDB (chain/ICODE parsing OK), but the historical ACCRE PSSM artifact is absent and was not regenerated (PSI-BLAST MSA pipeline not in scope). ProteinMPNN geometry is processable; RF features requiring wild_pssm/alternate_pssm cannot be completed. Historical V3 for this protein was also a ddg+mut stub.",
       "historical_v3_present": true,
       "historical_mut_label_matched": "Y138F",
@@ -1066,7 +1066,7 @@
       "historical_n_keys": 2,
       "pipeline_status": "error",
       "pipeline_error_type_raw": "FileNotFoundError",
-      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir"
+      "pipeline_error_message_raw": "No PSSM file for '3dv0I' in reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir"
     }
   ]
 }

@@ -114,6 +114,8 @@ end state.
 
 | Kind | Location | Coverage |
 | --- | --- | --- |
+| ACCRE PDB + PSSM dirs | `reproduction_inputs/accre_dataset_pdb_pssm/` | Ssym / S2648 / S669 / S921 |
+| Historical Digging reference pickles | `reproduction_inputs/historical_reference_pickles/` | V3 dumps + incremental RF results (reference only) |
 | Extraction tensors | `reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/` | Ssym 342; S2648 **2647/2648**; S669 **638/669**; S921 921 |
 | ProteinMPNN + PSSM feature tables (A–H) | `reproduction_inputs/pmpnn_ddg_features_2026-09-12/` | Same coverage; `*_proteinmpnn_and_pssm_features.pickle` symlinks |
 | Fig 3–5 outputs | `reproduction_runs/2026-09-12/s2648_train_feature_figures/` | PNGs, claim TSVs, KPCA seed-probe log |
@@ -146,7 +148,9 @@ Fig 4–5 KernelPCA subsample experiment (repo burden; suggested manuscript cave
 [`manuscript_codebase_mapping/FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md`](manuscript_codebase_mapping/FIGURE45_KPCA_SUBSAMPLE_SENSITIVITY.md).
 
 Obsolete inventory / workspace-archaeology trees were removed from this branch
-(see git history if needed).
+(see git history if needed). **`drive_evidence_copy/` is not on this branch** —
+ACCRE PDB/PSSM inputs live under `reproduction_inputs/accre_dataset_pdb_pssm/`;
+full Drive/Colab/manuscript mirrors remain on `main`.
 
 ## Open items
 

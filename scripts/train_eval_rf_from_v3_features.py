@@ -43,9 +43,8 @@ from proteinmpnn_ddg_recovery.features import rf_feature_matrix_packing as packi
 WORKSPACE = Path(__file__).resolve().parents[1]
 DEFAULT_DIGGING = (
     WORKSPACE
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
-    / "Protein_MPNN_Digging"
+    / "reproduction_inputs"
+    / "historical_reference_pickles"
 )
 DEFAULT_OUTPUT = WORKSPACE / "reproduction_runs" / "latest" / "rf_from_v3_features"
 

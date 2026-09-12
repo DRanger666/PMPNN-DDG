@@ -1,0 +1,9 @@
+matrix (2647, 71) stats {'kept': 2647, 'skipped_incomplete': 0}
+Feature E cols on dual-direction (71) row = message-change KPCA[:5]: [46, 47, 48, 49, 50]
+{
+  "n_instances": 2647,
+  "n_match": 7,
+  "n_near": 4,
+  "n_mismatch": 2,
+  "figure3_status": "blocked_need_dual_C_D_encodings"
+}

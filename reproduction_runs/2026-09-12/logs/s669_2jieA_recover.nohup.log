@@ -1,0 +1,96 @@
+jobs 51
+recover 2jieA batch0 n=20
+ok 2jieA C170A
+ok 2jieA C170Q
+ok 2jieA E157D
+ok 2jieA E167A
+ok 2jieA E225A
+ok 2jieA E225H
+ok 2jieA E409A
+ok 2jieA E409D
+ok 2jieA E426S
+ok 2jieA F418A
+ok 2jieA H104R
+ok 2jieA I247E
+ok 2jieA I247N
+ok 2jieA L174A
+ok 2jieA L174R
+ok 2jieA M224A
+ok 2jieA M326A
+ok 2jieA N166A
+ok 2jieA N166C
+ok 2jieA N223A
+recover 2jieA batch1 n=20
+ok 2jieA N223G
+ok 2jieA N223H
+ok 2jieA N223R
+ok 2jieA N223Y
+ok 2jieA N296A
+ok 2jieA N296C
+ok 2jieA N407A
+ok 2jieA N407C
+ok 2jieA Q22S
+ok 2jieA R243A
+ok 2jieA R243D
+ok 2jieA R243K
+ok 2jieA S17A
+ok 2jieA S19A
+ok 2jieA S334A
+ok 2jieA S403A
+ok 2jieA T18A
+ok 2jieA T221A
+ok 2jieA T355A
+ok 2jieA W123F
+recover 2jieA batch2 n=11
+ok 2jieA W123H
+ok 2jieA W328A
+ok 2jieA W328C
+ok 2jieA W328H
+ok 2jieA W328R
+ok 2jieA W402C
+ok 2jieA W402R
+ok 2jieA W412Y
+ok 2jieA Y21A
+ok 2jieA Y297A
+ok 2jieA Y297F
+recovered 2jieA 51 5503325
+[protein 84/94] 3s92A n_mut=1
+  resume skip 3s92A (shard exists)
+[protein 85/94] 4bjxA n_mut=1
+  resume skip 4bjxA (shard exists)
+[protein 86/94] 4buqA n_mut=2
+  resume skip 4buqA (shard exists)
+[protein 87/94] 4he7A n_mut=3
+  resume skip 4he7A (shard exists)
+[protein 88/94] 4n6v0 n_mut=3
+  resume skip 4n6v0 (shard exists)
+[protein 89/94] 4waaA n_mut=3
+  resume skip 4waaA (shard exists)
+[protein 90/94] 4yeeA n_mut=1
+  resume skip 4yeeA (shard exists)
+[protein 91/94] 4yefA n_mut=1
+  resume skip 4yefA (shard exists)
+[protein 92/94] 5jxbA n_mut=2
+  resume skip 5jxbA (shard exists)
+[protein 93/94] 5oaqA n_mut=1
+  resume skip 5oaqA (shard exists)
+[protein 94/94] 5vp3A n_mut=3
+  resume skip 5vp3A (shard exists)
+{
+  "dataset": "S_669",
+  "n_jobs": 669,
+  "n_ok": 638,
+  "n_error": 31,
+  "elapsed_seconds": 22.962106704711914,
+  "output_pickle": "reproduction_runs/2026-09-12/pdb_to_features_s669_extraction_full/extraction_tensors.pickle"
+}
+verified_ok_entries=638 missing=[] size=53691055
+-rw-r--r-- 1 box box 52M Sep 12 20:24 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/S669_extraction_tensors.pickle
+-rw-r--r-- 1 box box 52M Sep 12 20:24 reproduction_inputs/pmpnn_ddg_features_2026-09-12/S669_features_from_full_tensors.pickle
+[reproduce-paper-results 576af46] Promote S669 full extraction tensors + features-from-full to Git LFS (public bar)
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+Uploading LFS objects: 100% (1/1), 54 MB | 0 B/s, done.
+To https://github.com/DRanger666/ProteinMPNN-DDG.git
+   81228ef..576af46  HEAD -> reproduce-paper-results
+[2026-09-12T20:24:44Z] POST S669 pushed 576af46
+[2026-09-12T20:24:44Z] POST S669 done post-promote S669

@@ -27,9 +27,8 @@ from proteinmpnn_ddg_recovery.recovered_v6v2 import AA_TO_INDEX
 WORKSPACE_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SSYM_PSSM_DIR = (
     WORKSPACE_ROOT
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
-    / "ACCRE_PyRun_Setup"
+    / "reproduction_inputs"
+    / "accre_dataset_pdb_pssm"
     / "Ssym_pssm_dir"
 )
 

@@ -1,0 +1,14 @@
+[2026-09-12T18:16:51Z] Prebatch larges for S_669 (>=45) into reproduction_runs/2026-09-12/pdb_to_features_s669_extraction_full
+large proteins: [('2ptlA', 68), ('2jieA', 51), ('1divA', 50), ('1guaB', 49), ('2hbbA', 46)]
+2ptlA batch0/2 n=25
+ok 2ptlA A22G
+ok 2ptlA A27P
+ok 2ptlA A27V
+ok 2ptlA A34G
+ok 2ptlA A34V
+ok 2ptlA A43G
+ok 2ptlA A47G
+ok 2ptlA A49G
+ok 2ptlA A51G
+ok 2ptlA A66G
+ok 2ptlA D52A

@@ -8,9 +8,9 @@ workflow and its stored result pickle.
 - Source notebook export:
   `code_inventory_analysis/notebook_sources/git_sajid_additions/Quick_Dirty_MPNN_ML_V2_VGRAPHS_V1.ipynb.py.txt`
 - Historical result pickles:
-  `drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/incremental_feature_result_dict.pickle`
+  `reproduction_inputs/historical_reference_pickles/incremental_feature_result_dict.pickle`
   and
-  `drive_evidence_copy/sajidahmedprotres_drive/Protein_MPNN_Digging/list_incremental_feature_result_dict.pickle`
+  `reproduction_inputs/historical_reference_pickles/list_incremental_feature_result_dict.pickle`
 - Generated inspection report:
   `code_inventory_analysis/incremental_feature_pickle_inspection/`
 

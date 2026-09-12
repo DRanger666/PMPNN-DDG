@@ -1,0 +1,40 @@
+verified_ok_entries=2647 missing=[] size=219235986
+-rw-r--r-- 1 box box 210M Sep 12 19:23 reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/S2648_extraction_tensors.pickle
+-rw-r--r-- 1 box box 210M Sep 12 19:23 reproduction_inputs/pmpnn_ddg_features_2026-09-12/S2648_features_from_full_tensors.pickle
+[reproduce-paper-results 9217bf6] Promote S2648 full extraction tensors + features-from-full to Git LFS (public bar)
+ 1 file changed, 3 insertions(+)
+ create mode 100644 reproduction_inputs/pmpnn_ddg_features_2026-09-12/S2648_features_from_full_tensors.pickle
+To https://github.com/DRanger666/ProteinMPNN-DDG.git
+   82d53a7..9217bf6  HEAD -> reproduce-paper-results
+[2026-09-12T19:23:18Z] POST S2648 pushed 9217bf6
+  "pearson_signed": {
+    "message_NR_vs_ddg": -0.15358394888382315,
+    "message_CN_vs_ddg": 0.037262655217490774,
+    "neighbor_embedding_NR_vs_ddg": 0.2751865048247673,
+    "neighbor_embedding_CN_vs_ddg": 0.31858958931478776
+  },
+  "pearson_abs": {
+    "message_NR": 0.15358394888382315,
+    "message_CN": 0.037262655217490774,
+    "neighbor_embedding_NR": 0.2751865048247673,
+    "neighbor_embedding_CN": 0.31858958931478776
+  },
+  "notebook_printed_abs": {
+    "neighbor_embedding_pair_abs": [
+      0.26,
+      0.31
+    ],
+    "message_pair_abs": [
+      0.15,
+      0.03
+    ]
+  },
+  "vs_notebook": {
+    "neighbor_embedding_NR": "mismatch",
+    "neighbor_embedding_CN": "near",
+    "message_NR": "match",
+    "message_CN": "near"
+  }
+}
+wrote reproduction_runs/2026-09-12/s2648_train_feature_figures/figure3_norm_ratio_vs_change_norm.png
+[2026-09-12T19:23:20Z] POST S2648 done post-promote S2648

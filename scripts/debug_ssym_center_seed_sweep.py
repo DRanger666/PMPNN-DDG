@@ -36,9 +36,8 @@ from proteinmpnn_ddg_recovery.recovered_v6v2 import (  # noqa: E402
 
 DEFAULT_TARGET_PICKLE = (
     WORKSPACE_ROOT
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
-    / "Protein_MPNN_Digging"
+    / "reproduction_inputs"
+    / "historical_reference_pickles"
     / "Ssym_pmppn_info_dict_V3.pickle"
 )
 DEFAULT_OUTPUT_DIR = (

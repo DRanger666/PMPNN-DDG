@@ -1,0 +1,49 @@
+Feature B mode: historical_weighted
+Loading feature pickles (historical V3 and/or manuscript-path overrides)...
+  override S_2648 <- reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/S2648_extraction_tensors.pickle
+  override S_669 <- reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/S669_extraction_tensors.pickle
+  override S_921 <- reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/S921_extraction_tensors.pickle
+  override Ssym <- reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/Ssym_extraction_tensors.pickle
+  S_2648: kept=2647 skipped=0
+  S_921: kept=921 skipped=0
+  S_669: kept=638 skipped=0
+  Ssym: kept=342 skipped=0
+Fitting neighbor-embedding ΔE + message ΔM PCA/KPCA on S_2648 (seed=0, sample=10000)...
+  neighbor-embedding ΔE stacked shape=[39705, 128]; message ΔM stacked shape=[39705, 128]
+Projecting instances and building forward+reverse matrices...
+  S_2648: forward=2647 aug=(5294, 41) full_AH_dims=12
+  S_921: forward=921 aug=(1842, 41) full_AH_dims=12
+  Applied S_669 DDG sign flip (y *= -1) per notebook protocol
+  S_669: forward=638 aug=(1276, 41) full_AH_dims=12
+  Ssym: forward=342 aug=(684, 41) full_AH_dims=12
+Training/evaluating config=manuscript_literal n_runs=10...
+  [manuscript_literal] run 1/10 done (10.3s elapsed)
+  [manuscript_literal] run 2/10 done (20.4s elapsed)
+  [manuscript_literal] run 3/10 done (30.8s elapsed)
+  [manuscript_literal] run 4/10 done (41.0s elapsed)
+  [manuscript_literal] run 5/10 done (51.2s elapsed)
+  [manuscript_literal] run 6/10 done (61.6s elapsed)
+  [manuscript_literal] run 7/10 done (72.0s elapsed)
+  [manuscript_literal] run 8/10 done (83.8s elapsed)
+  [manuscript_literal] run 9/10 done (95.9s elapsed)
+  [manuscript_literal] run 10/10 done (107.7s elapsed)
+  S_669: rF+R ours=0.6304 (round 0.63) paper=0.64; RMSE ours=1.4741 (round 1.47) paper=1.45; rF-R ours=-0.9943 (round -0.99) paper=-0.99
+  Ssym: rF+R ours=0.8100 (round 0.81) paper=0.81; RMSE ours=1.0941 (round 1.09) paper=1.10; rF-R ours=-0.9944 (round -0.99) paper=-0.99
+  S_921: rF+R ours=0.7937 (round 0.79) paper=0.79; RMSE ours=1.4701 (round 1.47) paper=1.49; rF-R ours=-0.9965 (round -1.00) paper=-1.00
+Training/evaluating config=notebook_table1 n_runs=10...
+  [notebook_table1] run 1/10 done (8.2s elapsed)
+  [notebook_table1] run 2/10 done (16.2s elapsed)
+  [notebook_table1] run 3/10 done (24.3s elapsed)
+  [notebook_table1] run 4/10 done (32.4s elapsed)
+  [notebook_table1] run 5/10 done (40.5s elapsed)
+  [notebook_table1] run 6/10 done (48.8s elapsed)
+  [notebook_table1] run 7/10 done (57.0s elapsed)
+  [notebook_table1] run 8/10 done (64.8s elapsed)
+  [notebook_table1] run 9/10 done (72.9s elapsed)
+  [notebook_table1] run 10/10 done (80.5s elapsed)
+  S_669: rF+R ours=0.6387 (round 0.64) paper=0.64; RMSE ours=1.4605 (round 1.46) paper=1.45; rF-R ours=-0.9941 (round -0.99) paper=-0.99
+  Ssym: rF+R ours=0.8190 (round 0.82) paper=0.81; RMSE ours=1.0858 (round 1.09) paper=1.10; rF-R ours=-0.9955 (round -1.00) paper=-0.99
+  S_921: rF+R ours=0.7937 (round 0.79) paper=0.79; RMSE ours=1.4958 (round 1.50) paper=1.49; rF-R ours=-0.9962 (round -1.00) paper=-1.00
+Wrote reproduction_runs/2026-09-12/rf_from_extraction_tensors/ours_vs_paper_table1.tsv
+Wrote reproduction_runs/2026-09-12/rf_from_extraction_tensors/rf_train_eval_summary.json
+Wrote reproduction_runs/2026-09-12/rf_from_extraction_tensors/rf_per_run_metrics.json

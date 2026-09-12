@@ -1,0 +1,49 @@
+Feature B mode: historical_weighted
+Loading feature pickles (historical V3 and/or manuscript-path overrides)...
+  override S_2648 <- reproduction_inputs/pmpnn_ddg_features_2026-09-12/S2648_features.pickle
+  override Ssym <- reproduction_inputs/pmpnn_ddg_features_2026-09-12/Ssym_features.pickle
+  override S_669 <- reproduction_inputs/pmpnn_ddg_features_2026-09-12/S669_features.pickle
+  override S_921 <- reproduction_inputs/pmpnn_ddg_features_2026-09-12/S921_features.pickle
+  S_2648: kept=2647 skipped=0
+  S_921: kept=921 skipped=0
+  S_669: kept=638 skipped=0
+  Ssym: kept=342 skipped=0
+Fitting PCA/KPCA on S_2648 raw vectors (seed=0, sample=10000)...
+  embedding neighbors stacked shape=[39705, 128]; message stacked shape=[39705, 128]
+Projecting instances and building forward+reverse matrices...
+  S_2648: forward=2647 aug=(5294, 41) full_AH_dims=12
+  S_921: forward=921 aug=(1842, 41) full_AH_dims=12
+  Applied S_669 DDG sign flip (y *= -1) per notebook protocol
+  S_669: forward=638 aug=(1276, 41) full_AH_dims=12
+  Ssym: forward=342 aug=(684, 41) full_AH_dims=12
+Training/evaluating config=notebook_table1 n_runs=10...
+  [notebook_table1] run 1/10 done (7.8s elapsed)
+  [notebook_table1] run 2/10 done (15.7s elapsed)
+  [notebook_table1] run 3/10 done (23.6s elapsed)
+  [notebook_table1] run 4/10 done (31.1s elapsed)
+  [notebook_table1] run 5/10 done (38.5s elapsed)
+  [notebook_table1] run 6/10 done (45.9s elapsed)
+  [notebook_table1] run 7/10 done (53.2s elapsed)
+  [notebook_table1] run 8/10 done (60.6s elapsed)
+  [notebook_table1] run 9/10 done (67.8s elapsed)
+  [notebook_table1] run 10/10 done (75.4s elapsed)
+  S_669: rF+R ours=0.6379 (round 0.64) paper=0.64; RMSE ours=1.4617 (round 1.46) paper=1.45; rF-R ours=-0.9938 (round -0.99) paper=-0.99
+  Ssym: rF+R ours=0.8154 (round 0.82) paper=0.81; RMSE ours=1.0938 (round 1.09) paper=1.10; rF-R ours=-0.9958 (round -1.00) paper=-0.99
+  S_921: rF+R ours=0.7926 (round 0.79) paper=0.79; RMSE ours=1.4973 (round 1.50) paper=1.49; rF-R ours=-0.9961 (round -1.00) paper=-1.00
+Training/evaluating config=manuscript_literal n_runs=10...
+  [manuscript_literal] run 1/10 done (10.9s elapsed)
+  [manuscript_literal] run 2/10 done (21.7s elapsed)
+  [manuscript_literal] run 3/10 done (32.8s elapsed)
+  [manuscript_literal] run 4/10 done (43.7s elapsed)
+  [manuscript_literal] run 5/10 done (54.7s elapsed)
+  [manuscript_literal] run 6/10 done (65.5s elapsed)
+  [manuscript_literal] run 7/10 done (76.7s elapsed)
+  [manuscript_literal] run 8/10 done (87.6s elapsed)
+  [manuscript_literal] run 9/10 done (98.4s elapsed)
+  [manuscript_literal] run 10/10 done (109.2s elapsed)
+  S_669: rF+R ours=0.6305 (round 0.63) paper=0.64; RMSE ours=1.4735 (round 1.47) paper=1.45; rF-R ours=-0.9938 (round -0.99) paper=-0.99
+  Ssym: rF+R ours=0.8092 (round 0.81) paper=0.81; RMSE ours=1.0962 (round 1.10) paper=1.10; rF-R ours=-0.9952 (round -1.00) paper=-0.99
+  S_921: rF+R ours=0.7920 (round 0.79) paper=0.79; RMSE ours=1.4740 (round 1.47) paper=1.49; rF-R ours=-0.9960 (round -1.00) paper=-1.00
+Wrote reproduction_runs/2026-09-12/rf_from_promoted_compact_features/ours_vs_paper_table1.tsv
+Wrote reproduction_runs/2026-09-12/rf_from_promoted_compact_features/rf_train_eval_summary.json
+Wrote reproduction_runs/2026-09-12/rf_from_promoted_compact_features/rf_per_run_metrics.json

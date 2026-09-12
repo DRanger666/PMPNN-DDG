@@ -62,9 +62,8 @@ from proteinmpnn_ddg_recovery.tensor_field_checks import write_tsv  # noqa: E402
 
 ACCRE = (
     WORKSPACE_ROOT
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
-    / "ACCRE_PyRun_Setup"
+    / "reproduction_inputs"
+    / "accre_dataset_pdb_pssm"
 )
 TABLES = WORKSPACE_ROOT / "reproduction_inputs" / "mutation_ddg_tables"
 FEATURES_PICKLE = "features.pickle"
@@ -77,9 +76,8 @@ DEFAULT_PDB_FALLBACK_DIR = (
 
 DIGGING = (
     WORKSPACE_ROOT
-    / "drive_evidence_copy"
-    / "sajidahmedprotres_drive"
-    / "Protein_MPNN_Digging"
+    / "reproduction_inputs"
+    / "historical_reference_pickles"
 )
 
 DATASET_PRESETS: dict[str, dict[str, Any]] = {

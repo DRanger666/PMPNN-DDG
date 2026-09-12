@@ -48,8 +48,8 @@ After copying the dataset-specific ACCRE input directories from the Drive mount,
 the local evidence copy contains:
 
 ```text
-drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_PDB_Files
-drive_evidence_copy/sajidahmedprotres_drive/ACCRE_PyRun_Setup/S_669_pssm_dir
+reproduction_inputs/accre_dataset_pdb_pssm/S_669_PDB_Files
+reproduction_inputs/accre_dataset_pdb_pssm/S_669_pssm_dir
 ```
 
 Both directories contain 93 files. The V3 pickle has 94 protein keys.
