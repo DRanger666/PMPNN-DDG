@@ -28,7 +28,7 @@ tensors are required for a finished manuscript-corresponding release.
 | Figures 3–5 | S2648 train-set feature analyses | **Figs 4–5: 5 match / 6 near / 2 mismatch of 13** (after Feature E column fix); Fig 3 blocked | Prior “E blow-up” was dual-direction vs augmented index mix-up; remaining Δ≤0.02 on two claims |
 | Figures 1–2 | Pipeline / method schematics | N/A (non-numeric) | |
 
-**Last updated:** 2026-09-12 20:50 UTC
+**Last updated:** 2026-09-12 20:59 UTC
 **Feature pickles:** `reproduction_inputs/pmpnn_ddg_features_2026-09-12/` (all four datasets, Git LFS)  
 **Protocol:** `train_eval_rf_from_v3_features.py`; Feature B `historical_weighted`; KPCA seed 0; S_669 ΔΔG sign flip per notebook.
 
@@ -112,7 +112,7 @@ subset used only until full tensors are promoted.
 Interim Figs 4–5 (compact, 2647 instances): `scripts/regenerate_s2648_train_feature_figures.py`
 (matplotlib; KPCA seed 0; Feature E = message-change KPCA via `rf_feature_matrix_packing.FEATURE_E_COLS_ON_DUAL_DIRECTION_ROW`).
 Artifacts: `reproduction_runs/2026-09-12/s2648_train_feature_figures/`.
-Fig 3 script: `scripts/regenerate_s2648_figure3_from_full_tensors.py` (runs after promote).
+Fig 3 script: `scripts/regenerate_s2648_figure3_from extraction tensors.py` (runs after promote).
 
 **Feature E column fix (2026-09-12):** `FEATURE_TO_INDEX["E"]=[31..35]` is valid only on the
 *augmented* 41-col RF matrix. On the unaugmented 71-col `project_instances` matrix,
@@ -122,8 +122,8 @@ and produced false E mismatches; RF Table 1 was unaffected (uses augment then [3
 | Figure | Regenerated artifact | Verdict |
 | --- | --- | --- |
 | Figure 3 | `figure3_norm_ratio_vs_change_norm.png` from full tensors | **partial** — message NR |r|=0.15 **match**; message CN 0.04 near (nb 0.03); neighbor-embedding CN 0.32 near (nb 0.31); neighbor-embedding NR 0.28 vs nb 0.26 (mismatch) |
-| Figure 4 | `figure4_feature_feature_correlation.png` + corr CSV | **near/match** — 5 match / 6 near / 2 mismatch of 13 claims |
-| Figure 5 | `figure5_feature_feature_correlation.png` + corr CSV | **near/match** — same claim table (`figure45_claim_comparison.tsv`) |
+| Figure 4 | `s2648_train_feature_figures_from_full/` (from `S2648_extraction_tensors.pickle`) | **7 match / 4 near / 2 mismatch of 13** |
+| Figure 5 | same claim table as Fig 4 | **7 match / 4 near / 2 mismatch of 13** |
 
 ### Figure 4–5 claim spot-checks (2dp)
 
@@ -175,3 +175,4 @@ silent drops as matches. This RF run uses 2647 train / 638 S_669 eval mutations.
 - 2026-09-12 20:27 UTC: S669 full tensors+ProteinMPNN+PSSM features (from extraction tensors) on LFS after 2jieA batch recovery (638 entries; commit 576af46). S921 full mid-run.
 - 2026-09-12 20:46 UTC: S921 present on LFS (S921_extraction_tensors.pickle)
 - 2026-09-12 20:50 UTC: **ALL full extraction tensors on LFS** — Ssym, S2648 (2647), S669 (638 after 2jieA recover), S921 (921/921). ProteinMPNN+PSSM features pickles on LFS for S2648/S669/S921 (+Ssym). Public bar tensors→features path unblocked for RF/figures.
+- 2026-09-12 20:59 UTC: Naming locked: extraction tensors source of truth (ProteinMPNN-extracted A–E + PSSM F–H). RF relaunched from `*_extraction_tensors.pickle`. Figs4–5 from S2648 tensors → 7/4/2 of 13.

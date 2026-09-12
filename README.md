@@ -31,9 +31,9 @@ Formal status (tables, figures, match/mismatch, how to re-run verification):
 
 **Regen RF status (2026-09-12 17:57 UTC):** Table1 7 match / 14 near / 0 mismatch of 21 (rounded-to-2dp vs BioRxiv); T2 S669=near; T3 Ssym=near; Fig6=8/8 combos within 0.02 abs of historical series (not bit-exact; trend retained). Details: [`MANUSCRIPT_RESULTS_MATCH.md`](manuscript_codebase_mapping/MANUSCRIPT_RESULTS_MATCH.md).
 
-**Full extraction / public bar (2026-09-12 20:50 UTC):** ALL complete on LFS — Ssym+S2648+S669+S921 **extraction tensors** (contain ProteinMPNN A–E + PSSM F–H). Fig3 from S2648 tensors. Next: RF + Figs 4–5 from those ProteinMPNN+PSSM features.
+**Full extraction / public bar (2026-09-12 20:59 UTC):** ALL four `*_extraction_tensors.pickle` on LFS (ProteinMPNN A–E + PSSM F–H). Figs3–5 from S2648 tensors (4–5: 7/4/2 of 13). RF from extraction tensors running. Feature tables: `*_features.pickle` / `*_proteinmpnn_and_pssm_features.pickle`.
 
-**Figs 3–5 status (2026-09-12 19:23 UTC):** Fig3 from S2648 extraction tensors (message NR match; neighbor-embedding CN / message CN near; neighbor-embedding NR Δ≈0.02); Figs4–5 — re-run from ProteinMPNN+PSSM features next.
+**Figs 3–5 status (2026-09-12 20:59 UTC):** From S2648 extraction tensors — Fig3 NR/CN; Figs4–5 7 match / 4 near / 2 mismatch of 13.
 
 That document is the branch’s source of truth for correspondence. Historical
 recovery notes (pickle/notebook provenance) remain under
