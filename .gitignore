@@ -67,3 +67,11 @@ reproduction_inputs/independent_pdb_fetches/raw/
 !reproduction_inputs/pmpnn_ddg_features_2026-09-12/
 !reproduction_inputs/pmpnn_ddg_features_2026-09-12/**
 !reproduction_inputs/pmpnn_ddg_features_2026-09-12/*.pickle
+
+# Promoted manuscript-path full extraction tensors (Git LFS)
+!reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/
+!reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/**
+!reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/*.pickle
+!reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/
+!reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/**
+!reproduction_inputs/pmpnn_ddg_extraction_tensors_2026-09-12/shards/**/*.pkl
