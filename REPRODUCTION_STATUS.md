@@ -173,7 +173,25 @@ alone does not help. Details:
 ---
 
 
-## PDB → clean MPNN → regenerated features → RF (measured)
+## PDB → clean MPNN → manuscript-path features → RF (measured)
+
+### Naming: historical V3 vs manuscript-path
+
+Today’s regenerated tensors/features are **manuscript-path artifacts**, not “V3
+tensors.” V3 refers to historical Digging pickles
+(`*_pmppn_info_dict_V3.pickle`). See
+`manuscript_codebase_mapping/MANUSCRIPT_PATH_VS_HISTORICAL_V3.md`.
+
+Preferred pickle name: `manuscript_path_features.pickle`  
+Compat alias: `regenerated_v3_features.pickle` (symlink on existing runs)  
+Umbrella: `reproduction_runs/2026-09-12/manuscript_path_tensors/{S_2648,…}`  
+Save modes: `--save-mode full|both|rf_compact` (default **full**; prior runs used
+`rf_compact` via `--compact-for-rf`). Full extraction tensors are the durable
+artifact; RF-compact alone is insufficient for long-term storage.
+
+**Drive interim store:** `scripts/upload_manuscript_path_tensors_to_drive.sh`  
+**Blocker:** rclone not installed / no remotes on this box — parent must auth.
+
 
 ### Integrity audit (unprocessable mutations)
 

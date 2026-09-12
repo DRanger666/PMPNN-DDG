@@ -490,7 +490,7 @@ def main() -> int:
         metavar="DATASET=PATH",
         help=(
             "Replace a dataset pickle with a regenerated V3-shaped pickle "
-            "(repeatable). Example: Ssym=reproduction_runs/.../regenerated_v3_features.pickle"
+            "(repeatable). Example: Ssym=reproduction_runs/.../manuscript_path_features.pickle"
         ),
     )
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
@@ -525,7 +525,7 @@ def main() -> int:
     digging = args.digging_dir
 
     print(f"Feature B mode: {args.feature_b_mode}", flush=True)
-    print("Loading saved historical V3 pickles...", flush=True)
+    print("Loading feature pickles (historical V3 and/or manuscript-path overrides)...", flush=True)
     names = ["S_2648", "S_921", "S_669", "Ssym"]
     pickles = {
         "S_2648": digging / "S_2648_pmppn_info_dict_V3.pickle",
