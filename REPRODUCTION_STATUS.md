@@ -4,174 +4,170 @@ Date: 2026-09-12
 Machine run directory: `reproduction_runs/2026-09-12/`  
 Runtime: `.venv_proteinmpnn_ddg_reproduction/` (Python 3.12, CPU torch 2.6.0+cpu)
 
+## Strategy pivot (active)
+
+**Stop** treating bit-exact historical V3 pickle regeneration as the success
+criterion.
+
+**Path forward**
+
+1. Use best-available features aligned with the BioRxiv method (saved V3
+   engineered fields + V6_V2 / recovered package for regeneration when needed).
+2. Train Random Forest as in the paper / Table 1 notebooks.
+3. Evaluate on independent S_669, Ssym, S_921 and compare to published metrics.
+
+V3 tensor diagnostics remain useful background; do not burn more time on pickle
+matching unless it directly improves feature generation for RF.
+
+Fidelity questions (Feature B weighting, decoder RNG, zero-vector fallback,
+etc.) are tracked skeptically in
+`manuscript_codebase_mapping/MANUSCRIPT_TENSOR_EXTRACTION_FIDELITY.md` — conflict
+vs shorthand vs unused alternate vs unresolved — not assumed bugs.
+
 ## Honest scope
 
-Enough material exists to regenerate/verify the **results layer** (manuscript
-Table 1 + Figure 6) from the saved RF pickle and notebook/image evidence, and to
-diagnose the still-failing **V3 direct-tensor** segment on a small Ssym slice.
+```text
+Saved historical V3 engineered features (+ re-fit KPCA E)
+  → RF train on S_2648 (F+R aug) → eval S_669/Ssym/S_921
+```
 
-Not enough (yet) for guaranteed end-to-end:
+is **working** and close to Table 1 (see below).
 
 ```text
-PDB + ProteinMPNN → V3 direct tensors → engineered features → RF → Table 1/Fig 6
+PDB + ProteinMPNN → V3 direct tensors (value-level) → …
 ```
 
-without solving V3 tensor value-level regeneration.
+is **still blocked** (`log_prob` / attended neighbors). Not required for the
+RF-from-saved-features milestone.
 
-## What matched on this machine
+Results-layer verification from the saved ten-run pickle (Table 1 21/21, Fig 6)
+remains available via `./scripts/run_results_layer_reproduction.sh`.
 
-### Table 1 (results layer) — SUCCESS
+---
 
-Command:
+## RF retrain vs Table 1 (measured)
+
+**Script:** `scripts/train_eval_rf_from_v3_features.py`  
+**Primary artifact:** `reproduction_runs/2026-09-12/rf_from_v3_features/`  
+**Feature source:** saved historical V3 engineered + re-fit KPCA Feature E  
+**Feature B (primary):** `historical_weighted`  
+**S_669:** ΔΔG sign flip applied (notebook protocol)
+
+### Hyperparams
+
+| Label | Settings | Role |
+| --- | --- | --- |
+| `manuscript_literal` | `n_estimators=500`, `max_samples=0.5`, other sklearn defaults | Primary vs BioRxiv wording |
+| `notebook_table1` | + `max_features="sqrt"`, `min_samples_split=2` | Matches VGRAPHS / ten-run pickle cell |
+| `notebook_early` (optional CLI) | 300 / 0.2 / min_samples_split=5 / sqrt | Early notebooks; not run in primary table |
+
+### Command (primary 10-run)
 
 ```bash
-./scripts/run_results_layer_reproduction.sh
-# or:
-.venv_proteinmpnn_ddg_reproduction/bin/python scripts/verify_table1_results_layer.py \
-  --output-dir reproduction_runs/2026-09-12/table1_results_layer
+.venv_proteinmpnn_ddg_reproduction/bin/python scripts/train_eval_rf_from_v3_features.py \
+  --output-dir reproduction_runs/2026-09-12/rf_from_v3_features \
+  --n-runs 10 --full-ah-only \
+  --configs manuscript_literal notebook_table1 \
+  --feature-b-mode historical_weighted --kpca-seed 0
 ```
 
-Result:
+### Ours vs paper (full A–H, ten-run means)
 
-| Evidence | Cells |
+Paper targets from Table 1 PMPNN-DDG rows.
+
+#### `notebook_table1` (closest to historical pickle protocol)
+
+| Dataset | Metric | Ours | Paper | Δ round |
+| --- | --- | ---: | ---: | ---: |
+| S_669 | rF+R | 0.6443 → **0.64** | 0.64 | 0.00 |
+| S_669 | rmsF+R | 1.4517 → **1.45** | 1.45 | 0.00 |
+| S_669 | rF-R | -0.9940 → **-0.99** | -0.99 | 0.00 |
+| Ssym | rF+R | 0.8108 → **0.81** | 0.81 | 0.00 |
+| Ssym | rmsF+R | 1.1039 → **1.10** | 1.10 | 0.00 |
+| Ssym | rF-R | -0.9954 → -1.00 | -0.99 | 0.01 |
+| S_921 | rF+R | 0.7954 → 0.80 | 0.79 | 0.01 |
+| S_921 | rmsF+R | 1.4915 → **1.49** | 1.49 | 0.00 |
+| S_921 | rF-R | -0.9962 → **-1.00** | -1.00 | 0.00 |
+
+Most other Table 1 columns (`rF`, `rR`, `rmsF`, `rmsR`) also match rounded paper
+values under this config; see `ours_vs_paper_table1.tsv`.
+
+#### `manuscript_literal`
+
+| Dataset | rF+R ours→round | Paper | rmsF+R ours→round | Paper |
+| --- | ---: | ---: | ---: | ---: |
+| S_669 | 0.6375 → 0.64 | 0.64 | 1.4627 → 1.46 | 1.45 |
+| Ssym | 0.8037 → 0.80 | 0.81 | 1.1078 → 1.11 | 1.10 |
+| S_921 | 0.7936 → 0.79 | 0.79 | 1.4708 → 1.47 | 1.49 |
+
+### Feature B diagnostic (not primary)
+
+`reproduction_runs/2026-09-12/rf_from_v3_features_manuscript_B/` — 3 runs,
+`notebook_table1`, `--feature-b-mode manuscript_unweighted`. rF+R still rounds
+to paper on S_669/Ssym/S_921. Supports leaving Feature B weighting as an open
+wording/fidelity question rather than a confirmed metric blocker.
+
+### Call
+
+**Manuscript-method RF reproduction from saved V3 features is promising.**
+Rounded Table 1 targets are recovered under notebook_table1 settings; manuscript
+literal hyperparams are within ~0.01–0.02 on key cells.
+
+---
+
+## Prior milestones (still valid)
+
+### Table 1 results layer — SUCCESS (saved pickle, not retrain)
+
+`./scripts/run_results_layer_reproduction.sh` → **21/21** cells from
+`list_incremental_feature_result_dict.pickle` + notebook `rF-R`.
+
+### Figure 6 results layer — SUCCESS
+
+Incremental PCC series + PNG byte-match path; see
+`reproduction_runs/2026-09-12/figure6_image_verification/`.
+
+### Ssym engineered/PSSM from saved tensors — SUCCESS
+
+342/342 entries; engineered/PSSM fields allclose. Proves saved-tensor → features
+only.
+
+### V3 direct-tensor slice diagnostics — still failing value match
+
+Neighbor replay lifts identity fields; `log_prob` remains 0/6. Continuous RNG
+alone does not help. Details:
+`reproduction_runs/2026-09-12/v3_ssym_slice_diagnostics/`.
+
+---
+
+## Remaining blockers (honest)
+
+1. **PDB → V3 direct tensors** value-level match (attended neighbors, log_probs).
+2. **Feature E** not bit-identical to 2022 Colab (unseeded KPCA subsample); seeded
+   re-fit is protocol-aligned and sufficient for current RF metrics.
+3. **S_669 / S_2648 incomplete engineered entries** skipped (31 + 28); same class
+   of gaps as historical notebooks (e.g. `3dv0I`, `1lveA`).
+4. Large historical model pickles (`feature_combo_model_dict.pickle`, etc.) not
+   in the narrowly promoted LFS set — not required for this RF retrain.
+5. Regenerating features from V6_V2 on PDB (step B of the pivot) not yet wired
+   into the RF loop; primary path uses saved V3 matrices.
+
+## Next experiments (ordered)
+
+1. Optional: longer `manuscript_unweighted` Feature B run (10×) if wording
+   debate needs tighter CI — not blocking.
+2. Wire regenerated engineered features (from saved tensors via
+   `proteinmpnn_ddg_recovery.engineered_features`, already proven on Ssym) into
+   the same RF script for non-Ssym sets.
+3. Only if needed for claims beyond RF-from-saved-features: resume V3 tensor
+   regeneration with manuscript-fidelity framing (not bit-exact obsession).
+
+## Key paths
+
+| Item | Path |
 | --- | --- |
-| Pickle ten-run means (`rF,rR,rF+R,rmsF,rmsR,rmsF+R`) | **18/18** match manuscript rounding |
-| Notebook-output `rF-R` | **3/3** match manuscript rounding |
-| **Total Table 1 numeric cells** | **21/21** |
-
-Artifact: `reproduction_runs/2026-09-12/table1_results_layer/`
-
-### Figure 6 (results layer) — SUCCESS
-
-Same one-command runner regenerates:
-
-- plotted S_669/Ssym incremental total-PCC series from
-  `list_incremental_feature_result_dict.pickle` (exact means match prior
-  milestone note);
-- byte-identical PNG match of manuscript
-  `Feature_Combinations_MultiPlot.png` to
-  `source_repos/SajidAhmeduiu_ProteinMPNN/.../Quick_Dirty_MPNN_ML_V2_VGRAPHS_V1.ipynb`
-  cell 40 / execution_count 58
-  (SHA256 `9cec9fcf1d3f466b8bf0f1766bc98c20152b2c617c5d872d3e3588f79143da95`);
-- DOCX maps Figure 6 → `media/image6.png` (embedded PNG not byte-identical;
-  content equivalence already established historically).
-
-Prerequisite for PNG byte-match: local clone of
-`https://github.com/SajidAhmeduiu/ProteinMPNN` under
-`source_repos/SajidAhmeduiu_ProteinMPNN/` (gitignored nested evidence clone).
-
-Artifact: `reproduction_runs/2026-09-12/figure6_image_verification/`
-
-### Ssym engineered/PSSM segment (saved tensors → features) — SUCCESS
-
-```bash
-.venv_proteinmpnn_ddg_reproduction/bin/python \
-  scripts/test_ssym_engineered_feature_reconstruction.py \
-  --output-dir reproduction_runs/2026-09-12/ssym_engineered_pssm_reconstruction
-```
-
-Result: **342/342** entries OK; **8208/8208** field comparisons allclose at
-`atol=rtol=1e-6`; mismatches `0`; runtime errors `0`.
-
-This proves saved-V3-tensor → engineered/PSSM only, not PDB→tensor.
-
-## V3 direct-tensor diagnostics (still the hard blocker)
-
-Command:
-
-```bash
-.venv_proteinmpnn_ddg_reproduction/bin/python \
-  scripts/diagnose_ssym_v3_slice_rng_neighbor_replay.py \
-  --limit 6 \
-  --output-dir reproduction_runs/2026-09-12/v3_ssym_slice_diagnostics
-```
-
-Slice: first 6 Ssym V3 entries (`1amqA`×4 + `1bniA`×2), CPU, seed base `0`.
-
-| Mode | top_15_neighbor exact | closest15 exact | log_prob allclose@1e-6 |
-| --- | --- | --- | --- |
-| `baseline` (per-mutation seed reset) | **0/6** | **6/6** | **0/6** |
-| `continuous_rng` (seed once, no per-mut reset) | **0/6** | **6/6** | **0/6** |
-| `replay_neighbors` (force saved top_15 indices) | **6/6** | **6/6** | **0/6** |
-
-Additional observations on this slice:
-
-- Closest-neighbor geometry remains solid in all modes (`top_15/10_closest` exact).
-- Continuous RNG did **not** recover attended-neighbor ranking or `log_prob`.
-- Neighbor-index replay recovers neighbor identity fields (`top_15/10/5`,
-  `neighbor_aa_identities`) by construction, but **does not** recover
-  `log_prob`, attention weights, neighbor log-probs, message vectors, or
-  embeddings (all still 0/6 allclose).
-- Baseline already had `top_5_neighbor_indices` exact on this tiny slice (6/6);
-  that does not generalize to the historical full-Ssym `top_15` failure pattern.
-
-Artifact: `reproduction_runs/2026-09-12/v3_ssym_slice_diagnostics/`
-
-### Interpretation
-
-The blocker remains upstream of engineered features:
-
-```text
-PDB + mutation table + ProteinMPNN weights/code + RNG/order behavior
-  ↛  saved V3 direct tensor fields (value-level)
-```
-
-Especially: random decoder order among fixed residues, attended-neighbor ranking
-by message norms, and possibly other unreconciled V6_V2 vs historical details.
-Continuous RNG alone is insufficient on this slice; replaying saved neighbors
-isolates that neighbor **identity** is not enough without matching center/neighbor
-pass tensors.
-
-## One-command results-layer path
-
-```bash
-# After creating .venv_proteinmpnn_ddg_reproduction (see RUNTIME_ENVIRONMENT.md)
-# and cloning SajidAhmeduiu/ProteinMPNN into source_repos/ for Fig6 PNG match:
-export REPRO_STAMP=2026-09-12   # optional; default is UTC date
-./scripts/run_results_layer_reproduction.sh
-```
-
-Outputs land in `reproduction_runs/<stamp>/` with `reproduction_runs/latest` symlink.
-
-## Exact remaining gaps vs full paper reproduction
-
-1. **V3 direct tensors from PDB+ProteinMPNN** still fail value-level match
-   (attended neighbors, log_probs, neighbor tensors). Geometry/closest-neighbors
-   and schema traversal work.
-2. **No end-to-end RF retrain** from regenerated features to Table 1 on this
-   branch (results layer uses the saved ten-run RF pickle).
-3. **S_669 / S_921 / S_2648** engineered-feature reconstruction and tensor
-   extraction not re-proven here (Ssym feature segment only this run).
-4. **Runtime rebuild spec** still incomplete (no root lockfile); venv recreated
-   ad hoc on this machine with CPU torch + biopython/numpy/sklearn/matplotlib.
-5. **ProteinMPNN utils** used from local
-   `drive_evidence_copy/.../ProteinMPNN/vanilla_proteinmpnn/protein_mpnn_utils.py`
-   (present on disk; nested `Protein_MPNN_Digging/ProteinMPNN/` tree is not the
-   narrowly promoted LFS set). `source_repos/dauparas_ProteinMPNN` is a fallback
-   clone path.
-6. Nested evidence clones under `source_repos/` remain gitignored; Fig6 PNG
-   byte-match needs the SajidAhmeduiu notebook clone locally.
-
-## Next experiment
-
-1. Expand continuous-RNG diagnostics to a longer sequential prefix that mirrors
-   historical notebook protein/mutation order (not just first-N pickle order),
-   recording RNG draw counts between center and neighbor passes.
-2. Center-pass-only seed search / decoding-order capture for several mutations
-   where a seed yields matching `top_15` **set** (historical `1amqA C191Y` seed
-   98 hint), then freeze that order for neighbor passes.
-3. Compare decoder message norms / local-48 slot mapping against saved
-   `top_15_attention_weights` when neighbors are forced, to see whether the
-   remaining gap is purely RNG or a codepath divergence (masking, featurize,
-   checkpoint, utils version).
-
-## Files added/updated on this branch for reproduction automation
-
-- `scripts/run_results_layer_reproduction.sh`
-- `scripts/verify_table1_results_layer.py`
-- `scripts/diagnose_ssym_v3_slice_rng_neighbor_replay.py`
-- `scripts/verify_figure6_image_basis.py` (skip missing notebooks)
-- `scripts/analyze_incremental_feature_results.py` (skip missing one-run pickle)
-- `proteinmpnn_ddg_recovery/recovered_v6v2.py` (`neighbor_indices_override` diagnostic hook)
-- `reproduction_runs/2026-09-12/**`
-- `REPRODUCTION_STATUS.md` (this file)
+| RF script | `scripts/train_eval_rf_from_v3_features.py` |
+| Primary metrics | `reproduction_runs/2026-09-12/rf_from_v3_features/` |
+| Feature B diagnostic | `reproduction_runs/2026-09-12/rf_from_v3_features_manuscript_B/` |
+| Fidelity checklist | `manuscript_codebase_mapping/MANUSCRIPT_TENSOR_EXTRACTION_FIDELITY.md` |
+| Results-layer runner | `scripts/run_results_layer_reproduction.sh` |
