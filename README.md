@@ -1,8 +1,8 @@
 # PMPNN-DDG
 
-Random Forest predictor of the change in folding free energy (ΔΔG) caused by a
-single-point mutation. Features come from
-[ProteinMPNN](https://github.com/dauparas/ProteinMPNN) (A–E) and from PSSM
+Single-point mutation ΔΔG from an interpretable feature set extracted from
+[ProteinMPNN](https://github.com/dauparas/ProteinMPNN). Decoder-message hooks
+yield five structure-based descriptors (A–E); PSSM log-odds supply three
 evolutionary scores (F–H).
 
 **Paper:** Sajid Ahmed and Md Rafsan Jani,
@@ -10,12 +10,12 @@ evolutionary scores (F–H).
 on a novel interpretable feature set extracted from ProteinMPNN*](https://doi.org/10.64898/2026.08.23.746499),
 bioRxiv (2026). DOI [10.64898/2026.08.23.746499](https://doi.org/10.64898/2026.08.23.746499).
 
-On S669, PMPNN-DDG reports **r<sub>F+R</sub> = 0.64** and RMSE = 1.45. On Ssym,
-**r<sub>F+R</sub> = 0.81**, r<sub>F−R</sub> = −0.99, RMSE = 1.10.
+On S669, PMPNN-DDG reports **r<sub>F+R</sub> = 0.64** (RMSE 1.45). On the
+antisymmetric Ssym set, **r<sub>F+R</sub> = 0.81** and
+**r<sub>F−R</sub> = −0.99**.
 
 ```text
-PDB + PSSM  →  ProteinMPNN tensors  →  features A–H  →  Random Forest
-                                                    ↘  Figures 3–5 (train set, no RF)
+PDB + PSSM  →  ProteinMPNN (decoder hooks)  →  features A–H  →  ΔΔG
                  train: S2648     test: S669, Ssym, S921
 ```
 
