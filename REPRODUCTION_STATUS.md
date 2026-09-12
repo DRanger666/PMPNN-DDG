@@ -173,42 +173,72 @@ alone does not help. Details:
 ---
 
 
-## PDB → clean MPNN → regenerated Ssym → RF (measured)
+## PDB → clean MPNN → regenerated features → RF (measured)
 
-**Full Ssym regeneration succeeded:** 342/342 with
-`--by-protein-subprocess --compact-for-rf --seed-mode per_entry`
-(~500s). Artifact:
-`reproduction_runs/2026-09-12/pdb_to_features_ssym/regenerated_v3_features.pickle`.
+### Regenerated pickles
 
-Diagnostic vs historical V3: PSSM 342/342; ProteinMPNN-derived scalars/tensors
-**not** bit-exact (expected under open RNG questions).
+| Dataset | Status | Artifact | Notes |
+| --- | --- | --- | --- |
+| Ssym | **done** 342/342 (~500s) | `reproduction_runs/2026-09-12/pdb_to_features_ssym/regenerated_v3_features.pickle` | PSSM exact vs hist; MPNN tensors not bit-exact |
+| S_2648 (train) | **done** 2619/2648 (~3480s) | `reproduction_runs/2026-09-12/pdb_to_features_s2648/regenerated_v3_features.pickle` | 29 worker fails: `1lveA` (17), `2immA` (10), `1rtpA`, `2a01A` — same gap class as historical |
+| S_669 | in progress / queued | `reproduction_runs/2026-09-12/pdb_to_features_s669/` | `--resume` supported |
+| S_921 | commands ready | see `reproduction_runs/2026-09-12/logs/READY_COMMANDS_remaining_datasets.sh` | |
 
-**Partial E2E RF** (train saved S_2648; eval regenerated Ssym; 3-run
-`notebook_table1`, `historical_weighted` B):
+Always: `--by-protein-subprocess --compact-for-rf --seed-mode per_entry` (+ `--resume`).
 
-| Dataset | Metric | Regenerated-Ssym path | Paper |
-| --- | --- | ---: | ---: |
-| Ssym | rF+R | 0.8134 → **0.81** | 0.81 |
-| Ssym | rmsF+R | 1.0983 → **1.10** | 1.10 |
-| S_669 / S_921 | (still saved features) | match prior saved-V3 RF | Table 1 |
+### Full-train E2E RF (regenerated S_2648 + regenerated Ssym)
 
-Command:
+**Artifact:** `reproduction_runs/2026-09-12/rf_from_regenerated_s2648_ssym/`  
+**Overrides:** S_2648 + Ssym regenerated; S_669 / S_921 still saved historical V3.  
+**Protocol:** 10-run, `full-ah-only`, `historical_weighted` Feature B, `kpca-seed 0`.  
+**Coverage:** train kept 2619 (0 incomplete among regenerated); S_669 still skips 31 saved gaps.
+
+#### `notebook_table1` (primary vs Table 1)
+
+| Dataset | Metric | Ours | Paper | Δ round |
+| --- | --- | ---: | ---: | ---: |
+| S_669 | rF+R | 0.6421 → **0.64** | 0.64 | 0.00 |
+| S_669 | rmsF+R | 1.4551 → 1.46 | 1.45 | 0.01 |
+| Ssym | rF+R | 0.8141 → **0.81** | 0.81 | 0.00 |
+| Ssym | rmsF+R | 1.0972 → **1.10** | 1.10 | 0.00 |
+| S_921 | rF+R | 0.7950 → **0.79** | 0.79 | 0.00 |
+| S_921 | rmsF+R | 1.4925 → **1.49** | 1.49 | 0.00 |
+
+Most other Table 1 cells also match under this config; see
+`ours_vs_paper_table1.tsv`.
+
+#### `manuscript_literal`
+
+| Dataset | rF+R ours→round | Paper | rmsF+R ours→round | Paper |
+| --- | ---: | ---: | ---: | ---: |
+| S_669 | 0.6376 → 0.64 | 0.64 | 1.4625 → 1.46 | 1.45 |
+| Ssym | 0.8086 → **0.81** | 0.81 | 1.0981 → **1.10** | 1.10 |
+| S_921 | 0.7935 → 0.79 | 0.79 | 1.4700 → 1.47 | 1.49 |
+
+### Earlier partial E2E (saved train, regenerated Ssym only)
+
+3-run `notebook_table1`: Ssym rF+R 0.8134 → 0.81 / rms 1.0983 → 1.10
+(`rf_from_regenerated_ssym/`).
+
+### Commands
 
 ```bash
 .venv_proteinmpnn_ddg_reproduction/bin/python scripts/run_pdb_to_features_pipeline.py \
-  --dataset Ssym --seed-mode per_entry \
-  --by-protein-subprocess --compact-for-rf --compare-reference \
-  --output-dir reproduction_runs/2026-09-12/pdb_to_features_ssym
+  --dataset S_2648 --seed-mode per_entry \
+  --by-protein-subprocess --compact-for-rf --resume --compare-reference \
+  --output-dir reproduction_runs/2026-09-12/pdb_to_features_s2648
 
 .venv_proteinmpnn_ddg_reproduction/bin/python scripts/train_eval_rf_from_v3_features.py \
+  --v3-pickle-override S_2648=reproduction_runs/2026-09-12/pdb_to_features_s2648/regenerated_v3_features.pickle \
   --v3-pickle-override Ssym=reproduction_runs/2026-09-12/pdb_to_features_ssym/regenerated_v3_features.pickle \
-  --output-dir reproduction_runs/2026-09-12/rf_from_regenerated_ssym \
-  --n-runs 3 --full-ah-only --configs notebook_table1
+  --output-dir reproduction_runs/2026-09-12/rf_from_regenerated_s2648_ssym \
+  --n-runs 10 --full-ah-only --configs notebook_table1 manuscript_literal \
+  --feature-b-mode historical_weighted --kpca-seed 0
 ```
 
-Still needed for **full** E2E: regenerate S_2648 (train) and ideally S_669/S_921
-the same way. Long single-process runs OOM’d on this host — always use
-subprocess-per-protein for large sets.
+**Call:** regenerating the **training** set from PDB does not break Table 1
+alignment under `notebook_table1`. Remaining gap for all-regenerated eval is
+S_669 / S_921 PDB→features (S_669 kicked off with `--resume`).
 
 
 ## Remaining blockers (honest)
@@ -216,21 +246,20 @@ subprocess-per-protein for large sets.
 1. **PDB → V3 direct tensors** value-level match (attended neighbors, log_probs).
 2. **Feature E** not bit-identical to 2022 Colab (unseeded KPCA subsample); seeded
    re-fit is protocol-aligned and sufficient for current RF metrics.
-3. **S_669 / S_2648 incomplete engineered entries** skipped (31 + 28); same class
-   of gaps as historical notebooks (e.g. `3dv0I`, `1lveA`).
+3. **S_669 / S_2648 gaps:** saved path skips 31 on S_669; regenerated S_2648 had
+   29 worker failures (`1lveA`, `2immA`, `1rtpA`, `2a01A`) — same class as
+   historical incomplete entries.
 4. Large historical model pickles (`feature_combo_model_dict.pickle`, etc.) not
    in the narrowly promoted LFS set — not required for this RF retrain.
-5. Regenerating features from V6_V2 on PDB (step B of the pivot) not yet wired
-   into the RF loop; primary path uses saved V3 matrices.
+5. S_669 / S_921 regenerated pickles not yet folded into RF (S_669 running).
 
 ## Next experiments (ordered)
 
-1. Optional: longer `manuscript_unweighted` Feature B run (10×) if wording
+1. Finish S_669 (+ optional S_921) PDB→features; re-run RF with all four
+   `--v3-pickle-override`s (`READY_COMMANDS_remaining_datasets.sh`).
+2. Optional: longer `manuscript_unweighted` Feature B run (10×) if wording
    debate needs tighter CI — not blocking.
-2. Wire regenerated engineered features (from saved tensors via
-   `proteinmpnn_ddg_recovery.engineered_features`, already proven on Ssym) into
-   the same RF script for non-Ssym sets.
-3. Only if needed for claims beyond RF-from-saved-features: resume V3 tensor
+3. Only if needed for claims beyond RF-from-features: resume V3 tensor
    regeneration with manuscript-fidelity framing (not bit-exact obsession).
 
 ## Key paths
@@ -238,7 +267,12 @@ subprocess-per-protein for large sets.
 | Item | Path |
 | --- | --- |
 | RF script | `scripts/train_eval_rf_from_v3_features.py` |
-| Primary metrics | `reproduction_runs/2026-09-12/rf_from_v3_features/` |
+| PDB→features pipeline | `scripts/run_pdb_to_features_pipeline.py` (`--resume`) |
+| Saved-V3 RF metrics | `reproduction_runs/2026-09-12/rf_from_v3_features/` |
+| Regenerated-train RF | `reproduction_runs/2026-09-12/rf_from_regenerated_s2648_ssym/` |
+| Regenerated S_2648 pickle | `reproduction_runs/2026-09-12/pdb_to_features_s2648/regenerated_v3_features.pickle` |
+| Regenerated Ssym pickle | `reproduction_runs/2026-09-12/pdb_to_features_ssym/regenerated_v3_features.pickle` |
 | Feature B diagnostic | `reproduction_runs/2026-09-12/rf_from_v3_features_manuscript_B/` |
+| Ready commands | `reproduction_runs/2026-09-12/logs/READY_COMMANDS_remaining_datasets.sh` |
 | Fidelity checklist | `manuscript_codebase_mapping/MANUSCRIPT_TENSOR_EXTRACTION_FIDELITY.md` |
 | Results-layer runner | `scripts/run_results_layer_reproduction.sh` |
